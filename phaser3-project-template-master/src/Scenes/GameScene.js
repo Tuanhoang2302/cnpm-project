@@ -43,7 +43,7 @@ create ()
 
     var bubbleBox = new BubbleBox(this, 400, 200, 250, 50, '    “Move the blocks”');
     bubbleBox.createBox();
-    //element = this.add.dom(600, 200).createFromCache('nameform');
+    element = this.add.dom(600, 200).createFromCache('nameform');
     wall = this.physics.add.image(500, 100, 'bg');
     sprite = this.physics.add.image(200, 100, 'girl');
     cam = this.add.image(500, 300, 'cam');
@@ -75,13 +75,16 @@ create ()
 
     var dragManager = new DragManager(this, gg, groupGG, cam, groupCam, initGgPosX, initGgPosY);
     dragManager.dragGai();
+    var text = this.add.text(300, 10, 'Please enter your name', { color: 'white', fontSize: '20px '});
 
-    
-
+     
 }
 
 update ()
 {
+  var inputText = element.getChildByName('nameform');
+  console.log(inputText.value);
+    
     if(this.cursorKey.right.isDown){
       isMoving = true;
     }
