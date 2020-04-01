@@ -4,112 +4,94 @@ import config from '../Config/config';
 import DragManager from '../helper/DragManager';
 import {spaceValid} from '../helper/DragManager';
 import BubbleBox from '../helper/BubbleBox';
+import {bubble} from '../helper/BubbleBox';
+import Audio from '../helper/Audio';
+
 
 var wall;
-var sprite;
-var gg;
-var gg1;
-var cam;
-var cam1;
-var cursorKey;
-var isMoving;
+var ball;
 var distance = [0, 0];
-var initGgPosX = [0, 0];
-var initGgPosY = [0, 0];
-var groupGG = [];
-var groupCam = [];
-var element;
+var initHoaPosX = [0, 0];
+var initHoaPosY = [0, 0];
+var groupHoa = [];
+var groupChau = [];
 var numberOfBox = 2;
- 
+
 export default class GameScene extends Phaser.Scene {
   constructor () {
     super('Game');
   }
 preload ()
 {
-    //this.load.html('rectangle', 'src/assets/text/rectangle.html'); 
-    this.load.html('nameform', 'src/assets/text/nameform.html');  
-    this.load.image('bg', 'src/assets/logo.png');
-    this.load.image('girl', 'src/assets/hoa.png');
-    this.load.image('gg', 'src/assets/hoa.png');
-    this.load.image('gg1', 'src/assets/hoa.png');
-    this.load.image('cam', 'src/assets/chau.png');
-    this.load.image('cam1', 'src/assets/chau.png');
+    this.load.image('wall', 'src/assets/logo.png');
+    this.load.image('ball', 'src/assets/hoa.png');  
+    this.load.image('Hoa', 'src/assets/hoa.png');
+    this.load.image('Chau', 'src/assets/chau.png');
     this.load.image('loa', 'src/assets/loa.png');
+    this.load.audio('thanh', 'src/assets/pp.mp3');
 }
 
 create ()
 {
-
     var bubbleBox = new BubbleBox(this, 400, 200, 250, 50, '    “Move the blocks”');
     bubbleBox.createBox();
-    element = this.add.dom(600, 200).createFromCache('nameform');
-    wall = this.physics.add.image(500, 100, 'bg');
-    sprite = this.physics.add.image(200, 100, 'girl');
-    cam = this.add.image(500, 300, 'cam');
-    cam1 = this.add.image(500, 500, 'cam');
-    gg = this.physics.add.image(200, 300, 'gg');
-    gg1 = this.physics.add.image(200, 500, 'gg1');
-    var loa =  this.add.image(425, 224, 'loa');
-    groupGG.push(gg);
-    groupGG.push(gg1);
-    groupCam.push(cam);
-    groupCam.push(cam1);
-      
-    for(var i = 0; i < numberOfBox; i++){
-      initGgPosX[i] = groupGG[i].x;
-      initGgPosY[i] = groupGG[i].y;
-      
-    }
-    //cam = this.add.image(500, 300, 'cam');
+    
+    wall = this.physics.add.image(500, 100, 'wall');
+    ball = this.physics.add.image(200, 100, 'ball');
+    var loa =  this.add.sprite(425, 224, 'loa').setOrigin(0,0);
+    var amthanh = this.sound.add('thanh');
 
+    groupChau.push(this.add.image(500, 300, 'Chau'));
+    groupChau.push(this.add.image(500, 500, 'Chau'));
+    groupHoa.push(this.physics.add.image(200, 300, 'Hoa'));
+    groupHoa.push(this.physics.add.image(200, 500, 'Hoa'));
+    
+    
+    for(var i = 0; i < numberOfBox; i++){
+      initHoaPosX[i] = groupHoa[i].x;
+      initHoaPosY[i] = groupHoa[i].y;
+    }
+
+    //setScale
+    for(var i = 0; i < numberOfBox; i++){
+      groupHoa[i].setScale(0.1, 0.1);
+      groupChau[i].setScale(0.3, 0.3);
+    }
     wall.setScale(0.5, 0.5);
-    sprite.setScale(0.3,0.3);
-    gg.setScale(0.1, 0.1);
-    gg1.setScale(0.1, 0.1);
-    cam.setScale(0.3, 0.3);
-    cam1.setScale(0.3, 0.3);
+    ball.setScale(0.3,0.3);
     loa.setScale(0.055, 0.055);
 
-    this.cursorKey = this.input.keyboard.createCursorKeys();
-
-    var dragManager = new DragManager(this, gg, groupGG, cam, groupCam, initGgPosX, initGgPosY);
-    dragManager.dragGai();
-    var text = this.add.text(300, 10, 'Please enter your name', { color: 'white', fontSize: '20px '});
-
-     
+    var dragManager = new DragManager(this, groupHoa, groupChau, initHoaPosX, initHoaPosY, numberOfBox);
+    dragManager.dragHoa();
+    var aud = new Audio(this, loa, amthanh);
+    aud.playAudio();
+  
 }
 
 update ()
-{
-  var inputText = element.getChildByName('nameform');
-  console.log(inputText.value);
-    
-    if(this.cursorKey.right.isDown){
-      isMoving = true;
-    }
-      if(isMoving){
-      //sprite.setVelocity(100, 0).setBounce(0).setCollideWorldBounds(true);
-      
-      this.physics.world.collide(wall.setImmovable(), sprite.setVelocity(100, 0).setBounce(0).setCollideWorldBounds(true),
-       function () {
+{  
+    //Move ball when game is end
+    if(this.checkEnd()){ 
+        this.physics.world.collide(wall.setImmovable(), ball.setVelocity(100, 0).setBounce(0).setCollideWorldBounds(true),
+        function () {
           
-      });
+        });
+
+    //Change scene
+    if(ball.x > 300){
+        this.scene.start('Boot');
+      }
     }
     
+    //move flower back to its init position
     for(var i = 0; i < numberOfBox; i++){
-      distance[i] = Phaser.Math.Distance.Between(groupGG[i].x, groupGG[i].y, initGgPosX[i], initGgPosY[i]);
+      distance[i] = Phaser.Math.Distance.Between(groupHoa[i].x, groupHoa[i].y, initHoaPosX[i], initHoaPosY[i]);
       if (distance[i] < 4)
       {
-        groupGG[i].body.reset(initGgPosX[i], initGgPosY[i]);
+        groupHoa[i].body.reset(initHoaPosX[i], initHoaPosY[i]);
         
       }
     }
-    if(this.checkEnd()){
-      //console.log(1);
-      this.scene.start('Boot');
-    }
-
     
 }
 

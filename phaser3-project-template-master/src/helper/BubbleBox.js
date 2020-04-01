@@ -1,3 +1,5 @@
+export var bubble;
+export var content;
 export default class BublleBox
 {
     constructor(scene, x, y, width, height, quote){
@@ -7,8 +9,8 @@ export default class BublleBox
         var bubblePadding = 10;
         var arrowHeight = bubbleHeight / 4;
 
-        var bubble = scene.add.graphics({ x: x, y: y });
-
+        bubble = scene.add.graphics({ x: x, y: y });
+        
         //  Bubble shadow
         bubble.fillStyle(0x222222, 0.5);
         bubble.fillRoundedRect(6, 6, bubbleWidth, bubbleHeight, 16);
@@ -38,11 +40,17 @@ export default class BublleBox
         bubble.lineBetween(point2X, point2Y, point3X, point3Y);
         bubble.lineBetween(point1X, point1Y, point3X, point3Y);
 
-        var content = scene.add.text(0, 0, quote, { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
+        content = scene.add.text(0, 0, quote, { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
 
         var b = content.getBounds();
 
         content.setPosition(bubble.x + (bubbleWidth / 2) - (b.width / 2), bubble.y + (bubbleHeight / 2) - (b.height / 2));
+        
+        
         }
+
+        
     }
+
+
 }

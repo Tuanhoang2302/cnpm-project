@@ -2,17 +2,17 @@ var index = 0;
 //var check = true;
 export var spaceValid = [true, true];
 export default class DragManager{
-    constructor(scene, gg, group, cam, groupCam, initGgPosX, initGgPosY){
+    constructor(scene, group, groupCam, initGgPosX, initGgPosY, numberOfBox){
         
-        this.dragGai = function(){
+        this.dragHoa = function(){
 
             
-            for(var i = 0; i < 2; i++){
+            for(var i = 0; i < numberOfBox; i++){
                 group[i].setInteractive();
                 scene.input.setDraggable(group[i]);
             }
             scene.input.on('dragstart', function(pointer, gameObject, dragX, dragY){
-                for(var i = 0; i < 2; i++){
+                for(var i = 0; i < numberOfBox; i++){
                     if(gameObject.x == initGgPosX[i] && gameObject.y == initGgPosY[i]){
                         index = i;
                         //console.log(index);
@@ -26,7 +26,7 @@ export default class DragManager{
                 gameObject.x = dragX;
                 gameObject.y = dragY;
                 
-                for(var i = 0; i < 2; i++){
+                for(var i = 0; i < numberOfBox; i++){
                     if(Phaser.Math.Distance.Between(gameObject.x, gameObject.y, groupCam[i].x, groupCam[i].y) < 50 ){
                         groupCam[i].setTint(0xffff00, 0xffff00, 0xff0000, 0xff0000);
                             //console.log(i);
@@ -40,7 +40,7 @@ export default class DragManager{
             scene.input.on('dragend', function(pointer, gameObject){
                 
                 var check = true;
-                for(var i = 0; i < 2; i++){
+                for(var i = 0; i < numberOfBox; i++){
                    
                     if(Phaser.Math.Distance.Between(gameObject.x, gameObject.y, groupCam[i].x, groupCam[i].y) < 50){
                         if(spaceValid[i]){

@@ -3,10 +3,8 @@ import 'phaser';
 export default {
   type: Phaser.AUTO,
   parent: 'phaser-example',
-  x: 300, 
-  y: 400,
-  width: 800,
-  height: 600,
+  width: 1080,
+  height: 720,
   //backgroundColor: "0xffffff",
   
   dom: {
@@ -18,5 +16,8 @@ export default {
       
       debug: true
     }
+  },
+  audio: {
+    disableWebAudio: true
   }
 };
