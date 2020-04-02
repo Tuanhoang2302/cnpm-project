@@ -1,6 +1,6 @@
 var index = 0;
 //var check = true;
-export var spaceValid = [true, true];
+export var spaceValid = [true, true,true, true,true, true,true, true,true, true];
 export default class DragManager{
     constructor(scene, group, groupCam, initGgPosX, initGgPosY, numberOfBox){
         
@@ -28,7 +28,9 @@ export default class DragManager{
                 
                 for(var i = 0; i < numberOfBox; i++){
                     if(Phaser.Math.Distance.Between(gameObject.x, gameObject.y, groupCam[i].x, groupCam[i].y) < 50 ){
-                        groupCam[i].setTint(0xffff00, 0xffff00, 0xff0000, 0xff0000);
+                        if(spaceValid[i] == true){
+                            groupCam[i].setTint(0xffff00, 0xffff00, 0xff0000, 0xff0000);
+                        }
                             //console.log(i);
                             
                     }else{
@@ -44,8 +46,8 @@ export default class DragManager{
                    
                     if(Phaser.Math.Distance.Between(gameObject.x, gameObject.y, groupCam[i].x, groupCam[i].y) < 50){
                         if(spaceValid[i]){
-                            gameObject.x = groupCam[i].x;
-                            gameObject.y = groupCam[i].y;
+                            gameObject.x = groupCam[i].x-10;
+                            gameObject.y = groupCam[i].y - 50;
                             check = false;
                             spaceValid[i] = false;
                             groupCam[i].setTint(0xffffff);
@@ -53,7 +55,7 @@ export default class DragManager{
                             break;
                         }else{
                             groupCam[i].setTint(0xffffff);
-                            scene.physics.moveTo(gameObject, initGgPosX[index], initGgPosY[index], 200);
+                            scene.physics.moveTo(gameObject, initGgPosX[index], initGgPosY[index], 400);
                         }
                     }else{
                         
@@ -61,7 +63,7 @@ export default class DragManager{
                 }
                 //console.log(check);
                 if(check){
-                    scene.physics.moveTo(gameObject, initGgPosX[index], initGgPosY[index], 200);
+                    scene.physics.moveTo(gameObject, initGgPosX[index], initGgPosY[index], 400);
                 }
 
             }, scene);
