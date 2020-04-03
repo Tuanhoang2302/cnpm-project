@@ -1,15 +1,19 @@
-export var bubble;
+
 export var content;
 export default class BublleBox
 {
-    constructor(scene, x, y, width, height, quote){
+    
+    constructor(scene, x, y, width, height, quote, bubble){
+        this.x =x;
+        this.y =y;
+        this.bubble = bubble;
+
         this.createBox = function(){
         var bubbleWidth = width;
         var bubbleHeight = height;
         var bubblePadding = 10;
         var arrowHeight = bubbleHeight / 4;
 
-        bubble = scene.add.graphics({ x: x, y: y });
         
         //  Bubble shadow
         bubble.fillStyle(0x222222, 0.5);

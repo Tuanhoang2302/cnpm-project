@@ -1,36 +1,35 @@
 
+import {isMoving} from '../Scenes/BootScene';
+
 export default class CheckInputText
 {
-    constructor(scene, inputText1, groupChau, inputText2){
-        this.check1 = function(distance) {
-            if(inputText1.value == 0){
-                //bubble.clear();
+    constructor(scene){
+    
+        this.check = function(messageBox,inputText) {
+            
+            if(inputText.value == 0 || inputText.value == 1){
+                messageBox.bubble.setVisible(false);
               }
-              if(inputText1.value < 10 && inputText1.value != 1 && inputText1.value != 0){
-              
-                //pp.stop();
-                //bubble.clear();
-              }else if(inputText1.value > 10){
-                var donvi = inputText1.value % 10; 
-                var chuc = (inputText1.value - donvi) / 10;
-                inputText1.value = donvi;
-              }else if(inputText1.value == 10){
+              if(inputText.value < 10 && inputText.value != 1 && inputText.value != 0){
+                messageBox.bubble.setVisible(true);
+              }else if(inputText.value > 10){
+                var donvi = inputText.value % 10; 
+                var chuc = (inputText.value - donvi) / 10;
+                inputText.value = donvi;
+              }else if(inputText.value == 10){
+                isMoving[0] =true;
+
                 scene.time.addEvent({
-                  delay: 1000,
+                  delay: 3000,
                   callback: ()=>{
-                    scene.physics.moveTo(groupChau[0], 200, 300, 200);
-                    //scene.physics.moveTo(groupChau[1], 200, 300, 200);
+                    
+            
+                      
                   },
                   loop: true
-                  })
+                  });
               
-                if (distance < 4)
-                {
-                  groupChau[0].body.reset(200, 300);
-                  //groupChau[1].body.reset(200, 300);
-                }
-                inputText2.focus();
-                
+              
               }
           this.checkEnd = function (distance0, distance1) {
             inputText1.remove();
