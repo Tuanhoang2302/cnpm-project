@@ -1,5 +1,7 @@
 
 export var content;
+
+// cái này chủ yếu là kĩ thuật dùng graphic, mọi người có thể tự tìm hiểu
 export default class BublleBox
 {
     

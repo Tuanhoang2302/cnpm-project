@@ -1,5 +1,7 @@
 import 'phaser';
  
+
+// tạo khung cho game
 export default {
   type: Phaser.AUTO,
   parent: 'phaser-example',
@@ -10,9 +12,13 @@ export default {
     
   //   autoCenter: Phaser.Scale.CENTER_BOTH
   // },  
+
+  // cái này dùng để enable cái dom trong bootGame
   dom: {
       createContainer: true
   },
+
+  // cái này dùng để enable physics function
   physics: {
     default: "arcade",
     arcade: {
@@ -20,6 +26,8 @@ export default {
       debug: true
     }
   },
+
+  // cái này dùng để enable audio function
   audio: {
     disableWebAudio: true
   }

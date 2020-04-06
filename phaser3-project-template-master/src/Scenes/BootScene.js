@@ -36,16 +36,22 @@ export default class BootScene extends Phaser.Scene {
   }
     
   create () {
+    // tạo hiệu ứng chuyển cảnh
     this.cameras.main.fadeIn(2000);
+
+    //cái này kiểu tạo 1 form có sẵn từ file html khác ý, ở đay file html dùng tên là nameform và name attribute của nó là nameform(xem trong file nameform.html)
     element1 = this.add.dom(865, 145).createFromCache('nameform');
     element2 = this.add.dom(865, 295).createFromCache('nameform');
     element3 = this.add.dom(865, 445).createFromCache('nameform');
+
     inputText1 = element1.getChildByName('nameform');
     inputText2 = element2.getChildByName('nameform');
     inputText3 = element3.getChildByName('nameform');
     element1.setVisible(false);
     element2.setVisible(false);
     element3.setVisible(false);
+
+    // tạo thời gian delay 
     this.time.addEvent({
       delay: 2000,
       callback: ()=>{
@@ -54,8 +60,9 @@ export default class BootScene extends Phaser.Scene {
       },
       loop: true
       })
+
       bb1 = this.add.graphics({ x: 730, y: 120 });
-      bubbleBox1 = new BubbleBox(this, 730, 120, 250, 50, 'There are          flowers',bb1 );
+      bubbleBox1 = new BubbleBox(this, 730, 120, 250, 50, 'There are          flowers', bb1);
       bubbleBox1.createBox();
 
       bb2 = this.add.graphics({ x: 730, y: 270 });
@@ -87,7 +94,6 @@ export default class BootScene extends Phaser.Scene {
       messageBox3 = new BubbleBox(this, 770, 470, 250, 50, 'you are wrong', msg3);
       messageBox3.createBox();
       msg3.setVisible(false);
-      //bubble.clear();
       
       
       dayChau = this.add.image(320, 150, 'dayChau');
@@ -104,25 +110,32 @@ export default class BootScene extends Phaser.Scene {
        
       this.cursorKeys = this.input.keyboard.createCursorKeys();
       
-      
+    // CheckInputText để check xem số mình nhập vào có đúng 10 không
     checkInput = new CheckInputText(this);
-    var sprite = this.add.sprite(800, 800, 'button').setInteractive();
-    sprite.on('pointerover', function (event) {
 
+    //set Interactive cho button
+    var button = this.add.sprite(800, 800, 'button').setInteractive();
+
+    /*
+        tạo button event 
+        nhớ là phải cho ảnh set Interactive thì mới dùng được 
+    */
+    //nếu con trỏ chuột ở trên tâm ảnh thì set màu đỏ
+    button.on('pointerover', function (event) {
       this.setTint(0xff0000);
 
-  });
+    });
 
-  sprite.on('pointerout', function (event) {
+    // còn ở ngoài tấm ảnh thì clear màu đó đi
+    button.on('pointerout', function (event) {
 
       this.clearTint();
 
-  });
+    });
 
   }
 
   update(){
-    
     
     if(isStayCheck[0]){    
       checkInput.check(messageBox1,inputText1);
@@ -135,12 +148,10 @@ export default class BootScene extends Phaser.Scene {
           isMoving[0] = false;
           bb2.setVisible(true);
           element2.setVisible(true);
-          element1.destroy();
+          //element1.destroy();
         }
       }
     }
-    //console.log(isStayCheck[1]);
-    //console.log(dayChau.y);
     
     
     if(isStayCheck[1]){    
