@@ -25,9 +25,7 @@ class Game extends Phaser.Game {
 // tạo game 
 export var game = new Game();
 
-ReactDOM.render(<App />, document.getElementById("root"));
-
-// mở cái đầu và nên đọc code theo thứ tự sau
-/*
-config.js -> index.js -> GameScene.js -> dragManager.js -> bubbleBox.js -> Bootscene.js -> CheckInputText.js
-*/
+ReactDOM.render(
+  <App />,
+  document.getElementById("root") || document.createElement("div")
+);
