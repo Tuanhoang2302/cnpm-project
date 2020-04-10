@@ -4,11 +4,9 @@ export var content;
 // cái này chủ yếu là kĩ thuật dùng graphic, mọi người có thể tự tìm hiểu
 export default class BublleBox
 {
-    
-    constructor(scene, x, y, width, height, quote, bubble){
-        this.x =x;
-        this.y =y;
+    constructor(scene, width, height, quote, bubble, sizeFont){
         this.bubble = bubble;
+        this.sizeFont = sizeFont;
 
         this.createBox = function(){
         var bubbleWidth = width;
@@ -46,7 +44,7 @@ export default class BublleBox
         bubble.lineBetween(point2X, point2Y, point3X, point3Y);
         bubble.lineBetween(point1X, point1Y, point3X, point3Y);
 
-        content = scene.add.text(0, 0, quote, { fontFamily: 'Arial', fontSize: 20, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
+        content = scene.add.text(0, 0, quote, { fontFamily: 'Arial', fontSize: sizeFont, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
 
         var b = content.getBounds();
 

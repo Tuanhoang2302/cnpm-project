@@ -3,10 +3,11 @@ import 'phaser';
 
 // tạo khung cho game
 export default {
+  
   type: Phaser.AUTO,
   parent: 'phaser-example',
-  width: 1080,
-  height: 720,
+  width: 1280,
+  height: 780,
   //backgroundColor: "0xffffff",
    scale: {
     

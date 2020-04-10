@@ -38,7 +38,7 @@ create ()
     // add graphic cho 1 object 
     var bb = this.add.graphics({ x: 500, y: 250 });
 
-    var bubbleBox = new BubbleBox(this, 500, 250, 250, 50, '      “Move the flowers”', bb);
+    var bubbleBox = new BubbleBox(this, 250, 50, '      “Move the flowers”', bb, 20);
     bubbleBox.createBox();
 
     // add ảnh 
@@ -51,17 +51,10 @@ create ()
     ball = this.physics.add.image(300, 50, 'ball');
 
     //push phần tử vào mảng, cái này tí dùng vòng lặp cho code gọn
-    groupChau.push(this.add.image(100, 200, 'Chau'));
-    groupChau.push(this.add.image(170, 200, 'Chau'));
-    groupChau.push(this.add.image(240, 200, 'Chau'));
-    groupChau.push(this.add.image(310, 200, 'Chau'));
-    groupChau.push(this.add.image(380, 200, 'Chau'));
-    groupChau.push(this.add.image(450, 200, 'Chau'));
-    groupChau.push(this.add.image(520, 200, 'Chau'));
-    groupChau.push(this.add.image(590, 200, 'Chau'));
-    groupChau.push(this.add.image(660, 200, 'Chau'));
-    groupChau.push(this.add.image(730, 200, 'Chau'));
-
+    for(var i = 0; i < 10; i++){
+      groupChau.push(this.add.image(100 + i * 70, 200, 'Chau'));
+    }
+    
     groupHoa.push(this.physics.add.image(900, 600, 'Hoa'));
     groupHoa.push(this.physics.add.image(200, 500, 'Hoa'));
     groupHoa.push(this.physics.add.image(300, 400, 'Hoa'));
