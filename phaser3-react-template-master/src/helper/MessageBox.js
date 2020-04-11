@@ -29,6 +29,21 @@ export default class BublleBox
         bubble.strokeRoundedRect(0, 0, bubbleWidth, bubbleHeight, 16);
         bubble.fillRoundedRect(0, 0, bubbleWidth, bubbleHeight, 16);
 
+        //  Calculate arrow coordinates
+        var point1X = Math.floor(bubbleWidth / 7);
+        var point1Y = 0;
+        var point2X = Math.floor((bubbleWidth / 7) * 2);
+        var point2Y = 0;
+        var point3X = Math.floor(bubbleWidth / 7);
+        var point3Y = Math.floor(-arrowHeight);
+
+
+         //  Bubble arrow fill
+        bubble.fillTriangle(point1X, point1Y, point2X, point2Y, point3X, point3Y);
+        bubble.lineStyle(2, 0x565656, 1);
+        bubble.lineBetween(point2X, point2Y, point3X, point3Y);
+        bubble.lineBetween(point1X, point1Y, point3X, point3Y);
+
         content = scene.add.text(0, 0, quote, { fontFamily: 'Arial', fontSize: sizeFont, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
 
         var b = content.getBounds();

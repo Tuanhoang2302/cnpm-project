@@ -1,5 +1,5 @@
 import 'phaser';
- 
+import FadePlugin from '../../node_modules/phaser3-rex-plugins/plugins/fade-plugin.js';
 
 // tạo khung cho game
 export default {
@@ -33,5 +33,13 @@ export default {
   // cái này dùng để enable audio function
   audio: {
     disableWebAudio: true
+  },
+
+  plugins: {
+    global: [{
+        key: 'rexFade',
+        plugin: FadePlugin,
+        start: true
+    }]
   }
 };

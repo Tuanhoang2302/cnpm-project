@@ -6,7 +6,6 @@ import {spaceValid} from '../helper/DragManager';
 import BubbleBox from '../helper/BubbleBox';
 import Audio from '../helper/Audio';
 
-
 var wall;
 var ball;
 var distance = [0,0,0,0,0,0,0,0,0,0];;
@@ -65,7 +64,6 @@ create ()
     groupHoa.push(this.physics.add.image(200, 600, 'Hoa'));
     groupHoa.push(this.physics.add.image(500, 600, 'Hoa'));
     groupHoa.push(this.physics.add.image(400, 600, 'Hoa'));
-
     
     for(var i = 0; i < numberOfBox; i++){
       initHoaPosX[i] = groupHoa[i].x;

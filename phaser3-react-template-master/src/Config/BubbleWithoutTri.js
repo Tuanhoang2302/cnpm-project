@@ -1,4 +1,4 @@
-export default class BackgroundGame
+export default class BubbleWithoutTri
 {
     
     constructor(scene, x, y, width, height){
