@@ -8,7 +8,7 @@ export default {
   parent: 'phaser-example',
   width: 1280,
   height: 780,
-  //backgroundColor: "0xffffff",
+  backgroundColor: "0xffffff",
    scale: {
     
      //autoCenter: Phaser.Scale.CENTER_BOTH,

@@ -4,22 +4,26 @@ import FadePlugin from '../../node_modules/phaser3-rex-plugins/plugins/fade-plug
 import BubbleBox from '../helper/BubbleBox';
 import CheckInputText from '../helper/CheckInputText';
 
-
-var element = [];
+var Index;
 var returnbtn;
-var bubbleBox = [];
-var inputText = [];
-var cursorKeys;
 var checkInput;
+var cursorKeys;
+var quoteArr = [];
+var inputTextArr = [];
+var elementArr = [];
 var dayChau = [];
-var bb4;
+
 var bubble4;
-var bbgraphic = [];
+var bb4;
+var rsltPanelGrphic = [];
+var resultPanel = [];
+
 var button;
 var msggraphic = [];
 var messageBox = [];
-var isChangeScene = false;
 
+var isDisplayResult = false;
+var isChangeScene = false;
 export var isStayCheck = [true, false, false];
 export var isMoving=[false];
 
@@ -38,47 +42,35 @@ export default class BootScene extends Phaser.Scene {
     
 
   create () {
-    
     // tạo hiệu ứng chuyển cảnh
-    this.cameras.main.fadeIn(2000);
+    this.cameras.main.fadeIn(1000);
 
     //cái này kiểu tạo 1 form có sẵn từ file html khác ý, ở đay file html dùng tên là nameform và name attribute của nó là nameform(xem trong file nameform.html)
+    Index = 0;
+    
     for(var i = 0; i < 3; i++){
-        element.push(this.add.dom(975, 147 + 150 * i).createFromCache('nameform'));
-        element[i].setAlpha(0);
-        inputText.push(element[i].getChildByName('nameform'));
+      var element = this.add.dom(975, 147 + 150 * i).createFromCache('nameform');
+      element.setAlpha(0);
+      var inputText = element.getChildByName('nameform');
+      inputTextArr.push(inputText);
+      elementArr.push(element);
     }
-    
-    // create button
-    returnbtn = this.add.dom(100, 100).createFromCache('return');
-    
-    // tạo thời gian delay 
+
     this.time.addEvent({
-        delay: 2000,
+        delay: 1000,
         callback: ()=>{
-            element[0].setAlpha(1);
+            elementArr[0].setAlpha(1);
+            inputTextArr[0].focus();
             
         },
         loop: true
     })
-    //element[0].setAlpha(1);
-    //create bubble Box
-    for(var i = 0; i < 3; i++){
-        bbgraphic.push(this.add.graphics({ x: 830, y: 115 + 150 * i }));
-        bubbleBox.push(new BubbleBox(this, 270, 65, 'There are          flowers', bbgraphic[i], 20));
-        bubbleBox[i].createBox();
-        if(i > 0){
-          bbgraphic[i].setAlpha(0);          
-        }
-    }
-    bb4 = this.add.graphics({x: 300, y: 550});
-    bubble4 = new BubbleBox(this, 500, 100, 'Total number of flowers?', bb4, 40);
-    bubble4.createBox();
-    bb4.setAlpha(0);
+
+    this.displayBubbleBox(830,115, 270, 65, 'There are          flowers', 20);
     
     for(var i = 0; i < 4; i++){
         msggraphic.push(this.add.graphics({ x: 900, y: 190 + 150 * i}));
-        messageBox.push(new BubbleBox(this, 200, 50, 'you are wrong', msggraphic[i], 20));
+        messageBox.push(new BubbleBox(this, 200, 50, '', msggraphic[i], 20));
         messageBox[i].createBox();
         msggraphic[i].setVisible(false);
     }
@@ -101,62 +93,69 @@ export default class BootScene extends Phaser.Scene {
 
     var line = this.add.graphics();
     line.lineBetween(0, 70, 1280, 70);
+
+
   }
 
   update(){
-
-    this.MoveArrayOfBlock(0, 300, 150);
-    this.MoveArrayOfBlock(1, 450, 300);
+    console.log(inputTextArr[1].value);
     
-    if(isStayCheck[2]){
-      checkInput.check(messageBox[2],inputText[2]);
-      if(isMoving[0]){
-        element[2].destroy();
-        var txt = this.add.text(960, 130 + 150 * 2, '10', { fontFamily: 'Arial', fontSize: 30, color: '#000000'});
-        this.FdOut(bb4, button);
-        isMoving[0] = false;
-        isStayCheck[2] = false;
-      }
-      
+    if(Index <= 1){
+      this.MoveArrayOfBlock(Index, 300 + 150 * Index, 150 + 150 * Index);
     }
-    if(this.cursorKeys.right.isDown){
-      checkInput.checkEnd(distance0, distance1);
-    }
+    this.DisplayQuestion();
+    //this.TotalOfFlower();
+    
   }
 
   MoveArrayOfBlock(index, des, initPosY){
     if(isStayCheck[index]){    
-        checkInput.check(messageBox[index],inputText[index]);
-        if(isMoving[0]){
-          if(dayChau[index].y == initPosY){
-            element[index].destroy();
-            var txt = this.add.text(960, 130 + 150 * index, '10', { fontFamily: 'Arial', fontSize: 30, color: '#000000'});
-            
-          } 
-            if(index == 0){
-                dayChau[index].y +=2;
-                dayChau[index + 1].y += 2 ;
-            }else{
-                dayChau[index].y +=2;
-            }
-            if(dayChau[index].y == des){
-                isStayCheck[index] = false;
-                isStayCheck[index + 1] = true;
-                isMoving[0] = false;
-
-                this.FdOut(bbgraphic[index + 1]);
-                this.time.addEvent({
-                    delay: 1000,
-                    callback: ()=>{
-                        element[index + 1].setAlpha(1);
-                        
-                    },
-                    loop: true
-                })  
-
-            }
+      checkInput.check(messageBox[index],inputTextArr[index]);
+      if(isMoving[0]){
+        if(dayChau[index].y == initPosY){
+          elementArr[index].destroy();
+          var txt = this.add.text(960, 130 + 150 * index, '10', { fontFamily: 'Arial', fontSize: 30, color: '#000000'});  
+        } 
+        if(index == 0){
+          dayChau[index].y +=2;
+          dayChau[index + 1].y += 2 ;
+        }else{
+          dayChau[index].y +=2;
         }
+
+        if(dayChau[index].y == des){
+          isStayCheck[index] = false;
+          isStayCheck[index + 1] = true;
+          isMoving[0] = false;
+          Index++;
+          this.displayBubbleBox(830, 115 + ((Index) * 150), 270, 65, 'There are          flowers', 20);
+          
+          this.time.addEvent({
+            delay: 1000,
+            callback: ()=>{
+              elementArr[Index].setAlpha(1);
+              inputTextArr[Index].focus();
+            },
+            loop: true
+          })
+                 
+        }
+      }
     }
+  }
+
+  displayBubbleBox(x, y, bubbleWidth, bubbleHeight, qoute, sizeFont){
+    var bbgraphic = this.add.graphics({ x: x, y: y});
+    var bubbleBox = new BubbleBox(this, bubbleWidth, bubbleHeight, '', bbgraphic, 20);
+    bubbleBox.createBox();
+    bbgraphic.setAlpha(0);
+
+    var bubblePadding = 10;
+    var content = this.add.text(0, 0, qoute, { fontFamily: 'Arial', fontSize: sizeFont, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
+    var b = content.getBounds();
+    content.setPosition(bbgraphic.x + (bubbleWidth / 2) - (b.width / 2), bbgraphic.y + (bubbleHeight / 2) - (b.height / 2));
+    content.setAlpha(0);
+    this.FdOut(bbgraphic, content);
   }
 
   ButtonEvent(button){
@@ -170,7 +169,7 @@ export default class BootScene extends Phaser.Scene {
     });
 
     button.on('pointerdown', function (event) {
-        
+      this.TotalOfFlower();
     }, this);
   }
 
@@ -190,6 +189,30 @@ export default class BootScene extends Phaser.Scene {
       duration: 1000,
       ease: 'Power2'
     }, this);
+  }
+
+  DisplayQuestion(){
+    if(isStayCheck[2]){
+      checkInput.check(messageBox[2],inputTextArr[2]);
+      if(isMoving[0]){
+        elementArr[2].destroy();
+        var txt = this.add.text(960, 130 + 150 * 2, '10', { fontFamily: 'Arial', fontSize: 30, color: '#000000'}); 
+        this.displayBubbleBox(300, 550, 500, 100, 'Total number of flowers?', 40);
+        this.FdOut(button);
+        isMoving[0] = false;
+        isStayCheck[2] = false;
+        isDisplayResult = true;
+      }  
+    }
+  }
+
+  TotalOfFlower(){
+    if(isDisplayResult){
+      for(var i = 0; i < 3; i++){
+        this.FdIn(bbgraphic[i], txt);
+        this.FdIn(button);
+      }
+    }
   }
   
 };
