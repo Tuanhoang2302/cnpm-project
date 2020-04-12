@@ -27,20 +27,27 @@ export default class GameScene extends Phaser.Scene {
 preload ()
 {
     // load ảnh từ máy tính (nhớ là phải đúng tên đường dẫn đấy)
-    this.load.image('wall', 'src/assets/wall.png');
     this.load.image('ball', 'src/assets/ball.png');  
-    this.load.image('Hoa', 'src/assets/hoa.png');
-    this.load.image('Chau', 'src/assets/chau.png');
+    this.load.image('Hoa', 'src/assets/Block.png');
+    this.load.image('Chau', 'src/assets/nen.png');
     this.load.image('loa', 'src/assets/loa.png');
     this.load.audio('thanh', 'src/assets/flower.mp3');
 }
 
 create ()
 {
-  
-    // add graphic cho 1 object 
-    var bb = this.add.graphics({ x: 500, y: 250 });
+  var bubble = this.add.graphics({ x: 100, y: 100 });
+  bubble.fillStyle(0xD3D3D3, 1);
 
+  //  Bubble outline line style
+  bubble.lineStyle(4, 0x565656, 1);
+
+  //  Bubble shape and outline
+  bubble.strokeRoundedRect(0, 0, 250, 40, 23);
+  bubble.fillRoundedRect(0, 0, 250, 40, 23);
+    // add graphic cho 1 object 
+
+    var bb = this.add.graphics({ x: 500, y: 250 });
     var bubbleBox = new BubbleBox(this, 250, 50, '      “Move the flowers”', bb, 20);
     bubbleBox.createBox();
 
@@ -50,8 +57,8 @@ create ()
     var amthanh = this.sound.add('thanh');
 
     // làm cho object có khả năng tương tác thực (như va chạm, trọng lực)
-    wall = this.physics.add.image(700, 50, 'wall');
-    ball = this.physics.add.image(300, 50, 'ball');
+    
+    ball = this.add.image(300, 50, 'ball');
 
     //push phần tử vào mảng, cái này tí dùng vòng lặp cho code gọn
     for(var i = 0; i < 10; i++){
@@ -76,11 +83,10 @@ create ()
 
     //setScale
     for(var i = 0; i < numberOfBox; i++){
-      groupHoa[i].setScale(0.12, 0.12);
-      groupChau[i].setScale(0.3, 0.3);
+      //groupHoa[i].setScale(0.12, 0.12);
+      //groupChau[i].setScale(0.3, 0.3);
     }
-    wall.setScale(0.5, 0.5);
-    ball.setScale(0.07,0.07);
+    ball.setScale(2);
     loa.setScale(0.055, 0.055);
 
     // tạo chức năng drag and drop
@@ -93,8 +99,8 @@ create ()
 
     // cái này là để test keyboard input thôi đừng để ý
     this.cursorKeys = this.input.keyboard.createCursorKeys();
+
     
-    //this.scene.start('Boot');   
 }
 
 update ()
@@ -103,10 +109,7 @@ update ()
     if(this.checkEnd()){ 
 
         // tạo chuyển động cho quả bóng và cho va chạm với tường, các thành phần trong hàm tí giải thích sau
-        this.physics.world.collide(wall.setImmovable(), ball.setVelocity(100, 0).setBounce(0).setCollideWorldBounds(true),
-        function () {
-          
-        });
+        
         
         //Change scene
         if((wall.x - ball.x) < 28){

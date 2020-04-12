@@ -47,8 +47,8 @@ export default class DragManager{
                    
                     if(Phaser.Math.Distance.Between(gameObject.x, gameObject.y, groupCam[i].x, groupCam[i].y) < 50){
                         if(spaceValid[i]){
-                            gameObject.x = groupCam[i].x-10;
-                            gameObject.y = groupCam[i].y - 50;
+                            gameObject.x = groupCam[i].x;
+                            gameObject.y = groupCam[i].y - 18;
                             check = false;
                             spaceValid[i] = false;
                             groupCam[i].setTint(0xffffff);
