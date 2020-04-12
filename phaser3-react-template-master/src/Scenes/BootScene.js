@@ -3,20 +3,20 @@ import FadeOutDestroy from '../../node_modules/phaser3-rex-plugins/plugins/fade-
 import FadePlugin from '../../node_modules/phaser3-rex-plugins/plugins/fade-plugin.js';
 import BubbleBox from '../helper/BubbleBox';
 import CheckInputText from '../helper/CheckInputText';
+import FdInFdOut from '../helper/FdInFdOut';
 
 var Index;
 var returnbtn;
 var checkInput;
 var cursorKeys;
+
+var txtArr = [];
+var bbgraphicArr = [];
 var quoteArr = [];
 var inputTextArr = [];
 var elementArr = [];
 var dayChau = [];
-
-var bubble4;
-var bb4;
-var rsltPanelGrphic = [];
-var resultPanel = [];
+var fade;
 
 var button;
 var msggraphic = [];
@@ -44,7 +44,7 @@ export default class BootScene extends Phaser.Scene {
   create () {
     // tạo hiệu ứng chuyển cảnh
     this.cameras.main.fadeIn(1000);
-
+    fade = new FdInFdOut(this);
     //cái này kiểu tạo 1 form có sẵn từ file html khác ý, ở đay file html dùng tên là nameform và name attribute của nó là nameform(xem trong file nameform.html)
     Index = 0;
     
@@ -98,7 +98,6 @@ export default class BootScene extends Phaser.Scene {
   }
 
   update(){
-    console.log(inputTextArr[1].value);
     
     if(Index <= 1){
       this.MoveArrayOfBlock(Index, 300 + 150 * Index, 150 + 150 * Index);
@@ -115,6 +114,7 @@ export default class BootScene extends Phaser.Scene {
         if(dayChau[index].y == initPosY){
           elementArr[index].destroy();
           var txt = this.add.text(960, 130 + 150 * index, '10', { fontFamily: 'Arial', fontSize: 30, color: '#000000'});  
+          txtArr.push(txt);
         } 
         if(index == 0){
           dayChau[index].y +=2;
@@ -149,13 +149,14 @@ export default class BootScene extends Phaser.Scene {
     var bubbleBox = new BubbleBox(this, bubbleWidth, bubbleHeight, '', bbgraphic, 20);
     bubbleBox.createBox();
     bbgraphic.setAlpha(0);
+    bbgraphicArr.push(bbgraphic);
 
     var bubblePadding = 10;
     var content = this.add.text(0, 0, qoute, { fontFamily: 'Arial', fontSize: sizeFont, color: '#000000', align: 'center', wordWrap: { width: bubbleWidth - (bubblePadding * 2) } });
     var b = content.getBounds();
     content.setPosition(bbgraphic.x + (bubbleWidth / 2) - (b.width / 2), bbgraphic.y + (bubbleHeight / 2) - (b.height / 2));
     content.setAlpha(0);
-    this.FdOut(bbgraphic, content);
+    fade.FdOut(bbgraphic, content);
   }
 
   ButtonEvent(button){
@@ -173,23 +174,6 @@ export default class BootScene extends Phaser.Scene {
     }, this);
   }
 
-  FdIn(obj1, obj2){
-    this.tweens.add({
-      targets: [obj1, obj2],
-      alpha: 0,
-      duration: 1000,
-      ease: 'Power2'
-    }, this);
-  }
-
-  FdOut(obj1, obj2){
-    this.tweens.add({
-      targets: [obj1, obj2],
-      alpha: 1,
-      duration: 1000,
-      ease: 'Power2'
-    }, this);
-  }
 
   DisplayQuestion(){
     if(isStayCheck[2]){
@@ -197,8 +181,9 @@ export default class BootScene extends Phaser.Scene {
       if(isMoving[0]){
         elementArr[2].destroy();
         var txt = this.add.text(960, 130 + 150 * 2, '10', { fontFamily: 'Arial', fontSize: 30, color: '#000000'}); 
+        txtArr.push(txt);
         this.displayBubbleBox(300, 550, 500, 100, 'Total number of flowers?', 40);
-        this.FdOut(button);
+        fade.FdOut(button);
         isMoving[0] = false;
         isStayCheck[2] = false;
         isDisplayResult = true;
@@ -209,8 +194,8 @@ export default class BootScene extends Phaser.Scene {
   TotalOfFlower(){
     if(isDisplayResult){
       for(var i = 0; i < 3; i++){
-        this.FdIn(bbgraphic[i], txt);
-        this.FdIn(button);
+        fade.FdIn(bbgraphicArr[i], txtArr[i]);
+        fade.FdIn(button);
       }
     }
   }
