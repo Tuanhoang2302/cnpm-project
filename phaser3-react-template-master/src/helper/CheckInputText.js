@@ -1,17 +1,21 @@
-
+import 'phaser';
 import {isMoving} from '../Scenes/BootScene';
 
 export default class CheckInputText
 {
     constructor(scene){
     
-        this.check = function(messageBox,inputText) {
+        this.check = function(msggraphicArr, msgContentArr,inputText) {
             
             if(inputText.value == 0 || inputText.value == 1){
-                messageBox.bubble.setVisible(false);
+                //messageBox.bubble.setVisible(false);
+                msggraphicArr.setAlpha(0);
+                msgContentArr.setAlpha(0);
               }
               if(inputText.value < 10 && inputText.value != 1 && inputText.value != 0){
-                messageBox.bubble.setVisible(true);
+                //messageBox.bubble.setVisible(true);
+                msggraphicArr.setAlpha(1);
+                msgContentArr.setAlpha(1);
               }else if(inputText.value > 10){
                 var donvi = inputText.value % 10; 
                 var chuc = (inputText.value - donvi) / 10;
