@@ -20,7 +20,7 @@ export default class BublleBox
         bubble.fillRoundedRect(6, 6, bubbleWidth, bubbleHeight, 16);
 
         //  Bubble color
-        bubble.fillStyle(0xffffff, 1);
+        bubble.fillStyle(0xFFB6C1, 1);
 
         //  Bubble outline line style
         bubble.lineStyle(4, 0x565656, 1);

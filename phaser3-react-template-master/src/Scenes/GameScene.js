@@ -1,10 +1,11 @@
 import 'phaser';
 import { AUTO } from 'phaser';
-import config from '../Config/config';
+//import config from '../Config/config';
 import DragManager from '../helper/DragManager';
 import {spaceValid} from '../helper/DragManager';
 import BubbleBox from '../helper/BubbleBox';
 import Audio from '../helper/Audio';
+
 
 var wall;
 var ball;
@@ -15,11 +16,13 @@ var groupHoa = [];
 var groupChau = [];
 var numberOfBox = 10;
 var cursorKeys;
+
 export default class GameScene extends Phaser.Scene {
   constructor () {
     // đặt tên cho scene 
     super('Game');
   }
+
 // load những thứ sẽ dùng trong game như ảnh, âm thanh...
 preload ()
 {
@@ -34,6 +37,7 @@ preload ()
 
 create ()
 {
+  
     // add graphic cho 1 object 
     var bb = this.add.graphics({ x: 500, y: 250 });
 
@@ -89,7 +93,8 @@ create ()
 
     // cái này là để test keyboard input thôi đừng để ý
     this.cursorKeys = this.input.keyboard.createCursorKeys();
-  
+    
+    //this.scene.start('Boot');   
 }
 
 update ()
@@ -105,8 +110,6 @@ update ()
         
         //Change scene
         if((wall.x - ball.x) < 28){
-
-            //Chuyển scene mới
             this.scene.start('Boot');
         }
     }

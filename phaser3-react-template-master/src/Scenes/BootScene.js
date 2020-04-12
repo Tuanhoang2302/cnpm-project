@@ -13,6 +13,7 @@ var checkInput;
 var cursorKeys;
 var fade;
 var box;
+var button;
 
 var contentArr = [];
 var txtArr = [];
@@ -21,8 +22,6 @@ var quoteArr = [];
 var inputTextArr = [];
 var elementArr = [];
 var dayChau = [];
-
-var button;
 var msggraphicArr = [];
 var msgContentArr = [];
 
@@ -69,7 +68,6 @@ export default class BootScene extends Phaser.Scene {
     
 
   create () {
-    
     // tạo hiệu ứng chuyển cảnh
     this.cameras.main.fadeIn(1000);
     fade = new FdInFdOut(this);
@@ -228,7 +226,6 @@ export default class BootScene extends Phaser.Scene {
   }
 
   TotalOfFlower(){
-    
       for(var i = 0; i < 3; i++){
         fade.FdIn(bbgraphicArr[i], txtArr[i]);
         fade.FdIn(button, contentArr[i]);
