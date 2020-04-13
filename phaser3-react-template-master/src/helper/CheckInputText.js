@@ -1,5 +1,6 @@
 import 'phaser';
 import {isMoving} from '../Scenes/BootScene';
+import {isWannaReset} from '../Scenes/BootScene';
 
 export default class CheckInputText
 {
@@ -16,6 +17,7 @@ export default class CheckInputText
                 //messageBox.bubble.setVisible(true);
                 msggraphicArr.setAlpha(1);
                 msgContentArr.setAlpha(1);
+                isWannaReset[0] = true;
               }else if(inputText.value > 10){
                 var donvi = inputText.value % 10; 
                 var chuc = (inputText.value - donvi) / 10;
@@ -26,9 +28,7 @@ export default class CheckInputText
                 scene.time.addEvent({
                   delay: 3000,
                   callback: ()=>{
-                    
-            
-                      
+              
                   },
                   loop: true
                   });

@@ -4,7 +4,7 @@ import GameScene from './Scenes/GameScene';
 import BootScene from './Scenes/BootScene';
 import {so} from './Scenes/GameScene';
 import Game1Scene3 from './Scenes/Game1Scene3';
-//import ResetScene from './Scenes/ResetScene';
+import ResetScene from './Scenes/ResetScene';
 
 import Phaser from "phaser";
 import React from "react";
@@ -20,15 +20,16 @@ class Game extends Phaser.Game {
     this.scene.add('Boot', BootScene);
     this.scene.add('Game', GameScene);
     //this.scene.add('Boot', BootScene);
-    //this.scene.add('Scene3', Game1Scene3);
-    //this.scene.add('Reset', ResetScene);
-    this.scene.start('Boot');
+    this.scene.add('Scene3', Game1Scene3);
+    this.scene.add('Reset', ResetScene);
+    this.scene.start('Game');
     
   }
 }
 
 // tạo game 
 export var game = new Game();
+
 
 ReactDOM.render(
   <App />,

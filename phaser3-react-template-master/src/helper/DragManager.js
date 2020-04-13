@@ -1,3 +1,4 @@
+import 'phaser'
 var index = 0;
 //var check = true;
 export var spaceValid = [true, true,true, true,true, true,true, true,true, true];
@@ -12,6 +13,7 @@ export default class DragManager{
             }
             // nhớ là set Draggable ở phía trên mới dùng được dragstart, drag, dragend này nhé
             scene.input.on('dragstart', function(pointer, gameObject, dragX, dragY){
+                
                 for(var i = 0; i < numberOfBox; i++){
                     // Game object ở đây là đối tượng mà mình drag
                     if(gameObject.x == initGgPosX[i] && gameObject.y == initGgPosY[i]){
@@ -26,9 +28,10 @@ export default class DragManager{
             scene.input.on('drag', function(pointer, gameObject, dragX, dragY){
                 gameObject.x = dragX;
                 gameObject.y = dragY;
+                console.log("jfds");
                 
                 for(var i = 0; i < numberOfBox; i++){
-                    if(Phaser.Math.Distance.Between(gameObject.x, gameObject.y, groupCam[i].x, groupCam[i].y) < 50 ){
+                    if(Math.abs(gameObject.x - groupCam[i].x) < 30  && Math.abs(gameObject.y - groupCam[i].y) < 100){
                         if(spaceValid[i] == true){
                             groupCam[i].setTint(0xffff00, 0xffff00, 0xff0000, 0xff0000);
                         }
@@ -45,7 +48,7 @@ export default class DragManager{
                 var check = true;
                 for(var i = 0; i < numberOfBox; i++){
                    
-                    if(Phaser.Math.Distance.Between(gameObject.x, gameObject.y, groupCam[i].x, groupCam[i].y) < 50){
+                    if(Math.abs(gameObject.x - groupCam[i].x) < 30  && Math.abs(gameObject.y - groupCam[i].y) < 100){
                         if(spaceValid[i]){
                             gameObject.x = groupCam[i].x;
                             gameObject.y = groupCam[i].y - 18;

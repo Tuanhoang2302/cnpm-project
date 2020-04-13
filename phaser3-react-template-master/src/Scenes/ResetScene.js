@@ -1,0 +1,52 @@
+import 'phaser'
+export default class ResetScene extends Phaser.Scene
+{
+    constructor(){
+        super('Reset');
+    }
+
+    preload(){
+        this.load.image('dino', 'src/assets/dino.jpg');
+        this.load.image('button', 'src/assets/next.png');
+        this.load.image('yes', 'src/assets/yes.png');
+        this.load.image('no', 'src/assets/no.png');
+    }
+
+    create(){
+        this.cameras.main.fadeIn(1500);
+        var dino = this.add.image(650, 200, 'dino');
+        dino.setScale(0.7);
+        var content = this.add.text(300, 400, 'You have made some mistakes this time.' + '\n\n' + 'Do you want to play again?', { fontFamily: 'Arial', fontSize: 40, color: '#000000', align: 'center', wordWrap: { width: 800 - (10 * 2) } });
+        var buttonYes = this.add.sprite(850, 650, 'yes').setInteractive();
+        buttonYes.setScale(1.2, 1.2);
+        this.ButtonEvent(buttonYes, 1);
+
+        var buttonNo = this.add.sprite(450, 650, 'no').setInteractive();
+        buttonNo.setScale(1.25, 1.25);
+        this.ButtonEvent(buttonNo, 0);
+    }
+
+    update(){
+
+    }
+
+    ButtonEvent(button, id){
+      button.on('pointerover', function (event) {
+        this.setTint(0xF5F5F5);
+      });
+  
+      // còn ở ngoài tấm ảnh thì clear màu đó đi
+      button.on('pointerout', function (event) {
+        this.clearTint();
+      });
+      if(id == 1){
+        button.on('pointerdown', function (event) {
+          this.scene.start('Boot');
+        },  this);
+      }else{
+        button.on('pointerdown', function (event) {
+          this.scene.start('Boot');
+        },  this);
+      }
+    }
+}

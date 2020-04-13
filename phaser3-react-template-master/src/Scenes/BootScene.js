@@ -15,6 +15,7 @@ var fade;
 var box;
 var button;
 var theNumber = Math.floor(Math.random() * (3 - 1 + 1) + 1);
+var ball;
 
 var contentArr = [];
 var txtArr = [];
@@ -31,6 +32,8 @@ var isDisplayResult = false;
 var isChangeScene = false;
 export var isStayCheck = [true, false, false];
 export var isMoving=[false];
+export var isWannaReset=[false];
+var isPlayTilEnd = false;
 
 const elementStartPoxX = 975;
 const elementStartPoxY = 147;
@@ -51,7 +54,7 @@ const txtStartPosX = 960;
 const txtStartPosY = 130;
 const txtFont = 30;
 
-const BlockStartPosX = 320;
+const BlockStartPosX = 370;
 const BlockStartPosY = 150;
 
 export default class BootScene extends Phaser.Scene {
@@ -65,14 +68,21 @@ export default class BootScene extends Phaser.Scene {
     //this.load.image('Chau', 'src/assets/chau.png');
     this.load.image('button', 'src/assets/next.png');
     this.load.image('dayChau', 'src/assets/arrBlock.png');
+    this.load.image('ballHolder', 'src/assets/thanh.png');
+    this.load.image('ball', 'src/assets/ball.png');
   }
     
 
   create () {
     console.log(theNumber);
-    
+    var ballHolder = this.add.image(630, 35, 'ballHolder');
+    for(var i = 0; i < 5; i++){
+      ball = this.add.image(400 + 30 * i, 34, 'ball');
+      ball.setScale(1.2);
+    }
+
     // tạo hiệu ứng chuyển cảnh
-    this.cameras.main.fadeIn(1000);
+    this.cameras.main.fadeIn(1500);
     fade = new FdInFdOut(this);
     box = new DisplayBox(this);
     //cái này kiểu tạo 1 form có sẵn từ file html khác ý, ở đay file html dùng tên là nameform và name attribute của nó là nameform(xem trong file nameform.html)
@@ -87,7 +97,7 @@ export default class BootScene extends Phaser.Scene {
     }
 
     this.time.addEvent({
-        delay: 1000,
+        delay: 1500,
         callback: ()=>{
             elementArr[0].setAlpha(1);
             inputTextArr[0].focus();
@@ -96,7 +106,7 @@ export default class BootScene extends Phaser.Scene {
         loop: true
     })
 
-    box.displayBubbleBox(BubbleStartPosX, BubbleStartPosY, BublleWidth, BublleHeight, 'There are          flowers', fontTextBubble, bbgraphicArr, contentArr, fade);
+    box.displayBubbleBox(BubbleStartPosX, BubbleStartPosY, BublleWidth, BublleHeight, 'There are          blocks', fontTextBubble, bbgraphicArr, contentArr, fade);
     
     for(var i = 0; i < theNumber; i++){
       box.displayMessageBox(MessageStartPosX, MessageStartPosY + 150 * i, MessageWidth, MessageHeight, 'There are 10 blocks', fontTextMessage, msggraphicArr, msgContentArr);
@@ -113,31 +123,34 @@ export default class BootScene extends Phaser.Scene {
 
     //set Interactive cho button
     button = this.add.sprite(950, 600, 'button').setInteractive();
-    button.setScale(1.5, 1.5);
+    button.setScale(2, 2);
     button.setAlpha(0);
     this.ButtonEvent(button);
 
     var line = this.add.graphics();
     line.lineBetween(0, 70, 1280, 70);
-    
-
+  
   }
 
   update(){
-    console.log(Index);
     
-    if(theNumber == 3){
-      if(Index <= 1){
+    if(theNumber != 1){
+      if(Index <= theNumber - 2){
         this.MoveArrayOfBlock(Index, 300 + 150 * Index, 150 + 150 * Index);
       }
-    }else if(theNumber == 2){
-      if(Index <= 0)
-        this.MoveArrayOfBlock(Index, 300 + 150 * Index, 150 + 150 * Index);
     }
     this.DisplayQuestion();
     this.DisplayResult();
-    
+    this.WannaReset();
+    this.MoveTheBall();
+
   }
+
+
+
+
+
+
 
   MoveArrayOfBlock(index, des, initPosY){
     if(isStayCheck[index]){    
@@ -149,10 +162,10 @@ export default class BootScene extends Phaser.Scene {
           txtArr.push(txt);
         } 
         if(index == 0 && theNumber == 3){
-          dayChau[index].y +=2;
-          dayChau[index + 1].y += 2 ;
+          dayChau[index].y +=5;
+          dayChau[index + 1].y += 5 ;
         }else{
-          dayChau[index].y +=2;
+          dayChau[index].y +=5;
         }
 
         if(dayChau[index].y == des){
@@ -193,7 +206,6 @@ export default class BootScene extends Phaser.Scene {
     }, this);
   }
 
-
   DisplayQuestion(){
     if(isStayCheck[theNumber - 1]){
       checkInput.check(msggraphicArr[theNumber - 1], msgContentArr[theNumber - 1],inputTextArr[theNumber - 1]);
@@ -211,16 +223,18 @@ export default class BootScene extends Phaser.Scene {
   }
 
   DisplayResult(){
+    //console.log(bbgraphicArr[0].y);
     if(isDisplayResult){
       if(intilizeCompleted){
         for(var i = theNumber + 1; i < theNumber * 2 + 1; i++){
           if(bbgraphicArr[i].y != 560){
-            bbgraphicArr[i].y += 2;
-            contentArr[i].y += 2;
+            bbgraphicArr[i].y += 5;
+            contentArr[i].y += 5;
           }
         }
-
-        if(bbgraphicArr[0].y == 560){
+        //console.log(bbgraphicArr[1].y);
+        
+        if(bbgraphicArr[theNumber + 1].y == 560){
           console.log("hello");
           
           for(var i = theNumber + 1; i < theNumber * 2 + 1; i++){
@@ -228,6 +242,39 @@ export default class BootScene extends Phaser.Scene {
           }
           box.displayBubbleBox(960, 560, 80, 80, '30', 40, bbgraphicArr, contentArr, fade);
           isDisplayResult = false;
+          isPlayTilEnd = true;
+        }
+      }
+    }
+  }
+
+  WannaReset(){
+    if(isWannaReset[0]){
+      if(isPlayTilEnd){
+      this.time.addEvent({
+        delay: 2000,
+        callback: ()=>{
+            this.scene.start('Reset');
+        },
+        loop: true
+      })
+    }
+    }
+  }
+
+  MoveTheBall(){
+    if(isPlayTilEnd){
+      if(isWannaReset[0] == false){
+        if(ball.x < 860){
+          ball.x +=3;
+        }else{     
+          this.time.addEvent({
+            delay: 2000,
+            callback: ()=>{
+              this.scene.start('Game');
+            },
+            loop: true
+          })
         }
       }
     }

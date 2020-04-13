@@ -32,20 +32,13 @@ preload ()
     this.load.image('Chau', 'src/assets/nen.png');
     this.load.image('loa', 'src/assets/loa.png');
     this.load.audio('thanh', 'src/assets/flower.mp3');
+    this.load.image('ballHolder', 'src/assets/thanh.png')
 }
 
 create ()
 {
-  var bubble = this.add.graphics({ x: 100, y: 100 });
-  bubble.fillStyle(0xD3D3D3, 1);
-
-  //  Bubble outline line style
-  bubble.lineStyle(4, 0x565656, 1);
-
-  //  Bubble shape and outline
-  bubble.strokeRoundedRect(0, 0, 250, 40, 23);
-  bubble.fillRoundedRect(0, 0, 250, 40, 23);
-    // add graphic cho 1 object 
+  var ballHolder = this.add.image(630, 28, 'ballHolder');
+    //this.scene.start('Boot')
 
     var bb = this.add.graphics({ x: 500, y: 250 });
     var bubbleBox = new BubbleBox(this, 250, 50, '      “Move the flowers”', bb, 20);
@@ -58,7 +51,10 @@ create ()
 
     // làm cho object có khả năng tương tác thực (như va chạm, trọng lực)
     
-    ball = this.add.image(300, 50, 'ball');
+    for(var i = 0; i < 5; i++){
+      ball = this.add.image(400 + 30 * i, 27, 'ball');
+      ball.setScale(1.2);
+    }
 
     //push phần tử vào mảng, cái này tí dùng vòng lặp cho code gọn
     for(var i = 0; i < 10; i++){
@@ -82,11 +78,7 @@ create ()
     }
 
     //setScale
-    for(var i = 0; i < numberOfBox; i++){
-      //groupHoa[i].setScale(0.12, 0.12);
-      //groupChau[i].setScale(0.3, 0.3);
-    }
-    ball.setScale(2);
+    //ball.setScale(1.2);
     loa.setScale(0.055, 0.055);
 
     // tạo chức năng drag and drop
@@ -100,38 +92,38 @@ create ()
     // cái này là để test keyboard input thôi đừng để ý
     this.cursorKeys = this.input.keyboard.createCursorKeys();
 
-    
+    var line = this.add.graphics();
+    line.lineBetween(0, 70, 1280, 70);
 }
 
 update ()
 {  
-    //Move ball when game is end
-    if(this.checkEnd()){ 
+    this.DropAndDrag();
+    this.ChangeScene();
+}
 
-        // tạo chuyển động cho quả bóng và cho va chạm với tường, các thành phần trong hàm tí giải thích sau
-        
-        
-        //Change scene
-        if((wall.x - ball.x) < 28){
-            this.scene.start('Boot');
-        }
-    }
+ChangeScene(){
+  if(this.checkEnd()){ 
+    this.time.addEvent({
+      delay: 1000,
+      callback: ()=>{
+        this.scene.start('Boot');
+      },
+      loop: true
+    })
+  }
+}
+
+DropAndDrag(){
+  for(var i = 0; i < numberOfBox; i++){
+    // hàm tính khoảng cách
+    distance[i] = Phaser.Math.Distance.Between(groupHoa[i].x, groupHoa[i].y, initHoaPosX[i], initHoaPosY[i]);
+    if (distance[i] < 4)
+    {
+      groupHoa[i].body.reset(initHoaPosX[i], initHoaPosY[i]);
       
-    
-    //move flower back to its init position
-    for(var i = 0; i < numberOfBox; i++){
-      // hàm tính khoảng cách
-      distance[i] = Phaser.Math.Distance.Between(groupHoa[i].x, groupHoa[i].y, initHoaPosX[i], initHoaPosY[i]);
-      if (distance[i] < 4)
-      {
-        /*khi mà khoảng cách trên bé hơn 4 thì cho hoa đấy về vị trí ban đầu luôn, 
-        nếu k có hàm này thì hình sẽ bị giật do object vẫn còn vận tốc, xóa thử đi để test xem
-        */
-        groupHoa[i].body.reset(initHoaPosX[i], initHoaPosY[i]);
-        
-      }
     }
-    
+  }
 }
 
 checkEnd(){
