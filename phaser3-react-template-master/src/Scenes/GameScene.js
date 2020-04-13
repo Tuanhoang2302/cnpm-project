@@ -10,6 +10,7 @@ import Block from '../gameObject/Block';
 
 var wall;
 var ball;
+var lastBall;
 var distance = [0,0,0,0,0,0,0,0,0,0];;
 var initHoaPosX = [0,0,0,0,0,0,0,0,0,0];
 var initHoaPosY = [0,0,0,0,0,0,0,0,0,0];
@@ -42,7 +43,7 @@ create ()
     var ballHolder = this.add.image(630, 25, 'ballHolder');
     ball = new Ball();
     for(var i = 0; i < 5; i++){
-      ball.create(this, 400 + 30 * i, 24);
+      lastBall = ball.create(this, 400 + 30 * i, 24);
     }
 
     var bb = this.add.graphics({ x: 500, y: 250 });
@@ -95,19 +96,25 @@ create ()
 
 update ()
 {  
+  
     this.DropAndDrag();
     this.ChangeScene();
 }
 
 ChangeScene(){
   if(this.checkEnd()){ 
-    this.time.addEvent({
-      delay: 1000,
-      callback: ()=>{
-        this.scene.start('Boot');
-      },
+    if(lastBall.x < 860){
+      console.log(ball.x);
+      lastBall.x +=3;
+    }else{    
+      this.time.addEvent({
+          delay: 1500,
+          callback: ()=>{
+              this.scene.start('Boot');
+          },
       loop: true
-    })
+      })
+  }
   }
 }
 

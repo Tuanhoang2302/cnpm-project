@@ -93,9 +93,9 @@ export default class BootScene extends Phaser.Scene {
     var ballHolder = this.add.image(630, 25, 'ballHolder');
 
     this.ball = new Ball();
-    for(var i = 0; i < 5; i++){
-      this.lastBall = this.ball.create(this, 400 + 30 * i, 24);
-      
+    this.ball.create(this, 860, 24);
+    for(var i = 0; i < 4; i++){
+      this.lastBall = this.ball.create(this, 400 + 30 * i, 24);    
     }
     
     for(var i = 0; i < this.theNumber; i++){
@@ -299,7 +299,7 @@ export default class BootScene extends Phaser.Scene {
     if(this.isPlayTilEnd){
       if(this.isWannaReset[0] == false){
           
-          if(this.lastBall.x < 860){
+          if(this.lastBall.x < 830){
               //console.log(ball.x);
               this.lastBall.x +=3;
           }else{    

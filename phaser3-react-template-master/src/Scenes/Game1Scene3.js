@@ -95,6 +95,7 @@ export default class Game1Scene3 extends Phaser.Scene {
 
     this.ball = new Ball();
     this.ball.create(this, 860, 24);
+    this.ball.create(this, 830, 24);
     for(var i = 0; i < 4; i++){
       this.lastBall = this.ball.create(this, 400 + 30 * i, 24);    
     }
@@ -264,7 +265,7 @@ export default class Game1Scene3 extends Phaser.Scene {
     if(this.isPlayTilEnd){
       if(this.isWannaReset[0] == false){
           
-          if(this.lastBall.x < 860){
+          if(this.lastBall.x < 800){
               //console.log(ball.x);
               this.lastBall.x +=3;
           }else{    
