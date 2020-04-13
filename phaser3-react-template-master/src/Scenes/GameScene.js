@@ -5,7 +5,8 @@ import DragManager from '../helper/DragManager';
 import {spaceValid} from '../helper/DragManager';
 import BubbleBox from '../helper/BubbleBox';
 import Audio from '../helper/Audio';
-
+import Ball from '../gameObject/Ball';
+import Block from '../gameObject/Block';
 
 var wall;
 var ball;
@@ -28,7 +29,7 @@ preload ()
 {
     // load ảnh từ máy tính (nhớ là phải đúng tên đường dẫn đấy)
     this.load.image('ball', 'src/assets/ball.png');  
-    this.load.image('Hoa', 'src/assets/Block.png');
+    this.load.image('Block', 'src/assets/Block.png');
     this.load.image('Chau', 'src/assets/nen.png');
     this.load.image('loa', 'src/assets/loa.png');
     this.load.audio('thanh', 'src/assets/flower.mp3');
@@ -37,8 +38,12 @@ preload ()
 
 create ()
 {
-  var ballHolder = this.add.image(630, 28, 'ballHolder');
-    //this.scene.start('Boot')
+    this.cameras.main.fadeIn(1500);
+    var ballHolder = this.add.image(630, 25, 'ballHolder');
+    ball = new Ball();
+    for(var i = 0; i < 5; i++){
+      ball.create(this, 400 + 30 * i, 24);
+    }
 
     var bb = this.add.graphics({ x: 500, y: 250 });
     var bubbleBox = new BubbleBox(this, 250, 50, '      “Move the flowers”', bb, 20);
@@ -48,29 +53,22 @@ create ()
     var loa =  this.add.sprite(510, 255, 'loa').setOrigin(0,0);
     // add âm thanh
     var amthanh = this.sound.add('thanh');
-
-    // làm cho object có khả năng tương tác thực (như va chạm, trọng lực)
     
-    for(var i = 0; i < 5; i++){
-      ball = this.add.image(400 + 30 * i, 27, 'ball');
-      ball.setScale(1.2);
-    }
-
     //push phần tử vào mảng, cái này tí dùng vòng lặp cho code gọn
     for(var i = 0; i < 10; i++){
       groupChau.push(this.add.image(100 + i * 70, 200, 'Chau'));
     }
     
-    groupHoa.push(this.physics.add.image(900, 600, 'Hoa'));
-    groupHoa.push(this.physics.add.image(200, 500, 'Hoa'));
-    groupHoa.push(this.physics.add.image(300, 400, 'Hoa'));
-    groupHoa.push(this.physics.add.image(500, 500, 'Hoa'));
-    groupHoa.push(this.physics.add.image(300, 500, 'Hoa'));
-    groupHoa.push(this.physics.add.image(600, 400, 'Hoa'));
-    groupHoa.push(this.physics.add.image(800, 500, 'Hoa'));
-    groupHoa.push(this.physics.add.image(200, 600, 'Hoa'));
-    groupHoa.push(this.physics.add.image(500, 600, 'Hoa'));
-    groupHoa.push(this.physics.add.image(400, 600, 'Hoa'));
+    groupHoa.push((new Block()).createABlock(this, 900, 600));
+    groupHoa.push((new Block()).createABlock(this, 200, 500));
+    groupHoa.push((new Block()).createABlock(this, 300, 400));
+    groupHoa.push((new Block()).createABlock(this, 500, 500));
+    groupHoa.push((new Block()).createABlock(this, 300, 500));
+    groupHoa.push((new Block()).createABlock(this, 600, 400));
+    groupHoa.push((new Block()).createABlock(this, 800, 500));
+    groupHoa.push((new Block()).createABlock(this, 200, 600));
+    groupHoa.push((new Block()).createABlock(this, 500, 600));
+    groupHoa.push((new Block()).createABlock(this, 400, 600));
     
     for(var i = 0; i < numberOfBox; i++){
       initHoaPosX[i] = groupHoa[i].x;
@@ -78,7 +76,6 @@ create ()
     }
 
     //setScale
-    //ball.setScale(1.2);
     loa.setScale(0.055, 0.055);
 
     // tạo chức năng drag and drop

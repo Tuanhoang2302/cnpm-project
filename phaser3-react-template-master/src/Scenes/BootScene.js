@@ -1,67 +1,77 @@
 import 'phaser';
-import FadeOutDestroy from '../../node_modules/phaser3-rex-plugins/plugins/fade-out-destroy';
-import FadePlugin from '../../node_modules/phaser3-rex-plugins/plugins/fade-plugin.js';
 import BubbleBox from '../helper/BubbleBox';
 import CheckInputText from '../helper/CheckInputText';
 import FdInFdOut from '../helper/FdInFdOut';
 import MessageBox from  '../helper/MessageBox';
 import DisplayBox from '../helper/DisplayBox';
+import Ball from '../gameObject/Ball';
+import Block from '../gameObject/Block';
 
-var Index;
-var returnbtn;
-var checkInput;
-var cursorKeys;
-var fade;
-var box;
-var button;
-var theNumber = Math.floor(Math.random() * (3 - 1 + 1) + 1);
-var ball;
+const ELEMENT = {
+  STARTPOSX : 975,
+  STARTPOSY : 147
+}
 
-var contentArr = [];
-var txtArr = [];
-var bbgraphicArr = [];
-var quoteArr = [];
-var inputTextArr = [];
-var elementArr = [];
-var dayChau = [];
-var msggraphicArr = [];
-var msgContentArr = [];
+const BUBBLE = {
+  STARTPOSX : 830,
+  STARTPOSY : 115,
+  WIDTH : 270,
+  HEIGHT : 65,
+  FONTTEXT : 20
+}
 
-var intilizeCompleted = false;
-var isDisplayResult = false;
-var isChangeScene = false;
-export var isStayCheck = [true, false, false];
-export var isMoving=[false];
-export var isWannaReset=[false];
-var isPlayTilEnd = false;
+const MESSAGE = {
+  STARTPOSX : 900,
+  STARTPOSY : 200,
+  WIDTH : 200,
+  HEIGHT : 50,
+  FONTTEXT : 20,
+}
 
-const elementStartPoxX = 975;
-const elementStartPoxY = 147;
+const TXT = {
+  STARTPOSX : 960,
+  STARTPOSY : 130,
+  FONTTEXT : 30
+}
 
-const BubbleStartPosX = 830;
-const BubbleStartPosY = 115;
-const BublleWidth = 270;
-const BublleHeight = 65;
-const fontTextBubble = 20;
+const BLOCK = {
+  STARTPOSX : 370,
+  STARTPOSY : 150
+}
 
-const MessageStartPosX = 900;
-const MessageStartPosY = 200;
-const MessageWidth = 200;
-const MessageHeight = 50;
-const fontTextMessage = 20;
-
-const txtStartPosX = 960;
-const txtStartPosY = 130;
-const txtFont = 30;
-
-const BlockStartPosX = 370;
-const BlockStartPosY = 150;
+export var isWannaReset2 = [false];
 
 export default class BootScene extends Phaser.Scene {
+  //hello = 2;
   constructor () {
-    super('Boot');
+    super('Boot'); 
+    this.checkInput = null;
+    this.fade = null;
+    this.box = null;
+    this.button = null;
+    this.theNumber = Math.floor(Math.random() * (3 - 1 + 1) + 1);
+    this.ball = null;
+    this.lastBall = null;
+    this.Index = 0;
+    this.element = null;
+    this.inputText = null;
+
+    this.contentArr = [];
+    this.txtArr = [];
+    this.bbgraphicArr = [];
+    this.inputTextArr = [];
+    this.elementArr = [];
+    this.dayChau = [];
+    this.msggraphicArr = [];
+    this.msgContentArr = [];
+
+    this.intilizeCompleted = false;
+    this.isDisplayResult = false;
+    this.isStayCheck = [true, false, false];
+    this.isMoving=[false];
+    this.isWannaReset=[false];
+    this.isPlayTilEnd = false;
   }
- 
   preload () {
     this.load.html('nameform', 'src/assets/text/nameform.html');  
     this.load.html('return', 'src/assets/text/return.html');  
@@ -74,76 +84,81 @@ export default class BootScene extends Phaser.Scene {
     
 
   create () {
-    console.log(theNumber);
-    var ballHolder = this.add.image(630, 35, 'ballHolder');
-    for(var i = 0; i < 5; i++){
-      ball = this.add.image(400 + 30 * i, 34, 'ball');
-      ball.setScale(1.2);
-    }
+    this.ReCreate();
 
     // tạo hiệu ứng chuyển cảnh
     this.cameras.main.fadeIn(1500);
-    fade = new FdInFdOut(this);
-    box = new DisplayBox(this);
-    //cái này kiểu tạo 1 form có sẵn từ file html khác ý, ở đay file html dùng tên là nameform và name attribute của nó là nameform(xem trong file nameform.html)
-    Index = 0;
+    this.fade = new FdInFdOut(this);
+
+    var ballHolder = this.add.image(630, 25, 'ballHolder');
+
+    this.ball = new Ball();
+    for(var i = 0; i < 5; i++){
+      this.lastBall = this.ball.create(this, 400 + 30 * i, 24);
+      
+    }
     
-    for(var i = 0; i < theNumber; i++){
-      var element = this.add.dom(elementStartPoxX, elementStartPoxY + 150 * i).createFromCache('nameform');
-      element.setAlpha(0);
-      var inputText = element.getChildByName('nameform');
-      inputTextArr.push(inputText);
-      elementArr.push(element);
+    for(var i = 0; i < this.theNumber; i++){
+      this.element = this.add.dom(ELEMENT.STARTPOSX, ELEMENT.STARTPOSY + 150 * i).createFromCache('nameform');
+      this.element.setAlpha(0);
+      this.inputText = this.element.getChildByName('nameform');
+      this.inputTextArr.push(this.inputText);
+      this.elementArr.push(this.element);
     }
 
     this.time.addEvent({
-        delay: 1500,
+        delay: 1300,
         callback: ()=>{
-            elementArr[0].setAlpha(1);
-            inputTextArr[0].focus();
+            this.elementArr[0].setAlpha(1);
+            this.inputTextArr[0].focus();
             
         },
         loop: true
     })
 
-    box.displayBubbleBox(BubbleStartPosX, BubbleStartPosY, BublleWidth, BublleHeight, 'There are          blocks', fontTextBubble, bbgraphicArr, contentArr, fade);
-    
-    for(var i = 0; i < theNumber; i++){
-      box.displayMessageBox(MessageStartPosX, MessageStartPosY + 150 * i, MessageWidth, MessageHeight, 'There are 10 blocks', fontTextMessage, msggraphicArr, msgContentArr);
+    this.box = new DisplayBox(this);
+    this.box.displayBubbleBox(BUBBLE.STARTPOSX, BUBBLE.STARTPOSY, BUBBLE.WIDTH, BUBBLE.HEIGHT, 
+                        'There are          blocks', BUBBLE.FONTTEXT, this.bbgraphicArr, this.contentArr, this.fade);    
+    for(var i = 0; i < this.theNumber; i++){
+      this.box.displayMessageBox(MESSAGE.STARTPOSX, MESSAGE.STARTPOSY + 150 * i, MESSAGE.WIDTH, MESSAGE.HEIGHT,
+                            'There are 10 blocks', MESSAGE.FONTTEXT, this.msggraphicArr, this.msgContentArr);
     }
 
-    for(var i = 0; i < theNumber; i++){
-        dayChau.push(this.add.image(BlockStartPosX, BlockStartPosY, 'dayChau'));
+    for(var i = 0; i < this.theNumber; i++){
+        this.dayChau.push((new Block()).createArrayBlock(this, BLOCK.STARTPOSX, BLOCK.STARTPOSY));
     }
-    
-    this.cursorKeys = this.input.keyboard.createCursorKeys();
-      
+          
     // CheckInputText để check xem số mình nhập vào có đúng 10 không
-    checkInput = new CheckInputText(this);
+    this.checkInput = new CheckInputText(this);
 
     //set Interactive cho button
-    button = this.add.sprite(950, 600, 'button').setInteractive();
-    button.setScale(2, 2);
-    button.setAlpha(0);
-    this.ButtonEvent(button);
+    this.button = this.add.sprite(950, 600, 'button').setInteractive();
+    this.button.setScale(2, 2);
+    this.button.setAlpha(0);
+    this.ButtonEvent(this.button);
 
     var line = this.add.graphics();
     line.lineBetween(0, 70, 1280, 70);
-  
+
+    console.log(this.dayChau[0].y);
+    
   }
 
   update(){
-    
-    if(theNumber != 1){
-      if(Index <= theNumber - 2){
-        this.MoveArrayOfBlock(Index, 300 + 150 * Index, 150 + 150 * Index);
+    //console.log(this.inputTextArr[0].value);
+    //console.log(this.theNumber);
+    isWannaReset2[0] = this.isWannaReset[0]; 
+    if(this.theNumber != 1){
+      if(this.Index <= this.theNumber - 2){
+        console.log("hell");
+        this.MoveArrayOfBlock(this.Index, 300 + 150 * this.Index, 150 + 150 * this.Index);
       }
     }
     this.DisplayQuestion();
     this.DisplayResult();
     this.WannaReset();
-    this.MoveTheBall();
-
+    //ball.isMovable(this,lastBall, isPlayTilEnd, isWannaReset, 'Scene3');
+    this.BallMove();
   }
 
 
@@ -153,34 +168,36 @@ export default class BootScene extends Phaser.Scene {
 
 
   MoveArrayOfBlock(index, des, initPosY){
-    if(isStayCheck[index]){    
-      checkInput.check(msggraphicArr[index], msgContentArr[index],inputTextArr[index]);
-      if(isMoving[0]){
-        if(dayChau[index].y == initPosY){
-          elementArr[index].destroy();
-          var txt = this.add.text(txtStartPosX, txtStartPosY + 150 * index, '10', { fontFamily: 'Arial', fontSize: txtFont, color: '#000000'});  
-          txtArr.push(txt);
+    if(this.isStayCheck[index]){    
+      //console.log(this.inputTextArr[0].value)
+      this.checkInput.check(this.msggraphicArr[index], this.msgContentArr[index],this.inputTextArr[index], this.isMoving, this.isWannaReset, 10);
+      if(this.isMoving[0]){
+        if(this.dayChau[index].y == initPosY){
+          this.elementArr[index].destroy();
+          var txt = this.add.text(TXT.STARTPOSX, TXT.STARTPOSY + 150 * index, '10', { fontFamily: 'Arial', fontSize: TXT.FONTTEXT, color: '#000000'});  
+          this.txtArr.push(txt);
         } 
-        if(index == 0 && theNumber == 3){
-          dayChau[index].y +=5;
-          dayChau[index + 1].y += 5 ;
+        if(index == 0 && this.theNumber == 3){
+          this.dayChau[index].y +=5;
+          this.dayChau[index + 1].y += 5 ;
         }else{
-          dayChau[index].y +=5;
+          this.dayChau[index].y +=5;
         }
-
-        if(dayChau[index].y == des){
-          isStayCheck[index] = false;
-          isStayCheck[index + 1] = true;
-          isMoving[0] = false;
-          Index++;
+        
+        if(this.dayChau[index].y == des){
+          this.isStayCheck[index] = false;
+          this.isStayCheck[index + 1] = true;
+          this.isMoving[0] = false;
+          this.Index++;
     
-          box.displayBubbleBox(BubbleStartPosX, BubbleStartPosY + ((Index) * 150), BublleWidth, BublleHeight, 'There are          flowers', fontTextBubble, bbgraphicArr, contentArr, fade);
+          this.box.displayBubbleBox(BUBBLE.STARTPOSX, BUBBLE.STARTPOSY + ((this.Index) * 150), BUBBLE.WIDTH, BUBBLE.HEIGHT, 
+                              'There are          blocks', BUBBLE.FONTTEXT, this.bbgraphicArr, this.contentArr, this.fade);
           
           this.time.addEvent({
             delay: 1000,
             callback: ()=>{
-              elementArr[Index].setAlpha(1);
-              inputTextArr[Index].focus();
+              this.elementArr[this.Index].setAlpha(1);
+              this.inputTextArr[this.Index].focus();
             },
             loop: true
           })
@@ -202,58 +219,59 @@ export default class BootScene extends Phaser.Scene {
 
     button.on('pointerdown', function (event) {
       this.TotalOfFlower();
-      isDisplayResult = true;
+      this.isDisplayResult = true;
     }, this);
   }
 
   DisplayQuestion(){
-    if(isStayCheck[theNumber - 1]){
-      checkInput.check(msggraphicArr[theNumber - 1], msgContentArr[theNumber - 1],inputTextArr[theNumber - 1]);
-      if(isMoving[0]){
-        elementArr[theNumber - 1].destroy();
-        var txt = this.add.text(txtStartPosX, txtStartPosY + 150 * (theNumber - 1), '10', { fontFamily: 'Arial', fontSize: txtFont, color: '#000000'}); 
-        txtArr.push(txt);
-        box.displayBubbleBox(300, 560, 500, 80, 'Total number of flowers?', 40, bbgraphicArr, contentArr, fade);
-        fade.FdOut(button);
-        isMoving[0] = false;
-        isStayCheck[theNumber - 1] = false;
-        isDisplayResult = true;
+    if(this.isStayCheck[this.theNumber - 1]){
+      this.checkInput.check(this.msggraphicArr[this.theNumber - 1], this.msgContentArr[this.theNumber - 1],this.inputTextArr[this.theNumber - 1], this.isMoving, this.isWannaReset, 10);
+      if(this.isMoving[0]){
+        this.elementArr[this.theNumber - 1].destroy();
+        var txt = this.add.text(TXT.STARTPOSX, TXT.STARTPOSY + 150 * (this.theNumber - 1), '10', { fontFamily: 'Arial', fontSize: TXT.FONTTEXT, color: '#000000'}); 
+        this.txtArr.push(txt);
+        this.box.displayBubbleBox(300, 560, 500, 80, 'Total number of blocks?', 40, this.bbgraphicArr, this.contentArr, this.fade);
+        this.fade.FdOut(this.button);
+        this.isMoving[0] = false;
+        this.isStayCheck[this.theNumber - 1] = false;
+        this.isDisplayResult = true;
       }  
     }
   }
 
   DisplayResult(){
     //console.log(bbgraphicArr[0].y);
-    if(isDisplayResult){
-      if(intilizeCompleted){
-        for(var i = theNumber + 1; i < theNumber * 2 + 1; i++){
-          if(bbgraphicArr[i].y != 560){
-            bbgraphicArr[i].y += 5;
-            contentArr[i].y += 5;
+    if(this.isDisplayResult){
+      if(this.intilizeCompleted){
+        for(var i = this.theNumber + 1; i < this.theNumber * 2 + 1; i++){
+          if(this.bbgraphicArr[i].y != 560){
+            this.bbgraphicArr[i].y += 5;
+            this.contentArr[i].y += 5;
           }
         }
         //console.log(bbgraphicArr[1].y);
         
-        if(bbgraphicArr[theNumber + 1].y == 560){
-          console.log("hello");
+        if(this.bbgraphicArr[this.theNumber + 1].y == 560){
           
-          for(var i = theNumber + 1; i < theNumber * 2 + 1; i++){
-            fade.FdIn(bbgraphicArr[i]);
+          for(var i = this.theNumber + 1; i < this.theNumber * 2 + 1; i++){
+            this.fade.FdIn(this.bbgraphicArr[i]);
           }
-          box.displayBubbleBox(960, 560, 80, 80, '30', 40, bbgraphicArr, contentArr, fade);
-          isDisplayResult = false;
-          isPlayTilEnd = true;
+          this.box.displayBubbleBox(960, 560, 80, 80, (10 * this.theNumber).toString(), 40, this.bbgraphicArr, this.contentArr, this.fade);
+          this.isDisplayResult = false;
+          this.isPlayTilEnd = true;
         }
       }
     }
   }
 
   WannaReset(){
-    if(isWannaReset[0]){
-      if(isPlayTilEnd){
+    if(this.isWannaReset[0]){
+      if(this.isPlayTilEnd){
       this.time.addEvent({
         delay: 2000,
         callback: ()=>{
+            //this.setVariabletoInitState();
+            //this.ReCreate();
             this.scene.start('Reset');
         },
         loop: true
@@ -262,37 +280,72 @@ export default class BootScene extends Phaser.Scene {
     }
   }
 
-  MoveTheBall(){
-    if(isPlayTilEnd){
-      if(isWannaReset[0] == false){
-        if(ball.x < 860){
-          ball.x +=3;
-        }else{     
-          this.time.addEvent({
-            delay: 2000,
-            callback: ()=>{
-              this.scene.start('Game');
-            },
-            loop: true
-          })
-        }
-      }
-    }
-  }
-
   TotalOfFlower(){
-      for(var i = 0; i < theNumber; i++){
-        fade.FdIn(bbgraphicArr[i], txtArr[i]);
-        fade.FdIn(button, contentArr[i]);
-        box.displayBubbleBox(960, 110 + 150 * i, 80, 80, '10', 40, bbgraphicArr, contentArr, fade);
+      for(var i = 0; i < this.theNumber; i++){
+        this.fade.FdIn(this.bbgraphicArr[i], this.txtArr[i]);
+        this.fade.FdIn(this.button, this.contentArr[i]);
+        this.box.displayBubbleBox(960, 110 + 150 * i, 80, 80, '10', 40, this.bbgraphicArr, this.contentArr, this.fade);
       }
       this.time.addEvent({
         delay: 2000,
         callback: ()=>{
-            intilizeCompleted = true;
+            this.intilizeCompleted = true;
         },
         loop: true
     })
   }
+
+  BallMove(){
+    if(this.isPlayTilEnd){
+      if(this.isWannaReset[0] == false){
+          
+          if(this.lastBall.x < 860){
+              //console.log(ball.x);
+              this.lastBall.x +=3;
+          }else{    
+              this.time.addEvent({
+                  delay: 2000,
+                  callback: ()=>{
+                      this.scene.start('Scene3');
+                      //isPlayTilEnd = false;
+                      //this.scene.restart(false);
+                  },
+              loop: true
+              })
+          }
+      }
+  }
+  }
+
+  ReCreate(){
+    this.checkInput = null;
+    this.fade = null;
+    this.box = null;
+    this.button = null;
+    this.theNumber = Math.floor(Math.random() * (3 - 1 + 1) + 1);
+    this.ball = null;
+    this.lastBall = null;
+    this.Index = 0;
+    this.element = null;
+    this.inputText = null;
+    isWannaReset2 = [false];
+    
+    this.contentArr = [];
+    this.txtArr = [];
+    this.bbgraphicArr = [];
+    this.inputTextArr = [];
+    this.elementArr = [];
+    this.dayChau = [];
+    this.msggraphicArr = [];
+    this.msgContentArr = [];
+
+    this.intilizeCompleted = false;
+    this.isDisplayResult = false;
+    this.isStayCheck = [true, false, false];
+    this.isMoving=[false];
+    this.isWannaReset=[false];
+    this.isPlayTilEnd = false;
+  }
+
   
 };
