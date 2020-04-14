@@ -3,13 +3,13 @@ var index = 0;
 //var check = true;
 export var spaceValid = [true, true,true, true,true, true,true, true,true, true];
 export default class DragManager{
-    constructor(scene, group, groupCam, initGgPosX, initGgPosY, numberOfBox){
+    constructor(scene, blockArr, holderArr, initGgPosX, initGgPosY, numberOfBox){
         // dragHoa là 1 function 
         this.dragHoa = function(){
 
             for(var i = 0; i < numberOfBox; i++){
-                group[i].setInteractive();
-                scene.input.setDraggable(group[i]);
+                blockArr[i].setInteractive();
+                scene.input.setDraggable(blockArr[i]);
             }
             // nhớ là set Draggable ở phía trên mới dùng được dragstart, drag, dragend này nhé
             scene.input.on('dragstart', function(pointer, gameObject, dragX, dragY){
@@ -31,14 +31,14 @@ export default class DragManager{
                 console.log("jfds");
                 
                 for(var i = 0; i < numberOfBox; i++){
-                    if(Math.abs(gameObject.x - groupCam[i].x) < 30  && Math.abs(gameObject.y - groupCam[i].y) < 100){
+                    if(Math.abs(gameObject.x - holderArr[i].x) < 30  && Math.abs(gameObject.y - holderArr[i].y) < 100){
                         if(spaceValid[i] == true){
-                            groupCam[i].setTint(0xffff00, 0xffff00, 0xff0000, 0xff0000);
+                            holderArr[i].setTint(0xffff00, 0xffff00, 0xff0000, 0xff0000);
                         }
                             //console.log(i);
                             
                     }else{
-                        groupCam[i].setTint(0xffffff);
+                        holderArr[i].setTint(0xffffff);
                     }
                 }                 
             });
@@ -48,18 +48,18 @@ export default class DragManager{
                 var check = true;
                 for(var i = 0; i < numberOfBox; i++){
                    
-                    if(Math.abs(gameObject.x - groupCam[i].x) < 30  && Math.abs(gameObject.y - groupCam[i].y) < 100){
+                    if(Math.abs(gameObject.x - holderArr[i].x) < 30  && Math.abs(gameObject.y - holderArr[i].y) < 100){
                         if(spaceValid[i]){
-                            gameObject.x = groupCam[i].x;
-                            gameObject.y = groupCam[i].y - 18;
+                            gameObject.x = holderArr[i].x;
+                            gameObject.y = holderArr[i].y - 18;
                             check = false;
                             spaceValid[i] = false;
-                            groupCam[i].setTint(0xffffff);
+                            holderArr[i].setTint(0xffffff);
                             //hàm disable cái tính chất interactive của object
                             scene.input.disable(gameObject);
                             break;
                         }else{
-                            groupCam[i].setTint(0xffffff);
+                            holderArr[i].setTint(0xffffff);
                             // hàm di chuyển 1 object, nhớ là phải set object ở dạng physics mới dùng được hàm này
                             scene.physics.moveTo(gameObject, initGgPosX[index], initGgPosY[index], 400);
                         }

@@ -12,10 +12,10 @@ var wall;
 var ball;
 var lastBall;
 var distance = [0,0,0,0,0,0,0,0,0,0];;
-var initHoaPosX = [0,0,0,0,0,0,0,0,0,0];
-var initHoaPosY = [0,0,0,0,0,0,0,0,0,0];
-var groupHoa = [];
-var groupChau = [];
+var initBlockPosX = [0,0,0,0,0,0,0,0,0,0];
+var initBlockPosY = [0,0,0,0,0,0,0,0,0,0];
+var blockArr = [];
+var holderArr = [];
 var numberOfBox = 10;
 var cursorKeys;
 
@@ -57,30 +57,30 @@ create ()
     
     //push phần tử vào mảng, cái này tí dùng vòng lặp cho code gọn
     for(var i = 0; i < 10; i++){
-      groupChau.push(this.add.image(100 + i * 70, 200, 'Chau'));
+      holderArr.push(this.add.image(100 + i * 70, 200, 'Chau'));
     }
     
-    groupHoa.push((new Block()).createABlock(this, 900, 600));
-    groupHoa.push((new Block()).createABlock(this, 200, 500));
-    groupHoa.push((new Block()).createABlock(this, 300, 400));
-    groupHoa.push((new Block()).createABlock(this, 500, 500));
-    groupHoa.push((new Block()).createABlock(this, 300, 500));
-    groupHoa.push((new Block()).createABlock(this, 600, 400));
-    groupHoa.push((new Block()).createABlock(this, 800, 500));
-    groupHoa.push((new Block()).createABlock(this, 200, 600));
-    groupHoa.push((new Block()).createABlock(this, 500, 600));
-    groupHoa.push((new Block()).createABlock(this, 400, 600));
+    blockArr.push((new Block()).createABlock(this, 900, 600));
+    blockArr.push((new Block()).createABlock(this, 200, 500));
+    blockArr.push((new Block()).createABlock(this, 300, 400));
+    blockArr.push((new Block()).createABlock(this, 500, 500));
+    blockArr.push((new Block()).createABlock(this, 300, 500));
+    blockArr.push((new Block()).createABlock(this, 600, 400));
+    blockArr.push((new Block()).createABlock(this, 800, 500));
+    blockArr.push((new Block()).createABlock(this, 200, 600));
+    blockArr.push((new Block()).createABlock(this, 500, 600));
+    blockArr.push((new Block()).createABlock(this, 400, 600));
     
     for(var i = 0; i < numberOfBox; i++){
-      initHoaPosX[i] = groupHoa[i].x;
-      initHoaPosY[i] = groupHoa[i].y;
+      initBlockPosX[i] = blockArr[i].x;
+      initBlockPosY[i] = blockArr[i].y;
     }
 
     //setScale
     loa.setScale(0.055, 0.055);
 
     // tạo chức năng drag and drop
-    var dragManager = new DragManager(this, groupHoa, groupChau, initHoaPosX, initHoaPosY, numberOfBox);
+    var dragManager = new DragManager(this, blockArr, holderArr, initBlockPosX, initBlockPosY, numberOfBox);
     dragManager.dragHoa();
 
     // tạo chức năng phát âm thanh
@@ -120,11 +120,10 @@ ChangeScene(){
 
 DropAndDrag(){
   for(var i = 0; i < numberOfBox; i++){
-    // hàm tính khoảng cách
-    distance[i] = Phaser.Math.Distance.Between(groupHoa[i].x, groupHoa[i].y, initHoaPosX[i], initHoaPosY[i]);
+    distance[i] = Phaser.Math.Distance.Between(blockArr[i].x, blockArr[i].y, initBlockPosX[i], initBlockPosY[i]);
     if (distance[i] < 4)
     {
-      groupHoa[i].body.reset(initHoaPosX[i], initHoaPosY[i]);
+      blockArr[i].body.reset(initBlockPosX[i], initBlockPosY[i]);
       
     }
   }
