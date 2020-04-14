@@ -1,4 +1,7 @@
 import 'phaser'
+import {isWannaReset2} from './BootScene';
+import {isWannaReset3} from './Game1Scene3';
+
 export default class ResetScene extends Phaser.Scene
 {
     constructor(){
@@ -41,12 +44,20 @@ export default class ResetScene extends Phaser.Scene
       });
       if(id == 1){
         button.on('pointerdown', function (event) {
-          this.scene.start('Boot');
+          if(isWannaReset2[0]){  
+            this.scene.start('Boot');
+          } else if(isWannaReset3[0]){
+            this.scene.start('Scene3');
+          }
         },  this);
       }else{
         button.on('pointerdown', function (event) {
-          this.scene.start('Boot');
-        },  this);
+          if(isWannaReset2[0]){  
+            this.scene.start('Scene3');
+          } else if(isWannaReset3[0]){
+            //this.scene.start('Scene3');
+          }
+        },this);
       }
     }
 }
