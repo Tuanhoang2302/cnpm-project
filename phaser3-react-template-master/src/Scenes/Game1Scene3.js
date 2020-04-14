@@ -7,7 +7,7 @@ import DisplayBox from '../helper/DisplayBox';
 import Ball from '../gameObject/Ball';
 import Block from '../gameObject/Block';
 
-const ELEMENT = {
+const INPUT = {
   STARTPOSX : 975,
   STARTPOSY : 147
 }
@@ -53,17 +53,23 @@ export default class Game1Scene3 extends Phaser.Scene {
     this.ball = null;
     this.lastBall = null;
     this.Index = 0;
-    this.element = null;
+    this.inputForm = null;
     this.inputText = null;
 
-    this.contentArr = [];
+    this.block = [];
     this.txtArr = [];
-    this.bbgraphicArr = [];
-    this.inputTextArr = [];
-    this.elementArr = [];
-    this.dayChau = [];
-    this.msggraphicArr = [];
-    this.msgContentArr = [];
+    this.bubble = {
+      contentArr : [],
+      graphicArr : [],
+    }
+    this.Input = {
+      TextArr : [],
+      formArr : [],
+    }
+    this.msg = {
+      graphicArr : [],
+      contentArr : [],
+    }
 
     this.intilizeCompleted = false;
     this.isDisplayResult = false;
@@ -101,23 +107,23 @@ export default class Game1Scene3 extends Phaser.Scene {
     }
     
     for(var i = 0; i < this.theNumber; i++){
-      this.element = this.add.dom(ELEMENT.STARTPOSX, ELEMENT.STARTPOSY + 150 * i).createFromCache('nameform');
-      this.element.setAlpha(0);
-      this.inputText = this.element.getChildByName('nameform');
-      this.inputTextArr.push(this.inputText);
-      this.elementArr.push(this.element);
+      this.inputForm = this.add.dom(INPUT.STARTPOSX, INPUT.STARTPOSY + 150 * i).createFromCache('nameform');
+      this.inputForm.setAlpha(0);
+      this.inputText = this.inputForm.getChildByName('nameform');
+      this.Input.TextArr.push(this.inputText);
+      this.Input.formArr.push(this.inputForm);
     }
-    this.element = this.add.dom(960, 600).createFromCache('answerform');
-    this.element.setAlpha(0);
-    this.inputText = this.element.getChildByName('answerform');
-    this.inputTextArr.push(this.inputText);
-    this.elementArr.push(this.element);
+    this.inputForm = this.add.dom(960, 600).createFromCache('answerform');
+    this.inputForm.setAlpha(0);
+    this.inputText = this.inputForm.getChildByName('answerform');
+    this.Input.TextArr.push(this.inputText);
+    this.Input.formArr.push(this.inputForm);
 
     this.time.addEvent({
         delay: 1300,
         callback: ()=>{
-            this.elementArr[0].setAlpha(1);
-            this.inputTextArr[0].focus();
+            this.Input.formArr[0].setAlpha(1);
+            this.Input.TextArr[0].focus();
             
         },
         loop: true
@@ -125,16 +131,16 @@ export default class Game1Scene3 extends Phaser.Scene {
 
     this.box = new DisplayBox(this);
     this.box.displayBubbleBox(BUBBLE.STARTPOSX, BUBBLE.STARTPOSY, BUBBLE.WIDTH, BUBBLE.HEIGHT, 
-                        'There are          blocks', BUBBLE.FONTTEXT, this.bbgraphicArr, this.contentArr, this.fade);    
+                        'There are          blocks', BUBBLE.FONTTEXT, this.bubble.graphicArr, this.bubble.contentArr, this.fade);    
     for(var i = 0; i < this.theNumber; i++){
       this.box.displayMessageBox(MESSAGE.STARTPOSX, MESSAGE.STARTPOSY + 150 * i, MESSAGE.WIDTH, MESSAGE.HEIGHT,
-                            'There are 10 blocks', MESSAGE.FONTTEXT, this.msggraphicArr, this.msgContentArr);
+                            'There are 10 blocks', MESSAGE.FONTTEXT, this.msg.graphicArr, this.msg.contentArr);
     }
     this.box.displayMessageBox(950, 690, MESSAGE.WIDTH, MESSAGE.HEIGHT,
-      "There are " + (10 * this.theNumber).toString() + " blocks", MESSAGE.FONTTEXT, this.msggraphicArr, this.msgContentArr);
+      "There are " + (10 * this.theNumber).toString() + " blocks", MESSAGE.FONTTEXT, this.msg.graphicArr, this.msg.contentArr);
 
     for(var i = 0; i < this.theNumber; i++){
-        this.dayChau.push((new Block()).createArrayBlock(this, BLOCK.STARTPOSX, BLOCK.STARTPOSY));
+        this.block.push((new Block()).createArrayBlock(this, BLOCK.STARTPOSX, BLOCK.STARTPOSY));
     }
           
     // CheckInputText để check xem số mình nhập vào có đúng 10 không
@@ -144,7 +150,7 @@ export default class Game1Scene3 extends Phaser.Scene {
     var line = this.add.graphics();
     line.lineBetween(0, 70, 1280, 70);
 
-    console.log(this.dayChau[0].y);
+    console.log(this.block[0].y);
     
   }
 
@@ -152,14 +158,12 @@ export default class Game1Scene3 extends Phaser.Scene {
     isWannaReset3[0] = this.isWannaReset[0];
     if(this.theNumber != 1){
       if(this.Index <= this.theNumber - 2){
-        console.log("hell");
         this.MoveArrayOfBlock(this.Index, 300 + 150 * this.Index, 150 + 150 * this.Index);
       }
     }
     this.DisplayQuestion();
     this.DisplayResult();
     this.WannaReset();
-    //ball.isMovable(this,lastBall, isPlayTilEnd, isWannaReset, 'Scene3');
     this.BallMove();
   }
 
@@ -171,35 +175,35 @@ export default class Game1Scene3 extends Phaser.Scene {
 
   MoveArrayOfBlock(index, des, initPosY){
     if(this.isStayCheck[index]){    
-      //console.log(this.inputTextArr[0].value)
-      this.checkInput.check(this.msggraphicArr[index], this.msgContentArr[index],this.inputTextArr[index], this.isMoving, this.isWannaReset, 10);
+      //console.log(this.Input.TextArr[0].value)
+      this.checkInput.check(this.msg.graphicArr[index], this.msg.contentArr[index],this.Input.TextArr[index], this.isMoving, this.isWannaReset, 10);
       if(this.isMoving[0]){
-        if(this.dayChau[index].y == initPosY){
-          this.elementArr[index].destroy();
+        if(this.block[index].y == initPosY){
+          this.Input.formArr[index].destroy();
           var txt = this.add.text(TXT.STARTPOSX, TXT.STARTPOSY + 150 * index, '10', { fontFamily: 'Arial', fontSize: TXT.FONTTEXT, color: '#000000'});  
           this.txtArr.push(txt);
         } 
         if(index == 0 && this.theNumber == 3){
-          this.dayChau[index].y +=5;
-          this.dayChau[index + 1].y += 5 ;
+          this.block[index].y +=5;
+          this.block[index + 1].y += 5 ;
         }else{
-          this.dayChau[index].y +=5;
+          this.block[index].y +=5;
         }
         
-        if(this.dayChau[index].y == des){
+        if(this.block[index].y == des){
           this.isStayCheck[index] = false;
           this.isStayCheck[index + 1] = true;
           this.isMoving[0] = false;
           this.Index++;
     
           this.box.displayBubbleBox(BUBBLE.STARTPOSX, BUBBLE.STARTPOSY + ((this.Index) * 150), BUBBLE.WIDTH, BUBBLE.HEIGHT, 
-                              'There are          blocks', BUBBLE.FONTTEXT, this.bbgraphicArr, this.contentArr, this.fade);
+                              'There are          blocks', BUBBLE.FONTTEXT, this.bubble.graphicArr, this.bubble.contentArr, this.fade);
           
           this.time.addEvent({
             delay: 1000,
             callback: ()=>{
-              this.elementArr[this.Index].setAlpha(1);
-              this.inputTextArr[this.Index].focus();
+              this.Input.formArr[this.Index].setAlpha(1);
+              this.Input.TextArr[this.Index].focus();
             },
             loop: true
           })
@@ -211,13 +215,13 @@ export default class Game1Scene3 extends Phaser.Scene {
 
   DisplayQuestion(){
     if(this.isStayCheck[this.theNumber - 1]){
-      this.checkInput.check(this.msggraphicArr[this.theNumber - 1], this.msgContentArr[this.theNumber - 1],this.inputTextArr[this.theNumber - 1], this.isMoving, this.isWannaReset, 10);
+      this.checkInput.check(this.msg.graphicArr[this.theNumber - 1], this.msg.contentArr[this.theNumber - 1],this.Input.TextArr[this.theNumber - 1], this.isMoving, this.isWannaReset, 10);
       if(this.isMoving[0]){
-        this.elementArr[this.theNumber - 1].destroy();
+        this.Input.formArr[this.theNumber - 1].destroy();
         var txt = this.add.text(TXT.STARTPOSX, TXT.STARTPOSY + 150 * (this.theNumber - 1), '10', { fontFamily: 'Arial', fontSize: TXT.FONTTEXT, color: '#000000'}); 
         this.txtArr.push(txt);
 
-        this.box.displayBubbleBox(300, 560, 500, 80, 'Total number of blocks?', 40, this.bbgraphicArr, this.contentArr, this.fade);
+        this.box.displayBubbleBox(300, 560, 500, 80, 'Total number of blocks?', 40, this.bubble.graphicArr, this.bubble.contentArr, this.fade);
 
         this.isMoving[0] = false;
         this.isStayCheck[this.theNumber - 1] = false;
@@ -227,20 +231,20 @@ export default class Game1Scene3 extends Phaser.Scene {
   }
 
   DisplayResult(){
-    //console.log(bbgraphicArr[0].y);
+    //console.log(bubble.graphicArr[0].y);
     if(this.isDisplayResult){
       this.time.addEvent({
         delay: 1000,
         callback: ()=>{
-          this.elementArr[this.theNumber].setAlpha(1);
-          this.inputTextArr[this.theNumber].focus();
+          this.Input.formArr[this.theNumber].setAlpha(1);
+          this.Input.TextArr[this.theNumber].focus();
         },
         loop: true
       })
-      this.checkInput.check(this.msggraphicArr[this.theNumber], this.msgContentArr[this.theNumber],this.inputTextArr[this.theNumber], this.isMoving, this.isWannaReset, (10 * this.theNumber));
+      this.checkInput.check(this.msg.graphicArr[this.theNumber], this.msg.contentArr[this.theNumber],this.Input.TextArr[this.theNumber], this.isMoving, this.isWannaReset, (10 * this.theNumber));
       if(this.isMoving[0]){
-        this.box.displayBubbleBox(960, 560, 80, 80, (10 * this.theNumber).toString(), 40, this.bbgraphicArr, this.contentArr, this.fade);
-        this.elementArr[this.theNumber].destroy();
+        this.box.displayBubbleBox(960, 560, 80, 80, (10 * this.theNumber).toString(), 40, this.bubble.graphicArr, this.bubble.contentArr, this.fade);
+        this.Input.formArr[this.theNumber].destroy();
         this.isDisplayResult = false;
         this.isPlayTilEnd = true;
       }
@@ -291,18 +295,25 @@ export default class Game1Scene3 extends Phaser.Scene {
     this.ball = null;
     this.lastBall = null;
     this.Index = 0;
-    this.element = null;
+    this.inputForm = null;
     this.inputText = null;
     isWannaReset3 = [false];
     
-    this.contentArr = [];
+    this.bubble = {
+      contentArr : [],
+      graphicArr : [],
+    }
+    this.Input = {
+      TextArr : [],
+      formArr : [],
+    }
+    this.msg = {
+      graphicArr : [],
+      contentArr : [],
+    }
+
     this.txtArr = [];
-    this.bbgraphicArr = [];
-    this.inputTextArr = [];
-    this.elementArr = [];
-    this.dayChau = [];
-    this.msggraphicArr = [];
-    this.msgContentArr = [];
+    this.block = [];
 
     this.intilizeCompleted = false;
     this.isDisplayResult = false;
