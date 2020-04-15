@@ -102,7 +102,7 @@ export default class Game1Scene3 extends Phaser.Scene {
     this.ball = new Ball();
     this.ball.create(this, 860, 24);
     this.ball.create(this, 830, 24);
-    for(var i = 0; i < 4; i++){
+    for(var i = 0; i < 3; i++){
       this.lastBall = this.ball.create(this, 400 + 30 * i, 24);    
     }
     
@@ -142,7 +142,7 @@ export default class Game1Scene3 extends Phaser.Scene {
     for(var i = 0; i < this.theNumber; i++){
         this.block.push((new Block()).createArrayBlock(this, BLOCK.STARTPOSX, BLOCK.STARTPOSY));
     }
-          
+      
     // CheckInputText để check xem số mình nhập vào có đúng 10 không
     this.checkInput = new CheckInputText(this);
 
