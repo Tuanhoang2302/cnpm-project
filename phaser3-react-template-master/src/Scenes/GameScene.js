@@ -40,10 +40,10 @@ preload ()
 create ()
 {
     this.cameras.main.fadeIn(1500);
-    var ballHolder = this.add.image(630, 25, 'ballHolder');
+    var ballHolder = this.add.image(540, 16, 'ballHolder');
     ball = new Ball();
     for(var i = 0; i < 5; i++){
-      lastBall = ball.create(this, 400 + 30 * i, 24);
+      lastBall = ball.create(this, 310 + 30 * i, 15);
     }
 
     var bb = this.add.graphics({ x: 500, y: 250 });
@@ -91,7 +91,7 @@ create ()
     this.cursorKeys = this.input.keyboard.createCursorKeys();
 
     var line = this.add.graphics();
-    line.lineBetween(0, 70, 1280, 70);
+    line.lineBetween(0, 50, 1280, 50);
 }
 
 update ()
@@ -103,7 +103,7 @@ update ()
 
 ChangeScene(){
   if(this.checkEnd()){ 
-    if(lastBall.x < 860){
+    if(lastBall.x < 770){
       console.log(ball.x);
       lastBall.x +=3;
     }else{    

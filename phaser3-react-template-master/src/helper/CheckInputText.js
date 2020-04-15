@@ -5,7 +5,9 @@ export default class CheckInputText
     constructor(scene){
     
         this.check = function(msggraphicArr, msgContentArr,inputText, isMoving, isWannaReset, desiredResult) {
-            if(desiredResult > 10){
+            if(desiredResult >= 10){
+              //console.log(inputText.value);
+              
             if(inputText.value == 0 || inputText.value == (desiredResult / 10)){
                 //messageBox.bubble.setVisible(false);
                 if(msggraphicArr != null && msgContentArr != null){

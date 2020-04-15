@@ -7,24 +7,24 @@ import CheckInputText from '../helper/CheckInputText';
 
 const BLOCK = {
     STARTPOSX : 250,
-    STARTPOSY : 120
+    STARTPOSY : 100
 }
 
 const BUBBLE = {
     STARTPOSX : 600,
-    STARTPOSY : 85,
+    STARTPOSY : 65,
     WIDTH : 270,
     HEIGHT : 65,
-    FONTTEXT : 40
+    FONTTEXT : 30
 }
 
-export var isWannaReset4 = [false];
-export default class Game1Scene4 extends Phaser.Scene
+export var isWannaReset5 = [false];
+export default class Game1Scene5 extends Phaser.Scene
 {
     constructor(){
-        super('Scene4');
+        super('Scene5');
         //this.theNumber = Math.floor(Math.random() * (3 - 2 + 1) + 2);
-        this.theNumber = 3;
+        this.theNumber = 4;
         this.Index = 0;
         this.ball = null;
         this.lastBall = null;
@@ -32,7 +32,6 @@ export default class Game1Scene4 extends Phaser.Scene
         this.fade = null;
         this.orderQuestion = 1;
         this.checkInput = null;
-        this.scene5 = false;
 
         this.block;
         this.inputForm;
@@ -62,7 +61,7 @@ export default class Game1Scene4 extends Phaser.Scene
 
     create(){
         //console.log(theNumber);
-        this.ReCreate();
+        
         this.cameras.main.fadeIn(1500);
         var ballHolder = this.add.image(540, 16, 'ballHolder');
         this.ball = new Ball();
@@ -72,7 +71,8 @@ export default class Game1Scene4 extends Phaser.Scene
         this.ball.create(this, 770, 15);
         this.ball.create(this, 740, 15);
         this.ball.create(this, 710, 15);
-        for(var i = 0; i < 2; i++){
+        this.ball.create(this, 680, 15);
+        for(var i = 0; i < 1; i++){
             this.lastBall = this.ball.create(this, 310 + 30 * i, 15);    
         }
         this.box = new DisplayBox(this);
@@ -86,7 +86,7 @@ export default class Game1Scene4 extends Phaser.Scene
 
     update(){
         //console.log(this.inputText.value);
-        isWannaReset4[0] = this.isWannaReset[0];
+        isWannaReset5[0] = this.isWannaReset[0];
         setTimeout(() => {
             this.DisplayText();
         }, 1000);
@@ -101,7 +101,7 @@ export default class Game1Scene4 extends Phaser.Scene
         
         setTimeout(() => {
             this.DisplayResult();
-        }, 6050);
+        }, 7050);
 
         this.WannaReset();
 
@@ -118,7 +118,7 @@ export default class Game1Scene4 extends Phaser.Scene
 
     DisplayText(){
         if(this.isDisplayText){
-            this.box.displayBubbleBox(BUBBLE.STARTPOSX, BUBBLE.STARTPOSY + 120 * (this.Index), BUBBLE.WIDTH, BUBBLE.HEIGHT, 
+            this.box.displayBubbleBox(BUBBLE.STARTPOSX, BUBBLE.STARTPOSY + 100 * (this.Index), BUBBLE.WIDTH, BUBBLE.HEIGHT, 
                 '10 blocks', BUBBLE.FONTTEXT, this.bubble.graphicArr, this.bubble.contentArr, this.fade);  
 
             this.isDisplayText = false;
@@ -158,10 +158,10 @@ export default class Game1Scene4 extends Phaser.Scene
     DisplayQuestion(){
         if(this.isDisplayQuestion[0]){
             if(this.orderQuestion == 1){
-                this.AddQuesTion(100, 440, 850, 480, 'How many bars are there in total?');
+                this.AddQuesTion(100, 460, 850, 495, 'How many bars are there in total?');
             }else if(this.orderQuestion == 2){
                 //this.box.displayBubbleBox(300, 680, 500, 80, 'How many blocks are there?', 40, this.bubble.graphicArr, this.bubble.contentArr, this.fade);
-                this.AddQuesTion(100, 570, 850, 610, 'How many blocks are there?');
+                this.AddQuesTion(100, 590, 850, 625, 'How many blocks are there?');
             }
             
             this.isDisplayQuestion[0] = false;
@@ -171,9 +171,9 @@ export default class Game1Scene4 extends Phaser.Scene
     DisplayResult(){
         if(this.isDisplayResult){
            if(this.orderQuestion == 1){
-                this.AddResult(770, 440, this.theNumber);
+                this.AddResult(770, 460, this.theNumber);
            }else{
-               this.AddResult(770, 570, this.theNumber * 10);
+               this.AddResult(770, 590, this.theNumber * 10);
            }
         }
     }
@@ -195,7 +195,7 @@ export default class Game1Scene4 extends Phaser.Scene
     BallMove(){
         if(this.isWannaReset[0] == false){
             if(this.isBallMove){
-                if(this.lastBall.x < 680){
+                if(this.lastBall.x < 650){
                     this.lastBall.x +=3;
                 }else{
                     this.isBallMove = false;
@@ -207,7 +207,7 @@ export default class Game1Scene4 extends Phaser.Scene
 
 
     AddQuesTion(BubblePosX, BubblePosY, inputFormPosX, inputFormPosY, txt){
-        this.box.displayBubbleBox(BubblePosX, BubblePosY, 600, 80, txt, 35, this.bubble.graphicArr, this.bubble.contentArr, this.fade);
+        this.box.displayBubbleBox(BubblePosX, BubblePosY, 600, 70, txt, 30, this.bubble.graphicArr, this.bubble.contentArr, this.fade);
         setTimeout(() => {
             this.inputForm = this.add.dom(inputFormPosX, inputFormPosY).createFromCache('answerform');
             this.inputText = this.inputForm.getChildByName('answerform');
@@ -223,13 +223,13 @@ export default class Game1Scene4 extends Phaser.Scene
             //this.box.displayBubbleBox(ResultPosX, ResultPosY, 80, 80, (desiredResult).toString(), 40, this.bubble.graphicArr, this.bubble.contentArr, this.fade);
 
             if(this.orderQuestion == 1){
-                this.box.displayBubbleBox(ResultPosX, ResultPosY, 270, 80, (desiredResult).toString() + " = " + (desiredResult).toString() + " tens", 40, this.bubble.graphicArr, this.bubble.contentArr, this.fade);
+                this.box.displayBubbleBox(ResultPosX, ResultPosY, 270, 70, (desiredResult).toString() + " = " + (desiredResult).toString() + " tens", 30, this.bubble.graphicArr, this.bubble.contentArr, this.fade);
                 setTimeout(() => {
                     this.isDisplayQuestion[0] = true;  
                     this.isDisplayNextQuestion[0] = false;
                 }, 1000);
             }else{
-                this.box.displayBubbleBox(ResultPosX, ResultPosY, 80, 80, (desiredResult).toString(), 40, this.bubble.graphicArr, this.bubble.contentArr, this.fade);
+                this.box.displayBubbleBox(ResultPosX, ResultPosY, 80, 70, (desiredResult).toString(), 30, this.bubble.graphicArr, this.bubble.contentArr, this.fade);
                 this.isPlayTilEnd = true;
                 this.isDisplayQuestion[0] = false;
                 this.isBallMove = true;
@@ -239,34 +239,5 @@ export default class Game1Scene4 extends Phaser.Scene
         }
     }
 
-    ReCreate(){
-        //this.theNumber = Math.floor(Math.random() * (3 - 2 + 1) + 2);
-        this.theNumber = 3;
-        this.Index = 0;
-        this.ball = null;
-        this.lastBall = null;
-        this.box = null;
-        this.fade = null;
-        this.orderQuestion = 1;
-        this.checkInput = null;
-
-        this.block;
-        this.inputForm;
-        this.inputText;
-        this.bubble = {
-            contentArr : [],
-            graphicArr : [],
-        }
-
-        this.isDisplayBlock = true;
-        this.isDisplayText = true;
-        this.isMoving = false;
-        this.isDisplayQuestion = [false];
-        this.isDisplayResult = false;
-        this.isPlayTilEnd = false;
-        this.isWannaReset=[false];
-        this.isBallMove = false;
-        this.isDisplayNextQuestion = [false];
-
-    }
+    
 }

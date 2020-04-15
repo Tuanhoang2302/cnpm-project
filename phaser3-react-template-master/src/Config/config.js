@@ -6,8 +6,8 @@ export default {
   
   type: Phaser.AUTO,
   parent: 'phaser-example',
-  width: 1280,
-  height: 780,
+  width: 1080,
+  height: 680,
   backgroundColor: "0xffffff",
    scale: {
     

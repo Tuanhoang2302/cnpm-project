@@ -18,14 +18,14 @@ export default class ResetScene extends Phaser.Scene
 
     create(){
         this.cameras.main.fadeIn(1500);
-        var dino = this.add.image(650, 200, 'dino');
+        var dino = this.add.image(540, 180, 'dino');
         dino.setScale(0.7);
-        var content = this.add.text(300, 400, 'You have made some mistakes this time.' + '\n\n' + 'Do you want to play again?', { fontFamily: 'Arial', fontSize: 40, color: '#000000', align: 'center', wordWrap: { width: 800 - (10 * 2) } });
-        var buttonYes = this.add.sprite(850, 650, 'yes').setInteractive();
+        var content = this.add.text(170, 350, 'You have made some mistakes this time.' + '\n\n' + 'Do you want to play again?', { fontFamily: 'Arial', fontSize: 40, color: '#000000', align: 'center', wordWrap: { width: 800 - (10 * 2) } });
+        var buttonYes = this.add.sprite(800, 580, 'yes').setInteractive();
         buttonYes.setScale(1.2, 1.2);
         this.ButtonEvent(buttonYes, 1);
 
-        var buttonNo = this.add.sprite(450, 650, 'no').setInteractive();
+        var buttonNo = this.add.sprite(300, 580, 'no').setInteractive();
         buttonNo.setScale(1.25, 1.25);
         this.ButtonEvent(buttonNo, 0);
     }

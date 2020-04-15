@@ -8,35 +8,35 @@ import Ball from '../gameObject/Ball';
 import Block from '../gameObject/Block';
 
 const INPUT = {
-  STARTPOSX : 975,
-  STARTPOSY : 147
+  STARTPOSX : 818,
+  STARTPOSY : 120
 }
 
 const BUBBLE = {
-  STARTPOSX : 830,
-  STARTPOSY : 115,
-  WIDTH : 270,
+  STARTPOSX : 600,
+  STARTPOSY : 85,
+  WIDTH : 400,
   HEIGHT : 65,
-  FONTTEXT : 20
+  FONTTEXT : 30
 }
 
 const MESSAGE = {
-  STARTPOSX : 900,
-  STARTPOSY : 200,
+  STARTPOSX : 800,
+  STARTPOSY : 170,
   WIDTH : 200,
   HEIGHT : 50,
   FONTTEXT : 20,
 }
 
 const TXT = {
-  STARTPOSX : 960,
-  STARTPOSY : 130,
-  FONTTEXT : 30
+  STARTPOSX : 800,
+  STARTPOSY : 95,
+  FONTTEXT : 40
 }
 
 const BLOCK = {
-  STARTPOSX : 370,
-  STARTPOSY : 150
+  STARTPOSX : 250,
+  STARTPOSY : 120
 }
 
 export var isWannaReset2 = [false];
@@ -97,16 +97,16 @@ export default class BootScene extends Phaser.Scene {
     this.cameras.main.fadeIn(1500);
     this.fade = new FdInFdOut(this);
 
-    var ballHolder = this.add.image(630, 25, 'ballHolder');
+    var ballHolder = this.add.image(540, 16, 'ballHolder');
 
     this.ball = new Ball();
-    this.ball.create(this, 860, 24);
+    this.ball.create(this, 770, 15);
     for(var i = 0; i < 4; i++){
-      this.lastBall = this.ball.create(this, 400 + 30 * i, 24);    
+      this.lastBall = this.ball.create(this, 310 + 30 * i, 15);    
     }
     
     for(var i = 0; i < this.theNumber; i++){
-      this.inputform = this.add.dom(INPUT.STARTPOSX, INPUT.STARTPOSY + 150 * i).createFromCache('nameform');
+      this.inputform = this.add.dom(INPUT.STARTPOSX, INPUT.STARTPOSY + 120 * i).createFromCache('nameform');
       this.inputform.setAlpha(0);
       this.inputText = this.inputform.getChildByName('nameform');
       this.Input.TextArr.push(this.inputText);
@@ -127,7 +127,7 @@ export default class BootScene extends Phaser.Scene {
     this.box.displayBubbleBox(BUBBLE.STARTPOSX, BUBBLE.STARTPOSY, BUBBLE.WIDTH, BUBBLE.HEIGHT, 
                         'There are          blocks', BUBBLE.FONTTEXT, this.bubble.graphicArr, this.bubble.contentArr, this.fade);    
     for(var i = 0; i < this.theNumber; i++){
-      this.box.displayMessageBox(MESSAGE.STARTPOSX, MESSAGE.STARTPOSY + 150 * i, MESSAGE.WIDTH, MESSAGE.HEIGHT,
+      this.box.displayMessageBox(MESSAGE.STARTPOSX, MESSAGE.STARTPOSY + 120 * i, MESSAGE.WIDTH, MESSAGE.HEIGHT,
                             'There are 10 blocks', MESSAGE.FONTTEXT, this.msg.graphicArr, this.msg.ContentArr);
     }
 
@@ -139,13 +139,13 @@ export default class BootScene extends Phaser.Scene {
     this.checkInput = new CheckInputText(this);
 
     //set Interactive cho button
-    this.button = this.add.sprite(950, 600, 'button').setInteractive();
+    this.button = this.add.sprite(850, 500, 'button').setInteractive();
     this.button.setScale(2, 2);
     this.button.setAlpha(0);
     this.ButtonEvent(this.button);
 
     var line = this.add.graphics();
-    line.lineBetween(0, 70, 1280, 70);
+    line.lineBetween(0, 50, 1280, 50);
 
     console.log(this.block[0].y);
     
@@ -155,7 +155,7 @@ export default class BootScene extends Phaser.Scene {
     isWannaReset2[0] = this.isWannaReset[0]; 
     if(this.theNumber != 1){
       if(this.Index <= this.theNumber - 2){
-        this.MoveArrayOfBlock(this.Index, 300 + 150 * this.Index, 150 + 150 * this.Index);
+        this.MoveArrayOfBlock(this.Index, BLOCK.STARTPOSY * 2 + BLOCK.STARTPOSY * this.Index, BLOCK.STARTPOSY + BLOCK.STARTPOSY * this.Index);
       }
     }
     this.DisplayQuestion();
@@ -177,7 +177,7 @@ export default class BootScene extends Phaser.Scene {
       if(this.isMoving[0]){
         if(this.block[index].y == initPosY){
           this.Input.formArr[index].destroy();
-          var txt = this.add.text(TXT.STARTPOSX, TXT.STARTPOSY + 150 * index, '10', { fontFamily: 'Arial', fontSize: TXT.FONTTEXT, color: '#000000'});  
+          var txt = this.add.text(TXT.STARTPOSX, TXT.STARTPOSY + 120 * index, '10', { fontFamily: 'Arial', fontSize: TXT.FONTTEXT, color: '#000000'});  
           this.txtArr.push(txt);
         } 
         if(index == 0 && this.theNumber == 3){
@@ -193,7 +193,7 @@ export default class BootScene extends Phaser.Scene {
           this.isMoving[0] = false;
           this.Index++;
     
-          this.box.displayBubbleBox(BUBBLE.STARTPOSX, BUBBLE.STARTPOSY + ((this.Index) * 150), BUBBLE.WIDTH, BUBBLE.HEIGHT, 
+          this.box.displayBubbleBox(BUBBLE.STARTPOSX, BUBBLE.STARTPOSY + ((this.Index) * 120), BUBBLE.WIDTH, BUBBLE.HEIGHT, 
                               'There are          blocks', BUBBLE.FONTTEXT, this.bubble.graphicArr, this.bubble.contentArr, this.fade);
           
           this.time.addEvent({
@@ -231,9 +231,9 @@ export default class BootScene extends Phaser.Scene {
       this.checkInput.check(this.msg.graphicArr[this.theNumber - 1], this.msg.ContentArr[this.theNumber - 1],this.Input.TextArr[this.theNumber - 1], this.isMoving, this.isWannaReset, 10);
       if(this.isMoving[0]){
         this.Input.formArr[this.theNumber - 1].destroy();
-        var txt = this.add.text(TXT.STARTPOSX, TXT.STARTPOSY + 150 * (this.theNumber - 1), '10', { fontFamily: 'Arial', fontSize: TXT.FONTTEXT, color: '#000000'}); 
+        var txt = this.add.text(TXT.STARTPOSX, TXT.STARTPOSY + 120 * (this.theNumber - 1), '10', { fontFamily: 'Arial', fontSize: TXT.FONTTEXT, color: '#000000'}); 
         this.txtArr.push(txt);
-        this.box.displayBubbleBox(300, 560, 500, 80, 'Total number of blocks?', 40, this.bubble.graphicArr, this.bubble.contentArr, this.fade);
+        this.box.displayBubbleBox(200, 460, 500, 80, 'Total number of blocks?', 40, this.bubble.graphicArr, this.bubble.contentArr, this.fade);
         this.fade.FdOut(this.button);
         this.isMoving[0] = false;
         this.isStayCheck[this.theNumber - 1] = false;
@@ -247,19 +247,19 @@ export default class BootScene extends Phaser.Scene {
     if(this.isDisplayResult){
       if(this.intilizeCompleted){
         for(var i = this.theNumber + 1; i < this.theNumber * 2 + 1; i++){
-          if(this.bubble.graphicArr[i].y != 560){
+          if(this.bubble.graphicArr[i].y != 460){
             this.bubble.graphicArr[i].y += 5;
             this.bubble.contentArr[i].y += 5;
           }
         }
         //console.log(bubble.graphicArr[1].y);
         
-        if(this.bubble.graphicArr[this.theNumber + 1].y == 560){
+        if(this.bubble.graphicArr[this.theNumber + 1].y == 460){
           
           for(var i = this.theNumber + 1; i < this.theNumber * 2 + 1; i++){
             this.fade.FdIn(this.bubble.graphicArr[i]);
           }
-          this.box.displayBubbleBox(960, 560, 80, 80, (10 * this.theNumber).toString(), 40, this.bubble.graphicArr, this.bubble.contentArr, this.fade);
+          this.box.displayBubbleBox(780, 460, 80, 80, (10 * this.theNumber).toString(), 40, this.bubble.graphicArr, this.bubble.contentArr, this.fade);
           this.isDisplayResult = false;
           this.isPlayTilEnd = true;
         }
@@ -287,7 +287,7 @@ export default class BootScene extends Phaser.Scene {
       for(var i = 0; i < this.theNumber; i++){
         this.fade.FdIn(this.bubble.graphicArr[i], this.txtArr[i]);
         this.fade.FdIn(this.button, this.bubble.contentArr[i]);
-        this.box.displayBubbleBox(960, 110 + 150 * i, 80, 80, '10', 40, this.bubble.graphicArr, this.bubble.contentArr, this.fade);
+        this.box.displayBubbleBox(780, 70 + 120 * i, 80, 80, '10', 40, this.bubble.graphicArr, this.bubble.contentArr, this.fade);
       }
       this.time.addEvent({
         delay: 2000,
@@ -302,7 +302,7 @@ export default class BootScene extends Phaser.Scene {
     if(this.isPlayTilEnd){
       if(this.isWannaReset[0] == false){
           
-          if(this.lastBall.x < 830){
+          if(this.lastBall.x < 740){
               //console.log(ball.x);
               this.lastBall.x +=3;
           }else{    
@@ -325,7 +325,7 @@ export default class BootScene extends Phaser.Scene {
     this.fade = null;
     this.box = null;
     this.button = null;
-    this.theNumber = Math.floor(Math.random() * (3 - 1 + 1) + 1);
+    this.theNumber = Math.floor(Math.random() * (3 - 3 + 1) + 3);
     this.ball = null;
     this.lastBall = null;
     this.Index = 0;
