@@ -276,7 +276,7 @@ export default class Game1Scene3 extends Phaser.Scene {
               this.time.addEvent({
                   delay: 2000,
                   callback: ()=>{
-                      this.scene.start('Scene3');
+                      this.scene.start('Scene4');
                       //isPlayTilEnd = false;
                       //this.scene.restart(false);
                   },

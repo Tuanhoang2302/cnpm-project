@@ -60,7 +60,7 @@ export default class ResetScene extends Phaser.Scene
           } else if(isWannaReset3[0]){
             this.scene.start('Scene4');
           } else if(isWannaReset4[0]){
-
+            this.scene.start('Scene5');
           }
         },this);
       }

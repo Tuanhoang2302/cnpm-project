@@ -1,5 +1,5 @@
 import 'phaser';
-
+export var isDisplayBorder = [false];
 export default class CheckInputText
 {
     constructor(scene){
@@ -10,6 +10,7 @@ export default class CheckInputText
               
             if(inputText.value == 0 || inputText.value == (desiredResult / 10)){
                 //messageBox.bubble.setVisible(false);
+                isDisplayBorder[0] = false;
                 if(msggraphicArr != null && msgContentArr != null){
                     msggraphicArr.setAlpha(0);
                     msgContentArr.setAlpha(0);
@@ -17,6 +18,7 @@ export default class CheckInputText
               }
               if(inputText.value < 10 && inputText.value != desiredResult / 10 && inputText.value != 0){
                 //messageBox.bubble.setVisible(true);
+                isDisplayBorder[0] = true;
                 if(msggraphicArr != null && msgContentArr != null){
                   msggraphicArr.setAlpha(1);
                   msgContentArr.setAlpha(1);
@@ -27,6 +29,7 @@ export default class CheckInputText
                 var chuc = (inputText.value - donvi) / 10;
                 inputText.value = donvi;
               }else if(inputText.value == desiredResult){
+                isDisplayBorder[0] = false;
                 isMoving[0] =true;         
               
               }
@@ -38,6 +41,7 @@ export default class CheckInputText
               
               if(inputText.value == 0){
                 //messageBox.bubble.setVisible(false);
+                isDisplayBorder[0] = false;
                 if(msggraphicArr != null && msgContentArr != null){
                     msggraphicArr.setAlpha(0);
                     msgContentArr.setAlpha(0);
@@ -45,6 +49,7 @@ export default class CheckInputText
               }
               if(inputText.value != desiredResult && inputText.value != 0){
                 //messageBox.bubble.setVisible(true);
+                isDisplayBorder[0] = true;
                 if(msggraphicArr != null && msgContentArr != null){
                   msggraphicArr.setAlpha(1);
                   msgContentArr.setAlpha(1);
@@ -55,6 +60,7 @@ export default class CheckInputText
                 var donvi = inputText.value % 10; 
                 inputText.value = donvi;
               }else if(inputText.value == desiredResult){
+                isDisplayBorder[0] = false;
                 isMoving[0] =true;         
               
               }

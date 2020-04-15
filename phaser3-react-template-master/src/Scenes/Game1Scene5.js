@@ -4,6 +4,7 @@ import DisplayBox from '../helper/DisplayBox';
 import FdInFdOut from '../helper/FdInFdOut';
 import Block from '../gameObject/Block';
 import CheckInputText from '../helper/CheckInputText';
+import {isDisplayBorder} from '../helper/CheckInputText';
 
 const BLOCK = {
     STARTPOSX : 250,
@@ -18,7 +19,6 @@ const BUBBLE = {
     FONTTEXT : 30
 }
 
-export var isWannaReset5 = [false];
 export default class Game1Scene5 extends Phaser.Scene
 {
     constructor(){
@@ -32,6 +32,7 @@ export default class Game1Scene5 extends Phaser.Scene
         this.fade = null;
         this.orderQuestion = 1;
         this.checkInput = null;
+        this.border = [];
 
         this.block;
         this.inputForm;
@@ -76,7 +77,10 @@ export default class Game1Scene5 extends Phaser.Scene
             this.lastBall = this.ball.create(this, 310 + 30 * i, 15);    
         }
         this.box = new DisplayBox(this);
-
+        for(var i = 0; i < 4; i++){
+            this.border.push(this.add.image(BLOCK.STARTPOSX, BLOCK.STARTPOSY * (i+ 1), 'border'));
+            this.border[i].setVisible(0);
+        }
         
         this.block = (new Block()).createArrayBlock(this, BLOCK.STARTPOSX, BLOCK.STARTPOSY);
         
@@ -86,7 +90,7 @@ export default class Game1Scene5 extends Phaser.Scene
 
     update(){
         //console.log(this.inputText.value);
-        isWannaReset5[0] = this.isWannaReset[0];
+    
         setTimeout(() => {
             this.DisplayText();
         }, 1000);
@@ -103,7 +107,6 @@ export default class Game1Scene5 extends Phaser.Scene
             this.DisplayResult();
         }, 7050);
 
-        this.WannaReset();
 
         setTimeout(() => {
            this.BallMove() 
@@ -178,19 +181,6 @@ export default class Game1Scene5 extends Phaser.Scene
         }
     }
 
-    WannaReset(){
-        if(this.isPlayTilEnd){
-            if(this.isWannaReset[0]){
-                this.time.addEvent({
-                    delay: 1300,
-                    callback: ()=>{
-                        this.scene.start('Reset');     
-                    },
-                    loop: true
-                })
-            }
-        }
-    }
 
     BallMove(){
         if(this.isWannaReset[0] == false){
@@ -199,6 +189,7 @@ export default class Game1Scene5 extends Phaser.Scene
                     this.lastBall.x +=3;
                 }else{
                     this.isBallMove = false;
+                    this.scene.start('Scene5');
                 }
             }
         }
@@ -218,6 +209,15 @@ export default class Game1Scene5 extends Phaser.Scene
 
     AddResult(ResultPosX, ResultPosY, desiredResult){
         this.checkInput.check(null, null, this.inputText, this.isDisplayNextQuestion, this.isWannaReset, desiredResult);
+        if(isDisplayBorder[0]){
+            for(var i = 0; i < this.theNumber; i++){
+                this.border[i].setVisible(1);
+            }
+        }else{
+            for(var i = 0; i < this.theNumber; i++){
+                this.border[i].setVisible(0);
+            }
+        }
         if(this.isDisplayNextQuestion[0]){    
             this.inputForm.destroy();
             //this.box.displayBubbleBox(ResultPosX, ResultPosY, 80, 80, (desiredResult).toString(), 40, this.bubble.graphicArr, this.bubble.contentArr, this.fade);
