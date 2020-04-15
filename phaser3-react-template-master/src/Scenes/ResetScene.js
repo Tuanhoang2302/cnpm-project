@@ -1,6 +1,7 @@
 import 'phaser'
 import {isWannaReset2} from './BootScene';
 import {isWannaReset3} from './Game1Scene3';
+import {isWannaReset4} from './Game1Scene4';
 
 export default class ResetScene extends Phaser.Scene
 {
@@ -48,6 +49,8 @@ export default class ResetScene extends Phaser.Scene
             this.scene.start('Boot');
           } else if(isWannaReset3[0]){
             this.scene.start('Scene3');
+          } else if(isWannaReset4[0]){
+            this.scene.start('Scene4');
           }
         },  this);
       }else{
@@ -55,7 +58,9 @@ export default class ResetScene extends Phaser.Scene
           if(isWannaReset2[0]){  
             this.scene.start('Scene3');
           } else if(isWannaReset3[0]){
-            //this.scene.start('Scene3');
+            this.scene.start('Scene4');
+          } else if(isWannaReset4[0]){
+
           }
         },this);
       }
