@@ -4,7 +4,7 @@ class Scene2 extends Phaser.Scene{
         super("Scene2");
     }
     preload(){
-
+     
     }
     create(){
      
