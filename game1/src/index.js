@@ -3,6 +3,7 @@ import config from './Config/config';
 import GameScene from './Scenes/GameScene';
 import BootScene from './Scenes/BootScene';
 import {so} from './Scenes/GameScene';
+import Game1Scene2 from './Scenes/Game1Scene2';
 import Game1Scene3 from './Scenes/Game1Scene3';
 import ResetScene from './Scenes/ResetScene';
 import Game1Scene4 from './Scenes/Game1Scene4';
@@ -22,11 +23,12 @@ class Game extends Phaser.Game {
     this.scene.add('Boot', BootScene);
     this.scene.add('Game', GameScene);
     //this.scene.add('Boot', BootScene);
+    this.scene.add('Scene2', Game1Scene2);
     this.scene.add('Scene3', Game1Scene3);
     this.scene.add('Scene4', Game1Scene4);
     this.scene.add('Scene5', Game1Scene5);
     this.scene.add('Reset', ResetScene);
-    this.scene.start('Boot');
+    this.scene.start('Scene2');
     
   }
 }
