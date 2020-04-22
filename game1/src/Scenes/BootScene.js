@@ -60,16 +60,15 @@ export default class BootScene extends Phaser.Scene {
 
   create () {
     this.ReCreate();
-
-    // tạo hiệu ứng chuyển cảnh
     this.cameras.main.fadeIn(1500);
-    this.fade = new FdInFdOut(this);
+
+    this.fadeF = new FdInFdOut(this);
 
     var ballHolder = this.add.image(540, 16, 'ballHolder');
 
-    this.ball = new Ball();
-    this.ball.create(this, 770, 15);
-    for(var i = 0; i < 4; i++){
+     this.ball = new Ball();
+     this.ball.create(this, 770, 15);
+       for(var i = 0; i < 4; i++){
       this.lastBall = this.ball.create(this, 310 + 30 * i, 15);    
     }
     
