@@ -1,5 +1,4 @@
 
-
 function Check_SubAnswer1(question_index, answer_index){
     if (document.getElementById('input' + question_index).value!="")
     {
