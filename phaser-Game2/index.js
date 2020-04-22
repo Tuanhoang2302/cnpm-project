@@ -4,7 +4,7 @@ var config = {
     width: 1024,
     height:650,
   backgroundColor: '#ffffff',
-    scene: [Scene1, Scene2],
+    scene: [Scene1,Scene2, Scene3, Scene4, Scene5, Scene6],
     dom:{
         createContainer:true
     }

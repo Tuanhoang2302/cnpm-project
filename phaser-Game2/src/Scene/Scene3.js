@@ -1,4 +1,3 @@
-
 var hoptao=[];
 var  taomo=[];
 var taoborder=[];
@@ -9,20 +8,18 @@ var widthSce=1024, heigthSce= 650;
 var widthH=228, heigthH=96 ;
 var ball=[];
 var chuyenman=0;
-
-class Scene2 extends Phaser.Scene{
+class Scene3 extends Phaser.Scene{
     constructor(){
-        super("Scene2");
+        super("Scene3");
     }
     preload(){
         this.load.html('scene2','scene2.html');
-        this.load.html('scene3','scene3.html');
+        this.load.image('thanh','src/Assets/thanh.png');
         this.load.image('loadai','src/Assets/loadai.png');
         this.load.image('ball','src/Assets/ball.png');
         this.load.image('hoptao','src/Assets/hoptao.png');
         this.load.image('taoborder','src/Assets/taoborder.png');
         this.load.image('taomo','src/Assets/taomo.png');
-        this.load.image('thanh','src/Assets/thanh.png');
         this.load.image('ball','src/Assets/ball.png');
     }   
     create(){
@@ -38,7 +35,6 @@ class Scene2 extends Phaser.Scene{
         {
             element2= this.add.dom(310, 410).createFromCache('scene3');
         }
-        
         this.createball();
     }
     update(){
@@ -47,13 +43,17 @@ class Scene2 extends Phaser.Scene{
         {
             this.moveBall();
             this.time.delayedCall(2000, function() {
-                this.scene.start('Scene3');
+                this.scene.start('Scene4');
               }, [], this);
         }
         //tuc la phai lam lai man nay
         if (chuyenman==-1)
         {
-            this.scene.restart();
+                this.scene.start('Scene2');
+        }
+        if (chuyenman==-2)
+        {
+            this.resetball();
         }
         
     }
@@ -62,25 +62,29 @@ class Scene2 extends Phaser.Scene{
         chuyenman=0;
         hien=0;
         bor=0;
+        this.sohop=0;
         this.hoptao=[];
         this.taoborder=[];
         this.taomo=[];
-        this.sohop=0;
-        
     }
     createball(){
         ball[6]=this.add.sprite(280,25,'ball');
         ball[5]=this.add.sprite(280+26,25,'ball');
         ball[4]=this.add.sprite(280+26*2,25,'ball');
         ball[3]=this.add.sprite(280+26*3,25,'ball');
-        ball[2]=this.add.sprite(280+26*4,25,'ball');
+        ball[2]=this.add.sprite(719-26,25,'ball');
         ball[1]=this.add.sprite(719,25,'ball');
     }
-
-    moveBall(){
-        if (ball[2].x<719-26)
+    resetball(){
+        if (ball[2].x>384)
         {
-            ball[2].x+=speed;
+            ball[2].x-=speed;
+        }
+    }
+    moveBall(){
+        if (ball[3].x<719-26*2)
+        {
+            ball[3].x+=speed;
         }
         
     }

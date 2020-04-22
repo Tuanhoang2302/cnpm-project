@@ -15,9 +15,8 @@
    var numberqu=0;
    var hint,loa;
    var ball=[];
-   var  speed=1.5;
+   var  speed=3;
    var thanh;
-   var isWanaReset=[true,false,false,false];
    var full;
 class Scene1 extends Phaser.Scene {
     constructor() {
@@ -83,21 +82,23 @@ class Scene1 extends Phaser.Scene {
         if (full==10) 
         {
           element.setAlpha(1);
-          if (numberqu==1)// tra loi dung het thi qua ban
-          {
-           
-           this.moveBall();
-           this.time.delayedCall(3500, function() {
-            this.scene.start('Scene2');
-          }, [], this);
-          }
-          if (numberqu==-1)//da tra loi sai 1 cau
-          {
-            this.time.delayedCall(2500, function() {
-                isWanaReset[0]=false;
-                this.scene.restart();
-              }, [], this);
-          }
+        //   if (numberqu==1)// tra loi dung het thi qua ban
+        //   {
+           if (numberqu==1){
+            this.moveBall();
+            this.time.delayedCall(2000, function() {
+             this.scene.start('Scene2');
+           }, [], this);
+           }
+          
+        //   }
+        //   if (numberqu==-1)//da tra loi sai 1 cau
+        //   {
+        //     this.time.delayedCall(2500, function() {
+        //         isWanaReset[0]=false;
+        //         this.scene.restart();
+        //       }, [], this);
+        //   }
         }
         
       
