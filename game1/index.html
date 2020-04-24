@@ -4,6 +4,7 @@
 		<meta charset="utf-8" />
 		<title>Phaser 3 React Template</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
 		<style>
 			body {
 				background-color: #e6e6e6;
@@ -26,13 +27,31 @@
 		</style>
 		<link rel="stylesheet" href="index.css">
 		<script type="text/javascript" src="./src/InputForm/answer.js"></script>
-		<script type="module" src="./src/Scenes/Game1Scene2.js"></script>
+		<script type="text/javascript" src="./src/InputForm/language.js"></script>
 	</head>
 	<body background="./background.png">
 		<div id="root"></div>
 		<div id="phaser"></div>
 		<br/><br/><br/>
 		<div id="rectangle"></div>
+		<a id="returnlink" href="./answer.html">Return</a>
+		<ul class="languages">
+			<li class = "active">language</li>
+			<li class = "non-active"><a id="english" href="#eng" onclick="English()" >English</a></li>
+			<li class ="non-active"><a id="vietnamese" href="#vietnam" onclick="Vietnamese()">Vietnamese</a></li>
+		</ul>
+
+		<script>
+			$(function () {
+    			$el_languages = $('.languages');
+    			$el_languages.hover(function () {
+        			$el_languages.find('li').show();
+    			}, function () {
+        			$el_languages.find('.non-active').hide();
+    			});
+			});
+		</script>
 		
+		</script>
 	</body>
 </html>

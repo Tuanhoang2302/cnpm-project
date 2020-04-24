@@ -23,8 +23,8 @@ export default class Game1Scene2 extends Phaser.Scene {
     
     }
     preload () {
-        var txt =  'src/InputForm/answer' +(3).toString() +'.html'; 
-        this.load.html('question', txt); 
+        
+        this.load.html('question', 'src/InputForm/scene2.html'); 
         this.load.html('return', 'src/assets/text/return.html');  
     //this.load.image('Chau', 'src/assets/chau.png');
         this.load.image('button', 'src/assets/next.png');
@@ -37,18 +37,9 @@ export default class Game1Scene2 extends Phaser.Scene {
         this.ReCreate();
         this.Create_Ball();
         this.Create_QuestionAndInput();
-        
-        this.fade = new FdInFdOut(this)
         this.block =(new Block()).createArrayBlock(this, BLOCK.X, BLOCK.Y);
-        this.input.on('pointerdown', function(pointer){
-            var touchX = pointer.x;
-            var touchY = pointer.y;
-            console.log(touchX);
-            console.log(touchY);
-            
-            
-            // ...
-         });
+        this.Create_Language();
+        
     }
 
     update(){
@@ -75,8 +66,11 @@ export default class Game1Scene2 extends Phaser.Scene {
                 this.isWannaReset = true;
             }
             if(input_currentValue2 != "" && input_currentValue2 == 0){
-                document.getElementById("answer" + this.input_Index).remove();
-                document.getElementById("ques" + this.input_Index).innerHTML="There are 10";
+                var text10 =document.createElement("div")
+                text10.appendChild(document.createTextNode("10"));
+                var layout_question = document.getElementById("layout_question" + this.input_Index);
+                text10.style.cssText = 'display: inline-block; font-size:45px;'
+                layout_question.replaceChild(text10,document.getElementById("answer" + this.input_Index))
                 this.is_Move_Block = true;
                 this.is_Cheking_Answer = false;
                 this.input_Index++;
@@ -180,8 +174,7 @@ export default class Game1Scene2 extends Phaser.Scene {
                     repeat: 0
                 })
             }else{
-                console.log("fds");
-                
+ 
                 this.is_Move_Ball = true;
             }
         }
@@ -189,8 +182,8 @@ export default class Game1Scene2 extends Phaser.Scene {
 
     Move_Ball(){
         if(this.is_Move_Ball){
-            if(this.ball_Last < 740){
-                this.ball_Last +=3;
+            if(this.ball_Last.x < 740){
+                this.ball_Last.x +=3;
             }else{    
                 this.time.addEvent({
                     delay: 2000,
@@ -228,10 +221,29 @@ export default class Game1Scene2 extends Phaser.Scene {
         }
     }
 
+    Create_Language(){
+        if(window.location.hash == "#vietnam"){
+
+            var question = document.getElementsByClassName("question");
+            console.log(question.length);
+            
+            var word_end_question = document.getElementsByClassName("word_end_question")
+            var thought = document.getElementsByClassName("result");
+            for(var i = 0;i < question.length; i++){
+                question[i].innerHTML = "Có tất cả ";
+                //word_end_question[i].innerHTML = "khối"
+                thought[i].innerHTML = "Có tất cả 10 khối."
+            }
+            document.getElementById("lastques").innerHTML = "Tổng số khối bên trên?"
+             
+        }
+    }
+
+
     ReCreate(){
         this.fade = null;
         this.ball_Last = null;
-        this.subquestion_TotalNumber = 3;
+        this.subquestion_TotalNumber = 2;
         this.input_Index = 1;
         this.question_Index = 1;
         this.question_Sub = null;
@@ -247,17 +259,17 @@ export default class Game1Scene2 extends Phaser.Scene {
         is_Display_LastResult = false;
         subquestion_TotalNumber = this.subquestion_TotalNumber;
         pos = [0, 0, 0, 0];
+        isWannaReset2[0] = false;
+        
     }
   
 };
 var subquestion_TotalNumber;
-var is_Display_LastResult = false;
+export var is_Display_LastResult = false;
 var pos = [0, 0, 0, 0];
 
 window.Click_Button = function Click_Button(){
-    $(document).ready(function(){
-        $("#button").delay(200).fadeOut();
-    }); 
+   document.getElementById("button").style.display = "none";
     
     for(var i = 1; i <= subquestion_TotalNumber; i++){
         var resultPanel = document.createElement('div')
