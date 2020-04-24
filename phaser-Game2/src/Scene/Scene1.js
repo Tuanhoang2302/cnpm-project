@@ -18,6 +18,7 @@
    var  speed=3;
    var thanh;
    var full;
+   var music;
 class Scene1 extends Phaser.Scene {
     constructor() {
         super("Scene1");
@@ -32,12 +33,14 @@ class Scene1 extends Phaser.Scene {
         this.load.image('ball','src/Assets/ball.png');
        this.load.image('apple','src/Assets/apple.png');
        this.load.image('khay','src/Assets/khay.png');
+       this.load.audio('moveapple','src/Assets/moveapple.mp3');
     }
     create() {
+        music=this.sound.add('moveapple');
         thanh = this.add.sprite(500,25,'thanh');
         thanh.setScale(0.8);
-        hint= this.add.text(340,60,'Move the apples',{ font: '40px Arial',color:'#000000' });
-        loa=this.add.sprite(305,80,'loadai');
+        hint= this.add.text(340,60,'Move the apples',{ font: '40px Arial',color:'#000000' }).setInteractive();
+        loa=this.add.sprite(305,80,'loadai').setInteractive();
         loa.setScale(0.4);
         khay = this.add.sprite(300,280,'khay');
         apple[1]=this.add.sprite(580,300,'apple');
@@ -82,6 +85,7 @@ class Scene1 extends Phaser.Scene {
         if (full==10) 
         {
           element.setAlpha(1);
+       
         //   if (numberqu==1)// tra loi dung het thi qua ban
         //   {
            if (numberqu==1){
@@ -100,8 +104,24 @@ class Scene1 extends Phaser.Scene {
         //       }, [], this);
         //   }
         }
+       this.Audio();
         
       
+    }
+    Audio()
+    {
+            
+        loa.on('pointerdown', function () {
+
+            music.play();
+
+        });
+        hint.on('pointerdown', function () {
+
+            music.play();
+
+        });
+
     }
     moveBall(){
         if (ball[1].x<719)

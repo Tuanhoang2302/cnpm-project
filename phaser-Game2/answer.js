@@ -1,6 +1,6 @@
 var  hien =0;
 var bor=0;
-function myFunction1(){
+function myFunction1(id){
     if (document.getElementById('number1').value!="")
     {
         var x= document.getElementById('number1').value%10;
@@ -9,7 +9,7 @@ function myFunction1(){
     {
       
         document.getElementById('number1').style.color="black";
-        document.getElementById('number2').focus();
+        document.getElementById(id).focus();
      
     }
     else {
@@ -17,11 +17,10 @@ function myFunction1(){
         document.getElementById('number1').style.color="red";  
      document.getElementById('tbao').style.display="flex";
     }
-
     }
     
     }
-    function myFunction2(){
+    function myFunction2(id){
         if ( document.getElementById('number2').value!="")
         {
             var y= document.getElementById('number2').value%10;
@@ -34,7 +33,7 @@ function myFunction1(){
          child.remove();
          document.getElementById("ques1").innerHTML="How many apples are in the box: 10";
          document.getElementById('question2').style.display="flex";
-         document.getElementById('number3').focus();
+         document.getElementById(id).focus();
     }
     else{
         
@@ -128,7 +127,7 @@ function myFunction6(){
          
      }
      else {
-         chuyenman=-2;
+         chuyenman=-2;// da tung bi sai
          bor=1;
         document.getElementById('nu3').style.color="red";
      }
@@ -224,6 +223,27 @@ function myFunction10()
         document.getElementById('nu10').style.color="red";
      }
     }
+}
+function howMany(){
+    document.getElementById('Howmanyapple').play();
+}
+function manyApple(){
+    document.getElementById('manyApple').play();
+}
+function Total(){
+    document.getElementById('Total').play();
+}
+function onebox(){
+    document.getElementById('onebox').play();
+}
+function manyBoxes(){
+    document.getElementById('manyBoxes').play();
+}
+function vietso0(){
+    document.getElementById('vietso0').play();
+}
+function count(){
+    document.getElementById('count').play();
 }
 
    
