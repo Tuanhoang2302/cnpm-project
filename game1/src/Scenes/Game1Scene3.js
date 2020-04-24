@@ -33,8 +33,6 @@ export default class Game1Scene3 extends Phaser.Scene {
     }
     
     create () {
-        console.log("fd");
-        
         this.ReCreate();
         this.Create_Ball();
         this.Create_QuestionAndInput();

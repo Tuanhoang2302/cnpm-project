@@ -110,7 +110,7 @@ ChangeScene(){
       this.time.addEvent({
           delay: 1500,
           callback: ()=>{
-              this.scene.start('Boot');
+              this.scene.start('Scene2');
           },
       loop: true
       })

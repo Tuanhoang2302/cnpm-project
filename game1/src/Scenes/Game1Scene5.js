@@ -6,212 +6,304 @@ import Block from '../gameObject/Block';
 import CheckInputText from '../helper/CheckInputText';
 import {isDisplayBorder} from '../helper/CheckInputText';
 
-const BLOCK = {
-    STARTPOSX : 250,
-    STARTPOSY : 100
+var BLOCK = {
+    X:250,
+    Y:120
 }
 
-const BUBBLE = {
-    STARTPOSX : 600,
-    STARTPOSY : 65,
-    WIDTH : 270,
-    HEIGHT : 65,
-    FONTTEXT : 30
-}
-
+const RANGEBLOCK = 90;
+export var isWannaReset4 = [false];
 export default class Game1Scene5 extends Phaser.Scene
 {
     constructor(){
         super('Scene5');
-        //this.theNumber = Math.floor(Math.random() * (3 - 2 + 1) + 2);
-        
+          
     }
-
     preload(){
-        this.load.html('answerform', 'src/assets/text/answerform.html');
+        this.load.html('question4', 'src/InputForm/scene4.html');
+        this.load.image('border', 'src/assets/border.png');
+        this.load.html('return', 'src/assets/text/return.html');  
+        this.load.image('button', 'src/assets/next.png');
         this.load.image('dayChau', 'src/assets/arrBlock.png');
-        this.load.image('ball', 'src/assets/ball.png');
         this.load.image('ballHolder', 'src/assets/thanh.png');
+        this.load.image('ball', 'src/assets/ball.png');
     }
-
+    
     create(){
-        //console.log(theNumber);
+        this.Recreate();
+        this.CreateBall();
+        this.CreateBorder();
+        this.Create_TextAndBlock();
+        this.Create_Language();
         
-        this.cameras.main.fadeIn(1500);
-        var ballHolder = this.add.image(540, 16, 'ballHolder');
-        this.ball = new Ball();
-        this.fade = new FdInFdOut(this);
-        this.checkInput = new CheckInputText(this);
-
-        this.ball.create(this, 770, 15);
-        this.ball.create(this, 740, 15);
-        this.ball.create(this, 710, 15);
-        this.ball.create(this, 680, 15);
-        for(var i = 0; i < 1; i++){
-            this.lastBall = this.ball.create(this, 310 + 30 * i, 15);    
-        }
-        this.box = new DisplayBox(this);
-        for(var i = 0; i < 4; i++){
-            this.border.push(this.add.image(BLOCK.STARTPOSX, BLOCK.STARTPOSY * (i+ 1), 'border'));
-            this.border[i].setVisible(0);
-        }
-        
-        this.block = (new Block()).createArrayBlock(this, BLOCK.STARTPOSX, BLOCK.STARTPOSY);
-        
-        var line = this.add.graphics();
-        line.lineBetween(0, 50, 1280, 50);         
     }
 
     update(){
-        //console.log(this.inputText.value);
+        this.Move_Block_and_Display_NextQuestion();
+        this.Display_Question1();
+        this.Display_Question2();
+        this.Reset_Scene();
+        this.Move_Ball();
+    }
+
+//------------------------------------------------------------------------------------
+
+    Move_Block_and_Display_NextQuestion(){
+        if(this.isMovingBlock){
+            var start_posY_block = BLOCK.Y + RANGEBLOCK * (this.currentBlock - 1);
+            var destination = BLOCK.Y + RANGEBLOCK * this.currentBlock;
+            if(this.block.y == start_posY_block) {
+                var new_block = (new Block()).createArrayBlock(this, BLOCK.X, start_posY_block);
+            }
+            if(this.block.y < destination){
+                this.block.y += 3;
+            }else{
+                this.currentBlock++;
+                this.isDisplayNextText = true;
+                this.isMovingBlock = false;
+            }
+        }
+
+        if(this.isDisplayNextText){
+            if(this.currentBlock == 2){
+                $(document).ready(function(){
+                    $("#layout_question2").delay(500).fadeIn();
+                });
+            }else if(this.currentBlock == 3){
+                $(document).ready(function(){
+                    $("#layout_question3").delay(500).fadeIn();
+                });
+            }else if(this.currentBlock == 4){
+                $(document).ready(function(){
+                    $("#layout_question4").delay(500).fadeIn();
+                });
+            }
+
+            if(this.currentBlock < total_block){
+                this.time.addEvent({
+                    delay: 1000,
+                    callback: ()=>{
+                        this.isMovingBlock = true;
+                    },
+                    repeat: 0
+                })
+            }else{
+ 
+                this.isDisplayQuestion1 = true;
+            }
+            this.isDisplayNextText = false;
+        }
+    }
+
+    Display_Question1(){
+        if(this.isDisplayQuestion1){   
+            $(document).ready(function(){
+                $("#layout_lastquestion").delay(1000).fadeIn();
+            });
+            this.isDisplayQuestion1 = false;
+        }
+    }
+
+    Display_Question2(){
+        if(isDisplayQuestion2){
+            $(document).ready(function(){
+                $("#layout_lastquestion2").delay(1000).fadeIn();
+            });
+            isDisplayQuestion2 = false;
+        }
+    }
+
+    Reset_Scene(){
+        if(isResetScene){
+            if(isWannaReset){
+                this.time.addEvent({
+                    delay: 1000,
+                    callback: ()=>{
+                        //this.scene.start('Reset');
+                    },
+                    repeat: 0
+                })
+            }else{
+                this.is_Move_Ball = true;
+            }
+        }
+    }
+
+    Move_Ball(){
+        if(this.is_Move_Ball){
+            if(this.ball_Last.x < 650){
+                this.ball_Last.x +=3;
+            }else{    
+                this.time.addEvent({
+                    delay: 2000,
+                    callback: ()=>{
+                        this.scene.start('Scene5');
+                    },
+                repeat:0
+                })
+            }
+        }
+    }
     
-        setTimeout(() => {
-            this.DisplayText();
-        }, 1000);
 
-        setTimeout(() => {
-            this.BlockMove();
-        }, 2000);
-        
-        setTimeout(() => {
-            this.DisplayQuestion();
-        }, 5000);
-        
-        setTimeout(() => {
-            this.DisplayResult();
-        }, 7050);
+//------------------------------------------------------------------------------------
 
-
-        setTimeout(() => {
-           this.BallMove() 
-        }, 7100);
-        
+    CreateBall(){
+        var ballHolder = this.add.image(540, 16, 'ballHolder');
+        this.ball_Last = (function(scene){
+            var ball = new Ball();
+            ball.create(scene, 770, 15);
+            ball.create(scene, 740, 15);
+            ball.create(scene, 710, 15);
+            ball.create(scene, 680, 15);
+            for(var i = 0; i < 1; i++){
+                var temp = ball.create(scene, 310 + 30 * i, 15);    
+            }
+            return temp;
+        })(this);
     }
 
-
-
-
-
-
-    DisplayText(){
-        if(this.isDisplayText){
-            this.box.displayBubbleBox(BUBBLE.STARTPOSX, BUBBLE.STARTPOSY + 100 * (this.Index), BUBBLE.WIDTH, BUBBLE.HEIGHT, 
-                '10 blocks', BUBBLE.FONTTEXT, this.bubble.graphicArr, this.bubble.contentArr, this.fade);  
-
-            this.isDisplayText = false;
-
-            if(this.Index < this.theNumber - 1){
-                setTimeout(() => {
-                    this.isMoving = true;
-                }, 1000);
-                //this.isMoving = true;
-            }else{
-                this.isDisplayQuestion[0] = true;
-            }
+    CreateBorder(){
+        for(var i = 0; i < 4; i++){
+            border.push(this.add.image(BLOCK.X, BLOCK.Y + RANGEBLOCK * i, 'border'));
+            border[i].setVisible(0);
         }
     }
 
-    BlockMove(){
-        if(this.isMoving){
-            if(this.isDisplayBlock){
-                var newBlock = (new Block()).createArrayBlock(this, BLOCK.STARTPOSX, BLOCK.STARTPOSY * (this.Index + 1));
-                this.isDisplayBlockByReplace = false;
-            }
+    Create_TextAndBlock(){
+        this.block =(new Block()).createArrayBlock(this, BLOCK.X, BLOCK.Y);
+        this.question_Sub = this.add.dom(750, 130).createFromCache('question4');
+        this.block.setAlpha(0);
+        this.fade = new FdInFdOut(this);
+        this.fade.FdOut(this.block);
+        $(document).ready(function(){
+            $("#layout_question1").hide();
+            $("#layout_question1").delay(1000).fadeIn();
+        });
+        this.time.addEvent({
+            delay: 2000,
+            callback: ()=>{
+                this.isMovingBlock = true;
+            },
+            repeat: 0
+        })
+        var m = document.getElementsByClassName("layout_question");
+        for(var i = 1 ; i < m.length; i++){
+            m[i].style.padding = '35px 0 0 0'
+            m[i].style.margin = '0 0 0 10px'
+        }
+        m[1].style.bottom = "7px"
+    }
 
-            if(this.block.y != BLOCK.STARTPOSY * (this.Index + 2)){
-                this.block.y += 5;
-            }else{
-                this.isMoving = false;
-                if(this.Index < this.theNumber - 1){
-                    this.Index++;
-                    this.isDisplayBlock = true;
-                   
-                    this.isDisplayText = true;
-                }
+    Create_Language(){
+        if(window.location.hash == "#vietnam"){
+
+            var question = document.getElementsByClassName("question");
+            for(var i = 0;i < question.length; i++){
+                question[i].innerHTML = "Hình bên có 10 khối";
             }
+            document.getElementById("lastques").innerHTML = "Tổng số thanh bên trên:"
+            document.getElementById("lastques2").innerHTML = "Tổng số khối bên trên:"
+             
         }
     }
 
-    DisplayQuestion(){
-        if(this.isDisplayQuestion[0]){
-            if(this.orderQuestion == 1){
-                this.AddQuesTion(100, 460, 850, 495, 'How many bars are there in total?');
-            }else if(this.orderQuestion == 2){
-                //this.box.displayBubbleBox(300, 680, 500, 80, 'How many blocks are there?', 40, this.bubble.graphicArr, this.bubble.contentArr, this.fade);
-                this.AddQuesTion(100, 590, 850, 625, 'How many blocks are there?');
+    Recreate(){
+        this.ball_Last = null;
+        this.block = null;
+        this.fade = null;
+        this.isMovingBlock = false;
+        this.isDisplayNextText = false;
+        this.currentBlock = 1;
+        this.isDisplayQuestion1 = false;
+        isDisplayQuestion2 = false;
+        total_block = 3;
+        border = [];
+        isResetScene = false;
+        isWannaReset = false;
+        this.is_Move_Ball = false;
+    }
+}
+
+var total_block = 3;
+var border = []
+var isDisplayQuestion2 = false
+var isResetScene =false
+var isWannaReset = false;
+window.Check_QuestionScene4 = function Check_QuestionScene4(){
+    if ( document.getElementById('inputScene4').value!="")
+    {
+            var y = document.getElementById('inputScene4').value % 10;
+            document.getElementById('inputScene4').value = "";
+            document.getElementById('inputScene4').value = y;
+        if (document.getElementById('inputScene4').value ==total_block)
+        {
+            for(var i = 0; i < total_block; i++){
+                border[i].setVisible(0);
             }
+            var textResult = document.createElement("div")
+            textResult.appendChild(document.createTextNode((total_block).toString()));
+            var layout_question = document.getElementById("layout_lastquestion");
+            textResult.style.cssText = 'display: inline-block; font-size:60px; margin-left: 20px'
+            layout_question.replaceChild(textResult,document.getElementById("answer1"))
+            isDisplayQuestion2 = true;
+        }
+        else{
+            for(var i = 0; i < total_block; i++){
+                border[i].setVisible(1);
+            }
+            document.getElementById('inputScene4').style.color="red";
+            isWannaReset = true;
+        }
+    } 
+}
+
+window.Check_QuestionScene4v1 = function Check_QuestionScene4v1(){
+    if ( document.getElementById('inputScene4v1').value!="")
+    {
+            var y = document.getElementById('inputScene4v1').value % 10;
+            document.getElementById('inputScene4v1').value = "";
+            document.getElementById('inputScene4v1').value = y;
+        if (document.getElementById('inputScene4v1').value == total_block)
+        {
+            for(var i = 0; i < total_block; i++){
+                border[i].setVisible(0);
+            }
+            document.getElementById('inputScene4v1').style.color="black";
+            document.getElementById('inputScene4v2').focus();
+        }
+        else{
+            for(var i = 0; i < total_block; i++){
+                border[i].setVisible(1);
+            }
+            document.getElementById('inputScene4v1').style.color="red";
+            isWannaReset = true;
+        }
+    }
+}
+
+window.Check_QuestionScene4v2 = function Check_QuestionScene4v2(){
+    if ( document.getElementById('inputScene4v2').value!="")
+    {
+        if (document.getElementById('inputScene4v2').value == 0)
+        {
+            for(var i = 0; i < total_block; i++){
+                border[i].setVisible(0);
+            }
+            var textResult = document.createElement("div")
+            textResult.appendChild(document.createTextNode((total_block * 10).toString()));
+            var layout_question = document.getElementById("layout_lastquestion2");
+            textResult.style.cssText = 'display: inline-block; font-size:60px; margin-left: 20px'
+            layout_question.replaceChild(textResult,document.getElementById("answer2"))
+            isResetScene = true;
+        }
+        else{
+            for(var i = 0; i < total_block; i++){
+                border[i].setVisible(1);
+            }
+            document.getElementById('inputScene4v2').style.color="red";
+            isWannaReset = true;
             
-            this.isDisplayQuestion[0] = false;
         }
     }
-
-    DisplayResult(){
-        if(this.isDisplayResult){
-           if(this.orderQuestion == 1){
-                this.AddResult(770, 460, this.theNumber);
-           }else{
-               this.AddResult(770, 590, this.theNumber * 10);
-           }
-        }
-    }
-
-
-    BallMove(){
-        if(this.isWannaReset[0] == false){
-            if(this.isBallMove){
-                if(this.lastBall.x < 650){
-                    this.lastBall.x +=3;
-                }else{
-                    this.isBallMove = false;
-                    //this.scene.start('Scene5');
-                }
-            }
-        }
-    }
-
-
-
-    AddQuesTion(BubblePosX, BubblePosY, inputFormPosX, inputFormPosY, txt){
-        this.box.displayBubbleBox(BubblePosX, BubblePosY, 600, 70, txt, 30, this.bubble.graphicArr, this.bubble.contentArr, this.fade);
-        setTimeout(() => {
-            this.inputForm = this.add.dom(inputFormPosX, inputFormPosY).createFromCache('answerform');
-            this.inputText = this.inputForm.getChildByName('answerform');
-            this.inputText.focus();
-        }, 1000);                  
-        this.isDisplayResult = true;
-    }
-
-    AddResult(ResultPosX, ResultPosY, desiredResult){
-        this.checkInput.check(null, null, this.inputText, this.isDisplayNextQuestion, this.isWannaReset, desiredResult);
-        if(isDisplayBorder[0]){
-            for(var i = 0; i < this.theNumber; i++){
-                this.border[i].setVisible(1);
-            }
-        }else{
-            for(var i = 0; i < this.theNumber; i++){
-                this.border[i].setVisible(0);
-            }
-        }
-        if(this.isDisplayNextQuestion[0]){    
-            this.inputForm.destroy();
-            //this.box.displayBubbleBox(ResultPosX, ResultPosY, 80, 80, (desiredResult).toString(), 40, this.bubble.graphicArr, this.bubble.contentArr, this.fade);
-
-            if(this.orderQuestion == 1){
-                this.box.displayBubbleBox(ResultPosX, ResultPosY, 270, 70, (desiredResult).toString() + " = " + (desiredResult).toString() + " tens", 30, this.bubble.graphicArr, this.bubble.contentArr, this.fade);
-                setTimeout(() => {
-                    this.isDisplayQuestion[0] = true;  
-                    this.isDisplayNextQuestion[0] = false;
-                }, 1000);
-            }else{
-                this.box.displayBubbleBox(ResultPosX, ResultPosY, 80, 70, (desiredResult).toString(), 30, this.bubble.graphicArr, this.bubble.contentArr, this.fade);
-                this.isPlayTilEnd = true;
-                this.isDisplayQuestion[0] = false;
-                this.isBallMove = true;
-            }
-            this.orderQuestion++;
-            this.isDisplayResult = false;  
-        }
-    }
-
-    
 }

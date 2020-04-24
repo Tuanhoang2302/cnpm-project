@@ -231,7 +231,7 @@ export default class Game1Scene2 extends Phaser.Scene {
             var thought = document.getElementsByClassName("result");
             for(var i = 0;i < question.length; i++){
                 question[i].innerHTML = "Có tất cả ";
-                //word_end_question[i].innerHTML = "khối"
+                word_end_question[i].innerHTML = "khối"
                 thought[i].innerHTML = "Có tất cả 10 khối."
             }
             document.getElementById("lastques").innerHTML = "Tổng số khối bên trên?"

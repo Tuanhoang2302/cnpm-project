@@ -4,7 +4,6 @@ var Scene3_index = 0;
 function Check_SubAnswer1(question_index, answer_index, desiredResult, sceneName){
     if (document.getElementById('input' + question_index).value!="")
     {
-
         var x= document.getElementById('input' + question_index).value%10;
         document.getElementById('input' + question_index).value=x;
         if (x==desiredResult / 10)
@@ -23,12 +22,9 @@ function Check_SubAnswer1(question_index, answer_index, desiredResult, sceneName
             document.getElementById('input' + question_index).style.color="red";  
             if(answer_index <4){
                 document.getElementById('thought' + answer_index).style.display = "flex";
-            }
-            
+            }   
         }
-
-    }
-    
+    }    
 }
 
 function Check_SubAnswer2(question_index, answer_index, desiredResult, sceneName){
@@ -73,12 +69,9 @@ function Check_LastAnswer1(question_index, answer_index, desiredResult, sceneNam
         }
         else {
             document.getElementById('input' + question_index).style.color="red";  
-
             
         }
-
     }
-    
 }
 
 function Check_LastAnswer2(question_index, answer_index, desiredResult, sceneName){
