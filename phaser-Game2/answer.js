@@ -224,27 +224,6 @@ function myFunction10()
      }
     }
 }
-function howMany(){
-    document.getElementById('Howmanyapple').play();
+function PlayAudio(play){
+    document.getElementById(play).play();
 }
-function manyApple(){
-    document.getElementById('manyApple').play();
-}
-function Total(){
-    document.getElementById('Total').play();
-}
-function onebox(){
-    document.getElementById('onebox').play();
-}
-function manyBoxes(){
-    document.getElementById('manyBoxes').play();
-}
-function vietso0(){
-    document.getElementById('vietso0').play();
-}
-function count(){
-    document.getElementById('count').play();
-}
-
-   
-   
