@@ -56,7 +56,7 @@ export default class Game1Scene2 extends Phaser.Scene {
 
     Check_AnswerOfSubQuestion(){
 
-        if(this.is_Cheking_Answer == true && this.input_Index <= this.subquestion_TotalNumber){
+        if(this.isChekingAnswer == true && this.input_Index <= this.subquestion_TotalNumber){
             
             var input_currentValue1 = document.getElementById("input" + (this.input_Index * 2 - 1).toString()).value;
             var input_currentValue2 = document.getElementById("input" + (this.input_Index * 2).toString()).value;
@@ -71,8 +71,8 @@ export default class Game1Scene2 extends Phaser.Scene {
                 var layout_question = document.getElementById("layout_question" + this.input_Index);
                 text10.style.cssText = 'display: inline-block; font-size:45px;'
                 layout_question.replaceChild(text10,document.getElementById("answer" + this.input_Index))
-                this.is_Move_Block = true;
-                this.is_Cheking_Answer = false;
+                this.isMoveBlock = true;
+                this.isChekingAnswer = false;
                 this.input_Index++;
             }
             //this.is_input_Cheking = false;
@@ -81,7 +81,7 @@ export default class Game1Scene2 extends Phaser.Scene {
 
     Move_Block_and_Display_NextSubQuestion(){
 
-        if(this.is_Move_Block){
+        if(this.isMoveBlock){
             if(this.input_Index <= this.subquestion_TotalNumber){
                 var start_posY_block = BLOCK.Y + RANGEBLOCK * (this.input_Index - 2);
                 var destination_posY_block = BLOCK.Y + RANGEBLOCK * (this.input_Index - 1);
@@ -91,16 +91,16 @@ export default class Game1Scene2 extends Phaser.Scene {
                 if(this.block.y < destination_posY_block){
                     this.block.y += 3;
                 }else{
-                    this.is_Display_SubQuestion = true;
-                    this.is_Move_Block = false;
+                    this.isDisplaySubQuestion = true;
+                    this.isMoveBlock = false;
                 }
             }else{
-                this.is_Display_SubQuestion = true;
-                this.is_Move_Block = false;
+                this.isDisplaySubQuestion = true;
+                this.isMoveBlock = false;
             }   
         }
 
-        if(this.is_Display_SubQuestion){
+        if(this.isDisplaySubQuestion){
             if(this.input_Index == 2 && this.subquestion_TotalNumber > 1){
                 $(document).ready(function(){
                     $("#layout_question2").delay(200).fadeIn();
@@ -111,25 +111,25 @@ export default class Game1Scene2 extends Phaser.Scene {
                 });
             }
             if(this.input_Index > this.subquestion_TotalNumber){
-                this.is_Display_LastQuestion = true;
+                this.isDisplayLastQuestion = true;
             }
-            this.is_Cheking_Answer = true;
-            this.is_Display_SubQuestion = false;
+            this.isChekingAnswer = true;
+            this.isDisplaySubQuestion = false;
             
         }   
     }
 
     Display_LastQuestion(){
-        if(this.is_Display_LastQuestion){
+        if(this.isDisplayLastQuestion){
             $(document).ready(function(){
                 $("#layout_lastquestion").delay(200).fadeIn();
             });
-            this.is_Display_LastQuestion = false   
+            this.isDisplayLastQuestion = false   
         }
     }
 
     Display_LastResult(){
-        if(is_Display_LastResult){
+        if(isDisplayLastResult){
             var desEnd = (RANGEBLOCK -20) * (subquestion_TotalNumber - 1 + 1) + 20 * (subquestion_TotalNumber - 1)
             for(var i = 1; i <= subquestion_TotalNumber; i++){
                 var body = document.getElementById('panelresult' + i);
@@ -156,7 +156,7 @@ export default class Game1Scene2 extends Phaser.Scene {
                     }
                     $("#layout_lastquestion").delay(200).fadeIn(); 
                 });
-                is_Display_LastResult = false;
+                isDisplayLastResult = false;
                 this.isResetScene = true;
             }
             
@@ -175,13 +175,13 @@ export default class Game1Scene2 extends Phaser.Scene {
                 })
             }else{
  
-                this.is_Move_Ball = true;
+                this.isMoveBall = true;
             }
         }
     }
 
     Move_Ball(){
-        if(this.is_Move_Ball){
+        if(this.isMoveBall){
             if(this.ball_Last.x < 740){
                 this.ball_Last.x +=3;
             }else{    
@@ -250,14 +250,14 @@ export default class Game1Scene2 extends Phaser.Scene {
         this.question_Sub = null;
         this.input_Value_arr = [];
         this.block = null;
-        this.is_Move_Block = false;
-        this.is_Display_SubQuestion = false;
-        this.is_Cheking_Answer = true;
+        this.isMoveBlock = false;
+        this.isDisplaySubQuestion = false;
+        this.isChekingAnswer = true;
         this.isWannaReset = false;
         this.isResetScene = false;
-        this.is_Display_LastQuestion = false;
-        this.is_Move_Ball = false;
-        is_Display_LastResult = false;
+        this.isDisplayLastQuestion = false;
+        this.isMoveBall = false;
+        isDisplayLastResult = false;
         subquestion_TotalNumber = this.subquestion_TotalNumber;
         pos = [0, 0, 0, 0];
         isWannaReset2[0] = false;
@@ -266,7 +266,7 @@ export default class Game1Scene2 extends Phaser.Scene {
   
 };
 var subquestion_TotalNumber;
-export var is_Display_LastResult = false;
+export var isDisplayLastResult = false;
 var pos = [0, 0, 0, 0];
 
 window.Click_Button = function Click_Button(){
@@ -292,5 +292,5 @@ window.Click_Button = function Click_Button(){
         }
         $("#layout_lastquestion").delay(200).fadeIn();
     }); 
-    is_Display_LastResult = true;
+    isDisplayLastResult = true;
 }

@@ -70,6 +70,9 @@ create ()
     blockArr.push((new Block()).createABlock(this, 200, 600));
     blockArr.push((new Block()).createABlock(this, 500, 600));
     blockArr.push((new Block()).createABlock(this, 400, 600));
+    for(var i = 0;i < blockArr.length; i++){
+      blockArr[i].body.debugShowBody = false;
+  }
     
     for(var i = 0; i < numberOfBox; i++){
       initBlockPosX[i] = blockArr[i].x;
@@ -95,9 +98,8 @@ create ()
 }
 
 update ()
-{  
-  
-    this.DropAndDrag();
+{    
+    this.Return_InitPos();
     this.ChangeScene();
 }
 
@@ -118,7 +120,7 @@ ChangeScene(){
   }
 }
 
-DropAndDrag(){
+Return_InitPos(){
   for(var i = 0; i < numberOfBox; i++){
     distance[i] = Phaser.Math.Distance.Between(blockArr[i].x, blockArr[i].y, initBlockPosX[i], initBlockPosY[i]);
     if (distance[i] < 4)
