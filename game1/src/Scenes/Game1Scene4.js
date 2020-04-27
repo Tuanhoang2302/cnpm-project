@@ -119,7 +119,7 @@ export default class Game1Scene4 extends Phaser.Scene
                 this.time.addEvent({
                     delay: 1000,
                     callback: ()=>{
-                        //this.scene.start('Reset');
+                        this.scene.start('Scene4');
                     },
                     repeat: 0
                 })
@@ -163,7 +163,7 @@ export default class Game1Scene4 extends Phaser.Scene
     }
 
     CreateBorder(){
-        for(var i = 0; i < 4; i++){
+        for(var i = 0; i < total_block; i++){
             border.push(this.add.image(BLOCK.X, BLOCK.Y + RANGEBLOCK * i, 'border'));
             border[i].setVisible(0);
         }
@@ -216,7 +216,7 @@ export default class Game1Scene4 extends Phaser.Scene
         this.currentBlock = 1;
         this.isDisplayQuestion1 = false;
         isDisplayQuestion2 = false;
-        total_block = 3;
+        total_block = Math.floor(Math.random() * (4 - 2 + 1) + 2);
         border = [];
         isResetScene = false;
         isWannaReset = false;
@@ -224,7 +224,7 @@ export default class Game1Scene4 extends Phaser.Scene
     }
 }
 
-var total_block = 3;
+var total_block = Math.floor(Math.random() * (4 - 2 + 1) + 2);
 var border = []
 var isDisplayQuestion2 = false
 var isResetScene =false

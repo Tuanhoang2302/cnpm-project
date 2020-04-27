@@ -20,7 +20,7 @@ export default class Game1Scene5 extends Phaser.Scene
           
     }
     preload(){
-        this.load.html('question4', 'src/InputForm/scene4.html');
+        this.load.html('question4', 'src/InputForm/scene5.html');
         this.load.image('border', 'src/assets/border.png');
         this.load.html('return', 'src/assets/text/return.html');  
         this.load.image('button', 'src/assets/next.png');
@@ -119,7 +119,7 @@ export default class Game1Scene5 extends Phaser.Scene
                 this.time.addEvent({
                     delay: 1000,
                     callback: ()=>{
-                        //this.scene.start('Reset');
+                        this.scene.start('Scene5');
                     },
                     repeat: 0
                 })
@@ -164,7 +164,7 @@ export default class Game1Scene5 extends Phaser.Scene
     }
 
     CreateBorder(){
-        for(var i = 0; i < 4; i++){
+        for(var i = 0; i < total_block; i++){
             border.push(this.add.image(BLOCK.X, BLOCK.Y + RANGEBLOCK * i, 'border'));
             border[i].setVisible(0);
         }
@@ -217,7 +217,7 @@ export default class Game1Scene5 extends Phaser.Scene
         this.currentBlock = 1;
         this.isDisplayQuestion1 = false;
         isDisplayQuestion2 = false;
-        total_block = 3;
+        total_block = Math.floor(Math.random() * (4 - 2 + 1) + 2);
         border = [];
         isResetScene = false;
         isWannaReset = false;
@@ -225,12 +225,12 @@ export default class Game1Scene5 extends Phaser.Scene
     }
 }
 
-var total_block = 3;
+var total_block = Math.floor(Math.random() * (4 - 2 + 1) + 2);
 var border = []
 var isDisplayQuestion2 = false
 var isResetScene =false
 var isWannaReset = false;
-window.Check_QuestionScene4 = function Check_QuestionScene4(){
+window.Check_QuestionScene5 = function Check_QuestionScene5(){
     if ( document.getElementById('inputScene4').value!="")
     {
             var y = document.getElementById('inputScene4').value % 10;
@@ -249,6 +249,8 @@ window.Check_QuestionScene4 = function Check_QuestionScene4(){
             isDisplayQuestion2 = true;
         }
         else{
+            console.log(border[0]);
+            
             for(var i = 0; i < total_block; i++){
                 border[i].setVisible(1);
             }
@@ -258,7 +260,7 @@ window.Check_QuestionScene4 = function Check_QuestionScene4(){
     } 
 }
 
-window.Check_QuestionScene4v1 = function Check_QuestionScene4v1(){
+window.Check_QuestionScene5v1 = function Check_QuestionScene5v1(){
     if ( document.getElementById('inputScene4v1').value!="")
     {
             var y = document.getElementById('inputScene4v1').value % 10;
@@ -282,7 +284,7 @@ window.Check_QuestionScene4v1 = function Check_QuestionScene4v1(){
     }
 }
 
-window.Check_QuestionScene4v2 = function Check_QuestionScene4v2(){
+window.Check_QuestionScene5v2 = function Check_QuestionScene5v2(){
     if ( document.getElementById('inputScene4v2').value!="")
     {
         if (document.getElementById('inputScene4v2').value == 0)

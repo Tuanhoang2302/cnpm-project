@@ -163,7 +163,7 @@ export default class Game1Scene3 extends Phaser.Scene {
                 this.time.addEvent({
                     delay: 1000,
                     callback: ()=>{
-                        //this.scene.start('Reset');
+                        this.scene.start('Scene3');
                     },
                     repeat: 0
                 })
@@ -222,9 +222,9 @@ export default class Game1Scene3 extends Phaser.Scene {
             var word_end_question = document.getElementsByClassName("word_end_question")
             var thought = document.getElementsByClassName("result");
             for(var i = 0;i < question.length; i++){
-                question[i].innerHTML = "Có tất cả ";
+                question[i].innerHTML = "Hình bên có ";
                 word_end_question[i].innerHTML = "khối"
-                thought[i].innerHTML = "Có tất cả 10 khối."
+                thought[i].innerHTML = "Hình bên có 10 khối."
             }
             document.getElementById("lastques").innerHTML = "Tổng số khối bên trên:"
              
@@ -235,8 +235,8 @@ export default class Game1Scene3 extends Phaser.Scene {
     ReCreate(){
         this.fade = null;
         this.ball_Last = null;
-        this.subquestion_TotalNumber = 2;
-        subquestion_TotalNumber =2;
+        this.subquestion_TotalNumber = Math.floor(Math.random() * (3 - 1 + 1) + 1);
+        subquestion_TotalNumber = this.subquestion_TotalNumber;
         this.input_Index = 1;
         this.question_Index = 1;
         this.question_Sub = null;
@@ -256,7 +256,7 @@ export default class Game1Scene3 extends Phaser.Scene {
     }
   
 };
-var subquestion_TotalNumber =2;
+var subquestion_TotalNumber;
 var is_Display_LastResult = false;
 var pos = [0, 0, 0, 0];
 

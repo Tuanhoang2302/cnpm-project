@@ -37,9 +37,28 @@
 		<a id="returnlink" href="./answer.html">Return</a>
 		<ul class="languages">
 			<li class = "active">language</li>
-			<li class = "non-active"><a id="english" href="#eng" onclick="English()" >English</a></li>
+			<li class = "non-active"><a id="english" href="#english" onclick="English()" >English</a></li>
 			<li class ="non-active"><a id="vietnamese" href="#vietnam" onclick="Vietnamese()">Vietnamese</a></li>
 		</ul>
+
+		<audio id="audio_english">
+			<source src="/src/InputForm/tenblocks.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="audio_vietnam" >
+			<source src="/src/InputForm/thoughtVietnam.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="lastques_english" >
+			<source src="/src/InputForm/lastques.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="lastques_vietnam" >
+			<source src="/src/InputForm/lastquesViet.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="barCount_english" >
+			<source src="/src/InputForm/barcount.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="barCount_vietnam" >
+			<source src="/src/InputForm/barcountViet.mp3" type="audio/mpeg">
+		</audio>
 
 		<script>
 			$(function () {
@@ -53,9 +72,34 @@
 		</script>
 		<script>
         	function play() {
-          	var audio = document.getElementById("audio");
-          	audio.play();
-        }
+				if(window.location.hash == "" || window.location.hash == "#english"){
+          			var audio = document.getElementById("audio_english");
+			  		audio.play();
+				}else if(window.location.hash == "#vietnam"){
+					var audio = document.getElementById("audio_vietnam");
+					audio.play();
+				}
+			}
+			
+			function playLastques() {
+				if(window.location.hash == "" || window.location.hash == "#english"){
+          			var audio = document.getElementById("lastques_english");
+			  		audio.play();
+				}else if(window.location.hash == "#vietnam"){
+					var audio = document.getElementById("lastques_vietnam");
+					audio.play();
+				}
+			}
+			
+			function playBarcount() {
+				if(window.location.hash == "" || window.location.hash == "#english"){
+          			var audio = document.getElementById("barCount_english");
+			  		audio.play();
+				}else if(window.location.hash == "#vietnam"){
+					var audio = document.getElementById("barCount_vietnam");
+					audio.play();
+				}
+        	}
     	</script>
 	</body>
 </html>
