@@ -200,12 +200,12 @@ export default class Game1Scene2 extends Phaser.Scene {
 //---------------------------------------------------------------------------------------------------
 
     Create_Ball(){
-        var ballHolder = this.add.image(540, 16, 'ballHolder');
+        var ballHolder = this.add.image(540, 30, 'ballHolder');
         this.ball_Last = (function(scene){
             var ball = new Ball();
-            ball.create(scene, 770, 15);
+            ball.create(scene, 770, 29);
             for(var i = 0; i < 4; i++){
-                var temp = ball.create(scene, 310 + 30 * i, 15);    
+                var temp = ball.create(scene, 310 + 30 * i, 29);    
             }
             return temp;
         })(this);

@@ -40,10 +40,10 @@ preload ()
 create ()
 {
     this.cameras.main.fadeIn(1500);
-    var ballHolder = this.add.image(540, 16, 'ballHolder');
+    var ballHolder = this.add.image(540, 30, 'ballHolder');
     ball = new Ball();
     for(var i = 0; i < 5; i++){
-      lastBall = ball.create(this, 310 + 30 * i, 15);
+      lastBall = ball.create(this, 310 + 30 * i, 29);
     }
 
     var bb = this.add.graphics({ x: 500, y: 250 });
