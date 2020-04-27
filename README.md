@@ -9,3 +9,4 @@ Sau khi cài đặt và mở file, muốn chạy game thì vào terminal file g�
 
 Còn muốn build file để up lên web, gõ npm run build, sẽ xuất hiện file index.html và bundle.min.js, lấy file index.html và các file liên quan để up lên web
 
+Đối với game 2 các bạn có thể mở file index.html để chạy trực tiếp
