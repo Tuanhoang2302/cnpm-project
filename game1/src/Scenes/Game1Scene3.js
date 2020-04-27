@@ -104,11 +104,17 @@ export default class Game1Scene3 extends Phaser.Scene {
             if(this.input_Index == 2 && this.subquestion_TotalNumber > 1){
                 $(document).ready(function(){
                     $("#layout_question2").delay(200).fadeIn();
-                });    
+                });
+                setTimeout(() => {
+                    document.getElementById("input3").focus();
+                }, 300);    
             }else if(this.input_Index == 3 && this.subquestion_TotalNumber > 2){
                 $(document).ready(function(){
                     $("#layout_question3").delay(200).fadeIn();
                 });
+                setTimeout(() => {
+                    document.getElementById("input5").focus();
+                }, 300);
             }
             if(this.input_Index > this.subquestion_TotalNumber){
                 this.isDisplayLastQuestion = true;
@@ -124,6 +130,9 @@ export default class Game1Scene3 extends Phaser.Scene {
             $(document).ready(function(){
                 $("#layout_lastquestion").delay(200).fadeIn();
             });
+            setTimeout(() => {
+                document.getElementById("input7").focus();
+            }, 300);
             isDisplayLastResult = true;
             this.isDisplayLastQuestion = false   
         }

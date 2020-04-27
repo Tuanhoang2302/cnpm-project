@@ -100,6 +100,9 @@ export default class Game1Scene4 extends Phaser.Scene
             $(document).ready(function(){
                 $("#layout_lastquestion").delay(1000).fadeIn();
             });
+            setTimeout(() => {
+                document.getElementById("inputScene4").focus();
+            }, 1100);
             this.isDisplayQuestion1 = false;
         }
     }
@@ -109,6 +112,9 @@ export default class Game1Scene4 extends Phaser.Scene
             $(document).ready(function(){
                 $("#layout_lastquestion2").delay(1000).fadeIn();
             });
+            setTimeout(() => {
+                document.getElementById("inputScene4v1").focus();
+            }, 1100);
             isDisplayQuestion2 = false;
         }
     }

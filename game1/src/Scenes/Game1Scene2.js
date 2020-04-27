@@ -104,15 +104,22 @@ export default class Game1Scene2 extends Phaser.Scene {
             if(this.input_Index == 2 && this.subquestion_TotalNumber > 1){
                 $(document).ready(function(){
                     $("#layout_question2").delay(200).fadeIn();
-                });    
+                });
+                setTimeout(() => {
+                    document.getElementById("input3").focus();
+                }, 300);
             }else if(this.input_Index == 3 && this.subquestion_TotalNumber > 2){
                 $(document).ready(function(){
                     $("#layout_question3").delay(200).fadeIn();
                 });
+                setTimeout(() => {
+                    document.getElementById("input5").focus();
+                }, 300);
             }
             if(this.input_Index > this.subquestion_TotalNumber){
                 this.isDisplayLastQuestion = true;
             }
+            this.isFocus = true;
             this.isChekingAnswer = true;
             this.isDisplaySubQuestion = false;
             
@@ -200,7 +207,7 @@ export default class Game1Scene2 extends Phaser.Scene {
 //---------------------------------------------------------------------------------------------------
 
     Create_Ball(){
-        var ballHolder = this.add.image(540, 30, 'ballHolder');
+        var ballholder = this.add.image(540, 30, 'ballHolder');
         this.ball_Last = (function(scene){
             var ball = new Ball();
             ball.create(scene, 770, 29);
@@ -244,7 +251,7 @@ export default class Game1Scene2 extends Phaser.Scene {
     ReCreate(){
         this.fade = null;
         this.ball_Last = null;
-        this.subquestion_TotalNumber = Math.floor(Math.random() * (3 - 1 + 1) + 1);
+        this.subquestion_TotalNumber = Math.floor(Math.random() * (3 - 3 + 1) + 3);
         this.input_Index = 1;
         this.question_Index = 1;
         this.question_Sub = null;
@@ -261,7 +268,6 @@ export default class Game1Scene2 extends Phaser.Scene {
         subquestion_TotalNumber = this.subquestion_TotalNumber;
         pos = [0, 0, 0, 0];
         isWannaReset2[0] = false;
-        
     }
   
 };
