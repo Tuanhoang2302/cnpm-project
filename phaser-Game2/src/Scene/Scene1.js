@@ -47,7 +47,7 @@ class Scene1 extends Phaser.Scene {
         apple[2]= this.add.sprite(620,380,'apple');
         apple[3]= this.add.sprite(720,320,'apple');
         apple[5]= this.add.sprite(760,250,'apple');
-        apple[6]= this.add.sprite(720,400,'apple');
+        apple[6]= this.add.sprite(720,390,'apple');
         apple[7]= this.add.sprite(620,220,'apple');
         apple[8]= this.add.sprite(850,200,'apple');
         apple[9]= this.add.sprite(860,310,'apple');
@@ -85,28 +85,23 @@ class Scene1 extends Phaser.Scene {
         if (full==10) 
         {
           element.setAlpha(1);
-       
-        //   if (numberqu==1)// tra loi dung het thi qua ban
-        //   {
            if (numberqu==1){
             this.moveBall();
             this.time.delayedCall(2000, function() {
              this.scene.start('Scene2');
            }, [], this);
            }
-          
-        //   }
-        //   if (numberqu==-1)//da tra loi sai 1 cau
-        //   {
-        //     this.time.delayedCall(2500, function() {
-        //         isWanaReset[0]=false;
-        //         this.scene.restart();
-        //       }, [], this);
-        //   }
         }
        this.Audio();
-        
-      
+      this.Language();
+    }
+    Language(){
+        if(window.location.hash == "#vietnam"){
+            hint.setText('Di chuyển những quả táo');
+            document.getElementById('Countaplle').innerHTML="Đếm số táo";
+            document.getElementById('ques1').innerHTML="Có bao nhiêu quả táo trong hộp :";
+            document.getElementById('ques2').innerHTML="Tổng số hộp : ";
+        }
     }
     Audio()
     {

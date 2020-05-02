@@ -55,7 +55,29 @@ class Scene2 extends Phaser.Scene{
         {
             this.scene.restart();
         }
-        
+        this.Language();
+    }
+    Language(){
+        if(window.location.hash == "#vietnam"){
+           
+            document.getElementById('yeucau').innerHTML="Có tất cả bao nhiêu quả táo ?";
+            
+            document.getElementById('change').innerHTML="một";
+            document.getElementById('boxtext').innerHTML="hộp :";
+            // document.getElementById('text').innerHTML="Có bao nhiêu quả táo trong";
+            document.getElementById('childtext').innerHTML="Có bao nhiêu táo trong "
+             document.getElementById('text2').innerHTML="Có bao nhiêu hộp :";
+            if (theend==1)
+            {
+                document.getElementById('yeucau').innerHTML="Có tất cả bao nhiêu quả táo :";
+            }
+           var v00= document.getElementsByClassName('Vietso0');
+          
+           for (var i =0; i< v00.length; i++)
+           {
+               v00[i].innerHTML="Viết số 0";
+           }
+        }
     }
     resetCreate()
     {
@@ -66,6 +88,7 @@ class Scene2 extends Phaser.Scene{
         this.taoborder=[];
         this.taomo=[];
         this.sohop=0;
+        theend=0;
         
     }
     createball(){

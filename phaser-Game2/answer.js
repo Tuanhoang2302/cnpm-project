@@ -1,5 +1,6 @@
 var  hien =0;
 var bor=0;
+var theend=0;
 function myFunction1(id){
     if (document.getElementById('number1').value!="")
     {
@@ -29,9 +30,10 @@ function myFunction1(id){
     {
       
         document.getElementById('tbao').style.display="none";
-         var child = document.getElementById("answer1");
-         child.remove();
-         document.getElementById("ques1").innerHTML="How many apples are in the box: 10";
+        //  var child = document.getElementById("answer1");
+        //  child.remove();
+        //  document.getElementById('ques1').appendChild(document.createTextNode("10"));
+        document.getElementById("answer1").style.border='0px';
          document.getElementById('question2').style.display="flex";
          document.getElementById(id).focus();
     }
@@ -53,9 +55,12 @@ function myFunction1(id){
         {
             numberqu=1;
             document.getElementById('border').style.display="none";
-            var child = document.getElementById("answer2");
-         child.remove();
-         document.getElementById("ques2").innerHTML="Total number of boxes: 1";
+            document.getElementById('number3').style.color="black";
+        //     var child = document.getElementById("answer2");
+        //  child.remove();
+        //  document.getElementById('ques2').appendChild(document.createTextNode("1"));
+         //document.getElementById("ques2").innerHTML="Total number of boxes: 1";
+         document.getElementById("answer2").style.border='0px';
         }
         else {
             numberqu=-2;
@@ -96,9 +101,10 @@ document.getElementById('nu2').value=y;
     }
 if (y==0)
    {
-     var child = document.getElementById("c1");
-     child.remove();
-     document.getElementById('boxtext').innerHTML="box: 10";
+    //  var child = document.getElementById("c1");
+    //  child.remove();
+    //  document.getElementById('boxtext').innerHTML="box: 10";
+    document.getElementById('c1').style.border='0px';
      document.getElementById('q2').style.display="flex";
      document.getElementById('nu3').focus();
       hien =1;
@@ -118,12 +124,15 @@ function myFunction6(){
      if (z==sohop)
      {
          bor=0;
-         var child = document.getElementById("nu3");
-         child.remove();
-         document.getElementById("text2").innerHTML="Total number of boxes: "+sohop;
+        //  var child = document.getElementById("nu3");
+        //  child.remove();
+        //  document.getElementById("text2").innerHTML="Total number of boxes: "+sohop;
+        document.getElementById("nu3").style.border='0px';
          document.getElementById('yeucau').innerHTML="How many apples are there: ";
+        theend=1;
          document.getElementById('c2').style.display="flex";
          document.getElementById('nu4').focus();
+         document.getElementById('nu3').style.color="black";
          
      }
      else {
@@ -163,9 +172,10 @@ function myFunction6(){
         
         document.getElementById('hint').style.display="none";
         document.getElementById('nu5').style.color="black";
-        var child = document.getElementById("c2");
-        child.remove();
-        document.getElementById('yeucau').innerHTML="How many apple are there: "+sohop+'0';
+        // var child = document.getElementById("c2");
+        // child.remove();
+        // document.getElementById('yeucau').innerHTML="How many apple are there: "+sohop+'0';
+        document.getElementById('c2').style.border='0px';
         if (chuyenman==0) chuyenman=1;
         else{
             chuyenman=-1;
@@ -214,6 +224,7 @@ function myFunction10()
          
          document.getElementById('nu10').style.color="black";
          document.getElementById('viet0').style.display="none";
+         document.getElementById('c3').style.border='0px';
          if (chuyenman==0) chuyenman=1;
          else chuyenman=-1;
      }

@@ -44,6 +44,14 @@ class Scene5  extends Phaser.Scene{
         {
             this.resetball();
         }
+        this.Language();
+    }
+    Language(){
+        if(window.location.hash == "#vietnam"){
+        document.getElementById('baitap').innerHTML="Có tất cả bao nhiêu quả táo :";
+        document.getElementsByClassName('texthint')[0].innerHTML="Có bao nhiêu hộp ?";
+        document.getElementsByClassName('V0')[0].innerHTML="Viết số 0";
+            }
     }
     resetCreate()
     {
