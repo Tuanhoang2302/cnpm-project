@@ -10,10 +10,8 @@ export default {
   height: 680,
   backgroundColor: "0xffffff",
    scale: {
-    
-     //autoCenter: Phaser.Scale.CENTER_BOTH,
-     autoCenter: Phaser.Scale.CENTER_HORIZONTALLY,
-     
+
+     //autoCenter: Phaser.Scale.CENTER_HORIZONTALLY,     
    },  
 
   // cái này dùng để enable cái dom trong bootGame

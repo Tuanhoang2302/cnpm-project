@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Phaser 3 React Template</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<style>
+			body {
+				background-color: #e6e6e6;
+			}
+		</style>
+	<link rel="stylesheet" href="index.css">
+	</head>
+	<body background="./bg.png">
+		<div class ="background">
+			<div id= "phaser-example">
+				<a id="returnlink" href="./answer.html">Return</a>
+				<ul class="languages">
+					<li class = "active">language</li>
+					<li class = "non-active"><a id="english" href="#english" onclick="English()" >English</a></li>
+					<li class ="non-active"><a id="vietnamese" href="#vietnam" onclick="Vietnamese()">Vietnamese</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<script>
+			$(function () {
+
+    			$el_languages = $('.languages');
+    			$el_languages.hover(function () {
+        			$el_languages.find('li').show();
+    			}, function () {
+        			$el_languages.find('.non-active').hide();
+    			});
+			});
+		</script>
+		
+	</body>
+</html>
