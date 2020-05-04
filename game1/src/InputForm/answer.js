@@ -11,9 +11,6 @@ function Check_SubAnswer1(question_index, answer_index, desiredResult, sceneName
       }
       document.getElementById(`input${question_index}`).style.color = 'black';
       document.getElementById(`input${(question_index + 1).toString()}`).focus();
-      if (sceneName == 'Scene3') {
-        Scene3_index++;
-      }
     } else {
       document.getElementById(`input${question_index}`).style.color = 'red';
       if (answer_index < 4) {
@@ -41,3 +38,4 @@ function Check_SubAnswer2(question_index, answer_index, desiredResult, sceneName
     }
   }
 }
+
