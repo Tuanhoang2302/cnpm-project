@@ -1,0 +1,326 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for CreateFromTiles.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> CreateFromTiles.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">43.37% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>36/83</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>2/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">43.37% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>36/83</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var TileToWorldX = __webpack_require__(/*! ./TileToWorldX */ "./node_modules/phaser/src/tilemaps/components/TileToWorldX.js");
+var TileToWorldY = __webpack_require__(/*! ./TileToWorldY */ "./node_modules/phaser/src/tilemaps/components/TileToWorldY.js");
+var GetTilesWithin = __webpack_require__(/*! ./GetTilesWithin */ "./node_modules/phaser/src/tilemaps/components/GetTilesWithin.js");
+var ReplaceByIndex = __webpack_require__(/*! ./ReplaceByIndex */ "./node_modules/phaser/src/tilemaps/components/ReplaceByIndex.js");
+&nbsp;
+/**
+ * Creates a Sprite for every object matching the given tile indexes in the layer. You can
+ * optionally specify if each tile will be replaced with a new tile after the Sprite has been
+ * created. This is useful if you want to lay down special tiles in a level that are converted to
+ * Sprites, but want to replace the tile itself with a floor tile or similar once converted.
+ *
+ * @function Phaser.Tilemaps.Components.CreateFromTiles
+ * @private
+ * @since 3.0.0
+ *
+ * @param {(integer|array)} indexes - The tile index, or array of indexes, to create Sprites from.
+ * @param {(integer|array)} replacements - The tile index, or array of indexes, to change a converted tile to. Set to `null` to leave the tiles unchanged. If an array is given, it is assumed to be a one-to-one mapping with the indexes array.
+ * @param {Phaser.Types.GameObjects.Sprite.SpriteConfig} spriteConfig - The config object to pass into the Sprite creator (i.e. scene.make.sprite).
+ * @param {Phaser.Scene} [scene=scene the map is within] - The Scene to create the Sprites within.
+ * @param {Phaser.Cameras.Scene2D.Camera} [camera=main camera] - The Camera to use when determining the world XY
+ * @param {Phaser.Tilemaps.LayerData} layer - The Tilemap Layer to act upon.
+ *
+ * @return {Phaser.GameObjects.Sprite[]} An array of the Sprites that were created.
+ */
+<span class="cstat-no" title="statement not covered" >var CreateFromTiles = function (indexes, replacements, spriteConfig, scene, camera, layer)</span>
+<span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    if (spriteConfig === undefined) { spriteConfig = {}; }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (!Array.isArray(indexes)) { indexes = [ indexes ]; }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var tilemapLayer = layer.tilemapLayer;</span>
+<span class="cstat-no" title="statement not covered" >    if (scene === undefined) { scene = tilemapLayer.scene; }</span>
+<span class="cstat-no" title="statement not covered" >    if (camera === undefined) { camera = scene.cameras.main; }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var tiles = GetTilesWithin(0, 0, layer.width, layer.height, null, layer);</span>
+<span class="cstat-no" title="statement not covered" >    var sprites = [];</span>
+<span class="cstat-no" title="statement not covered" >    var i;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    for (i = 0; i &lt; tiles.length; i++)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        var tile = tiles[i];</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if (indexes.indexOf(tile.index) !== -1)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            spriteConfig.x = TileToWorldX(tile.x, camera, layer);</span>
+<span class="cstat-no" title="statement not covered" >            spriteConfig.y = TileToWorldY(tile.y, camera, layer);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            var sprite = scene.make.sprite(spriteConfig);</span>
+<span class="cstat-no" title="statement not covered" >            sprites.push(sprite);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (typeof replacements === 'number')</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        //  Assume 1 replacement for all types of tile given</span>
+<span class="cstat-no" title="statement not covered" >        for (i = 0; i &lt; indexes.length; i++)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            ReplaceByIndex(indexes[i], replacements, 0, 0, layer.width, layer.height, layer);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    else if (Array.isArray(replacements))</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        //  Assume 1 to 1 mapping with indexes array</span>
+<span class="cstat-no" title="statement not covered" >        for (i = 0; i &lt; indexes.length; i++)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            ReplaceByIndex(indexes[i], replacements[i], 0, 0, layer.width, layer.height, layer);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    return sprites;</span>
+<span class="cstat-no" title="statement not covered" >};</span>
+&nbsp;
+module.exports = CreateFromTiles;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy90aWxlbWFwcy9jb21wb25lbnRzL0NyZWF0ZUZyb21UaWxlcy5qcz9iMTA3Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBLGtCQUFrQjtBQUNsQjs7QUFFQSxtQkFBbUIsbUJBQU8sQ0FBQyxxRkFBZ0I7QUFDM0MsbUJBQW1CLG1CQUFPLENBQUMscUZBQWdCO0FBQzNDLHFCQUFxQixtQkFBTyxDQUFDLHlGQUFrQjtBQUMvQyxxQkFBcUIsbUJBQU8sQ0FBQyx5RkFBa0I7O0FBRS9DO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsV0FBVyxnQkFBZ0I7QUFDM0IsV0FBVyxnQkFBZ0I7QUFDM0IsV0FBVyw2Q0FBNkM7QUFDeEQsV0FBVyxhQUFhO0FBQ3hCLFdBQVcsOEJBQThCO0FBQ3pDLFdBQVcsMEJBQTBCO0FBQ3JDO0FBQ0EsWUFBWSw0QkFBNEI7QUFDeEM7QUFDQTtBQUNBO0FBQ0EscUNBQXFDLG1CQUFtQjs7QUFFeEQsa0NBQWtDLHVCQUF1Qjs7QUFFekQ7QUFDQSw4QkFBOEIsNEJBQTRCO0FBQzFELCtCQUErQiw2QkFBNkI7O0FBRTVEO0FBQ0E7QUFDQTs7QUFFQSxlQUFlLGtCQUFrQjtBQUNqQztBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBLG1CQUFtQixvQkFBb0I7QUFDdkM7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxtQkFBbUIsb0JBQW9CO0FBQ3ZDO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUEiLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy90aWxlbWFwcy9jb21wb25lbnRzL0NyZWF0ZUZyb21UaWxlcy5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxyXG4gKiBAYXV0aG9yICAgICAgIFJpY2hhcmQgRGF2ZXkgPHJpY2hAcGhvdG9uc3Rvcm0uY29tPlxyXG4gKiBAY29weXJpZ2h0ICAgIDIwMTkgUGhvdG9uIFN0b3JtIEx0ZC5cclxuICogQGxpY2Vuc2UgICAgICB7QGxpbmsgaHR0cHM6Ly9vcGVuc291cmNlLm9yZy9saWNlbnNlcy9NSVR8TUlUIExpY2Vuc2V9XHJcbiAqL1xyXG5cclxudmFyIFRpbGVUb1dvcmxkWCA9IHJlcXVpcmUoJy4vVGlsZVRvV29ybGRYJyk7XHJcbnZhciBUaWxlVG9Xb3JsZFkgPSByZXF1aXJlKCcuL1RpbGVUb1dvcmxkWScpO1xyXG52YXIgR2V0VGlsZXNXaXRoaW4gPSByZXF1aXJlKCcuL0dldFRpbGVzV2l0aGluJyk7XHJcbnZhciBSZXBsYWNlQnlJbmRleCA9IHJlcXVpcmUoJy4vUmVwbGFjZUJ5SW5kZXgnKTtcclxuXHJcbi8qKlxyXG4gKiBDcmVhdGVzIGEgU3ByaXRlIGZvciBldmVyeSBvYmplY3QgbWF0Y2hpbmcgdGhlIGdpdmVuIHRpbGUgaW5kZXhlcyBpbiB0aGUgbGF5ZXIuIFlvdSBjYW5cclxuICogb3B0aW9uYWxseSBzcGVjaWZ5IGlmIGVhY2ggdGlsZSB3aWxsIGJlIHJlcGxhY2VkIHdpdGggYSBuZXcgdGlsZSBhZnRlciB0aGUgU3ByaXRlIGhhcyBiZWVuXHJcbiAqIGNyZWF0ZWQuIFRoaXMgaXMgdXNlZnVsIGlmIHlvdSB3YW50IHRvIGxheSBkb3duIHNwZWNpYWwgdGlsZXMgaW4gYSBsZXZlbCB0aGF0IGFyZSBjb252ZXJ0ZWQgdG9cclxuICogU3ByaXRlcywgYnV0IHdhbnQgdG8gcmVwbGFjZSB0aGUgdGlsZSBpdHNlbGYgd2l0aCBhIGZsb29yIHRpbGUgb3Igc2ltaWxhciBvbmNlIGNvbnZlcnRlZC5cclxuICpcclxuICogQGZ1bmN0aW9uIFBoYXNlci5UaWxlbWFwcy5Db21wb25lbnRzLkNyZWF0ZUZyb21UaWxlc1xyXG4gKiBAcHJpdmF0ZVxyXG4gKiBAc2luY2UgMy4wLjBcclxuICpcclxuICogQHBhcmFtIHsoaW50ZWdlcnxhcnJheSl9IGluZGV4ZXMgLSBUaGUgdGlsZSBpbmRleCwgb3IgYXJyYXkgb2YgaW5kZXhlcywgdG8gY3JlYXRlIFNwcml0ZXMgZnJvbS5cclxuICogQHBhcmFtIHsoaW50ZWdlcnxhcnJheSl9IHJlcGxhY2VtZW50cyAtIFRoZSB0aWxlIGluZGV4LCBvciBhcnJheSBvZiBpbmRleGVzLCB0byBjaGFuZ2UgYSBjb252ZXJ0ZWQgdGlsZSB0by4gU2V0IHRvIGBudWxsYCB0byBsZWF2ZSB0aGUgdGlsZXMgdW5jaGFuZ2VkLiBJZiBhbiBhcnJheSBpcyBnaXZlbiwgaXQgaXMgYXNzdW1lZCB0byBiZSBhIG9uZS10by1vbmUgbWFwcGluZyB3aXRoIHRoZSBpbmRleGVzIGFycmF5LlxyXG4gKiBAcGFyYW0ge1BoYXNlci5UeXBlcy5HYW1lT2JqZWN0cy5TcHJpdGUuU3ByaXRlQ29uZmlnfSBzcHJpdGVDb25maWcgLSBUaGUgY29uZmlnIG9iamVjdCB0byBwYXNzIGludG8gdGhlIFNwcml0ZSBjcmVhdG9yIChpLmUuIHNjZW5lLm1ha2Uuc3ByaXRlKS5cclxuICogQHBhcmFtIHtQaGFzZXIuU2NlbmV9IFtzY2VuZT1zY2VuZSB0aGUgbWFwIGlzIHdpdGhpbl0gLSBUaGUgU2NlbmUgdG8gY3JlYXRlIHRoZSBTcHJpdGVzIHdpdGhpbi5cclxuICogQHBhcmFtIHtQaGFzZXIuQ2FtZXJhcy5TY2VuZTJELkNhbWVyYX0gW2NhbWVyYT1tYWluIGNhbWVyYV0gLSBUaGUgQ2FtZXJhIHRvIHVzZSB3aGVuIGRldGVybWluaW5nIHRoZSB3b3JsZCBYWVxyXG4gKiBAcGFyYW0ge1BoYXNlci5UaWxlbWFwcy5MYXllckRhdGF9IGxheWVyIC0gVGhlIFRpbGVtYXAgTGF5ZXIgdG8gYWN0IHVwb24uXHJcbiAqXHJcbiAqIEByZXR1cm4ge1BoYXNlci5HYW1lT2JqZWN0cy5TcHJpdGVbXX0gQW4gYXJyYXkgb2YgdGhlIFNwcml0ZXMgdGhhdCB3ZXJlIGNyZWF0ZWQuXHJcbiAqL1xyXG52YXIgQ3JlYXRlRnJvbVRpbGVzID0gZnVuY3Rpb24gKGluZGV4ZXMsIHJlcGxhY2VtZW50cywgc3ByaXRlQ29uZmlnLCBzY2VuZSwgY2FtZXJhLCBsYXllcilcclxue1xyXG4gICAgaWYgKHNwcml0ZUNvbmZpZyA9PT0gdW5kZWZpbmVkKSB7IHNwcml0ZUNvbmZpZyA9IHt9OyB9XHJcblxyXG4gICAgaWYgKCFBcnJheS5pc0FycmF5KGluZGV4ZXMpKSB7IGluZGV4ZXMgPSBbIGluZGV4ZXMgXTsgfVxyXG5cclxuICAgIHZhciB0aWxlbWFwTGF5ZXIgPSBsYXllci50aWxlbWFwTGF5ZXI7XHJcbiAgICBpZiAoc2NlbmUgPT09IHVuZGVmaW5lZCkgeyBzY2VuZSA9IHRpbGVtYXBMYXllci5zY2VuZTsgfVxyXG4gICAgaWYgKGNhbWVyYSA9PT0gdW5kZWZpbmVkKSB7IGNhbWVyYSA9IHNjZW5lLmNhbWVyYXMubWFpbjsgfVxyXG5cclxuICAgIHZhciB0aWxlcyA9IEdldFRpbGVzV2l0aGluKDAsIDAsIGxheWVyLndpZHRoLCBsYXllci5oZWlnaHQsIG51bGwsIGxheWVyKTtcclxuICAgIHZhciBzcHJpdGVzID0gW107XHJcbiAgICB2YXIgaTtcclxuXHJcbiAgICBmb3IgKGkgPSAwOyBpIDwgdGlsZXMubGVuZ3RoOyBpKyspXHJcbiAgICB7XHJcbiAgICAgICAgdmFyIHRpbGUgPSB0aWxlc1tpXTtcclxuXHJcbiAgICAgICAgaWYgKGluZGV4ZXMuaW5kZXhPZih0aWxlLmluZGV4KSAhPT0gLTEpXHJcbiAgICAgICAge1xyXG4gICAgICAgICAgICBzcHJpdGVDb25maWcueCA9IFRpbGVUb1dvcmxkWCh0aWxlLngsIGNhbWVyYSwgbGF5ZXIpO1xyXG4gICAgICAgICAgICBzcHJpdGVDb25maWcueSA9IFRpbGVUb1dvcmxkWSh0aWxlLnksIGNhbWVyYSwgbGF5ZXIpO1xyXG5cclxuICAgICAgICAgICAgdmFyIHNwcml0ZSA9IHNjZW5lLm1ha2Uuc3ByaXRlKHNwcml0ZUNvbmZpZyk7XHJcbiAgICAgICAgICAgIHNwcml0ZXMucHVzaChzcHJpdGUpO1xyXG4gICAgICAgIH1cclxuICAgIH1cclxuXHJcbiAgICBpZiAodHlwZW9mIHJlcGxhY2VtZW50cyA9PT0gJ251bWJlcicpXHJcbiAgICB7XHJcbiAgICAgICAgLy8gIEFzc3VtZSAxIHJlcGxhY2VtZW50IGZvciBhbGwgdHlwZXMgb2YgdGlsZSBnaXZlblxyXG4gICAgICAgIGZvciAoaSA9IDA7IGkgPCBpbmRleGVzLmxlbmd0aDsgaSsrKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgUmVwbGFjZUJ5SW5kZXgoaW5kZXhlc1tpXSwgcmVwbGFjZW1lbnRzLCAwLCAwLCBsYXllci53aWR0aCwgbGF5ZXIuaGVpZ2h0LCBsYXllcik7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG4gICAgZWxzZSBpZiAoQXJyYXkuaXNBcnJheShyZXBsYWNlbWVudHMpKVxyXG4gICAge1xyXG4gICAgICAgIC8vICBBc3N1bWUgMSB0byAxIG1hcHBpbmcgd2l0aCBpbmRleGVzIGFycmF5XHJcbiAgICAgICAgZm9yIChpID0gMDsgaSA8IGluZGV4ZXMubGVuZ3RoOyBpKyspXHJcbiAgICAgICAge1xyXG4gICAgICAgICAgICBSZXBsYWNlQnlJbmRleChpbmRleGVzW2ldLCByZXBsYWNlbWVudHNbaV0sIDAsIDAsIGxheWVyLndpZHRoLCBsYXllci5oZWlnaHQsIGxheWVyKTtcclxuICAgICAgICB9XHJcbiAgICB9XHJcblxyXG4gICAgcmV0dXJuIHNwcml0ZXM7XHJcbn07XHJcblxyXG5tb2R1bGUuZXhwb3J0cyA9IENyZWF0ZUZyb21UaWxlcztcclxuIl0sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/tilemaps/components/CreateFromTiles.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

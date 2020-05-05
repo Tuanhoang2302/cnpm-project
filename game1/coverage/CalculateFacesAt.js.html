@@ -1,0 +1,299 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for CalculateFacesAt.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> CalculateFacesAt.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">36.49% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>27/74</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>2/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">36.49% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>27/74</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var GetTileAt = __webpack_require__(/*! ./GetTileAt */ "./node_modules/phaser/src/tilemaps/components/GetTileAt.js");
+&nbsp;
+/**
+ * Calculates interesting faces at the given tile coordinates of the specified layer. Interesting
+ * faces are used internally for optimizing collisions against tiles. This method is mostly used
+ * internally to optimize recalculating faces when only one tile has been changed.
+ *
+ * @function Phaser.Tilemaps.Components.CalculateFacesAt
+ * @private
+ * @since 3.0.0
+ * 
+ * @param {integer} tileX - The x coordinate.
+ * @param {integer} tileY - The y coordinate.
+ * @param {Phaser.Tilemaps.LayerData} layer - The Tilemap Layer to act upon.
+ */
+<span class="cstat-no" title="statement not covered" >var CalculateFacesAt = function (tileX, tileY, layer)</span>
+<span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    var tile = GetTileAt(tileX, tileY, true, layer);</span>
+<span class="cstat-no" title="statement not covered" >    var above = GetTileAt(tileX, tileY - 1, true, layer);</span>
+<span class="cstat-no" title="statement not covered" >    var below = GetTileAt(tileX, tileY + 1, true, layer);</span>
+<span class="cstat-no" title="statement not covered" >    var left = GetTileAt(tileX - 1, tileY, true, layer);</span>
+<span class="cstat-no" title="statement not covered" >    var right = GetTileAt(tileX + 1, tileY, true, layer);</span>
+<span class="cstat-no" title="statement not covered" >    var tileCollides = tile &amp;&amp; tile.collides;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    // Assume the changed tile has all interesting edges</span>
+<span class="cstat-no" title="statement not covered" >    if (tileCollides)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        tile.faceTop = true;</span>
+<span class="cstat-no" title="statement not covered" >        tile.faceBottom = true;</span>
+<span class="cstat-no" title="statement not covered" >        tile.faceLeft = true;</span>
+<span class="cstat-no" title="statement not covered" >        tile.faceRight = true;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    // Reset edges that are shared between tile and its neighbors</span>
+<span class="cstat-no" title="statement not covered" >    if (above &amp;&amp; above.collides)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        if (tileCollides) { tile.faceTop = false; }</span>
+<span class="cstat-no" title="statement not covered" >        above.faceBottom = !tileCollides;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (below &amp;&amp; below.collides)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        if (tileCollides) { tile.faceBottom = false; }</span>
+<span class="cstat-no" title="statement not covered" >        below.faceTop = !tileCollides;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (left &amp;&amp; left.collides)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        if (tileCollides) { tile.faceLeft = false; }</span>
+<span class="cstat-no" title="statement not covered" >        left.faceRight = !tileCollides;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (right &amp;&amp; right.collides)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        if (tileCollides) { tile.faceRight = false; }</span>
+<span class="cstat-no" title="statement not covered" >        right.faceLeft = !tileCollides;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (tile &amp;&amp; !tile.collides) { tile.resetFaces(); }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    return tile;</span>
+<span class="cstat-no" title="statement not covered" >};</span>
+&nbsp;
+module.exports = CalculateFacesAt;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy90aWxlbWFwcy9jb21wb25lbnRzL0NhbGN1bGF0ZUZhY2VzQXQuanM/MjUxZiJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQSxrQkFBa0I7QUFDbEI7O0FBRUEsZ0JBQWdCLG1CQUFPLENBQUMsK0VBQWE7O0FBRXJDO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFdBQVcsUUFBUTtBQUNuQixXQUFXLFFBQVE7QUFDbkIsV0FBVywwQkFBMEI7QUFDckM7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0EsMkJBQTJCLHNCQUFzQjtBQUNqRDtBQUNBOztBQUVBO0FBQ0E7QUFDQSwyQkFBMkIseUJBQXlCO0FBQ3BEO0FBQ0E7O0FBRUE7QUFDQTtBQUNBLDJCQUEyQix1QkFBdUI7QUFDbEQ7QUFDQTs7QUFFQTtBQUNBO0FBQ0EsMkJBQTJCLHdCQUF3QjtBQUNuRDtBQUNBOztBQUVBLGlDQUFpQyxtQkFBbUI7O0FBRXBEO0FBQ0E7O0FBRUEiLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy90aWxlbWFwcy9jb21wb25lbnRzL0NhbGN1bGF0ZUZhY2VzQXQuanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcclxuICogQGF1dGhvciAgICAgICBSaWNoYXJkIERhdmV5IDxyaWNoQHBob3RvbnN0b3JtLmNvbT5cclxuICogQGNvcHlyaWdodCAgICAyMDE5IFBob3RvbiBTdG9ybSBMdGQuXHJcbiAqIEBsaWNlbnNlICAgICAge0BsaW5rIGh0dHBzOi8vb3BlbnNvdXJjZS5vcmcvbGljZW5zZXMvTUlUfE1JVCBMaWNlbnNlfVxyXG4gKi9cclxuXHJcbnZhciBHZXRUaWxlQXQgPSByZXF1aXJlKCcuL0dldFRpbGVBdCcpO1xyXG5cclxuLyoqXHJcbiAqIENhbGN1bGF0ZXMgaW50ZXJlc3RpbmcgZmFjZXMgYXQgdGhlIGdpdmVuIHRpbGUgY29vcmRpbmF0ZXMgb2YgdGhlIHNwZWNpZmllZCBsYXllci4gSW50ZXJlc3RpbmdcclxuICogZmFjZXMgYXJlIHVzZWQgaW50ZXJuYWxseSBmb3Igb3B0aW1pemluZyBjb2xsaXNpb25zIGFnYWluc3QgdGlsZXMuIFRoaXMgbWV0aG9kIGlzIG1vc3RseSB1c2VkXHJcbiAqIGludGVybmFsbHkgdG8gb3B0aW1pemUgcmVjYWxjdWxhdGluZyBmYWNlcyB3aGVuIG9ubHkgb25lIHRpbGUgaGFzIGJlZW4gY2hhbmdlZC5cclxuICpcclxuICogQGZ1bmN0aW9uIFBoYXNlci5UaWxlbWFwcy5Db21wb25lbnRzLkNhbGN1bGF0ZUZhY2VzQXRcclxuICogQHByaXZhdGVcclxuICogQHNpbmNlIDMuMC4wXHJcbiAqIFxyXG4gKiBAcGFyYW0ge2ludGVnZXJ9IHRpbGVYIC0gVGhlIHggY29vcmRpbmF0ZS5cclxuICogQHBhcmFtIHtpbnRlZ2VyfSB0aWxlWSAtIFRoZSB5IGNvb3JkaW5hdGUuXHJcbiAqIEBwYXJhbSB7UGhhc2VyLlRpbGVtYXBzLkxheWVyRGF0YX0gbGF5ZXIgLSBUaGUgVGlsZW1hcCBMYXllciB0byBhY3QgdXBvbi5cclxuICovXHJcbnZhciBDYWxjdWxhdGVGYWNlc0F0ID0gZnVuY3Rpb24gKHRpbGVYLCB0aWxlWSwgbGF5ZXIpXHJcbntcclxuICAgIHZhciB0aWxlID0gR2V0VGlsZUF0KHRpbGVYLCB0aWxlWSwgdHJ1ZSwgbGF5ZXIpO1xyXG4gICAgdmFyIGFib3ZlID0gR2V0VGlsZUF0KHRpbGVYLCB0aWxlWSAtIDEsIHRydWUsIGxheWVyKTtcclxuICAgIHZhciBiZWxvdyA9IEdldFRpbGVBdCh0aWxlWCwgdGlsZVkgKyAxLCB0cnVlLCBsYXllcik7XHJcbiAgICB2YXIgbGVmdCA9IEdldFRpbGVBdCh0aWxlWCAtIDEsIHRpbGVZLCB0cnVlLCBsYXllcik7XHJcbiAgICB2YXIgcmlnaHQgPSBHZXRUaWxlQXQodGlsZVggKyAxLCB0aWxlWSwgdHJ1ZSwgbGF5ZXIpO1xyXG4gICAgdmFyIHRpbGVDb2xsaWRlcyA9IHRpbGUgJiYgdGlsZS5jb2xsaWRlcztcclxuXHJcbiAgICAvLyBBc3N1bWUgdGhlIGNoYW5nZWQgdGlsZSBoYXMgYWxsIGludGVyZXN0aW5nIGVkZ2VzXHJcbiAgICBpZiAodGlsZUNvbGxpZGVzKVxyXG4gICAge1xyXG4gICAgICAgIHRpbGUuZmFjZVRvcCA9IHRydWU7XHJcbiAgICAgICAgdGlsZS5mYWNlQm90dG9tID0gdHJ1ZTtcclxuICAgICAgICB0aWxlLmZhY2VMZWZ0ID0gdHJ1ZTtcclxuICAgICAgICB0aWxlLmZhY2VSaWdodCA9IHRydWU7XHJcbiAgICB9XHJcblxyXG4gICAgLy8gUmVzZXQgZWRnZXMgdGhhdCBhcmUgc2hhcmVkIGJldHdlZW4gdGlsZSBhbmQgaXRzIG5laWdoYm9yc1xyXG4gICAgaWYgKGFib3ZlICYmIGFib3ZlLmNvbGxpZGVzKVxyXG4gICAge1xyXG4gICAgICAgIGlmICh0aWxlQ29sbGlkZXMpIHsgdGlsZS5mYWNlVG9wID0gZmFsc2U7IH1cclxuICAgICAgICBhYm92ZS5mYWNlQm90dG9tID0gIXRpbGVDb2xsaWRlcztcclxuICAgIH1cclxuXHJcbiAgICBpZiAoYmVsb3cgJiYgYmVsb3cuY29sbGlkZXMpXHJcbiAgICB7XHJcbiAgICAgICAgaWYgKHRpbGVDb2xsaWRlcykgeyB0aWxlLmZhY2VCb3R0b20gPSBmYWxzZTsgfVxyXG4gICAgICAgIGJlbG93LmZhY2VUb3AgPSAhdGlsZUNvbGxpZGVzO1xyXG4gICAgfVxyXG5cclxuICAgIGlmIChsZWZ0ICYmIGxlZnQuY29sbGlkZXMpXHJcbiAgICB7XHJcbiAgICAgICAgaWYgKHRpbGVDb2xsaWRlcykgeyB0aWxlLmZhY2VMZWZ0ID0gZmFsc2U7IH1cclxuICAgICAgICBsZWZ0LmZhY2VSaWdodCA9ICF0aWxlQ29sbGlkZXM7XHJcbiAgICB9XHJcblxyXG4gICAgaWYgKHJpZ2h0ICYmIHJpZ2h0LmNvbGxpZGVzKVxyXG4gICAge1xyXG4gICAgICAgIGlmICh0aWxlQ29sbGlkZXMpIHsgdGlsZS5mYWNlUmlnaHQgPSBmYWxzZTsgfVxyXG4gICAgICAgIHJpZ2h0LmZhY2VMZWZ0ID0gIXRpbGVDb2xsaWRlcztcclxuICAgIH1cclxuXHJcbiAgICBpZiAodGlsZSAmJiAhdGlsZS5jb2xsaWRlcykgeyB0aWxlLnJlc2V0RmFjZXMoKTsgfVxyXG5cclxuICAgIHJldHVybiB0aWxlO1xyXG59O1xyXG5cclxubW9kdWxlLmV4cG9ydHMgPSBDYWxjdWxhdGVGYWNlc0F0O1xyXG4iXSwic291cmNlUm9vdCI6IiJ9
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/tilemaps/components/CalculateFacesAt.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

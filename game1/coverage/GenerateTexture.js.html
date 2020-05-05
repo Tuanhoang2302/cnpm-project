@@ -1,0 +1,353 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for GenerateTexture.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> GenerateTexture.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">28.26% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>26/92</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>2/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">28.26% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>26/92</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var Arne16 = __webpack_require__(/*! ./palettes/Arne16 */ "./node_modules/phaser/src/create/palettes/Arne16.js");
+var CanvasPool = __webpack_require__(/*! ../display/canvas/CanvasPool */ "./node_modules/phaser/src/display/canvas/CanvasPool.js");
+var GetValue = __webpack_require__(/*! ../utils/object/GetValue */ "./node_modules/phaser/src/utils/object/GetValue.js");
+&nbsp;
+/**
+ * [description]
+ *
+ * @function Phaser.Create.GenerateTexture
+ * @since 3.0.0
+ *
+ * @param {Phaser.Types.Create.GenerateTextureConfig} config - [description]
+ *
+ * @return {HTMLCanvasElement} [description]
+ */
+<span class="cstat-no" title="statement not covered" >var GenerateTexture = function (config)</span>
+<span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    var data = GetValue(config, 'data', []);</span>
+<span class="cstat-no" title="statement not covered" >    var canvas = GetValue(config, 'canvas', null);</span>
+<span class="cstat-no" title="statement not covered" >    var palette = GetValue(config, 'palette', Arne16);</span>
+<span class="cstat-no" title="statement not covered" >    var pixelWidth = GetValue(config, 'pixelWidth', 1);</span>
+<span class="cstat-no" title="statement not covered" >    var pixelHeight = GetValue(config, 'pixelHeight', pixelWidth);</span>
+<span class="cstat-no" title="statement not covered" >    var resizeCanvas = GetValue(config, 'resizeCanvas', true);</span>
+<span class="cstat-no" title="statement not covered" >    var clearCanvas = GetValue(config, 'clearCanvas', true);</span>
+<span class="cstat-no" title="statement not covered" >    var preRender = GetValue(config, 'preRender', null);</span>
+<span class="cstat-no" title="statement not covered" >    var postRender = GetValue(config, 'postRender', null);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var width = Math.floor(Math.abs(data[0].length * pixelWidth));</span>
+<span class="cstat-no" title="statement not covered" >    var height = Math.floor(Math.abs(data.length * pixelHeight));</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (!canvas)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        canvas = CanvasPool.create2D(this, width, height);</span>
+<span class="cstat-no" title="statement not covered" >        resizeCanvas = false;</span>
+<span class="cstat-no" title="statement not covered" >        clearCanvas = false;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (resizeCanvas)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        canvas.width = width;</span>
+<span class="cstat-no" title="statement not covered" >        canvas.height = height;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var ctx = canvas.getContext('2d');</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (clearCanvas)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        ctx.clearRect(0, 0, width, height);</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    //  preRender Callback?</span>
+<span class="cstat-no" title="statement not covered" >    if (preRender)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        preRender(canvas, ctx);</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    //  Draw it</span>
+<span class="cstat-no" title="statement not covered" >    for (var y = 0; y &lt; data.length; y++)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        var row = data[y];</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        for (var x = 0; x &lt; row.length; x++)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            var d = row[x];</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            if (d !== '.' &amp;&amp; d !== ' ')</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >                ctx.fillStyle = palette[d];</span>
+<span class="cstat-no" title="statement not covered" >                ctx.fillRect(x * pixelWidth, y * pixelHeight, pixelWidth, pixelHeight);</span>
+<span class="cstat-no" title="statement not covered" >            }</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    //  postRender Callback?</span>
+<span class="cstat-no" title="statement not covered" >    if (postRender)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        postRender(canvas, ctx);</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    return canvas;</span>
+<span class="cstat-no" title="statement not covered" >};</span>
+&nbsp;
+module.exports = GenerateTexture;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9jcmVhdGUvR2VuZXJhdGVUZXh0dXJlLmpzPzNkNDAiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCOztBQUVBLGFBQWEsbUJBQU8sQ0FBQyw4RUFBbUI7QUFDeEMsaUJBQWlCLG1CQUFPLENBQUMsNEZBQThCO0FBQ3ZELGVBQWUsbUJBQU8sQ0FBQyxvRkFBMEI7O0FBRWpEO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFdBQVcsMENBQTBDO0FBQ3JEO0FBQ0EsWUFBWSxrQkFBa0I7QUFDOUI7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBLG1CQUFtQixpQkFBaUI7QUFDcEM7QUFDQTs7QUFFQSx1QkFBdUIsZ0JBQWdCO0FBQ3ZDO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBOztBQUVBIiwiZmlsZSI6Ii4vbm9kZV9tb2R1bGVzL3BoYXNlci9zcmMvY3JlYXRlL0dlbmVyYXRlVGV4dHVyZS5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxyXG4gKiBAYXV0aG9yICAgICAgIFJpY2hhcmQgRGF2ZXkgPHJpY2hAcGhvdG9uc3Rvcm0uY29tPlxyXG4gKiBAY29weXJpZ2h0ICAgIDIwMTkgUGhvdG9uIFN0b3JtIEx0ZC5cclxuICogQGxpY2Vuc2UgICAgICB7QGxpbmsgaHR0cHM6Ly9vcGVuc291cmNlLm9yZy9saWNlbnNlcy9NSVR8TUlUIExpY2Vuc2V9XHJcbiAqL1xyXG5cclxudmFyIEFybmUxNiA9IHJlcXVpcmUoJy4vcGFsZXR0ZXMvQXJuZTE2Jyk7XHJcbnZhciBDYW52YXNQb29sID0gcmVxdWlyZSgnLi4vZGlzcGxheS9jYW52YXMvQ2FudmFzUG9vbCcpO1xyXG52YXIgR2V0VmFsdWUgPSByZXF1aXJlKCcuLi91dGlscy9vYmplY3QvR2V0VmFsdWUnKTtcclxuXHJcbi8qKlxyXG4gKiBbZGVzY3JpcHRpb25dXHJcbiAqXHJcbiAqIEBmdW5jdGlvbiBQaGFzZXIuQ3JlYXRlLkdlbmVyYXRlVGV4dHVyZVxyXG4gKiBAc2luY2UgMy4wLjBcclxuICpcclxuICogQHBhcmFtIHtQaGFzZXIuVHlwZXMuQ3JlYXRlLkdlbmVyYXRlVGV4dHVyZUNvbmZpZ30gY29uZmlnIC0gW2Rlc2NyaXB0aW9uXVxyXG4gKlxyXG4gKiBAcmV0dXJuIHtIVE1MQ2FudmFzRWxlbWVudH0gW2Rlc2NyaXB0aW9uXVxyXG4gKi9cclxudmFyIEdlbmVyYXRlVGV4dHVyZSA9IGZ1bmN0aW9uIChjb25maWcpXHJcbntcclxuICAgIHZhciBkYXRhID0gR2V0VmFsdWUoY29uZmlnLCAnZGF0YScsIFtdKTtcclxuICAgIHZhciBjYW52YXMgPSBHZXRWYWx1ZShjb25maWcsICdjYW52YXMnLCBudWxsKTtcclxuICAgIHZhciBwYWxldHRlID0gR2V0VmFsdWUoY29uZmlnLCAncGFsZXR0ZScsIEFybmUxNik7XHJcbiAgICB2YXIgcGl4ZWxXaWR0aCA9IEdldFZhbHVlKGNvbmZpZywgJ3BpeGVsV2lkdGgnLCAxKTtcclxuICAgIHZhciBwaXhlbEhlaWdodCA9IEdldFZhbHVlKGNvbmZpZywgJ3BpeGVsSGVpZ2h0JywgcGl4ZWxXaWR0aCk7XHJcbiAgICB2YXIgcmVzaXplQ2FudmFzID0gR2V0VmFsdWUoY29uZmlnLCAncmVzaXplQ2FudmFzJywgdHJ1ZSk7XHJcbiAgICB2YXIgY2xlYXJDYW52YXMgPSBHZXRWYWx1ZShjb25maWcsICdjbGVhckNhbnZhcycsIHRydWUpO1xyXG4gICAgdmFyIHByZVJlbmRlciA9IEdldFZhbHVlKGNvbmZpZywgJ3ByZVJlbmRlcicsIG51bGwpO1xyXG4gICAgdmFyIHBvc3RSZW5kZXIgPSBHZXRWYWx1ZShjb25maWcsICdwb3N0UmVuZGVyJywgbnVsbCk7XHJcblxyXG4gICAgdmFyIHdpZHRoID0gTWF0aC5mbG9vcihNYXRoLmFicyhkYXRhWzBdLmxlbmd0aCAqIHBpeGVsV2lkdGgpKTtcclxuICAgIHZhciBoZWlnaHQgPSBNYXRoLmZsb29yKE1hdGguYWJzKGRhdGEubGVuZ3RoICogcGl4ZWxIZWlnaHQpKTtcclxuXHJcbiAgICBpZiAoIWNhbnZhcylcclxuICAgIHtcclxuICAgICAgICBjYW52YXMgPSBDYW52YXNQb29sLmNyZWF0ZTJEKHRoaXMsIHdpZHRoLCBoZWlnaHQpO1xyXG4gICAgICAgIHJlc2l6ZUNhbnZhcyA9IGZhbHNlO1xyXG4gICAgICAgIGNsZWFyQ2FudmFzID0gZmFsc2U7XHJcbiAgICB9XHJcblxyXG4gICAgaWYgKHJlc2l6ZUNhbnZhcylcclxuICAgIHtcclxuICAgICAgICBjYW52YXMud2lkdGggPSB3aWR0aDtcclxuICAgICAgICBjYW52YXMuaGVpZ2h0ID0gaGVpZ2h0O1xyXG4gICAgfVxyXG5cclxuICAgIHZhciBjdHggPSBjYW52YXMuZ2V0Q29udGV4dCgnMmQnKTtcclxuXHJcbiAgICBpZiAoY2xlYXJDYW52YXMpXHJcbiAgICB7XHJcbiAgICAgICAgY3R4LmNsZWFyUmVjdCgwLCAwLCB3aWR0aCwgaGVpZ2h0KTtcclxuICAgIH1cclxuXHJcbiAgICAvLyAgcHJlUmVuZGVyIENhbGxiYWNrP1xyXG4gICAgaWYgKHByZVJlbmRlcilcclxuICAgIHtcclxuICAgICAgICBwcmVSZW5kZXIoY2FudmFzLCBjdHgpO1xyXG4gICAgfVxyXG5cclxuICAgIC8vICBEcmF3IGl0XHJcbiAgICBmb3IgKHZhciB5ID0gMDsgeSA8IGRhdGEubGVuZ3RoOyB5KyspXHJcbiAgICB7XHJcbiAgICAgICAgdmFyIHJvdyA9IGRhdGFbeV07XHJcblxyXG4gICAgICAgIGZvciAodmFyIHggPSAwOyB4IDwgcm93Lmxlbmd0aDsgeCsrKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgdmFyIGQgPSByb3dbeF07XHJcblxyXG4gICAgICAgICAgICBpZiAoZCAhPT0gJy4nICYmIGQgIT09ICcgJylcclxuICAgICAgICAgICAge1xyXG4gICAgICAgICAgICAgICAgY3R4LmZpbGxTdHlsZSA9IHBhbGV0dGVbZF07XHJcbiAgICAgICAgICAgICAgICBjdHguZmlsbFJlY3QoeCAqIHBpeGVsV2lkdGgsIHkgKiBwaXhlbEhlaWdodCwgcGl4ZWxXaWR0aCwgcGl4ZWxIZWlnaHQpO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgIC8vICBwb3N0UmVuZGVyIENhbGxiYWNrP1xyXG4gICAgaWYgKHBvc3RSZW5kZXIpXHJcbiAgICB7XHJcbiAgICAgICAgcG9zdFJlbmRlcihjYW52YXMsIGN0eCk7XHJcbiAgICB9XHJcblxyXG4gICAgcmV0dXJuIGNhbnZhcztcclxufTtcclxuXHJcbm1vZHVsZS5leHBvcnRzID0gR2VuZXJhdGVUZXh0dXJlO1xyXG4iXSwic291cmNlUm9vdCI6IiJ9
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/create/GenerateTexture.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

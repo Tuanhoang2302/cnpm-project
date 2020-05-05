@@ -1,0 +1,593 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for AnimationFrame.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> AnimationFrame.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">31.98% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>55/172</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>4/4</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">31.98% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>55/172</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var Class = __webpack_require__(/*! ../utils/Class */ "./node_modules/phaser/src/utils/Class.js");
+&nbsp;
+/**
+ * @classdesc
+ * A single frame in an Animation sequence.
+ *
+ * An AnimationFrame consists of a reference to the Texture it uses for rendering, references to other
+ * frames in the animation, and index data. It also has the ability to modify the animation timing.
+ *
+ * AnimationFrames are generated automatically by the Animation class.
+ *
+ * @class AnimationFrame
+ * @memberof Phaser.Animations
+ * @constructor
+ * @since 3.0.0
+ *
+ * @param {string} textureKey - The key of the Texture this AnimationFrame uses.
+ * @param {(string|integer)} textureFrame - The key of the Frame within the Texture that this AnimationFrame uses.
+ * @param {integer} index - The index of this AnimationFrame within the Animation sequence.
+ * @param {Phaser.Textures.Frame} frame - A reference to the Texture Frame this AnimationFrame uses for rendering.
+ */
+var AnimationFrame = new Class({
+&nbsp;
+    initialize:
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    function AnimationFrame (textureKey, textureFrame, index, frame)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * The key of the Texture this AnimationFrame uses.</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Animations.AnimationFrame#textureKey</span>
+<span class="cstat-no" title="statement not covered" >         * @type {string}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.textureKey = textureKey;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * The key of the Frame within the Texture that this AnimationFrame uses.</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Animations.AnimationFrame#textureFrame</span>
+<span class="cstat-no" title="statement not covered" >         * @type {(string|integer)}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.textureFrame = textureFrame;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * The index of this AnimationFrame within the Animation sequence.</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Animations.AnimationFrame#index</span>
+<span class="cstat-no" title="statement not covered" >         * @type {integer}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.index = index;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * A reference to the Texture Frame this AnimationFrame uses for rendering.</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Animations.AnimationFrame#frame</span>
+<span class="cstat-no" title="statement not covered" >         * @type {Phaser.Textures.Frame}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.frame = frame;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * Is this the first frame in an animation sequence?</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Animations.AnimationFrame#isFirst</span>
+<span class="cstat-no" title="statement not covered" >         * @type {boolean}</span>
+<span class="cstat-no" title="statement not covered" >         * @default false</span>
+<span class="cstat-no" title="statement not covered" >         * @readonly</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.isFirst = false;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * Is this the last frame in an animation sequence?</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Animations.AnimationFrame#isLast</span>
+<span class="cstat-no" title="statement not covered" >         * @type {boolean}</span>
+<span class="cstat-no" title="statement not covered" >         * @default false</span>
+<span class="cstat-no" title="statement not covered" >         * @readonly</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.isLast = false;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * A reference to the AnimationFrame that comes before this one in the animation, if any.</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Animations.AnimationFrame#prevFrame</span>
+<span class="cstat-no" title="statement not covered" >         * @type {?Phaser.Animations.AnimationFrame}</span>
+<span class="cstat-no" title="statement not covered" >         * @default null</span>
+<span class="cstat-no" title="statement not covered" >         * @readonly</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.prevFrame = null;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * A reference to the AnimationFrame that comes after this one in the animation, if any.</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Animations.AnimationFrame#nextFrame</span>
+<span class="cstat-no" title="statement not covered" >         * @type {?Phaser.Animations.AnimationFrame}</span>
+<span class="cstat-no" title="statement not covered" >         * @default null</span>
+<span class="cstat-no" title="statement not covered" >         * @readonly</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.nextFrame = null;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * Additional time (in ms) that this frame should appear for during playback.</span>
+<span class="cstat-no" title="statement not covered" >         * The value is added onto the msPerFrame set by the animation.</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Animations.AnimationFrame#duration</span>
+<span class="cstat-no" title="statement not covered" >         * @type {number}</span>
+<span class="cstat-no" title="statement not covered" >         * @default 0</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.duration = 0;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * What % through the animation does this frame come?</span>
+<span class="cstat-no" title="statement not covered" >         * This value is generated when the animation is created and cached here.</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Animations.AnimationFrame#progress</span>
+<span class="cstat-no" title="statement not covered" >         * @type {number}</span>
+<span class="cstat-no" title="statement not covered" >         * @default 0</span>
+<span class="cstat-no" title="statement not covered" >         * @readonly</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.progress = 0;</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * Generates a JavaScript object suitable for converting to JSON.
+     *
+     * @method Phaser.Animations.AnimationFrame#toJSON
+     * @since 3.0.0
+     *
+     * @return {Phaser.Types.Animations.JSONAnimationFrame} The AnimationFrame data.
+     */
+<span class="cstat-no" title="statement not covered" >    toJSON: function ()</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        return {</span>
+<span class="cstat-no" title="statement not covered" >            key: this.textureKey,</span>
+<span class="cstat-no" title="statement not covered" >            frame: this.textureFrame,</span>
+<span class="cstat-no" title="statement not covered" >            duration: this.duration</span>
+<span class="cstat-no" title="statement not covered" >        };</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * Destroys this object by removing references to external resources and callbacks.
+     *
+     * @method Phaser.Animations.AnimationFrame#destroy
+     * @since 3.0.0
+     */
+<span class="cstat-no" title="statement not covered" >    destroy: function ()</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        this.frame = undefined;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+&nbsp;
+});
+&nbsp;
+module.exports = AnimationFrame;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9hbmltYXRpb25zL0FuaW1hdGlvbkZyYW1lLmpzPzUwMzMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCOztBQUVBLFlBQVksbUJBQU8sQ0FBQyxnRUFBZ0I7O0FBRXBDO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxXQUFXLE9BQU87QUFDbEIsV0FBVyxpQkFBaUI7QUFDNUIsV0FBVyxRQUFRO0FBQ25CLFdBQVcsc0JBQXNCO0FBQ2pDO0FBQ0E7O0FBRUE7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGtCQUFrQjtBQUNsQjtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQSxrQkFBa0I7QUFDbEI7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGtCQUFrQjtBQUNsQjtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQSxrQkFBa0I7QUFDbEI7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGtCQUFrQjtBQUNsQjtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxrQkFBa0I7QUFDbEI7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGtCQUFrQjtBQUNsQjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsS0FBSzs7QUFFTDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxnQkFBZ0IsMkNBQTJDO0FBQzNEO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxLQUFLOztBQUVMO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBLENBQUM7O0FBRUQiLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9hbmltYXRpb25zL0FuaW1hdGlvbkZyYW1lLmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXHJcbiAqIEBhdXRob3IgICAgICAgUmljaGFyZCBEYXZleSA8cmljaEBwaG90b25zdG9ybS5jb20+XHJcbiAqIEBjb3B5cmlnaHQgICAgMjAxOSBQaG90b24gU3Rvcm0gTHRkLlxyXG4gKiBAbGljZW5zZSAgICAgIHtAbGluayBodHRwczovL29wZW5zb3VyY2Uub3JnL2xpY2Vuc2VzL01JVHxNSVQgTGljZW5zZX1cclxuICovXHJcblxyXG52YXIgQ2xhc3MgPSByZXF1aXJlKCcuLi91dGlscy9DbGFzcycpO1xyXG5cclxuLyoqXHJcbiAqIEBjbGFzc2Rlc2NcclxuICogQSBzaW5nbGUgZnJhbWUgaW4gYW4gQW5pbWF0aW9uIHNlcXVlbmNlLlxyXG4gKlxyXG4gKiBBbiBBbmltYXRpb25GcmFtZSBjb25zaXN0cyBvZiBhIHJlZmVyZW5jZSB0byB0aGUgVGV4dHVyZSBpdCB1c2VzIGZvciByZW5kZXJpbmcsIHJlZmVyZW5jZXMgdG8gb3RoZXJcclxuICogZnJhbWVzIGluIHRoZSBhbmltYXRpb24sIGFuZCBpbmRleCBkYXRhLiBJdCBhbHNvIGhhcyB0aGUgYWJpbGl0eSB0byBtb2RpZnkgdGhlIGFuaW1hdGlvbiB0aW1pbmcuXHJcbiAqXHJcbiAqIEFuaW1hdGlvbkZyYW1lcyBhcmUgZ2VuZXJhdGVkIGF1dG9tYXRpY2FsbHkgYnkgdGhlIEFuaW1hdGlvbiBjbGFzcy5cclxuICpcclxuICogQGNsYXNzIEFuaW1hdGlvbkZyYW1lXHJcbiAqIEBtZW1iZXJvZiBQaGFzZXIuQW5pbWF0aW9uc1xyXG4gKiBAY29uc3RydWN0b3JcclxuICogQHNpbmNlIDMuMC4wXHJcbiAqXHJcbiAqIEBwYXJhbSB7c3RyaW5nfSB0ZXh0dXJlS2V5IC0gVGhlIGtleSBvZiB0aGUgVGV4dHVyZSB0aGlzIEFuaW1hdGlvbkZyYW1lIHVzZXMuXHJcbiAqIEBwYXJhbSB7KHN0cmluZ3xpbnRlZ2VyKX0gdGV4dHVyZUZyYW1lIC0gVGhlIGtleSBvZiB0aGUgRnJhbWUgd2l0aGluIHRoZSBUZXh0dXJlIHRoYXQgdGhpcyBBbmltYXRpb25GcmFtZSB1c2VzLlxyXG4gKiBAcGFyYW0ge2ludGVnZXJ9IGluZGV4IC0gVGhlIGluZGV4IG9mIHRoaXMgQW5pbWF0aW9uRnJhbWUgd2l0aGluIHRoZSBBbmltYXRpb24gc2VxdWVuY2UuXHJcbiAqIEBwYXJhbSB7UGhhc2VyLlRleHR1cmVzLkZyYW1lfSBmcmFtZSAtIEEgcmVmZXJlbmNlIHRvIHRoZSBUZXh0dXJlIEZyYW1lIHRoaXMgQW5pbWF0aW9uRnJhbWUgdXNlcyBmb3IgcmVuZGVyaW5nLlxyXG4gKi9cclxudmFyIEFuaW1hdGlvbkZyYW1lID0gbmV3IENsYXNzKHtcclxuXHJcbiAgICBpbml0aWFsaXplOlxyXG5cclxuICAgIGZ1bmN0aW9uIEFuaW1hdGlvbkZyYW1lICh0ZXh0dXJlS2V5LCB0ZXh0dXJlRnJhbWUsIGluZGV4LCBmcmFtZSlcclxuICAgIHtcclxuICAgICAgICAvKipcclxuICAgICAgICAgKiBUaGUga2V5IG9mIHRoZSBUZXh0dXJlIHRoaXMgQW5pbWF0aW9uRnJhbWUgdXNlcy5cclxuICAgICAgICAgKlxyXG4gICAgICAgICAqIEBuYW1lIFBoYXNlci5BbmltYXRpb25zLkFuaW1hdGlvbkZyYW1lI3RleHR1cmVLZXlcclxuICAgICAgICAgKiBAdHlwZSB7c3RyaW5nfVxyXG4gICAgICAgICAqIEBzaW5jZSAzLjAuMFxyXG4gICAgICAgICAqL1xyXG4gICAgICAgIHRoaXMudGV4dHVyZUtleSA9IHRleHR1cmVLZXk7XHJcblxyXG4gICAgICAgIC8qKlxyXG4gICAgICAgICAqIFRoZSBrZXkgb2YgdGhlIEZyYW1lIHdpdGhpbiB0aGUgVGV4dHVyZSB0aGF0IHRoaXMgQW5pbWF0aW9uRnJhbWUgdXNlcy5cclxuICAgICAgICAgKlxyXG4gICAgICAgICAqIEBuYW1lIFBoYXNlci5BbmltYXRpb25zLkFuaW1hdGlvbkZyYW1lI3RleHR1cmVGcmFtZVxyXG4gICAgICAgICAqIEB0eXBlIHsoc3RyaW5nfGludGVnZXIpfVxyXG4gICAgICAgICAqIEBzaW5jZSAzLjAuMFxyXG4gICAgICAgICAqL1xyXG4gICAgICAgIHRoaXMudGV4dHVyZUZyYW1lID0gdGV4dHVyZUZyYW1lO1xyXG5cclxuICAgICAgICAvKipcclxuICAgICAgICAgKiBUaGUgaW5kZXggb2YgdGhpcyBBbmltYXRpb25GcmFtZSB3aXRoaW4gdGhlIEFuaW1hdGlvbiBzZXF1ZW5jZS5cclxuICAgICAgICAgKlxyXG4gICAgICAgICAqIEBuYW1lIFBoYXNlci5BbmltYXRpb25zLkFuaW1hdGlvbkZyYW1lI2luZGV4XHJcbiAgICAgICAgICogQHR5cGUge2ludGVnZXJ9XHJcbiAgICAgICAgICogQHNpbmNlIDMuMC4wXHJcbiAgICAgICAgICovXHJcbiAgICAgICAgdGhpcy5pbmRleCA9IGluZGV4O1xyXG5cclxuICAgICAgICAvKipcclxuICAgICAgICAgKiBBIHJlZmVyZW5jZSB0byB0aGUgVGV4dHVyZSBGcmFtZSB0aGlzIEFuaW1hdGlvbkZyYW1lIHVzZXMgZm9yIHJlbmRlcmluZy5cclxuICAgICAgICAgKlxyXG4gICAgICAgICAqIEBuYW1lIFBoYXNlci5BbmltYXRpb25zLkFuaW1hdGlvbkZyYW1lI2ZyYW1lXHJcbiAgICAgICAgICogQHR5cGUge1BoYXNlci5UZXh0dXJlcy5GcmFtZX1cclxuICAgICAgICAgKiBAc2luY2UgMy4wLjBcclxuICAgICAgICAgKi9cclxuICAgICAgICB0aGlzLmZyYW1lID0gZnJhbWU7XHJcblxyXG4gICAgICAgIC8qKlxyXG4gICAgICAgICAqIElzIHRoaXMgdGhlIGZpcnN0IGZyYW1lIGluIGFuIGFuaW1hdGlvbiBzZXF1ZW5jZT9cclxuICAgICAgICAgKlxyXG4gICAgICAgICAqIEBuYW1lIFBoYXNlci5BbmltYXRpb25zLkFuaW1hdGlvbkZyYW1lI2lzRmlyc3RcclxuICAgICAgICAgKiBAdHlwZSB7Ym9vbGVhbn1cclxuICAgICAgICAgKiBAZGVmYXVsdCBmYWxzZVxyXG4gICAgICAgICAqIEByZWFkb25seVxyXG4gICAgICAgICAqIEBzaW5jZSAzLjAuMFxyXG4gICAgICAgICAqL1xyXG4gICAgICAgIHRoaXMuaXNGaXJzdCA9IGZhbHNlO1xyXG5cclxuICAgICAgICAvKipcclxuICAgICAgICAgKiBJcyB0aGlzIHRoZSBsYXN0IGZyYW1lIGluIGFuIGFuaW1hdGlvbiBzZXF1ZW5jZT9cclxuICAgICAgICAgKlxyXG4gICAgICAgICAqIEBuYW1lIFBoYXNlci5BbmltYXRpb25zLkFuaW1hdGlvbkZyYW1lI2lzTGFzdFxyXG4gICAgICAgICAqIEB0eXBlIHtib29sZWFufVxyXG4gICAgICAgICAqIEBkZWZhdWx0IGZhbHNlXHJcbiAgICAgICAgICogQHJlYWRvbmx5XHJcbiAgICAgICAgICogQHNpbmNlIDMuMC4wXHJcbiAgICAgICAgICovXHJcbiAgICAgICAgdGhpcy5pc0xhc3QgPSBmYWxzZTtcclxuXHJcbiAgICAgICAgLyoqXHJcbiAgICAgICAgICogQSByZWZlcmVuY2UgdG8gdGhlIEFuaW1hdGlvbkZyYW1lIHRoYXQgY29tZXMgYmVmb3JlIHRoaXMgb25lIGluIHRoZSBhbmltYXRpb24sIGlmIGFueS5cclxuICAgICAgICAgKlxyXG4gICAgICAgICAqIEBuYW1lIFBoYXNlci5BbmltYXRpb25zLkFuaW1hdGlvbkZyYW1lI3ByZXZGcmFtZVxyXG4gICAgICAgICAqIEB0eXBlIHs/UGhhc2VyLkFuaW1hdGlvbnMuQW5pbWF0aW9uRnJhbWV9XHJcbiAgICAgICAgICogQGRlZmF1bHQgbnVsbFxyXG4gICAgICAgICAqIEByZWFkb25seVxyXG4gICAgICAgICAqIEBzaW5jZSAzLjAuMFxyXG4gICAgICAgICAqL1xyXG4gICAgICAgIHRoaXMucHJldkZyYW1lID0gbnVsbDtcclxuXHJcbiAgICAgICAgLyoqXHJcbiAgICAgICAgICogQSByZWZlcmVuY2UgdG8gdGhlIEFuaW1hdGlvbkZyYW1lIHRoYXQgY29tZXMgYWZ0ZXIgdGhpcyBvbmUgaW4gdGhlIGFuaW1hdGlvbiwgaWYgYW55LlxyXG4gICAgICAgICAqXHJcbiAgICAgICAgICogQG5hbWUgUGhhc2VyLkFuaW1hdGlvbnMuQW5pbWF0aW9uRnJhbWUjbmV4dEZyYW1lXHJcbiAgICAgICAgICogQHR5cGUgez9QaGFzZXIuQW5pbWF0aW9ucy5BbmltYXRpb25GcmFtZX1cclxuICAgICAgICAgKiBAZGVmYXVsdCBudWxsXHJcbiAgICAgICAgICogQHJlYWRvbmx5XHJcbiAgICAgICAgICogQHNpbmNlIDMuMC4wXHJcbiAgICAgICAgICovXHJcbiAgICAgICAgdGhpcy5uZXh0RnJhbWUgPSBudWxsO1xyXG5cclxuICAgICAgICAvKipcclxuICAgICAgICAgKiBBZGRpdGlvbmFsIHRpbWUgKGluIG1zKSB0aGF0IHRoaXMgZnJhbWUgc2hvdWxkIGFwcGVhciBmb3IgZHVyaW5nIHBsYXliYWNrLlxyXG4gICAgICAgICAqIFRoZSB2YWx1ZSBpcyBhZGRlZCBvbnRvIHRoZSBtc1BlckZyYW1lIHNldCBieSB0aGUgYW5pbWF0aW9uLlxyXG4gICAgICAgICAqXHJcbiAgICAgICAgICogQG5hbWUgUGhhc2VyLkFuaW1hdGlvbnMuQW5pbWF0aW9uRnJhbWUjZHVyYXRpb25cclxuICAgICAgICAgKiBAdHlwZSB7bnVtYmVyfVxyXG4gICAgICAgICAqIEBkZWZhdWx0IDBcclxuICAgICAgICAgKiBAc2luY2UgMy4wLjBcclxuICAgICAgICAgKi9cclxuICAgICAgICB0aGlzLmR1cmF0aW9uID0gMDtcclxuXHJcbiAgICAgICAgLyoqXHJcbiAgICAgICAgICogV2hhdCAlIHRocm91Z2ggdGhlIGFuaW1hdGlvbiBkb2VzIHRoaXMgZnJhbWUgY29tZT9cclxuICAgICAgICAgKiBUaGlzIHZhbHVlIGlzIGdlbmVyYXRlZCB3aGVuIHRoZSBhbmltYXRpb24gaXMgY3JlYXRlZCBhbmQgY2FjaGVkIGhlcmUuXHJcbiAgICAgICAgICpcclxuICAgICAgICAgKiBAbmFtZSBQaGFzZXIuQW5pbWF0aW9ucy5BbmltYXRpb25GcmFtZSNwcm9ncmVzc1xyXG4gICAgICAgICAqIEB0eXBlIHtudW1iZXJ9XHJcbiAgICAgICAgICogQGRlZmF1bHQgMFxyXG4gICAgICAgICAqIEByZWFkb25seVxyXG4gICAgICAgICAqIEBzaW5jZSAzLjAuMFxyXG4gICAgICAgICAqL1xyXG4gICAgICAgIHRoaXMucHJvZ3Jlc3MgPSAwO1xyXG4gICAgfSxcclxuXHJcbiAgICAvKipcclxuICAgICAqIEdlbmVyYXRlcyBhIEphdmFTY3JpcHQgb2JqZWN0IHN1aXRhYmxlIGZvciBjb252ZXJ0aW5nIHRvIEpTT04uXHJcbiAgICAgKlxyXG4gICAgICogQG1ldGhvZCBQaGFzZXIuQW5pbWF0aW9ucy5BbmltYXRpb25GcmFtZSN0b0pTT05cclxuICAgICAqIEBzaW5jZSAzLjAuMFxyXG4gICAgICpcclxuICAgICAqIEByZXR1cm4ge1BoYXNlci5UeXBlcy5BbmltYXRpb25zLkpTT05BbmltYXRpb25GcmFtZX0gVGhlIEFuaW1hdGlvbkZyYW1lIGRhdGEuXHJcbiAgICAgKi9cclxuICAgIHRvSlNPTjogZnVuY3Rpb24gKClcclxuICAgIHtcclxuICAgICAgICByZXR1cm4ge1xyXG4gICAgICAgICAgICBrZXk6IHRoaXMudGV4dHVyZUtleSxcclxuICAgICAgICAgICAgZnJhbWU6IHRoaXMudGV4dHVyZUZyYW1lLFxyXG4gICAgICAgICAgICBkdXJhdGlvbjogdGhpcy5kdXJhdGlvblxyXG4gICAgICAgIH07XHJcbiAgICB9LFxyXG5cclxuICAgIC8qKlxyXG4gICAgICogRGVzdHJveXMgdGhpcyBvYmplY3QgYnkgcmVtb3ZpbmcgcmVmZXJlbmNlcyB0byBleHRlcm5hbCByZXNvdXJjZXMgYW5kIGNhbGxiYWNrcy5cclxuICAgICAqXHJcbiAgICAgKiBAbWV0aG9kIFBoYXNlci5BbmltYXRpb25zLkFuaW1hdGlvbkZyYW1lI2Rlc3Ryb3lcclxuICAgICAqIEBzaW5jZSAzLjAuMFxyXG4gICAgICovXHJcbiAgICBkZXN0cm95OiBmdW5jdGlvbiAoKVxyXG4gICAge1xyXG4gICAgICAgIHRoaXMuZnJhbWUgPSB1bmRlZmluZWQ7XHJcbiAgICB9XHJcblxyXG59KTtcclxuXHJcbm1vZHVsZS5leHBvcnRzID0gQW5pbWF0aW9uRnJhbWU7XHJcbiJdLCJzb3VyY2VSb290IjoiIn0=
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/animations/AnimationFrame.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

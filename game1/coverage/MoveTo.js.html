@@ -1,0 +1,491 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for MoveTo.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> MoveTo.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">63.77% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>88/138</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>7/7</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">63.77% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>88/138</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line medium'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var Class = __webpack_require__(/*! ../../utils/Class */ "./node_modules/phaser/src/utils/Class.js");
+var Vector2 = __webpack_require__(/*! ../../math/Vector2 */ "./node_modules/phaser/src/math/Vector2.js");
+&nbsp;
+/**
+ * @classdesc
+ * A MoveTo Curve is a very simple curve consisting of only a single point. Its intended use is to move the ending point in a Path.
+ *
+ * @class MoveTo
+ * @memberof Phaser.Curves
+ * @constructor
+ * @since 3.0.0
+ *
+ * @param {number} [x] - `x` pixel coordinate.
+ * @param {number} [y] - `y` pixel coordinate.
+ */
+var MoveTo = new Class({
+&nbsp;
+    initialize:
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    function MoveTo (x, y)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        //  Skip length calcs in paths</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * Denotes that this Curve does not influence the bounds, points, and drawing of its parent Path. Must be `false` or some methods in the parent Path will throw errors.</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Curves.MoveTo#active</span>
+<span class="cstat-no" title="statement not covered" >         * @type {boolean}</span>
+<span class="cstat-no" title="statement not covered" >         * @default false</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.active = false;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * The lone point which this curve consists of.</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Curves.MoveTo#p0</span>
+<span class="cstat-no" title="statement not covered" >         * @type {Phaser.Math.Vector2}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.p0 = new Vector2(x, y);</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * Get point at relative position in curve according to length.
+     *
+     * @method Phaser.Curves.MoveTo#getPoint
+     * @since 3.0.0
+     *
+     * @generic {Phaser.Math.Vector2} O - [out,$return]
+     *
+     * @param {number} t - The position along the curve to return. Where 0 is the start and 1 is the end.
+     * @param {Phaser.Math.Vector2} [out] - A Vector2 object to store the result in. If not given will be created.
+     *
+     * @return {Phaser.Math.Vector2} The coordinates of the point on the curve. If an `out` object was given this will be returned.
+     */
+<span class="cstat-no" title="statement not covered" >    getPoint: function (t, out)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        if (out === undefined) { out = new Vector2(); }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        return out.copy(this.p0);</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * Retrieves the point at given position in the curve. This will always return this curve's only point.
+     *
+     * @method Phaser.Curves.MoveTo#getPointAt
+     * @since 3.0.0
+     *
+     * @generic {Phaser.Math.Vector2} O - [out,$return]
+     *
+     * @param {number} u - The position in the path to retrieve, between 0 and 1. Not used.
+     * @param {Phaser.Math.Vector2} [out] - An optional vector in which to store the point.
+     *
+     * @return {Phaser.Math.Vector2} The modified `out` vector, or a new `Vector2` if none was provided.
+     */
+<span class="cstat-no" title="statement not covered" >    getPointAt: function (u, out)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        return this.getPoint(u, out);</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * Gets the resolution of this curve.
+     *
+     * @method Phaser.Curves.MoveTo#getResolution
+     * @since 3.0.0
+     *
+     * @return {number} The resolution of this curve. For a MoveTo the value is always 1.
+     */
+<span class="cstat-no" title="statement not covered" >    getResolution: function ()</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        return 1;</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * Gets the length of this curve.
+     *
+     * @method Phaser.Curves.MoveTo#getLength
+     * @since 3.0.0
+     *
+     * @return {number} The length of this curve. For a MoveTo the value is always 0.
+     */
+<span class="cstat-no" title="statement not covered" >    getLength: function ()</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        return 0;</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * Converts this curve into a JSON-serializable object.
+     *
+     * @method Phaser.Curves.MoveTo#toJSON
+     * @since 3.0.0
+     *
+     * @return {Phaser.Types.Curves.JSONCurve} A primitive object with the curve's type and only point.
+     */
+<span class="cstat-no" title="statement not covered" >    toJSON: function ()</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        return {</span>
+<span class="cstat-no" title="statement not covered" >            type: 'MoveTo',</span>
+<span class="cstat-no" title="statement not covered" >            points: [</span>
+<span class="cstat-no" title="statement not covered" >                this.p0.x, this.p0.y</span>
+<span class="cstat-no" title="statement not covered" >            ]</span>
+<span class="cstat-no" title="statement not covered" >        };</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+&nbsp;
+});
+&nbsp;
+module.exports = MoveTo;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9jdXJ2ZXMvcGF0aC9Nb3ZlVG8uanM/ZDczOSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQSxrQkFBa0I7QUFDbEI7O0FBRUEsWUFBWSxtQkFBTyxDQUFDLG1FQUFtQjtBQUN2QyxjQUFjLG1CQUFPLENBQUMscUVBQW9COztBQUUxQztBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxXQUFXLE9BQU87QUFDbEIsV0FBVyxPQUFPO0FBQ2xCO0FBQ0E7O0FBRUE7O0FBRUE7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQTtBQUNBLEtBQUs7O0FBRUw7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsaUJBQWlCLG9CQUFvQjtBQUNyQztBQUNBLGVBQWUsT0FBTztBQUN0QixlQUFlLG9CQUFvQjtBQUNuQztBQUNBLGdCQUFnQixvQkFBb0I7QUFDcEM7QUFDQTtBQUNBO0FBQ0EsZ0NBQWdDLHFCQUFxQjs7QUFFckQ7QUFDQSxLQUFLOztBQUVMO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGlCQUFpQixvQkFBb0I7QUFDckM7QUFDQSxlQUFlLE9BQU87QUFDdEIsZUFBZSxvQkFBb0I7QUFDbkM7QUFDQSxnQkFBZ0Isb0JBQW9CO0FBQ3BDO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsS0FBSzs7QUFFTDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxnQkFBZ0IsT0FBTztBQUN2QjtBQUNBO0FBQ0E7QUFDQTtBQUNBLEtBQUs7O0FBRUw7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsZ0JBQWdCLE9BQU87QUFDdkI7QUFDQTtBQUNBO0FBQ0E7QUFDQSxLQUFLOztBQUVMO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGdCQUFnQiw4QkFBOEI7QUFDOUM7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUEsQ0FBQzs7QUFFRCIsImZpbGUiOiIuL25vZGVfbW9kdWxlcy9waGFzZXIvc3JjL2N1cnZlcy9wYXRoL01vdmVUby5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxyXG4gKiBAYXV0aG9yICAgICAgIFJpY2hhcmQgRGF2ZXkgPHJpY2hAcGhvdG9uc3Rvcm0uY29tPlxyXG4gKiBAY29weXJpZ2h0ICAgIDIwMTkgUGhvdG9uIFN0b3JtIEx0ZC5cclxuICogQGxpY2Vuc2UgICAgICB7QGxpbmsgaHR0cHM6Ly9vcGVuc291cmNlLm9yZy9saWNlbnNlcy9NSVR8TUlUIExpY2Vuc2V9XHJcbiAqL1xyXG5cclxudmFyIENsYXNzID0gcmVxdWlyZSgnLi4vLi4vdXRpbHMvQ2xhc3MnKTtcclxudmFyIFZlY3RvcjIgPSByZXF1aXJlKCcuLi8uLi9tYXRoL1ZlY3RvcjInKTtcclxuXHJcbi8qKlxyXG4gKiBAY2xhc3NkZXNjXHJcbiAqIEEgTW92ZVRvIEN1cnZlIGlzIGEgdmVyeSBzaW1wbGUgY3VydmUgY29uc2lzdGluZyBvZiBvbmx5IGEgc2luZ2xlIHBvaW50LiBJdHMgaW50ZW5kZWQgdXNlIGlzIHRvIG1vdmUgdGhlIGVuZGluZyBwb2ludCBpbiBhIFBhdGguXHJcbiAqXHJcbiAqIEBjbGFzcyBNb3ZlVG9cclxuICogQG1lbWJlcm9mIFBoYXNlci5DdXJ2ZXNcclxuICogQGNvbnN0cnVjdG9yXHJcbiAqIEBzaW5jZSAzLjAuMFxyXG4gKlxyXG4gKiBAcGFyYW0ge251bWJlcn0gW3hdIC0gYHhgIHBpeGVsIGNvb3JkaW5hdGUuXHJcbiAqIEBwYXJhbSB7bnVtYmVyfSBbeV0gLSBgeWAgcGl4ZWwgY29vcmRpbmF0ZS5cclxuICovXHJcbnZhciBNb3ZlVG8gPSBuZXcgQ2xhc3Moe1xyXG5cclxuICAgIGluaXRpYWxpemU6XHJcblxyXG4gICAgZnVuY3Rpb24gTW92ZVRvICh4LCB5KVxyXG4gICAge1xyXG4gICAgICAgIC8vICBTa2lwIGxlbmd0aCBjYWxjcyBpbiBwYXRoc1xyXG5cclxuICAgICAgICAvKipcclxuICAgICAgICAgKiBEZW5vdGVzIHRoYXQgdGhpcyBDdXJ2ZSBkb2VzIG5vdCBpbmZsdWVuY2UgdGhlIGJvdW5kcywgcG9pbnRzLCBhbmQgZHJhd2luZyBvZiBpdHMgcGFyZW50IFBhdGguIE11c3QgYmUgYGZhbHNlYCBvciBzb21lIG1ldGhvZHMgaW4gdGhlIHBhcmVudCBQYXRoIHdpbGwgdGhyb3cgZXJyb3JzLlxyXG4gICAgICAgICAqXHJcbiAgICAgICAgICogQG5hbWUgUGhhc2VyLkN1cnZlcy5Nb3ZlVG8jYWN0aXZlXHJcbiAgICAgICAgICogQHR5cGUge2Jvb2xlYW59XHJcbiAgICAgICAgICogQGRlZmF1bHQgZmFsc2VcclxuICAgICAgICAgKiBAc2luY2UgMy4wLjBcclxuICAgICAgICAgKi9cclxuICAgICAgICB0aGlzLmFjdGl2ZSA9IGZhbHNlO1xyXG5cclxuICAgICAgICAvKipcclxuICAgICAgICAgKiBUaGUgbG9uZSBwb2ludCB3aGljaCB0aGlzIGN1cnZlIGNvbnNpc3RzIG9mLlxyXG4gICAgICAgICAqXHJcbiAgICAgICAgICogQG5hbWUgUGhhc2VyLkN1cnZlcy5Nb3ZlVG8jcDBcclxuICAgICAgICAgKiBAdHlwZSB7UGhhc2VyLk1hdGguVmVjdG9yMn1cclxuICAgICAgICAgKiBAc2luY2UgMy4wLjBcclxuICAgICAgICAgKi9cclxuICAgICAgICB0aGlzLnAwID0gbmV3IFZlY3RvcjIoeCwgeSk7XHJcbiAgICB9LFxyXG5cclxuICAgIC8qKlxyXG4gICAgICogR2V0IHBvaW50IGF0IHJlbGF0aXZlIHBvc2l0aW9uIGluIGN1cnZlIGFjY29yZGluZyB0byBsZW5ndGguXHJcbiAgICAgKlxyXG4gICAgICogQG1ldGhvZCBQaGFzZXIuQ3VydmVzLk1vdmVUbyNnZXRQb2ludFxyXG4gICAgICogQHNpbmNlIDMuMC4wXHJcbiAgICAgKlxyXG4gICAgICogQGdlbmVyaWMge1BoYXNlci5NYXRoLlZlY3RvcjJ9IE8gLSBbb3V0LCRyZXR1cm5dXHJcbiAgICAgKlxyXG4gICAgICogQHBhcmFtIHtudW1iZXJ9IHQgLSBUaGUgcG9zaXRpb24gYWxvbmcgdGhlIGN1cnZlIHRvIHJldHVybi4gV2hlcmUgMCBpcyB0aGUgc3RhcnQgYW5kIDEgaXMgdGhlIGVuZC5cclxuICAgICAqIEBwYXJhbSB7UGhhc2VyLk1hdGguVmVjdG9yMn0gW291dF0gLSBBIFZlY3RvcjIgb2JqZWN0IHRvIHN0b3JlIHRoZSByZXN1bHQgaW4uIElmIG5vdCBnaXZlbiB3aWxsIGJlIGNyZWF0ZWQuXHJcbiAgICAgKlxyXG4gICAgICogQHJldHVybiB7UGhhc2VyLk1hdGguVmVjdG9yMn0gVGhlIGNvb3JkaW5hdGVzIG9mIHRoZSBwb2ludCBvbiB0aGUgY3VydmUuIElmIGFuIGBvdXRgIG9iamVjdCB3YXMgZ2l2ZW4gdGhpcyB3aWxsIGJlIHJldHVybmVkLlxyXG4gICAgICovXHJcbiAgICBnZXRQb2ludDogZnVuY3Rpb24gKHQsIG91dClcclxuICAgIHtcclxuICAgICAgICBpZiAob3V0ID09PSB1bmRlZmluZWQpIHsgb3V0ID0gbmV3IFZlY3RvcjIoKTsgfVxyXG5cclxuICAgICAgICByZXR1cm4gb3V0LmNvcHkodGhpcy5wMCk7XHJcbiAgICB9LFxyXG5cclxuICAgIC8qKlxyXG4gICAgICogUmV0cmlldmVzIHRoZSBwb2ludCBhdCBnaXZlbiBwb3NpdGlvbiBpbiB0aGUgY3VydmUuIFRoaXMgd2lsbCBhbHdheXMgcmV0dXJuIHRoaXMgY3VydmUncyBvbmx5IHBvaW50LlxyXG4gICAgICpcclxuICAgICAqIEBtZXRob2QgUGhhc2VyLkN1cnZlcy5Nb3ZlVG8jZ2V0UG9pbnRBdFxyXG4gICAgICogQHNpbmNlIDMuMC4wXHJcbiAgICAgKlxyXG4gICAgICogQGdlbmVyaWMge1BoYXNlci5NYXRoLlZlY3RvcjJ9IE8gLSBbb3V0LCRyZXR1cm5dXHJcbiAgICAgKlxyXG4gICAgICogQHBhcmFtIHtudW1iZXJ9IHUgLSBUaGUgcG9zaXRpb24gaW4gdGhlIHBhdGggdG8gcmV0cmlldmUsIGJldHdlZW4gMCBhbmQgMS4gTm90IHVzZWQuXHJcbiAgICAgKiBAcGFyYW0ge1BoYXNlci5NYXRoLlZlY3RvcjJ9IFtvdXRdIC0gQW4gb3B0aW9uYWwgdmVjdG9yIGluIHdoaWNoIHRvIHN0b3JlIHRoZSBwb2ludC5cclxuICAgICAqXHJcbiAgICAgKiBAcmV0dXJuIHtQaGFzZXIuTWF0aC5WZWN0b3IyfSBUaGUgbW9kaWZpZWQgYG91dGAgdmVjdG9yLCBvciBhIG5ldyBgVmVjdG9yMmAgaWYgbm9uZSB3YXMgcHJvdmlkZWQuXHJcbiAgICAgKi9cclxuICAgIGdldFBvaW50QXQ6IGZ1bmN0aW9uICh1LCBvdXQpXHJcbiAgICB7XHJcbiAgICAgICAgcmV0dXJuIHRoaXMuZ2V0UG9pbnQodSwgb3V0KTtcclxuICAgIH0sXHJcblxyXG4gICAgLyoqXHJcbiAgICAgKiBHZXRzIHRoZSByZXNvbHV0aW9uIG9mIHRoaXMgY3VydmUuXHJcbiAgICAgKlxyXG4gICAgICogQG1ldGhvZCBQaGFzZXIuQ3VydmVzLk1vdmVUbyNnZXRSZXNvbHV0aW9uXHJcbiAgICAgKiBAc2luY2UgMy4wLjBcclxuICAgICAqXHJcbiAgICAgKiBAcmV0dXJuIHtudW1iZXJ9IFRoZSByZXNvbHV0aW9uIG9mIHRoaXMgY3VydmUuIEZvciBhIE1vdmVUbyB0aGUgdmFsdWUgaXMgYWx3YXlzIDEuXHJcbiAgICAgKi9cclxuICAgIGdldFJlc29sdXRpb246IGZ1bmN0aW9uICgpXHJcbiAgICB7XHJcbiAgICAgICAgcmV0dXJuIDE7XHJcbiAgICB9LFxyXG5cclxuICAgIC8qKlxyXG4gICAgICogR2V0cyB0aGUgbGVuZ3RoIG9mIHRoaXMgY3VydmUuXHJcbiAgICAgKlxyXG4gICAgICogQG1ldGhvZCBQaGFzZXIuQ3VydmVzLk1vdmVUbyNnZXRMZW5ndGhcclxuICAgICAqIEBzaW5jZSAzLjAuMFxyXG4gICAgICpcclxuICAgICAqIEByZXR1cm4ge251bWJlcn0gVGhlIGxlbmd0aCBvZiB0aGlzIGN1cnZlLiBGb3IgYSBNb3ZlVG8gdGhlIHZhbHVlIGlzIGFsd2F5cyAwLlxyXG4gICAgICovXHJcbiAgICBnZXRMZW5ndGg6IGZ1bmN0aW9uICgpXHJcbiAgICB7XHJcbiAgICAgICAgcmV0dXJuIDA7XHJcbiAgICB9LFxyXG5cclxuICAgIC8qKlxyXG4gICAgICogQ29udmVydHMgdGhpcyBjdXJ2ZSBpbnRvIGEgSlNPTi1zZXJpYWxpemFibGUgb2JqZWN0LlxyXG4gICAgICpcclxuICAgICAqIEBtZXRob2QgUGhhc2VyLkN1cnZlcy5Nb3ZlVG8jdG9KU09OXHJcbiAgICAgKiBAc2luY2UgMy4wLjBcclxuICAgICAqXHJcbiAgICAgKiBAcmV0dXJuIHtQaGFzZXIuVHlwZXMuQ3VydmVzLkpTT05DdXJ2ZX0gQSBwcmltaXRpdmUgb2JqZWN0IHdpdGggdGhlIGN1cnZlJ3MgdHlwZSBhbmQgb25seSBwb2ludC5cclxuICAgICAqL1xyXG4gICAgdG9KU09OOiBmdW5jdGlvbiAoKVxyXG4gICAge1xyXG4gICAgICAgIHJldHVybiB7XHJcbiAgICAgICAgICAgIHR5cGU6ICdNb3ZlVG8nLFxyXG4gICAgICAgICAgICBwb2ludHM6IFtcclxuICAgICAgICAgICAgICAgIHRoaXMucDAueCwgdGhpcy5wMC55XHJcbiAgICAgICAgICAgIF1cclxuICAgICAgICB9O1xyXG4gICAgfVxyXG5cclxufSk7XHJcblxyXG5tb2R1bGUuZXhwb3J0cyA9IE1vdmVUbztcclxuIl0sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/curves/path/MoveTo.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

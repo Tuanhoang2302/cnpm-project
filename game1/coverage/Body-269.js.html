@@ -1,0 +1,1874 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for Body-269.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> Body-269.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">29.05% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>174/599</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>15/15</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">29.05% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>174/599</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a>
+<a name='L208'></a><a href='#L208'>208</a>
+<a name='L209'></a><a href='#L209'>209</a>
+<a name='L210'></a><a href='#L210'>210</a>
+<a name='L211'></a><a href='#L211'>211</a>
+<a name='L212'></a><a href='#L212'>212</a>
+<a name='L213'></a><a href='#L213'>213</a>
+<a name='L214'></a><a href='#L214'>214</a>
+<a name='L215'></a><a href='#L215'>215</a>
+<a name='L216'></a><a href='#L216'>216</a>
+<a name='L217'></a><a href='#L217'>217</a>
+<a name='L218'></a><a href='#L218'>218</a>
+<a name='L219'></a><a href='#L219'>219</a>
+<a name='L220'></a><a href='#L220'>220</a>
+<a name='L221'></a><a href='#L221'>221</a>
+<a name='L222'></a><a href='#L222'>222</a>
+<a name='L223'></a><a href='#L223'>223</a>
+<a name='L224'></a><a href='#L224'>224</a>
+<a name='L225'></a><a href='#L225'>225</a>
+<a name='L226'></a><a href='#L226'>226</a>
+<a name='L227'></a><a href='#L227'>227</a>
+<a name='L228'></a><a href='#L228'>228</a>
+<a name='L229'></a><a href='#L229'>229</a>
+<a name='L230'></a><a href='#L230'>230</a>
+<a name='L231'></a><a href='#L231'>231</a>
+<a name='L232'></a><a href='#L232'>232</a>
+<a name='L233'></a><a href='#L233'>233</a>
+<a name='L234'></a><a href='#L234'>234</a>
+<a name='L235'></a><a href='#L235'>235</a>
+<a name='L236'></a><a href='#L236'>236</a>
+<a name='L237'></a><a href='#L237'>237</a>
+<a name='L238'></a><a href='#L238'>238</a>
+<a name='L239'></a><a href='#L239'>239</a>
+<a name='L240'></a><a href='#L240'>240</a>
+<a name='L241'></a><a href='#L241'>241</a>
+<a name='L242'></a><a href='#L242'>242</a>
+<a name='L243'></a><a href='#L243'>243</a>
+<a name='L244'></a><a href='#L244'>244</a>
+<a name='L245'></a><a href='#L245'>245</a>
+<a name='L246'></a><a href='#L246'>246</a>
+<a name='L247'></a><a href='#L247'>247</a>
+<a name='L248'></a><a href='#L248'>248</a>
+<a name='L249'></a><a href='#L249'>249</a>
+<a name='L250'></a><a href='#L250'>250</a>
+<a name='L251'></a><a href='#L251'>251</a>
+<a name='L252'></a><a href='#L252'>252</a>
+<a name='L253'></a><a href='#L253'>253</a>
+<a name='L254'></a><a href='#L254'>254</a>
+<a name='L255'></a><a href='#L255'>255</a>
+<a name='L256'></a><a href='#L256'>256</a>
+<a name='L257'></a><a href='#L257'>257</a>
+<a name='L258'></a><a href='#L258'>258</a>
+<a name='L259'></a><a href='#L259'>259</a>
+<a name='L260'></a><a href='#L260'>260</a>
+<a name='L261'></a><a href='#L261'>261</a>
+<a name='L262'></a><a href='#L262'>262</a>
+<a name='L263'></a><a href='#L263'>263</a>
+<a name='L264'></a><a href='#L264'>264</a>
+<a name='L265'></a><a href='#L265'>265</a>
+<a name='L266'></a><a href='#L266'>266</a>
+<a name='L267'></a><a href='#L267'>267</a>
+<a name='L268'></a><a href='#L268'>268</a>
+<a name='L269'></a><a href='#L269'>269</a>
+<a name='L270'></a><a href='#L270'>270</a>
+<a name='L271'></a><a href='#L271'>271</a>
+<a name='L272'></a><a href='#L272'>272</a>
+<a name='L273'></a><a href='#L273'>273</a>
+<a name='L274'></a><a href='#L274'>274</a>
+<a name='L275'></a><a href='#L275'>275</a>
+<a name='L276'></a><a href='#L276'>276</a>
+<a name='L277'></a><a href='#L277'>277</a>
+<a name='L278'></a><a href='#L278'>278</a>
+<a name='L279'></a><a href='#L279'>279</a>
+<a name='L280'></a><a href='#L280'>280</a>
+<a name='L281'></a><a href='#L281'>281</a>
+<a name='L282'></a><a href='#L282'>282</a>
+<a name='L283'></a><a href='#L283'>283</a>
+<a name='L284'></a><a href='#L284'>284</a>
+<a name='L285'></a><a href='#L285'>285</a>
+<a name='L286'></a><a href='#L286'>286</a>
+<a name='L287'></a><a href='#L287'>287</a>
+<a name='L288'></a><a href='#L288'>288</a>
+<a name='L289'></a><a href='#L289'>289</a>
+<a name='L290'></a><a href='#L290'>290</a>
+<a name='L291'></a><a href='#L291'>291</a>
+<a name='L292'></a><a href='#L292'>292</a>
+<a name='L293'></a><a href='#L293'>293</a>
+<a name='L294'></a><a href='#L294'>294</a>
+<a name='L295'></a><a href='#L295'>295</a>
+<a name='L296'></a><a href='#L296'>296</a>
+<a name='L297'></a><a href='#L297'>297</a>
+<a name='L298'></a><a href='#L298'>298</a>
+<a name='L299'></a><a href='#L299'>299</a>
+<a name='L300'></a><a href='#L300'>300</a>
+<a name='L301'></a><a href='#L301'>301</a>
+<a name='L302'></a><a href='#L302'>302</a>
+<a name='L303'></a><a href='#L303'>303</a>
+<a name='L304'></a><a href='#L304'>304</a>
+<a name='L305'></a><a href='#L305'>305</a>
+<a name='L306'></a><a href='#L306'>306</a>
+<a name='L307'></a><a href='#L307'>307</a>
+<a name='L308'></a><a href='#L308'>308</a>
+<a name='L309'></a><a href='#L309'>309</a>
+<a name='L310'></a><a href='#L310'>310</a>
+<a name='L311'></a><a href='#L311'>311</a>
+<a name='L312'></a><a href='#L312'>312</a>
+<a name='L313'></a><a href='#L313'>313</a>
+<a name='L314'></a><a href='#L314'>314</a>
+<a name='L315'></a><a href='#L315'>315</a>
+<a name='L316'></a><a href='#L316'>316</a>
+<a name='L317'></a><a href='#L317'>317</a>
+<a name='L318'></a><a href='#L318'>318</a>
+<a name='L319'></a><a href='#L319'>319</a>
+<a name='L320'></a><a href='#L320'>320</a>
+<a name='L321'></a><a href='#L321'>321</a>
+<a name='L322'></a><a href='#L322'>322</a>
+<a name='L323'></a><a href='#L323'>323</a>
+<a name='L324'></a><a href='#L324'>324</a>
+<a name='L325'></a><a href='#L325'>325</a>
+<a name='L326'></a><a href='#L326'>326</a>
+<a name='L327'></a><a href='#L327'>327</a>
+<a name='L328'></a><a href='#L328'>328</a>
+<a name='L329'></a><a href='#L329'>329</a>
+<a name='L330'></a><a href='#L330'>330</a>
+<a name='L331'></a><a href='#L331'>331</a>
+<a name='L332'></a><a href='#L332'>332</a>
+<a name='L333'></a><a href='#L333'>333</a>
+<a name='L334'></a><a href='#L334'>334</a>
+<a name='L335'></a><a href='#L335'>335</a>
+<a name='L336'></a><a href='#L336'>336</a>
+<a name='L337'></a><a href='#L337'>337</a>
+<a name='L338'></a><a href='#L338'>338</a>
+<a name='L339'></a><a href='#L339'>339</a>
+<a name='L340'></a><a href='#L340'>340</a>
+<a name='L341'></a><a href='#L341'>341</a>
+<a name='L342'></a><a href='#L342'>342</a>
+<a name='L343'></a><a href='#L343'>343</a>
+<a name='L344'></a><a href='#L344'>344</a>
+<a name='L345'></a><a href='#L345'>345</a>
+<a name='L346'></a><a href='#L346'>346</a>
+<a name='L347'></a><a href='#L347'>347</a>
+<a name='L348'></a><a href='#L348'>348</a>
+<a name='L349'></a><a href='#L349'>349</a>
+<a name='L350'></a><a href='#L350'>350</a>
+<a name='L351'></a><a href='#L351'>351</a>
+<a name='L352'></a><a href='#L352'>352</a>
+<a name='L353'></a><a href='#L353'>353</a>
+<a name='L354'></a><a href='#L354'>354</a>
+<a name='L355'></a><a href='#L355'>355</a>
+<a name='L356'></a><a href='#L356'>356</a>
+<a name='L357'></a><a href='#L357'>357</a>
+<a name='L358'></a><a href='#L358'>358</a>
+<a name='L359'></a><a href='#L359'>359</a>
+<a name='L360'></a><a href='#L360'>360</a>
+<a name='L361'></a><a href='#L361'>361</a>
+<a name='L362'></a><a href='#L362'>362</a>
+<a name='L363'></a><a href='#L363'>363</a>
+<a name='L364'></a><a href='#L364'>364</a>
+<a name='L365'></a><a href='#L365'>365</a>
+<a name='L366'></a><a href='#L366'>366</a>
+<a name='L367'></a><a href='#L367'>367</a>
+<a name='L368'></a><a href='#L368'>368</a>
+<a name='L369'></a><a href='#L369'>369</a>
+<a name='L370'></a><a href='#L370'>370</a>
+<a name='L371'></a><a href='#L371'>371</a>
+<a name='L372'></a><a href='#L372'>372</a>
+<a name='L373'></a><a href='#L373'>373</a>
+<a name='L374'></a><a href='#L374'>374</a>
+<a name='L375'></a><a href='#L375'>375</a>
+<a name='L376'></a><a href='#L376'>376</a>
+<a name='L377'></a><a href='#L377'>377</a>
+<a name='L378'></a><a href='#L378'>378</a>
+<a name='L379'></a><a href='#L379'>379</a>
+<a name='L380'></a><a href='#L380'>380</a>
+<a name='L381'></a><a href='#L381'>381</a>
+<a name='L382'></a><a href='#L382'>382</a>
+<a name='L383'></a><a href='#L383'>383</a>
+<a name='L384'></a><a href='#L384'>384</a>
+<a name='L385'></a><a href='#L385'>385</a>
+<a name='L386'></a><a href='#L386'>386</a>
+<a name='L387'></a><a href='#L387'>387</a>
+<a name='L388'></a><a href='#L388'>388</a>
+<a name='L389'></a><a href='#L389'>389</a>
+<a name='L390'></a><a href='#L390'>390</a>
+<a name='L391'></a><a href='#L391'>391</a>
+<a name='L392'></a><a href='#L392'>392</a>
+<a name='L393'></a><a href='#L393'>393</a>
+<a name='L394'></a><a href='#L394'>394</a>
+<a name='L395'></a><a href='#L395'>395</a>
+<a name='L396'></a><a href='#L396'>396</a>
+<a name='L397'></a><a href='#L397'>397</a>
+<a name='L398'></a><a href='#L398'>398</a>
+<a name='L399'></a><a href='#L399'>399</a>
+<a name='L400'></a><a href='#L400'>400</a>
+<a name='L401'></a><a href='#L401'>401</a>
+<a name='L402'></a><a href='#L402'>402</a>
+<a name='L403'></a><a href='#L403'>403</a>
+<a name='L404'></a><a href='#L404'>404</a>
+<a name='L405'></a><a href='#L405'>405</a>
+<a name='L406'></a><a href='#L406'>406</a>
+<a name='L407'></a><a href='#L407'>407</a>
+<a name='L408'></a><a href='#L408'>408</a>
+<a name='L409'></a><a href='#L409'>409</a>
+<a name='L410'></a><a href='#L410'>410</a>
+<a name='L411'></a><a href='#L411'>411</a>
+<a name='L412'></a><a href='#L412'>412</a>
+<a name='L413'></a><a href='#L413'>413</a>
+<a name='L414'></a><a href='#L414'>414</a>
+<a name='L415'></a><a href='#L415'>415</a>
+<a name='L416'></a><a href='#L416'>416</a>
+<a name='L417'></a><a href='#L417'>417</a>
+<a name='L418'></a><a href='#L418'>418</a>
+<a name='L419'></a><a href='#L419'>419</a>
+<a name='L420'></a><a href='#L420'>420</a>
+<a name='L421'></a><a href='#L421'>421</a>
+<a name='L422'></a><a href='#L422'>422</a>
+<a name='L423'></a><a href='#L423'>423</a>
+<a name='L424'></a><a href='#L424'>424</a>
+<a name='L425'></a><a href='#L425'>425</a>
+<a name='L426'></a><a href='#L426'>426</a>
+<a name='L427'></a><a href='#L427'>427</a>
+<a name='L428'></a><a href='#L428'>428</a>
+<a name='L429'></a><a href='#L429'>429</a>
+<a name='L430'></a><a href='#L430'>430</a>
+<a name='L431'></a><a href='#L431'>431</a>
+<a name='L432'></a><a href='#L432'>432</a>
+<a name='L433'></a><a href='#L433'>433</a>
+<a name='L434'></a><a href='#L434'>434</a>
+<a name='L435'></a><a href='#L435'>435</a>
+<a name='L436'></a><a href='#L436'>436</a>
+<a name='L437'></a><a href='#L437'>437</a>
+<a name='L438'></a><a href='#L438'>438</a>
+<a name='L439'></a><a href='#L439'>439</a>
+<a name='L440'></a><a href='#L440'>440</a>
+<a name='L441'></a><a href='#L441'>441</a>
+<a name='L442'></a><a href='#L442'>442</a>
+<a name='L443'></a><a href='#L443'>443</a>
+<a name='L444'></a><a href='#L444'>444</a>
+<a name='L445'></a><a href='#L445'>445</a>
+<a name='L446'></a><a href='#L446'>446</a>
+<a name='L447'></a><a href='#L447'>447</a>
+<a name='L448'></a><a href='#L448'>448</a>
+<a name='L449'></a><a href='#L449'>449</a>
+<a name='L450'></a><a href='#L450'>450</a>
+<a name='L451'></a><a href='#L451'>451</a>
+<a name='L452'></a><a href='#L452'>452</a>
+<a name='L453'></a><a href='#L453'>453</a>
+<a name='L454'></a><a href='#L454'>454</a>
+<a name='L455'></a><a href='#L455'>455</a>
+<a name='L456'></a><a href='#L456'>456</a>
+<a name='L457'></a><a href='#L457'>457</a>
+<a name='L458'></a><a href='#L458'>458</a>
+<a name='L459'></a><a href='#L459'>459</a>
+<a name='L460'></a><a href='#L460'>460</a>
+<a name='L461'></a><a href='#L461'>461</a>
+<a name='L462'></a><a href='#L462'>462</a>
+<a name='L463'></a><a href='#L463'>463</a>
+<a name='L464'></a><a href='#L464'>464</a>
+<a name='L465'></a><a href='#L465'>465</a>
+<a name='L466'></a><a href='#L466'>466</a>
+<a name='L467'></a><a href='#L467'>467</a>
+<a name='L468'></a><a href='#L468'>468</a>
+<a name='L469'></a><a href='#L469'>469</a>
+<a name='L470'></a><a href='#L470'>470</a>
+<a name='L471'></a><a href='#L471'>471</a>
+<a name='L472'></a><a href='#L472'>472</a>
+<a name='L473'></a><a href='#L473'>473</a>
+<a name='L474'></a><a href='#L474'>474</a>
+<a name='L475'></a><a href='#L475'>475</a>
+<a name='L476'></a><a href='#L476'>476</a>
+<a name='L477'></a><a href='#L477'>477</a>
+<a name='L478'></a><a href='#L478'>478</a>
+<a name='L479'></a><a href='#L479'>479</a>
+<a name='L480'></a><a href='#L480'>480</a>
+<a name='L481'></a><a href='#L481'>481</a>
+<a name='L482'></a><a href='#L482'>482</a>
+<a name='L483'></a><a href='#L483'>483</a>
+<a name='L484'></a><a href='#L484'>484</a>
+<a name='L485'></a><a href='#L485'>485</a>
+<a name='L486'></a><a href='#L486'>486</a>
+<a name='L487'></a><a href='#L487'>487</a>
+<a name='L488'></a><a href='#L488'>488</a>
+<a name='L489'></a><a href='#L489'>489</a>
+<a name='L490'></a><a href='#L490'>490</a>
+<a name='L491'></a><a href='#L491'>491</a>
+<a name='L492'></a><a href='#L492'>492</a>
+<a name='L493'></a><a href='#L493'>493</a>
+<a name='L494'></a><a href='#L494'>494</a>
+<a name='L495'></a><a href='#L495'>495</a>
+<a name='L496'></a><a href='#L496'>496</a>
+<a name='L497'></a><a href='#L497'>497</a>
+<a name='L498'></a><a href='#L498'>498</a>
+<a name='L499'></a><a href='#L499'>499</a>
+<a name='L500'></a><a href='#L500'>500</a>
+<a name='L501'></a><a href='#L501'>501</a>
+<a name='L502'></a><a href='#L502'>502</a>
+<a name='L503'></a><a href='#L503'>503</a>
+<a name='L504'></a><a href='#L504'>504</a>
+<a name='L505'></a><a href='#L505'>505</a>
+<a name='L506'></a><a href='#L506'>506</a>
+<a name='L507'></a><a href='#L507'>507</a>
+<a name='L508'></a><a href='#L508'>508</a>
+<a name='L509'></a><a href='#L509'>509</a>
+<a name='L510'></a><a href='#L510'>510</a>
+<a name='L511'></a><a href='#L511'>511</a>
+<a name='L512'></a><a href='#L512'>512</a>
+<a name='L513'></a><a href='#L513'>513</a>
+<a name='L514'></a><a href='#L514'>514</a>
+<a name='L515'></a><a href='#L515'>515</a>
+<a name='L516'></a><a href='#L516'>516</a>
+<a name='L517'></a><a href='#L517'>517</a>
+<a name='L518'></a><a href='#L518'>518</a>
+<a name='L519'></a><a href='#L519'>519</a>
+<a name='L520'></a><a href='#L520'>520</a>
+<a name='L521'></a><a href='#L521'>521</a>
+<a name='L522'></a><a href='#L522'>522</a>
+<a name='L523'></a><a href='#L523'>523</a>
+<a name='L524'></a><a href='#L524'>524</a>
+<a name='L525'></a><a href='#L525'>525</a>
+<a name='L526'></a><a href='#L526'>526</a>
+<a name='L527'></a><a href='#L527'>527</a>
+<a name='L528'></a><a href='#L528'>528</a>
+<a name='L529'></a><a href='#L529'>529</a>
+<a name='L530'></a><a href='#L530'>530</a>
+<a name='L531'></a><a href='#L531'>531</a>
+<a name='L532'></a><a href='#L532'>532</a>
+<a name='L533'></a><a href='#L533'>533</a>
+<a name='L534'></a><a href='#L534'>534</a>
+<a name='L535'></a><a href='#L535'>535</a>
+<a name='L536'></a><a href='#L536'>536</a>
+<a name='L537'></a><a href='#L537'>537</a>
+<a name='L538'></a><a href='#L538'>538</a>
+<a name='L539'></a><a href='#L539'>539</a>
+<a name='L540'></a><a href='#L540'>540</a>
+<a name='L541'></a><a href='#L541'>541</a>
+<a name='L542'></a><a href='#L542'>542</a>
+<a name='L543'></a><a href='#L543'>543</a>
+<a name='L544'></a><a href='#L544'>544</a>
+<a name='L545'></a><a href='#L545'>545</a>
+<a name='L546'></a><a href='#L546'>546</a>
+<a name='L547'></a><a href='#L547'>547</a>
+<a name='L548'></a><a href='#L548'>548</a>
+<a name='L549'></a><a href='#L549'>549</a>
+<a name='L550'></a><a href='#L550'>550</a>
+<a name='L551'></a><a href='#L551'>551</a>
+<a name='L552'></a><a href='#L552'>552</a>
+<a name='L553'></a><a href='#L553'>553</a>
+<a name='L554'></a><a href='#L554'>554</a>
+<a name='L555'></a><a href='#L555'>555</a>
+<a name='L556'></a><a href='#L556'>556</a>
+<a name='L557'></a><a href='#L557'>557</a>
+<a name='L558'></a><a href='#L558'>558</a>
+<a name='L559'></a><a href='#L559'>559</a>
+<a name='L560'></a><a href='#L560'>560</a>
+<a name='L561'></a><a href='#L561'>561</a>
+<a name='L562'></a><a href='#L562'>562</a>
+<a name='L563'></a><a href='#L563'>563</a>
+<a name='L564'></a><a href='#L564'>564</a>
+<a name='L565'></a><a href='#L565'>565</a>
+<a name='L566'></a><a href='#L566'>566</a>
+<a name='L567'></a><a href='#L567'>567</a>
+<a name='L568'></a><a href='#L568'>568</a>
+<a name='L569'></a><a href='#L569'>569</a>
+<a name='L570'></a><a href='#L570'>570</a>
+<a name='L571'></a><a href='#L571'>571</a>
+<a name='L572'></a><a href='#L572'>572</a>
+<a name='L573'></a><a href='#L573'>573</a>
+<a name='L574'></a><a href='#L574'>574</a>
+<a name='L575'></a><a href='#L575'>575</a>
+<a name='L576'></a><a href='#L576'>576</a>
+<a name='L577'></a><a href='#L577'>577</a>
+<a name='L578'></a><a href='#L578'>578</a>
+<a name='L579'></a><a href='#L579'>579</a>
+<a name='L580'></a><a href='#L580'>580</a>
+<a name='L581'></a><a href='#L581'>581</a>
+<a name='L582'></a><a href='#L582'>582</a>
+<a name='L583'></a><a href='#L583'>583</a>
+<a name='L584'></a><a href='#L584'>584</a>
+<a name='L585'></a><a href='#L585'>585</a>
+<a name='L586'></a><a href='#L586'>586</a>
+<a name='L587'></a><a href='#L587'>587</a>
+<a name='L588'></a><a href='#L588'>588</a>
+<a name='L589'></a><a href='#L589'>589</a>
+<a name='L590'></a><a href='#L590'>590</a>
+<a name='L591'></a><a href='#L591'>591</a>
+<a name='L592'></a><a href='#L592'>592</a>
+<a name='L593'></a><a href='#L593'>593</a>
+<a name='L594'></a><a href='#L594'>594</a>
+<a name='L595'></a><a href='#L595'>595</a>
+<a name='L596'></a><a href='#L596'>596</a>
+<a name='L597'></a><a href='#L597'>597</a>
+<a name='L598'></a><a href='#L598'>598</a>
+<a name='L599'></a><a href='#L599'>599</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var Class = __webpack_require__(/*! ../../utils/Class */ "./node_modules/phaser/src/utils/Class.js");
+var COLLIDES = __webpack_require__(/*! ./COLLIDES */ "./node_modules/phaser/src/physics/impact/COLLIDES.js");
+var GetVelocity = __webpack_require__(/*! ./GetVelocity */ "./node_modules/phaser/src/physics/impact/GetVelocity.js");
+var TYPE = __webpack_require__(/*! ./TYPE */ "./node_modules/phaser/src/physics/impact/TYPE.js");
+var UpdateMotion = __webpack_require__(/*! ./UpdateMotion */ "./node_modules/phaser/src/physics/impact/UpdateMotion.js");
+&nbsp;
+/**
+ * @callback Phaser.Types.Physics.Impact.BodyUpdateCallback
+ * @since 3.0.0
+ *
+ * @param {Phaser.Physics.Impact.Body} body - [description]
+ */
+&nbsp;
+/**
+ * @classdesc
+ * An Impact.js compatible physics body.
+ * This re-creates the properties you'd get on an Entity and the math needed to update them.
+ *
+ * @class Body
+ * @memberof Phaser.Physics.Impact
+ * @constructor
+ * @since 3.0.0
+ *
+ * @param {Phaser.Physics.Impact.World} world - [description]
+ * @param {number} x - [description]
+ * @param {number} y - [description]
+ * @param {number} [sx=16] - [description]
+ * @param {number} [sy=16] - [description]
+ */
+var Body = new Class({
+&nbsp;
+    initialize:
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    function Body (world, x, y, sx, sy)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        if (sx === undefined) { sx = 16; }</span>
+<span class="cstat-no" title="statement not covered" >        if (sy === undefined) { sy = sx; }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#world</span>
+<span class="cstat-no" title="statement not covered" >         * @type {Phaser.Physics.Impact.World}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.world = world;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#gameObject</span>
+<span class="cstat-no" title="statement not covered" >         * @type {Phaser.GameObjects.GameObject}</span>
+<span class="cstat-no" title="statement not covered" >         * @default null</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.gameObject = null;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#enabled</span>
+<span class="cstat-no" title="statement not covered" >         * @type {boolean}</span>
+<span class="cstat-no" title="statement not covered" >         * @default true</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.enabled = true;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * The ImpactBody, ImpactSprite or ImpactImage object that owns this Body, if any.</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#parent</span>
+<span class="cstat-no" title="statement not covered" >         * @type {?(Phaser.Physics.Impact.ImpactBody|Phaser.Physics.Impact.ImpactImage|Phaser.Physics.Impact.ImpactSprite)}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.parent;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#id</span>
+<span class="cstat-no" title="statement not covered" >         * @type {integer}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.id = world.getNextID();</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#name</span>
+<span class="cstat-no" title="statement not covered" >         * @type {string}</span>
+<span class="cstat-no" title="statement not covered" >         * @default ''</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.name = '';</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#size</span>
+<span class="cstat-no" title="statement not covered" >         * @type {Phaser.Types.Math.Vector2Like}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.size = { x: sx, y: sy };</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#offset</span>
+<span class="cstat-no" title="statement not covered" >         * @type {Phaser.Types.Math.Vector2Like}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.offset = { x: 0, y: 0 };</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#pos</span>
+<span class="cstat-no" title="statement not covered" >         * @type {Phaser.Types.Math.Vector2Like}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.pos = { x: x, y: y };</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#last</span>
+<span class="cstat-no" title="statement not covered" >         * @type {Phaser.Types.Math.Vector2Like}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.last = { x: x, y: y };</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#vel</span>
+<span class="cstat-no" title="statement not covered" >         * @type {Phaser.Types.Math.Vector2Like}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.vel = { x: 0, y: 0 };</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#accel</span>
+<span class="cstat-no" title="statement not covered" >         * @type {Phaser.Types.Math.Vector2Like}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.accel = { x: 0, y: 0 };</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#friction</span>
+<span class="cstat-no" title="statement not covered" >         * @type {Phaser.Types.Math.Vector2Like}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.friction = { x: 0, y: 0 };</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#maxVel</span>
+<span class="cstat-no" title="statement not covered" >         * @type {Phaser.Types.Math.Vector2Like}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.maxVel = { x: world.defaults.maxVelocityX, y: world.defaults.maxVelocityY };</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#standing</span>
+<span class="cstat-no" title="statement not covered" >         * @type {boolean}</span>
+<span class="cstat-no" title="statement not covered" >         * @default false</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.standing = false;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#gravityFactor</span>
+<span class="cstat-no" title="statement not covered" >         * @type {number}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.gravityFactor = world.defaults.gravityFactor;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#bounciness</span>
+<span class="cstat-no" title="statement not covered" >         * @type {number}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.bounciness = world.defaults.bounciness;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#minBounceVelocity</span>
+<span class="cstat-no" title="statement not covered" >         * @type {number}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.minBounceVelocity = world.defaults.minBounceVelocity;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#accelGround</span>
+<span class="cstat-no" title="statement not covered" >         * @type {number}</span>
+<span class="cstat-no" title="statement not covered" >         * @default 0</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.accelGround = 0;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#accelAir</span>
+<span class="cstat-no" title="statement not covered" >         * @type {number}</span>
+<span class="cstat-no" title="statement not covered" >         * @default 0</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.accelAir = 0;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#jumpSpeed</span>
+<span class="cstat-no" title="statement not covered" >         * @type {number}</span>
+<span class="cstat-no" title="statement not covered" >         * @default 0</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.jumpSpeed = 0;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#type</span>
+<span class="cstat-no" title="statement not covered" >         * @type {Phaser.Physics.Impact.TYPE}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.type = TYPE.NONE;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#checkAgainst</span>
+<span class="cstat-no" title="statement not covered" >         * @type {Phaser.Physics.Impact.TYPE}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.checkAgainst = TYPE.NONE;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#collides</span>
+<span class="cstat-no" title="statement not covered" >         * @type {Phaser.Physics.Impact.COLLIDES}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.collides = COLLIDES.NEVER;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#debugShowBody</span>
+<span class="cstat-no" title="statement not covered" >         * @type {boolean}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.debugShowBody = world.defaults.debugShowBody;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#debugShowVelocity</span>
+<span class="cstat-no" title="statement not covered" >         * @type {boolean}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.debugShowVelocity = world.defaults.debugShowVelocity;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#debugBodyColor</span>
+<span class="cstat-no" title="statement not covered" >         * @type {integer}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.debugBodyColor = world.defaults.bodyDebugColor;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * [description]</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#updateCallback</span>
+<span class="cstat-no" title="statement not covered" >         * @type {?Phaser.Types.Physics.Impact.BodyUpdateCallback}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.updateCallback;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * min 44 deg, max 136 deg</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Impact.Body#slopeStanding</span>
+<span class="cstat-no" title="statement not covered" >         * @type {{ min: number, max: number }}</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.slopeStanding = { min: 0.767944870877505, max: 2.3736477827122884 };</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * [description]
+     *
+     * @method Phaser.Physics.Impact.Body#reset
+     * @since 3.0.0
+     *
+     * @param {number} x - [description]
+     * @param {number} y - [description]
+     */
+<span class="cstat-no" title="statement not covered" >    reset: function (x, y)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        this.pos = { x: x, y: y };</span>
+<span class="cstat-no" title="statement not covered" >        this.last = { x: x, y: y };</span>
+<span class="cstat-no" title="statement not covered" >        this.vel = { x: 0, y: 0 };</span>
+<span class="cstat-no" title="statement not covered" >        this.accel = { x: 0, y: 0 };</span>
+<span class="cstat-no" title="statement not covered" >        this.friction = { x: 0, y: 0 };</span>
+<span class="cstat-no" title="statement not covered" >        this.maxVel = { x: 100, y: 100 };</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        this.standing = false;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        this.gravityFactor = 1;</span>
+<span class="cstat-no" title="statement not covered" >        this.bounciness = 0;</span>
+<span class="cstat-no" title="statement not covered" >        this.minBounceVelocity = 40;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        this.accelGround = 0;</span>
+<span class="cstat-no" title="statement not covered" >        this.accelAir = 0;</span>
+<span class="cstat-no" title="statement not covered" >        this.jumpSpeed = 0;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        this.type = TYPE.NONE;</span>
+<span class="cstat-no" title="statement not covered" >        this.checkAgainst = TYPE.NONE;</span>
+<span class="cstat-no" title="statement not covered" >        this.collides = COLLIDES.NEVER;</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * [description]
+     *
+     * @method Phaser.Physics.Impact.Body#update
+     * @since 3.0.0
+     *
+     * @param {number} delta - The delta time in ms since the last frame. This is a smoothed and capped value based on the FPS rate.
+     */
+<span class="cstat-no" title="statement not covered" >    update: function (delta)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        var pos = this.pos;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        this.last.x = pos.x;</span>
+<span class="cstat-no" title="statement not covered" >        this.last.y = pos.y;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        this.vel.y += this.world.gravity * delta * this.gravityFactor;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        this.vel.x = GetVelocity(delta, this.vel.x, this.accel.x, this.friction.x, this.maxVel.x);</span>
+<span class="cstat-no" title="statement not covered" >        this.vel.y = GetVelocity(delta, this.vel.y, this.accel.y, this.friction.y, this.maxVel.y);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        var mx = this.vel.x * delta;</span>
+<span class="cstat-no" title="statement not covered" >        var my = this.vel.y * delta;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        var res = this.world.collisionMap.trace(pos.x, pos.y, mx, my, this.size.x, this.size.y);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if (this.handleMovementTrace(res))</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            UpdateMotion(this, res);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        var go = this.gameObject;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if (go)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            go.x = (pos.x - this.offset.x) + go.displayOriginX * go.scaleX;</span>
+<span class="cstat-no" title="statement not covered" >            go.y = (pos.y - this.offset.y) + go.displayOriginY * go.scaleY;</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if (this.updateCallback)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            this.updateCallback(this);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * [description]
+     *
+     * @method Phaser.Physics.Impact.Body#drawDebug
+     * @since 3.0.0
+     *
+     * @param {Phaser.GameObjects.Graphics} graphic - [description]
+     */
+<span class="cstat-no" title="statement not covered" >    drawDebug: function (graphic)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        var pos = this.pos;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if (this.debugShowBody)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            graphic.lineStyle(1, this.debugBodyColor, 1);</span>
+<span class="cstat-no" title="statement not covered" >            graphic.strokeRect(pos.x, pos.y, this.size.x, this.size.y);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if (this.debugShowVelocity)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            var x = pos.x + this.size.x / 2;</span>
+<span class="cstat-no" title="statement not covered" >            var y = pos.y + this.size.y / 2;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            graphic.lineStyle(1, this.world.defaults.velocityDebugColor, 1);</span>
+<span class="cstat-no" title="statement not covered" >            graphic.lineBetween(x, y, x + this.vel.x, y + this.vel.y);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * [description]
+     *
+     * @method Phaser.Physics.Impact.Body#willDrawDebug
+     * @since 3.0.0
+     *
+     * @return {boolean} [description]
+     */
+<span class="cstat-no" title="statement not covered" >    willDrawDebug: function ()</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        return (this.debugShowBody || this.debugShowVelocity);</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * [description]
+     *
+     * @method Phaser.Physics.Impact.Body#skipHash
+     * @since 3.0.0
+     *
+     * @return {boolean} [description]
+     */
+<span class="cstat-no" title="statement not covered" >    skipHash: function ()</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        return (!this.enabled || (this.type === 0 &amp;&amp; this.checkAgainst === 0 &amp;&amp; this.collides === 0));</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * Determines whether the body collides with the `other` one or not.
+     *
+     * @method Phaser.Physics.Impact.Body#touches
+     * @since 3.0.0
+     *
+     * @param {Phaser.Physics.Impact.Body} other - [description]
+     *
+     * @return {boolean} [description]
+     */
+<span class="cstat-no" title="statement not covered" >    touches: function (other)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        return !(</span>
+<span class="cstat-no" title="statement not covered" >            this.pos.x &gt;= other.pos.x + other.size.x ||</span>
+<span class="cstat-no" title="statement not covered" >            this.pos.x + this.size.x &lt;= other.pos.x ||</span>
+<span class="cstat-no" title="statement not covered" >            this.pos.y &gt;= other.pos.y + other.size.y ||</span>
+<span class="cstat-no" title="statement not covered" >            this.pos.y + this.size.y &lt;= other.pos.y</span>
+<span class="cstat-no" title="statement not covered" >        );</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * Reset the size and position of the physics body.
+     *
+     * @method Phaser.Physics.Impact.Body#resetSize
+     * @since 3.0.0
+     *
+     * @param {number} x - The x coordinate to position the body.
+     * @param {number} y - The y coordinate to position the body.
+     * @param {number} width - The width of the body.
+     * @param {number} height - The height of the body.
+     *
+     * @return {Phaser.Physics.Impact.Body} This Body object.
+     */
+<span class="cstat-no" title="statement not covered" >    resetSize: function (x, y, width, height)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        this.pos.x = x;</span>
+<span class="cstat-no" title="statement not covered" >        this.pos.y = y;</span>
+<span class="cstat-no" title="statement not covered" >        this.size.x = width;</span>
+<span class="cstat-no" title="statement not covered" >        this.size.y = height;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        return this;</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * Export this body object to JSON.
+     *
+     * @method Phaser.Physics.Impact.Body#toJSON
+     * @since 3.0.0
+     *
+     * @return {Phaser.Types.Physics.Impact.JSONImpactBody} JSON representation of this body object.
+     */
+<span class="cstat-no" title="statement not covered" >    toJSON: function ()</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        var output = {</span>
+<span class="cstat-no" title="statement not covered" >            name: this.name,</span>
+<span class="cstat-no" title="statement not covered" >            size: { x: this.size.x, y: this.size.y },</span>
+<span class="cstat-no" title="statement not covered" >            pos: { x: this.pos.x, y: this.pos.y },</span>
+<span class="cstat-no" title="statement not covered" >            vel: { x: this.vel.x, y: this.vel.y },</span>
+<span class="cstat-no" title="statement not covered" >            accel: { x: this.accel.x, y: this.accel.y },</span>
+<span class="cstat-no" title="statement not covered" >            friction: { x: this.friction.x, y: this.friction.y },</span>
+<span class="cstat-no" title="statement not covered" >            maxVel: { x: this.maxVel.x, y: this.maxVel.y },</span>
+<span class="cstat-no" title="statement not covered" >            gravityFactor: this.gravityFactor,</span>
+<span class="cstat-no" title="statement not covered" >            bounciness: this.bounciness,</span>
+<span class="cstat-no" title="statement not covered" >            minBounceVelocity: this.minBounceVelocity,</span>
+<span class="cstat-no" title="statement not covered" >            type: this.type,</span>
+<span class="cstat-no" title="statement not covered" >            checkAgainst: this.checkAgainst,</span>
+<span class="cstat-no" title="statement not covered" >            collides: this.collides</span>
+<span class="cstat-no" title="statement not covered" >        };</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        return output;</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * [description]
+     *
+     * @method Phaser.Physics.Impact.Body#fromJSON
+     * @todo Code it!
+     * @since 3.0.0
+     *
+     * @param {object} config - [description]
+     */
+<span class="cstat-no" title="statement not covered" >    fromJSON: function ()</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * Can be overridden by user code
+     *
+     * @method Phaser.Physics.Impact.Body#check
+     * @since 3.0.0
+     *
+     * @param {Phaser.Physics.Impact.Body} other - [description]
+     */
+<span class="cstat-no" title="statement not covered" >    check: function ()</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * Can be overridden by user code
+     *
+     * @method Phaser.Physics.Impact.Body#collideWith
+     * @since 3.0.0
+     *
+     * @param {Phaser.Physics.Impact.Body} other - [description]
+     * @param {string} axis - [description]
+     */
+<span class="cstat-no" title="statement not covered" >    collideWith: function (other, axis)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        if (this.parent &amp;&amp; this.parent._collideCallback)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            this.parent._collideCallback.call(this.parent._callbackScope, this, other, axis);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * Can be overridden by user code but must return a boolean.
+     *
+     * @method Phaser.Physics.Impact.Body#handleMovementTrace
+     * @since 3.0.0
+     *
+     * @param {number} res - [description]
+     *
+     * @return {boolean} [description]
+     */
+<span class="cstat-no" title="statement not covered" >    handleMovementTrace: function ()</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        return true;</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * [description]
+     *
+     * @method Phaser.Physics.Impact.Body#destroy
+     * @since 3.0.0
+     */
+<span class="cstat-no" title="statement not covered" >    destroy: function ()</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        this.world.remove(this);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        this.enabled = false;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        this.world = null;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        this.gameObject = null;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        this.parent = null;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+&nbsp;
+});
+&nbsp;
+module.exports = Body;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9waHlzaWNzL2ltcGFjdC9Cb2R5LmpzPzBlOTQiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCOztBQUVBLFlBQVksbUJBQU8sQ0FBQyxtRUFBbUI7QUFDdkMsZUFBZSxtQkFBTyxDQUFDLHdFQUFZO0FBQ25DLGtCQUFrQixtQkFBTyxDQUFDLDhFQUFlO0FBQ3pDLFdBQVcsbUJBQU8sQ0FBQyxnRUFBUTtBQUMzQixtQkFBbUIsbUJBQU8sQ0FBQyxnRkFBZ0I7O0FBRTNDO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsV0FBVywyQkFBMkI7QUFDdEM7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxXQUFXLDRCQUE0QjtBQUN2QyxXQUFXLE9BQU87QUFDbEIsV0FBVyxPQUFPO0FBQ2xCLFdBQVcsT0FBTztBQUNsQixXQUFXLE9BQU87QUFDbEI7QUFDQTs7QUFFQTs7QUFFQTtBQUNBO0FBQ0EsK0JBQStCLFNBQVM7QUFDeEMsK0JBQStCLFNBQVM7O0FBRXhDO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGtCQUFrQjtBQUNsQjtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGtCQUFrQjtBQUNsQjtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGtCQUFrQjtBQUNsQjtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQSxrQkFBa0I7QUFDbEI7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQSxxQkFBcUI7O0FBRXJCO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQSx1QkFBdUI7O0FBRXZCO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQSxvQkFBb0I7O0FBRXBCO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQSxxQkFBcUI7O0FBRXJCO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQSxvQkFBb0I7O0FBRXBCO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQSxzQkFBc0I7O0FBRXRCO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQSx5QkFBeUI7O0FBRXpCO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQSx1QkFBdUI7O0FBRXZCO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGtCQUFrQjtBQUNsQjtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQSxrQkFBa0I7QUFDbEI7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGtCQUFrQjtBQUNsQjtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQSxrQkFBa0I7QUFDbEI7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGtCQUFrQjtBQUNsQjtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQSxrQkFBa0I7QUFDbEI7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLG1CQUFtQjtBQUNuQjtBQUNBO0FBQ0EsOEJBQThCO0FBQzlCLEtBQUs7O0FBRUw7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsZUFBZSxPQUFPO0FBQ3RCLGVBQWUsT0FBTztBQUN0QjtBQUNBO0FBQ0E7QUFDQSxvQkFBb0I7QUFDcEIscUJBQXFCO0FBQ3JCLG9CQUFvQjtBQUNwQixzQkFBc0I7QUFDdEIseUJBQXlCO0FBQ3pCLHVCQUF1Qjs7QUFFdkI7O0FBRUE7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQSxLQUFLOztBQUVMO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGVBQWUsT0FBTztBQUN0QjtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBOztBQUVBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsS0FBSzs7QUFFTDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxlQUFlLDRCQUE0QjtBQUMzQztBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBLEtBQUs7O0FBRUw7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsZ0JBQWdCLFFBQVE7QUFDeEI7QUFDQTtBQUNBO0FBQ0E7QUFDQSxLQUFLOztBQUVMO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGdCQUFnQixRQUFRO0FBQ3hCO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsS0FBSzs7QUFFTDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxlQUFlLDJCQUEyQjtBQUMxQztBQUNBLGdCQUFnQixRQUFRO0FBQ3hCO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLEtBQUs7O0FBRUw7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsZUFBZSxPQUFPO0FBQ3RCLGVBQWUsT0FBTztBQUN0QixlQUFlLE9BQU87QUFDdEIsZUFBZSxPQUFPO0FBQ3RCO0FBQ0EsZ0JBQWdCLDJCQUEyQjtBQUMzQztBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBLEtBQUs7O0FBRUw7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsZ0JBQWdCLDJDQUEyQztBQUMzRDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsbUJBQW1CLGlDQUFpQztBQUNwRCxrQkFBa0IsK0JBQStCO0FBQ2pELGtCQUFrQiwrQkFBK0I7QUFDakQsb0JBQW9CLG1DQUFtQztBQUN2RCx1QkFBdUIseUNBQXlDO0FBQ2hFLHFCQUFxQixxQ0FBcUM7QUFDMUQ7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQSxLQUFLOztBQUVMO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsZUFBZSxPQUFPO0FBQ3RCO0FBQ0E7QUFDQTtBQUNBLEtBQUs7O0FBRUw7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsZUFBZSwyQkFBMkI7QUFDMUM7QUFDQTtBQUNBO0FBQ0EsS0FBSzs7QUFFTDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxlQUFlLDJCQUEyQjtBQUMxQyxlQUFlLE9BQU87QUFDdEI7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxLQUFLOztBQUVMO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGVBQWUsT0FBTztBQUN0QjtBQUNBLGdCQUFnQixRQUFRO0FBQ3hCO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsS0FBSzs7QUFFTDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7O0FBRUE7O0FBRUE7O0FBRUE7QUFDQTs7QUFFQSxDQUFDOztBQUVEIiwiZmlsZSI6Ii4vbm9kZV9tb2R1bGVzL3BoYXNlci9zcmMvcGh5c2ljcy9pbXBhY3QvQm9keS5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxyXG4gKiBAYXV0aG9yICAgICAgIFJpY2hhcmQgRGF2ZXkgPHJpY2hAcGhvdG9uc3Rvcm0uY29tPlxyXG4gKiBAY29weXJpZ2h0ICAgIDIwMTkgUGhvdG9uIFN0b3JtIEx0ZC5cclxuICogQGxpY2Vuc2UgICAgICB7QGxpbmsgaHR0cHM6Ly9vcGVuc291cmNlLm9yZy9saWNlbnNlcy9NSVR8TUlUIExpY2Vuc2V9XHJcbiAqL1xyXG5cclxudmFyIENsYXNzID0gcmVxdWlyZSgnLi4vLi4vdXRpbHMvQ2xhc3MnKTtcclxudmFyIENPTExJREVTID0gcmVxdWlyZSgnLi9DT0xMSURFUycpO1xyXG52YXIgR2V0VmVsb2NpdHkgPSByZXF1aXJlKCcuL0dldFZlbG9jaXR5Jyk7XHJcbnZhciBUWVBFID0gcmVxdWlyZSgnLi9UWVBFJyk7XHJcbnZhciBVcGRhdGVNb3Rpb24gPSByZXF1aXJlKCcuL1VwZGF0ZU1vdGlvbicpO1xyXG5cclxuLyoqXHJcbiAqIEBjYWxsYmFjayBQaGFzZXIuVHlwZXMuUGh5c2ljcy5JbXBhY3QuQm9keVVwZGF0ZUNhbGxiYWNrXHJcbiAqIEBzaW5jZSAzLjAuMFxyXG4gKlxyXG4gKiBAcGFyYW0ge1BoYXNlci5QaHlzaWNzLkltcGFjdC5Cb2R5fSBib2R5IC0gW2Rlc2NyaXB0aW9uXVxyXG4gKi9cclxuXHJcbi8qKlxyXG4gKiBAY2xhc3NkZXNjXHJcbiAqIEFuIEltcGFjdC5qcyBjb21wYXRpYmxlIHBoeXNpY3MgYm9keS5cclxuICogVGhpcyByZS1jcmVhdGVzIHRoZSBwcm9wZXJ0aWVzIHlvdSdkIGdldCBvbiBhbiBFbnRpdHkgYW5kIHRoZSBtYXRoIG5lZWRlZCB0byB1cGRhdGUgdGhlbS5cclxuICpcclxuICogQGNsYXNzIEJvZHlcclxuICogQG1lbWJlcm9mIFBoYXNlci5QaHlzaWNzLkltcGFjdFxyXG4gKiBAY29uc3RydWN0b3JcclxuICogQHNpbmNlIDMuMC4wXHJcbiAqXHJcbiAqIEBwYXJhbSB7UGhhc2VyLlBoeXNpY3MuSW1wYWN0LldvcmxkfSB3b3JsZCAtIFtkZXNjcmlwdGlvbl1cclxuICogQHBhcmFtIHtudW1iZXJ9IHggLSBbZGVzY3JpcHRpb25dXHJcbiAqIEBwYXJhbSB7bnVtYmVyfSB5IC0gW2Rlc2NyaXB0aW9uXVxyXG4gKiBAcGFyYW0ge251bWJlcn0gW3N4PTE2XSAtIFtkZXNjcmlwdGlvbl1cclxuICogQHBhcmFtIHtudW1iZXJ9IFtzeT0xNl0gLSBbZGVzY3JpcHRpb25dXHJcbiAqL1xyXG52YXIgQm9keSA9IG5ldyBDbGFzcyh7XHJcblxyXG4gICAgaW5pdGlhbGl6ZTpcclxuXHJcbiAgICBmdW5jdGlvbiBCb2R5ICh3b3JsZCwgeCwgeSwgc3gsIHN5KVxyXG4gICAge1xyXG4gICAgICAgIGlmIChzeCA9PT0gdW5kZWZpbmVkKSB7IHN4ID0gMTY7IH1cclxuICAgICAgICBpZiAoc3kgPT09IHVuZGVmaW5lZCkgeyBzeSA9IHN4OyB9XHJcblxyXG4gICAgICAgIC8qKlxyXG4gICAgICAgICAqIFtkZXNjcmlwdGlvbl1cclxuICAgICAgICAgKlxyXG4gICAgICAgICAqIEBuYW1lIFBoYXNlci5QaHlzaWNzLkltcGFjdC5Cb2R5I3dvcmxkXHJcbiAgICAgICAgICogQHR5cGUge1BoYXNlci5QaHlzaWNzLkltcGFjdC5Xb3JsZH1cclxuICAgICAgICAgKiBAc2luY2UgMy4wLjBcclxuICAgICAgICAgKi9cclxuICAgICAgICB0aGlzLndvcmxkID0gd29ybGQ7XHJcblxyXG4gICAgICAgIC8qKlxyXG4gICAgICAgICAqIFtkZXNjcmlwdGlvbl1cclxuICAgICAgICAgKlxyXG4gICAgICAgICAqIEBuYW1lIFBoYXNlci5QaHlzaWNzLkltcGFjdC5Cb2R5I2dhbWVPYmplY3RcclxuICAgICAgICAgKiBAdHlwZSB7UGhhc2VyLkdhbWVPYmplY3RzLkdhbWVPYmplY3R9XHJcbiAgICAgICAgICogQGRlZmF1bHQgbnVsbFxyXG4gICAgICAgICAqIEBzaW5jZSAzLjAuMFxyXG4gICAgICAgICAqL1xyXG4gICAgICAgIHRoaXMuZ2FtZU9iamVjdCA9IG51bGw7XHJcblxyXG4gICAgICAgIC8qKlxyXG4gICAgICAgICAqIFtkZXNjcmlwdGlvbl1cclxuICAgICAgICAgKlxyXG4gICAgICAgICAqIEBuYW1lIFBoYXNlci5QaHlzaWNzLkltcGFjdC5Cb2R5I2VuYWJsZWRcclxuICAgICAgICAgKiBAdHlwZSB7Ym9vbGVhbn1cclxuICAgICAgICAgKiBAZGVmYXVsdCB0cnVlXHJcbiAgICAgICAgICogQHNpbmNlIDMuMC4wXHJcbiAgICAgICAgICovXHJcbiAgICAgICAgdGhpcy5lbmFibGVkID0gdHJ1ZTtcclxuXHJcbiAgICAgICAgLyoqXHJcbiAgICAgICAgICogVGhlIEltcGFjdEJvZHksIEltcGFjdFNwcml0ZSBvciBJbXBhY3RJbWFnZSBvYmplY3QgdGhhdCBvd25zIHRoaXMgQm9keSwgaWYgYW55LlxyXG4gICAgICAgICAqXHJcbiAgICAgICAgICogQG5hbWUgUGhhc2VyLlBoeXNpY3MuSW1wYWN0LkJvZHkjcGFyZW50XHJcbiAgICAgICAgICogQHR5cGUgez8oUGhhc2VyLlBoeXNpY3MuSW1wYWN0LkltcGFjdEJvZHl8UGhhc2VyLlBoeXNpY3MuSW1wYWN0LkltcGFjdEltYWdlfFBoYXNlci5QaHlzaWNzLkltcGFjdC5JbXBhY3RTcHJpdGUpfVxyXG4gICAgICAgICAqIEBzaW5jZSAzLjAuMFxyXG4gICAgICAgICAqL1xyXG4gICAgICAgIHRoaXMucGFyZW50O1xyXG5cclxuICAgICAgICAvKipcclxuICAgICAgICAgKiBbZGVzY3JpcHRpb25dXHJcbiAgICAgICAgICpcclxuICAgICAgICAgKiBAbmFtZSBQaGFzZXIuUGh5c2ljcy5JbXBhY3QuQm9keSNpZFxyXG4gICAgICAgICAqIEB0eXBlIHtpbnRlZ2VyfVxyXG4gICAgICAgICAqIEBzaW5jZSAzLjAuMFxyXG4gICAgICAgICAqL1xyXG4gICAgICAgIHRoaXMuaWQgPSB3b3JsZC5nZXROZXh0SUQoKTtcclxuXHJcbiAgICAgICAgLyoqXHJcbiAgICAgICAgICogW2Rlc2NyaXB0aW9uXVxyXG4gICAgICAgICAqXHJcbiAgICAgICAgICogQG5hbWUgUGhhc2VyLlBoeXNpY3MuSW1wYWN0LkJvZHkjbmFtZVxyXG4gICAgICAgICAqIEB0eXBlIHtzdHJpbmd9XHJcbiAgICAgICAgICogQGRlZmF1bHQgJydcclxuICAgICAgICAgKiBAc2luY2UgMy4wLjBcclxuICAgICAgICAgKi9cclxuICAgICAgICB0aGlzLm5hbWUgPSAnJztcclxuXHJcbiAgICAgICAgLyoqXHJcbiAgICAgICAgICogW2Rlc2NyaXB0aW9uXVxyXG4gICAgICAgICAqXHJcbiAgICAgICAgICogQG5hbWUgUGhhc2VyLlBoeXNpY3MuSW1wYWN0LkJvZHkjc2l6ZVxyXG4gICAgICAgICAqIEB0eXBlIHtQaGFzZXIuVHlwZXMuTWF0aC5WZWN0b3IyTGlrZX1cclxuICAgICAgICAgKiBAc2luY2UgMy4wLjBcclxuICAgICAgICAgKi9cclxuICAgICAgICB0aGlzLnNpemUgPSB7IHg6IHN4LCB5OiBzeSB9O1xyXG5cclxuICAgICAgICAvKipcclxuICAgICAgICAgKiBbZGVzY3JpcHRpb25dXHJcbiAgICAgICAgICpcclxuICAgICAgICAgKiBAbmFtZSBQaGFzZXIuUGh5c2ljcy5JbXBhY3QuQm9keSNvZmZzZXRcclxuICAgICAgICAgKiBAdHlwZSB7UGhhc2VyLlR5cGVzLk1hdGguVmVjdG9yMkxpa2V9XHJcbiAgICAgICAgICogQHNpbmNlIDMuMC4wXHJcbiAgICAgICAgICovXHJcbiAgICAgICAgdGhpcy5vZmZzZXQgPSB7IHg6IDAsIHk6IDAgfTtcclxuXHJcbiAgICAgICAgLyoqXHJcbiAgICAgICAgICogW2Rlc2NyaXB0aW9uXVxyXG4gICAgICAgICAqXHJcbiAgICAgICAgICogQG5hbWUgUGhhc2VyLlBoeXNpY3MuSW1wYWN0LkJvZHkjcG9zXHJcbiAgICAgICAgICogQHR5cGUge1BoYXNlci5UeXBlcy5NYXRoLlZlY3RvcjJMaWtlfVxyXG4gICAgICAgICAqIEBzaW5jZSAzLjAuMFxyXG4gICAgICAgICAqL1xyXG4gICAgICAgIHRoaXMucG9zID0geyB4OiB4LCB5OiB5IH07XHJcblxyXG4gICAgICAgIC8qKlxyXG4gICAgICAgICAqIFtkZXNjcmlwdGlvbl1cclxuICAgICAgICAgKlxyXG4gICAgICAgICAqIEBuYW1lIFBoYXNlci5QaHlzaWNzLkltcGFjdC5Cb2R5I2xhc3RcclxuICAgICAgICAgKiBAdHlwZSB7UGhhc2VyLlR5cGVzLk1hdGguVmVjdG9yMkxpa2V9XHJcbiAgICAgICAgICogQHNpbmNlIDMuMC4wXHJcbiAgICAgICAgICovXHJcbiAgICAgICAgdGhpcy5sYXN0ID0geyB4OiB4LCB5OiB5IH07XHJcblxyXG4gICAgICAgIC8qKlxyXG4gICAgICAgICAqIFtkZXNjcmlwdGlvbl1cclxuICAgICAgICAgKlxyXG4gICAgICAgICAqIEBuYW1lIFBoYXNlci5QaHlzaWNzLkltcGFjdC5Cb2R5I3ZlbFxyXG4gICAgICAgICAqIEB0eXBlIHtQaGFzZXIuVHlwZXMuTWF0aC5WZWN0b3IyTGlrZX1cclxuICAgICAgICAgKiBAc2luY2UgMy4wLjBcclxuICAgICAgICAgKi9cclxuICAgICAgICB0aGlzLnZlbCA9IHsgeDogMCwgeTogMCB9O1xyXG5cclxuICAgICAgICAvKipcclxuICAgICAgICAgKiBbZGVzY3JpcHRpb25dXHJcbiAgICAgICAgICpcclxuICAgICAgICAgKiBAbmFtZSBQaGFzZXIuUGh5c2ljcy5JbXBhY3QuQm9keSNhY2NlbFxyXG4gICAgICAgICAqIEB0eXBlIHtQaGFzZXIuVHlwZXMuTWF0aC5WZWN0b3IyTGlrZX1cclxuICAgICAgICAgKiBAc2luY2UgMy4wLjBcclxuICAgICAgICAgKi9cclxuICAgICAgICB0aGlzLmFjY2VsID0geyB4OiAwLCB5OiAwIH07XHJcblxyXG4gICAgICAgIC8qKlxyXG4gICAgICAgICAqIFtkZXNjcmlwdGlvbl1cclxuICAgICAgICAgKlxyXG4gICAgICAgICAqIEBuYW1lIFBoYXNlci5QaHlzaWNzLkltcGFjdC5Cb2R5I2ZyaWN0aW9uXHJcbiAgICAgICAgICogQHR5cGUge1BoYXNlci5UeXBlcy5NYXRoLlZlY3RvcjJMaWtlfVxyXG4gICAgICAgICAqIEBzaW5jZSAzLjAuMFxyXG4gICAgICAgICAqL1xyXG4gICAgICAgIHRoaXMuZnJpY3Rpb24gPSB7IHg6IDAsIHk6IDAgfTtcclxuXHJcbiAgICAgICAgLyoqXHJcbiAgICAgICAgICogW2Rlc2NyaXB0aW9uXVxyXG4gICAgICAgICAqXHJcbiAgICAgICAgICogQG5hbWUgUGhhc2VyLlBoeXNpY3MuSW1wYWN0LkJvZHkjbWF4VmVsXHJcbiAgICAgICAgICogQHR5cGUge1BoYXNlci5UeXBlcy5NYXRoLlZlY3RvcjJMaWtlfVxyXG4gICAgICAgICAqIEBzaW5jZSAzLjAuMFxyXG4gICAgICAgICAqL1xyXG4gICAgICAgIHRoaXMubWF4VmVsID0geyB4OiB3b3JsZC5kZWZhdWx0cy5tYXhWZWxvY2l0eVgsIHk6IHdvcmxkLmRlZmF1bHRzLm1heFZlbG9jaXR5WSB9O1xyXG5cclxuICAgICAgICAvKipcclxuICAgICAgICAgKiBbZGVzY3JpcHRpb25dXHJcbiAgICAgICAgICpcclxuICAgICAgICAgKiBAbmFtZSBQaGFzZXIuUGh5c2ljcy5JbXBhY3QuQm9keSNzdGFuZGluZ1xyXG4gICAgICAgICAqIEB0eXBlIHtib29sZWFufVxyXG4gICAgICAgICAqIEBkZWZhdWx0IGZhbHNlXHJcbiAgICAgICAgICogQHNpbmNlIDMuMC4wXHJcbiAgICAgICAgICovXHJcbiAgICAgICAgdGhpcy5zdGFuZGluZyA9IGZhbHNlO1xyXG5cclxuICAgICAgICAvKipcclxuICAgICAgICAgKiBbZGVzY3JpcHRpb25dXHJcbiAgICAgICAgICpcclxuICAgICAgICAgKiBAbmFtZSBQaGFzZXIuUGh5c2ljcy5JbXBhY3QuQm9keSNncmF2aXR5RmFjdG9yXHJcbiAgICAgICAgICogQHR5cGUge251bWJlcn1cclxuICAgICAgICAgKiBAc2luY2UgMy4wLjBcclxuICAgICAgICAgKi9cclxuICAgICAgICB0aGlzLmdyYXZpdHlGYWN0b3IgPSB3b3JsZC5kZWZhdWx0cy5ncmF2aXR5RmFjdG9yO1xyXG5cclxuICAgICAgICAvKipcclxuICAgICAgICAgKiBbZGVzY3JpcHRpb25dXHJcbiAgICAgICAgICpcclxuICAgICAgICAgKiBAbmFtZSBQaGFzZXIuUGh5c2ljcy5JbXBhY3QuQm9keSNib3VuY2luZXNzXHJcbiAgICAgICAgICogQHR5cGUge251bWJlcn1cclxuICAgICAgICAgKiBAc2luY2UgMy4wLjBcclxuICAgICAgICAgKi9cclxuICAgICAgICB0aGlzLmJvdW5jaW5lc3MgPSB3b3JsZC5kZWZhdWx0cy5ib3VuY2luZXNzO1xyXG5cclxuICAgICAgICAvKipcclxuICAgICAgICAgKiBbZGVzY3JpcHRpb25dXHJcbiAgICAgICAgICpcclxuICAgICAgICAgKiBAbmFtZSBQaGFzZXIuUGh5c2ljcy5JbXBhY3QuQm9keSNtaW5Cb3VuY2VWZWxvY2l0eVxyXG4gICAgICAgICAqIEB0eXBlIHtudW1iZXJ9XHJcbiAgICAgICAgICogQHNpbmNlIDMuMC4wXHJcbiAgICAgICAgICovXHJcbiAgICAgICAgdGhpcy5taW5Cb3VuY2VWZWxvY2l0eSA9IHdvcmxkLmRlZmF1bHRzLm1pbkJvdW5jZVZlbG9jaXR5O1xyXG5cclxuICAgICAgICAvKipcclxuICAgICAgICAgKiBbZGVzY3JpcHRpb25dXHJcbiAgICAgICAgICpcclxuICAgICAgICAgKiBAbmFtZSBQaGFzZXIuUGh5c2ljcy5JbXBhY3QuQm9keSNhY2NlbEdyb3VuZFxyXG4gICAgICAgICAqIEB0eXBlIHtudW1iZXJ9XHJcbiAgICAgICAgICogQGRlZmF1bHQgMFxyXG4gICAgICAgICAqIEBzaW5jZSAzLjAuMFxyXG4gICAgICAgICAqL1xyXG4gICAgICAgIHRoaXMuYWNjZWxHcm91bmQgPSAwO1xyXG5cclxuICAgICAgICAvKipcclxuICAgICAgICAgKiBbZGVzY3JpcHRpb25dXHJcbiAgICAgICAgICpcclxuICAgICAgICAgKiBAbmFtZSBQaGFzZXIuUGh5c2ljcy5JbXBhY3QuQm9keSNhY2NlbEFpclxyXG4gICAgICAgICAqIEB0eXBlIHtudW1iZXJ9XHJcbiAgICAgICAgICogQGRlZmF1bHQgMFxyXG4gICAgICAgICAqIEBzaW5jZSAzLjAuMFxyXG4gICAgICAgICAqL1xyXG4gICAgICAgIHRoaXMuYWNjZWxBaXIgPSAwO1xyXG5cclxuICAgICAgICAvKipcclxuICAgICAgICAgKiBbZGVzY3JpcHRpb25dXHJcbiAgICAgICAgICpcclxuICAgICAgICAgKiBAbmFtZSBQaGFzZXIuUGh5c2ljcy5JbXBhY3QuQm9keSNqdW1wU3BlZWRcclxuICAgICAgICAgKiBAdHlwZSB7bnVtYmVyfVxyXG4gICAgICAgICAqIEBkZWZhdWx0IDBcclxuICAgICAgICAgKiBAc2luY2UgMy4wLjBcclxuICAgICAgICAgKi9cclxuICAgICAgICB0aGlzLmp1bXBTcGVlZCA9IDA7XHJcblxyXG4gICAgICAgIC8qKlxyXG4gICAgICAgICAqIFtkZXNjcmlwdGlvbl1cclxuICAgICAgICAgKlxyXG4gICAgICAgICAqIEBuYW1lIFBoYXNlci5QaHlzaWNzLkltcGFjdC5Cb2R5I3R5cGVcclxuICAgICAgICAgKiBAdHlwZSB7UGhhc2VyLlBoeXNpY3MuSW1wYWN0LlRZUEV9XHJcbiAgICAgICAgICogQHNpbmNlIDMuMC4wXHJcbiAgICAgICAgICovXHJcbiAgICAgICAgdGhpcy50eXBlID0gVFlQRS5OT05FO1xyXG5cclxuICAgICAgICAvKipcclxuICAgICAgICAgKiBbZGVzY3JpcHRpb25dXHJcbiAgICAgICAgICpcclxuICAgICAgICAgKiBAbmFtZSBQaGFzZXIuUGh5c2ljcy5JbXBhY3QuQm9keSNjaGVja0FnYWluc3RcclxuICAgICAgICAgKiBAdHlwZSB7UGhhc2VyLlBoeXNpY3MuSW1wYWN0LlRZUEV9XHJcbiAgICAgICAgICogQHNpbmNlIDMuMC4wXHJcbiAgICAgICAgICovXHJcbiAgICAgICAgdGhpcy5jaGVja0FnYWluc3QgPSBUWVBFLk5PTkU7XHJcblxyXG4gICAgICAgIC8qKlxyXG4gICAgICAgICAqIFtkZXNjcmlwdGlvbl1cclxuICAgICAgICAgKlxyXG4gICAgICAgICAqIEBuYW1lIFBoYXNlci5QaHlzaWNzLkltcGFjdC5Cb2R5I2NvbGxpZGVzXHJcbiAgICAgICAgICogQHR5cGUge1BoYXNlci5QaHlzaWNzLkltcGFjdC5DT0xMSURFU31cclxuICAgICAgICAgKiBAc2luY2UgMy4wLjBcclxuICAgICAgICAgKi9cclxuICAgICAgICB0aGlzLmNvbGxpZGVzID0gQ09MTElERVMuTkVWRVI7XHJcblxyXG4gICAgICAgIC8qKlxyXG4gICAgICAgICAqIFtkZXNjcmlwdGlvbl1cclxuICAgICAgICAgKlxyXG4gICAgICAgICAqIEBuYW1lIFBoYXNlci5QaHlzaWNzLkltcGFjdC5Cb2R5I2RlYnVnU2hvd0JvZHlcclxuICAgICAgICAgKiBAdHlwZSB7Ym9vbGVhbn1cclxuICAgICAgICAgKiBAc2luY2UgMy4wLjBcclxuICAgICAgICAgKi9cclxuICAgICAgICB0aGlzLmRlYnVnU2hvd0JvZHkgPSB3b3JsZC5kZWZhdWx0cy5kZWJ1Z1Nob3dCb2R5O1xyXG5cclxuICAgICAgICAvKipcclxuICAgICAgICAgKiBbZGVzY3JpcHRpb25dXHJcbiAgICAgICAgICpcclxuICAgICAgICAgKiBAbmFtZSBQaGFzZXIuUGh5c2ljcy5JbXBhY3QuQm9keSNkZWJ1Z1Nob3dWZWxvY2l0eVxyXG4gICAgICAgICAqIEB0eXBlIHtib29sZWFufVxyXG4gICAgICAgICAqIEBzaW5jZSAzLjAuMFxyXG4gICAgICAgICAqL1xyXG4gICAgICAgIHRoaXMuZGVidWdTaG93VmVsb2NpdHkgPSB3b3JsZC5kZWZhdWx0cy5kZWJ1Z1Nob3dWZWxvY2l0eTtcclxuXHJcbiAgICAgICAgLyoqXHJcbiAgICAgICAgICogW2Rlc2NyaXB0aW9uXVxyXG4gICAgICAgICAqXHJcbiAgICAgICAgICogQG5hbWUgUGhhc2VyLlBoeXNpY3MuSW1wYWN0LkJvZHkjZGVidWdCb2R5Q29sb3JcclxuICAgICAgICAgKiBAdHlwZSB7aW50ZWdlcn1cclxuICAgICAgICAgKiBAc2luY2UgMy4wLjBcclxuICAgICAgICAgKi9cclxuICAgICAgICB0aGlzLmRlYnVnQm9keUNvbG9yID0gd29ybGQuZGVmYXVsdHMuYm9keURlYnVnQ29sb3I7XHJcblxyXG4gICAgICAgIC8qKlxyXG4gICAgICAgICAqIFtkZXNjcmlwdGlvbl1cclxuICAgICAgICAgKlxyXG4gICAgICAgICAqIEBuYW1lIFBoYXNlci5QaHlzaWNzLkltcGFjdC5Cb2R5I3VwZGF0ZUNhbGxiYWNrXHJcbiAgICAgICAgICogQHR5cGUgez9QaGFzZXIuVHlwZXMuUGh5c2ljcy5JbXBhY3QuQm9keVVwZGF0ZUNhbGxiYWNrfVxyXG4gICAgICAgICAqIEBzaW5jZSAzLjAuMFxyXG4gICAgICAgICAqL1xyXG4gICAgICAgIHRoaXMudXBkYXRlQ2FsbGJhY2s7XHJcblxyXG4gICAgICAgIC8qKlxyXG4gICAgICAgICAqIG1pbiA0NCBkZWcsIG1heCAxMzYgZGVnXHJcbiAgICAgICAgICpcclxuICAgICAgICAgKiBAbmFtZSBQaGFzZXIuUGh5c2ljcy5JbXBhY3QuQm9keSNzbG9wZVN0YW5kaW5nXHJcbiAgICAgICAgICogQHR5cGUge3sgbWluOiBudW1iZXIsIG1heDogbnVtYmVyIH19XHJcbiAgICAgICAgICogQHNpbmNlIDMuMC4wXHJcbiAgICAgICAgICovXHJcbiAgICAgICAgdGhpcy5zbG9wZVN0YW5kaW5nID0geyBtaW46IDAuNzY3OTQ0ODcwODc3NTA1LCBtYXg6IDIuMzczNjQ3NzgyNzEyMjg4NCB9O1xyXG4gICAgfSxcclxuXHJcbiAgICAvKipcclxuICAgICAqIFtkZXNjcmlwdGlvbl1cclxuICAgICAqXHJcbiAgICAgKiBAbWV0aG9kIFBoYXNlci5QaHlzaWNzLkltcGFjdC5Cb2R5I3Jlc2V0XHJcbiAgICAgKiBAc2luY2UgMy4wLjBcclxuICAgICAqXHJcbiAgICAgKiBAcGFyYW0ge251bWJlcn0geCAtIFtkZXNjcmlwdGlvbl1cclxuICAgICAqIEBwYXJhbSB7bnVtYmVyfSB5IC0gW2Rlc2NyaXB0aW9uXVxyXG4gICAgICovXHJcbiAgICByZXNldDogZnVuY3Rpb24gKHgsIHkpXHJcbiAgICB7XHJcbiAgICAgICAgdGhpcy5wb3MgPSB7IHg6IHgsIHk6IHkgfTtcclxuICAgICAgICB0aGlzLmxhc3QgPSB7IHg6IHgsIHk6IHkgfTtcclxuICAgICAgICB0aGlzLnZlbCA9IHsgeDogMCwgeTogMCB9O1xyXG4gICAgICAgIHRoaXMuYWNjZWwgPSB7IHg6IDAsIHk6IDAgfTtcclxuICAgICAgICB0aGlzLmZyaWN0aW9uID0geyB4OiAwLCB5OiAwIH07XHJcbiAgICAgICAgdGhpcy5tYXhWZWwgPSB7IHg6IDEwMCwgeTogMTAwIH07XHJcblxyXG4gICAgICAgIHRoaXMuc3RhbmRpbmcgPSBmYWxzZTtcclxuXHJcbiAgICAgICAgdGhpcy5ncmF2aXR5RmFjdG9yID0gMTtcclxuICAgICAgICB0aGlzLmJvdW5jaW5lc3MgPSAwO1xyXG4gICAgICAgIHRoaXMubWluQm91bmNlVmVsb2NpdHkgPSA0MDtcclxuXHJcbiAgICAgICAgdGhpcy5hY2NlbEdyb3VuZCA9IDA7XHJcbiAgICAgICAgdGhpcy5hY2NlbEFpciA9IDA7XHJcbiAgICAgICAgdGhpcy5qdW1wU3BlZWQgPSAwO1xyXG5cclxuICAgICAgICB0aGlzLnR5cGUgPSBUWVBFLk5PTkU7XHJcbiAgICAgICAgdGhpcy5jaGVja0FnYWluc3QgPSBUWVBFLk5PTkU7XHJcbiAgICAgICAgdGhpcy5jb2xsaWRlcyA9IENPTExJREVTLk5FVkVSO1xyXG4gICAgfSxcclxuXHJcbiAgICAvKipcclxuICAgICAqIFtkZXNjcmlwdGlvbl1cclxuICAgICAqXHJcbiAgICAgKiBAbWV0aG9kIFBoYXNlci5QaHlzaWNzLkltcGFjdC5Cb2R5I3VwZGF0ZVxyXG4gICAgICogQHNpbmNlIDMuMC4wXHJcbiAgICAgKlxyXG4gICAgICogQHBhcmFtIHtudW1iZXJ9IGRlbHRhIC0gVGhlIGRlbHRhIHRpbWUgaW4gbXMgc2luY2UgdGhlIGxhc3QgZnJhbWUuIFRoaXMgaXMgYSBzbW9vdGhlZCBhbmQgY2FwcGVkIHZhbHVlIGJhc2VkIG9uIHRoZSBGUFMgcmF0ZS5cclxuICAgICAqL1xyXG4gICAgdXBkYXRlOiBmdW5jdGlvbiAoZGVsdGEpXHJcbiAgICB7XHJcbiAgICAgICAgdmFyIHBvcyA9IHRoaXMucG9zO1xyXG5cclxuICAgICAgICB0aGlzLmxhc3QueCA9IHBvcy54O1xyXG4gICAgICAgIHRoaXMubGFzdC55ID0gcG9zLnk7XHJcblxyXG4gICAgICAgIHRoaXMudmVsLnkgKz0gdGhpcy53b3JsZC5ncmF2aXR5ICogZGVsdGEgKiB0aGlzLmdyYXZpdHlGYWN0b3I7XHJcblxyXG4gICAgICAgIHRoaXMudmVsLnggPSBHZXRWZWxvY2l0eShkZWx0YSwgdGhpcy52ZWwueCwgdGhpcy5hY2NlbC54LCB0aGlzLmZyaWN0aW9uLngsIHRoaXMubWF4VmVsLngpO1xyXG4gICAgICAgIHRoaXMudmVsLnkgPSBHZXRWZWxvY2l0eShkZWx0YSwgdGhpcy52ZWwueSwgdGhpcy5hY2NlbC55LCB0aGlzLmZyaWN0aW9uLnksIHRoaXMubWF4VmVsLnkpO1xyXG5cclxuICAgICAgICB2YXIgbXggPSB0aGlzLnZlbC54ICogZGVsdGE7XHJcbiAgICAgICAgdmFyIG15ID0gdGhpcy52ZWwueSAqIGRlbHRhO1xyXG5cclxuICAgICAgICB2YXIgcmVzID0gdGhpcy53b3JsZC5jb2xsaXNpb25NYXAudHJhY2UocG9zLngsIHBvcy55LCBteCwgbXksIHRoaXMuc2l6ZS54LCB0aGlzLnNpemUueSk7XHJcblxyXG4gICAgICAgIGlmICh0aGlzLmhhbmRsZU1vdmVtZW50VHJhY2UocmVzKSlcclxuICAgICAgICB7XHJcbiAgICAgICAgICAgIFVwZGF0ZU1vdGlvbih0aGlzLCByZXMpO1xyXG4gICAgICAgIH1cclxuXHJcbiAgICAgICAgdmFyIGdvID0gdGhpcy5nYW1lT2JqZWN0O1xyXG5cclxuICAgICAgICBpZiAoZ28pXHJcbiAgICAgICAge1xyXG4gICAgICAgICAgICBnby54ID0gKHBvcy54IC0gdGhpcy5vZmZzZXQueCkgKyBnby5kaXNwbGF5T3JpZ2luWCAqIGdvLnNjYWxlWDtcclxuICAgICAgICAgICAgZ28ueSA9IChwb3MueSAtIHRoaXMub2Zmc2V0LnkpICsgZ28uZGlzcGxheU9yaWdpblkgKiBnby5zY2FsZVk7XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICBpZiAodGhpcy51cGRhdGVDYWxsYmFjaylcclxuICAgICAgICB7XHJcbiAgICAgICAgICAgIHRoaXMudXBkYXRlQ2FsbGJhY2sodGhpcyk7XHJcbiAgICAgICAgfVxyXG4gICAgfSxcclxuXHJcbiAgICAvKipcclxuICAgICAqIFtkZXNjcmlwdGlvbl1cclxuICAgICAqXHJcbiAgICAgKiBAbWV0aG9kIFBoYXNlci5QaHlzaWNzLkltcGFjdC5Cb2R5I2RyYXdEZWJ1Z1xyXG4gICAgICogQHNpbmNlIDMuMC4wXHJcbiAgICAgKlxyXG4gICAgICogQHBhcmFtIHtQaGFzZXIuR2FtZU9iamVjdHMuR3JhcGhpY3N9IGdyYXBoaWMgLSBbZGVzY3JpcHRpb25dXHJcbiAgICAgKi9cclxuICAgIGRyYXdEZWJ1ZzogZnVuY3Rpb24gKGdyYXBoaWMpXHJcbiAgICB7XHJcbiAgICAgICAgdmFyIHBvcyA9IHRoaXMucG9zO1xyXG5cclxuICAgICAgICBpZiAodGhpcy5kZWJ1Z1Nob3dCb2R5KVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgZ3JhcGhpYy5saW5lU3R5bGUoMSwgdGhpcy5kZWJ1Z0JvZHlDb2xvciwgMSk7XHJcbiAgICAgICAgICAgIGdyYXBoaWMuc3Ryb2tlUmVjdChwb3MueCwgcG9zLnksIHRoaXMuc2l6ZS54LCB0aGlzLnNpemUueSk7XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICBpZiAodGhpcy5kZWJ1Z1Nob3dWZWxvY2l0eSlcclxuICAgICAgICB7XHJcbiAgICAgICAgICAgIHZhciB4ID0gcG9zLnggKyB0aGlzLnNpemUueCAvIDI7XHJcbiAgICAgICAgICAgIHZhciB5ID0gcG9zLnkgKyB0aGlzLnNpemUueSAvIDI7XHJcblxyXG4gICAgICAgICAgICBncmFwaGljLmxpbmVTdHlsZSgxLCB0aGlzLndvcmxkLmRlZmF1bHRzLnZlbG9jaXR5RGVidWdDb2xvciwgMSk7XHJcbiAgICAgICAgICAgIGdyYXBoaWMubGluZUJldHdlZW4oeCwgeSwgeCArIHRoaXMudmVsLngsIHkgKyB0aGlzLnZlbC55KTtcclxuICAgICAgICB9XHJcbiAgICB9LFxyXG5cclxuICAgIC8qKlxyXG4gICAgICogW2Rlc2NyaXB0aW9uXVxyXG4gICAgICpcclxuICAgICAqIEBtZXRob2QgUGhhc2VyLlBoeXNpY3MuSW1wYWN0LkJvZHkjd2lsbERyYXdEZWJ1Z1xyXG4gICAgICogQHNpbmNlIDMuMC4wXHJcbiAgICAgKlxyXG4gICAgICogQHJldHVybiB7Ym9vbGVhbn0gW2Rlc2NyaXB0aW9uXVxyXG4gICAgICovXHJcbiAgICB3aWxsRHJhd0RlYnVnOiBmdW5jdGlvbiAoKVxyXG4gICAge1xyXG4gICAgICAgIHJldHVybiAodGhpcy5kZWJ1Z1Nob3dCb2R5IHx8IHRoaXMuZGVidWdTaG93VmVsb2NpdHkpO1xyXG4gICAgfSxcclxuXHJcbiAgICAvKipcclxuICAgICAqIFtkZXNjcmlwdGlvbl1cclxuICAgICAqXHJcbiAgICAgKiBAbWV0aG9kIFBoYXNlci5QaHlzaWNzLkltcGFjdC5Cb2R5I3NraXBIYXNoXHJcbiAgICAgKiBAc2luY2UgMy4wLjBcclxuICAgICAqXHJcbiAgICAgKiBAcmV0dXJuIHtib29sZWFufSBbZGVzY3JpcHRpb25dXHJcbiAgICAgKi9cclxuICAgIHNraXBIYXNoOiBmdW5jdGlvbiAoKVxyXG4gICAge1xyXG4gICAgICAgIHJldHVybiAoIXRoaXMuZW5hYmxlZCB8fCAodGhpcy50eXBlID09PSAwICYmIHRoaXMuY2hlY2tBZ2FpbnN0ID09PSAwICYmIHRoaXMuY29sbGlkZXMgPT09IDApKTtcclxuICAgIH0sXHJcblxyXG4gICAgLyoqXHJcbiAgICAgKiBEZXRlcm1pbmVzIHdoZXRoZXIgdGhlIGJvZHkgY29sbGlkZXMgd2l0aCB0aGUgYG90aGVyYCBvbmUgb3Igbm90LlxyXG4gICAgICpcclxuICAgICAqIEBtZXRob2QgUGhhc2VyLlBoeXNpY3MuSW1wYWN0LkJvZHkjdG91Y2hlc1xyXG4gICAgICogQHNpbmNlIDMuMC4wXHJcbiAgICAgKlxyXG4gICAgICogQHBhcmFtIHtQaGFzZXIuUGh5c2ljcy5JbXBhY3QuQm9keX0gb3RoZXIgLSBbZGVzY3JpcHRpb25dXHJcbiAgICAgKlxyXG4gICAgICogQHJldHVybiB7Ym9vbGVhbn0gW2Rlc2NyaXB0aW9uXVxyXG4gICAgICovXHJcbiAgICB0b3VjaGVzOiBmdW5jdGlvbiAob3RoZXIpXHJcbiAgICB7XHJcbiAgICAgICAgcmV0dXJuICEoXHJcbiAgICAgICAgICAgIHRoaXMucG9zLnggPj0gb3RoZXIucG9zLnggKyBvdGhlci5zaXplLnggfHxcclxuICAgICAgICAgICAgdGhpcy5wb3MueCArIHRoaXMuc2l6ZS54IDw9IG90aGVyLnBvcy54IHx8XHJcbiAgICAgICAgICAgIHRoaXMucG9zLnkgPj0gb3RoZXIucG9zLnkgKyBvdGhlci5zaXplLnkgfHxcclxuICAgICAgICAgICAgdGhpcy5wb3MueSArIHRoaXMuc2l6ZS55IDw9IG90aGVyLnBvcy55XHJcbiAgICAgICAgKTtcclxuICAgIH0sXHJcblxyXG4gICAgLyoqXHJcbiAgICAgKiBSZXNldCB0aGUgc2l6ZSBhbmQgcG9zaXRpb24gb2YgdGhlIHBoeXNpY3MgYm9keS5cclxuICAgICAqXHJcbiAgICAgKiBAbWV0aG9kIFBoYXNlci5QaHlzaWNzLkltcGFjdC5Cb2R5I3Jlc2V0U2l6ZVxyXG4gICAgICogQHNpbmNlIDMuMC4wXHJcbiAgICAgKlxyXG4gICAgICogQHBhcmFtIHtudW1iZXJ9IHggLSBUaGUgeCBjb29yZGluYXRlIHRvIHBvc2l0aW9uIHRoZSBib2R5LlxyXG4gICAgICogQHBhcmFtIHtudW1iZXJ9IHkgLSBUaGUgeSBjb29yZGluYXRlIHRvIHBvc2l0aW9uIHRoZSBib2R5LlxyXG4gICAgICogQHBhcmFtIHtudW1iZXJ9IHdpZHRoIC0gVGhlIHdpZHRoIG9mIHRoZSBib2R5LlxyXG4gICAgICogQHBhcmFtIHtudW1iZXJ9IGhlaWdodCAtIFRoZSBoZWlnaHQgb2YgdGhlIGJvZHkuXHJcbiAgICAgKlxyXG4gICAgICogQHJldHVybiB7UGhhc2VyLlBoeXNpY3MuSW1wYWN0LkJvZHl9IFRoaXMgQm9keSBvYmplY3QuXHJcbiAgICAgKi9cclxuICAgIHJlc2V0U2l6ZTogZnVuY3Rpb24gKHgsIHksIHdpZHRoLCBoZWlnaHQpXHJcbiAgICB7XHJcbiAgICAgICAgdGhpcy5wb3MueCA9IHg7XHJcbiAgICAgICAgdGhpcy5wb3MueSA9IHk7XHJcbiAgICAgICAgdGhpcy5zaXplLnggPSB3aWR0aDtcclxuICAgICAgICB0aGlzLnNpemUueSA9IGhlaWdodDtcclxuXHJcbiAgICAgICAgcmV0dXJuIHRoaXM7XHJcbiAgICB9LFxyXG5cclxuICAgIC8qKlxyXG4gICAgICogRXhwb3J0IHRoaXMgYm9keSBvYmplY3QgdG8gSlNPTi5cclxuICAgICAqXHJcbiAgICAgKiBAbWV0aG9kIFBoYXNlci5QaHlzaWNzLkltcGFjdC5Cb2R5I3RvSlNPTlxyXG4gICAgICogQHNpbmNlIDMuMC4wXHJcbiAgICAgKlxyXG4gICAgICogQHJldHVybiB7UGhhc2VyLlR5cGVzLlBoeXNpY3MuSW1wYWN0LkpTT05JbXBhY3RCb2R5fSBKU09OIHJlcHJlc2VudGF0aW9uIG9mIHRoaXMgYm9keSBvYmplY3QuXHJcbiAgICAgKi9cclxuICAgIHRvSlNPTjogZnVuY3Rpb24gKClcclxuICAgIHtcclxuICAgICAgICB2YXIgb3V0cHV0ID0ge1xyXG4gICAgICAgICAgICBuYW1lOiB0aGlzLm5hbWUsXHJcbiAgICAgICAgICAgIHNpemU6IHsgeDogdGhpcy5zaXplLngsIHk6IHRoaXMuc2l6ZS55IH0sXHJcbiAgICAgICAgICAgIHBvczogeyB4OiB0aGlzLnBvcy54LCB5OiB0aGlzLnBvcy55IH0sXHJcbiAgICAgICAgICAgIHZlbDogeyB4OiB0aGlzLnZlbC54LCB5OiB0aGlzLnZlbC55IH0sXHJcbiAgICAgICAgICAgIGFjY2VsOiB7IHg6IHRoaXMuYWNjZWwueCwgeTogdGhpcy5hY2NlbC55IH0sXHJcbiAgICAgICAgICAgIGZyaWN0aW9uOiB7IHg6IHRoaXMuZnJpY3Rpb24ueCwgeTogdGhpcy5mcmljdGlvbi55IH0sXHJcbiAgICAgICAgICAgIG1heFZlbDogeyB4OiB0aGlzLm1heFZlbC54LCB5OiB0aGlzLm1heFZlbC55IH0sXHJcbiAgICAgICAgICAgIGdyYXZpdHlGYWN0b3I6IHRoaXMuZ3Jhdml0eUZhY3RvcixcclxuICAgICAgICAgICAgYm91bmNpbmVzczogdGhpcy5ib3VuY2luZXNzLFxyXG4gICAgICAgICAgICBtaW5Cb3VuY2VWZWxvY2l0eTogdGhpcy5taW5Cb3VuY2VWZWxvY2l0eSxcclxuICAgICAgICAgICAgdHlwZTogdGhpcy50eXBlLFxyXG4gICAgICAgICAgICBjaGVja0FnYWluc3Q6IHRoaXMuY2hlY2tBZ2FpbnN0LFxyXG4gICAgICAgICAgICBjb2xsaWRlczogdGhpcy5jb2xsaWRlc1xyXG4gICAgICAgIH07XHJcblxyXG4gICAgICAgIHJldHVybiBvdXRwdXQ7XHJcbiAgICB9LFxyXG5cclxuICAgIC8qKlxyXG4gICAgICogW2Rlc2NyaXB0aW9uXVxyXG4gICAgICpcclxuICAgICAqIEBtZXRob2QgUGhhc2VyLlBoeXNpY3MuSW1wYWN0LkJvZHkjZnJvbUpTT05cclxuICAgICAqIEB0b2RvIENvZGUgaXQhXHJcbiAgICAgKiBAc2luY2UgMy4wLjBcclxuICAgICAqXHJcbiAgICAgKiBAcGFyYW0ge29iamVjdH0gY29uZmlnIC0gW2Rlc2NyaXB0aW9uXVxyXG4gICAgICovXHJcbiAgICBmcm9tSlNPTjogZnVuY3Rpb24gKClcclxuICAgIHtcclxuICAgIH0sXHJcblxyXG4gICAgLyoqXHJcbiAgICAgKiBDYW4gYmUgb3ZlcnJpZGRlbiBieSB1c2VyIGNvZGVcclxuICAgICAqXHJcbiAgICAgKiBAbWV0aG9kIFBoYXNlci5QaHlzaWNzLkltcGFjdC5Cb2R5I2NoZWNrXHJcbiAgICAgKiBAc2luY2UgMy4wLjBcclxuICAgICAqXHJcbiAgICAgKiBAcGFyYW0ge1BoYXNlci5QaHlzaWNzLkltcGFjdC5Cb2R5fSBvdGhlciAtIFtkZXNjcmlwdGlvbl1cclxuICAgICAqL1xyXG4gICAgY2hlY2s6IGZ1bmN0aW9uICgpXHJcbiAgICB7XHJcbiAgICB9LFxyXG5cclxuICAgIC8qKlxyXG4gICAgICogQ2FuIGJlIG92ZXJyaWRkZW4gYnkgdXNlciBjb2RlXHJcbiAgICAgKlxyXG4gICAgICogQG1ldGhvZCBQaGFzZXIuUGh5c2ljcy5JbXBhY3QuQm9keSNjb2xsaWRlV2l0aFxyXG4gICAgICogQHNpbmNlIDMuMC4wXHJcbiAgICAgKlxyXG4gICAgICogQHBhcmFtIHtQaGFzZXIuUGh5c2ljcy5JbXBhY3QuQm9keX0gb3RoZXIgLSBbZGVzY3JpcHRpb25dXHJcbiAgICAgKiBAcGFyYW0ge3N0cmluZ30gYXhpcyAtIFtkZXNjcmlwdGlvbl1cclxuICAgICAqL1xyXG4gICAgY29sbGlkZVdpdGg6IGZ1bmN0aW9uIChvdGhlciwgYXhpcylcclxuICAgIHtcclxuICAgICAgICBpZiAodGhpcy5wYXJlbnQgJiYgdGhpcy5wYXJlbnQuX2NvbGxpZGVDYWxsYmFjaylcclxuICAgICAgICB7XHJcbiAgICAgICAgICAgIHRoaXMucGFyZW50Ll9jb2xsaWRlQ2FsbGJhY2suY2FsbCh0aGlzLnBhcmVudC5fY2FsbGJhY2tTY29wZSwgdGhpcywgb3RoZXIsIGF4aXMpO1xyXG4gICAgICAgIH1cclxuICAgIH0sXHJcblxyXG4gICAgLyoqXHJcbiAgICAgKiBDYW4gYmUgb3ZlcnJpZGRlbiBieSB1c2VyIGNvZGUgYnV0IG11c3QgcmV0dXJuIGEgYm9vbGVhbi5cclxuICAgICAqXHJcbiAgICAgKiBAbWV0aG9kIFBoYXNlci5QaHlzaWNzLkltcGFjdC5Cb2R5I2hhbmRsZU1vdmVtZW50VHJhY2VcclxuICAgICAqIEBzaW5jZSAzLjAuMFxyXG4gICAgICpcclxuICAgICAqIEBwYXJhbSB7bnVtYmVyfSByZXMgLSBbZGVzY3JpcHRpb25dXHJcbiAgICAgKlxyXG4gICAgICogQHJldHVybiB7Ym9vbGVhbn0gW2Rlc2NyaXB0aW9uXVxyXG4gICAgICovXHJcbiAgICBoYW5kbGVNb3ZlbWVudFRyYWNlOiBmdW5jdGlvbiAoKVxyXG4gICAge1xyXG4gICAgICAgIHJldHVybiB0cnVlO1xyXG4gICAgfSxcclxuXHJcbiAgICAvKipcclxuICAgICAqIFtkZXNjcmlwdGlvbl1cclxuICAgICAqXHJcbiAgICAgKiBAbWV0aG9kIFBoYXNlci5QaHlzaWNzLkltcGFjdC5Cb2R5I2Rlc3Ryb3lcclxuICAgICAqIEBzaW5jZSAzLjAuMFxyXG4gICAgICovXHJcbiAgICBkZXN0cm95OiBmdW5jdGlvbiAoKVxyXG4gICAge1xyXG4gICAgICAgIHRoaXMud29ybGQucmVtb3ZlKHRoaXMpO1xyXG5cclxuICAgICAgICB0aGlzLmVuYWJsZWQgPSBmYWxzZTtcclxuXHJcbiAgICAgICAgdGhpcy53b3JsZCA9IG51bGw7XHJcblxyXG4gICAgICAgIHRoaXMuZ2FtZU9iamVjdCA9IG51bGw7XHJcblxyXG4gICAgICAgIHRoaXMucGFyZW50ID0gbnVsbDtcclxuICAgIH1cclxuXHJcbn0pO1xyXG5cclxubW9kdWxlLmV4cG9ydHMgPSBCb2R5O1xyXG4iXSwic291cmNlUm9vdCI6IiJ9
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/physics/impact/Body.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

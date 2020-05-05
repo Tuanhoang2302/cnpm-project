@@ -1,0 +1,749 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for GridWebGLRenderer.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> GridWebGLRenderer.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">12.95% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>29/224</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>2/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">12.95% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>29/224</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a>
+<a name='L208'></a><a href='#L208'>208</a>
+<a name='L209'></a><a href='#L209'>209</a>
+<a name='L210'></a><a href='#L210'>210</a>
+<a name='L211'></a><a href='#L211'>211</a>
+<a name='L212'></a><a href='#L212'>212</a>
+<a name='L213'></a><a href='#L213'>213</a>
+<a name='L214'></a><a href='#L214'>214</a>
+<a name='L215'></a><a href='#L215'>215</a>
+<a name='L216'></a><a href='#L216'>216</a>
+<a name='L217'></a><a href='#L217'>217</a>
+<a name='L218'></a><a href='#L218'>218</a>
+<a name='L219'></a><a href='#L219'>219</a>
+<a name='L220'></a><a href='#L220'>220</a>
+<a name='L221'></a><a href='#L221'>221</a>
+<a name='L222'></a><a href='#L222'>222</a>
+<a name='L223'></a><a href='#L223'>223</a>
+<a name='L224'></a><a href='#L224'>224</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var Utils = __webpack_require__(/*! ../../../renderer/webgl/Utils */ "./node_modules/phaser/src/renderer/webgl/Utils.js");
+&nbsp;
+/**
+ * Renders this Game Object with the WebGL Renderer to the given Camera.
+ * The object will not render if any of its renderFlags are set or it is being actively filtered out by the Camera.
+ * This method should not be called directly. It is a utility function of the Render module.
+ *
+ * @method Phaser.GameObjects.Grid#renderWebGL
+ * @since 3.13.0
+ * @private
+ *
+ * @param {Phaser.Renderer.WebGL.WebGLRenderer} renderer - A reference to the current active WebGL renderer.
+ * @param {Phaser.GameObjects.Grid} src - The Game Object being rendered in this call.
+ * @param {number} interpolationPercentage - Reserved for future use and custom pipelines.
+ * @param {Phaser.Cameras.Scene2D.Camera} camera - The Camera that is rendering the Game Object.
+ * @param {Phaser.GameObjects.Components.TransformMatrix} parentMatrix - This transform matrix is defined if the game object is nested
+ */
+<span class="cstat-no" title="statement not covered" >var GridWebGLRenderer = function (renderer, src, interpolationPercentage, camera, parentMatrix)</span>
+<span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    var pipeline = this.pipeline;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var camMatrix = pipeline._tempMatrix1;</span>
+<span class="cstat-no" title="statement not covered" >    var shapeMatrix = pipeline._tempMatrix2;</span>
+<span class="cstat-no" title="statement not covered" >    var calcMatrix = pipeline._tempMatrix3;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    renderer.setPipeline(pipeline);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    shapeMatrix.applyITRS(src.x, src.y, src.rotation, src.scaleX, src.scaleY);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    camMatrix.copyFrom(camera.matrix);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (parentMatrix)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        //  Multiply the camera by the parent matrix</span>
+<span class="cstat-no" title="statement not covered" >        camMatrix.multiplyWithOffset(parentMatrix, -camera.scrollX * src.scrollFactorX, -camera.scrollY * src.scrollFactorY);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        //  Undo the camera scroll</span>
+<span class="cstat-no" title="statement not covered" >        shapeMatrix.e = src.x;</span>
+<span class="cstat-no" title="statement not covered" >        shapeMatrix.f = src.y;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    else</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        shapeMatrix.e -= camera.scrollX * src.scrollFactorX;</span>
+<span class="cstat-no" title="statement not covered" >        shapeMatrix.f -= camera.scrollY * src.scrollFactorY;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    camMatrix.multiply(shapeMatrix, calcMatrix);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    calcMatrix.translate(-src._displayOriginX, -src._displayOriginY);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var alpha = camera.alpha * src.alpha;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    //  Work out the grid size</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var width = src.width;</span>
+<span class="cstat-no" title="statement not covered" >    var height = src.height;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var cellWidth = src.cellWidth;</span>
+<span class="cstat-no" title="statement not covered" >    var cellHeight = src.cellHeight;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var gridWidth = Math.ceil(width / cellWidth);</span>
+<span class="cstat-no" title="statement not covered" >    var gridHeight = Math.ceil(height / cellHeight);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var cellWidthA = cellWidth;</span>
+<span class="cstat-no" title="statement not covered" >    var cellHeightA = cellHeight;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var cellWidthB = cellWidth - ((gridWidth * cellWidth) - width);</span>
+<span class="cstat-no" title="statement not covered" >    var cellHeightB = cellHeight - ((gridHeight * cellHeight) - height);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var fillTint;</span>
+<span class="cstat-no" title="statement not covered" >    var fillTintColor;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var showCells = src.showCells;</span>
+<span class="cstat-no" title="statement not covered" >    var showAltCells = src.showAltCells;</span>
+<span class="cstat-no" title="statement not covered" >    var showOutline = src.showOutline;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var x = 0;</span>
+<span class="cstat-no" title="statement not covered" >    var y = 0;</span>
+<span class="cstat-no" title="statement not covered" >    var r = 0;</span>
+<span class="cstat-no" title="statement not covered" >    var cw = 0;</span>
+<span class="cstat-no" title="statement not covered" >    var ch = 0;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (showOutline)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        //  To make room for the grid lines (in case alpha &lt; 1)</span>
+<span class="cstat-no" title="statement not covered" >        cellWidthA--;</span>
+<span class="cstat-no" title="statement not covered" >        cellHeightA--;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if (cellWidthB === cellWidth)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            cellWidthB--;</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if (cellHeightB === cellHeight)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            cellHeightB--;</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (showCells &amp;&amp; src.fillAlpha &gt; 0)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        fillTint = pipeline.fillTint;</span>
+<span class="cstat-no" title="statement not covered" >        fillTintColor = Utils.getTintAppendFloatAlphaAndSwap(src.fillColor, src.fillAlpha * alpha);</span>
+<span class="cstat-no" title="statement not covered" >    </span>
+<span class="cstat-no" title="statement not covered" >        fillTint.TL = fillTintColor;</span>
+<span class="cstat-no" title="statement not covered" >        fillTint.TR = fillTintColor;</span>
+<span class="cstat-no" title="statement not covered" >        fillTint.BL = fillTintColor;</span>
+<span class="cstat-no" title="statement not covered" >        fillTint.BR = fillTintColor;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        for (y = 0; y &lt; gridHeight; y++)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            if (showAltCells)</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >                r = y % 2;</span>
+<span class="cstat-no" title="statement not covered" >            }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            for (x = 0; x &lt; gridWidth; x++)</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >                if (showAltCells &amp;&amp; r)</span>
+<span class="cstat-no" title="statement not covered" >                {</span>
+<span class="cstat-no" title="statement not covered" >                    r = 0;</span>
+<span class="cstat-no" title="statement not covered" >                    continue;</span>
+<span class="cstat-no" title="statement not covered" >                }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >                r++;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >                cw = (x &lt; gridWidth - 1) ? cellWidthA : cellWidthB;</span>
+<span class="cstat-no" title="statement not covered" >                ch = (y &lt; gridHeight - 1) ? cellHeightA : cellHeightB;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >                pipeline.setTexture2D();</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >                pipeline.batchFillRect(</span>
+<span class="cstat-no" title="statement not covered" >                    x * cellWidth,</span>
+<span class="cstat-no" title="statement not covered" >                    y * cellHeight,</span>
+<span class="cstat-no" title="statement not covered" >                    cw,</span>
+<span class="cstat-no" title="statement not covered" >                    ch</span>
+<span class="cstat-no" title="statement not covered" >                );</span>
+<span class="cstat-no" title="statement not covered" >            }</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (showAltCells &amp;&amp; src.altFillAlpha &gt; 0)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        fillTint = pipeline.fillTint;</span>
+<span class="cstat-no" title="statement not covered" >        fillTintColor = Utils.getTintAppendFloatAlphaAndSwap(src.altFillColor, src.altFillAlpha * alpha);</span>
+<span class="cstat-no" title="statement not covered" >    </span>
+<span class="cstat-no" title="statement not covered" >        fillTint.TL = fillTintColor;</span>
+<span class="cstat-no" title="statement not covered" >        fillTint.TR = fillTintColor;</span>
+<span class="cstat-no" title="statement not covered" >        fillTint.BL = fillTintColor;</span>
+<span class="cstat-no" title="statement not covered" >        fillTint.BR = fillTintColor;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        for (y = 0; y &lt; gridHeight; y++)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            if (showAltCells)</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >                r = y % 2;</span>
+<span class="cstat-no" title="statement not covered" >            }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            for (x = 0; x &lt; gridWidth; x++)</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >                if (showAltCells &amp;&amp; !r)</span>
+<span class="cstat-no" title="statement not covered" >                {</span>
+<span class="cstat-no" title="statement not covered" >                    r = 1;</span>
+<span class="cstat-no" title="statement not covered" >                    continue;</span>
+<span class="cstat-no" title="statement not covered" >                }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >                r = 0;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >                cw = (x &lt; gridWidth - 1) ? cellWidthA : cellWidthB;</span>
+<span class="cstat-no" title="statement not covered" >                ch = (y &lt; gridHeight - 1) ? cellHeightA : cellHeightB;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >                pipeline.setTexture2D();</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >                pipeline.batchFillRect(</span>
+<span class="cstat-no" title="statement not covered" >                    x * cellWidth,</span>
+<span class="cstat-no" title="statement not covered" >                    y * cellHeight,</span>
+<span class="cstat-no" title="statement not covered" >                    cw,</span>
+<span class="cstat-no" title="statement not covered" >                    ch</span>
+<span class="cstat-no" title="statement not covered" >                );</span>
+<span class="cstat-no" title="statement not covered" >            }</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (showOutline &amp;&amp; src.outlineFillAlpha &gt; 0)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        var strokeTint = pipeline.strokeTint;</span>
+<span class="cstat-no" title="statement not covered" >        var color = Utils.getTintAppendFloatAlphaAndSwap(src.outlineFillColor, src.outlineFillAlpha * alpha);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        strokeTint.TL = color;</span>
+<span class="cstat-no" title="statement not covered" >        strokeTint.TR = color;</span>
+<span class="cstat-no" title="statement not covered" >        strokeTint.BL = color;</span>
+<span class="cstat-no" title="statement not covered" >        strokeTint.BR = color;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        for (x = 1; x &lt; gridWidth; x++)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            var x1 = x * cellWidth;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            pipeline.setTexture2D();</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            pipeline.batchLine(x1, 0, x1, height, 1, 1, 1, 0, false);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        for (y = 1; y &lt; gridHeight; y++)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            var y1 = y * cellHeight;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            pipeline.setTexture2D();</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            pipeline.batchLine(0, y1, width, y1, 1, 1, 1, 0, false);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >};</span>
+&nbsp;
+module.exports = GridWebGLRenderer;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9nYW1lb2JqZWN0cy9zaGFwZS9ncmlkL0dyaWRXZWJHTFJlbmRlcmVyLmpzP2M3NjUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCOztBQUVBLFlBQVksbUJBQU8sQ0FBQyx3RkFBK0I7O0FBRW5EO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFdBQVcsb0NBQW9DO0FBQy9DLFdBQVcsd0JBQXdCO0FBQ25DLFdBQVcsT0FBTztBQUNsQixXQUFXLDhCQUE4QjtBQUN6QyxXQUFXLDhDQUE4QztBQUN6RDtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7O0FBRUE7O0FBRUE7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBOztBQUVBOztBQUVBOztBQUVBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQSxtQkFBbUIsZ0JBQWdCO0FBQ25DO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUEsdUJBQXVCLGVBQWU7QUFDdEM7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBOztBQUVBO0FBQ0E7O0FBRUE7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBLG1CQUFtQixnQkFBZ0I7QUFDbkM7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQSx1QkFBdUIsZUFBZTtBQUN0QztBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7O0FBRUE7QUFDQTs7QUFFQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUEsbUJBQW1CLGVBQWU7QUFDbEM7QUFDQTs7QUFFQTs7QUFFQTtBQUNBOztBQUVBLG1CQUFtQixnQkFBZ0I7QUFDbkM7QUFDQTs7QUFFQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQSIsImZpbGUiOiIuL25vZGVfbW9kdWxlcy9waGFzZXIvc3JjL2dhbWVvYmplY3RzL3NoYXBlL2dyaWQvR3JpZFdlYkdMUmVuZGVyZXIuanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcclxuICogQGF1dGhvciAgICAgICBSaWNoYXJkIERhdmV5IDxyaWNoQHBob3RvbnN0b3JtLmNvbT5cclxuICogQGNvcHlyaWdodCAgICAyMDE5IFBob3RvbiBTdG9ybSBMdGQuXHJcbiAqIEBsaWNlbnNlICAgICAge0BsaW5rIGh0dHBzOi8vb3BlbnNvdXJjZS5vcmcvbGljZW5zZXMvTUlUfE1JVCBMaWNlbnNlfVxyXG4gKi9cclxuXHJcbnZhciBVdGlscyA9IHJlcXVpcmUoJy4uLy4uLy4uL3JlbmRlcmVyL3dlYmdsL1V0aWxzJyk7XHJcblxyXG4vKipcclxuICogUmVuZGVycyB0aGlzIEdhbWUgT2JqZWN0IHdpdGggdGhlIFdlYkdMIFJlbmRlcmVyIHRvIHRoZSBnaXZlbiBDYW1lcmEuXHJcbiAqIFRoZSBvYmplY3Qgd2lsbCBub3QgcmVuZGVyIGlmIGFueSBvZiBpdHMgcmVuZGVyRmxhZ3MgYXJlIHNldCBvciBpdCBpcyBiZWluZyBhY3RpdmVseSBmaWx0ZXJlZCBvdXQgYnkgdGhlIENhbWVyYS5cclxuICogVGhpcyBtZXRob2Qgc2hvdWxkIG5vdCBiZSBjYWxsZWQgZGlyZWN0bHkuIEl0IGlzIGEgdXRpbGl0eSBmdW5jdGlvbiBvZiB0aGUgUmVuZGVyIG1vZHVsZS5cclxuICpcclxuICogQG1ldGhvZCBQaGFzZXIuR2FtZU9iamVjdHMuR3JpZCNyZW5kZXJXZWJHTFxyXG4gKiBAc2luY2UgMy4xMy4wXHJcbiAqIEBwcml2YXRlXHJcbiAqXHJcbiAqIEBwYXJhbSB7UGhhc2VyLlJlbmRlcmVyLldlYkdMLldlYkdMUmVuZGVyZXJ9IHJlbmRlcmVyIC0gQSByZWZlcmVuY2UgdG8gdGhlIGN1cnJlbnQgYWN0aXZlIFdlYkdMIHJlbmRlcmVyLlxyXG4gKiBAcGFyYW0ge1BoYXNlci5HYW1lT2JqZWN0cy5HcmlkfSBzcmMgLSBUaGUgR2FtZSBPYmplY3QgYmVpbmcgcmVuZGVyZWQgaW4gdGhpcyBjYWxsLlxyXG4gKiBAcGFyYW0ge251bWJlcn0gaW50ZXJwb2xhdGlvblBlcmNlbnRhZ2UgLSBSZXNlcnZlZCBmb3IgZnV0dXJlIHVzZSBhbmQgY3VzdG9tIHBpcGVsaW5lcy5cclxuICogQHBhcmFtIHtQaGFzZXIuQ2FtZXJhcy5TY2VuZTJELkNhbWVyYX0gY2FtZXJhIC0gVGhlIENhbWVyYSB0aGF0IGlzIHJlbmRlcmluZyB0aGUgR2FtZSBPYmplY3QuXHJcbiAqIEBwYXJhbSB7UGhhc2VyLkdhbWVPYmplY3RzLkNvbXBvbmVudHMuVHJhbnNmb3JtTWF0cml4fSBwYXJlbnRNYXRyaXggLSBUaGlzIHRyYW5zZm9ybSBtYXRyaXggaXMgZGVmaW5lZCBpZiB0aGUgZ2FtZSBvYmplY3QgaXMgbmVzdGVkXHJcbiAqL1xyXG52YXIgR3JpZFdlYkdMUmVuZGVyZXIgPSBmdW5jdGlvbiAocmVuZGVyZXIsIHNyYywgaW50ZXJwb2xhdGlvblBlcmNlbnRhZ2UsIGNhbWVyYSwgcGFyZW50TWF0cml4KVxyXG57XHJcbiAgICB2YXIgcGlwZWxpbmUgPSB0aGlzLnBpcGVsaW5lO1xyXG5cclxuICAgIHZhciBjYW1NYXRyaXggPSBwaXBlbGluZS5fdGVtcE1hdHJpeDE7XHJcbiAgICB2YXIgc2hhcGVNYXRyaXggPSBwaXBlbGluZS5fdGVtcE1hdHJpeDI7XHJcbiAgICB2YXIgY2FsY01hdHJpeCA9IHBpcGVsaW5lLl90ZW1wTWF0cml4MztcclxuXHJcbiAgICByZW5kZXJlci5zZXRQaXBlbGluZShwaXBlbGluZSk7XHJcblxyXG4gICAgc2hhcGVNYXRyaXguYXBwbHlJVFJTKHNyYy54LCBzcmMueSwgc3JjLnJvdGF0aW9uLCBzcmMuc2NhbGVYLCBzcmMuc2NhbGVZKTtcclxuXHJcbiAgICBjYW1NYXRyaXguY29weUZyb20oY2FtZXJhLm1hdHJpeCk7XHJcblxyXG4gICAgaWYgKHBhcmVudE1hdHJpeClcclxuICAgIHtcclxuICAgICAgICAvLyAgTXVsdGlwbHkgdGhlIGNhbWVyYSBieSB0aGUgcGFyZW50IG1hdHJpeFxyXG4gICAgICAgIGNhbU1hdHJpeC5tdWx0aXBseVdpdGhPZmZzZXQocGFyZW50TWF0cml4LCAtY2FtZXJhLnNjcm9sbFggKiBzcmMuc2Nyb2xsRmFjdG9yWCwgLWNhbWVyYS5zY3JvbGxZICogc3JjLnNjcm9sbEZhY3RvclkpO1xyXG5cclxuICAgICAgICAvLyAgVW5kbyB0aGUgY2FtZXJhIHNjcm9sbFxyXG4gICAgICAgIHNoYXBlTWF0cml4LmUgPSBzcmMueDtcclxuICAgICAgICBzaGFwZU1hdHJpeC5mID0gc3JjLnk7XHJcbiAgICB9XHJcbiAgICBlbHNlXHJcbiAgICB7XHJcbiAgICAgICAgc2hhcGVNYXRyaXguZSAtPSBjYW1lcmEuc2Nyb2xsWCAqIHNyYy5zY3JvbGxGYWN0b3JYO1xyXG4gICAgICAgIHNoYXBlTWF0cml4LmYgLT0gY2FtZXJhLnNjcm9sbFkgKiBzcmMuc2Nyb2xsRmFjdG9yWTtcclxuICAgIH1cclxuXHJcbiAgICBjYW1NYXRyaXgubXVsdGlwbHkoc2hhcGVNYXRyaXgsIGNhbGNNYXRyaXgpO1xyXG5cclxuICAgIGNhbGNNYXRyaXgudHJhbnNsYXRlKC1zcmMuX2Rpc3BsYXlPcmlnaW5YLCAtc3JjLl9kaXNwbGF5T3JpZ2luWSk7XHJcblxyXG4gICAgdmFyIGFscGhhID0gY2FtZXJhLmFscGhhICogc3JjLmFscGhhO1xyXG5cclxuICAgIC8vICBXb3JrIG91dCB0aGUgZ3JpZCBzaXplXHJcblxyXG4gICAgdmFyIHdpZHRoID0gc3JjLndpZHRoO1xyXG4gICAgdmFyIGhlaWdodCA9IHNyYy5oZWlnaHQ7XHJcblxyXG4gICAgdmFyIGNlbGxXaWR0aCA9IHNyYy5jZWxsV2lkdGg7XHJcbiAgICB2YXIgY2VsbEhlaWdodCA9IHNyYy5jZWxsSGVpZ2h0O1xyXG5cclxuICAgIHZhciBncmlkV2lkdGggPSBNYXRoLmNlaWwod2lkdGggLyBjZWxsV2lkdGgpO1xyXG4gICAgdmFyIGdyaWRIZWlnaHQgPSBNYXRoLmNlaWwoaGVpZ2h0IC8gY2VsbEhlaWdodCk7XHJcblxyXG4gICAgdmFyIGNlbGxXaWR0aEEgPSBjZWxsV2lkdGg7XHJcbiAgICB2YXIgY2VsbEhlaWdodEEgPSBjZWxsSGVpZ2h0O1xyXG5cclxuICAgIHZhciBjZWxsV2lkdGhCID0gY2VsbFdpZHRoIC0gKChncmlkV2lkdGggKiBjZWxsV2lkdGgpIC0gd2lkdGgpO1xyXG4gICAgdmFyIGNlbGxIZWlnaHRCID0gY2VsbEhlaWdodCAtICgoZ3JpZEhlaWdodCAqIGNlbGxIZWlnaHQpIC0gaGVpZ2h0KTtcclxuXHJcbiAgICB2YXIgZmlsbFRpbnQ7XHJcbiAgICB2YXIgZmlsbFRpbnRDb2xvcjtcclxuXHJcbiAgICB2YXIgc2hvd0NlbGxzID0gc3JjLnNob3dDZWxscztcclxuICAgIHZhciBzaG93QWx0Q2VsbHMgPSBzcmMuc2hvd0FsdENlbGxzO1xyXG4gICAgdmFyIHNob3dPdXRsaW5lID0gc3JjLnNob3dPdXRsaW5lO1xyXG5cclxuICAgIHZhciB4ID0gMDtcclxuICAgIHZhciB5ID0gMDtcclxuICAgIHZhciByID0gMDtcclxuICAgIHZhciBjdyA9IDA7XHJcbiAgICB2YXIgY2ggPSAwO1xyXG5cclxuICAgIGlmIChzaG93T3V0bGluZSlcclxuICAgIHtcclxuICAgICAgICAvLyAgVG8gbWFrZSByb29tIGZvciB0aGUgZ3JpZCBsaW5lcyAoaW4gY2FzZSBhbHBoYSA8IDEpXHJcbiAgICAgICAgY2VsbFdpZHRoQS0tO1xyXG4gICAgICAgIGNlbGxIZWlnaHRBLS07XHJcblxyXG4gICAgICAgIGlmIChjZWxsV2lkdGhCID09PSBjZWxsV2lkdGgpXHJcbiAgICAgICAge1xyXG4gICAgICAgICAgICBjZWxsV2lkdGhCLS07XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICBpZiAoY2VsbEhlaWdodEIgPT09IGNlbGxIZWlnaHQpXHJcbiAgICAgICAge1xyXG4gICAgICAgICAgICBjZWxsSGVpZ2h0Qi0tO1xyXG4gICAgICAgIH1cclxuICAgIH1cclxuXHJcbiAgICBpZiAoc2hvd0NlbGxzICYmIHNyYy5maWxsQWxwaGEgPiAwKVxyXG4gICAge1xyXG4gICAgICAgIGZpbGxUaW50ID0gcGlwZWxpbmUuZmlsbFRpbnQ7XHJcbiAgICAgICAgZmlsbFRpbnRDb2xvciA9IFV0aWxzLmdldFRpbnRBcHBlbmRGbG9hdEFscGhhQW5kU3dhcChzcmMuZmlsbENvbG9yLCBzcmMuZmlsbEFscGhhICogYWxwaGEpO1xyXG4gICAgXHJcbiAgICAgICAgZmlsbFRpbnQuVEwgPSBmaWxsVGludENvbG9yO1xyXG4gICAgICAgIGZpbGxUaW50LlRSID0gZmlsbFRpbnRDb2xvcjtcclxuICAgICAgICBmaWxsVGludC5CTCA9IGZpbGxUaW50Q29sb3I7XHJcbiAgICAgICAgZmlsbFRpbnQuQlIgPSBmaWxsVGludENvbG9yO1xyXG5cclxuICAgICAgICBmb3IgKHkgPSAwOyB5IDwgZ3JpZEhlaWdodDsgeSsrKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgaWYgKHNob3dBbHRDZWxscylcclxuICAgICAgICAgICAge1xyXG4gICAgICAgICAgICAgICAgciA9IHkgJSAyO1xyXG4gICAgICAgICAgICB9XHJcblxyXG4gICAgICAgICAgICBmb3IgKHggPSAwOyB4IDwgZ3JpZFdpZHRoOyB4KyspXHJcbiAgICAgICAgICAgIHtcclxuICAgICAgICAgICAgICAgIGlmIChzaG93QWx0Q2VsbHMgJiYgcilcclxuICAgICAgICAgICAgICAgIHtcclxuICAgICAgICAgICAgICAgICAgICByID0gMDtcclxuICAgICAgICAgICAgICAgICAgICBjb250aW51ZTtcclxuICAgICAgICAgICAgICAgIH1cclxuXHJcbiAgICAgICAgICAgICAgICByKys7XHJcblxyXG4gICAgICAgICAgICAgICAgY3cgPSAoeCA8IGdyaWRXaWR0aCAtIDEpID8gY2VsbFdpZHRoQSA6IGNlbGxXaWR0aEI7XHJcbiAgICAgICAgICAgICAgICBjaCA9ICh5IDwgZ3JpZEhlaWdodCAtIDEpID8gY2VsbEhlaWdodEEgOiBjZWxsSGVpZ2h0QjtcclxuXHJcbiAgICAgICAgICAgICAgICBwaXBlbGluZS5zZXRUZXh0dXJlMkQoKTtcclxuXHJcbiAgICAgICAgICAgICAgICBwaXBlbGluZS5iYXRjaEZpbGxSZWN0KFxyXG4gICAgICAgICAgICAgICAgICAgIHggKiBjZWxsV2lkdGgsXHJcbiAgICAgICAgICAgICAgICAgICAgeSAqIGNlbGxIZWlnaHQsXHJcbiAgICAgICAgICAgICAgICAgICAgY3csXHJcbiAgICAgICAgICAgICAgICAgICAgY2hcclxuICAgICAgICAgICAgICAgICk7XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICB9XHJcbiAgICB9XHJcblxyXG4gICAgaWYgKHNob3dBbHRDZWxscyAmJiBzcmMuYWx0RmlsbEFscGhhID4gMClcclxuICAgIHtcclxuICAgICAgICBmaWxsVGludCA9IHBpcGVsaW5lLmZpbGxUaW50O1xyXG4gICAgICAgIGZpbGxUaW50Q29sb3IgPSBVdGlscy5nZXRUaW50QXBwZW5kRmxvYXRBbHBoYUFuZFN3YXAoc3JjLmFsdEZpbGxDb2xvciwgc3JjLmFsdEZpbGxBbHBoYSAqIGFscGhhKTtcclxuICAgIFxyXG4gICAgICAgIGZpbGxUaW50LlRMID0gZmlsbFRpbnRDb2xvcjtcclxuICAgICAgICBmaWxsVGludC5UUiA9IGZpbGxUaW50Q29sb3I7XHJcbiAgICAgICAgZmlsbFRpbnQuQkwgPSBmaWxsVGludENvbG9yO1xyXG4gICAgICAgIGZpbGxUaW50LkJSID0gZmlsbFRpbnRDb2xvcjtcclxuXHJcbiAgICAgICAgZm9yICh5ID0gMDsgeSA8IGdyaWRIZWlnaHQ7IHkrKylcclxuICAgICAgICB7XHJcbiAgICAgICAgICAgIGlmIChzaG93QWx0Q2VsbHMpXHJcbiAgICAgICAgICAgIHtcclxuICAgICAgICAgICAgICAgIHIgPSB5ICUgMjtcclxuICAgICAgICAgICAgfVxyXG5cclxuICAgICAgICAgICAgZm9yICh4ID0gMDsgeCA8IGdyaWRXaWR0aDsgeCsrKVxyXG4gICAgICAgICAgICB7XHJcbiAgICAgICAgICAgICAgICBpZiAoc2hvd0FsdENlbGxzICYmICFyKVxyXG4gICAgICAgICAgICAgICAge1xyXG4gICAgICAgICAgICAgICAgICAgIHIgPSAxO1xyXG4gICAgICAgICAgICAgICAgICAgIGNvbnRpbnVlO1xyXG4gICAgICAgICAgICAgICAgfVxyXG5cclxuICAgICAgICAgICAgICAgIHIgPSAwO1xyXG5cclxuICAgICAgICAgICAgICAgIGN3ID0gKHggPCBncmlkV2lkdGggLSAxKSA/IGNlbGxXaWR0aEEgOiBjZWxsV2lkdGhCO1xyXG4gICAgICAgICAgICAgICAgY2ggPSAoeSA8IGdyaWRIZWlnaHQgLSAxKSA/IGNlbGxIZWlnaHRBIDogY2VsbEhlaWdodEI7XHJcblxyXG4gICAgICAgICAgICAgICAgcGlwZWxpbmUuc2V0VGV4dHVyZTJEKCk7XHJcblxyXG4gICAgICAgICAgICAgICAgcGlwZWxpbmUuYmF0Y2hGaWxsUmVjdChcclxuICAgICAgICAgICAgICAgICAgICB4ICogY2VsbFdpZHRoLFxyXG4gICAgICAgICAgICAgICAgICAgIHkgKiBjZWxsSGVpZ2h0LFxyXG4gICAgICAgICAgICAgICAgICAgIGN3LFxyXG4gICAgICAgICAgICAgICAgICAgIGNoXHJcbiAgICAgICAgICAgICAgICApO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgIGlmIChzaG93T3V0bGluZSAmJiBzcmMub3V0bGluZUZpbGxBbHBoYSA+IDApXHJcbiAgICB7XHJcbiAgICAgICAgdmFyIHN0cm9rZVRpbnQgPSBwaXBlbGluZS5zdHJva2VUaW50O1xyXG4gICAgICAgIHZhciBjb2xvciA9IFV0aWxzLmdldFRpbnRBcHBlbmRGbG9hdEFscGhhQW5kU3dhcChzcmMub3V0bGluZUZpbGxDb2xvciwgc3JjLm91dGxpbmVGaWxsQWxwaGEgKiBhbHBoYSk7XHJcblxyXG4gICAgICAgIHN0cm9rZVRpbnQuVEwgPSBjb2xvcjtcclxuICAgICAgICBzdHJva2VUaW50LlRSID0gY29sb3I7XHJcbiAgICAgICAgc3Ryb2tlVGludC5CTCA9IGNvbG9yO1xyXG4gICAgICAgIHN0cm9rZVRpbnQuQlIgPSBjb2xvcjtcclxuXHJcbiAgICAgICAgZm9yICh4ID0gMTsgeCA8IGdyaWRXaWR0aDsgeCsrKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgdmFyIHgxID0geCAqIGNlbGxXaWR0aDtcclxuXHJcbiAgICAgICAgICAgIHBpcGVsaW5lLnNldFRleHR1cmUyRCgpO1xyXG5cclxuICAgICAgICAgICAgcGlwZWxpbmUuYmF0Y2hMaW5lKHgxLCAwLCB4MSwgaGVpZ2h0LCAxLCAxLCAxLCAwLCBmYWxzZSk7XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICBmb3IgKHkgPSAxOyB5IDwgZ3JpZEhlaWdodDsgeSsrKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgdmFyIHkxID0geSAqIGNlbGxIZWlnaHQ7XHJcblxyXG4gICAgICAgICAgICBwaXBlbGluZS5zZXRUZXh0dXJlMkQoKTtcclxuXHJcbiAgICAgICAgICAgIHBpcGVsaW5lLmJhdGNoTGluZSgwLCB5MSwgd2lkdGgsIHkxLCAxLCAxLCAxLCAwLCBmYWxzZSk7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG59O1xyXG5cclxubW9kdWxlLmV4cG9ydHMgPSBHcmlkV2ViR0xSZW5kZXJlcjtcclxuIl0sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/gameobjects/shape/grid/GridWebGLRenderer.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

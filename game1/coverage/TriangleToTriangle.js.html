@@ -1,0 +1,341 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for TriangleToTriangle.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> TriangleToTriangle.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">32.95% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>29/88</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>2/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">32.95% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>29/88</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var ContainsArray = __webpack_require__(/*! ../triangle/ContainsArray */ "./node_modules/phaser/src/geom/triangle/ContainsArray.js");
+var Decompose = __webpack_require__(/*! ../triangle/Decompose */ "./node_modules/phaser/src/geom/triangle/Decompose.js");
+var LineToLine = __webpack_require__(/*! ./LineToLine */ "./node_modules/phaser/src/geom/intersects/LineToLine.js");
+&nbsp;
+/**
+ * Checks if two Triangles intersect.
+ *
+ * A Triangle intersects another Triangle if any pair of their lines intersects or if any point of one Triangle is within the other Triangle. Thus, the Triangles are considered "solid".
+ *
+ * @function Phaser.Geom.Intersects.TriangleToTriangle
+ * @since 3.0.0
+ *
+ * @param {Phaser.Geom.Triangle} triangleA - The first Triangle to check for intersection.
+ * @param {Phaser.Geom.Triangle} triangleB - The second Triangle to check for intersection.
+ *
+ * @return {boolean} `true` if the Triangles intersect, otherwise `false`.
+ */
+<span class="cstat-no" title="statement not covered" >var TriangleToTriangle = function (triangleA, triangleB)</span>
+<span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    //  First the cheapest ones:</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (</span>
+<span class="cstat-no" title="statement not covered" >        triangleA.left &gt; triangleB.right ||</span>
+<span class="cstat-no" title="statement not covered" >        triangleA.right &lt; triangleB.left ||</span>
+<span class="cstat-no" title="statement not covered" >        triangleA.top &gt; triangleB.bottom ||</span>
+<span class="cstat-no" title="statement not covered" >        triangleA.bottom &lt; triangleB.top)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        return false;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var lineAA = triangleA.getLineA();</span>
+<span class="cstat-no" title="statement not covered" >    var lineAB = triangleA.getLineB();</span>
+<span class="cstat-no" title="statement not covered" >    var lineAC = triangleA.getLineC();</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var lineBA = triangleB.getLineA();</span>
+<span class="cstat-no" title="statement not covered" >    var lineBB = triangleB.getLineB();</span>
+<span class="cstat-no" title="statement not covered" >    var lineBC = triangleB.getLineC();</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    //  Now check the lines against each line of TriangleB</span>
+<span class="cstat-no" title="statement not covered" >    if (LineToLine(lineAA, lineBA) || LineToLine(lineAA, lineBB) || LineToLine(lineAA, lineBC))</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        return true;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (LineToLine(lineAB, lineBA) || LineToLine(lineAB, lineBB) || LineToLine(lineAB, lineBC))</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        return true;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (LineToLine(lineAC, lineBA) || LineToLine(lineAC, lineBB) || LineToLine(lineAC, lineBC))</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        return true;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    //  Nope, so check to see if any of the points of triangleA are within triangleB</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var points = Decompose(triangleA);</span>
+<span class="cstat-no" title="statement not covered" >    var within = ContainsArray(triangleB, points, true);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (within.length &gt; 0)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        return true;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    //  Finally check to see if any of the points of triangleB are within triangleA</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    points = Decompose(triangleB);</span>
+<span class="cstat-no" title="statement not covered" >    within = ContainsArray(triangleA, points, true);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (within.length &gt; 0)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        return true;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    return false;</span>
+<span class="cstat-no" title="statement not covered" >};</span>
+&nbsp;
+module.exports = TriangleToTriangle;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9nZW9tL2ludGVyc2VjdHMvVHJpYW5nbGVUb1RyaWFuZ2xlLmpzPzA2YjUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCOztBQUVBLG9CQUFvQixtQkFBTyxDQUFDLDJGQUEyQjtBQUN2RCxnQkFBZ0IsbUJBQU8sQ0FBQyxtRkFBdUI7QUFDL0MsaUJBQWlCLG1CQUFPLENBQUMsNkVBQWM7O0FBRXZDO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxXQUFXLHFCQUFxQjtBQUNoQyxXQUFXLHFCQUFxQjtBQUNoQztBQUNBLFlBQVksUUFBUTtBQUNwQjtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTs7QUFFQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQSIsImZpbGUiOiIuL25vZGVfbW9kdWxlcy9waGFzZXIvc3JjL2dlb20vaW50ZXJzZWN0cy9UcmlhbmdsZVRvVHJpYW5nbGUuanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcclxuICogQGF1dGhvciAgICAgICBSaWNoYXJkIERhdmV5IDxyaWNoQHBob3RvbnN0b3JtLmNvbT5cclxuICogQGNvcHlyaWdodCAgICAyMDE5IFBob3RvbiBTdG9ybSBMdGQuXHJcbiAqIEBsaWNlbnNlICAgICAge0BsaW5rIGh0dHBzOi8vb3BlbnNvdXJjZS5vcmcvbGljZW5zZXMvTUlUfE1JVCBMaWNlbnNlfVxyXG4gKi9cclxuXHJcbnZhciBDb250YWluc0FycmF5ID0gcmVxdWlyZSgnLi4vdHJpYW5nbGUvQ29udGFpbnNBcnJheScpO1xyXG52YXIgRGVjb21wb3NlID0gcmVxdWlyZSgnLi4vdHJpYW5nbGUvRGVjb21wb3NlJyk7XHJcbnZhciBMaW5lVG9MaW5lID0gcmVxdWlyZSgnLi9MaW5lVG9MaW5lJyk7XHJcblxyXG4vKipcclxuICogQ2hlY2tzIGlmIHR3byBUcmlhbmdsZXMgaW50ZXJzZWN0LlxyXG4gKlxyXG4gKiBBIFRyaWFuZ2xlIGludGVyc2VjdHMgYW5vdGhlciBUcmlhbmdsZSBpZiBhbnkgcGFpciBvZiB0aGVpciBsaW5lcyBpbnRlcnNlY3RzIG9yIGlmIGFueSBwb2ludCBvZiBvbmUgVHJpYW5nbGUgaXMgd2l0aGluIHRoZSBvdGhlciBUcmlhbmdsZS4gVGh1cywgdGhlIFRyaWFuZ2xlcyBhcmUgY29uc2lkZXJlZCBcInNvbGlkXCIuXHJcbiAqXHJcbiAqIEBmdW5jdGlvbiBQaGFzZXIuR2VvbS5JbnRlcnNlY3RzLlRyaWFuZ2xlVG9UcmlhbmdsZVxyXG4gKiBAc2luY2UgMy4wLjBcclxuICpcclxuICogQHBhcmFtIHtQaGFzZXIuR2VvbS5UcmlhbmdsZX0gdHJpYW5nbGVBIC0gVGhlIGZpcnN0IFRyaWFuZ2xlIHRvIGNoZWNrIGZvciBpbnRlcnNlY3Rpb24uXHJcbiAqIEBwYXJhbSB7UGhhc2VyLkdlb20uVHJpYW5nbGV9IHRyaWFuZ2xlQiAtIFRoZSBzZWNvbmQgVHJpYW5nbGUgdG8gY2hlY2sgZm9yIGludGVyc2VjdGlvbi5cclxuICpcclxuICogQHJldHVybiB7Ym9vbGVhbn0gYHRydWVgIGlmIHRoZSBUcmlhbmdsZXMgaW50ZXJzZWN0LCBvdGhlcndpc2UgYGZhbHNlYC5cclxuICovXHJcbnZhciBUcmlhbmdsZVRvVHJpYW5nbGUgPSBmdW5jdGlvbiAodHJpYW5nbGVBLCB0cmlhbmdsZUIpXHJcbntcclxuICAgIC8vICBGaXJzdCB0aGUgY2hlYXBlc3Qgb25lczpcclxuXHJcbiAgICBpZiAoXHJcbiAgICAgICAgdHJpYW5nbGVBLmxlZnQgPiB0cmlhbmdsZUIucmlnaHQgfHxcclxuICAgICAgICB0cmlhbmdsZUEucmlnaHQgPCB0cmlhbmdsZUIubGVmdCB8fFxyXG4gICAgICAgIHRyaWFuZ2xlQS50b3AgPiB0cmlhbmdsZUIuYm90dG9tIHx8XHJcbiAgICAgICAgdHJpYW5nbGVBLmJvdHRvbSA8IHRyaWFuZ2xlQi50b3ApXHJcbiAgICB7XHJcbiAgICAgICAgcmV0dXJuIGZhbHNlO1xyXG4gICAgfVxyXG5cclxuICAgIHZhciBsaW5lQUEgPSB0cmlhbmdsZUEuZ2V0TGluZUEoKTtcclxuICAgIHZhciBsaW5lQUIgPSB0cmlhbmdsZUEuZ2V0TGluZUIoKTtcclxuICAgIHZhciBsaW5lQUMgPSB0cmlhbmdsZUEuZ2V0TGluZUMoKTtcclxuXHJcbiAgICB2YXIgbGluZUJBID0gdHJpYW5nbGVCLmdldExpbmVBKCk7XHJcbiAgICB2YXIgbGluZUJCID0gdHJpYW5nbGVCLmdldExpbmVCKCk7XHJcbiAgICB2YXIgbGluZUJDID0gdHJpYW5nbGVCLmdldExpbmVDKCk7XHJcblxyXG4gICAgLy8gIE5vdyBjaGVjayB0aGUgbGluZXMgYWdhaW5zdCBlYWNoIGxpbmUgb2YgVHJpYW5nbGVCXHJcbiAgICBpZiAoTGluZVRvTGluZShsaW5lQUEsIGxpbmVCQSkgfHwgTGluZVRvTGluZShsaW5lQUEsIGxpbmVCQikgfHwgTGluZVRvTGluZShsaW5lQUEsIGxpbmVCQykpXHJcbiAgICB7XHJcbiAgICAgICAgcmV0dXJuIHRydWU7XHJcbiAgICB9XHJcblxyXG4gICAgaWYgKExpbmVUb0xpbmUobGluZUFCLCBsaW5lQkEpIHx8IExpbmVUb0xpbmUobGluZUFCLCBsaW5lQkIpIHx8IExpbmVUb0xpbmUobGluZUFCLCBsaW5lQkMpKVxyXG4gICAge1xyXG4gICAgICAgIHJldHVybiB0cnVlO1xyXG4gICAgfVxyXG5cclxuICAgIGlmIChMaW5lVG9MaW5lKGxpbmVBQywgbGluZUJBKSB8fCBMaW5lVG9MaW5lKGxpbmVBQywgbGluZUJCKSB8fCBMaW5lVG9MaW5lKGxpbmVBQywgbGluZUJDKSlcclxuICAgIHtcclxuICAgICAgICByZXR1cm4gdHJ1ZTtcclxuICAgIH1cclxuXHJcbiAgICAvLyAgTm9wZSwgc28gY2hlY2sgdG8gc2VlIGlmIGFueSBvZiB0aGUgcG9pbnRzIG9mIHRyaWFuZ2xlQSBhcmUgd2l0aGluIHRyaWFuZ2xlQlxyXG5cclxuICAgIHZhciBwb2ludHMgPSBEZWNvbXBvc2UodHJpYW5nbGVBKTtcclxuICAgIHZhciB3aXRoaW4gPSBDb250YWluc0FycmF5KHRyaWFuZ2xlQiwgcG9pbnRzLCB0cnVlKTtcclxuXHJcbiAgICBpZiAod2l0aGluLmxlbmd0aCA+IDApXHJcbiAgICB7XHJcbiAgICAgICAgcmV0dXJuIHRydWU7XHJcbiAgICB9XHJcblxyXG4gICAgLy8gIEZpbmFsbHkgY2hlY2sgdG8gc2VlIGlmIGFueSBvZiB0aGUgcG9pbnRzIG9mIHRyaWFuZ2xlQiBhcmUgd2l0aGluIHRyaWFuZ2xlQVxyXG5cclxuICAgIHBvaW50cyA9IERlY29tcG9zZSh0cmlhbmdsZUIpO1xyXG4gICAgd2l0aGluID0gQ29udGFpbnNBcnJheSh0cmlhbmdsZUEsIHBvaW50cywgdHJ1ZSk7XHJcblxyXG4gICAgaWYgKHdpdGhpbi5sZW5ndGggPiAwKVxyXG4gICAge1xyXG4gICAgICAgIHJldHVybiB0cnVlO1xyXG4gICAgfVxyXG5cclxuICAgIHJldHVybiBmYWxzZTtcclxufTtcclxuXHJcbm1vZHVsZS5leHBvcnRzID0gVHJpYW5nbGVUb1RyaWFuZ2xlO1xyXG4iXSwic291cmNlUm9vdCI6IiJ9
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/geom/intersects/TriangleToTriangle.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

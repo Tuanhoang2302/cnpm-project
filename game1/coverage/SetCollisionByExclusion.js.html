@@ -1,0 +1,242 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for SetCollisionByExclusion.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> SetCollisionByExclusion.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">54.55% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>30/55</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>2/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">54.55% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>30/55</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line medium'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var SetTileCollision = __webpack_require__(/*! ./SetTileCollision */ "./node_modules/phaser/src/tilemaps/components/SetTileCollision.js");
+var CalculateFacesWithin = __webpack_require__(/*! ./CalculateFacesWithin */ "./node_modules/phaser/src/tilemaps/components/CalculateFacesWithin.js");
+var SetLayerCollisionIndex = __webpack_require__(/*! ./SetLayerCollisionIndex */ "./node_modules/phaser/src/tilemaps/components/SetLayerCollisionIndex.js");
+&nbsp;
+/**
+ * Sets collision on all tiles in the given layer, except for tiles that have an index specified in
+ * the given array. The `collides` parameter controls if collision will be enabled (true) or
+ * disabled (false).
+ *
+ * @function Phaser.Tilemaps.Components.SetCollisionByExclusion
+ * @private
+ * @since 3.0.0
+ *
+ * @param {integer[]} indexes - An array of the tile indexes to not be counted for collision.
+ * @param {boolean} [collides=true] - If true it will enable collision. If false it will clear collision.
+ * @param {boolean} [recalculateFaces=true] - Whether or not to recalculate the tile faces after the update.
+ * @param {Phaser.Tilemaps.LayerData} layer - The Tilemap Layer to act upon.
+ */
+<span class="cstat-no" title="statement not covered" >var SetCollisionByExclusion = function (indexes, collides, recalculateFaces, layer)</span>
+<span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    if (collides === undefined) { collides = true; }</span>
+<span class="cstat-no" title="statement not covered" >    if (recalculateFaces === undefined) { recalculateFaces = true; }</span>
+<span class="cstat-no" title="statement not covered" >    if (!Array.isArray(indexes)) { indexes = [ indexes ]; }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    // Note: this only updates layer.collideIndexes for tile indexes found currently in the layer</span>
+<span class="cstat-no" title="statement not covered" >    for (var ty = 0; ty &lt; layer.height; ty++)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        for (var tx = 0; tx &lt; layer.width; tx++)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            var tile = layer.data[ty][tx];</span>
+<span class="cstat-no" title="statement not covered" >            if (tile &amp;&amp; indexes.indexOf(tile.index) === -1)</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >                SetTileCollision(tile, collides);</span>
+<span class="cstat-no" title="statement not covered" >                SetLayerCollisionIndex(tile.index, collides, layer);</span>
+<span class="cstat-no" title="statement not covered" >            }</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (recalculateFaces)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        CalculateFacesWithin(0, 0, layer.width, layer.height, layer);</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >};</span>
+&nbsp;
+module.exports = SetCollisionByExclusion;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy90aWxlbWFwcy9jb21wb25lbnRzL1NldENvbGxpc2lvbkJ5RXhjbHVzaW9uLmpzP2Q3N2EiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCOztBQUVBLHVCQUF1QixtQkFBTyxDQUFDLDZGQUFvQjtBQUNuRCwyQkFBMkIsbUJBQU8sQ0FBQyxxR0FBd0I7QUFDM0QsNkJBQTZCLG1CQUFPLENBQUMseUdBQTBCOztBQUUvRDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxXQUFXLFVBQVU7QUFDckIsV0FBVyxRQUFRO0FBQ25CLFdBQVcsUUFBUTtBQUNuQixXQUFXLDBCQUEwQjtBQUNyQztBQUNBO0FBQ0E7QUFDQSxpQ0FBaUMsaUJBQWlCO0FBQ2xELHlDQUF5Qyx5QkFBeUI7QUFDbEUsa0NBQWtDLHVCQUF1Qjs7QUFFekQ7QUFDQSxvQkFBb0IsbUJBQW1CO0FBQ3ZDO0FBQ0Esd0JBQXdCLGtCQUFrQjtBQUMxQztBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQSIsImZpbGUiOiIuL25vZGVfbW9kdWxlcy9waGFzZXIvc3JjL3RpbGVtYXBzL2NvbXBvbmVudHMvU2V0Q29sbGlzaW9uQnlFeGNsdXNpb24uanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcclxuICogQGF1dGhvciAgICAgICBSaWNoYXJkIERhdmV5IDxyaWNoQHBob3RvbnN0b3JtLmNvbT5cclxuICogQGNvcHlyaWdodCAgICAyMDE5IFBob3RvbiBTdG9ybSBMdGQuXHJcbiAqIEBsaWNlbnNlICAgICAge0BsaW5rIGh0dHBzOi8vb3BlbnNvdXJjZS5vcmcvbGljZW5zZXMvTUlUfE1JVCBMaWNlbnNlfVxyXG4gKi9cclxuXHJcbnZhciBTZXRUaWxlQ29sbGlzaW9uID0gcmVxdWlyZSgnLi9TZXRUaWxlQ29sbGlzaW9uJyk7XHJcbnZhciBDYWxjdWxhdGVGYWNlc1dpdGhpbiA9IHJlcXVpcmUoJy4vQ2FsY3VsYXRlRmFjZXNXaXRoaW4nKTtcclxudmFyIFNldExheWVyQ29sbGlzaW9uSW5kZXggPSByZXF1aXJlKCcuL1NldExheWVyQ29sbGlzaW9uSW5kZXgnKTtcclxuXHJcbi8qKlxyXG4gKiBTZXRzIGNvbGxpc2lvbiBvbiBhbGwgdGlsZXMgaW4gdGhlIGdpdmVuIGxheWVyLCBleGNlcHQgZm9yIHRpbGVzIHRoYXQgaGF2ZSBhbiBpbmRleCBzcGVjaWZpZWQgaW5cclxuICogdGhlIGdpdmVuIGFycmF5LiBUaGUgYGNvbGxpZGVzYCBwYXJhbWV0ZXIgY29udHJvbHMgaWYgY29sbGlzaW9uIHdpbGwgYmUgZW5hYmxlZCAodHJ1ZSkgb3JcclxuICogZGlzYWJsZWQgKGZhbHNlKS5cclxuICpcclxuICogQGZ1bmN0aW9uIFBoYXNlci5UaWxlbWFwcy5Db21wb25lbnRzLlNldENvbGxpc2lvbkJ5RXhjbHVzaW9uXHJcbiAqIEBwcml2YXRlXHJcbiAqIEBzaW5jZSAzLjAuMFxyXG4gKlxyXG4gKiBAcGFyYW0ge2ludGVnZXJbXX0gaW5kZXhlcyAtIEFuIGFycmF5IG9mIHRoZSB0aWxlIGluZGV4ZXMgdG8gbm90IGJlIGNvdW50ZWQgZm9yIGNvbGxpc2lvbi5cclxuICogQHBhcmFtIHtib29sZWFufSBbY29sbGlkZXM9dHJ1ZV0gLSBJZiB0cnVlIGl0IHdpbGwgZW5hYmxlIGNvbGxpc2lvbi4gSWYgZmFsc2UgaXQgd2lsbCBjbGVhciBjb2xsaXNpb24uXHJcbiAqIEBwYXJhbSB7Ym9vbGVhbn0gW3JlY2FsY3VsYXRlRmFjZXM9dHJ1ZV0gLSBXaGV0aGVyIG9yIG5vdCB0byByZWNhbGN1bGF0ZSB0aGUgdGlsZSBmYWNlcyBhZnRlciB0aGUgdXBkYXRlLlxyXG4gKiBAcGFyYW0ge1BoYXNlci5UaWxlbWFwcy5MYXllckRhdGF9IGxheWVyIC0gVGhlIFRpbGVtYXAgTGF5ZXIgdG8gYWN0IHVwb24uXHJcbiAqL1xyXG52YXIgU2V0Q29sbGlzaW9uQnlFeGNsdXNpb24gPSBmdW5jdGlvbiAoaW5kZXhlcywgY29sbGlkZXMsIHJlY2FsY3VsYXRlRmFjZXMsIGxheWVyKVxyXG57XHJcbiAgICBpZiAoY29sbGlkZXMgPT09IHVuZGVmaW5lZCkgeyBjb2xsaWRlcyA9IHRydWU7IH1cclxuICAgIGlmIChyZWNhbGN1bGF0ZUZhY2VzID09PSB1bmRlZmluZWQpIHsgcmVjYWxjdWxhdGVGYWNlcyA9IHRydWU7IH1cclxuICAgIGlmICghQXJyYXkuaXNBcnJheShpbmRleGVzKSkgeyBpbmRleGVzID0gWyBpbmRleGVzIF07IH1cclxuXHJcbiAgICAvLyBOb3RlOiB0aGlzIG9ubHkgdXBkYXRlcyBsYXllci5jb2xsaWRlSW5kZXhlcyBmb3IgdGlsZSBpbmRleGVzIGZvdW5kIGN1cnJlbnRseSBpbiB0aGUgbGF5ZXJcclxuICAgIGZvciAodmFyIHR5ID0gMDsgdHkgPCBsYXllci5oZWlnaHQ7IHR5KyspXHJcbiAgICB7XHJcbiAgICAgICAgZm9yICh2YXIgdHggPSAwOyB0eCA8IGxheWVyLndpZHRoOyB0eCsrKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgdmFyIHRpbGUgPSBsYXllci5kYXRhW3R5XVt0eF07XHJcbiAgICAgICAgICAgIGlmICh0aWxlICYmIGluZGV4ZXMuaW5kZXhPZih0aWxlLmluZGV4KSA9PT0gLTEpXHJcbiAgICAgICAgICAgIHtcclxuICAgICAgICAgICAgICAgIFNldFRpbGVDb2xsaXNpb24odGlsZSwgY29sbGlkZXMpO1xyXG4gICAgICAgICAgICAgICAgU2V0TGF5ZXJDb2xsaXNpb25JbmRleCh0aWxlLmluZGV4LCBjb2xsaWRlcywgbGF5ZXIpO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgIGlmIChyZWNhbGN1bGF0ZUZhY2VzKVxyXG4gICAge1xyXG4gICAgICAgIENhbGN1bGF0ZUZhY2VzV2l0aGluKDAsIDAsIGxheWVyLndpZHRoLCBsYXllci5oZWlnaHQsIGxheWVyKTtcclxuICAgIH1cclxufTtcclxuXHJcbm1vZHVsZS5leHBvcnRzID0gU2V0Q29sbGlzaW9uQnlFeGNsdXNpb247XHJcbiJdLCJzb3VyY2VSb290IjoiIn0=
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/tilemaps/components/SetCollisionByExclusion.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

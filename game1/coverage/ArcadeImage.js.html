@@ -1,0 +1,371 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for ArcadeImage.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> ArcadeImage.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">85.71% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>84/98</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>2/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">85.71% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>84/98</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var Class = __webpack_require__(/*! ../../utils/Class */ "./node_modules/phaser/src/utils/Class.js");
+var Components = __webpack_require__(/*! ./components */ "./node_modules/phaser/src/physics/arcade/components/index.js");
+var Image = __webpack_require__(/*! ../../gameobjects/image/Image */ "./node_modules/phaser/src/gameobjects/image/Image.js");
+&nbsp;
+/**
+ * @classdesc
+ * An Arcade Physics Image is an Image with an Arcade Physics body and related components.
+ * The body can be dynamic or static.
+ *
+ * The main difference between an Arcade Image and an Arcade Sprite is that you cannot animate an Arcade Image.
+ *
+ * @class Image
+ * @extends Phaser.GameObjects.Image
+ * @memberof Phaser.Physics.Arcade
+ * @constructor
+ * @since 3.0.0
+ *
+ * @extends Phaser.Physics.Arcade.Components.Acceleration
+ * @extends Phaser.Physics.Arcade.Components.Angular
+ * @extends Phaser.Physics.Arcade.Components.Bounce
+ * @extends Phaser.Physics.Arcade.Components.Debug
+ * @extends Phaser.Physics.Arcade.Components.Drag
+ * @extends Phaser.Physics.Arcade.Components.Enable
+ * @extends Phaser.Physics.Arcade.Components.Friction
+ * @extends Phaser.Physics.Arcade.Components.Gravity
+ * @extends Phaser.Physics.Arcade.Components.Immovable
+ * @extends Phaser.Physics.Arcade.Components.Mass
+ * @extends Phaser.Physics.Arcade.Components.Size
+ * @extends Phaser.Physics.Arcade.Components.Velocity
+ * @extends Phaser.GameObjects.Components.Alpha
+ * @extends Phaser.GameObjects.Components.BlendMode
+ * @extends Phaser.GameObjects.Components.Depth
+ * @extends Phaser.GameObjects.Components.Flip
+ * @extends Phaser.GameObjects.Components.GetBounds
+ * @extends Phaser.GameObjects.Components.Origin
+ * @extends Phaser.GameObjects.Components.Pipeline
+ * @extends Phaser.GameObjects.Components.ScrollFactor
+ * @extends Phaser.GameObjects.Components.Size
+ * @extends Phaser.GameObjects.Components.Texture
+ * @extends Phaser.GameObjects.Components.Tint
+ * @extends Phaser.GameObjects.Components.Transform
+ * @extends Phaser.GameObjects.Components.Visible
+ *
+ * @param {Phaser.Scene} scene - The Scene to which this Game Object belongs. A Game Object can only belong to one Scene at a time.
+ * @param {number} x - The horizontal position of this Game Object in the world.
+ * @param {number} y - The vertical position of this Game Object in the world.
+ * @param {string} texture - The key of the Texture this Game Object will use to render with, as stored in the Texture Manager.
+ * @param {(string|integer)} [frame] - An optional frame from the Texture this Game Object is rendering with.
+ */
+var ArcadeImage = new Class({
+&nbsp;
+    Extends: Image,
+&nbsp;
+    Mixins: [
+        Components.Acceleration,
+        Components.Angular,
+        Components.Bounce,
+        Components.Debug,
+        Components.Drag,
+        Components.Enable,
+        Components.Friction,
+        Components.Gravity,
+        Components.Immovable,
+        Components.Mass,
+        Components.Size,
+        Components.Velocity
+    ],
+&nbsp;
+    initialize:
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    function ArcadeImage (scene, x, y, texture, frame)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        Image.call(this, scene, x, y, texture, frame);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * This Game Object's Physics Body.</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Physics.Arcade.Image#body</span>
+<span class="cstat-no" title="statement not covered" >         * @type {?(Phaser.Physics.Arcade.Body|Phaser.Physics.Arcade.StaticBody)}</span>
+<span class="cstat-no" title="statement not covered" >         * @default null</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.0.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.body = null;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+&nbsp;
+});
+&nbsp;
+module.exports = ArcadeImage;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9waHlzaWNzL2FyY2FkZS9BcmNhZGVJbWFnZS5qcz81MmE3Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBLGtCQUFrQjtBQUNsQjs7QUFFQSxZQUFZLG1CQUFPLENBQUMsbUVBQW1CO0FBQ3ZDLGlCQUFpQixtQkFBTyxDQUFDLGtGQUFjO0FBQ3ZDLFlBQVksbUJBQU8sQ0FBQywyRkFBK0I7O0FBRW5EO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFdBQVcsYUFBYTtBQUN4QixXQUFXLE9BQU87QUFDbEIsV0FBVyxPQUFPO0FBQ2xCLFdBQVcsT0FBTztBQUNsQixXQUFXLGlCQUFpQjtBQUM1QjtBQUNBOztBQUVBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7O0FBRUE7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUEsQ0FBQzs7QUFFRCIsImZpbGUiOiIuL25vZGVfbW9kdWxlcy9waGFzZXIvc3JjL3BoeXNpY3MvYXJjYWRlL0FyY2FkZUltYWdlLmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXHJcbiAqIEBhdXRob3IgICAgICAgUmljaGFyZCBEYXZleSA8cmljaEBwaG90b25zdG9ybS5jb20+XHJcbiAqIEBjb3B5cmlnaHQgICAgMjAxOSBQaG90b24gU3Rvcm0gTHRkLlxyXG4gKiBAbGljZW5zZSAgICAgIHtAbGluayBodHRwczovL29wZW5zb3VyY2Uub3JnL2xpY2Vuc2VzL01JVHxNSVQgTGljZW5zZX1cclxuICovXHJcblxyXG52YXIgQ2xhc3MgPSByZXF1aXJlKCcuLi8uLi91dGlscy9DbGFzcycpO1xyXG52YXIgQ29tcG9uZW50cyA9IHJlcXVpcmUoJy4vY29tcG9uZW50cycpO1xyXG52YXIgSW1hZ2UgPSByZXF1aXJlKCcuLi8uLi9nYW1lb2JqZWN0cy9pbWFnZS9JbWFnZScpO1xyXG5cclxuLyoqXHJcbiAqIEBjbGFzc2Rlc2NcclxuICogQW4gQXJjYWRlIFBoeXNpY3MgSW1hZ2UgaXMgYW4gSW1hZ2Ugd2l0aCBhbiBBcmNhZGUgUGh5c2ljcyBib2R5IGFuZCByZWxhdGVkIGNvbXBvbmVudHMuXHJcbiAqIFRoZSBib2R5IGNhbiBiZSBkeW5hbWljIG9yIHN0YXRpYy5cclxuICpcclxuICogVGhlIG1haW4gZGlmZmVyZW5jZSBiZXR3ZWVuIGFuIEFyY2FkZSBJbWFnZSBhbmQgYW4gQXJjYWRlIFNwcml0ZSBpcyB0aGF0IHlvdSBjYW5ub3QgYW5pbWF0ZSBhbiBBcmNhZGUgSW1hZ2UuXHJcbiAqXHJcbiAqIEBjbGFzcyBJbWFnZVxyXG4gKiBAZXh0ZW5kcyBQaGFzZXIuR2FtZU9iamVjdHMuSW1hZ2VcclxuICogQG1lbWJlcm9mIFBoYXNlci5QaHlzaWNzLkFyY2FkZVxyXG4gKiBAY29uc3RydWN0b3JcclxuICogQHNpbmNlIDMuMC4wXHJcbiAqXHJcbiAqIEBleHRlbmRzIFBoYXNlci5QaHlzaWNzLkFyY2FkZS5Db21wb25lbnRzLkFjY2VsZXJhdGlvblxyXG4gKiBAZXh0ZW5kcyBQaGFzZXIuUGh5c2ljcy5BcmNhZGUuQ29tcG9uZW50cy5Bbmd1bGFyXHJcbiAqIEBleHRlbmRzIFBoYXNlci5QaHlzaWNzLkFyY2FkZS5Db21wb25lbnRzLkJvdW5jZVxyXG4gKiBAZXh0ZW5kcyBQaGFzZXIuUGh5c2ljcy5BcmNhZGUuQ29tcG9uZW50cy5EZWJ1Z1xyXG4gKiBAZXh0ZW5kcyBQaGFzZXIuUGh5c2ljcy5BcmNhZGUuQ29tcG9uZW50cy5EcmFnXHJcbiAqIEBleHRlbmRzIFBoYXNlci5QaHlzaWNzLkFyY2FkZS5Db21wb25lbnRzLkVuYWJsZVxyXG4gKiBAZXh0ZW5kcyBQaGFzZXIuUGh5c2ljcy5BcmNhZGUuQ29tcG9uZW50cy5GcmljdGlvblxyXG4gKiBAZXh0ZW5kcyBQaGFzZXIuUGh5c2ljcy5BcmNhZGUuQ29tcG9uZW50cy5HcmF2aXR5XHJcbiAqIEBleHRlbmRzIFBoYXNlci5QaHlzaWNzLkFyY2FkZS5Db21wb25lbnRzLkltbW92YWJsZVxyXG4gKiBAZXh0ZW5kcyBQaGFzZXIuUGh5c2ljcy5BcmNhZGUuQ29tcG9uZW50cy5NYXNzXHJcbiAqIEBleHRlbmRzIFBoYXNlci5QaHlzaWNzLkFyY2FkZS5Db21wb25lbnRzLlNpemVcclxuICogQGV4dGVuZHMgUGhhc2VyLlBoeXNpY3MuQXJjYWRlLkNvbXBvbmVudHMuVmVsb2NpdHlcclxuICogQGV4dGVuZHMgUGhhc2VyLkdhbWVPYmplY3RzLkNvbXBvbmVudHMuQWxwaGFcclxuICogQGV4dGVuZHMgUGhhc2VyLkdhbWVPYmplY3RzLkNvbXBvbmVudHMuQmxlbmRNb2RlXHJcbiAqIEBleHRlbmRzIFBoYXNlci5HYW1lT2JqZWN0cy5Db21wb25lbnRzLkRlcHRoXHJcbiAqIEBleHRlbmRzIFBoYXNlci5HYW1lT2JqZWN0cy5Db21wb25lbnRzLkZsaXBcclxuICogQGV4dGVuZHMgUGhhc2VyLkdhbWVPYmplY3RzLkNvbXBvbmVudHMuR2V0Qm91bmRzXHJcbiAqIEBleHRlbmRzIFBoYXNlci5HYW1lT2JqZWN0cy5Db21wb25lbnRzLk9yaWdpblxyXG4gKiBAZXh0ZW5kcyBQaGFzZXIuR2FtZU9iamVjdHMuQ29tcG9uZW50cy5QaXBlbGluZVxyXG4gKiBAZXh0ZW5kcyBQaGFzZXIuR2FtZU9iamVjdHMuQ29tcG9uZW50cy5TY3JvbGxGYWN0b3JcclxuICogQGV4dGVuZHMgUGhhc2VyLkdhbWVPYmplY3RzLkNvbXBvbmVudHMuU2l6ZVxyXG4gKiBAZXh0ZW5kcyBQaGFzZXIuR2FtZU9iamVjdHMuQ29tcG9uZW50cy5UZXh0dXJlXHJcbiAqIEBleHRlbmRzIFBoYXNlci5HYW1lT2JqZWN0cy5Db21wb25lbnRzLlRpbnRcclxuICogQGV4dGVuZHMgUGhhc2VyLkdhbWVPYmplY3RzLkNvbXBvbmVudHMuVHJhbnNmb3JtXHJcbiAqIEBleHRlbmRzIFBoYXNlci5HYW1lT2JqZWN0cy5Db21wb25lbnRzLlZpc2libGVcclxuICpcclxuICogQHBhcmFtIHtQaGFzZXIuU2NlbmV9IHNjZW5lIC0gVGhlIFNjZW5lIHRvIHdoaWNoIHRoaXMgR2FtZSBPYmplY3QgYmVsb25ncy4gQSBHYW1lIE9iamVjdCBjYW4gb25seSBiZWxvbmcgdG8gb25lIFNjZW5lIGF0IGEgdGltZS5cclxuICogQHBhcmFtIHtudW1iZXJ9IHggLSBUaGUgaG9yaXpvbnRhbCBwb3NpdGlvbiBvZiB0aGlzIEdhbWUgT2JqZWN0IGluIHRoZSB3b3JsZC5cclxuICogQHBhcmFtIHtudW1iZXJ9IHkgLSBUaGUgdmVydGljYWwgcG9zaXRpb24gb2YgdGhpcyBHYW1lIE9iamVjdCBpbiB0aGUgd29ybGQuXHJcbiAqIEBwYXJhbSB7c3RyaW5nfSB0ZXh0dXJlIC0gVGhlIGtleSBvZiB0aGUgVGV4dHVyZSB0aGlzIEdhbWUgT2JqZWN0IHdpbGwgdXNlIHRvIHJlbmRlciB3aXRoLCBhcyBzdG9yZWQgaW4gdGhlIFRleHR1cmUgTWFuYWdlci5cclxuICogQHBhcmFtIHsoc3RyaW5nfGludGVnZXIpfSBbZnJhbWVdIC0gQW4gb3B0aW9uYWwgZnJhbWUgZnJvbSB0aGUgVGV4dHVyZSB0aGlzIEdhbWUgT2JqZWN0IGlzIHJlbmRlcmluZyB3aXRoLlxyXG4gKi9cclxudmFyIEFyY2FkZUltYWdlID0gbmV3IENsYXNzKHtcclxuXHJcbiAgICBFeHRlbmRzOiBJbWFnZSxcclxuXHJcbiAgICBNaXhpbnM6IFtcclxuICAgICAgICBDb21wb25lbnRzLkFjY2VsZXJhdGlvbixcclxuICAgICAgICBDb21wb25lbnRzLkFuZ3VsYXIsXHJcbiAgICAgICAgQ29tcG9uZW50cy5Cb3VuY2UsXHJcbiAgICAgICAgQ29tcG9uZW50cy5EZWJ1ZyxcclxuICAgICAgICBDb21wb25lbnRzLkRyYWcsXHJcbiAgICAgICAgQ29tcG9uZW50cy5FbmFibGUsXHJcbiAgICAgICAgQ29tcG9uZW50cy5GcmljdGlvbixcclxuICAgICAgICBDb21wb25lbnRzLkdyYXZpdHksXHJcbiAgICAgICAgQ29tcG9uZW50cy5JbW1vdmFibGUsXHJcbiAgICAgICAgQ29tcG9uZW50cy5NYXNzLFxyXG4gICAgICAgIENvbXBvbmVudHMuU2l6ZSxcclxuICAgICAgICBDb21wb25lbnRzLlZlbG9jaXR5XHJcbiAgICBdLFxyXG5cclxuICAgIGluaXRpYWxpemU6XHJcblxyXG4gICAgZnVuY3Rpb24gQXJjYWRlSW1hZ2UgKHNjZW5lLCB4LCB5LCB0ZXh0dXJlLCBmcmFtZSlcclxuICAgIHtcclxuICAgICAgICBJbWFnZS5jYWxsKHRoaXMsIHNjZW5lLCB4LCB5LCB0ZXh0dXJlLCBmcmFtZSk7XHJcblxyXG4gICAgICAgIC8qKlxyXG4gICAgICAgICAqIFRoaXMgR2FtZSBPYmplY3QncyBQaHlzaWNzIEJvZHkuXHJcbiAgICAgICAgICpcclxuICAgICAgICAgKiBAbmFtZSBQaGFzZXIuUGh5c2ljcy5BcmNhZGUuSW1hZ2UjYm9keVxyXG4gICAgICAgICAqIEB0eXBlIHs/KFBoYXNlci5QaHlzaWNzLkFyY2FkZS5Cb2R5fFBoYXNlci5QaHlzaWNzLkFyY2FkZS5TdGF0aWNCb2R5KX1cclxuICAgICAgICAgKiBAZGVmYXVsdCBudWxsXHJcbiAgICAgICAgICogQHNpbmNlIDMuMC4wXHJcbiAgICAgICAgICovXHJcbiAgICAgICAgdGhpcy5ib2R5ID0gbnVsbDtcclxuICAgIH1cclxuXHJcbn0pO1xyXG5cclxubW9kdWxlLmV4cG9ydHMgPSBBcmNhZGVJbWFnZTtcclxuIl0sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/physics/arcade/ArcadeImage.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

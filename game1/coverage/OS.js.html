@@ -1,0 +1,587 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for OS.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> OS.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">60% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>102/170</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>13/13</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">60% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>102/170</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line medium'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/* WEBPACK VAR INJECTION */(function(process) {/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+/**
+ * Determines the operating system of the device running this Phaser Game instance.
+ * These values are read-only and populated during the boot sequence of the game.
+ * They are then referenced by internal game systems and are available for you to access
+ * via `this.sys.game.device.os` from within any Scene.
+ *
+ * @typedef {object} Phaser.Device.OS
+ * @since 3.0.0
+ *
+ * @property {boolean} android - Is running on android?
+ * @property {boolean} chromeOS - Is running on chromeOS?
+ * @property {boolean} cordova - Is the game running under Apache Cordova?
+ * @property {boolean} crosswalk - Is the game running under the Intel Crosswalk XDK?
+ * @property {boolean} desktop - Is running on a desktop?
+ * @property {boolean} ejecta - Is the game running under Ejecta?
+ * @property {boolean} electron - Is the game running under GitHub Electron?
+ * @property {boolean} iOS - Is running on iOS?
+ * @property {boolean} iPad - Is running on iPad?
+ * @property {boolean} iPhone - Is running on iPhone?
+ * @property {boolean} kindle - Is running on an Amazon Kindle?
+ * @property {boolean} linux - Is running on linux?
+ * @property {boolean} macOS - Is running on macOS?
+ * @property {boolean} node - Is the game running under Node.js?
+ * @property {boolean} nodeWebkit - Is the game running under Node-Webkit?
+ * @property {boolean} webApp - Set to true if running as a WebApp, i.e. within a WebView
+ * @property {boolean} windows - Is running on windows?
+ * @property {boolean} windowsPhone - Is running on a Windows Phone?
+ * @property {number} iOSVersion - If running in iOS this will contain the major version number.
+ * @property {number} pixelRatio - PixelRatio of the host device?
+ */
+var OS = {
+&nbsp;
+    android: false,
+    chromeOS: false,
+    cordova: false,
+    crosswalk: false,
+    desktop: false,
+    ejecta: false,
+    electron: false,
+    iOS: false,
+    iOSVersion: 0,
+    iPad: false,
+    iPhone: false,
+    kindle: false,
+    linux: false,
+    macOS: false,
+    node: false,
+    nodeWebkit: false,
+    pixelRatio: 1,
+    webApp: false,
+    windows: false,
+    windowsPhone: false
+&nbsp;
+};
+&nbsp;
+function init ()
+{
+    var ua = navigator.userAgent;
+&nbsp;
+    if (/Windows/.test(ua))
+    {
+        OS.windows = true;
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    else if (/Mac OS/.test(ua) &amp;&amp; !(/like Mac OS/.test(ua)))</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        OS.macOS = true;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    else if (/Android/.test(ua))</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        OS.android = true;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    else if (/Linux/.test(ua))</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        OS.linux = true;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    else if (/iP[ao]d|iPhone/i.test(ua))</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        OS.iOS = true;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        (navigator.appVersion).match(/OS (\d+)/);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        OS.iOSVersion = parseInt(RegExp.$1, 10);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        OS.iPhone = ua.toLowerCase().indexOf('iphone') !== -1;</span>
+<span class="cstat-no" title="statement not covered" >        OS.iPad = ua.toLowerCase().indexOf('ipad') !== -1;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    else if (/Kindle/.test(ua) || (/\bKF[A-Z][A-Z]+/).test(ua) || (/Silk.*Mobile Safari/).test(ua))</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        OS.kindle = true;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        // This will NOT detect early generations of Kindle Fire, I think there is no reliable way...</span>
+<span class="cstat-no" title="statement not covered" >        // E.g. "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk/1.1.0-80) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16 Silk-Accelerated=true"</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    else if (/CrOS/.test(ua))</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        OS.chromeOS = true;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+&nbsp;
+    if (/Windows Phone/i.test(ua) || (/IEMobile/i).test(ua))
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        OS.android = false;</span>
+<span class="cstat-no" title="statement not covered" >        OS.iOS = false;</span>
+<span class="cstat-no" title="statement not covered" >        OS.macOS = false;</span>
+<span class="cstat-no" title="statement not covered" >        OS.windows = true;</span>
+<span class="cstat-no" title="statement not covered" >        OS.windowsPhone = true;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+&nbsp;
+    var silk = (/Silk/).test(ua);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (OS.windows || OS.macOS || (OS.linux &amp;&amp; !silk) || OS.chromeOS)</span>
+    {
+        OS.desktop = true;
+    }
+&nbsp;
+    //  Windows Phone / Table reset
+    if (OS.windowsPhone || ((/Windows NT/i.test(ua)) &amp;&amp; (/Touch/i.test(ua))))
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        OS.desktop = false;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+&nbsp;
+    //  WebApp mode in iOS
+    if (navigator.standalone)
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        OS.webApp = true;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+&nbsp;
+    if (window.cordova !== undefined)
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        OS.cordova = true;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+&nbsp;
+    if (typeof process !== 'undefined' &amp;&amp; process.versions &amp;&amp; process.versions.node)
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        OS.node = true;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (OS.node &amp;&amp; typeof process.versions === 'object')</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        OS.nodeWebkit = !!process.versions['node-webkit'];</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        OS.electron = !!process.versions.electron;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+&nbsp;
+    if (window.ejecta !== undefined)
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        OS.ejecta = true;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+&nbsp;
+    if ((/Crosswalk/).test(ua))
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        OS.crosswalk = true;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    OS.pixelRatio = window['devicePixelRatio'] || 1;</span>
+&nbsp;
+    return OS;
+}
+&nbsp;
+module.exports = init();
+&nbsp;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../process/browser.js */ "./node_modules/process/browser.js")))//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9kZXZpY2UvT1MuanM/YTIwZCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQSxrQkFBa0I7QUFDbEI7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsYUFBYSxPQUFPO0FBQ3BCO0FBQ0E7QUFDQSxjQUFjLFFBQVE7QUFDdEIsY0FBYyxRQUFRO0FBQ3RCLGNBQWMsUUFBUTtBQUN0QixjQUFjLFFBQVE7QUFDdEIsY0FBYyxRQUFRO0FBQ3RCLGNBQWMsUUFBUTtBQUN0QixjQUFjLFFBQVE7QUFDdEIsY0FBYyxRQUFRO0FBQ3RCLGNBQWMsUUFBUTtBQUN0QixjQUFjLFFBQVE7QUFDdEIsY0FBYyxRQUFRO0FBQ3RCLGNBQWMsUUFBUTtBQUN0QixjQUFjLFFBQVE7QUFDdEIsY0FBYyxRQUFRO0FBQ3RCLGNBQWMsUUFBUTtBQUN0QixjQUFjLFFBQVE7QUFDdEIsY0FBYyxRQUFRO0FBQ3RCLGNBQWMsUUFBUTtBQUN0QixjQUFjLE9BQU87QUFDckIsY0FBYyxPQUFPO0FBQ3JCO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7O0FBRUE7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0Esd0NBQXdDLEdBQUcsdUJBQXVCLE9BQU87QUFDekU7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTs7QUFFQTtBQUNBOztBQUVBIiwiZmlsZSI6Ii4vbm9kZV9tb2R1bGVzL3BoYXNlci9zcmMvZGV2aWNlL09TLmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXHJcbiAqIEBhdXRob3IgICAgICAgUmljaGFyZCBEYXZleSA8cmljaEBwaG90b25zdG9ybS5jb20+XHJcbiAqIEBjb3B5cmlnaHQgICAgMjAxOSBQaG90b24gU3Rvcm0gTHRkLlxyXG4gKiBAbGljZW5zZSAgICAgIHtAbGluayBodHRwczovL29wZW5zb3VyY2Uub3JnL2xpY2Vuc2VzL01JVHxNSVQgTGljZW5zZX1cclxuICovXHJcblxyXG4vKipcclxuICogRGV0ZXJtaW5lcyB0aGUgb3BlcmF0aW5nIHN5c3RlbSBvZiB0aGUgZGV2aWNlIHJ1bm5pbmcgdGhpcyBQaGFzZXIgR2FtZSBpbnN0YW5jZS5cclxuICogVGhlc2UgdmFsdWVzIGFyZSByZWFkLW9ubHkgYW5kIHBvcHVsYXRlZCBkdXJpbmcgdGhlIGJvb3Qgc2VxdWVuY2Ugb2YgdGhlIGdhbWUuXHJcbiAqIFRoZXkgYXJlIHRoZW4gcmVmZXJlbmNlZCBieSBpbnRlcm5hbCBnYW1lIHN5c3RlbXMgYW5kIGFyZSBhdmFpbGFibGUgZm9yIHlvdSB0byBhY2Nlc3NcclxuICogdmlhIGB0aGlzLnN5cy5nYW1lLmRldmljZS5vc2AgZnJvbSB3aXRoaW4gYW55IFNjZW5lLlxyXG4gKlxyXG4gKiBAdHlwZWRlZiB7b2JqZWN0fSBQaGFzZXIuRGV2aWNlLk9TXHJcbiAqIEBzaW5jZSAzLjAuMFxyXG4gKlxyXG4gKiBAcHJvcGVydHkge2Jvb2xlYW59IGFuZHJvaWQgLSBJcyBydW5uaW5nIG9uIGFuZHJvaWQ/XHJcbiAqIEBwcm9wZXJ0eSB7Ym9vbGVhbn0gY2hyb21lT1MgLSBJcyBydW5uaW5nIG9uIGNocm9tZU9TP1xyXG4gKiBAcHJvcGVydHkge2Jvb2xlYW59IGNvcmRvdmEgLSBJcyB0aGUgZ2FtZSBydW5uaW5nIHVuZGVyIEFwYWNoZSBDb3Jkb3ZhP1xyXG4gKiBAcHJvcGVydHkge2Jvb2xlYW59IGNyb3Nzd2FsayAtIElzIHRoZSBnYW1lIHJ1bm5pbmcgdW5kZXIgdGhlIEludGVsIENyb3Nzd2FsayBYREs/XHJcbiAqIEBwcm9wZXJ0eSB7Ym9vbGVhbn0gZGVza3RvcCAtIElzIHJ1bm5pbmcgb24gYSBkZXNrdG9wP1xyXG4gKiBAcHJvcGVydHkge2Jvb2xlYW59IGVqZWN0YSAtIElzIHRoZSBnYW1lIHJ1bm5pbmcgdW5kZXIgRWplY3RhP1xyXG4gKiBAcHJvcGVydHkge2Jvb2xlYW59IGVsZWN0cm9uIC0gSXMgdGhlIGdhbWUgcnVubmluZyB1bmRlciBHaXRIdWIgRWxlY3Ryb24/XHJcbiAqIEBwcm9wZXJ0eSB7Ym9vbGVhbn0gaU9TIC0gSXMgcnVubmluZyBvbiBpT1M/XHJcbiAqIEBwcm9wZXJ0eSB7Ym9vbGVhbn0gaVBhZCAtIElzIHJ1bm5pbmcgb24gaVBhZD9cclxuICogQHByb3BlcnR5IHtib29sZWFufSBpUGhvbmUgLSBJcyBydW5uaW5nIG9uIGlQaG9uZT9cclxuICogQHByb3BlcnR5IHtib29sZWFufSBraW5kbGUgLSBJcyBydW5uaW5nIG9uIGFuIEFtYXpvbiBLaW5kbGU/XHJcbiAqIEBwcm9wZXJ0eSB7Ym9vbGVhbn0gbGludXggLSBJcyBydW5uaW5nIG9uIGxpbnV4P1xyXG4gKiBAcHJvcGVydHkge2Jvb2xlYW59IG1hY09TIC0gSXMgcnVubmluZyBvbiBtYWNPUz9cclxuICogQHByb3BlcnR5IHtib29sZWFufSBub2RlIC0gSXMgdGhlIGdhbWUgcnVubmluZyB1bmRlciBOb2RlLmpzP1xyXG4gKiBAcHJvcGVydHkge2Jvb2xlYW59IG5vZGVXZWJraXQgLSBJcyB0aGUgZ2FtZSBydW5uaW5nIHVuZGVyIE5vZGUtV2Via2l0P1xyXG4gKiBAcHJvcGVydHkge2Jvb2xlYW59IHdlYkFwcCAtIFNldCB0byB0cnVlIGlmIHJ1bm5pbmcgYXMgYSBXZWJBcHAsIGkuZS4gd2l0aGluIGEgV2ViVmlld1xyXG4gKiBAcHJvcGVydHkge2Jvb2xlYW59IHdpbmRvd3MgLSBJcyBydW5uaW5nIG9uIHdpbmRvd3M/XHJcbiAqIEBwcm9wZXJ0eSB7Ym9vbGVhbn0gd2luZG93c1Bob25lIC0gSXMgcnVubmluZyBvbiBhIFdpbmRvd3MgUGhvbmU/XHJcbiAqIEBwcm9wZXJ0eSB7bnVtYmVyfSBpT1NWZXJzaW9uIC0gSWYgcnVubmluZyBpbiBpT1MgdGhpcyB3aWxsIGNvbnRhaW4gdGhlIG1ham9yIHZlcnNpb24gbnVtYmVyLlxyXG4gKiBAcHJvcGVydHkge251bWJlcn0gcGl4ZWxSYXRpbyAtIFBpeGVsUmF0aW8gb2YgdGhlIGhvc3QgZGV2aWNlP1xyXG4gKi9cclxudmFyIE9TID0ge1xyXG5cclxuICAgIGFuZHJvaWQ6IGZhbHNlLFxyXG4gICAgY2hyb21lT1M6IGZhbHNlLFxyXG4gICAgY29yZG92YTogZmFsc2UsXHJcbiAgICBjcm9zc3dhbGs6IGZhbHNlLFxyXG4gICAgZGVza3RvcDogZmFsc2UsXHJcbiAgICBlamVjdGE6IGZhbHNlLFxyXG4gICAgZWxlY3Ryb246IGZhbHNlLFxyXG4gICAgaU9TOiBmYWxzZSxcclxuICAgIGlPU1ZlcnNpb246IDAsXHJcbiAgICBpUGFkOiBmYWxzZSxcclxuICAgIGlQaG9uZTogZmFsc2UsXHJcbiAgICBraW5kbGU6IGZhbHNlLFxyXG4gICAgbGludXg6IGZhbHNlLFxyXG4gICAgbWFjT1M6IGZhbHNlLFxyXG4gICAgbm9kZTogZmFsc2UsXHJcbiAgICBub2RlV2Via2l0OiBmYWxzZSxcclxuICAgIHBpeGVsUmF0aW86IDEsXHJcbiAgICB3ZWJBcHA6IGZhbHNlLFxyXG4gICAgd2luZG93czogZmFsc2UsXHJcbiAgICB3aW5kb3dzUGhvbmU6IGZhbHNlXHJcblxyXG59O1xyXG5cclxuZnVuY3Rpb24gaW5pdCAoKVxyXG57XHJcbiAgICB2YXIgdWEgPSBuYXZpZ2F0b3IudXNlckFnZW50O1xyXG5cclxuICAgIGlmICgvV2luZG93cy8udGVzdCh1YSkpXHJcbiAgICB7XHJcbiAgICAgICAgT1Mud2luZG93cyA9IHRydWU7XHJcbiAgICB9XHJcbiAgICBlbHNlIGlmICgvTWFjIE9TLy50ZXN0KHVhKSAmJiAhKC9saWtlIE1hYyBPUy8udGVzdCh1YSkpKVxyXG4gICAge1xyXG4gICAgICAgIE9TLm1hY09TID0gdHJ1ZTtcclxuICAgIH1cclxuICAgIGVsc2UgaWYgKC9BbmRyb2lkLy50ZXN0KHVhKSlcclxuICAgIHtcclxuICAgICAgICBPUy5hbmRyb2lkID0gdHJ1ZTtcclxuICAgIH1cclxuICAgIGVsc2UgaWYgKC9MaW51eC8udGVzdCh1YSkpXHJcbiAgICB7XHJcbiAgICAgICAgT1MubGludXggPSB0cnVlO1xyXG4gICAgfVxyXG4gICAgZWxzZSBpZiAoL2lQW2FvXWR8aVBob25lL2kudGVzdCh1YSkpXHJcbiAgICB7XHJcbiAgICAgICAgT1MuaU9TID0gdHJ1ZTtcclxuXHJcbiAgICAgICAgKG5hdmlnYXRvci5hcHBWZXJzaW9uKS5tYXRjaCgvT1MgKFxcZCspLyk7XHJcblxyXG4gICAgICAgIE9TLmlPU1ZlcnNpb24gPSBwYXJzZUludChSZWdFeHAuJDEsIDEwKTtcclxuXHJcbiAgICAgICAgT1MuaVBob25lID0gdWEudG9Mb3dlckNhc2UoKS5pbmRleE9mKCdpcGhvbmUnKSAhPT0gLTE7XHJcbiAgICAgICAgT1MuaVBhZCA9IHVhLnRvTG93ZXJDYXNlKCkuaW5kZXhPZignaXBhZCcpICE9PSAtMTtcclxuICAgIH1cclxuICAgIGVsc2UgaWYgKC9LaW5kbGUvLnRlc3QodWEpIHx8ICgvXFxiS0ZbQS1aXVtBLVpdKy8pLnRlc3QodWEpIHx8ICgvU2lsay4qTW9iaWxlIFNhZmFyaS8pLnRlc3QodWEpKVxyXG4gICAge1xyXG4gICAgICAgIE9TLmtpbmRsZSA9IHRydWU7XHJcblxyXG4gICAgICAgIC8vIFRoaXMgd2lsbCBOT1QgZGV0ZWN0IGVhcmx5IGdlbmVyYXRpb25zIG9mIEtpbmRsZSBGaXJlLCBJIHRoaW5rIHRoZXJlIGlzIG5vIHJlbGlhYmxlIHdheS4uLlxyXG4gICAgICAgIC8vIEUuZy4gXCJNb3ppbGxhLzUuMCAoTWFjaW50b3NoOyBVOyBJbnRlbCBNYWMgT1MgWCAxMF82XzM7IGVuLXVzOyBTaWxrLzEuMS4wLTgwKSBBcHBsZVdlYktpdC81MzMuMTYgKEtIVE1MLCBsaWtlIEdlY2tvKSBWZXJzaW9uLzUuMCBTYWZhcmkvNTMzLjE2IFNpbGstQWNjZWxlcmF0ZWQ9dHJ1ZVwiXHJcbiAgICB9XHJcbiAgICBlbHNlIGlmICgvQ3JPUy8udGVzdCh1YSkpXHJcbiAgICB7XHJcbiAgICAgICAgT1MuY2hyb21lT1MgPSB0cnVlO1xyXG4gICAgfVxyXG5cclxuICAgIGlmICgvV2luZG93cyBQaG9uZS9pLnRlc3QodWEpIHx8ICgvSUVNb2JpbGUvaSkudGVzdCh1YSkpXHJcbiAgICB7XHJcbiAgICAgICAgT1MuYW5kcm9pZCA9IGZhbHNlO1xyXG4gICAgICAgIE9TLmlPUyA9IGZhbHNlO1xyXG4gICAgICAgIE9TLm1hY09TID0gZmFsc2U7XHJcbiAgICAgICAgT1Mud2luZG93cyA9IHRydWU7XHJcbiAgICAgICAgT1Mud2luZG93c1Bob25lID0gdHJ1ZTtcclxuICAgIH1cclxuXHJcbiAgICB2YXIgc2lsayA9ICgvU2lsay8pLnRlc3QodWEpO1xyXG5cclxuICAgIGlmIChPUy53aW5kb3dzIHx8IE9TLm1hY09TIHx8IChPUy5saW51eCAmJiAhc2lsaykgfHwgT1MuY2hyb21lT1MpXHJcbiAgICB7XHJcbiAgICAgICAgT1MuZGVza3RvcCA9IHRydWU7XHJcbiAgICB9XHJcblxyXG4gICAgLy8gIFdpbmRvd3MgUGhvbmUgLyBUYWJsZSByZXNldFxyXG4gICAgaWYgKE9TLndpbmRvd3NQaG9uZSB8fCAoKC9XaW5kb3dzIE5UL2kudGVzdCh1YSkpICYmICgvVG91Y2gvaS50ZXN0KHVhKSkpKVxyXG4gICAge1xyXG4gICAgICAgIE9TLmRlc2t0b3AgPSBmYWxzZTtcclxuICAgIH1cclxuXHJcbiAgICAvLyAgV2ViQXBwIG1vZGUgaW4gaU9TXHJcbiAgICBpZiAobmF2aWdhdG9yLnN0YW5kYWxvbmUpXHJcbiAgICB7XHJcbiAgICAgICAgT1Mud2ViQXBwID0gdHJ1ZTtcclxuICAgIH1cclxuXHJcbiAgICBpZiAod2luZG93LmNvcmRvdmEgIT09IHVuZGVmaW5lZClcclxuICAgIHtcclxuICAgICAgICBPUy5jb3Jkb3ZhID0gdHJ1ZTtcclxuICAgIH1cclxuXHJcbiAgICBpZiAodHlwZW9mIHByb2Nlc3MgIT09ICd1bmRlZmluZWQnICYmIHByb2Nlc3MudmVyc2lvbnMgJiYgcHJvY2Vzcy52ZXJzaW9ucy5ub2RlKVxyXG4gICAge1xyXG4gICAgICAgIE9TLm5vZGUgPSB0cnVlO1xyXG4gICAgfVxyXG5cclxuICAgIGlmIChPUy5ub2RlICYmIHR5cGVvZiBwcm9jZXNzLnZlcnNpb25zID09PSAnb2JqZWN0JylcclxuICAgIHtcclxuICAgICAgICBPUy5ub2RlV2Via2l0ID0gISFwcm9jZXNzLnZlcnNpb25zWydub2RlLXdlYmtpdCddO1xyXG5cclxuICAgICAgICBPUy5lbGVjdHJvbiA9ICEhcHJvY2Vzcy52ZXJzaW9ucy5lbGVjdHJvbjtcclxuICAgIH1cclxuXHJcbiAgICBpZiAod2luZG93LmVqZWN0YSAhPT0gdW5kZWZpbmVkKVxyXG4gICAge1xyXG4gICAgICAgIE9TLmVqZWN0YSA9IHRydWU7XHJcbiAgICB9XHJcblxyXG4gICAgaWYgKCgvQ3Jvc3N3YWxrLykudGVzdCh1YSkpXHJcbiAgICB7XHJcbiAgICAgICAgT1MuY3Jvc3N3YWxrID0gdHJ1ZTtcclxuICAgIH1cclxuXHJcbiAgICBPUy5waXhlbFJhdGlvID0gd2luZG93WydkZXZpY2VQaXhlbFJhdGlvJ10gfHwgMTtcclxuXHJcbiAgICByZXR1cm4gT1M7XHJcbn1cclxuXHJcbm1vZHVsZS5leHBvcnRzID0gaW5pdCgpO1xyXG4iXSwic291cmNlUm9vdCI6IiJ9
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/device/OS.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

@@ -1,0 +1,338 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for RenderDebug.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> RenderDebug.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">44.83% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>39/87</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>2/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">44.83% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>39/87</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var GetTilesWithin = __webpack_require__(/*! ./GetTilesWithin */ "./node_modules/phaser/src/tilemaps/components/GetTilesWithin.js");
+var Color = __webpack_require__(/*! ../../display/color */ "./node_modules/phaser/src/display/color/index.js");
+&nbsp;
+var defaultTileColor = new Color(105, 210, 231, 150);
+var defaultCollidingTileColor = new Color(243, 134, 48, 200);
+var defaultFaceColor = new Color(40, 39, 37, 150);
+&nbsp;
+/**
+ * Draws a debug representation of the layer to the given Graphics. This is helpful when you want to
+ * get a quick idea of which of your tiles are colliding and which have interesting faces. The tiles
+ * are drawn starting at (0, 0) in the Graphics, allowing you to place the debug representation
+ * wherever you want on the screen.
+ *
+ * @function Phaser.Tilemaps.Components.RenderDebug
+ * @private
+ * @since 3.0.0
+ *
+ * @param {Phaser.GameObjects.Graphics} graphics - The target Graphics object to draw upon.
+ * @param {object} styleConfig - An object specifying the colors to use for the debug drawing.
+ * @param {?Phaser.Display.Color} [styleConfig.tileColor=blue] - Color to use for drawing a filled rectangle at
+ * non-colliding tile locations. If set to null, non-colliding tiles will not be drawn.
+ * @param {?Phaser.Display.Color} [styleConfig.collidingTileColor=orange] - Color to use for drawing a filled
+ * rectangle at colliding tile locations. If set to null, colliding tiles will not be drawn.
+ * @param {?Phaser.Display.Color} [styleConfig.faceColor=grey] - Color to use for drawing a line at interesting
+ * tile faces. If set to null, interesting tile faces will not be drawn.
+ * @param {Phaser.Tilemaps.LayerData} layer - The Tilemap Layer to act upon.
+ */
+<span class="cstat-no" title="statement not covered" >var RenderDebug = function (graphics, styleConfig, layer)</span>
+<span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    if (styleConfig === undefined) { styleConfig = {}; }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    // Default colors without needlessly creating Color objects</span>
+<span class="cstat-no" title="statement not covered" >    var tileColor = (styleConfig.tileColor !== undefined) ? styleConfig.tileColor : defaultTileColor;</span>
+<span class="cstat-no" title="statement not covered" >    var collidingTileColor = (styleConfig.collidingTileColor !== undefined) ? styleConfig.collidingTileColor : defaultCollidingTileColor;</span>
+<span class="cstat-no" title="statement not covered" >    var faceColor = (styleConfig.faceColor !== undefined) ? styleConfig.faceColor : defaultFaceColor;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var tiles = GetTilesWithin(0, 0, layer.width, layer.height, null, layer);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    graphics.translateCanvas(layer.tilemapLayer.x, layer.tilemapLayer.y);</span>
+<span class="cstat-no" title="statement not covered" >    graphics.scaleCanvas(layer.tilemapLayer.scaleX, layer.tilemapLayer.scaleY);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    for (var i = 0; i &lt; tiles.length; i++)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        var tile = tiles[i];</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        var tw = tile.width;</span>
+<span class="cstat-no" title="statement not covered" >        var th = tile.height;</span>
+<span class="cstat-no" title="statement not covered" >        var x = tile.pixelX;</span>
+<span class="cstat-no" title="statement not covered" >        var y = tile.pixelY;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        var color = tile.collides ? collidingTileColor : tileColor;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if (color !== null)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            graphics.fillStyle(color.color, color.alpha / 255);</span>
+<span class="cstat-no" title="statement not covered" >            graphics.fillRect(x, y, tw, th);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        // Inset the face line to prevent neighboring tile's lines from overlapping</span>
+<span class="cstat-no" title="statement not covered" >        x += 1;</span>
+<span class="cstat-no" title="statement not covered" >        y += 1;</span>
+<span class="cstat-no" title="statement not covered" >        tw -= 2;</span>
+<span class="cstat-no" title="statement not covered" >        th -= 2;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if (faceColor !== null)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            graphics.lineStyle(1, faceColor.color, faceColor.alpha / 255);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            if (tile.faceTop) { graphics.lineBetween(x, y, x + tw, y); }</span>
+<span class="cstat-no" title="statement not covered" >            if (tile.faceRight) { graphics.lineBetween(x + tw, y, x + tw, y + th); }</span>
+<span class="cstat-no" title="statement not covered" >            if (tile.faceBottom) { graphics.lineBetween(x, y + th, x + tw, y + th); }</span>
+<span class="cstat-no" title="statement not covered" >            if (tile.faceLeft) { graphics.lineBetween(x, y, x, y + th); }</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >};</span>
+&nbsp;
+module.exports = RenderDebug;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy90aWxlbWFwcy9jb21wb25lbnRzL1JlbmRlckRlYnVnLmpzPzc5NGIiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCOztBQUVBLHFCQUFxQixtQkFBTyxDQUFDLHlGQUFrQjtBQUMvQyxZQUFZLG1CQUFPLENBQUMsNkVBQXFCOztBQUV6QztBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxXQUFXLDRCQUE0QjtBQUN2QyxXQUFXLE9BQU87QUFDbEIsV0FBVyxzQkFBc0I7QUFDakM7QUFDQSxXQUFXLHNCQUFzQjtBQUNqQztBQUNBLFdBQVcsc0JBQXNCO0FBQ2pDO0FBQ0EsV0FBVywwQkFBMEI7QUFDckM7QUFDQTtBQUNBO0FBQ0Esb0NBQW9DLGtCQUFrQjs7QUFFdEQ7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7O0FBRUE7QUFDQTs7QUFFQSxtQkFBbUIsa0JBQWtCO0FBQ3JDO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQSwrQkFBK0IsdUNBQXVDO0FBQ3RFLGlDQUFpQyxpREFBaUQ7QUFDbEYsa0NBQWtDLGlEQUFpRDtBQUNuRixnQ0FBZ0MsdUNBQXVDO0FBQ3ZFO0FBQ0E7QUFDQTs7QUFFQSIsImZpbGUiOiIuL25vZGVfbW9kdWxlcy9waGFzZXIvc3JjL3RpbGVtYXBzL2NvbXBvbmVudHMvUmVuZGVyRGVidWcuanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcclxuICogQGF1dGhvciAgICAgICBSaWNoYXJkIERhdmV5IDxyaWNoQHBob3RvbnN0b3JtLmNvbT5cclxuICogQGNvcHlyaWdodCAgICAyMDE5IFBob3RvbiBTdG9ybSBMdGQuXHJcbiAqIEBsaWNlbnNlICAgICAge0BsaW5rIGh0dHBzOi8vb3BlbnNvdXJjZS5vcmcvbGljZW5zZXMvTUlUfE1JVCBMaWNlbnNlfVxyXG4gKi9cclxuXHJcbnZhciBHZXRUaWxlc1dpdGhpbiA9IHJlcXVpcmUoJy4vR2V0VGlsZXNXaXRoaW4nKTtcclxudmFyIENvbG9yID0gcmVxdWlyZSgnLi4vLi4vZGlzcGxheS9jb2xvcicpO1xyXG5cclxudmFyIGRlZmF1bHRUaWxlQ29sb3IgPSBuZXcgQ29sb3IoMTA1LCAyMTAsIDIzMSwgMTUwKTtcclxudmFyIGRlZmF1bHRDb2xsaWRpbmdUaWxlQ29sb3IgPSBuZXcgQ29sb3IoMjQzLCAxMzQsIDQ4LCAyMDApO1xyXG52YXIgZGVmYXVsdEZhY2VDb2xvciA9IG5ldyBDb2xvcig0MCwgMzksIDM3LCAxNTApO1xyXG5cclxuLyoqXHJcbiAqIERyYXdzIGEgZGVidWcgcmVwcmVzZW50YXRpb24gb2YgdGhlIGxheWVyIHRvIHRoZSBnaXZlbiBHcmFwaGljcy4gVGhpcyBpcyBoZWxwZnVsIHdoZW4geW91IHdhbnQgdG9cclxuICogZ2V0IGEgcXVpY2sgaWRlYSBvZiB3aGljaCBvZiB5b3VyIHRpbGVzIGFyZSBjb2xsaWRpbmcgYW5kIHdoaWNoIGhhdmUgaW50ZXJlc3RpbmcgZmFjZXMuIFRoZSB0aWxlc1xyXG4gKiBhcmUgZHJhd24gc3RhcnRpbmcgYXQgKDAsIDApIGluIHRoZSBHcmFwaGljcywgYWxsb3dpbmcgeW91IHRvIHBsYWNlIHRoZSBkZWJ1ZyByZXByZXNlbnRhdGlvblxyXG4gKiB3aGVyZXZlciB5b3Ugd2FudCBvbiB0aGUgc2NyZWVuLlxyXG4gKlxyXG4gKiBAZnVuY3Rpb24gUGhhc2VyLlRpbGVtYXBzLkNvbXBvbmVudHMuUmVuZGVyRGVidWdcclxuICogQHByaXZhdGVcclxuICogQHNpbmNlIDMuMC4wXHJcbiAqXHJcbiAqIEBwYXJhbSB7UGhhc2VyLkdhbWVPYmplY3RzLkdyYXBoaWNzfSBncmFwaGljcyAtIFRoZSB0YXJnZXQgR3JhcGhpY3Mgb2JqZWN0IHRvIGRyYXcgdXBvbi5cclxuICogQHBhcmFtIHtvYmplY3R9IHN0eWxlQ29uZmlnIC0gQW4gb2JqZWN0IHNwZWNpZnlpbmcgdGhlIGNvbG9ycyB0byB1c2UgZm9yIHRoZSBkZWJ1ZyBkcmF3aW5nLlxyXG4gKiBAcGFyYW0gez9QaGFzZXIuRGlzcGxheS5Db2xvcn0gW3N0eWxlQ29uZmlnLnRpbGVDb2xvcj1ibHVlXSAtIENvbG9yIHRvIHVzZSBmb3IgZHJhd2luZyBhIGZpbGxlZCByZWN0YW5nbGUgYXRcclxuICogbm9uLWNvbGxpZGluZyB0aWxlIGxvY2F0aW9ucy4gSWYgc2V0IHRvIG51bGwsIG5vbi1jb2xsaWRpbmcgdGlsZXMgd2lsbCBub3QgYmUgZHJhd24uXHJcbiAqIEBwYXJhbSB7P1BoYXNlci5EaXNwbGF5LkNvbG9yfSBbc3R5bGVDb25maWcuY29sbGlkaW5nVGlsZUNvbG9yPW9yYW5nZV0gLSBDb2xvciB0byB1c2UgZm9yIGRyYXdpbmcgYSBmaWxsZWRcclxuICogcmVjdGFuZ2xlIGF0IGNvbGxpZGluZyB0aWxlIGxvY2F0aW9ucy4gSWYgc2V0IHRvIG51bGwsIGNvbGxpZGluZyB0aWxlcyB3aWxsIG5vdCBiZSBkcmF3bi5cclxuICogQHBhcmFtIHs/UGhhc2VyLkRpc3BsYXkuQ29sb3J9IFtzdHlsZUNvbmZpZy5mYWNlQ29sb3I9Z3JleV0gLSBDb2xvciB0byB1c2UgZm9yIGRyYXdpbmcgYSBsaW5lIGF0IGludGVyZXN0aW5nXHJcbiAqIHRpbGUgZmFjZXMuIElmIHNldCB0byBudWxsLCBpbnRlcmVzdGluZyB0aWxlIGZhY2VzIHdpbGwgbm90IGJlIGRyYXduLlxyXG4gKiBAcGFyYW0ge1BoYXNlci5UaWxlbWFwcy5MYXllckRhdGF9IGxheWVyIC0gVGhlIFRpbGVtYXAgTGF5ZXIgdG8gYWN0IHVwb24uXHJcbiAqL1xyXG52YXIgUmVuZGVyRGVidWcgPSBmdW5jdGlvbiAoZ3JhcGhpY3MsIHN0eWxlQ29uZmlnLCBsYXllcilcclxue1xyXG4gICAgaWYgKHN0eWxlQ29uZmlnID09PSB1bmRlZmluZWQpIHsgc3R5bGVDb25maWcgPSB7fTsgfVxyXG5cclxuICAgIC8vIERlZmF1bHQgY29sb3JzIHdpdGhvdXQgbmVlZGxlc3NseSBjcmVhdGluZyBDb2xvciBvYmplY3RzXHJcbiAgICB2YXIgdGlsZUNvbG9yID0gKHN0eWxlQ29uZmlnLnRpbGVDb2xvciAhPT0gdW5kZWZpbmVkKSA/IHN0eWxlQ29uZmlnLnRpbGVDb2xvciA6IGRlZmF1bHRUaWxlQ29sb3I7XHJcbiAgICB2YXIgY29sbGlkaW5nVGlsZUNvbG9yID0gKHN0eWxlQ29uZmlnLmNvbGxpZGluZ1RpbGVDb2xvciAhPT0gdW5kZWZpbmVkKSA/IHN0eWxlQ29uZmlnLmNvbGxpZGluZ1RpbGVDb2xvciA6IGRlZmF1bHRDb2xsaWRpbmdUaWxlQ29sb3I7XHJcbiAgICB2YXIgZmFjZUNvbG9yID0gKHN0eWxlQ29uZmlnLmZhY2VDb2xvciAhPT0gdW5kZWZpbmVkKSA/IHN0eWxlQ29uZmlnLmZhY2VDb2xvciA6IGRlZmF1bHRGYWNlQ29sb3I7XHJcblxyXG4gICAgdmFyIHRpbGVzID0gR2V0VGlsZXNXaXRoaW4oMCwgMCwgbGF5ZXIud2lkdGgsIGxheWVyLmhlaWdodCwgbnVsbCwgbGF5ZXIpO1xyXG5cclxuICAgIGdyYXBoaWNzLnRyYW5zbGF0ZUNhbnZhcyhsYXllci50aWxlbWFwTGF5ZXIueCwgbGF5ZXIudGlsZW1hcExheWVyLnkpO1xyXG4gICAgZ3JhcGhpY3Muc2NhbGVDYW52YXMobGF5ZXIudGlsZW1hcExheWVyLnNjYWxlWCwgbGF5ZXIudGlsZW1hcExheWVyLnNjYWxlWSk7XHJcblxyXG4gICAgZm9yICh2YXIgaSA9IDA7IGkgPCB0aWxlcy5sZW5ndGg7IGkrKylcclxuICAgIHtcclxuICAgICAgICB2YXIgdGlsZSA9IHRpbGVzW2ldO1xyXG5cclxuICAgICAgICB2YXIgdHcgPSB0aWxlLndpZHRoO1xyXG4gICAgICAgIHZhciB0aCA9IHRpbGUuaGVpZ2h0O1xyXG4gICAgICAgIHZhciB4ID0gdGlsZS5waXhlbFg7XHJcbiAgICAgICAgdmFyIHkgPSB0aWxlLnBpeGVsWTtcclxuXHJcbiAgICAgICAgdmFyIGNvbG9yID0gdGlsZS5jb2xsaWRlcyA/IGNvbGxpZGluZ1RpbGVDb2xvciA6IHRpbGVDb2xvcjtcclxuXHJcbiAgICAgICAgaWYgKGNvbG9yICE9PSBudWxsKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgZ3JhcGhpY3MuZmlsbFN0eWxlKGNvbG9yLmNvbG9yLCBjb2xvci5hbHBoYSAvIDI1NSk7XHJcbiAgICAgICAgICAgIGdyYXBoaWNzLmZpbGxSZWN0KHgsIHksIHR3LCB0aCk7XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICAvLyBJbnNldCB0aGUgZmFjZSBsaW5lIHRvIHByZXZlbnQgbmVpZ2hib3JpbmcgdGlsZSdzIGxpbmVzIGZyb20gb3ZlcmxhcHBpbmdcclxuICAgICAgICB4ICs9IDE7XHJcbiAgICAgICAgeSArPSAxO1xyXG4gICAgICAgIHR3IC09IDI7XHJcbiAgICAgICAgdGggLT0gMjtcclxuXHJcbiAgICAgICAgaWYgKGZhY2VDb2xvciAhPT0gbnVsbClcclxuICAgICAgICB7XHJcbiAgICAgICAgICAgIGdyYXBoaWNzLmxpbmVTdHlsZSgxLCBmYWNlQ29sb3IuY29sb3IsIGZhY2VDb2xvci5hbHBoYSAvIDI1NSk7XHJcblxyXG4gICAgICAgICAgICBpZiAodGlsZS5mYWNlVG9wKSB7IGdyYXBoaWNzLmxpbmVCZXR3ZWVuKHgsIHksIHggKyB0dywgeSk7IH1cclxuICAgICAgICAgICAgaWYgKHRpbGUuZmFjZVJpZ2h0KSB7IGdyYXBoaWNzLmxpbmVCZXR3ZWVuKHggKyB0dywgeSwgeCArIHR3LCB5ICsgdGgpOyB9XHJcbiAgICAgICAgICAgIGlmICh0aWxlLmZhY2VCb3R0b20pIHsgZ3JhcGhpY3MubGluZUJldHdlZW4oeCwgeSArIHRoLCB4ICsgdHcsIHkgKyB0aCk7IH1cclxuICAgICAgICAgICAgaWYgKHRpbGUuZmFjZUxlZnQpIHsgZ3JhcGhpY3MubGluZUJldHdlZW4oeCwgeSwgeCwgeSArIHRoKTsgfVxyXG4gICAgICAgIH1cclxuICAgIH1cclxufTtcclxuXHJcbm1vZHVsZS5leHBvcnRzID0gUmVuZGVyRGVidWc7XHJcbiJdLCJzb3VyY2VSb290IjoiIn0=
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/tilemaps/components/RenderDebug.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

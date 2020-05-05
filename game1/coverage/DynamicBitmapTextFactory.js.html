@@ -1,0 +1,278 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for DynamicBitmapTextFactory.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> DynamicBitmapTextFactory.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">94.03% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>63/67</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>2/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">94.03% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>63/67</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var DynamicBitmapText = __webpack_require__(/*! ./DynamicBitmapText */ "./node_modules/phaser/src/gameobjects/bitmaptext/dynamic/DynamicBitmapText.js");
+var GameObjectFactory = __webpack_require__(/*! ../../GameObjectFactory */ "./node_modules/phaser/src/gameobjects/GameObjectFactory.js");
+&nbsp;
+/**
+ * Creates a new Dynamic Bitmap Text Game Object and adds it to the Scene.
+ * 
+ * BitmapText objects work by taking a texture file and an XML or JSON file that describes the font structure.
+ * 
+ * During rendering for each letter of the text is rendered to the display, proportionally spaced out and aligned to
+ * match the font structure.
+ * 
+ * Dynamic Bitmap Text objects are different from Static Bitmap Text in that they invoke a callback for each
+ * letter being rendered during the render pass. This callback allows you to manipulate the properties of
+ * each letter being rendered, such as its position, scale or tint, allowing you to create interesting effects
+ * like jiggling text, which can't be done with Static text. This means that Dynamic Text takes more processing
+ * time, so only use them if you require the callback ability they have.
+ *
+ * BitmapText objects are less flexible than Text objects, in that they have less features such as shadows, fills and the ability
+ * to use Web Fonts, however you trade this flexibility for rendering speed. You can also create visually compelling BitmapTexts by
+ * processing the font texture in an image editor, applying fills and any other effects required.
+ *
+ * To create multi-line text insert \r, \n or \r\n escape codes into the text string.
+ *
+ * To create a BitmapText data files you need a 3rd party app such as:
+ *
+ * BMFont (Windows, free): http://www.angelcode.com/products/bmfont/
+ * Glyph Designer (OS X, commercial): http://www.71squared.com/en/glyphdesigner
+ * Littera (Web-based, free): http://kvazars.com/littera/
+ *
+ * For most use cases it is recommended to use XML. If you wish to use JSON, the formatting should be equal to the result of
+ * converting a valid XML file through the popular X2JS library. An online tool for conversion can be found here: http://codebeautify.org/xmltojson
+ *
+ * Note: This method will only be available if the Dynamic Bitmap Text Game Object has been built into Phaser.
+ *
+ * @method Phaser.GameObjects.GameObjectFactory#dynamicBitmapText
+ * @since 3.0.0
+ *
+ * @param {number} x - The x position of the Game Object.
+ * @param {number} y - The y position of the Game Object.
+ * @param {string} font - The key of the font to use from the BitmapFont cache.
+ * @param {(string|string[])} [text] - The string, or array of strings, to be set as the content of this Bitmap Text.
+ * @param {number} [size] - The font size to set.
+ *
+ * @return {Phaser.GameObjects.DynamicBitmapText} The Game Object that was created.
+ */
+<span class="cstat-no" title="statement not covered" >GameObjectFactory.register('dynamicBitmapText', function (x, y, font, text, size)</span>
+<span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    return this.displayList.add(new DynamicBitmapText(this.scene, x, y, font, text, size));</span>
+<span class="cstat-no" title="statement not covered" >});</span>
+&nbsp;
+//  When registering a factory function 'this' refers to the GameObjectFactory context.
+//
+//  There are several properties available to use:
+//
+//  this.scene - a reference to the Scene that owns the GameObjectFactory
+//  this.displayList - a reference to the Display List the Scene owns
+//  this.updateList - a reference to the Update List the Scene owns
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9nYW1lb2JqZWN0cy9iaXRtYXB0ZXh0L2R5bmFtaWMvRHluYW1pY0JpdG1hcFRleHRGYWN0b3J5LmpzPzcyNWEiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCOztBQUVBLHdCQUF3QixtQkFBTyxDQUFDLDBHQUFxQjtBQUNyRCx3QkFBd0IsbUJBQU8sQ0FBQywyRkFBeUI7O0FBRXpEO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsV0FBVyxPQUFPO0FBQ2xCLFdBQVcsT0FBTztBQUNsQixXQUFXLE9BQU87QUFDbEIsV0FBVyxrQkFBa0I7QUFDN0IsV0FBVyxPQUFPO0FBQ2xCO0FBQ0EsWUFBWSxxQ0FBcUM7QUFDakQ7QUFDQTtBQUNBO0FBQ0E7QUFDQSxDQUFDOztBQUVEO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwiZmlsZSI6Ii4vbm9kZV9tb2R1bGVzL3BoYXNlci9zcmMvZ2FtZW9iamVjdHMvYml0bWFwdGV4dC9keW5hbWljL0R5bmFtaWNCaXRtYXBUZXh0RmFjdG9yeS5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxyXG4gKiBAYXV0aG9yICAgICAgIFJpY2hhcmQgRGF2ZXkgPHJpY2hAcGhvdG9uc3Rvcm0uY29tPlxyXG4gKiBAY29weXJpZ2h0ICAgIDIwMTkgUGhvdG9uIFN0b3JtIEx0ZC5cclxuICogQGxpY2Vuc2UgICAgICB7QGxpbmsgaHR0cHM6Ly9vcGVuc291cmNlLm9yZy9saWNlbnNlcy9NSVR8TUlUIExpY2Vuc2V9XHJcbiAqL1xyXG5cclxudmFyIER5bmFtaWNCaXRtYXBUZXh0ID0gcmVxdWlyZSgnLi9EeW5hbWljQml0bWFwVGV4dCcpO1xyXG52YXIgR2FtZU9iamVjdEZhY3RvcnkgPSByZXF1aXJlKCcuLi8uLi9HYW1lT2JqZWN0RmFjdG9yeScpO1xyXG5cclxuLyoqXHJcbiAqIENyZWF0ZXMgYSBuZXcgRHluYW1pYyBCaXRtYXAgVGV4dCBHYW1lIE9iamVjdCBhbmQgYWRkcyBpdCB0byB0aGUgU2NlbmUuXHJcbiAqIFxyXG4gKiBCaXRtYXBUZXh0IG9iamVjdHMgd29yayBieSB0YWtpbmcgYSB0ZXh0dXJlIGZpbGUgYW5kIGFuIFhNTCBvciBKU09OIGZpbGUgdGhhdCBkZXNjcmliZXMgdGhlIGZvbnQgc3RydWN0dXJlLlxyXG4gKiBcclxuICogRHVyaW5nIHJlbmRlcmluZyBmb3IgZWFjaCBsZXR0ZXIgb2YgdGhlIHRleHQgaXMgcmVuZGVyZWQgdG8gdGhlIGRpc3BsYXksIHByb3BvcnRpb25hbGx5IHNwYWNlZCBvdXQgYW5kIGFsaWduZWQgdG9cclxuICogbWF0Y2ggdGhlIGZvbnQgc3RydWN0dXJlLlxyXG4gKiBcclxuICogRHluYW1pYyBCaXRtYXAgVGV4dCBvYmplY3RzIGFyZSBkaWZmZXJlbnQgZnJvbSBTdGF0aWMgQml0bWFwIFRleHQgaW4gdGhhdCB0aGV5IGludm9rZSBhIGNhbGxiYWNrIGZvciBlYWNoXHJcbiAqIGxldHRlciBiZWluZyByZW5kZXJlZCBkdXJpbmcgdGhlIHJlbmRlciBwYXNzLiBUaGlzIGNhbGxiYWNrIGFsbG93cyB5b3UgdG8gbWFuaXB1bGF0ZSB0aGUgcHJvcGVydGllcyBvZlxyXG4gKiBlYWNoIGxldHRlciBiZWluZyByZW5kZXJlZCwgc3VjaCBhcyBpdHMgcG9zaXRpb24sIHNjYWxlIG9yIHRpbnQsIGFsbG93aW5nIHlvdSB0byBjcmVhdGUgaW50ZXJlc3RpbmcgZWZmZWN0c1xyXG4gKiBsaWtlIGppZ2dsaW5nIHRleHQsIHdoaWNoIGNhbid0IGJlIGRvbmUgd2l0aCBTdGF0aWMgdGV4dC4gVGhpcyBtZWFucyB0aGF0IER5bmFtaWMgVGV4dCB0YWtlcyBtb3JlIHByb2Nlc3NpbmdcclxuICogdGltZSwgc28gb25seSB1c2UgdGhlbSBpZiB5b3UgcmVxdWlyZSB0aGUgY2FsbGJhY2sgYWJpbGl0eSB0aGV5IGhhdmUuXHJcbiAqXHJcbiAqIEJpdG1hcFRleHQgb2JqZWN0cyBhcmUgbGVzcyBmbGV4aWJsZSB0aGFuIFRleHQgb2JqZWN0cywgaW4gdGhhdCB0aGV5IGhhdmUgbGVzcyBmZWF0dXJlcyBzdWNoIGFzIHNoYWRvd3MsIGZpbGxzIGFuZCB0aGUgYWJpbGl0eVxyXG4gKiB0byB1c2UgV2ViIEZvbnRzLCBob3dldmVyIHlvdSB0cmFkZSB0aGlzIGZsZXhpYmlsaXR5IGZvciByZW5kZXJpbmcgc3BlZWQuIFlvdSBjYW4gYWxzbyBjcmVhdGUgdmlzdWFsbHkgY29tcGVsbGluZyBCaXRtYXBUZXh0cyBieVxyXG4gKiBwcm9jZXNzaW5nIHRoZSBmb250IHRleHR1cmUgaW4gYW4gaW1hZ2UgZWRpdG9yLCBhcHBseWluZyBmaWxscyBhbmQgYW55IG90aGVyIGVmZmVjdHMgcmVxdWlyZWQuXHJcbiAqXHJcbiAqIFRvIGNyZWF0ZSBtdWx0aS1saW5lIHRleHQgaW5zZXJ0IFxcciwgXFxuIG9yIFxcclxcbiBlc2NhcGUgY29kZXMgaW50byB0aGUgdGV4dCBzdHJpbmcuXHJcbiAqXHJcbiAqIFRvIGNyZWF0ZSBhIEJpdG1hcFRleHQgZGF0YSBmaWxlcyB5b3UgbmVlZCBhIDNyZCBwYXJ0eSBhcHAgc3VjaCBhczpcclxuICpcclxuICogQk1Gb250IChXaW5kb3dzLCBmcmVlKTogaHR0cDovL3d3dy5hbmdlbGNvZGUuY29tL3Byb2R1Y3RzL2JtZm9udC9cclxuICogR2x5cGggRGVzaWduZXIgKE9TIFgsIGNvbW1lcmNpYWwpOiBodHRwOi8vd3d3Ljcxc3F1YXJlZC5jb20vZW4vZ2x5cGhkZXNpZ25lclxyXG4gKiBMaXR0ZXJhIChXZWItYmFzZWQsIGZyZWUpOiBodHRwOi8va3ZhemFycy5jb20vbGl0dGVyYS9cclxuICpcclxuICogRm9yIG1vc3QgdXNlIGNhc2VzIGl0IGlzIHJlY29tbWVuZGVkIHRvIHVzZSBYTUwuIElmIHlvdSB3aXNoIHRvIHVzZSBKU09OLCB0aGUgZm9ybWF0dGluZyBzaG91bGQgYmUgZXF1YWwgdG8gdGhlIHJlc3VsdCBvZlxyXG4gKiBjb252ZXJ0aW5nIGEgdmFsaWQgWE1MIGZpbGUgdGhyb3VnaCB0aGUgcG9wdWxhciBYMkpTIGxpYnJhcnkuIEFuIG9ubGluZSB0b29sIGZvciBjb252ZXJzaW9uIGNhbiBiZSBmb3VuZCBoZXJlOiBodHRwOi8vY29kZWJlYXV0aWZ5Lm9yZy94bWx0b2pzb25cclxuICpcclxuICogTm90ZTogVGhpcyBtZXRob2Qgd2lsbCBvbmx5IGJlIGF2YWlsYWJsZSBpZiB0aGUgRHluYW1pYyBCaXRtYXAgVGV4dCBHYW1lIE9iamVjdCBoYXMgYmVlbiBidWlsdCBpbnRvIFBoYXNlci5cclxuICpcclxuICogQG1ldGhvZCBQaGFzZXIuR2FtZU9iamVjdHMuR2FtZU9iamVjdEZhY3RvcnkjZHluYW1pY0JpdG1hcFRleHRcclxuICogQHNpbmNlIDMuMC4wXHJcbiAqXHJcbiAqIEBwYXJhbSB7bnVtYmVyfSB4IC0gVGhlIHggcG9zaXRpb24gb2YgdGhlIEdhbWUgT2JqZWN0LlxyXG4gKiBAcGFyYW0ge251bWJlcn0geSAtIFRoZSB5IHBvc2l0aW9uIG9mIHRoZSBHYW1lIE9iamVjdC5cclxuICogQHBhcmFtIHtzdHJpbmd9IGZvbnQgLSBUaGUga2V5IG9mIHRoZSBmb250IHRvIHVzZSBmcm9tIHRoZSBCaXRtYXBGb250IGNhY2hlLlxyXG4gKiBAcGFyYW0geyhzdHJpbmd8c3RyaW5nW10pfSBbdGV4dF0gLSBUaGUgc3RyaW5nLCBvciBhcnJheSBvZiBzdHJpbmdzLCB0byBiZSBzZXQgYXMgdGhlIGNvbnRlbnQgb2YgdGhpcyBCaXRtYXAgVGV4dC5cclxuICogQHBhcmFtIHtudW1iZXJ9IFtzaXplXSAtIFRoZSBmb250IHNpemUgdG8gc2V0LlxyXG4gKlxyXG4gKiBAcmV0dXJuIHtQaGFzZXIuR2FtZU9iamVjdHMuRHluYW1pY0JpdG1hcFRleHR9IFRoZSBHYW1lIE9iamVjdCB0aGF0IHdhcyBjcmVhdGVkLlxyXG4gKi9cclxuR2FtZU9iamVjdEZhY3RvcnkucmVnaXN0ZXIoJ2R5bmFtaWNCaXRtYXBUZXh0JywgZnVuY3Rpb24gKHgsIHksIGZvbnQsIHRleHQsIHNpemUpXHJcbntcclxuICAgIHJldHVybiB0aGlzLmRpc3BsYXlMaXN0LmFkZChuZXcgRHluYW1pY0JpdG1hcFRleHQodGhpcy5zY2VuZSwgeCwgeSwgZm9udCwgdGV4dCwgc2l6ZSkpO1xyXG59KTtcclxuXHJcbi8vICBXaGVuIHJlZ2lzdGVyaW5nIGEgZmFjdG9yeSBmdW5jdGlvbiAndGhpcycgcmVmZXJzIHRvIHRoZSBHYW1lT2JqZWN0RmFjdG9yeSBjb250ZXh0LlxyXG4vL1xyXG4vLyAgVGhlcmUgYXJlIHNldmVyYWwgcHJvcGVydGllcyBhdmFpbGFibGUgdG8gdXNlOlxyXG4vL1xyXG4vLyAgdGhpcy5zY2VuZSAtIGEgcmVmZXJlbmNlIHRvIHRoZSBTY2VuZSB0aGF0IG93bnMgdGhlIEdhbWVPYmplY3RGYWN0b3J5XHJcbi8vICB0aGlzLmRpc3BsYXlMaXN0IC0gYSByZWZlcmVuY2UgdG8gdGhlIERpc3BsYXkgTGlzdCB0aGUgU2NlbmUgb3duc1xyXG4vLyAgdGhpcy51cGRhdGVMaXN0IC0gYSByZWZlcmVuY2UgdG8gdGhlIFVwZGF0ZSBMaXN0IHRoZSBTY2VuZSBvd25zXHJcbiJdLCJzb3VyY2VSb290IjoiIn0=
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/gameobjects/bitmaptext/dynamic/DynamicBitmapTextFactory.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

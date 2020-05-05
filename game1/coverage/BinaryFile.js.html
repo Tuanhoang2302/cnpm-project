@@ -1,0 +1,617 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for BinaryFile.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> BinaryFile.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">69.44% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>125/180</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>4/4</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">69.44% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>125/180</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line medium'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var Class = __webpack_require__(/*! ../../utils/Class */ "./node_modules/phaser/src/utils/Class.js");
+var CONST = __webpack_require__(/*! ../const */ "./node_modules/phaser/src/loader/const.js");
+var File = __webpack_require__(/*! ../File */ "./node_modules/phaser/src/loader/File.js");
+var FileTypesManager = __webpack_require__(/*! ../FileTypesManager */ "./node_modules/phaser/src/loader/FileTypesManager.js");
+var GetFastValue = __webpack_require__(/*! ../../utils/object/GetFastValue */ "./node_modules/phaser/src/utils/object/GetFastValue.js");
+var IsPlainObject = __webpack_require__(/*! ../../utils/object/IsPlainObject */ "./node_modules/phaser/src/utils/object/IsPlainObject.js");
+&nbsp;
+/**
+ * @classdesc
+ * A single Binary File suitable for loading by the Loader.
+ *
+ * These are created when you use the Phaser.Loader.LoaderPlugin#binary method and are not typically created directly.
+ * 
+ * For documentation about what all the arguments and configuration options mean please see Phaser.Loader.LoaderPlugin#binary.
+ *
+ * @class BinaryFile
+ * @extends Phaser.Loader.File
+ * @memberof Phaser.Loader.FileTypes
+ * @constructor
+ * @since 3.0.0
+ *
+ * @param {Phaser.Loader.LoaderPlugin} loader - A reference to the Loader that is responsible for this file.
+ * @param {(string|Phaser.Types.Loader.FileTypes.BinaryFileConfig)} key - The key to use for this file, or a file configuration object.
+ * @param {string} [url] - The absolute or relative URL to load this file from. If undefined or `null` it will be set to `&lt;key&gt;.bin`, i.e. if `key` was "alien" then the URL will be "alien.bin".
+ * @param {Phaser.Types.Loader.XHRSettingsObject} [xhrSettings] - Extra XHR Settings specifically for this file.
+ * @param {any} [dataType] - Optional type to cast the binary file to once loaded. For example, `Uint8Array`.
+ */
+var BinaryFile = new Class({
+&nbsp;
+    Extends: File,
+&nbsp;
+    initialize:
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    function BinaryFile (loader, key, url, xhrSettings, dataType)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        var extension = 'bin';</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if (IsPlainObject(key))</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            var config = key;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            key = GetFastValue(config, 'key');</span>
+<span class="cstat-no" title="statement not covered" >            url = GetFastValue(config, 'url');</span>
+<span class="cstat-no" title="statement not covered" >            xhrSettings = GetFastValue(config, 'xhrSettings');</span>
+<span class="cstat-no" title="statement not covered" >            extension = GetFastValue(config, 'extension', extension);</span>
+<span class="cstat-no" title="statement not covered" >            dataType = GetFastValue(config, 'dataType', dataType);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        var fileConfig = {</span>
+<span class="cstat-no" title="statement not covered" >            type: 'binary',</span>
+<span class="cstat-no" title="statement not covered" >            cache: loader.cacheManager.binary,</span>
+<span class="cstat-no" title="statement not covered" >            extension: extension,</span>
+<span class="cstat-no" title="statement not covered" >            responseType: 'arraybuffer',</span>
+<span class="cstat-no" title="statement not covered" >            key: key,</span>
+<span class="cstat-no" title="statement not covered" >            url: url,</span>
+<span class="cstat-no" title="statement not covered" >            xhrSettings: xhrSettings,</span>
+<span class="cstat-no" title="statement not covered" >            config: { dataType: dataType }</span>
+<span class="cstat-no" title="statement not covered" >        };</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        File.call(this, loader, fileConfig);</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * Called automatically by Loader.nextFile.
+     * This method controls what extra work this File does with its loaded data.
+     *
+     * @method Phaser.Loader.FileTypes.BinaryFile#onProcess
+     * @since 3.7.0
+     */
+<span class="cstat-no" title="statement not covered" >    onProcess: function ()</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        this.state = CONST.FILE_PROCESSING;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        var ctor = this.config.dataType;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        this.data = (ctor) ? new ctor(this.xhrLoader.response) : this.xhrLoader.response;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        this.onProcessComplete();</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+&nbsp;
+});
+&nbsp;
+/**
+ * Adds a Binary file, or array of Binary files, to the current load queue.
+ *
+ * You can call this method from within your Scene's `preload`, along with any other files you wish to load:
+ * 
+ * ```javascript
+ * function preload ()
+ * {
+ *     this.load.binary('doom', 'files/Doom.wad');
+ * }
+ * ```
+ *
+ * The file is **not** loaded right away. It is added to a queue ready to be loaded either when the loader starts,
+ * or if it's already running, when the next free load slot becomes available. This happens automatically if you
+ * are calling this from within the Scene's `preload` method, or a related callback. Because the file is queued
+ * it means you cannot use the file immediately after calling this method, but must wait for the file to complete.
+ * The typical flow for a Phaser Scene is that you load assets in the Scene's `preload` method and then when the
+ * Scene's `create` method is called you are guaranteed that all of those assets are ready for use and have been
+ * loaded.
+ * 
+ * The key must be a unique String. It is used to add the file to the global Binary Cache upon a successful load.
+ * The key should be unique both in terms of files being loaded and files already present in the Binary Cache.
+ * Loading a file using a key that is already taken will result in a warning. If you wish to replace an existing file
+ * then remove it from the Binary Cache first, before loading a new one.
+ *
+ * Instead of passing arguments you can pass a configuration object, such as:
+ * 
+ * ```javascript
+ * this.load.binary({
+ *     key: 'doom',
+ *     url: 'files/Doom.wad',
+ *     dataType: Uint8Array
+ * });
+ * ```
+ *
+ * See the documentation for `Phaser.Types.Loader.FileTypes.BinaryFileConfig` for more details.
+ *
+ * Once the file has finished loading you can access it from its Cache using its key:
+ * 
+ * ```javascript
+ * this.load.binary('doom', 'files/Doom.wad');
+ * // and later in your game ...
+ * var data = this.cache.binary.get('doom');
+ * ```
+ *
+ * If you have specified a prefix in the loader, via `Loader.setPrefix` then this value will be prepended to this files
+ * key. For example, if the prefix was `LEVEL1.` and the key was `Data` the final key will be `LEVEL1.Data` and
+ * this is what you would use to retrieve the text from the Binary Cache.
+ *
+ * The URL can be relative or absolute. If the URL is relative the `Loader.baseURL` and `Loader.path` values will be prepended to it.
+ *
+ * If the URL isn't specified the Loader will take the key and create a filename from that. For example if the key is "doom"
+ * and no URL is given then the Loader will set the URL to be "doom.bin". It will always add `.bin` as the extension, although
+ * this can be overridden if using an object instead of method arguments. If you do not desire this action then provide a URL.
+ *
+ * Note: The ability to load this type of file will only be available if the Binary File type has been built into Phaser.
+ * It is available in the default build but can be excluded from custom builds.
+ *
+ * @method Phaser.Loader.LoaderPlugin#binary
+ * @fires Phaser.Loader.LoaderPlugin#addFileEvent
+ * @since 3.0.0
+ *
+ * @param {(string|Phaser.Types.Loader.FileTypes.BinaryFileConfig|Phaser.Types.Loader.FileTypes.BinaryFileConfig[])} key - The key to use for this file, or a file configuration object, or array of them.
+ * @param {string} [url] - The absolute or relative URL to load this file from. If undefined or `null` it will be set to `&lt;key&gt;.bin`, i.e. if `key` was "alien" then the URL will be "alien.bin".
+ * @param {any} [dataType] - Optional type to cast the binary file to once loaded. For example, `Uint8Array`.
+ * @param {Phaser.Types.Loader.XHRSettingsObject} [xhrSettings] - An XHR Settings configuration object. Used in replacement of the Loaders default XHR Settings.
+ *
+ * @return {Phaser.Loader.LoaderPlugin} The Loader instance.
+ */
+<span class="cstat-no" title="statement not covered" >FileTypesManager.register('binary', function (key, url, dataType, xhrSettings)</span>
+<span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    if (Array.isArray(key))</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; key.length; i++)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            //  If it's an array it has to be an array of Objects, so we get everything out of the 'key' object</span>
+<span class="cstat-no" title="statement not covered" >            this.addFile(new BinaryFile(this, key[i]));</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    else</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        this.addFile(new BinaryFile(this, key, url, xhrSettings, dataType));</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    return this;</span>
+<span class="cstat-no" title="statement not covered" >});</span>
+&nbsp;
+module.exports = BinaryFile;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9sb2FkZXIvZmlsZXR5cGVzL0JpbmFyeUZpbGUuanM/NzAwMyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQSxrQkFBa0I7QUFDbEI7O0FBRUEsWUFBWSxtQkFBTyxDQUFDLG1FQUFtQjtBQUN2QyxZQUFZLG1CQUFPLENBQUMsMkRBQVU7QUFDOUIsV0FBVyxtQkFBTyxDQUFDLHlEQUFTO0FBQzVCLHVCQUF1QixtQkFBTyxDQUFDLGlGQUFxQjtBQUNwRCxtQkFBbUIsbUJBQU8sQ0FBQywrRkFBaUM7QUFDNUQsb0JBQW9CLG1CQUFPLENBQUMsaUdBQWtDOztBQUU5RDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsV0FBVywyQkFBMkI7QUFDdEMsV0FBVyx3REFBd0Q7QUFDbkUsV0FBVyxPQUFPO0FBQ2xCLFdBQVcsc0NBQXNDO0FBQ2pELFdBQVcsSUFBSTtBQUNmO0FBQ0E7O0FBRUE7O0FBRUE7O0FBRUE7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHFCQUFxQjtBQUNyQjs7QUFFQTtBQUNBLEtBQUs7O0FBRUw7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7O0FBRUE7O0FBRUE7QUFDQTs7QUFFQSxDQUFDOztBQUVEO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxJQUFJO0FBQ0o7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFdBQVcseUdBQXlHO0FBQ3BILFdBQVcsT0FBTztBQUNsQixXQUFXLElBQUk7QUFDZixXQUFXLHNDQUFzQztBQUNqRDtBQUNBLFlBQVksMkJBQTJCO0FBQ3ZDO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSx1QkFBdUIsZ0JBQWdCO0FBQ3ZDO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBLENBQUM7O0FBRUQiLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9sb2FkZXIvZmlsZXR5cGVzL0JpbmFyeUZpbGUuanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcclxuICogQGF1dGhvciAgICAgICBSaWNoYXJkIERhdmV5IDxyaWNoQHBob3RvbnN0b3JtLmNvbT5cclxuICogQGNvcHlyaWdodCAgICAyMDE5IFBob3RvbiBTdG9ybSBMdGQuXHJcbiAqIEBsaWNlbnNlICAgICAge0BsaW5rIGh0dHBzOi8vb3BlbnNvdXJjZS5vcmcvbGljZW5zZXMvTUlUfE1JVCBMaWNlbnNlfVxyXG4gKi9cclxuXHJcbnZhciBDbGFzcyA9IHJlcXVpcmUoJy4uLy4uL3V0aWxzL0NsYXNzJyk7XHJcbnZhciBDT05TVCA9IHJlcXVpcmUoJy4uL2NvbnN0Jyk7XHJcbnZhciBGaWxlID0gcmVxdWlyZSgnLi4vRmlsZScpO1xyXG52YXIgRmlsZVR5cGVzTWFuYWdlciA9IHJlcXVpcmUoJy4uL0ZpbGVUeXBlc01hbmFnZXInKTtcclxudmFyIEdldEZhc3RWYWx1ZSA9IHJlcXVpcmUoJy4uLy4uL3V0aWxzL29iamVjdC9HZXRGYXN0VmFsdWUnKTtcclxudmFyIElzUGxhaW5PYmplY3QgPSByZXF1aXJlKCcuLi8uLi91dGlscy9vYmplY3QvSXNQbGFpbk9iamVjdCcpO1xyXG5cclxuLyoqXHJcbiAqIEBjbGFzc2Rlc2NcclxuICogQSBzaW5nbGUgQmluYXJ5IEZpbGUgc3VpdGFibGUgZm9yIGxvYWRpbmcgYnkgdGhlIExvYWRlci5cclxuICpcclxuICogVGhlc2UgYXJlIGNyZWF0ZWQgd2hlbiB5b3UgdXNlIHRoZSBQaGFzZXIuTG9hZGVyLkxvYWRlclBsdWdpbiNiaW5hcnkgbWV0aG9kIGFuZCBhcmUgbm90IHR5cGljYWxseSBjcmVhdGVkIGRpcmVjdGx5LlxyXG4gKiBcclxuICogRm9yIGRvY3VtZW50YXRpb24gYWJvdXQgd2hhdCBhbGwgdGhlIGFyZ3VtZW50cyBhbmQgY29uZmlndXJhdGlvbiBvcHRpb25zIG1lYW4gcGxlYXNlIHNlZSBQaGFzZXIuTG9hZGVyLkxvYWRlclBsdWdpbiNiaW5hcnkuXHJcbiAqXHJcbiAqIEBjbGFzcyBCaW5hcnlGaWxlXHJcbiAqIEBleHRlbmRzIFBoYXNlci5Mb2FkZXIuRmlsZVxyXG4gKiBAbWVtYmVyb2YgUGhhc2VyLkxvYWRlci5GaWxlVHlwZXNcclxuICogQGNvbnN0cnVjdG9yXHJcbiAqIEBzaW5jZSAzLjAuMFxyXG4gKlxyXG4gKiBAcGFyYW0ge1BoYXNlci5Mb2FkZXIuTG9hZGVyUGx1Z2lufSBsb2FkZXIgLSBBIHJlZmVyZW5jZSB0byB0aGUgTG9hZGVyIHRoYXQgaXMgcmVzcG9uc2libGUgZm9yIHRoaXMgZmlsZS5cclxuICogQHBhcmFtIHsoc3RyaW5nfFBoYXNlci5UeXBlcy5Mb2FkZXIuRmlsZVR5cGVzLkJpbmFyeUZpbGVDb25maWcpfSBrZXkgLSBUaGUga2V5IHRvIHVzZSBmb3IgdGhpcyBmaWxlLCBvciBhIGZpbGUgY29uZmlndXJhdGlvbiBvYmplY3QuXHJcbiAqIEBwYXJhbSB7c3RyaW5nfSBbdXJsXSAtIFRoZSBhYnNvbHV0ZSBvciByZWxhdGl2ZSBVUkwgdG8gbG9hZCB0aGlzIGZpbGUgZnJvbS4gSWYgdW5kZWZpbmVkIG9yIGBudWxsYCBpdCB3aWxsIGJlIHNldCB0byBgPGtleT4uYmluYCwgaS5lLiBpZiBga2V5YCB3YXMgXCJhbGllblwiIHRoZW4gdGhlIFVSTCB3aWxsIGJlIFwiYWxpZW4uYmluXCIuXHJcbiAqIEBwYXJhbSB7UGhhc2VyLlR5cGVzLkxvYWRlci5YSFJTZXR0aW5nc09iamVjdH0gW3hoclNldHRpbmdzXSAtIEV4dHJhIFhIUiBTZXR0aW5ncyBzcGVjaWZpY2FsbHkgZm9yIHRoaXMgZmlsZS5cclxuICogQHBhcmFtIHthbnl9IFtkYXRhVHlwZV0gLSBPcHRpb25hbCB0eXBlIHRvIGNhc3QgdGhlIGJpbmFyeSBmaWxlIHRvIG9uY2UgbG9hZGVkLiBGb3IgZXhhbXBsZSwgYFVpbnQ4QXJyYXlgLlxyXG4gKi9cclxudmFyIEJpbmFyeUZpbGUgPSBuZXcgQ2xhc3Moe1xyXG5cclxuICAgIEV4dGVuZHM6IEZpbGUsXHJcblxyXG4gICAgaW5pdGlhbGl6ZTpcclxuXHJcbiAgICBmdW5jdGlvbiBCaW5hcnlGaWxlIChsb2FkZXIsIGtleSwgdXJsLCB4aHJTZXR0aW5ncywgZGF0YVR5cGUpXHJcbiAgICB7XHJcbiAgICAgICAgdmFyIGV4dGVuc2lvbiA9ICdiaW4nO1xyXG5cclxuICAgICAgICBpZiAoSXNQbGFpbk9iamVjdChrZXkpKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgdmFyIGNvbmZpZyA9IGtleTtcclxuXHJcbiAgICAgICAgICAgIGtleSA9IEdldEZhc3RWYWx1ZShjb25maWcsICdrZXknKTtcclxuICAgICAgICAgICAgdXJsID0gR2V0RmFzdFZhbHVlKGNvbmZpZywgJ3VybCcpO1xyXG4gICAgICAgICAgICB4aHJTZXR0aW5ncyA9IEdldEZhc3RWYWx1ZShjb25maWcsICd4aHJTZXR0aW5ncycpO1xyXG4gICAgICAgICAgICBleHRlbnNpb24gPSBHZXRGYXN0VmFsdWUoY29uZmlnLCAnZXh0ZW5zaW9uJywgZXh0ZW5zaW9uKTtcclxuICAgICAgICAgICAgZGF0YVR5cGUgPSBHZXRGYXN0VmFsdWUoY29uZmlnLCAnZGF0YVR5cGUnLCBkYXRhVHlwZSk7XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICB2YXIgZmlsZUNvbmZpZyA9IHtcclxuICAgICAgICAgICAgdHlwZTogJ2JpbmFyeScsXHJcbiAgICAgICAgICAgIGNhY2hlOiBsb2FkZXIuY2FjaGVNYW5hZ2VyLmJpbmFyeSxcclxuICAgICAgICAgICAgZXh0ZW5zaW9uOiBleHRlbnNpb24sXHJcbiAgICAgICAgICAgIHJlc3BvbnNlVHlwZTogJ2FycmF5YnVmZmVyJyxcclxuICAgICAgICAgICAga2V5OiBrZXksXHJcbiAgICAgICAgICAgIHVybDogdXJsLFxyXG4gICAgICAgICAgICB4aHJTZXR0aW5nczogeGhyU2V0dGluZ3MsXHJcbiAgICAgICAgICAgIGNvbmZpZzogeyBkYXRhVHlwZTogZGF0YVR5cGUgfVxyXG4gICAgICAgIH07XHJcblxyXG4gICAgICAgIEZpbGUuY2FsbCh0aGlzLCBsb2FkZXIsIGZpbGVDb25maWcpO1xyXG4gICAgfSxcclxuXHJcbiAgICAvKipcclxuICAgICAqIENhbGxlZCBhdXRvbWF0aWNhbGx5IGJ5IExvYWRlci5uZXh0RmlsZS5cclxuICAgICAqIFRoaXMgbWV0aG9kIGNvbnRyb2xzIHdoYXQgZXh0cmEgd29yayB0aGlzIEZpbGUgZG9lcyB3aXRoIGl0cyBsb2FkZWQgZGF0YS5cclxuICAgICAqXHJcbiAgICAgKiBAbWV0aG9kIFBoYXNlci5Mb2FkZXIuRmlsZVR5cGVzLkJpbmFyeUZpbGUjb25Qcm9jZXNzXHJcbiAgICAgKiBAc2luY2UgMy43LjBcclxuICAgICAqL1xyXG4gICAgb25Qcm9jZXNzOiBmdW5jdGlvbiAoKVxyXG4gICAge1xyXG4gICAgICAgIHRoaXMuc3RhdGUgPSBDT05TVC5GSUxFX1BST0NFU1NJTkc7XHJcblxyXG4gICAgICAgIHZhciBjdG9yID0gdGhpcy5jb25maWcuZGF0YVR5cGU7XHJcblxyXG4gICAgICAgIHRoaXMuZGF0YSA9IChjdG9yKSA/IG5ldyBjdG9yKHRoaXMueGhyTG9hZGVyLnJlc3BvbnNlKSA6IHRoaXMueGhyTG9hZGVyLnJlc3BvbnNlO1xyXG5cclxuICAgICAgICB0aGlzLm9uUHJvY2Vzc0NvbXBsZXRlKCk7XHJcbiAgICB9XHJcblxyXG59KTtcclxuXHJcbi8qKlxyXG4gKiBBZGRzIGEgQmluYXJ5IGZpbGUsIG9yIGFycmF5IG9mIEJpbmFyeSBmaWxlcywgdG8gdGhlIGN1cnJlbnQgbG9hZCBxdWV1ZS5cclxuICpcclxuICogWW91IGNhbiBjYWxsIHRoaXMgbWV0aG9kIGZyb20gd2l0aGluIHlvdXIgU2NlbmUncyBgcHJlbG9hZGAsIGFsb25nIHdpdGggYW55IG90aGVyIGZpbGVzIHlvdSB3aXNoIHRvIGxvYWQ6XHJcbiAqIFxyXG4gKiBgYGBqYXZhc2NyaXB0XHJcbiAqIGZ1bmN0aW9uIHByZWxvYWQgKClcclxuICoge1xyXG4gKiAgICAgdGhpcy5sb2FkLmJpbmFyeSgnZG9vbScsICdmaWxlcy9Eb29tLndhZCcpO1xyXG4gKiB9XHJcbiAqIGBgYFxyXG4gKlxyXG4gKiBUaGUgZmlsZSBpcyAqKm5vdCoqIGxvYWRlZCByaWdodCBhd2F5LiBJdCBpcyBhZGRlZCB0byBhIHF1ZXVlIHJlYWR5IHRvIGJlIGxvYWRlZCBlaXRoZXIgd2hlbiB0aGUgbG9hZGVyIHN0YXJ0cyxcclxuICogb3IgaWYgaXQncyBhbHJlYWR5IHJ1bm5pbmcsIHdoZW4gdGhlIG5leHQgZnJlZSBsb2FkIHNsb3QgYmVjb21lcyBhdmFpbGFibGUuIFRoaXMgaGFwcGVucyBhdXRvbWF0aWNhbGx5IGlmIHlvdVxyXG4gKiBhcmUgY2FsbGluZyB0aGlzIGZyb20gd2l0aGluIHRoZSBTY2VuZSdzIGBwcmVsb2FkYCBtZXRob2QsIG9yIGEgcmVsYXRlZCBjYWxsYmFjay4gQmVjYXVzZSB0aGUgZmlsZSBpcyBxdWV1ZWRcclxuICogaXQgbWVhbnMgeW91IGNhbm5vdCB1c2UgdGhlIGZpbGUgaW1tZWRpYXRlbHkgYWZ0ZXIgY2FsbGluZyB0aGlzIG1ldGhvZCwgYnV0IG11c3Qgd2FpdCBmb3IgdGhlIGZpbGUgdG8gY29tcGxldGUuXHJcbiAqIFRoZSB0eXBpY2FsIGZsb3cgZm9yIGEgUGhhc2VyIFNjZW5lIGlzIHRoYXQgeW91IGxvYWQgYXNzZXRzIGluIHRoZSBTY2VuZSdzIGBwcmVsb2FkYCBtZXRob2QgYW5kIHRoZW4gd2hlbiB0aGVcclxuICogU2NlbmUncyBgY3JlYXRlYCBtZXRob2QgaXMgY2FsbGVkIHlvdSBhcmUgZ3VhcmFudGVlZCB0aGF0IGFsbCBvZiB0aG9zZSBhc3NldHMgYXJlIHJlYWR5IGZvciB1c2UgYW5kIGhhdmUgYmVlblxyXG4gKiBsb2FkZWQuXHJcbiAqIFxyXG4gKiBUaGUga2V5IG11c3QgYmUgYSB1bmlxdWUgU3RyaW5nLiBJdCBpcyB1c2VkIHRvIGFkZCB0aGUgZmlsZSB0byB0aGUgZ2xvYmFsIEJpbmFyeSBDYWNoZSB1cG9uIGEgc3VjY2Vzc2Z1bCBsb2FkLlxyXG4gKiBUaGUga2V5IHNob3VsZCBiZSB1bmlxdWUgYm90aCBpbiB0ZXJtcyBvZiBmaWxlcyBiZWluZyBsb2FkZWQgYW5kIGZpbGVzIGFscmVhZHkgcHJlc2VudCBpbiB0aGUgQmluYXJ5IENhY2hlLlxyXG4gKiBMb2FkaW5nIGEgZmlsZSB1c2luZyBhIGtleSB0aGF0IGlzIGFscmVhZHkgdGFrZW4gd2lsbCByZXN1bHQgaW4gYSB3YXJuaW5nLiBJZiB5b3Ugd2lzaCB0byByZXBsYWNlIGFuIGV4aXN0aW5nIGZpbGVcclxuICogdGhlbiByZW1vdmUgaXQgZnJvbSB0aGUgQmluYXJ5IENhY2hlIGZpcnN0LCBiZWZvcmUgbG9hZGluZyBhIG5ldyBvbmUuXHJcbiAqXHJcbiAqIEluc3RlYWQgb2YgcGFzc2luZyBhcmd1bWVudHMgeW91IGNhbiBwYXNzIGEgY29uZmlndXJhdGlvbiBvYmplY3QsIHN1Y2ggYXM6XHJcbiAqIFxyXG4gKiBgYGBqYXZhc2NyaXB0XHJcbiAqIHRoaXMubG9hZC5iaW5hcnkoe1xyXG4gKiAgICAga2V5OiAnZG9vbScsXHJcbiAqICAgICB1cmw6ICdmaWxlcy9Eb29tLndhZCcsXHJcbiAqICAgICBkYXRhVHlwZTogVWludDhBcnJheVxyXG4gKiB9KTtcclxuICogYGBgXHJcbiAqXHJcbiAqIFNlZSB0aGUgZG9jdW1lbnRhdGlvbiBmb3IgYFBoYXNlci5UeXBlcy5Mb2FkZXIuRmlsZVR5cGVzLkJpbmFyeUZpbGVDb25maWdgIGZvciBtb3JlIGRldGFpbHMuXHJcbiAqXHJcbiAqIE9uY2UgdGhlIGZpbGUgaGFzIGZpbmlzaGVkIGxvYWRpbmcgeW91IGNhbiBhY2Nlc3MgaXQgZnJvbSBpdHMgQ2FjaGUgdXNpbmcgaXRzIGtleTpcclxuICogXHJcbiAqIGBgYGphdmFzY3JpcHRcclxuICogdGhpcy5sb2FkLmJpbmFyeSgnZG9vbScsICdmaWxlcy9Eb29tLndhZCcpO1xyXG4gKiAvLyBhbmQgbGF0ZXIgaW4geW91ciBnYW1lIC4uLlxyXG4gKiB2YXIgZGF0YSA9IHRoaXMuY2FjaGUuYmluYXJ5LmdldCgnZG9vbScpO1xyXG4gKiBgYGBcclxuICpcclxuICogSWYgeW91IGhhdmUgc3BlY2lmaWVkIGEgcHJlZml4IGluIHRoZSBsb2FkZXIsIHZpYSBgTG9hZGVyLnNldFByZWZpeGAgdGhlbiB0aGlzIHZhbHVlIHdpbGwgYmUgcHJlcGVuZGVkIHRvIHRoaXMgZmlsZXNcclxuICoga2V5LiBGb3IgZXhhbXBsZSwgaWYgdGhlIHByZWZpeCB3YXMgYExFVkVMMS5gIGFuZCB0aGUga2V5IHdhcyBgRGF0YWAgdGhlIGZpbmFsIGtleSB3aWxsIGJlIGBMRVZFTDEuRGF0YWAgYW5kXHJcbiAqIHRoaXMgaXMgd2hhdCB5b3Ugd291bGQgdXNlIHRvIHJldHJpZXZlIHRoZSB0ZXh0IGZyb20gdGhlIEJpbmFyeSBDYWNoZS5cclxuICpcclxuICogVGhlIFVSTCBjYW4gYmUgcmVsYXRpdmUgb3IgYWJzb2x1dGUuIElmIHRoZSBVUkwgaXMgcmVsYXRpdmUgdGhlIGBMb2FkZXIuYmFzZVVSTGAgYW5kIGBMb2FkZXIucGF0aGAgdmFsdWVzIHdpbGwgYmUgcHJlcGVuZGVkIHRvIGl0LlxyXG4gKlxyXG4gKiBJZiB0aGUgVVJMIGlzbid0IHNwZWNpZmllZCB0aGUgTG9hZGVyIHdpbGwgdGFrZSB0aGUga2V5IGFuZCBjcmVhdGUgYSBmaWxlbmFtZSBmcm9tIHRoYXQuIEZvciBleGFtcGxlIGlmIHRoZSBrZXkgaXMgXCJkb29tXCJcclxuICogYW5kIG5vIFVSTCBpcyBnaXZlbiB0aGVuIHRoZSBMb2FkZXIgd2lsbCBzZXQgdGhlIFVSTCB0byBiZSBcImRvb20uYmluXCIuIEl0IHdpbGwgYWx3YXlzIGFkZCBgLmJpbmAgYXMgdGhlIGV4dGVuc2lvbiwgYWx0aG91Z2hcclxuICogdGhpcyBjYW4gYmUgb3ZlcnJpZGRlbiBpZiB1c2luZyBhbiBvYmplY3QgaW5zdGVhZCBvZiBtZXRob2QgYXJndW1lbnRzLiBJZiB5b3UgZG8gbm90IGRlc2lyZSB0aGlzIGFjdGlvbiB0aGVuIHByb3ZpZGUgYSBVUkwuXHJcbiAqXHJcbiAqIE5vdGU6IFRoZSBhYmlsaXR5IHRvIGxvYWQgdGhpcyB0eXBlIG9mIGZpbGUgd2lsbCBvbmx5IGJlIGF2YWlsYWJsZSBpZiB0aGUgQmluYXJ5IEZpbGUgdHlwZSBoYXMgYmVlbiBidWlsdCBpbnRvIFBoYXNlci5cclxuICogSXQgaXMgYXZhaWxhYmxlIGluIHRoZSBkZWZhdWx0IGJ1aWxkIGJ1dCBjYW4gYmUgZXhjbHVkZWQgZnJvbSBjdXN0b20gYnVpbGRzLlxyXG4gKlxyXG4gKiBAbWV0aG9kIFBoYXNlci5Mb2FkZXIuTG9hZGVyUGx1Z2luI2JpbmFyeVxyXG4gKiBAZmlyZXMgUGhhc2VyLkxvYWRlci5Mb2FkZXJQbHVnaW4jYWRkRmlsZUV2ZW50XHJcbiAqIEBzaW5jZSAzLjAuMFxyXG4gKlxyXG4gKiBAcGFyYW0geyhzdHJpbmd8UGhhc2VyLlR5cGVzLkxvYWRlci5GaWxlVHlwZXMuQmluYXJ5RmlsZUNvbmZpZ3xQaGFzZXIuVHlwZXMuTG9hZGVyLkZpbGVUeXBlcy5CaW5hcnlGaWxlQ29uZmlnW10pfSBrZXkgLSBUaGUga2V5IHRvIHVzZSBmb3IgdGhpcyBmaWxlLCBvciBhIGZpbGUgY29uZmlndXJhdGlvbiBvYmplY3QsIG9yIGFycmF5IG9mIHRoZW0uXHJcbiAqIEBwYXJhbSB7c3RyaW5nfSBbdXJsXSAtIFRoZSBhYnNvbHV0ZSBvciByZWxhdGl2ZSBVUkwgdG8gbG9hZCB0aGlzIGZpbGUgZnJvbS4gSWYgdW5kZWZpbmVkIG9yIGBudWxsYCBpdCB3aWxsIGJlIHNldCB0byBgPGtleT4uYmluYCwgaS5lLiBpZiBga2V5YCB3YXMgXCJhbGllblwiIHRoZW4gdGhlIFVSTCB3aWxsIGJlIFwiYWxpZW4uYmluXCIuXHJcbiAqIEBwYXJhbSB7YW55fSBbZGF0YVR5cGVdIC0gT3B0aW9uYWwgdHlwZSB0byBjYXN0IHRoZSBiaW5hcnkgZmlsZSB0byBvbmNlIGxvYWRlZC4gRm9yIGV4YW1wbGUsIGBVaW50OEFycmF5YC5cclxuICogQHBhcmFtIHtQaGFzZXIuVHlwZXMuTG9hZGVyLlhIUlNldHRpbmdzT2JqZWN0fSBbeGhyU2V0dGluZ3NdIC0gQW4gWEhSIFNldHRpbmdzIGNvbmZpZ3VyYXRpb24gb2JqZWN0LiBVc2VkIGluIHJlcGxhY2VtZW50IG9mIHRoZSBMb2FkZXJzIGRlZmF1bHQgWEhSIFNldHRpbmdzLlxyXG4gKlxyXG4gKiBAcmV0dXJuIHtQaGFzZXIuTG9hZGVyLkxvYWRlclBsdWdpbn0gVGhlIExvYWRlciBpbnN0YW5jZS5cclxuICovXHJcbkZpbGVUeXBlc01hbmFnZXIucmVnaXN0ZXIoJ2JpbmFyeScsIGZ1bmN0aW9uIChrZXksIHVybCwgZGF0YVR5cGUsIHhoclNldHRpbmdzKVxyXG57XHJcbiAgICBpZiAoQXJyYXkuaXNBcnJheShrZXkpKVxyXG4gICAge1xyXG4gICAgICAgIGZvciAodmFyIGkgPSAwOyBpIDwga2V5Lmxlbmd0aDsgaSsrKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgLy8gIElmIGl0J3MgYW4gYXJyYXkgaXQgaGFzIHRvIGJlIGFuIGFycmF5IG9mIE9iamVjdHMsIHNvIHdlIGdldCBldmVyeXRoaW5nIG91dCBvZiB0aGUgJ2tleScgb2JqZWN0XHJcbiAgICAgICAgICAgIHRoaXMuYWRkRmlsZShuZXcgQmluYXJ5RmlsZSh0aGlzLCBrZXlbaV0pKTtcclxuICAgICAgICB9XHJcbiAgICB9XHJcbiAgICBlbHNlXHJcbiAgICB7XHJcbiAgICAgICAgdGhpcy5hZGRGaWxlKG5ldyBCaW5hcnlGaWxlKHRoaXMsIGtleSwgdXJsLCB4aHJTZXR0aW5ncywgZGF0YVR5cGUpKTtcclxuICAgIH1cclxuXHJcbiAgICByZXR1cm4gdGhpcztcclxufSk7XHJcblxyXG5tb2R1bGUuZXhwb3J0cyA9IEJpbmFyeUZpbGU7XHJcbiJdLCJzb3VyY2VSb290IjoiIn0=
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/loader/filetypes/BinaryFile.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

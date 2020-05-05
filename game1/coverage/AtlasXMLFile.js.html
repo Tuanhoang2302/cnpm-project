@@ -1,0 +1,800 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for AtlasXMLFile.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> AtlasXMLFile.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">65.56% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>158/241</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>4/4</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">65.56% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>158/241</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line medium'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a>
+<a name='L208'></a><a href='#L208'>208</a>
+<a name='L209'></a><a href='#L209'>209</a>
+<a name='L210'></a><a href='#L210'>210</a>
+<a name='L211'></a><a href='#L211'>211</a>
+<a name='L212'></a><a href='#L212'>212</a>
+<a name='L213'></a><a href='#L213'>213</a>
+<a name='L214'></a><a href='#L214'>214</a>
+<a name='L215'></a><a href='#L215'>215</a>
+<a name='L216'></a><a href='#L216'>216</a>
+<a name='L217'></a><a href='#L217'>217</a>
+<a name='L218'></a><a href='#L218'>218</a>
+<a name='L219'></a><a href='#L219'>219</a>
+<a name='L220'></a><a href='#L220'>220</a>
+<a name='L221'></a><a href='#L221'>221</a>
+<a name='L222'></a><a href='#L222'>222</a>
+<a name='L223'></a><a href='#L223'>223</a>
+<a name='L224'></a><a href='#L224'>224</a>
+<a name='L225'></a><a href='#L225'>225</a>
+<a name='L226'></a><a href='#L226'>226</a>
+<a name='L227'></a><a href='#L227'>227</a>
+<a name='L228'></a><a href='#L228'>228</a>
+<a name='L229'></a><a href='#L229'>229</a>
+<a name='L230'></a><a href='#L230'>230</a>
+<a name='L231'></a><a href='#L231'>231</a>
+<a name='L232'></a><a href='#L232'>232</a>
+<a name='L233'></a><a href='#L233'>233</a>
+<a name='L234'></a><a href='#L234'>234</a>
+<a name='L235'></a><a href='#L235'>235</a>
+<a name='L236'></a><a href='#L236'>236</a>
+<a name='L237'></a><a href='#L237'>237</a>
+<a name='L238'></a><a href='#L238'>238</a>
+<a name='L239'></a><a href='#L239'>239</a>
+<a name='L240'></a><a href='#L240'>240</a>
+<a name='L241'></a><a href='#L241'>241</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var Class = __webpack_require__(/*! ../../utils/Class */ "./node_modules/phaser/src/utils/Class.js");
+var FileTypesManager = __webpack_require__(/*! ../FileTypesManager */ "./node_modules/phaser/src/loader/FileTypesManager.js");
+var GetFastValue = __webpack_require__(/*! ../../utils/object/GetFastValue */ "./node_modules/phaser/src/utils/object/GetFastValue.js");
+var ImageFile = __webpack_require__(/*! ./ImageFile.js */ "./node_modules/phaser/src/loader/filetypes/ImageFile.js");
+var IsPlainObject = __webpack_require__(/*! ../../utils/object/IsPlainObject */ "./node_modules/phaser/src/utils/object/IsPlainObject.js");
+var MultiFile = __webpack_require__(/*! ../MultiFile.js */ "./node_modules/phaser/src/loader/MultiFile.js");
+var XMLFile = __webpack_require__(/*! ./XMLFile.js */ "./node_modules/phaser/src/loader/filetypes/XMLFile.js");
+&nbsp;
+/**
+ * @classdesc
+ * A single XML based Texture Atlas File suitable for loading by the Loader.
+ *
+ * These are created when you use the Phaser.Loader.LoaderPlugin#atlasXML method and are not typically created directly.
+ * 
+ * For documentation about what all the arguments and configuration options mean please see Phaser.Loader.LoaderPlugin#atlasXML.
+ *
+ * @class AtlasXMLFile
+ * @extends Phaser.Loader.MultiFile
+ * @memberof Phaser.Loader.FileTypes
+ * @constructor
+ * @since 3.7.0
+ *
+ * @param {Phaser.Loader.LoaderPlugin} loader - A reference to the Loader that is responsible for this file.
+ * @param {(string|Phaser.Types.Loader.FileTypes.AtlasXMLFileConfig)} key - The key to use for this file, or a file configuration object.
+ * @param {string|string[]} [textureURL] - The absolute or relative URL to load the texture image file from. If undefined or `null` it will be set to `&lt;key&gt;.png`, i.e. if `key` was "alien" then the URL will be "alien.png".
+ * @param {string} [atlasURL] - The absolute or relative URL to load the texture atlas xml data file from. If undefined or `null` it will be set to `&lt;key&gt;.xml`, i.e. if `key` was "alien" then the URL will be "alien.xml".
+ * @param {Phaser.Types.Loader.XHRSettingsObject} [textureXhrSettings] - An XHR Settings configuration object for the atlas image file. Used in replacement of the Loaders default XHR Settings.
+ * @param {Phaser.Types.Loader.XHRSettingsObject} [atlasXhrSettings] - An XHR Settings configuration object for the atlas xml file. Used in replacement of the Loaders default XHR Settings.
+ */
+var AtlasXMLFile = new Class({
+&nbsp;
+    Extends: MultiFile,
+&nbsp;
+    initialize:
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    function AtlasXMLFile (loader, key, textureURL, atlasURL, textureXhrSettings, atlasXhrSettings)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        var image;</span>
+<span class="cstat-no" title="statement not covered" >        var data;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if (IsPlainObject(key))</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            var config = key;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            key = GetFastValue(config, 'key');</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            image = new ImageFile(loader, {</span>
+<span class="cstat-no" title="statement not covered" >                key: key,</span>
+<span class="cstat-no" title="statement not covered" >                url: GetFastValue(config, 'textureURL'),</span>
+<span class="cstat-no" title="statement not covered" >                extension: GetFastValue(config, 'textureExtension', 'png'),</span>
+<span class="cstat-no" title="statement not covered" >                normalMap: GetFastValue(config, 'normalMap'),</span>
+<span class="cstat-no" title="statement not covered" >                xhrSettings: GetFastValue(config, 'textureXhrSettings')</span>
+<span class="cstat-no" title="statement not covered" >            });</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            data = new XMLFile(loader, {</span>
+<span class="cstat-no" title="statement not covered" >                key: key,</span>
+<span class="cstat-no" title="statement not covered" >                url: GetFastValue(config, 'atlasURL'),</span>
+<span class="cstat-no" title="statement not covered" >                extension: GetFastValue(config, 'atlasExtension', 'xml'),</span>
+<span class="cstat-no" title="statement not covered" >                xhrSettings: GetFastValue(config, 'atlasXhrSettings')</span>
+<span class="cstat-no" title="statement not covered" >            });</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >        else</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            image = new ImageFile(loader, key, textureURL, textureXhrSettings);</span>
+<span class="cstat-no" title="statement not covered" >            data = new XMLFile(loader, key, atlasURL, atlasXhrSettings);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if (image.linkFile)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            //  Image has a normal map</span>
+<span class="cstat-no" title="statement not covered" >            MultiFile.call(this, loader, 'atlasxml', key, [ image, data, image.linkFile ]);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >        else</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            MultiFile.call(this, loader, 'atlasxml', key, [ image, data ]);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * Adds this file to its target cache upon successful loading and processing.
+     *
+     * @method Phaser.Loader.FileTypes.AtlasXMLFile#addToCache
+     * @since 3.7.0
+     */
+<span class="cstat-no" title="statement not covered" >    addToCache: function ()</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        if (this.isReadyToProcess())</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            var image = this.files[0];</span>
+<span class="cstat-no" title="statement not covered" >            var xml = this.files[1];</span>
+<span class="cstat-no" title="statement not covered" >            var normalMap = (this.files[2]) ? this.files[2].data : null;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            this.loader.textureManager.addAtlasXML(image.key, image.data, xml.data, normalMap);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            xml.addToCache();</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            this.complete = true;</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+&nbsp;
+});
+&nbsp;
+/**
+ * Adds an XML based Texture Atlas, or array of atlases, to the current load queue.
+ *
+ * You can call this method from within your Scene's `preload`, along with any other files you wish to load:
+ * 
+ * ```javascript
+ * function preload ()
+ * {
+ *     this.load.atlasXML('mainmenu', 'images/MainMenu.png', 'images/MainMenu.xml');
+ * }
+ * ```
+ *
+ * The file is **not** loaded right away. It is added to a queue ready to be loaded either when the loader starts,
+ * or if it's already running, when the next free load slot becomes available. This happens automatically if you
+ * are calling this from within the Scene's `preload` method, or a related callback. Because the file is queued
+ * it means you cannot use the file immediately after calling this method, but must wait for the file to complete.
+ * The typical flow for a Phaser Scene is that you load assets in the Scene's `preload` method and then when the
+ * Scene's `create` method is called you are guaranteed that all of those assets are ready for use and have been
+ * loaded.
+ * 
+ * If you call this from outside of `preload` then you are responsible for starting the Loader afterwards and monitoring
+ * its events to know when it's safe to use the asset. Please see the Phaser.Loader.LoaderPlugin class for more details.
+ *
+ * Phaser expects the atlas data to be provided in an XML file format.
+ * These files are created by software such as Shoebox and Adobe Flash / Animate.
+ * 
+ * Phaser can load all common image types: png, jpg, gif and any other format the browser can natively handle.
+ *
+ * The key must be a unique String. It is used to add the file to the global Texture Manager upon a successful load.
+ * The key should be unique both in terms of files being loaded and files already present in the Texture Manager.
+ * Loading a file using a key that is already taken will result in a warning. If you wish to replace an existing file
+ * then remove it from the Texture Manager first, before loading a new one.
+ *
+ * Instead of passing arguments you can pass a configuration object, such as:
+ * 
+ * ```javascript
+ * this.load.atlasXML({
+ *     key: 'mainmenu',
+ *     textureURL: 'images/MainMenu.png',
+ *     atlasURL: 'images/MainMenu.xml'
+ * });
+ * ```
+ *
+ * See the documentation for `Phaser.Types.Loader.FileTypes.AtlasXMLFileConfig` for more details.
+ *
+ * Once the atlas has finished loading you can use frames from it as textures for a Game Object by referencing its key:
+ * 
+ * ```javascript
+ * this.load.atlasXML('mainmenu', 'images/MainMenu.png', 'images/MainMenu.xml');
+ * // and later in your game ...
+ * this.add.image(x, y, 'mainmenu', 'background');
+ * ```
+ *
+ * To get a list of all available frames within an atlas please consult your Texture Atlas software.
+ *
+ * If you have specified a prefix in the loader, via `Loader.setPrefix` then this value will be prepended to this files
+ * key. For example, if the prefix was `MENU.` and the key was `Background` the final key will be `MENU.Background` and
+ * this is what you would use to retrieve the image from the Texture Manager.
+ *
+ * The URL can be relative or absolute. If the URL is relative the `Loader.baseURL` and `Loader.path` values will be prepended to it.
+ *
+ * If the URL isn't specified the Loader will take the key and create a filename from that. For example if the key is "alien"
+ * and no URL is given then the Loader will set the URL to be "alien.png". It will always add `.png` as the extension, although
+ * this can be overridden if using an object instead of method arguments. If you do not desire this action then provide a URL.
+ *
+ * Phaser also supports the automatic loading of associated normal maps. If you have a normal map to go with this image,
+ * then you can specify it by providing an array as the `url` where the second element is the normal map:
+ * 
+ * ```javascript
+ * this.load.atlasXML('mainmenu', [ 'images/MainMenu.png', 'images/MainMenu-n.png' ], 'images/MainMenu.xml');
+ * ```
+ *
+ * Or, if you are using a config object use the `normalMap` property:
+ * 
+ * ```javascript
+ * this.load.atlasXML({
+ *     key: 'mainmenu',
+ *     textureURL: 'images/MainMenu.png',
+ *     normalMap: 'images/MainMenu-n.png',
+ *     atlasURL: 'images/MainMenu.xml'
+ * });
+ * ```
+ *
+ * The normal map file is subject to the same conditions as the image file with regard to the path, baseURL, CORs and XHR Settings.
+ * Normal maps are a WebGL only feature.
+ *
+ * Note: The ability to load this type of file will only be available if the Atlas XML File type has been built into Phaser.
+ * It is available in the default build but can be excluded from custom builds.
+ *
+ * @method Phaser.Loader.LoaderPlugin#atlasXML
+ * @fires Phaser.Loader.LoaderPlugin#addFileEvent
+ * @since 3.7.0
+ *
+ * @param {(string|Phaser.Types.Loader.FileTypes.AtlasXMLFileConfig|Phaser.Types.Loader.FileTypes.AtlasXMLFileConfig[])} key - The key to use for this file, or a file configuration object, or array of them.
+ * @param {string|string[]} [textureURL] - The absolute or relative URL to load the texture image file from. If undefined or `null` it will be set to `&lt;key&gt;.png`, i.e. if `key` was "alien" then the URL will be "alien.png".
+ * @param {string} [atlasURL] - The absolute or relative URL to load the texture atlas xml data file from. If undefined or `null` it will be set to `&lt;key&gt;.xml`, i.e. if `key` was "alien" then the URL will be "alien.xml".
+ * @param {Phaser.Types.Loader.XHRSettingsObject} [textureXhrSettings] - An XHR Settings configuration object for the atlas image file. Used in replacement of the Loaders default XHR Settings.
+ * @param {Phaser.Types.Loader.XHRSettingsObject} [atlasXhrSettings] - An XHR Settings configuration object for the atlas xml file. Used in replacement of the Loaders default XHR Settings.
+ *
+ * @return {Phaser.Loader.LoaderPlugin} The Loader instance.
+ */
+<span class="cstat-no" title="statement not covered" >FileTypesManager.register('atlasXML', function (key, textureURL, atlasURL, textureXhrSettings, atlasXhrSettings)</span>
+<span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    var multifile;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    //  Supports an Object file definition in the key argument</span>
+<span class="cstat-no" title="statement not covered" >    //  Or an array of objects in the key argument</span>
+<span class="cstat-no" title="statement not covered" >    //  Or a single entry where all arguments have been defined</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (Array.isArray(key))</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; key.length; i++)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            multifile = new AtlasXMLFile(this, key[i]);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            this.addFile(multifile.files);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    else</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        multifile = new AtlasXMLFile(this, key, textureURL, atlasURL, textureXhrSettings, atlasXhrSettings);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        this.addFile(multifile.files);</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    return this;</span>
+<span class="cstat-no" title="statement not covered" >});</span>
+&nbsp;
+module.exports = AtlasXMLFile;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9sb2FkZXIvZmlsZXR5cGVzL0F0bGFzWE1MRmlsZS5qcz83ZDE0Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBLGtCQUFrQjtBQUNsQjs7QUFFQSxZQUFZLG1CQUFPLENBQUMsbUVBQW1CO0FBQ3ZDLHVCQUF1QixtQkFBTyxDQUFDLGlGQUFxQjtBQUNwRCxtQkFBbUIsbUJBQU8sQ0FBQywrRkFBaUM7QUFDNUQsZ0JBQWdCLG1CQUFPLENBQUMsK0VBQWdCO0FBQ3hDLG9CQUFvQixtQkFBTyxDQUFDLGlHQUFrQztBQUM5RCxnQkFBZ0IsbUJBQU8sQ0FBQyxzRUFBaUI7QUFDekMsY0FBYyxtQkFBTyxDQUFDLDJFQUFjOztBQUVwQztBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsV0FBVywyQkFBMkI7QUFDdEMsV0FBVywwREFBMEQ7QUFDckUsV0FBVyxnQkFBZ0I7QUFDM0IsV0FBVyxPQUFPO0FBQ2xCLFdBQVcsc0NBQXNDO0FBQ2pELFdBQVcsc0NBQXNDO0FBQ2pEO0FBQ0E7O0FBRUE7O0FBRUE7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBOztBQUVBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGFBQWE7O0FBRWI7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGFBQWE7QUFDYjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsS0FBSzs7QUFFTDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTs7QUFFQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUEsQ0FBQzs7QUFFRDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLElBQUk7QUFDSjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxJQUFJO0FBQ0o7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsV0FBVyw2R0FBNkc7QUFDeEgsV0FBVyxnQkFBZ0I7QUFDM0IsV0FBVyxPQUFPO0FBQ2xCLFdBQVcsc0NBQXNDO0FBQ2pELFdBQVcsc0NBQXNDO0FBQ2pEO0FBQ0EsWUFBWSwyQkFBMkI7QUFDdkM7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQSx1QkFBdUIsZ0JBQWdCO0FBQ3ZDO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQSxDQUFDOztBQUVEIiwiZmlsZSI6Ii4vbm9kZV9tb2R1bGVzL3BoYXNlci9zcmMvbG9hZGVyL2ZpbGV0eXBlcy9BdGxhc1hNTEZpbGUuanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcclxuICogQGF1dGhvciAgICAgICBSaWNoYXJkIERhdmV5IDxyaWNoQHBob3RvbnN0b3JtLmNvbT5cclxuICogQGNvcHlyaWdodCAgICAyMDE5IFBob3RvbiBTdG9ybSBMdGQuXHJcbiAqIEBsaWNlbnNlICAgICAge0BsaW5rIGh0dHBzOi8vb3BlbnNvdXJjZS5vcmcvbGljZW5zZXMvTUlUfE1JVCBMaWNlbnNlfVxyXG4gKi9cclxuXHJcbnZhciBDbGFzcyA9IHJlcXVpcmUoJy4uLy4uL3V0aWxzL0NsYXNzJyk7XHJcbnZhciBGaWxlVHlwZXNNYW5hZ2VyID0gcmVxdWlyZSgnLi4vRmlsZVR5cGVzTWFuYWdlcicpO1xyXG52YXIgR2V0RmFzdFZhbHVlID0gcmVxdWlyZSgnLi4vLi4vdXRpbHMvb2JqZWN0L0dldEZhc3RWYWx1ZScpO1xyXG52YXIgSW1hZ2VGaWxlID0gcmVxdWlyZSgnLi9JbWFnZUZpbGUuanMnKTtcclxudmFyIElzUGxhaW5PYmplY3QgPSByZXF1aXJlKCcuLi8uLi91dGlscy9vYmplY3QvSXNQbGFpbk9iamVjdCcpO1xyXG52YXIgTXVsdGlGaWxlID0gcmVxdWlyZSgnLi4vTXVsdGlGaWxlLmpzJyk7XHJcbnZhciBYTUxGaWxlID0gcmVxdWlyZSgnLi9YTUxGaWxlLmpzJyk7XHJcblxyXG4vKipcclxuICogQGNsYXNzZGVzY1xyXG4gKiBBIHNpbmdsZSBYTUwgYmFzZWQgVGV4dHVyZSBBdGxhcyBGaWxlIHN1aXRhYmxlIGZvciBsb2FkaW5nIGJ5IHRoZSBMb2FkZXIuXHJcbiAqXHJcbiAqIFRoZXNlIGFyZSBjcmVhdGVkIHdoZW4geW91IHVzZSB0aGUgUGhhc2VyLkxvYWRlci5Mb2FkZXJQbHVnaW4jYXRsYXNYTUwgbWV0aG9kIGFuZCBhcmUgbm90IHR5cGljYWxseSBjcmVhdGVkIGRpcmVjdGx5LlxyXG4gKiBcclxuICogRm9yIGRvY3VtZW50YXRpb24gYWJvdXQgd2hhdCBhbGwgdGhlIGFyZ3VtZW50cyBhbmQgY29uZmlndXJhdGlvbiBvcHRpb25zIG1lYW4gcGxlYXNlIHNlZSBQaGFzZXIuTG9hZGVyLkxvYWRlclBsdWdpbiNhdGxhc1hNTC5cclxuICpcclxuICogQGNsYXNzIEF0bGFzWE1MRmlsZVxyXG4gKiBAZXh0ZW5kcyBQaGFzZXIuTG9hZGVyLk11bHRpRmlsZVxyXG4gKiBAbWVtYmVyb2YgUGhhc2VyLkxvYWRlci5GaWxlVHlwZXNcclxuICogQGNvbnN0cnVjdG9yXHJcbiAqIEBzaW5jZSAzLjcuMFxyXG4gKlxyXG4gKiBAcGFyYW0ge1BoYXNlci5Mb2FkZXIuTG9hZGVyUGx1Z2lufSBsb2FkZXIgLSBBIHJlZmVyZW5jZSB0byB0aGUgTG9hZGVyIHRoYXQgaXMgcmVzcG9uc2libGUgZm9yIHRoaXMgZmlsZS5cclxuICogQHBhcmFtIHsoc3RyaW5nfFBoYXNlci5UeXBlcy5Mb2FkZXIuRmlsZVR5cGVzLkF0bGFzWE1MRmlsZUNvbmZpZyl9IGtleSAtIFRoZSBrZXkgdG8gdXNlIGZvciB0aGlzIGZpbGUsIG9yIGEgZmlsZSBjb25maWd1cmF0aW9uIG9iamVjdC5cclxuICogQHBhcmFtIHtzdHJpbmd8c3RyaW5nW119IFt0ZXh0dXJlVVJMXSAtIFRoZSBhYnNvbHV0ZSBvciByZWxhdGl2ZSBVUkwgdG8gbG9hZCB0aGUgdGV4dHVyZSBpbWFnZSBmaWxlIGZyb20uIElmIHVuZGVmaW5lZCBvciBgbnVsbGAgaXQgd2lsbCBiZSBzZXQgdG8gYDxrZXk+LnBuZ2AsIGkuZS4gaWYgYGtleWAgd2FzIFwiYWxpZW5cIiB0aGVuIHRoZSBVUkwgd2lsbCBiZSBcImFsaWVuLnBuZ1wiLlxyXG4gKiBAcGFyYW0ge3N0cmluZ30gW2F0bGFzVVJMXSAtIFRoZSBhYnNvbHV0ZSBvciByZWxhdGl2ZSBVUkwgdG8gbG9hZCB0aGUgdGV4dHVyZSBhdGxhcyB4bWwgZGF0YSBmaWxlIGZyb20uIElmIHVuZGVmaW5lZCBvciBgbnVsbGAgaXQgd2lsbCBiZSBzZXQgdG8gYDxrZXk+LnhtbGAsIGkuZS4gaWYgYGtleWAgd2FzIFwiYWxpZW5cIiB0aGVuIHRoZSBVUkwgd2lsbCBiZSBcImFsaWVuLnhtbFwiLlxyXG4gKiBAcGFyYW0ge1BoYXNlci5UeXBlcy5Mb2FkZXIuWEhSU2V0dGluZ3NPYmplY3R9IFt0ZXh0dXJlWGhyU2V0dGluZ3NdIC0gQW4gWEhSIFNldHRpbmdzIGNvbmZpZ3VyYXRpb24gb2JqZWN0IGZvciB0aGUgYXRsYXMgaW1hZ2UgZmlsZS4gVXNlZCBpbiByZXBsYWNlbWVudCBvZiB0aGUgTG9hZGVycyBkZWZhdWx0IFhIUiBTZXR0aW5ncy5cclxuICogQHBhcmFtIHtQaGFzZXIuVHlwZXMuTG9hZGVyLlhIUlNldHRpbmdzT2JqZWN0fSBbYXRsYXNYaHJTZXR0aW5nc10gLSBBbiBYSFIgU2V0dGluZ3MgY29uZmlndXJhdGlvbiBvYmplY3QgZm9yIHRoZSBhdGxhcyB4bWwgZmlsZS4gVXNlZCBpbiByZXBsYWNlbWVudCBvZiB0aGUgTG9hZGVycyBkZWZhdWx0IFhIUiBTZXR0aW5ncy5cclxuICovXHJcbnZhciBBdGxhc1hNTEZpbGUgPSBuZXcgQ2xhc3Moe1xyXG5cclxuICAgIEV4dGVuZHM6IE11bHRpRmlsZSxcclxuXHJcbiAgICBpbml0aWFsaXplOlxyXG5cclxuICAgIGZ1bmN0aW9uIEF0bGFzWE1MRmlsZSAobG9hZGVyLCBrZXksIHRleHR1cmVVUkwsIGF0bGFzVVJMLCB0ZXh0dXJlWGhyU2V0dGluZ3MsIGF0bGFzWGhyU2V0dGluZ3MpXHJcbiAgICB7XHJcbiAgICAgICAgdmFyIGltYWdlO1xyXG4gICAgICAgIHZhciBkYXRhO1xyXG5cclxuICAgICAgICBpZiAoSXNQbGFpbk9iamVjdChrZXkpKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgdmFyIGNvbmZpZyA9IGtleTtcclxuXHJcbiAgICAgICAgICAgIGtleSA9IEdldEZhc3RWYWx1ZShjb25maWcsICdrZXknKTtcclxuXHJcbiAgICAgICAgICAgIGltYWdlID0gbmV3IEltYWdlRmlsZShsb2FkZXIsIHtcclxuICAgICAgICAgICAgICAgIGtleToga2V5LFxyXG4gICAgICAgICAgICAgICAgdXJsOiBHZXRGYXN0VmFsdWUoY29uZmlnLCAndGV4dHVyZVVSTCcpLFxyXG4gICAgICAgICAgICAgICAgZXh0ZW5zaW9uOiBHZXRGYXN0VmFsdWUoY29uZmlnLCAndGV4dHVyZUV4dGVuc2lvbicsICdwbmcnKSxcclxuICAgICAgICAgICAgICAgIG5vcm1hbE1hcDogR2V0RmFzdFZhbHVlKGNvbmZpZywgJ25vcm1hbE1hcCcpLFxyXG4gICAgICAgICAgICAgICAgeGhyU2V0dGluZ3M6IEdldEZhc3RWYWx1ZShjb25maWcsICd0ZXh0dXJlWGhyU2V0dGluZ3MnKVxyXG4gICAgICAgICAgICB9KTtcclxuXHJcbiAgICAgICAgICAgIGRhdGEgPSBuZXcgWE1MRmlsZShsb2FkZXIsIHtcclxuICAgICAgICAgICAgICAgIGtleToga2V5LFxyXG4gICAgICAgICAgICAgICAgdXJsOiBHZXRGYXN0VmFsdWUoY29uZmlnLCAnYXRsYXNVUkwnKSxcclxuICAgICAgICAgICAgICAgIGV4dGVuc2lvbjogR2V0RmFzdFZhbHVlKGNvbmZpZywgJ2F0bGFzRXh0ZW5zaW9uJywgJ3htbCcpLFxyXG4gICAgICAgICAgICAgICAgeGhyU2V0dGluZ3M6IEdldEZhc3RWYWx1ZShjb25maWcsICdhdGxhc1hoclNldHRpbmdzJylcclxuICAgICAgICAgICAgfSk7XHJcbiAgICAgICAgfVxyXG4gICAgICAgIGVsc2VcclxuICAgICAgICB7XHJcbiAgICAgICAgICAgIGltYWdlID0gbmV3IEltYWdlRmlsZShsb2FkZXIsIGtleSwgdGV4dHVyZVVSTCwgdGV4dHVyZVhoclNldHRpbmdzKTtcclxuICAgICAgICAgICAgZGF0YSA9IG5ldyBYTUxGaWxlKGxvYWRlciwga2V5LCBhdGxhc1VSTCwgYXRsYXNYaHJTZXR0aW5ncyk7XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICBpZiAoaW1hZ2UubGlua0ZpbGUpXHJcbiAgICAgICAge1xyXG4gICAgICAgICAgICAvLyAgSW1hZ2UgaGFzIGEgbm9ybWFsIG1hcFxyXG4gICAgICAgICAgICBNdWx0aUZpbGUuY2FsbCh0aGlzLCBsb2FkZXIsICdhdGxhc3htbCcsIGtleSwgWyBpbWFnZSwgZGF0YSwgaW1hZ2UubGlua0ZpbGUgXSk7XHJcbiAgICAgICAgfVxyXG4gICAgICAgIGVsc2VcclxuICAgICAgICB7XHJcbiAgICAgICAgICAgIE11bHRpRmlsZS5jYWxsKHRoaXMsIGxvYWRlciwgJ2F0bGFzeG1sJywga2V5LCBbIGltYWdlLCBkYXRhIF0pO1xyXG4gICAgICAgIH1cclxuICAgIH0sXHJcblxyXG4gICAgLyoqXHJcbiAgICAgKiBBZGRzIHRoaXMgZmlsZSB0byBpdHMgdGFyZ2V0IGNhY2hlIHVwb24gc3VjY2Vzc2Z1bCBsb2FkaW5nIGFuZCBwcm9jZXNzaW5nLlxyXG4gICAgICpcclxuICAgICAqIEBtZXRob2QgUGhhc2VyLkxvYWRlci5GaWxlVHlwZXMuQXRsYXNYTUxGaWxlI2FkZFRvQ2FjaGVcclxuICAgICAqIEBzaW5jZSAzLjcuMFxyXG4gICAgICovXHJcbiAgICBhZGRUb0NhY2hlOiBmdW5jdGlvbiAoKVxyXG4gICAge1xyXG4gICAgICAgIGlmICh0aGlzLmlzUmVhZHlUb1Byb2Nlc3MoKSlcclxuICAgICAgICB7XHJcbiAgICAgICAgICAgIHZhciBpbWFnZSA9IHRoaXMuZmlsZXNbMF07XHJcbiAgICAgICAgICAgIHZhciB4bWwgPSB0aGlzLmZpbGVzWzFdO1xyXG4gICAgICAgICAgICB2YXIgbm9ybWFsTWFwID0gKHRoaXMuZmlsZXNbMl0pID8gdGhpcy5maWxlc1syXS5kYXRhIDogbnVsbDtcclxuXHJcbiAgICAgICAgICAgIHRoaXMubG9hZGVyLnRleHR1cmVNYW5hZ2VyLmFkZEF0bGFzWE1MKGltYWdlLmtleSwgaW1hZ2UuZGF0YSwgeG1sLmRhdGEsIG5vcm1hbE1hcCk7XHJcblxyXG4gICAgICAgICAgICB4bWwuYWRkVG9DYWNoZSgpO1xyXG5cclxuICAgICAgICAgICAgdGhpcy5jb21wbGV0ZSA9IHRydWU7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG5cclxufSk7XHJcblxyXG4vKipcclxuICogQWRkcyBhbiBYTUwgYmFzZWQgVGV4dHVyZSBBdGxhcywgb3IgYXJyYXkgb2YgYXRsYXNlcywgdG8gdGhlIGN1cnJlbnQgbG9hZCBxdWV1ZS5cclxuICpcclxuICogWW91IGNhbiBjYWxsIHRoaXMgbWV0aG9kIGZyb20gd2l0aGluIHlvdXIgU2NlbmUncyBgcHJlbG9hZGAsIGFsb25nIHdpdGggYW55IG90aGVyIGZpbGVzIHlvdSB3aXNoIHRvIGxvYWQ6XHJcbiAqIFxyXG4gKiBgYGBqYXZhc2NyaXB0XHJcbiAqIGZ1bmN0aW9uIHByZWxvYWQgKClcclxuICoge1xyXG4gKiAgICAgdGhpcy5sb2FkLmF0bGFzWE1MKCdtYWlubWVudScsICdpbWFnZXMvTWFpbk1lbnUucG5nJywgJ2ltYWdlcy9NYWluTWVudS54bWwnKTtcclxuICogfVxyXG4gKiBgYGBcclxuICpcclxuICogVGhlIGZpbGUgaXMgKipub3QqKiBsb2FkZWQgcmlnaHQgYXdheS4gSXQgaXMgYWRkZWQgdG8gYSBxdWV1ZSByZWFkeSB0byBiZSBsb2FkZWQgZWl0aGVyIHdoZW4gdGhlIGxvYWRlciBzdGFydHMsXHJcbiAqIG9yIGlmIGl0J3MgYWxyZWFkeSBydW5uaW5nLCB3aGVuIHRoZSBuZXh0IGZyZWUgbG9hZCBzbG90IGJlY29tZXMgYXZhaWxhYmxlLiBUaGlzIGhhcHBlbnMgYXV0b21hdGljYWxseSBpZiB5b3VcclxuICogYXJlIGNhbGxpbmcgdGhpcyBmcm9tIHdpdGhpbiB0aGUgU2NlbmUncyBgcHJlbG9hZGAgbWV0aG9kLCBvciBhIHJlbGF0ZWQgY2FsbGJhY2suIEJlY2F1c2UgdGhlIGZpbGUgaXMgcXVldWVkXHJcbiAqIGl0IG1lYW5zIHlvdSBjYW5ub3QgdXNlIHRoZSBmaWxlIGltbWVkaWF0ZWx5IGFmdGVyIGNhbGxpbmcgdGhpcyBtZXRob2QsIGJ1dCBtdXN0IHdhaXQgZm9yIHRoZSBmaWxlIHRvIGNvbXBsZXRlLlxyXG4gKiBUaGUgdHlwaWNhbCBmbG93IGZvciBhIFBoYXNlciBTY2VuZSBpcyB0aGF0IHlvdSBsb2FkIGFzc2V0cyBpbiB0aGUgU2NlbmUncyBgcHJlbG9hZGAgbWV0aG9kIGFuZCB0aGVuIHdoZW4gdGhlXHJcbiAqIFNjZW5lJ3MgYGNyZWF0ZWAgbWV0aG9kIGlzIGNhbGxlZCB5b3UgYXJlIGd1YXJhbnRlZWQgdGhhdCBhbGwgb2YgdGhvc2UgYXNzZXRzIGFyZSByZWFkeSBmb3IgdXNlIGFuZCBoYXZlIGJlZW5cclxuICogbG9hZGVkLlxyXG4gKiBcclxuICogSWYgeW91IGNhbGwgdGhpcyBmcm9tIG91dHNpZGUgb2YgYHByZWxvYWRgIHRoZW4geW91IGFyZSByZXNwb25zaWJsZSBmb3Igc3RhcnRpbmcgdGhlIExvYWRlciBhZnRlcndhcmRzIGFuZCBtb25pdG9yaW5nXHJcbiAqIGl0cyBldmVudHMgdG8ga25vdyB3aGVuIGl0J3Mgc2FmZSB0byB1c2UgdGhlIGFzc2V0LiBQbGVhc2Ugc2VlIHRoZSBQaGFzZXIuTG9hZGVyLkxvYWRlclBsdWdpbiBjbGFzcyBmb3IgbW9yZSBkZXRhaWxzLlxyXG4gKlxyXG4gKiBQaGFzZXIgZXhwZWN0cyB0aGUgYXRsYXMgZGF0YSB0byBiZSBwcm92aWRlZCBpbiBhbiBYTUwgZmlsZSBmb3JtYXQuXHJcbiAqIFRoZXNlIGZpbGVzIGFyZSBjcmVhdGVkIGJ5IHNvZnR3YXJlIHN1Y2ggYXMgU2hvZWJveCBhbmQgQWRvYmUgRmxhc2ggLyBBbmltYXRlLlxyXG4gKiBcclxuICogUGhhc2VyIGNhbiBsb2FkIGFsbCBjb21tb24gaW1hZ2UgdHlwZXM6IHBuZywganBnLCBnaWYgYW5kIGFueSBvdGhlciBmb3JtYXQgdGhlIGJyb3dzZXIgY2FuIG5hdGl2ZWx5IGhhbmRsZS5cclxuICpcclxuICogVGhlIGtleSBtdXN0IGJlIGEgdW5pcXVlIFN0cmluZy4gSXQgaXMgdXNlZCB0byBhZGQgdGhlIGZpbGUgdG8gdGhlIGdsb2JhbCBUZXh0dXJlIE1hbmFnZXIgdXBvbiBhIHN1Y2Nlc3NmdWwgbG9hZC5cclxuICogVGhlIGtleSBzaG91bGQgYmUgdW5pcXVlIGJvdGggaW4gdGVybXMgb2YgZmlsZXMgYmVpbmcgbG9hZGVkIGFuZCBmaWxlcyBhbHJlYWR5IHByZXNlbnQgaW4gdGhlIFRleHR1cmUgTWFuYWdlci5cclxuICogTG9hZGluZyBhIGZpbGUgdXNpbmcgYSBrZXkgdGhhdCBpcyBhbHJlYWR5IHRha2VuIHdpbGwgcmVzdWx0IGluIGEgd2FybmluZy4gSWYgeW91IHdpc2ggdG8gcmVwbGFjZSBhbiBleGlzdGluZyBmaWxlXHJcbiAqIHRoZW4gcmVtb3ZlIGl0IGZyb20gdGhlIFRleHR1cmUgTWFuYWdlciBmaXJzdCwgYmVmb3JlIGxvYWRpbmcgYSBuZXcgb25lLlxyXG4gKlxyXG4gKiBJbnN0ZWFkIG9mIHBhc3NpbmcgYXJndW1lbnRzIHlvdSBjYW4gcGFzcyBhIGNvbmZpZ3VyYXRpb24gb2JqZWN0LCBzdWNoIGFzOlxyXG4gKiBcclxuICogYGBgamF2YXNjcmlwdFxyXG4gKiB0aGlzLmxvYWQuYXRsYXNYTUwoe1xyXG4gKiAgICAga2V5OiAnbWFpbm1lbnUnLFxyXG4gKiAgICAgdGV4dHVyZVVSTDogJ2ltYWdlcy9NYWluTWVudS5wbmcnLFxyXG4gKiAgICAgYXRsYXNVUkw6ICdpbWFnZXMvTWFpbk1lbnUueG1sJ1xyXG4gKiB9KTtcclxuICogYGBgXHJcbiAqXHJcbiAqIFNlZSB0aGUgZG9jdW1lbnRhdGlvbiBmb3IgYFBoYXNlci5UeXBlcy5Mb2FkZXIuRmlsZVR5cGVzLkF0bGFzWE1MRmlsZUNvbmZpZ2AgZm9yIG1vcmUgZGV0YWlscy5cclxuICpcclxuICogT25jZSB0aGUgYXRsYXMgaGFzIGZpbmlzaGVkIGxvYWRpbmcgeW91IGNhbiB1c2UgZnJhbWVzIGZyb20gaXQgYXMgdGV4dHVyZXMgZm9yIGEgR2FtZSBPYmplY3QgYnkgcmVmZXJlbmNpbmcgaXRzIGtleTpcclxuICogXHJcbiAqIGBgYGphdmFzY3JpcHRcclxuICogdGhpcy5sb2FkLmF0bGFzWE1MKCdtYWlubWVudScsICdpbWFnZXMvTWFpbk1lbnUucG5nJywgJ2ltYWdlcy9NYWluTWVudS54bWwnKTtcclxuICogLy8gYW5kIGxhdGVyIGluIHlvdXIgZ2FtZSAuLi5cclxuICogdGhpcy5hZGQuaW1hZ2UoeCwgeSwgJ21haW5tZW51JywgJ2JhY2tncm91bmQnKTtcclxuICogYGBgXHJcbiAqXHJcbiAqIFRvIGdldCBhIGxpc3Qgb2YgYWxsIGF2YWlsYWJsZSBmcmFtZXMgd2l0aGluIGFuIGF0bGFzIHBsZWFzZSBjb25zdWx0IHlvdXIgVGV4dHVyZSBBdGxhcyBzb2Z0d2FyZS5cclxuICpcclxuICogSWYgeW91IGhhdmUgc3BlY2lmaWVkIGEgcHJlZml4IGluIHRoZSBsb2FkZXIsIHZpYSBgTG9hZGVyLnNldFByZWZpeGAgdGhlbiB0aGlzIHZhbHVlIHdpbGwgYmUgcHJlcGVuZGVkIHRvIHRoaXMgZmlsZXNcclxuICoga2V5LiBGb3IgZXhhbXBsZSwgaWYgdGhlIHByZWZpeCB3YXMgYE1FTlUuYCBhbmQgdGhlIGtleSB3YXMgYEJhY2tncm91bmRgIHRoZSBmaW5hbCBrZXkgd2lsbCBiZSBgTUVOVS5CYWNrZ3JvdW5kYCBhbmRcclxuICogdGhpcyBpcyB3aGF0IHlvdSB3b3VsZCB1c2UgdG8gcmV0cmlldmUgdGhlIGltYWdlIGZyb20gdGhlIFRleHR1cmUgTWFuYWdlci5cclxuICpcclxuICogVGhlIFVSTCBjYW4gYmUgcmVsYXRpdmUgb3IgYWJzb2x1dGUuIElmIHRoZSBVUkwgaXMgcmVsYXRpdmUgdGhlIGBMb2FkZXIuYmFzZVVSTGAgYW5kIGBMb2FkZXIucGF0aGAgdmFsdWVzIHdpbGwgYmUgcHJlcGVuZGVkIHRvIGl0LlxyXG4gKlxyXG4gKiBJZiB0aGUgVVJMIGlzbid0IHNwZWNpZmllZCB0aGUgTG9hZGVyIHdpbGwgdGFrZSB0aGUga2V5IGFuZCBjcmVhdGUgYSBmaWxlbmFtZSBmcm9tIHRoYXQuIEZvciBleGFtcGxlIGlmIHRoZSBrZXkgaXMgXCJhbGllblwiXHJcbiAqIGFuZCBubyBVUkwgaXMgZ2l2ZW4gdGhlbiB0aGUgTG9hZGVyIHdpbGwgc2V0IHRoZSBVUkwgdG8gYmUgXCJhbGllbi5wbmdcIi4gSXQgd2lsbCBhbHdheXMgYWRkIGAucG5nYCBhcyB0aGUgZXh0ZW5zaW9uLCBhbHRob3VnaFxyXG4gKiB0aGlzIGNhbiBiZSBvdmVycmlkZGVuIGlmIHVzaW5nIGFuIG9iamVjdCBpbnN0ZWFkIG9mIG1ldGhvZCBhcmd1bWVudHMuIElmIHlvdSBkbyBub3QgZGVzaXJlIHRoaXMgYWN0aW9uIHRoZW4gcHJvdmlkZSBhIFVSTC5cclxuICpcclxuICogUGhhc2VyIGFsc28gc3VwcG9ydHMgdGhlIGF1dG9tYXRpYyBsb2FkaW5nIG9mIGFzc29jaWF0ZWQgbm9ybWFsIG1hcHMuIElmIHlvdSBoYXZlIGEgbm9ybWFsIG1hcCB0byBnbyB3aXRoIHRoaXMgaW1hZ2UsXHJcbiAqIHRoZW4geW91IGNhbiBzcGVjaWZ5IGl0IGJ5IHByb3ZpZGluZyBhbiBhcnJheSBhcyB0aGUgYHVybGAgd2hlcmUgdGhlIHNlY29uZCBlbGVtZW50IGlzIHRoZSBub3JtYWwgbWFwOlxyXG4gKiBcclxuICogYGBgamF2YXNjcmlwdFxyXG4gKiB0aGlzLmxvYWQuYXRsYXNYTUwoJ21haW5tZW51JywgWyAnaW1hZ2VzL01haW5NZW51LnBuZycsICdpbWFnZXMvTWFpbk1lbnUtbi5wbmcnIF0sICdpbWFnZXMvTWFpbk1lbnUueG1sJyk7XHJcbiAqIGBgYFxyXG4gKlxyXG4gKiBPciwgaWYgeW91IGFyZSB1c2luZyBhIGNvbmZpZyBvYmplY3QgdXNlIHRoZSBgbm9ybWFsTWFwYCBwcm9wZXJ0eTpcclxuICogXHJcbiAqIGBgYGphdmFzY3JpcHRcclxuICogdGhpcy5sb2FkLmF0bGFzWE1MKHtcclxuICogICAgIGtleTogJ21haW5tZW51JyxcclxuICogICAgIHRleHR1cmVVUkw6ICdpbWFnZXMvTWFpbk1lbnUucG5nJyxcclxuICogICAgIG5vcm1hbE1hcDogJ2ltYWdlcy9NYWluTWVudS1uLnBuZycsXHJcbiAqICAgICBhdGxhc1VSTDogJ2ltYWdlcy9NYWluTWVudS54bWwnXHJcbiAqIH0pO1xyXG4gKiBgYGBcclxuICpcclxuICogVGhlIG5vcm1hbCBtYXAgZmlsZSBpcyBzdWJqZWN0IHRvIHRoZSBzYW1lIGNvbmRpdGlvbnMgYXMgdGhlIGltYWdlIGZpbGUgd2l0aCByZWdhcmQgdG8gdGhlIHBhdGgsIGJhc2VVUkwsIENPUnMgYW5kIFhIUiBTZXR0aW5ncy5cclxuICogTm9ybWFsIG1hcHMgYXJlIGEgV2ViR0wgb25seSBmZWF0dXJlLlxyXG4gKlxyXG4gKiBOb3RlOiBUaGUgYWJpbGl0eSB0byBsb2FkIHRoaXMgdHlwZSBvZiBmaWxlIHdpbGwgb25seSBiZSBhdmFpbGFibGUgaWYgdGhlIEF0bGFzIFhNTCBGaWxlIHR5cGUgaGFzIGJlZW4gYnVpbHQgaW50byBQaGFzZXIuXHJcbiAqIEl0IGlzIGF2YWlsYWJsZSBpbiB0aGUgZGVmYXVsdCBidWlsZCBidXQgY2FuIGJlIGV4Y2x1ZGVkIGZyb20gY3VzdG9tIGJ1aWxkcy5cclxuICpcclxuICogQG1ldGhvZCBQaGFzZXIuTG9hZGVyLkxvYWRlclBsdWdpbiNhdGxhc1hNTFxyXG4gKiBAZmlyZXMgUGhhc2VyLkxvYWRlci5Mb2FkZXJQbHVnaW4jYWRkRmlsZUV2ZW50XHJcbiAqIEBzaW5jZSAzLjcuMFxyXG4gKlxyXG4gKiBAcGFyYW0geyhzdHJpbmd8UGhhc2VyLlR5cGVzLkxvYWRlci5GaWxlVHlwZXMuQXRsYXNYTUxGaWxlQ29uZmlnfFBoYXNlci5UeXBlcy5Mb2FkZXIuRmlsZVR5cGVzLkF0bGFzWE1MRmlsZUNvbmZpZ1tdKX0ga2V5IC0gVGhlIGtleSB0byB1c2UgZm9yIHRoaXMgZmlsZSwgb3IgYSBmaWxlIGNvbmZpZ3VyYXRpb24gb2JqZWN0LCBvciBhcnJheSBvZiB0aGVtLlxyXG4gKiBAcGFyYW0ge3N0cmluZ3xzdHJpbmdbXX0gW3RleHR1cmVVUkxdIC0gVGhlIGFic29sdXRlIG9yIHJlbGF0aXZlIFVSTCB0byBsb2FkIHRoZSB0ZXh0dXJlIGltYWdlIGZpbGUgZnJvbS4gSWYgdW5kZWZpbmVkIG9yIGBudWxsYCBpdCB3aWxsIGJlIHNldCB0byBgPGtleT4ucG5nYCwgaS5lLiBpZiBga2V5YCB3YXMgXCJhbGllblwiIHRoZW4gdGhlIFVSTCB3aWxsIGJlIFwiYWxpZW4ucG5nXCIuXHJcbiAqIEBwYXJhbSB7c3RyaW5nfSBbYXRsYXNVUkxdIC0gVGhlIGFic29sdXRlIG9yIHJlbGF0aXZlIFVSTCB0byBsb2FkIHRoZSB0ZXh0dXJlIGF0bGFzIHhtbCBkYXRhIGZpbGUgZnJvbS4gSWYgdW5kZWZpbmVkIG9yIGBudWxsYCBpdCB3aWxsIGJlIHNldCB0byBgPGtleT4ueG1sYCwgaS5lLiBpZiBga2V5YCB3YXMgXCJhbGllblwiIHRoZW4gdGhlIFVSTCB3aWxsIGJlIFwiYWxpZW4ueG1sXCIuXHJcbiAqIEBwYXJhbSB7UGhhc2VyLlR5cGVzLkxvYWRlci5YSFJTZXR0aW5nc09iamVjdH0gW3RleHR1cmVYaHJTZXR0aW5nc10gLSBBbiBYSFIgU2V0dGluZ3MgY29uZmlndXJhdGlvbiBvYmplY3QgZm9yIHRoZSBhdGxhcyBpbWFnZSBmaWxlLiBVc2VkIGluIHJlcGxhY2VtZW50IG9mIHRoZSBMb2FkZXJzIGRlZmF1bHQgWEhSIFNldHRpbmdzLlxyXG4gKiBAcGFyYW0ge1BoYXNlci5UeXBlcy5Mb2FkZXIuWEhSU2V0dGluZ3NPYmplY3R9IFthdGxhc1hoclNldHRpbmdzXSAtIEFuIFhIUiBTZXR0aW5ncyBjb25maWd1cmF0aW9uIG9iamVjdCBmb3IgdGhlIGF0bGFzIHhtbCBmaWxlLiBVc2VkIGluIHJlcGxhY2VtZW50IG9mIHRoZSBMb2FkZXJzIGRlZmF1bHQgWEhSIFNldHRpbmdzLlxyXG4gKlxyXG4gKiBAcmV0dXJuIHtQaGFzZXIuTG9hZGVyLkxvYWRlclBsdWdpbn0gVGhlIExvYWRlciBpbnN0YW5jZS5cclxuICovXHJcbkZpbGVUeXBlc01hbmFnZXIucmVnaXN0ZXIoJ2F0bGFzWE1MJywgZnVuY3Rpb24gKGtleSwgdGV4dHVyZVVSTCwgYXRsYXNVUkwsIHRleHR1cmVYaHJTZXR0aW5ncywgYXRsYXNYaHJTZXR0aW5ncylcclxue1xyXG4gICAgdmFyIG11bHRpZmlsZTtcclxuXHJcbiAgICAvLyAgU3VwcG9ydHMgYW4gT2JqZWN0IGZpbGUgZGVmaW5pdGlvbiBpbiB0aGUga2V5IGFyZ3VtZW50XHJcbiAgICAvLyAgT3IgYW4gYXJyYXkgb2Ygb2JqZWN0cyBpbiB0aGUga2V5IGFyZ3VtZW50XHJcbiAgICAvLyAgT3IgYSBzaW5nbGUgZW50cnkgd2hlcmUgYWxsIGFyZ3VtZW50cyBoYXZlIGJlZW4gZGVmaW5lZFxyXG5cclxuICAgIGlmIChBcnJheS5pc0FycmF5KGtleSkpXHJcbiAgICB7XHJcbiAgICAgICAgZm9yICh2YXIgaSA9IDA7IGkgPCBrZXkubGVuZ3RoOyBpKyspXHJcbiAgICAgICAge1xyXG4gICAgICAgICAgICBtdWx0aWZpbGUgPSBuZXcgQXRsYXNYTUxGaWxlKHRoaXMsIGtleVtpXSk7XHJcblxyXG4gICAgICAgICAgICB0aGlzLmFkZEZpbGUobXVsdGlmaWxlLmZpbGVzKTtcclxuICAgICAgICB9XHJcbiAgICB9XHJcbiAgICBlbHNlXHJcbiAgICB7XHJcbiAgICAgICAgbXVsdGlmaWxlID0gbmV3IEF0bGFzWE1MRmlsZSh0aGlzLCBrZXksIHRleHR1cmVVUkwsIGF0bGFzVVJMLCB0ZXh0dXJlWGhyU2V0dGluZ3MsIGF0bGFzWGhyU2V0dGluZ3MpO1xyXG5cclxuICAgICAgICB0aGlzLmFkZEZpbGUobXVsdGlmaWxlLmZpbGVzKTtcclxuICAgIH1cclxuXHJcbiAgICByZXR1cm4gdGhpcztcclxufSk7XHJcblxyXG5tb2R1bGUuZXhwb3J0cyA9IEF0bGFzWE1MRmlsZTtcclxuIl0sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/loader/filetypes/AtlasXMLFile.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

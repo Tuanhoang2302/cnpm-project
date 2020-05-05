@@ -1,0 +1,527 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for TimelineBuilder.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> TimelineBuilder.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">23.33% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>35/150</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>2/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">23.33% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>35/150</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var Clone = __webpack_require__(/*! ../../utils/object/Clone */ "./node_modules/phaser/src/utils/object/Clone.js");
+var Defaults = __webpack_require__(/*! ../tween/Defaults */ "./node_modules/phaser/src/tweens/tween/Defaults.js");
+var GetAdvancedValue = __webpack_require__(/*! ../../utils/object/GetAdvancedValue */ "./node_modules/phaser/src/utils/object/GetAdvancedValue.js");
+var GetBoolean = __webpack_require__(/*! ./GetBoolean */ "./node_modules/phaser/src/tweens/builders/GetBoolean.js");
+var GetEaseFunction = __webpack_require__(/*! ./GetEaseFunction */ "./node_modules/phaser/src/tweens/builders/GetEaseFunction.js");
+var GetNewValue = __webpack_require__(/*! ./GetNewValue */ "./node_modules/phaser/src/tweens/builders/GetNewValue.js");
+var GetTargets = __webpack_require__(/*! ./GetTargets */ "./node_modules/phaser/src/tweens/builders/GetTargets.js");
+var GetTweens = __webpack_require__(/*! ./GetTweens */ "./node_modules/phaser/src/tweens/builders/GetTweens.js");
+var GetValue = __webpack_require__(/*! ../../utils/object/GetValue */ "./node_modules/phaser/src/utils/object/GetValue.js");
+var Timeline = __webpack_require__(/*! ../Timeline */ "./node_modules/phaser/src/tweens/Timeline.js");
+var TweenBuilder = __webpack_require__(/*! ./TweenBuilder */ "./node_modules/phaser/src/tweens/builders/TweenBuilder.js");
+&nbsp;
+/**
+ * Builds a Timeline of Tweens based on a configuration object.
+ *
+ * @function Phaser.Tweens.Builders.TimelineBuilder
+ * @since 3.0.0
+ *
+ * @param {Phaser.Tweens.TweenManager} manager - The Tween Manager to which the Timeline will belong.
+ * @param {Phaser.Types.Tweens.TimelineBuilderConfig} config - The configuration object for the Timeline.
+ *
+ * @return {Phaser.Tweens.Timeline} The created Timeline.
+ */
+<span class="cstat-no" title="statement not covered" >var TimelineBuilder = function (manager, config)</span>
+<span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    var timeline = new Timeline(manager);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var tweens = GetTweens(config);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (tweens.length === 0)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        timeline.paused = true;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        return timeline;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var defaults = Clone(Defaults);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    defaults.targets = GetTargets(config);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    //  totalDuration: If specified each tween in the Timeline is given an equal portion of the totalDuration</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var totalDuration = GetAdvancedValue(config, 'totalDuration', 0);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (totalDuration &gt; 0)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        defaults.duration = Math.floor(totalDuration / tweens.length);</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    else</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        defaults.duration = GetNewValue(config, 'duration', defaults.duration);</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    defaults.delay = GetNewValue(config, 'delay', defaults.delay);</span>
+<span class="cstat-no" title="statement not covered" >    defaults.easeParams = GetValue(config, 'easeParams', defaults.easeParams);</span>
+<span class="cstat-no" title="statement not covered" >    defaults.ease = GetEaseFunction(GetValue(config, 'ease', defaults.ease), defaults.easeParams);</span>
+<span class="cstat-no" title="statement not covered" >    defaults.hold = GetNewValue(config, 'hold', defaults.hold);</span>
+<span class="cstat-no" title="statement not covered" >    defaults.repeat = GetNewValue(config, 'repeat', defaults.repeat);</span>
+<span class="cstat-no" title="statement not covered" >    defaults.repeatDelay = GetNewValue(config, 'repeatDelay', defaults.repeatDelay);</span>
+<span class="cstat-no" title="statement not covered" >    defaults.yoyo = GetBoolean(config, 'yoyo', defaults.yoyo);</span>
+<span class="cstat-no" title="statement not covered" >    defaults.flipX = GetBoolean(config, 'flipX', defaults.flipX);</span>
+<span class="cstat-no" title="statement not covered" >    defaults.flipY = GetBoolean(config, 'flipY', defaults.flipY);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    //  Create the Tweens</span>
+<span class="cstat-no" title="statement not covered" >    for (var i = 0; i &lt; tweens.length; i++)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        timeline.queue(TweenBuilder(timeline, tweens[i], defaults));</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    timeline.completeDelay = GetAdvancedValue(config, 'completeDelay', 0);</span>
+<span class="cstat-no" title="statement not covered" >    timeline.loop = Math.round(GetAdvancedValue(config, 'loop', 0));</span>
+<span class="cstat-no" title="statement not covered" >    timeline.loopDelay = Math.round(GetAdvancedValue(config, 'loopDelay', 0));</span>
+<span class="cstat-no" title="statement not covered" >    timeline.paused = GetBoolean(config, 'paused', false);</span>
+<span class="cstat-no" title="statement not covered" >    timeline.useFrames = GetBoolean(config, 'useFrames', false);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    //  Callbacks</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var scope = GetValue(config, 'callbackScope', timeline);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var timelineArray = [ timeline ];</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var onStart = GetValue(config, 'onStart', false);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    //  The Start of the Timeline</span>
+<span class="cstat-no" title="statement not covered" >    if (onStart)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        var onStartScope = GetValue(config, 'onStartScope', scope);</span>
+<span class="cstat-no" title="statement not covered" >        var onStartParams = GetValue(config, 'onStartParams', []);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        timeline.setCallback('onStart', onStart, timelineArray.concat(onStartParams), onStartScope);</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var onUpdate = GetValue(config, 'onUpdate', false);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    //  Every time the Timeline updates (regardless which Tweens are running)</span>
+<span class="cstat-no" title="statement not covered" >    if (onUpdate)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        var onUpdateScope = GetValue(config, 'onUpdateScope', scope);</span>
+<span class="cstat-no" title="statement not covered" >        var onUpdateParams = GetValue(config, 'onUpdateParams', []);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        timeline.setCallback('onUpdate', onUpdate, timelineArray.concat(onUpdateParams), onUpdateScope);</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var onLoop = GetValue(config, 'onLoop', false);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    //  Called when the whole Timeline loops</span>
+<span class="cstat-no" title="statement not covered" >    if (onLoop)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        var onLoopScope = GetValue(config, 'onLoopScope', scope);</span>
+<span class="cstat-no" title="statement not covered" >        var onLoopParams = GetValue(config, 'onLoopParams', []);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        timeline.setCallback('onLoop', onLoop, timelineArray.concat(onLoopParams), onLoopScope);</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var onYoyo = GetValue(config, 'onYoyo', false);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    //  Called when a Timeline yoyos</span>
+<span class="cstat-no" title="statement not covered" >    if (onYoyo)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        var onYoyoScope = GetValue(config, 'onYoyoScope', scope);</span>
+<span class="cstat-no" title="statement not covered" >        var onYoyoParams = GetValue(config, 'onYoyoParams', []);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        timeline.setCallback('onYoyo', onYoyo, timelineArray.concat(null, onYoyoParams), onYoyoScope);</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var onComplete = GetValue(config, 'onComplete', false);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    //  Called when the Timeline completes, after the completeDelay, etc.</span>
+<span class="cstat-no" title="statement not covered" >    if (onComplete)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        var onCompleteScope = GetValue(config, 'onCompleteScope', scope);</span>
+<span class="cstat-no" title="statement not covered" >        var onCompleteParams = GetValue(config, 'onCompleteParams', []);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        timeline.setCallback('onComplete', onComplete, timelineArray.concat(onCompleteParams), onCompleteScope);</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    return timeline;</span>
+<span class="cstat-no" title="statement not covered" >};</span>
+&nbsp;
+module.exports = TimelineBuilder;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy90d2VlbnMvYnVpbGRlcnMvVGltZWxpbmVCdWlsZGVyLmpzPzY3M2IiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCOztBQUVBLFlBQVksbUJBQU8sQ0FBQyxpRkFBMEI7QUFDOUMsZUFBZSxtQkFBTyxDQUFDLDZFQUFtQjtBQUMxQyx1QkFBdUIsbUJBQU8sQ0FBQyx1R0FBcUM7QUFDcEUsaUJBQWlCLG1CQUFPLENBQUMsNkVBQWM7QUFDdkMsc0JBQXNCLG1CQUFPLENBQUMsdUZBQW1CO0FBQ2pELGtCQUFrQixtQkFBTyxDQUFDLCtFQUFlO0FBQ3pDLGlCQUFpQixtQkFBTyxDQUFDLDZFQUFjO0FBQ3ZDLGdCQUFnQixtQkFBTyxDQUFDLDJFQUFhO0FBQ3JDLGVBQWUsbUJBQU8sQ0FBQyx1RkFBNkI7QUFDcEQsZUFBZSxtQkFBTyxDQUFDLGlFQUFhO0FBQ3BDLG1CQUFtQixtQkFBTyxDQUFDLGlGQUFnQjs7QUFFM0M7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsV0FBVywyQkFBMkI7QUFDdEMsV0FBVywwQ0FBMEM7QUFDckQ7QUFDQSxZQUFZLHVCQUF1QjtBQUNuQztBQUNBO0FBQ0E7QUFDQTs7QUFFQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTs7QUFFQTs7QUFFQTs7QUFFQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBLG1CQUFtQixtQkFBbUI7QUFDdEM7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7O0FBRUE7O0FBRUE7O0FBRUE7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBOztBQUVBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBOztBQUVBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNBOztBQUVBIiwiZmlsZSI6Ii4vbm9kZV9tb2R1bGVzL3BoYXNlci9zcmMvdHdlZW5zL2J1aWxkZXJzL1RpbWVsaW5lQnVpbGRlci5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxyXG4gKiBAYXV0aG9yICAgICAgIFJpY2hhcmQgRGF2ZXkgPHJpY2hAcGhvdG9uc3Rvcm0uY29tPlxyXG4gKiBAY29weXJpZ2h0ICAgIDIwMTkgUGhvdG9uIFN0b3JtIEx0ZC5cclxuICogQGxpY2Vuc2UgICAgICB7QGxpbmsgaHR0cHM6Ly9vcGVuc291cmNlLm9yZy9saWNlbnNlcy9NSVR8TUlUIExpY2Vuc2V9XHJcbiAqL1xyXG5cclxudmFyIENsb25lID0gcmVxdWlyZSgnLi4vLi4vdXRpbHMvb2JqZWN0L0Nsb25lJyk7XHJcbnZhciBEZWZhdWx0cyA9IHJlcXVpcmUoJy4uL3R3ZWVuL0RlZmF1bHRzJyk7XHJcbnZhciBHZXRBZHZhbmNlZFZhbHVlID0gcmVxdWlyZSgnLi4vLi4vdXRpbHMvb2JqZWN0L0dldEFkdmFuY2VkVmFsdWUnKTtcclxudmFyIEdldEJvb2xlYW4gPSByZXF1aXJlKCcuL0dldEJvb2xlYW4nKTtcclxudmFyIEdldEVhc2VGdW5jdGlvbiA9IHJlcXVpcmUoJy4vR2V0RWFzZUZ1bmN0aW9uJyk7XHJcbnZhciBHZXROZXdWYWx1ZSA9IHJlcXVpcmUoJy4vR2V0TmV3VmFsdWUnKTtcclxudmFyIEdldFRhcmdldHMgPSByZXF1aXJlKCcuL0dldFRhcmdldHMnKTtcclxudmFyIEdldFR3ZWVucyA9IHJlcXVpcmUoJy4vR2V0VHdlZW5zJyk7XHJcbnZhciBHZXRWYWx1ZSA9IHJlcXVpcmUoJy4uLy4uL3V0aWxzL29iamVjdC9HZXRWYWx1ZScpO1xyXG52YXIgVGltZWxpbmUgPSByZXF1aXJlKCcuLi9UaW1lbGluZScpO1xyXG52YXIgVHdlZW5CdWlsZGVyID0gcmVxdWlyZSgnLi9Ud2VlbkJ1aWxkZXInKTtcclxuXHJcbi8qKlxyXG4gKiBCdWlsZHMgYSBUaW1lbGluZSBvZiBUd2VlbnMgYmFzZWQgb24gYSBjb25maWd1cmF0aW9uIG9iamVjdC5cclxuICpcclxuICogQGZ1bmN0aW9uIFBoYXNlci5Ud2VlbnMuQnVpbGRlcnMuVGltZWxpbmVCdWlsZGVyXHJcbiAqIEBzaW5jZSAzLjAuMFxyXG4gKlxyXG4gKiBAcGFyYW0ge1BoYXNlci5Ud2VlbnMuVHdlZW5NYW5hZ2VyfSBtYW5hZ2VyIC0gVGhlIFR3ZWVuIE1hbmFnZXIgdG8gd2hpY2ggdGhlIFRpbWVsaW5lIHdpbGwgYmVsb25nLlxyXG4gKiBAcGFyYW0ge1BoYXNlci5UeXBlcy5Ud2VlbnMuVGltZWxpbmVCdWlsZGVyQ29uZmlnfSBjb25maWcgLSBUaGUgY29uZmlndXJhdGlvbiBvYmplY3QgZm9yIHRoZSBUaW1lbGluZS5cclxuICpcclxuICogQHJldHVybiB7UGhhc2VyLlR3ZWVucy5UaW1lbGluZX0gVGhlIGNyZWF0ZWQgVGltZWxpbmUuXHJcbiAqL1xyXG52YXIgVGltZWxpbmVCdWlsZGVyID0gZnVuY3Rpb24gKG1hbmFnZXIsIGNvbmZpZylcclxue1xyXG4gICAgdmFyIHRpbWVsaW5lID0gbmV3IFRpbWVsaW5lKG1hbmFnZXIpO1xyXG5cclxuICAgIHZhciB0d2VlbnMgPSBHZXRUd2VlbnMoY29uZmlnKTtcclxuXHJcbiAgICBpZiAodHdlZW5zLmxlbmd0aCA9PT0gMClcclxuICAgIHtcclxuICAgICAgICB0aW1lbGluZS5wYXVzZWQgPSB0cnVlO1xyXG5cclxuICAgICAgICByZXR1cm4gdGltZWxpbmU7XHJcbiAgICB9XHJcblxyXG4gICAgdmFyIGRlZmF1bHRzID0gQ2xvbmUoRGVmYXVsdHMpO1xyXG5cclxuICAgIGRlZmF1bHRzLnRhcmdldHMgPSBHZXRUYXJnZXRzKGNvbmZpZyk7XHJcblxyXG4gICAgLy8gIHRvdGFsRHVyYXRpb246IElmIHNwZWNpZmllZCBlYWNoIHR3ZWVuIGluIHRoZSBUaW1lbGluZSBpcyBnaXZlbiBhbiBlcXVhbCBwb3J0aW9uIG9mIHRoZSB0b3RhbER1cmF0aW9uXHJcblxyXG4gICAgdmFyIHRvdGFsRHVyYXRpb24gPSBHZXRBZHZhbmNlZFZhbHVlKGNvbmZpZywgJ3RvdGFsRHVyYXRpb24nLCAwKTtcclxuXHJcbiAgICBpZiAodG90YWxEdXJhdGlvbiA+IDApXHJcbiAgICB7XHJcbiAgICAgICAgZGVmYXVsdHMuZHVyYXRpb24gPSBNYXRoLmZsb29yKHRvdGFsRHVyYXRpb24gLyB0d2VlbnMubGVuZ3RoKTtcclxuICAgIH1cclxuICAgIGVsc2VcclxuICAgIHtcclxuICAgICAgICBkZWZhdWx0cy5kdXJhdGlvbiA9IEdldE5ld1ZhbHVlKGNvbmZpZywgJ2R1cmF0aW9uJywgZGVmYXVsdHMuZHVyYXRpb24pO1xyXG4gICAgfVxyXG5cclxuICAgIGRlZmF1bHRzLmRlbGF5ID0gR2V0TmV3VmFsdWUoY29uZmlnLCAnZGVsYXknLCBkZWZhdWx0cy5kZWxheSk7XHJcbiAgICBkZWZhdWx0cy5lYXNlUGFyYW1zID0gR2V0VmFsdWUoY29uZmlnLCAnZWFzZVBhcmFtcycsIGRlZmF1bHRzLmVhc2VQYXJhbXMpO1xyXG4gICAgZGVmYXVsdHMuZWFzZSA9IEdldEVhc2VGdW5jdGlvbihHZXRWYWx1ZShjb25maWcsICdlYXNlJywgZGVmYXVsdHMuZWFzZSksIGRlZmF1bHRzLmVhc2VQYXJhbXMpO1xyXG4gICAgZGVmYXVsdHMuaG9sZCA9IEdldE5ld1ZhbHVlKGNvbmZpZywgJ2hvbGQnLCBkZWZhdWx0cy5ob2xkKTtcclxuICAgIGRlZmF1bHRzLnJlcGVhdCA9IEdldE5ld1ZhbHVlKGNvbmZpZywgJ3JlcGVhdCcsIGRlZmF1bHRzLnJlcGVhdCk7XHJcbiAgICBkZWZhdWx0cy5yZXBlYXREZWxheSA9IEdldE5ld1ZhbHVlKGNvbmZpZywgJ3JlcGVhdERlbGF5JywgZGVmYXVsdHMucmVwZWF0RGVsYXkpO1xyXG4gICAgZGVmYXVsdHMueW95byA9IEdldEJvb2xlYW4oY29uZmlnLCAneW95bycsIGRlZmF1bHRzLnlveW8pO1xyXG4gICAgZGVmYXVsdHMuZmxpcFggPSBHZXRCb29sZWFuKGNvbmZpZywgJ2ZsaXBYJywgZGVmYXVsdHMuZmxpcFgpO1xyXG4gICAgZGVmYXVsdHMuZmxpcFkgPSBHZXRCb29sZWFuKGNvbmZpZywgJ2ZsaXBZJywgZGVmYXVsdHMuZmxpcFkpO1xyXG5cclxuICAgIC8vICBDcmVhdGUgdGhlIFR3ZWVuc1xyXG4gICAgZm9yICh2YXIgaSA9IDA7IGkgPCB0d2VlbnMubGVuZ3RoOyBpKyspXHJcbiAgICB7XHJcbiAgICAgICAgdGltZWxpbmUucXVldWUoVHdlZW5CdWlsZGVyKHRpbWVsaW5lLCB0d2VlbnNbaV0sIGRlZmF1bHRzKSk7XHJcbiAgICB9XHJcblxyXG4gICAgdGltZWxpbmUuY29tcGxldGVEZWxheSA9IEdldEFkdmFuY2VkVmFsdWUoY29uZmlnLCAnY29tcGxldGVEZWxheScsIDApO1xyXG4gICAgdGltZWxpbmUubG9vcCA9IE1hdGgucm91bmQoR2V0QWR2YW5jZWRWYWx1ZShjb25maWcsICdsb29wJywgMCkpO1xyXG4gICAgdGltZWxpbmUubG9vcERlbGF5ID0gTWF0aC5yb3VuZChHZXRBZHZhbmNlZFZhbHVlKGNvbmZpZywgJ2xvb3BEZWxheScsIDApKTtcclxuICAgIHRpbWVsaW5lLnBhdXNlZCA9IEdldEJvb2xlYW4oY29uZmlnLCAncGF1c2VkJywgZmFsc2UpO1xyXG4gICAgdGltZWxpbmUudXNlRnJhbWVzID0gR2V0Qm9vbGVhbihjb25maWcsICd1c2VGcmFtZXMnLCBmYWxzZSk7XHJcblxyXG4gICAgLy8gIENhbGxiYWNrc1xyXG5cclxuICAgIHZhciBzY29wZSA9IEdldFZhbHVlKGNvbmZpZywgJ2NhbGxiYWNrU2NvcGUnLCB0aW1lbGluZSk7XHJcblxyXG4gICAgdmFyIHRpbWVsaW5lQXJyYXkgPSBbIHRpbWVsaW5lIF07XHJcblxyXG4gICAgdmFyIG9uU3RhcnQgPSBHZXRWYWx1ZShjb25maWcsICdvblN0YXJ0JywgZmFsc2UpO1xyXG5cclxuICAgIC8vICBUaGUgU3RhcnQgb2YgdGhlIFRpbWVsaW5lXHJcbiAgICBpZiAob25TdGFydClcclxuICAgIHtcclxuICAgICAgICB2YXIgb25TdGFydFNjb3BlID0gR2V0VmFsdWUoY29uZmlnLCAnb25TdGFydFNjb3BlJywgc2NvcGUpO1xyXG4gICAgICAgIHZhciBvblN0YXJ0UGFyYW1zID0gR2V0VmFsdWUoY29uZmlnLCAnb25TdGFydFBhcmFtcycsIFtdKTtcclxuXHJcbiAgICAgICAgdGltZWxpbmUuc2V0Q2FsbGJhY2soJ29uU3RhcnQnLCBvblN0YXJ0LCB0aW1lbGluZUFycmF5LmNvbmNhdChvblN0YXJ0UGFyYW1zKSwgb25TdGFydFNjb3BlKTtcclxuICAgIH1cclxuXHJcbiAgICB2YXIgb25VcGRhdGUgPSBHZXRWYWx1ZShjb25maWcsICdvblVwZGF0ZScsIGZhbHNlKTtcclxuXHJcbiAgICAvLyAgRXZlcnkgdGltZSB0aGUgVGltZWxpbmUgdXBkYXRlcyAocmVnYXJkbGVzcyB3aGljaCBUd2VlbnMgYXJlIHJ1bm5pbmcpXHJcbiAgICBpZiAob25VcGRhdGUpXHJcbiAgICB7XHJcbiAgICAgICAgdmFyIG9uVXBkYXRlU2NvcGUgPSBHZXRWYWx1ZShjb25maWcsICdvblVwZGF0ZVNjb3BlJywgc2NvcGUpO1xyXG4gICAgICAgIHZhciBvblVwZGF0ZVBhcmFtcyA9IEdldFZhbHVlKGNvbmZpZywgJ29uVXBkYXRlUGFyYW1zJywgW10pO1xyXG5cclxuICAgICAgICB0aW1lbGluZS5zZXRDYWxsYmFjaygnb25VcGRhdGUnLCBvblVwZGF0ZSwgdGltZWxpbmVBcnJheS5jb25jYXQob25VcGRhdGVQYXJhbXMpLCBvblVwZGF0ZVNjb3BlKTtcclxuICAgIH1cclxuXHJcbiAgICB2YXIgb25Mb29wID0gR2V0VmFsdWUoY29uZmlnLCAnb25Mb29wJywgZmFsc2UpO1xyXG5cclxuICAgIC8vICBDYWxsZWQgd2hlbiB0aGUgd2hvbGUgVGltZWxpbmUgbG9vcHNcclxuICAgIGlmIChvbkxvb3ApXHJcbiAgICB7XHJcbiAgICAgICAgdmFyIG9uTG9vcFNjb3BlID0gR2V0VmFsdWUoY29uZmlnLCAnb25Mb29wU2NvcGUnLCBzY29wZSk7XHJcbiAgICAgICAgdmFyIG9uTG9vcFBhcmFtcyA9IEdldFZhbHVlKGNvbmZpZywgJ29uTG9vcFBhcmFtcycsIFtdKTtcclxuXHJcbiAgICAgICAgdGltZWxpbmUuc2V0Q2FsbGJhY2soJ29uTG9vcCcsIG9uTG9vcCwgdGltZWxpbmVBcnJheS5jb25jYXQob25Mb29wUGFyYW1zKSwgb25Mb29wU2NvcGUpO1xyXG4gICAgfVxyXG5cclxuICAgIHZhciBvbllveW8gPSBHZXRWYWx1ZShjb25maWcsICdvbllveW8nLCBmYWxzZSk7XHJcblxyXG4gICAgLy8gIENhbGxlZCB3aGVuIGEgVGltZWxpbmUgeW95b3NcclxuICAgIGlmIChvbllveW8pXHJcbiAgICB7XHJcbiAgICAgICAgdmFyIG9uWW95b1Njb3BlID0gR2V0VmFsdWUoY29uZmlnLCAnb25Zb3lvU2NvcGUnLCBzY29wZSk7XHJcbiAgICAgICAgdmFyIG9uWW95b1BhcmFtcyA9IEdldFZhbHVlKGNvbmZpZywgJ29uWW95b1BhcmFtcycsIFtdKTtcclxuXHJcbiAgICAgICAgdGltZWxpbmUuc2V0Q2FsbGJhY2soJ29uWW95bycsIG9uWW95bywgdGltZWxpbmVBcnJheS5jb25jYXQobnVsbCwgb25Zb3lvUGFyYW1zKSwgb25Zb3lvU2NvcGUpO1xyXG4gICAgfVxyXG5cclxuICAgIHZhciBvbkNvbXBsZXRlID0gR2V0VmFsdWUoY29uZmlnLCAnb25Db21wbGV0ZScsIGZhbHNlKTtcclxuXHJcbiAgICAvLyAgQ2FsbGVkIHdoZW4gdGhlIFRpbWVsaW5lIGNvbXBsZXRlcywgYWZ0ZXIgdGhlIGNvbXBsZXRlRGVsYXksIGV0Yy5cclxuICAgIGlmIChvbkNvbXBsZXRlKVxyXG4gICAge1xyXG4gICAgICAgIHZhciBvbkNvbXBsZXRlU2NvcGUgPSBHZXRWYWx1ZShjb25maWcsICdvbkNvbXBsZXRlU2NvcGUnLCBzY29wZSk7XHJcbiAgICAgICAgdmFyIG9uQ29tcGxldGVQYXJhbXMgPSBHZXRWYWx1ZShjb25maWcsICdvbkNvbXBsZXRlUGFyYW1zJywgW10pO1xyXG5cclxuICAgICAgICB0aW1lbGluZS5zZXRDYWxsYmFjaygnb25Db21wbGV0ZScsIG9uQ29tcGxldGUsIHRpbWVsaW5lQXJyYXkuY29uY2F0KG9uQ29tcGxldGVQYXJhbXMpLCBvbkNvbXBsZXRlU2NvcGUpO1xyXG4gICAgfVxyXG5cclxuICAgIHJldHVybiB0aW1lbGluZTtcclxufTtcclxuXHJcbm1vZHVsZS5leHBvcnRzID0gVGltZWxpbmVCdWlsZGVyO1xyXG4iXSwic291cmNlUm9vdCI6IiJ9
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/tweens/builders/TimelineBuilder.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

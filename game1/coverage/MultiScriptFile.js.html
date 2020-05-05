@@ -1,0 +1,722 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for MultiScriptFile.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> MultiScriptFile.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">60% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>129/215</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>4/4</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">60% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>129/215</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line medium'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a>
+<a name='L208'></a><a href='#L208'>208</a>
+<a name='L209'></a><a href='#L209'>209</a>
+<a name='L210'></a><a href='#L210'>210</a>
+<a name='L211'></a><a href='#L211'>211</a>
+<a name='L212'></a><a href='#L212'>212</a>
+<a name='L213'></a><a href='#L213'>213</a>
+<a name='L214'></a><a href='#L214'>214</a>
+<a name='L215'></a><a href='#L215'>215</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var Class = __webpack_require__(/*! ../../utils/Class */ "./node_modules/phaser/src/utils/Class.js");
+var FileTypesManager = __webpack_require__(/*! ../FileTypesManager */ "./node_modules/phaser/src/loader/FileTypesManager.js");
+var GetFastValue = __webpack_require__(/*! ../../utils/object/GetFastValue */ "./node_modules/phaser/src/utils/object/GetFastValue.js");
+var IsPlainObject = __webpack_require__(/*! ../../utils/object/IsPlainObject */ "./node_modules/phaser/src/utils/object/IsPlainObject.js");
+var MultiFile = __webpack_require__(/*! ../MultiFile.js */ "./node_modules/phaser/src/loader/MultiFile.js");
+var ScriptFile = __webpack_require__(/*! ./ScriptFile.js */ "./node_modules/phaser/src/loader/filetypes/ScriptFile.js");
+&nbsp;
+/**
+ * @classdesc
+ * A Multi Script File suitable for loading by the Loader.
+ *
+ * These are created when you use the Phaser.Loader.LoaderPlugin#scripts method and are not typically created directly.
+ * 
+ * For documentation about what all the arguments and configuration options mean please see Phaser.Loader.LoaderPlugin#scripts.
+ *
+ * @class MultiScriptFile
+ * @extends Phaser.Loader.MultiFile
+ * @memberof Phaser.Loader.FileTypes
+ * @constructor
+ * @since 3.17.0
+ *
+ * @param {Phaser.Loader.LoaderPlugin} loader - A reference to the Loader that is responsible for this file.
+ * @param {(string|Phaser.Types.Loader.FileTypes.MultiScriptFileConfig)} key - The key to use for this file, or a file configuration object.
+ * @param {string[]} [url] - An array of absolute or relative URLs to load the script files from. They are processed in the order given in the array.
+ * @param {Phaser.Types.Loader.XHRSettingsObject} [xhrSettings] - An XHR Settings configuration object for the script files. Used in replacement of the Loaders default XHR Settings.
+ */
+var MultiScriptFile = new Class({
+&nbsp;
+    Extends: MultiFile,
+&nbsp;
+    initialize:
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    function MultiScriptFile (loader, key, url, xhrSettings)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        var extension = 'js';</span>
+<span class="cstat-no" title="statement not covered" >        var files = [];</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if (IsPlainObject(key))</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            var config = key;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            key = GetFastValue(config, 'key');</span>
+<span class="cstat-no" title="statement not covered" >            url = GetFastValue(config, 'url');</span>
+<span class="cstat-no" title="statement not covered" >            xhrSettings = GetFastValue(config, 'xhrSettings');</span>
+<span class="cstat-no" title="statement not covered" >            extension = GetFastValue(config, 'extension', extension);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if (!Array.isArray(url))</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            url = [ url ];</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; url.length; i++)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            var scriptFile = new ScriptFile(loader, {</span>
+<span class="cstat-no" title="statement not covered" >                key: key + '_' + i.toString(),</span>
+<span class="cstat-no" title="statement not covered" >                url: url[i],</span>
+<span class="cstat-no" title="statement not covered" >                extension: extension,</span>
+<span class="cstat-no" title="statement not covered" >                xhrSettings: xhrSettings</span>
+<span class="cstat-no" title="statement not covered" >            });</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            //  Override the default onProcess function</span>
+<span class="cstat-no" title="statement not covered" >            scriptFile.onProcess = function ()</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >                this.onProcessComplete();</span>
+<span class="cstat-no" title="statement not covered" >            };</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            files.push(scriptFile);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        MultiFile.call(this, loader, 'scripts', key, files);</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * Adds this file to its target cache upon successful loading and processing.
+     *
+     * @method Phaser.Loader.FileTypes.MultiScriptFile#addToCache
+     * @since 3.17.0
+     */
+<span class="cstat-no" title="statement not covered" >    addToCache: function ()</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        if (this.isReadyToProcess())</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            for (var i = 0; i &lt; this.files.length; i++)</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >                var file = this.files[i];</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >                file.data = document.createElement('script');</span>
+<span class="cstat-no" title="statement not covered" >                file.data.language = 'javascript';</span>
+<span class="cstat-no" title="statement not covered" >                file.data.type = 'text/javascript';</span>
+<span class="cstat-no" title="statement not covered" >                file.data.defer = false;</span>
+<span class="cstat-no" title="statement not covered" >                file.data.text = file.xhrLoader.responseText;</span>
+<span class="cstat-no" title="statement not covered" >        </span>
+<span class="cstat-no" title="statement not covered" >                document.head.appendChild(file.data);</span>
+<span class="cstat-no" title="statement not covered" >            }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            this.complete = true;</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+&nbsp;
+});
+&nbsp;
+/**
+ * Adds an array of Script files to the current load queue.
+ * 
+ * The difference between this and the `ScriptFile` file type is that you give an array of scripts to this method,
+ * and the scripts are then processed _exactly_ in that order. This allows you to load a bunch of scripts that
+ * may have dependencies on each other without worrying about the async nature of traditional script loading.
+ *
+ * You can call this method from within your Scene's `preload`, along with any other files you wish to load:
+ * 
+ * ```javascript
+ * function preload ()
+ * {
+ *     this.load.scripts('PostProcess', [
+ *         'libs/shaders/CopyShader.js',
+ *         'libs/postprocessing/EffectComposer.js',
+ *         'libs/postprocessing/RenderPass.js',
+ *         'libs/postprocessing/MaskPass.js',
+ *         'libs/postprocessing/ShaderPass.js',
+ *         'libs/postprocessing/AfterimagePass.js'
+ *    ]);
+ * }
+ * ```
+ * 
+ * In the code above the script files will all be loaded in parallel but only processed (i.e. invoked) in the exact
+ * order given in the array.
+ *
+ * The files are **not** loaded right away. They are added to a queue ready to be loaded either when the loader starts,
+ * or if it's already running, when the next free load slot becomes available. This happens automatically if you
+ * are calling this from within the Scene's `preload` method, or a related callback. Because the files are queued
+ * it means you cannot use the files immediately after calling this method, but must wait for the files to complete.
+ * The typical flow for a Phaser Scene is that you load assets in the Scene's `preload` method and then when the
+ * Scene's `create` method is called you are guaranteed that all of those assets are ready for use and have been
+ * loaded.
+ * 
+ * The key must be a unique String and not already in-use by another file in the Loader.
+ *
+ * Instead of passing arguments you can pass a configuration object, such as:
+ * 
+ * ```javascript
+ * this.load.scripts({
+ *     key: 'PostProcess',
+ *     url: [
+ *         'libs/shaders/CopyShader.js',
+ *         'libs/postprocessing/EffectComposer.js',
+ *         'libs/postprocessing/RenderPass.js',
+ *         'libs/postprocessing/MaskPass.js',
+ *         'libs/postprocessing/ShaderPass.js',
+ *         'libs/postprocessing/AfterimagePass.js'
+ *        ]
+ * });
+ * ```
+ *
+ * See the documentation for `Phaser.Types.Loader.FileTypes.MultiScriptFileConfig` for more details.
+ *
+ * Once all the files have finished loading they will automatically be converted into a script element
+ * via `document.createElement('script')`. They will have their language set to JavaScript, `defer` set to
+ * false and then the resulting element will be appended to `document.head`. Any code then in the
+ * script will be executed. This is done in the exact order the files are specified in the url array.
+ *
+ * The URLs can be relative or absolute. If the URLs are relative the `Loader.baseURL` and `Loader.path` values will be prepended to them.
+ *
+ * Note: The ability to load this type of file will only be available if the MultiScript File type has been built into Phaser.
+ * It is available in the default build but can be excluded from custom builds.
+ *
+ * @method Phaser.Loader.LoaderPlugin#scripts
+ * @fires Phaser.Loader.LoaderPlugin#addFileEvent
+ * @since 3.17.0
+ *
+ * @param {(string|Phaser.Types.Loader.FileTypes.MultiScriptFileConfig|Phaser.Types.Loader.FileTypes.MultiScriptFileConfig[])} key - The key to use for this file, or a file configuration object, or array of them.
+ * @param {string[]} [url] - An array of absolute or relative URLs to load the script files from. They are processed in the order given in the array.
+ * @param {string} [extension='js'] - The default file extension to use if no url is provided.
+ * @param {Phaser.Types.Loader.XHRSettingsObject} [xhrSettings] - Extra XHR Settings specifically for these files.
+ *
+ * @return {Phaser.Loader.LoaderPlugin} The Loader instance.
+ */
+<span class="cstat-no" title="statement not covered" >FileTypesManager.register('scripts', function (key, url, xhrSettings)</span>
+<span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    var multifile;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    //  Supports an Object file definition in the key argument</span>
+<span class="cstat-no" title="statement not covered" >    //  Or an array of objects in the key argument</span>
+<span class="cstat-no" title="statement not covered" >    //  Or a single entry where all arguments have been defined</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (Array.isArray(key))</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; key.length; i++)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            multifile = new MultiScriptFile(this, key[i]);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            this.addFile(multifile.files);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    else</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        multifile = new MultiScriptFile(this, key, url, xhrSettings);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        this.addFile(multifile.files);</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    return this;</span>
+<span class="cstat-no" title="statement not covered" >});</span>
+&nbsp;
+module.exports = MultiScriptFile;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9sb2FkZXIvZmlsZXR5cGVzL011bHRpU2NyaXB0RmlsZS5qcz8xZTQ2Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBLGtCQUFrQjtBQUNsQjs7QUFFQSxZQUFZLG1CQUFPLENBQUMsbUVBQW1CO0FBQ3ZDLHVCQUF1QixtQkFBTyxDQUFDLGlGQUFxQjtBQUNwRCxtQkFBbUIsbUJBQU8sQ0FBQywrRkFBaUM7QUFDNUQsb0JBQW9CLG1CQUFPLENBQUMsaUdBQWtDO0FBQzlELGdCQUFnQixtQkFBTyxDQUFDLHNFQUFpQjtBQUN6QyxpQkFBaUIsbUJBQU8sQ0FBQyxpRkFBaUI7O0FBRTFDO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxXQUFXLDJCQUEyQjtBQUN0QyxXQUFXLDZEQUE2RDtBQUN4RSxXQUFXLFNBQVM7QUFDcEIsV0FBVyxzQ0FBc0M7QUFDakQ7QUFDQTs7QUFFQTs7QUFFQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQSx1QkFBdUIsZ0JBQWdCO0FBQ3ZDO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGFBQWE7O0FBRWI7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBOztBQUVBO0FBQ0EsS0FBSzs7QUFFTDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLDJCQUEyQix1QkFBdUI7QUFDbEQ7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBOztBQUVBLENBQUM7O0FBRUQ7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxJQUFJO0FBQ0o7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsV0FBVyxtSEFBbUg7QUFDOUgsV0FBVyxTQUFTO0FBQ3BCLFdBQVcsT0FBTztBQUNsQixXQUFXLHNDQUFzQztBQUNqRDtBQUNBLFlBQVksMkJBQTJCO0FBQ3ZDO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0EsdUJBQXVCLGdCQUFnQjtBQUN2QztBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBOztBQUVBO0FBQ0EsQ0FBQzs7QUFFRCIsImZpbGUiOiIuL25vZGVfbW9kdWxlcy9waGFzZXIvc3JjL2xvYWRlci9maWxldHlwZXMvTXVsdGlTY3JpcHRGaWxlLmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXHJcbiAqIEBhdXRob3IgICAgICAgUmljaGFyZCBEYXZleSA8cmljaEBwaG90b25zdG9ybS5jb20+XHJcbiAqIEBjb3B5cmlnaHQgICAgMjAxOSBQaG90b24gU3Rvcm0gTHRkLlxyXG4gKiBAbGljZW5zZSAgICAgIHtAbGluayBodHRwczovL29wZW5zb3VyY2Uub3JnL2xpY2Vuc2VzL01JVHxNSVQgTGljZW5zZX1cclxuICovXHJcblxyXG52YXIgQ2xhc3MgPSByZXF1aXJlKCcuLi8uLi91dGlscy9DbGFzcycpO1xyXG52YXIgRmlsZVR5cGVzTWFuYWdlciA9IHJlcXVpcmUoJy4uL0ZpbGVUeXBlc01hbmFnZXInKTtcclxudmFyIEdldEZhc3RWYWx1ZSA9IHJlcXVpcmUoJy4uLy4uL3V0aWxzL29iamVjdC9HZXRGYXN0VmFsdWUnKTtcclxudmFyIElzUGxhaW5PYmplY3QgPSByZXF1aXJlKCcuLi8uLi91dGlscy9vYmplY3QvSXNQbGFpbk9iamVjdCcpO1xyXG52YXIgTXVsdGlGaWxlID0gcmVxdWlyZSgnLi4vTXVsdGlGaWxlLmpzJyk7XHJcbnZhciBTY3JpcHRGaWxlID0gcmVxdWlyZSgnLi9TY3JpcHRGaWxlLmpzJyk7XHJcblxyXG4vKipcclxuICogQGNsYXNzZGVzY1xyXG4gKiBBIE11bHRpIFNjcmlwdCBGaWxlIHN1aXRhYmxlIGZvciBsb2FkaW5nIGJ5IHRoZSBMb2FkZXIuXHJcbiAqXHJcbiAqIFRoZXNlIGFyZSBjcmVhdGVkIHdoZW4geW91IHVzZSB0aGUgUGhhc2VyLkxvYWRlci5Mb2FkZXJQbHVnaW4jc2NyaXB0cyBtZXRob2QgYW5kIGFyZSBub3QgdHlwaWNhbGx5IGNyZWF0ZWQgZGlyZWN0bHkuXHJcbiAqIFxyXG4gKiBGb3IgZG9jdW1lbnRhdGlvbiBhYm91dCB3aGF0IGFsbCB0aGUgYXJndW1lbnRzIGFuZCBjb25maWd1cmF0aW9uIG9wdGlvbnMgbWVhbiBwbGVhc2Ugc2VlIFBoYXNlci5Mb2FkZXIuTG9hZGVyUGx1Z2luI3NjcmlwdHMuXHJcbiAqXHJcbiAqIEBjbGFzcyBNdWx0aVNjcmlwdEZpbGVcclxuICogQGV4dGVuZHMgUGhhc2VyLkxvYWRlci5NdWx0aUZpbGVcclxuICogQG1lbWJlcm9mIFBoYXNlci5Mb2FkZXIuRmlsZVR5cGVzXHJcbiAqIEBjb25zdHJ1Y3RvclxyXG4gKiBAc2luY2UgMy4xNy4wXHJcbiAqXHJcbiAqIEBwYXJhbSB7UGhhc2VyLkxvYWRlci5Mb2FkZXJQbHVnaW59IGxvYWRlciAtIEEgcmVmZXJlbmNlIHRvIHRoZSBMb2FkZXIgdGhhdCBpcyByZXNwb25zaWJsZSBmb3IgdGhpcyBmaWxlLlxyXG4gKiBAcGFyYW0geyhzdHJpbmd8UGhhc2VyLlR5cGVzLkxvYWRlci5GaWxlVHlwZXMuTXVsdGlTY3JpcHRGaWxlQ29uZmlnKX0ga2V5IC0gVGhlIGtleSB0byB1c2UgZm9yIHRoaXMgZmlsZSwgb3IgYSBmaWxlIGNvbmZpZ3VyYXRpb24gb2JqZWN0LlxyXG4gKiBAcGFyYW0ge3N0cmluZ1tdfSBbdXJsXSAtIEFuIGFycmF5IG9mIGFic29sdXRlIG9yIHJlbGF0aXZlIFVSTHMgdG8gbG9hZCB0aGUgc2NyaXB0IGZpbGVzIGZyb20uIFRoZXkgYXJlIHByb2Nlc3NlZCBpbiB0aGUgb3JkZXIgZ2l2ZW4gaW4gdGhlIGFycmF5LlxyXG4gKiBAcGFyYW0ge1BoYXNlci5UeXBlcy5Mb2FkZXIuWEhSU2V0dGluZ3NPYmplY3R9IFt4aHJTZXR0aW5nc10gLSBBbiBYSFIgU2V0dGluZ3MgY29uZmlndXJhdGlvbiBvYmplY3QgZm9yIHRoZSBzY3JpcHQgZmlsZXMuIFVzZWQgaW4gcmVwbGFjZW1lbnQgb2YgdGhlIExvYWRlcnMgZGVmYXVsdCBYSFIgU2V0dGluZ3MuXHJcbiAqL1xyXG52YXIgTXVsdGlTY3JpcHRGaWxlID0gbmV3IENsYXNzKHtcclxuXHJcbiAgICBFeHRlbmRzOiBNdWx0aUZpbGUsXHJcblxyXG4gICAgaW5pdGlhbGl6ZTpcclxuXHJcbiAgICBmdW5jdGlvbiBNdWx0aVNjcmlwdEZpbGUgKGxvYWRlciwga2V5LCB1cmwsIHhoclNldHRpbmdzKVxyXG4gICAge1xyXG4gICAgICAgIHZhciBleHRlbnNpb24gPSAnanMnO1xyXG4gICAgICAgIHZhciBmaWxlcyA9IFtdO1xyXG5cclxuICAgICAgICBpZiAoSXNQbGFpbk9iamVjdChrZXkpKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgdmFyIGNvbmZpZyA9IGtleTtcclxuXHJcbiAgICAgICAgICAgIGtleSA9IEdldEZhc3RWYWx1ZShjb25maWcsICdrZXknKTtcclxuICAgICAgICAgICAgdXJsID0gR2V0RmFzdFZhbHVlKGNvbmZpZywgJ3VybCcpO1xyXG4gICAgICAgICAgICB4aHJTZXR0aW5ncyA9IEdldEZhc3RWYWx1ZShjb25maWcsICd4aHJTZXR0aW5ncycpO1xyXG4gICAgICAgICAgICBleHRlbnNpb24gPSBHZXRGYXN0VmFsdWUoY29uZmlnLCAnZXh0ZW5zaW9uJywgZXh0ZW5zaW9uKTtcclxuICAgICAgICB9XHJcblxyXG4gICAgICAgIGlmICghQXJyYXkuaXNBcnJheSh1cmwpKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgdXJsID0gWyB1cmwgXTtcclxuICAgICAgICB9XHJcblxyXG4gICAgICAgIGZvciAodmFyIGkgPSAwOyBpIDwgdXJsLmxlbmd0aDsgaSsrKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgdmFyIHNjcmlwdEZpbGUgPSBuZXcgU2NyaXB0RmlsZShsb2FkZXIsIHtcclxuICAgICAgICAgICAgICAgIGtleToga2V5ICsgJ18nICsgaS50b1N0cmluZygpLFxyXG4gICAgICAgICAgICAgICAgdXJsOiB1cmxbaV0sXHJcbiAgICAgICAgICAgICAgICBleHRlbnNpb246IGV4dGVuc2lvbixcclxuICAgICAgICAgICAgICAgIHhoclNldHRpbmdzOiB4aHJTZXR0aW5nc1xyXG4gICAgICAgICAgICB9KTtcclxuXHJcbiAgICAgICAgICAgIC8vICBPdmVycmlkZSB0aGUgZGVmYXVsdCBvblByb2Nlc3MgZnVuY3Rpb25cclxuICAgICAgICAgICAgc2NyaXB0RmlsZS5vblByb2Nlc3MgPSBmdW5jdGlvbiAoKVxyXG4gICAgICAgICAgICB7XHJcbiAgICAgICAgICAgICAgICB0aGlzLm9uUHJvY2Vzc0NvbXBsZXRlKCk7XHJcbiAgICAgICAgICAgIH07XHJcblxyXG4gICAgICAgICAgICBmaWxlcy5wdXNoKHNjcmlwdEZpbGUpO1xyXG4gICAgICAgIH1cclxuXHJcbiAgICAgICAgTXVsdGlGaWxlLmNhbGwodGhpcywgbG9hZGVyLCAnc2NyaXB0cycsIGtleSwgZmlsZXMpO1xyXG4gICAgfSxcclxuXHJcbiAgICAvKipcclxuICAgICAqIEFkZHMgdGhpcyBmaWxlIHRvIGl0cyB0YXJnZXQgY2FjaGUgdXBvbiBzdWNjZXNzZnVsIGxvYWRpbmcgYW5kIHByb2Nlc3NpbmcuXHJcbiAgICAgKlxyXG4gICAgICogQG1ldGhvZCBQaGFzZXIuTG9hZGVyLkZpbGVUeXBlcy5NdWx0aVNjcmlwdEZpbGUjYWRkVG9DYWNoZVxyXG4gICAgICogQHNpbmNlIDMuMTcuMFxyXG4gICAgICovXHJcbiAgICBhZGRUb0NhY2hlOiBmdW5jdGlvbiAoKVxyXG4gICAge1xyXG4gICAgICAgIGlmICh0aGlzLmlzUmVhZHlUb1Byb2Nlc3MoKSlcclxuICAgICAgICB7XHJcbiAgICAgICAgICAgIGZvciAodmFyIGkgPSAwOyBpIDwgdGhpcy5maWxlcy5sZW5ndGg7IGkrKylcclxuICAgICAgICAgICAge1xyXG4gICAgICAgICAgICAgICAgdmFyIGZpbGUgPSB0aGlzLmZpbGVzW2ldO1xyXG5cclxuICAgICAgICAgICAgICAgIGZpbGUuZGF0YSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3NjcmlwdCcpO1xyXG4gICAgICAgICAgICAgICAgZmlsZS5kYXRhLmxhbmd1YWdlID0gJ2phdmFzY3JpcHQnO1xyXG4gICAgICAgICAgICAgICAgZmlsZS5kYXRhLnR5cGUgPSAndGV4dC9qYXZhc2NyaXB0JztcclxuICAgICAgICAgICAgICAgIGZpbGUuZGF0YS5kZWZlciA9IGZhbHNlO1xyXG4gICAgICAgICAgICAgICAgZmlsZS5kYXRhLnRleHQgPSBmaWxlLnhockxvYWRlci5yZXNwb25zZVRleHQ7XHJcbiAgICAgICAgXHJcbiAgICAgICAgICAgICAgICBkb2N1bWVudC5oZWFkLmFwcGVuZENoaWxkKGZpbGUuZGF0YSk7XHJcbiAgICAgICAgICAgIH1cclxuXHJcbiAgICAgICAgICAgIHRoaXMuY29tcGxldGUgPSB0cnVlO1xyXG4gICAgICAgIH1cclxuICAgIH1cclxuXHJcbn0pO1xyXG5cclxuLyoqXHJcbiAqIEFkZHMgYW4gYXJyYXkgb2YgU2NyaXB0IGZpbGVzIHRvIHRoZSBjdXJyZW50IGxvYWQgcXVldWUuXHJcbiAqIFxyXG4gKiBUaGUgZGlmZmVyZW5jZSBiZXR3ZWVuIHRoaXMgYW5kIHRoZSBgU2NyaXB0RmlsZWAgZmlsZSB0eXBlIGlzIHRoYXQgeW91IGdpdmUgYW4gYXJyYXkgb2Ygc2NyaXB0cyB0byB0aGlzIG1ldGhvZCxcclxuICogYW5kIHRoZSBzY3JpcHRzIGFyZSB0aGVuIHByb2Nlc3NlZCBfZXhhY3RseV8gaW4gdGhhdCBvcmRlci4gVGhpcyBhbGxvd3MgeW91IHRvIGxvYWQgYSBidW5jaCBvZiBzY3JpcHRzIHRoYXRcclxuICogbWF5IGhhdmUgZGVwZW5kZW5jaWVzIG9uIGVhY2ggb3RoZXIgd2l0aG91dCB3b3JyeWluZyBhYm91dCB0aGUgYXN5bmMgbmF0dXJlIG9mIHRyYWRpdGlvbmFsIHNjcmlwdCBsb2FkaW5nLlxyXG4gKlxyXG4gKiBZb3UgY2FuIGNhbGwgdGhpcyBtZXRob2QgZnJvbSB3aXRoaW4geW91ciBTY2VuZSdzIGBwcmVsb2FkYCwgYWxvbmcgd2l0aCBhbnkgb3RoZXIgZmlsZXMgeW91IHdpc2ggdG8gbG9hZDpcclxuICogXHJcbiAqIGBgYGphdmFzY3JpcHRcclxuICogZnVuY3Rpb24gcHJlbG9hZCAoKVxyXG4gKiB7XHJcbiAqICAgICB0aGlzLmxvYWQuc2NyaXB0cygnUG9zdFByb2Nlc3MnLCBbXHJcbiAqICAgICAgICAgJ2xpYnMvc2hhZGVycy9Db3B5U2hhZGVyLmpzJyxcclxuICogICAgICAgICAnbGlicy9wb3N0cHJvY2Vzc2luZy9FZmZlY3RDb21wb3Nlci5qcycsXHJcbiAqICAgICAgICAgJ2xpYnMvcG9zdHByb2Nlc3NpbmcvUmVuZGVyUGFzcy5qcycsXHJcbiAqICAgICAgICAgJ2xpYnMvcG9zdHByb2Nlc3NpbmcvTWFza1Bhc3MuanMnLFxyXG4gKiAgICAgICAgICdsaWJzL3Bvc3Rwcm9jZXNzaW5nL1NoYWRlclBhc3MuanMnLFxyXG4gKiAgICAgICAgICdsaWJzL3Bvc3Rwcm9jZXNzaW5nL0FmdGVyaW1hZ2VQYXNzLmpzJ1xyXG4gKiAgICBdKTtcclxuICogfVxyXG4gKiBgYGBcclxuICogXHJcbiAqIEluIHRoZSBjb2RlIGFib3ZlIHRoZSBzY3JpcHQgZmlsZXMgd2lsbCBhbGwgYmUgbG9hZGVkIGluIHBhcmFsbGVsIGJ1dCBvbmx5IHByb2Nlc3NlZCAoaS5lLiBpbnZva2VkKSBpbiB0aGUgZXhhY3RcclxuICogb3JkZXIgZ2l2ZW4gaW4gdGhlIGFycmF5LlxyXG4gKlxyXG4gKiBUaGUgZmlsZXMgYXJlICoqbm90KiogbG9hZGVkIHJpZ2h0IGF3YXkuIFRoZXkgYXJlIGFkZGVkIHRvIGEgcXVldWUgcmVhZHkgdG8gYmUgbG9hZGVkIGVpdGhlciB3aGVuIHRoZSBsb2FkZXIgc3RhcnRzLFxyXG4gKiBvciBpZiBpdCdzIGFscmVhZHkgcnVubmluZywgd2hlbiB0aGUgbmV4dCBmcmVlIGxvYWQgc2xvdCBiZWNvbWVzIGF2YWlsYWJsZS4gVGhpcyBoYXBwZW5zIGF1dG9tYXRpY2FsbHkgaWYgeW91XHJcbiAqIGFyZSBjYWxsaW5nIHRoaXMgZnJvbSB3aXRoaW4gdGhlIFNjZW5lJ3MgYHByZWxvYWRgIG1ldGhvZCwgb3IgYSByZWxhdGVkIGNhbGxiYWNrLiBCZWNhdXNlIHRoZSBmaWxlcyBhcmUgcXVldWVkXHJcbiAqIGl0IG1lYW5zIHlvdSBjYW5ub3QgdXNlIHRoZSBmaWxlcyBpbW1lZGlhdGVseSBhZnRlciBjYWxsaW5nIHRoaXMgbWV0aG9kLCBidXQgbXVzdCB3YWl0IGZvciB0aGUgZmlsZXMgdG8gY29tcGxldGUuXHJcbiAqIFRoZSB0eXBpY2FsIGZsb3cgZm9yIGEgUGhhc2VyIFNjZW5lIGlzIHRoYXQgeW91IGxvYWQgYXNzZXRzIGluIHRoZSBTY2VuZSdzIGBwcmVsb2FkYCBtZXRob2QgYW5kIHRoZW4gd2hlbiB0aGVcclxuICogU2NlbmUncyBgY3JlYXRlYCBtZXRob2QgaXMgY2FsbGVkIHlvdSBhcmUgZ3VhcmFudGVlZCB0aGF0IGFsbCBvZiB0aG9zZSBhc3NldHMgYXJlIHJlYWR5IGZvciB1c2UgYW5kIGhhdmUgYmVlblxyXG4gKiBsb2FkZWQuXHJcbiAqIFxyXG4gKiBUaGUga2V5IG11c3QgYmUgYSB1bmlxdWUgU3RyaW5nIGFuZCBub3QgYWxyZWFkeSBpbi11c2UgYnkgYW5vdGhlciBmaWxlIGluIHRoZSBMb2FkZXIuXHJcbiAqXHJcbiAqIEluc3RlYWQgb2YgcGFzc2luZyBhcmd1bWVudHMgeW91IGNhbiBwYXNzIGEgY29uZmlndXJhdGlvbiBvYmplY3QsIHN1Y2ggYXM6XHJcbiAqIFxyXG4gKiBgYGBqYXZhc2NyaXB0XHJcbiAqIHRoaXMubG9hZC5zY3JpcHRzKHtcclxuICogICAgIGtleTogJ1Bvc3RQcm9jZXNzJyxcclxuICogICAgIHVybDogW1xyXG4gKiAgICAgICAgICdsaWJzL3NoYWRlcnMvQ29weVNoYWRlci5qcycsXHJcbiAqICAgICAgICAgJ2xpYnMvcG9zdHByb2Nlc3NpbmcvRWZmZWN0Q29tcG9zZXIuanMnLFxyXG4gKiAgICAgICAgICdsaWJzL3Bvc3Rwcm9jZXNzaW5nL1JlbmRlclBhc3MuanMnLFxyXG4gKiAgICAgICAgICdsaWJzL3Bvc3Rwcm9jZXNzaW5nL01hc2tQYXNzLmpzJyxcclxuICogICAgICAgICAnbGlicy9wb3N0cHJvY2Vzc2luZy9TaGFkZXJQYXNzLmpzJyxcclxuICogICAgICAgICAnbGlicy9wb3N0cHJvY2Vzc2luZy9BZnRlcmltYWdlUGFzcy5qcydcclxuICogICAgICAgIF1cclxuICogfSk7XHJcbiAqIGBgYFxyXG4gKlxyXG4gKiBTZWUgdGhlIGRvY3VtZW50YXRpb24gZm9yIGBQaGFzZXIuVHlwZXMuTG9hZGVyLkZpbGVUeXBlcy5NdWx0aVNjcmlwdEZpbGVDb25maWdgIGZvciBtb3JlIGRldGFpbHMuXHJcbiAqXHJcbiAqIE9uY2UgYWxsIHRoZSBmaWxlcyBoYXZlIGZpbmlzaGVkIGxvYWRpbmcgdGhleSB3aWxsIGF1dG9tYXRpY2FsbHkgYmUgY29udmVydGVkIGludG8gYSBzY3JpcHQgZWxlbWVudFxyXG4gKiB2aWEgYGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3NjcmlwdCcpYC4gVGhleSB3aWxsIGhhdmUgdGhlaXIgbGFuZ3VhZ2Ugc2V0IHRvIEphdmFTY3JpcHQsIGBkZWZlcmAgc2V0IHRvXHJcbiAqIGZhbHNlIGFuZCB0aGVuIHRoZSByZXN1bHRpbmcgZWxlbWVudCB3aWxsIGJlIGFwcGVuZGVkIHRvIGBkb2N1bWVudC5oZWFkYC4gQW55IGNvZGUgdGhlbiBpbiB0aGVcclxuICogc2NyaXB0IHdpbGwgYmUgZXhlY3V0ZWQuIFRoaXMgaXMgZG9uZSBpbiB0aGUgZXhhY3Qgb3JkZXIgdGhlIGZpbGVzIGFyZSBzcGVjaWZpZWQgaW4gdGhlIHVybCBhcnJheS5cclxuICpcclxuICogVGhlIFVSTHMgY2FuIGJlIHJlbGF0aXZlIG9yIGFic29sdXRlLiBJZiB0aGUgVVJMcyBhcmUgcmVsYXRpdmUgdGhlIGBMb2FkZXIuYmFzZVVSTGAgYW5kIGBMb2FkZXIucGF0aGAgdmFsdWVzIHdpbGwgYmUgcHJlcGVuZGVkIHRvIHRoZW0uXHJcbiAqXHJcbiAqIE5vdGU6IFRoZSBhYmlsaXR5IHRvIGxvYWQgdGhpcyB0eXBlIG9mIGZpbGUgd2lsbCBvbmx5IGJlIGF2YWlsYWJsZSBpZiB0aGUgTXVsdGlTY3JpcHQgRmlsZSB0eXBlIGhhcyBiZWVuIGJ1aWx0IGludG8gUGhhc2VyLlxyXG4gKiBJdCBpcyBhdmFpbGFibGUgaW4gdGhlIGRlZmF1bHQgYnVpbGQgYnV0IGNhbiBiZSBleGNsdWRlZCBmcm9tIGN1c3RvbSBidWlsZHMuXHJcbiAqXHJcbiAqIEBtZXRob2QgUGhhc2VyLkxvYWRlci5Mb2FkZXJQbHVnaW4jc2NyaXB0c1xyXG4gKiBAZmlyZXMgUGhhc2VyLkxvYWRlci5Mb2FkZXJQbHVnaW4jYWRkRmlsZUV2ZW50XHJcbiAqIEBzaW5jZSAzLjE3LjBcclxuICpcclxuICogQHBhcmFtIHsoc3RyaW5nfFBoYXNlci5UeXBlcy5Mb2FkZXIuRmlsZVR5cGVzLk11bHRpU2NyaXB0RmlsZUNvbmZpZ3xQaGFzZXIuVHlwZXMuTG9hZGVyLkZpbGVUeXBlcy5NdWx0aVNjcmlwdEZpbGVDb25maWdbXSl9IGtleSAtIFRoZSBrZXkgdG8gdXNlIGZvciB0aGlzIGZpbGUsIG9yIGEgZmlsZSBjb25maWd1cmF0aW9uIG9iamVjdCwgb3IgYXJyYXkgb2YgdGhlbS5cclxuICogQHBhcmFtIHtzdHJpbmdbXX0gW3VybF0gLSBBbiBhcnJheSBvZiBhYnNvbHV0ZSBvciByZWxhdGl2ZSBVUkxzIHRvIGxvYWQgdGhlIHNjcmlwdCBmaWxlcyBmcm9tLiBUaGV5IGFyZSBwcm9jZXNzZWQgaW4gdGhlIG9yZGVyIGdpdmVuIGluIHRoZSBhcnJheS5cclxuICogQHBhcmFtIHtzdHJpbmd9IFtleHRlbnNpb249J2pzJ10gLSBUaGUgZGVmYXVsdCBmaWxlIGV4dGVuc2lvbiB0byB1c2UgaWYgbm8gdXJsIGlzIHByb3ZpZGVkLlxyXG4gKiBAcGFyYW0ge1BoYXNlci5UeXBlcy5Mb2FkZXIuWEhSU2V0dGluZ3NPYmplY3R9IFt4aHJTZXR0aW5nc10gLSBFeHRyYSBYSFIgU2V0dGluZ3Mgc3BlY2lmaWNhbGx5IGZvciB0aGVzZSBmaWxlcy5cclxuICpcclxuICogQHJldHVybiB7UGhhc2VyLkxvYWRlci5Mb2FkZXJQbHVnaW59IFRoZSBMb2FkZXIgaW5zdGFuY2UuXHJcbiAqL1xyXG5GaWxlVHlwZXNNYW5hZ2VyLnJlZ2lzdGVyKCdzY3JpcHRzJywgZnVuY3Rpb24gKGtleSwgdXJsLCB4aHJTZXR0aW5ncylcclxue1xyXG4gICAgdmFyIG11bHRpZmlsZTtcclxuXHJcbiAgICAvLyAgU3VwcG9ydHMgYW4gT2JqZWN0IGZpbGUgZGVmaW5pdGlvbiBpbiB0aGUga2V5IGFyZ3VtZW50XHJcbiAgICAvLyAgT3IgYW4gYXJyYXkgb2Ygb2JqZWN0cyBpbiB0aGUga2V5IGFyZ3VtZW50XHJcbiAgICAvLyAgT3IgYSBzaW5nbGUgZW50cnkgd2hlcmUgYWxsIGFyZ3VtZW50cyBoYXZlIGJlZW4gZGVmaW5lZFxyXG5cclxuICAgIGlmIChBcnJheS5pc0FycmF5KGtleSkpXHJcbiAgICB7XHJcbiAgICAgICAgZm9yICh2YXIgaSA9IDA7IGkgPCBrZXkubGVuZ3RoOyBpKyspXHJcbiAgICAgICAge1xyXG4gICAgICAgICAgICBtdWx0aWZpbGUgPSBuZXcgTXVsdGlTY3JpcHRGaWxlKHRoaXMsIGtleVtpXSk7XHJcblxyXG4gICAgICAgICAgICB0aGlzLmFkZEZpbGUobXVsdGlmaWxlLmZpbGVzKTtcclxuICAgICAgICB9XHJcbiAgICB9XHJcbiAgICBlbHNlXHJcbiAgICB7XHJcbiAgICAgICAgbXVsdGlmaWxlID0gbmV3IE11bHRpU2NyaXB0RmlsZSh0aGlzLCBrZXksIHVybCwgeGhyU2V0dGluZ3MpO1xyXG5cclxuICAgICAgICB0aGlzLmFkZEZpbGUobXVsdGlmaWxlLmZpbGVzKTtcclxuICAgIH1cclxuXHJcbiAgICByZXR1cm4gdGhpcztcclxufSk7XHJcblxyXG5tb2R1bGUuZXhwb3J0cyA9IE11bHRpU2NyaXB0RmlsZTtcclxuIl0sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/loader/filetypes/MultiScriptFile.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

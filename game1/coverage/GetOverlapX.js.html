@@ -1,0 +1,395 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for GetOverlapX.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> GetOverlapX.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">26.42% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>28/106</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>2/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">26.42% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>28/106</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var CONST = __webpack_require__(/*! ./const */ "./node_modules/phaser/src/physics/arcade/const.js");
+&nbsp;
+/**
+ * Calculates and returns the horizontal overlap between two arcade physics bodies and sets their properties
+ * accordingly, including: `touching.left`, `touching.right`, `touching.none` and `overlapX'.
+ *
+ * @function Phaser.Physics.Arcade.GetOverlapX
+ * @since 3.0.0
+ *
+ * @param {Phaser.Physics.Arcade.Body} body1 - The first Body to separate.
+ * @param {Phaser.Physics.Arcade.Body} body2 - The second Body to separate.
+ * @param {boolean} overlapOnly - Is this an overlap only check, or part of separation?
+ * @param {number} bias - A value added to the delta values during collision checks. Increase it to prevent sprite tunneling(sprites passing through another instead of colliding).
+ *
+ * @return {number} The amount of overlap.
+ */
+<span class="cstat-no" title="statement not covered" >var GetOverlapX = function (body1, body2, overlapOnly, bias)</span>
+<span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    var overlap = 0;</span>
+<span class="cstat-no" title="statement not covered" >    var maxOverlap = body1.deltaAbsX() + body2.deltaAbsX() + bias;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (body1._dx === 0 &amp;&amp; body2._dx === 0)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        //  They overlap but neither of them are moving</span>
+<span class="cstat-no" title="statement not covered" >        body1.embedded = true;</span>
+<span class="cstat-no" title="statement not covered" >        body2.embedded = true;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    else if (body1._dx &gt; body2._dx)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        //  Body1 is moving right and / or Body2 is moving left</span>
+<span class="cstat-no" title="statement not covered" >        overlap = body1.right - body2.x;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if ((overlap &gt; maxOverlap &amp;&amp; !overlapOnly) || body1.checkCollision.right === false || body2.checkCollision.left === false)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            overlap = 0;</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >        else</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            body1.touching.none = false;</span>
+<span class="cstat-no" title="statement not covered" >            body1.touching.right = true;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            body2.touching.none = false;</span>
+<span class="cstat-no" title="statement not covered" >            body2.touching.left = true;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            if (body2.physicsType === CONST.STATIC_BODY)</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >                body1.blocked.none = false;</span>
+<span class="cstat-no" title="statement not covered" >                body1.blocked.right = true;</span>
+<span class="cstat-no" title="statement not covered" >            }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            if (body1.physicsType === CONST.STATIC_BODY)</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >                body2.blocked.none = false;</span>
+<span class="cstat-no" title="statement not covered" >                body2.blocked.left = true;</span>
+<span class="cstat-no" title="statement not covered" >            }</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    else if (body1._dx &lt; body2._dx)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        //  Body1 is moving left and/or Body2 is moving right</span>
+<span class="cstat-no" title="statement not covered" >        overlap = body1.x - body2.width - body2.x;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if ((-overlap &gt; maxOverlap &amp;&amp; !overlapOnly) || body1.checkCollision.left === false || body2.checkCollision.right === false)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            overlap = 0;</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >        else</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            body1.touching.none = false;</span>
+<span class="cstat-no" title="statement not covered" >            body1.touching.left = true;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            body2.touching.none = false;</span>
+<span class="cstat-no" title="statement not covered" >            body2.touching.right = true;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            if (body2.physicsType === CONST.STATIC_BODY)</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >                body1.blocked.none = false;</span>
+<span class="cstat-no" title="statement not covered" >                body1.blocked.left = true;</span>
+<span class="cstat-no" title="statement not covered" >            }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            if (body1.physicsType === CONST.STATIC_BODY)</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >                body2.blocked.none = false;</span>
+<span class="cstat-no" title="statement not covered" >                body2.blocked.right = true;</span>
+<span class="cstat-no" title="statement not covered" >            }</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    //  Resets the overlapX to zero if there is no overlap, or to the actual pixel value if there is</span>
+<span class="cstat-no" title="statement not covered" >    body1.overlapX = overlap;</span>
+<span class="cstat-no" title="statement not covered" >    body2.overlapX = overlap;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    return overlap;</span>
+<span class="cstat-no" title="statement not covered" >};</span>
+&nbsp;
+module.exports = GetOverlapX;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9waHlzaWNzL2FyY2FkZS9HZXRPdmVybGFwWC5qcz8yODEwIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBLGtCQUFrQjtBQUNsQjs7QUFFQSxZQUFZLG1CQUFPLENBQUMsa0VBQVM7O0FBRTdCO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsV0FBVywyQkFBMkI7QUFDdEMsV0FBVywyQkFBMkI7QUFDdEMsV0FBVyxRQUFRO0FBQ25CLFdBQVcsT0FBTztBQUNsQjtBQUNBLFlBQVksT0FBTztBQUNuQjtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUEiLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9waHlzaWNzL2FyY2FkZS9HZXRPdmVybGFwWC5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxyXG4gKiBAYXV0aG9yICAgICAgIFJpY2hhcmQgRGF2ZXkgPHJpY2hAcGhvdG9uc3Rvcm0uY29tPlxyXG4gKiBAY29weXJpZ2h0ICAgIDIwMTkgUGhvdG9uIFN0b3JtIEx0ZC5cclxuICogQGxpY2Vuc2UgICAgICB7QGxpbmsgaHR0cHM6Ly9vcGVuc291cmNlLm9yZy9saWNlbnNlcy9NSVR8TUlUIExpY2Vuc2V9XHJcbiAqL1xyXG5cclxudmFyIENPTlNUID0gcmVxdWlyZSgnLi9jb25zdCcpO1xyXG5cclxuLyoqXHJcbiAqIENhbGN1bGF0ZXMgYW5kIHJldHVybnMgdGhlIGhvcml6b250YWwgb3ZlcmxhcCBiZXR3ZWVuIHR3byBhcmNhZGUgcGh5c2ljcyBib2RpZXMgYW5kIHNldHMgdGhlaXIgcHJvcGVydGllc1xyXG4gKiBhY2NvcmRpbmdseSwgaW5jbHVkaW5nOiBgdG91Y2hpbmcubGVmdGAsIGB0b3VjaGluZy5yaWdodGAsIGB0b3VjaGluZy5ub25lYCBhbmQgYG92ZXJsYXBYJy5cclxuICpcclxuICogQGZ1bmN0aW9uIFBoYXNlci5QaHlzaWNzLkFyY2FkZS5HZXRPdmVybGFwWFxyXG4gKiBAc2luY2UgMy4wLjBcclxuICpcclxuICogQHBhcmFtIHtQaGFzZXIuUGh5c2ljcy5BcmNhZGUuQm9keX0gYm9keTEgLSBUaGUgZmlyc3QgQm9keSB0byBzZXBhcmF0ZS5cclxuICogQHBhcmFtIHtQaGFzZXIuUGh5c2ljcy5BcmNhZGUuQm9keX0gYm9keTIgLSBUaGUgc2Vjb25kIEJvZHkgdG8gc2VwYXJhdGUuXHJcbiAqIEBwYXJhbSB7Ym9vbGVhbn0gb3ZlcmxhcE9ubHkgLSBJcyB0aGlzIGFuIG92ZXJsYXAgb25seSBjaGVjaywgb3IgcGFydCBvZiBzZXBhcmF0aW9uP1xyXG4gKiBAcGFyYW0ge251bWJlcn0gYmlhcyAtIEEgdmFsdWUgYWRkZWQgdG8gdGhlIGRlbHRhIHZhbHVlcyBkdXJpbmcgY29sbGlzaW9uIGNoZWNrcy4gSW5jcmVhc2UgaXQgdG8gcHJldmVudCBzcHJpdGUgdHVubmVsaW5nKHNwcml0ZXMgcGFzc2luZyB0aHJvdWdoIGFub3RoZXIgaW5zdGVhZCBvZiBjb2xsaWRpbmcpLlxyXG4gKlxyXG4gKiBAcmV0dXJuIHtudW1iZXJ9IFRoZSBhbW91bnQgb2Ygb3ZlcmxhcC5cclxuICovXHJcbnZhciBHZXRPdmVybGFwWCA9IGZ1bmN0aW9uIChib2R5MSwgYm9keTIsIG92ZXJsYXBPbmx5LCBiaWFzKVxyXG57XHJcbiAgICB2YXIgb3ZlcmxhcCA9IDA7XHJcbiAgICB2YXIgbWF4T3ZlcmxhcCA9IGJvZHkxLmRlbHRhQWJzWCgpICsgYm9keTIuZGVsdGFBYnNYKCkgKyBiaWFzO1xyXG5cclxuICAgIGlmIChib2R5MS5fZHggPT09IDAgJiYgYm9keTIuX2R4ID09PSAwKVxyXG4gICAge1xyXG4gICAgICAgIC8vICBUaGV5IG92ZXJsYXAgYnV0IG5laXRoZXIgb2YgdGhlbSBhcmUgbW92aW5nXHJcbiAgICAgICAgYm9keTEuZW1iZWRkZWQgPSB0cnVlO1xyXG4gICAgICAgIGJvZHkyLmVtYmVkZGVkID0gdHJ1ZTtcclxuICAgIH1cclxuICAgIGVsc2UgaWYgKGJvZHkxLl9keCA+IGJvZHkyLl9keClcclxuICAgIHtcclxuICAgICAgICAvLyAgQm9keTEgaXMgbW92aW5nIHJpZ2h0IGFuZCAvIG9yIEJvZHkyIGlzIG1vdmluZyBsZWZ0XHJcbiAgICAgICAgb3ZlcmxhcCA9IGJvZHkxLnJpZ2h0IC0gYm9keTIueDtcclxuXHJcbiAgICAgICAgaWYgKChvdmVybGFwID4gbWF4T3ZlcmxhcCAmJiAhb3ZlcmxhcE9ubHkpIHx8IGJvZHkxLmNoZWNrQ29sbGlzaW9uLnJpZ2h0ID09PSBmYWxzZSB8fCBib2R5Mi5jaGVja0NvbGxpc2lvbi5sZWZ0ID09PSBmYWxzZSlcclxuICAgICAgICB7XHJcbiAgICAgICAgICAgIG92ZXJsYXAgPSAwO1xyXG4gICAgICAgIH1cclxuICAgICAgICBlbHNlXHJcbiAgICAgICAge1xyXG4gICAgICAgICAgICBib2R5MS50b3VjaGluZy5ub25lID0gZmFsc2U7XHJcbiAgICAgICAgICAgIGJvZHkxLnRvdWNoaW5nLnJpZ2h0ID0gdHJ1ZTtcclxuXHJcbiAgICAgICAgICAgIGJvZHkyLnRvdWNoaW5nLm5vbmUgPSBmYWxzZTtcclxuICAgICAgICAgICAgYm9keTIudG91Y2hpbmcubGVmdCA9IHRydWU7XHJcblxyXG4gICAgICAgICAgICBpZiAoYm9keTIucGh5c2ljc1R5cGUgPT09IENPTlNULlNUQVRJQ19CT0RZKVxyXG4gICAgICAgICAgICB7XHJcbiAgICAgICAgICAgICAgICBib2R5MS5ibG9ja2VkLm5vbmUgPSBmYWxzZTtcclxuICAgICAgICAgICAgICAgIGJvZHkxLmJsb2NrZWQucmlnaHQgPSB0cnVlO1xyXG4gICAgICAgICAgICB9XHJcblxyXG4gICAgICAgICAgICBpZiAoYm9keTEucGh5c2ljc1R5cGUgPT09IENPTlNULlNUQVRJQ19CT0RZKVxyXG4gICAgICAgICAgICB7XHJcbiAgICAgICAgICAgICAgICBib2R5Mi5ibG9ja2VkLm5vbmUgPSBmYWxzZTtcclxuICAgICAgICAgICAgICAgIGJvZHkyLmJsb2NrZWQubGVmdCA9IHRydWU7XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICB9XHJcbiAgICB9XHJcbiAgICBlbHNlIGlmIChib2R5MS5fZHggPCBib2R5Mi5fZHgpXHJcbiAgICB7XHJcbiAgICAgICAgLy8gIEJvZHkxIGlzIG1vdmluZyBsZWZ0IGFuZC9vciBCb2R5MiBpcyBtb3ZpbmcgcmlnaHRcclxuICAgICAgICBvdmVybGFwID0gYm9keTEueCAtIGJvZHkyLndpZHRoIC0gYm9keTIueDtcclxuXHJcbiAgICAgICAgaWYgKCgtb3ZlcmxhcCA+IG1heE92ZXJsYXAgJiYgIW92ZXJsYXBPbmx5KSB8fCBib2R5MS5jaGVja0NvbGxpc2lvbi5sZWZ0ID09PSBmYWxzZSB8fCBib2R5Mi5jaGVja0NvbGxpc2lvbi5yaWdodCA9PT0gZmFsc2UpXHJcbiAgICAgICAge1xyXG4gICAgICAgICAgICBvdmVybGFwID0gMDtcclxuICAgICAgICB9XHJcbiAgICAgICAgZWxzZVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgYm9keTEudG91Y2hpbmcubm9uZSA9IGZhbHNlO1xyXG4gICAgICAgICAgICBib2R5MS50b3VjaGluZy5sZWZ0ID0gdHJ1ZTtcclxuXHJcbiAgICAgICAgICAgIGJvZHkyLnRvdWNoaW5nLm5vbmUgPSBmYWxzZTtcclxuICAgICAgICAgICAgYm9keTIudG91Y2hpbmcucmlnaHQgPSB0cnVlO1xyXG5cclxuICAgICAgICAgICAgaWYgKGJvZHkyLnBoeXNpY3NUeXBlID09PSBDT05TVC5TVEFUSUNfQk9EWSlcclxuICAgICAgICAgICAge1xyXG4gICAgICAgICAgICAgICAgYm9keTEuYmxvY2tlZC5ub25lID0gZmFsc2U7XHJcbiAgICAgICAgICAgICAgICBib2R5MS5ibG9ja2VkLmxlZnQgPSB0cnVlO1xyXG4gICAgICAgICAgICB9XHJcblxyXG4gICAgICAgICAgICBpZiAoYm9keTEucGh5c2ljc1R5cGUgPT09IENPTlNULlNUQVRJQ19CT0RZKVxyXG4gICAgICAgICAgICB7XHJcbiAgICAgICAgICAgICAgICBib2R5Mi5ibG9ja2VkLm5vbmUgPSBmYWxzZTtcclxuICAgICAgICAgICAgICAgIGJvZHkyLmJsb2NrZWQucmlnaHQgPSB0cnVlO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgIC8vICBSZXNldHMgdGhlIG92ZXJsYXBYIHRvIHplcm8gaWYgdGhlcmUgaXMgbm8gb3ZlcmxhcCwgb3IgdG8gdGhlIGFjdHVhbCBwaXhlbCB2YWx1ZSBpZiB0aGVyZSBpc1xyXG4gICAgYm9keTEub3ZlcmxhcFggPSBvdmVybGFwO1xyXG4gICAgYm9keTIub3ZlcmxhcFggPSBvdmVybGFwO1xyXG5cclxuICAgIHJldHVybiBvdmVybGFwO1xyXG59O1xyXG5cclxubW9kdWxlLmV4cG9ydHMgPSBHZXRPdmVybGFwWDtcclxuIl0sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/physics/arcade/GetOverlapX.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

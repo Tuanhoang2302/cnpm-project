@@ -1,0 +1,1304 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for GLSLFile.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> GLSLFile.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">44.01% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>180/409</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>9/9</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">44.01% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>180/409</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a>
+<a name='L208'></a><a href='#L208'>208</a>
+<a name='L209'></a><a href='#L209'>209</a>
+<a name='L210'></a><a href='#L210'>210</a>
+<a name='L211'></a><a href='#L211'>211</a>
+<a name='L212'></a><a href='#L212'>212</a>
+<a name='L213'></a><a href='#L213'>213</a>
+<a name='L214'></a><a href='#L214'>214</a>
+<a name='L215'></a><a href='#L215'>215</a>
+<a name='L216'></a><a href='#L216'>216</a>
+<a name='L217'></a><a href='#L217'>217</a>
+<a name='L218'></a><a href='#L218'>218</a>
+<a name='L219'></a><a href='#L219'>219</a>
+<a name='L220'></a><a href='#L220'>220</a>
+<a name='L221'></a><a href='#L221'>221</a>
+<a name='L222'></a><a href='#L222'>222</a>
+<a name='L223'></a><a href='#L223'>223</a>
+<a name='L224'></a><a href='#L224'>224</a>
+<a name='L225'></a><a href='#L225'>225</a>
+<a name='L226'></a><a href='#L226'>226</a>
+<a name='L227'></a><a href='#L227'>227</a>
+<a name='L228'></a><a href='#L228'>228</a>
+<a name='L229'></a><a href='#L229'>229</a>
+<a name='L230'></a><a href='#L230'>230</a>
+<a name='L231'></a><a href='#L231'>231</a>
+<a name='L232'></a><a href='#L232'>232</a>
+<a name='L233'></a><a href='#L233'>233</a>
+<a name='L234'></a><a href='#L234'>234</a>
+<a name='L235'></a><a href='#L235'>235</a>
+<a name='L236'></a><a href='#L236'>236</a>
+<a name='L237'></a><a href='#L237'>237</a>
+<a name='L238'></a><a href='#L238'>238</a>
+<a name='L239'></a><a href='#L239'>239</a>
+<a name='L240'></a><a href='#L240'>240</a>
+<a name='L241'></a><a href='#L241'>241</a>
+<a name='L242'></a><a href='#L242'>242</a>
+<a name='L243'></a><a href='#L243'>243</a>
+<a name='L244'></a><a href='#L244'>244</a>
+<a name='L245'></a><a href='#L245'>245</a>
+<a name='L246'></a><a href='#L246'>246</a>
+<a name='L247'></a><a href='#L247'>247</a>
+<a name='L248'></a><a href='#L248'>248</a>
+<a name='L249'></a><a href='#L249'>249</a>
+<a name='L250'></a><a href='#L250'>250</a>
+<a name='L251'></a><a href='#L251'>251</a>
+<a name='L252'></a><a href='#L252'>252</a>
+<a name='L253'></a><a href='#L253'>253</a>
+<a name='L254'></a><a href='#L254'>254</a>
+<a name='L255'></a><a href='#L255'>255</a>
+<a name='L256'></a><a href='#L256'>256</a>
+<a name='L257'></a><a href='#L257'>257</a>
+<a name='L258'></a><a href='#L258'>258</a>
+<a name='L259'></a><a href='#L259'>259</a>
+<a name='L260'></a><a href='#L260'>260</a>
+<a name='L261'></a><a href='#L261'>261</a>
+<a name='L262'></a><a href='#L262'>262</a>
+<a name='L263'></a><a href='#L263'>263</a>
+<a name='L264'></a><a href='#L264'>264</a>
+<a name='L265'></a><a href='#L265'>265</a>
+<a name='L266'></a><a href='#L266'>266</a>
+<a name='L267'></a><a href='#L267'>267</a>
+<a name='L268'></a><a href='#L268'>268</a>
+<a name='L269'></a><a href='#L269'>269</a>
+<a name='L270'></a><a href='#L270'>270</a>
+<a name='L271'></a><a href='#L271'>271</a>
+<a name='L272'></a><a href='#L272'>272</a>
+<a name='L273'></a><a href='#L273'>273</a>
+<a name='L274'></a><a href='#L274'>274</a>
+<a name='L275'></a><a href='#L275'>275</a>
+<a name='L276'></a><a href='#L276'>276</a>
+<a name='L277'></a><a href='#L277'>277</a>
+<a name='L278'></a><a href='#L278'>278</a>
+<a name='L279'></a><a href='#L279'>279</a>
+<a name='L280'></a><a href='#L280'>280</a>
+<a name='L281'></a><a href='#L281'>281</a>
+<a name='L282'></a><a href='#L282'>282</a>
+<a name='L283'></a><a href='#L283'>283</a>
+<a name='L284'></a><a href='#L284'>284</a>
+<a name='L285'></a><a href='#L285'>285</a>
+<a name='L286'></a><a href='#L286'>286</a>
+<a name='L287'></a><a href='#L287'>287</a>
+<a name='L288'></a><a href='#L288'>288</a>
+<a name='L289'></a><a href='#L289'>289</a>
+<a name='L290'></a><a href='#L290'>290</a>
+<a name='L291'></a><a href='#L291'>291</a>
+<a name='L292'></a><a href='#L292'>292</a>
+<a name='L293'></a><a href='#L293'>293</a>
+<a name='L294'></a><a href='#L294'>294</a>
+<a name='L295'></a><a href='#L295'>295</a>
+<a name='L296'></a><a href='#L296'>296</a>
+<a name='L297'></a><a href='#L297'>297</a>
+<a name='L298'></a><a href='#L298'>298</a>
+<a name='L299'></a><a href='#L299'>299</a>
+<a name='L300'></a><a href='#L300'>300</a>
+<a name='L301'></a><a href='#L301'>301</a>
+<a name='L302'></a><a href='#L302'>302</a>
+<a name='L303'></a><a href='#L303'>303</a>
+<a name='L304'></a><a href='#L304'>304</a>
+<a name='L305'></a><a href='#L305'>305</a>
+<a name='L306'></a><a href='#L306'>306</a>
+<a name='L307'></a><a href='#L307'>307</a>
+<a name='L308'></a><a href='#L308'>308</a>
+<a name='L309'></a><a href='#L309'>309</a>
+<a name='L310'></a><a href='#L310'>310</a>
+<a name='L311'></a><a href='#L311'>311</a>
+<a name='L312'></a><a href='#L312'>312</a>
+<a name='L313'></a><a href='#L313'>313</a>
+<a name='L314'></a><a href='#L314'>314</a>
+<a name='L315'></a><a href='#L315'>315</a>
+<a name='L316'></a><a href='#L316'>316</a>
+<a name='L317'></a><a href='#L317'>317</a>
+<a name='L318'></a><a href='#L318'>318</a>
+<a name='L319'></a><a href='#L319'>319</a>
+<a name='L320'></a><a href='#L320'>320</a>
+<a name='L321'></a><a href='#L321'>321</a>
+<a name='L322'></a><a href='#L322'>322</a>
+<a name='L323'></a><a href='#L323'>323</a>
+<a name='L324'></a><a href='#L324'>324</a>
+<a name='L325'></a><a href='#L325'>325</a>
+<a name='L326'></a><a href='#L326'>326</a>
+<a name='L327'></a><a href='#L327'>327</a>
+<a name='L328'></a><a href='#L328'>328</a>
+<a name='L329'></a><a href='#L329'>329</a>
+<a name='L330'></a><a href='#L330'>330</a>
+<a name='L331'></a><a href='#L331'>331</a>
+<a name='L332'></a><a href='#L332'>332</a>
+<a name='L333'></a><a href='#L333'>333</a>
+<a name='L334'></a><a href='#L334'>334</a>
+<a name='L335'></a><a href='#L335'>335</a>
+<a name='L336'></a><a href='#L336'>336</a>
+<a name='L337'></a><a href='#L337'>337</a>
+<a name='L338'></a><a href='#L338'>338</a>
+<a name='L339'></a><a href='#L339'>339</a>
+<a name='L340'></a><a href='#L340'>340</a>
+<a name='L341'></a><a href='#L341'>341</a>
+<a name='L342'></a><a href='#L342'>342</a>
+<a name='L343'></a><a href='#L343'>343</a>
+<a name='L344'></a><a href='#L344'>344</a>
+<a name='L345'></a><a href='#L345'>345</a>
+<a name='L346'></a><a href='#L346'>346</a>
+<a name='L347'></a><a href='#L347'>347</a>
+<a name='L348'></a><a href='#L348'>348</a>
+<a name='L349'></a><a href='#L349'>349</a>
+<a name='L350'></a><a href='#L350'>350</a>
+<a name='L351'></a><a href='#L351'>351</a>
+<a name='L352'></a><a href='#L352'>352</a>
+<a name='L353'></a><a href='#L353'>353</a>
+<a name='L354'></a><a href='#L354'>354</a>
+<a name='L355'></a><a href='#L355'>355</a>
+<a name='L356'></a><a href='#L356'>356</a>
+<a name='L357'></a><a href='#L357'>357</a>
+<a name='L358'></a><a href='#L358'>358</a>
+<a name='L359'></a><a href='#L359'>359</a>
+<a name='L360'></a><a href='#L360'>360</a>
+<a name='L361'></a><a href='#L361'>361</a>
+<a name='L362'></a><a href='#L362'>362</a>
+<a name='L363'></a><a href='#L363'>363</a>
+<a name='L364'></a><a href='#L364'>364</a>
+<a name='L365'></a><a href='#L365'>365</a>
+<a name='L366'></a><a href='#L366'>366</a>
+<a name='L367'></a><a href='#L367'>367</a>
+<a name='L368'></a><a href='#L368'>368</a>
+<a name='L369'></a><a href='#L369'>369</a>
+<a name='L370'></a><a href='#L370'>370</a>
+<a name='L371'></a><a href='#L371'>371</a>
+<a name='L372'></a><a href='#L372'>372</a>
+<a name='L373'></a><a href='#L373'>373</a>
+<a name='L374'></a><a href='#L374'>374</a>
+<a name='L375'></a><a href='#L375'>375</a>
+<a name='L376'></a><a href='#L376'>376</a>
+<a name='L377'></a><a href='#L377'>377</a>
+<a name='L378'></a><a href='#L378'>378</a>
+<a name='L379'></a><a href='#L379'>379</a>
+<a name='L380'></a><a href='#L380'>380</a>
+<a name='L381'></a><a href='#L381'>381</a>
+<a name='L382'></a><a href='#L382'>382</a>
+<a name='L383'></a><a href='#L383'>383</a>
+<a name='L384'></a><a href='#L384'>384</a>
+<a name='L385'></a><a href='#L385'>385</a>
+<a name='L386'></a><a href='#L386'>386</a>
+<a name='L387'></a><a href='#L387'>387</a>
+<a name='L388'></a><a href='#L388'>388</a>
+<a name='L389'></a><a href='#L389'>389</a>
+<a name='L390'></a><a href='#L390'>390</a>
+<a name='L391'></a><a href='#L391'>391</a>
+<a name='L392'></a><a href='#L392'>392</a>
+<a name='L393'></a><a href='#L393'>393</a>
+<a name='L394'></a><a href='#L394'>394</a>
+<a name='L395'></a><a href='#L395'>395</a>
+<a name='L396'></a><a href='#L396'>396</a>
+<a name='L397'></a><a href='#L397'>397</a>
+<a name='L398'></a><a href='#L398'>398</a>
+<a name='L399'></a><a href='#L399'>399</a>
+<a name='L400'></a><a href='#L400'>400</a>
+<a name='L401'></a><a href='#L401'>401</a>
+<a name='L402'></a><a href='#L402'>402</a>
+<a name='L403'></a><a href='#L403'>403</a>
+<a name='L404'></a><a href='#L404'>404</a>
+<a name='L405'></a><a href='#L405'>405</a>
+<a name='L406'></a><a href='#L406'>406</a>
+<a name='L407'></a><a href='#L407'>407</a>
+<a name='L408'></a><a href='#L408'>408</a>
+<a name='L409'></a><a href='#L409'>409</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var Class = __webpack_require__(/*! ../../utils/Class */ "./node_modules/phaser/src/utils/Class.js");
+var CONST = __webpack_require__(/*! ../const */ "./node_modules/phaser/src/loader/const.js");
+var File = __webpack_require__(/*! ../File */ "./node_modules/phaser/src/loader/File.js");
+var FileTypesManager = __webpack_require__(/*! ../FileTypesManager */ "./node_modules/phaser/src/loader/FileTypesManager.js");
+var GetFastValue = __webpack_require__(/*! ../../utils/object/GetFastValue */ "./node_modules/phaser/src/utils/object/GetFastValue.js");
+var IsPlainObject = __webpack_require__(/*! ../../utils/object/IsPlainObject */ "./node_modules/phaser/src/utils/object/IsPlainObject.js");
+var Shader = __webpack_require__(/*! ../../display/shader/BaseShader */ "./node_modules/phaser/src/display/shader/BaseShader.js");
+&nbsp;
+/**
+ * @classdesc
+ * A single GLSL File suitable for loading by the Loader.
+ *
+ * These are created when you use the Phaser.Loader.LoaderPlugin#glsl method and are not typically created directly.
+ * 
+ * For documentation about what all the arguments and configuration options mean please see Phaser.Loader.LoaderPlugin#glsl.
+ *
+ * @class GLSLFile
+ * @extends Phaser.Loader.File
+ * @memberof Phaser.Loader.FileTypes
+ * @constructor
+ * @since 3.0.0
+ *
+ * @param {Phaser.Loader.LoaderPlugin} loader - A reference to the Loader that is responsible for this file.
+ * @param {(string|Phaser.Types.Loader.FileTypes.GLSLFileConfig)} key - The key to use for this file, or a file configuration object.
+ * @param {string} [url] - The absolute or relative URL to load this file from. If undefined or `null` it will be set to `&lt;key&gt;.txt`, i.e. if `key` was "alien" then the URL will be "alien.txt".
+ * @param {string} [shaderType='fragment'] - The type of shader. Either `fragment` for a fragment shader, or `vertex` for a vertex shader. This is ignored if you load a shader bundle.
+ * @param {Phaser.Types.Loader.XHRSettingsObject} [xhrSettings] - Extra XHR Settings specifically for this file.
+ */
+var GLSLFile = new Class({
+&nbsp;
+    Extends: File,
+&nbsp;
+    initialize:
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    function GLSLFile (loader, key, url, shaderType, xhrSettings)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        var extension = 'glsl';</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if (IsPlainObject(key))</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            var config = key;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            key = GetFastValue(config, 'key');</span>
+<span class="cstat-no" title="statement not covered" >            url = GetFastValue(config, 'url');</span>
+<span class="cstat-no" title="statement not covered" >            shaderType = GetFastValue(config, 'shaderType', 'fragment');</span>
+<span class="cstat-no" title="statement not covered" >            xhrSettings = GetFastValue(config, 'xhrSettings');</span>
+<span class="cstat-no" title="statement not covered" >            extension = GetFastValue(config, 'extension', extension);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >        else if (shaderType === undefined)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            shaderType = 'fragment';</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        var fileConfig = {</span>
+<span class="cstat-no" title="statement not covered" >            type: 'glsl',</span>
+<span class="cstat-no" title="statement not covered" >            cache: loader.cacheManager.shader,</span>
+<span class="cstat-no" title="statement not covered" >            extension: extension,</span>
+<span class="cstat-no" title="statement not covered" >            responseType: 'text',</span>
+<span class="cstat-no" title="statement not covered" >            key: key,</span>
+<span class="cstat-no" title="statement not covered" >            url: url,</span>
+<span class="cstat-no" title="statement not covered" >            config: {</span>
+<span class="cstat-no" title="statement not covered" >                shaderType: shaderType</span>
+<span class="cstat-no" title="statement not covered" >            },</span>
+<span class="cstat-no" title="statement not covered" >            xhrSettings: xhrSettings</span>
+<span class="cstat-no" title="statement not covered" >        };</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        File.call(this, loader, fileConfig);</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * Called automatically by Loader.nextFile.
+     * This method controls what extra work this File does with its loaded data.
+     *
+     * @method Phaser.Loader.FileTypes.GLSLFile#onProcess
+     * @since 3.7.0
+     */
+<span class="cstat-no" title="statement not covered" >    onProcess: function ()</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        this.state = CONST.FILE_PROCESSING;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        this.data = this.xhrLoader.responseText;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        this.onProcessComplete();</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * Adds this file to its target cache upon successful loading and processing.
+     *
+     * @method Phaser.Loader.FileTypes.GLSLFile#addToCache
+     * @since 3.17.0
+     */
+<span class="cstat-no" title="statement not covered" >    addToCache: function ()</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        var data = this.data.split('\n');</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        //  Check to see if this is a shader bundle, or raw glsl file.</span>
+<span class="cstat-no" title="statement not covered" >        var block = this.extractBlock(data, 0);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if (block)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            while (block)</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >                var key = this.getShaderName(block.header);</span>
+<span class="cstat-no" title="statement not covered" >                var shaderType = this.getShaderType(block.header);</span>
+<span class="cstat-no" title="statement not covered" >                var uniforms = this.getShaderUniforms(block.header);</span>
+<span class="cstat-no" title="statement not covered" >                var shaderSrc = block.shader;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >                if (this.cache.has(key))</span>
+<span class="cstat-no" title="statement not covered" >                {</span>
+<span class="cstat-no" title="statement not covered" >                    var shader = this.cache.get(key);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >                    if (shaderType === 'fragment')</span>
+<span class="cstat-no" title="statement not covered" >                    {</span>
+<span class="cstat-no" title="statement not covered" >                        shader.fragmentSrc = shaderSrc;</span>
+<span class="cstat-no" title="statement not covered" >                    }</span>
+<span class="cstat-no" title="statement not covered" >                    else</span>
+<span class="cstat-no" title="statement not covered" >                    {</span>
+<span class="cstat-no" title="statement not covered" >                        shader.vertexSrc = shaderSrc;</span>
+<span class="cstat-no" title="statement not covered" >                    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >                    if (!shader.uniforms)</span>
+<span class="cstat-no" title="statement not covered" >                    {</span>
+<span class="cstat-no" title="statement not covered" >                        shader.uniforms = uniforms;</span>
+<span class="cstat-no" title="statement not covered" >                    }</span>
+<span class="cstat-no" title="statement not covered" >                }</span>
+<span class="cstat-no" title="statement not covered" >                else if (shaderType === 'fragment')</span>
+<span class="cstat-no" title="statement not covered" >                {</span>
+<span class="cstat-no" title="statement not covered" >                    this.cache.add(key, new Shader(key, shaderSrc, '', uniforms));</span>
+<span class="cstat-no" title="statement not covered" >                }</span>
+<span class="cstat-no" title="statement not covered" >                else</span>
+<span class="cstat-no" title="statement not covered" >                {</span>
+<span class="cstat-no" title="statement not covered" >                    this.cache.add(key, new Shader(key, '', shaderSrc, uniforms));</span>
+<span class="cstat-no" title="statement not covered" >                }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >                block = this.extractBlock(data, block.offset);</span>
+<span class="cstat-no" title="statement not covered" >            }</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >        else if (this.config.shaderType === 'fragment')</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            //  Single shader</span>
+<span class="cstat-no" title="statement not covered" >            this.cache.add(this.key, new Shader(this.key, this.data));</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >        else</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            this.cache.add(this.key, new Shader(this.key, '', this.data));</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        this.pendingDestroy();</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * Returns the name of the shader from the header block.
+     *
+     * @method Phaser.Loader.FileTypes.GLSLFile#getShaderName
+     * @since 3.17.0
+     * 
+     * @param {string[]} headerSource - The header data.
+     * 
+     * @return {string} The shader name.
+     */
+<span class="cstat-no" title="statement not covered" >    getShaderName: function (headerSource)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; headerSource.length; i++)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            var line = headerSource[i].trim();</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            if (line.substring(0, 5) === 'name:')</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >                return line.substring(5).trim();</span>
+<span class="cstat-no" title="statement not covered" >            }</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        return this.key;</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * Returns the type of the shader from the header block.
+     *
+     * @method Phaser.Loader.FileTypes.GLSLFile#getShaderType
+     * @since 3.17.0
+     * 
+     * @param {string[]} headerSource - The header data.
+     * 
+     * @return {string} The shader type. Either 'fragment' or 'vertex'.
+     */
+<span class="cstat-no" title="statement not covered" >    getShaderType: function (headerSource)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; headerSource.length; i++)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            var line = headerSource[i].trim();</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            if (line.substring(0, 5) === 'type:')</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >                return line.substring(5).trim();</span>
+<span class="cstat-no" title="statement not covered" >            }</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        return this.config.shaderType;</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * Returns the shader uniforms from the header block.
+     *
+     * @method Phaser.Loader.FileTypes.GLSLFile#getShaderUniforms
+     * @since 3.17.0
+     * 
+     * @param {string[]} headerSource - The header data.
+     * 
+     * @return {any} The shader uniforms object.
+     */
+<span class="cstat-no" title="statement not covered" >    getShaderUniforms: function (headerSource)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        var uniforms = {};</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; headerSource.length; i++)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            var line = headerSource[i].trim();</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            if (line.substring(0, 8) === 'uniform.')</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >                var pos = line.indexOf(':');</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >                if (pos)</span>
+<span class="cstat-no" title="statement not covered" >                {</span>
+<span class="cstat-no" title="statement not covered" >                    var key = line.substring(8, pos);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >                    try</span>
+<span class="cstat-no" title="statement not covered" >                    {</span>
+<span class="cstat-no" title="statement not covered" >                        uniforms[key] = JSON.parse(line.substring(pos + 1));</span>
+<span class="cstat-no" title="statement not covered" >                    }</span>
+<span class="cstat-no" title="statement not covered" >                    catch (e)</span>
+<span class="cstat-no" title="statement not covered" >                    {</span>
+<span class="cstat-no" title="statement not covered" >                        console.warn('Invalid uniform JSON: ' + key);</span>
+<span class="cstat-no" title="statement not covered" >                    }</span>
+<span class="cstat-no" title="statement not covered" >                }</span>
+<span class="cstat-no" title="statement not covered" >            }</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        return uniforms;</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * Processes the shader file and extracts the relevant data.
+     *
+     * @method Phaser.Loader.FileTypes.GLSLFile#extractBlock
+     * @private
+     * @since 3.17.0
+     * 
+     * @param {string[]} data - The array of shader data to process.
+     * @param {integer} offset - The offset to start processing from.
+     * 
+     * @return {any} The processed shader block, or null.
+     */
+<span class="cstat-no" title="statement not covered" >    extractBlock: function (data, offset)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        var headerStart = -1;</span>
+<span class="cstat-no" title="statement not covered" >        var headerEnd = -1;</span>
+<span class="cstat-no" title="statement not covered" >        var blockEnd = -1;</span>
+<span class="cstat-no" title="statement not covered" >        var headerOpen = false;</span>
+<span class="cstat-no" title="statement not covered" >        var captureSource = false;</span>
+<span class="cstat-no" title="statement not covered" >        var headerSource = [];</span>
+<span class="cstat-no" title="statement not covered" >        var shaderSource = [];</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        for (var i = offset; i &lt; data.length; i++)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            var line = data[i].trim();</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            if (line === '---')</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >                if (headerStart === -1)</span>
+<span class="cstat-no" title="statement not covered" >                {</span>
+<span class="cstat-no" title="statement not covered" >                    headerStart = i;</span>
+<span class="cstat-no" title="statement not covered" >                    headerOpen = true;</span>
+<span class="cstat-no" title="statement not covered" >                }</span>
+<span class="cstat-no" title="statement not covered" >                else if (headerOpen)</span>
+<span class="cstat-no" title="statement not covered" >                {</span>
+<span class="cstat-no" title="statement not covered" >                    headerEnd = i;</span>
+<span class="cstat-no" title="statement not covered" >                    headerOpen = false;</span>
+<span class="cstat-no" title="statement not covered" >                    captureSource = true;</span>
+<span class="cstat-no" title="statement not covered" >                }</span>
+<span class="cstat-no" title="statement not covered" >                else</span>
+<span class="cstat-no" title="statement not covered" >                {</span>
+<span class="cstat-no" title="statement not covered" >                    //  We've hit another --- delimiter, break out</span>
+<span class="cstat-no" title="statement not covered" >                    captureSource = false;</span>
+<span class="cstat-no" title="statement not covered" >                    break;</span>
+<span class="cstat-no" title="statement not covered" >                }</span>
+<span class="cstat-no" title="statement not covered" >            }</span>
+<span class="cstat-no" title="statement not covered" >            else if (headerOpen)</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >                headerSource.push(line);</span>
+<span class="cstat-no" title="statement not covered" >            }</span>
+<span class="cstat-no" title="statement not covered" >            else if (captureSource)</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >                shaderSource.push(line);</span>
+<span class="cstat-no" title="statement not covered" >                blockEnd = i;</span>
+<span class="cstat-no" title="statement not covered" >            }</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if (!headerOpen &amp;&amp; headerEnd !== -1)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            return { header: headerSource, shader: shaderSource.join('\n'), offset: blockEnd };</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >        else</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            return null;</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+&nbsp;
+});
+&nbsp;
+/**
+ * Adds a GLSL file, or array of GLSL files, to the current load queue.
+ * In Phaser 3 GLSL files are just plain Text files at the current moment in time.
+ *
+ * You can call this method from within your Scene's `preload`, along with any other files you wish to load:
+ * 
+ * ```javascript
+ * function preload ()
+ * {
+ *     this.load.glsl('plasma', 'shaders/Plasma.glsl');
+ * }
+ * ```
+ *
+ * The file is **not** loaded right away. It is added to a queue ready to be loaded either when the loader starts,
+ * or if it's already running, when the next free load slot becomes available. This happens automatically if you
+ * are calling this from within the Scene's `preload` method, or a related callback. Because the file is queued
+ * it means you cannot use the file immediately after calling this method, but must wait for the file to complete.
+ * The typical flow for a Phaser Scene is that you load assets in the Scene's `preload` method and then when the
+ * Scene's `create` method is called you are guaranteed that all of those assets are ready for use and have been
+ * loaded.
+ * 
+ * The key must be a unique String. It is used to add the file to the global Shader Cache upon a successful load.
+ * The key should be unique both in terms of files being loaded and files already present in the Shader Cache.
+ * Loading a file using a key that is already taken will result in a warning. If you wish to replace an existing file
+ * then remove it from the Shader Cache first, before loading a new one.
+ *
+ * Instead of passing arguments you can pass a configuration object, such as:
+ * 
+ * ```javascript
+ * this.load.glsl({
+ *     key: 'plasma',
+ *     shaderType: 'fragment',
+ *     url: 'shaders/Plasma.glsl'
+ * });
+ * ```
+ *
+ * See the documentation for `Phaser.Types.Loader.FileTypes.GLSLFileConfig` for more details.
+ *
+ * Once the file has finished loading you can access it from its Cache using its key:
+ * 
+ * ```javascript
+ * this.load.glsl('plasma', 'shaders/Plasma.glsl');
+ * // and later in your game ...
+ * var data = this.cache.shader.get('plasma');
+ * ```
+ *
+ * If you have specified a prefix in the loader, via `Loader.setPrefix` then this value will be prepended to this files
+ * key. For example, if the prefix was `FX.` and the key was `Plasma` the final key will be `FX.Plasma` and
+ * this is what you would use to retrieve the text from the Shader Cache.
+ *
+ * The URL can be relative or absolute. If the URL is relative the `Loader.baseURL` and `Loader.path` values will be prepended to it.
+ *
+ * If the URL isn't specified the Loader will take the key and create a filename from that. For example if the key is "plasma"
+ * and no URL is given then the Loader will set the URL to be "plasma.glsl". It will always add `.glsl` as the extension, although
+ * this can be overridden if using an object instead of method arguments. If you do not desire this action then provide a URL.
+ *
+ * Note: The ability to load this type of file will only be available if the GLSL File type has been built into Phaser.
+ * It is available in the default build but can be excluded from custom builds.
+ *
+ * @method Phaser.Loader.LoaderPlugin#glsl
+ * @fires Phaser.Loader.LoaderPlugin#addFileEvent
+ * @since 3.0.0
+ *
+ * @param {(string|Phaser.Types.Loader.FileTypes.GLSLFileConfig|Phaser.Types.Loader.FileTypes.GLSLFileConfig[])} key - The key to use for this file, or a file configuration object, or array of them.
+ * @param {string} [url] - The absolute or relative URL to load this file from. If undefined or `null` it will be set to `&lt;key&gt;.glsl`, i.e. if `key` was "alien" then the URL will be "alien.glsl".
+ * @param {string} [shaderType='fragment'] - The type of shader. Either `fragment` for a fragment shader, or `vertex` for a vertex shader. This is ignored if you load a shader bundle.
+ * @param {Phaser.Types.Loader.XHRSettingsObject} [xhrSettings] - An XHR Settings configuration object. Used in replacement of the Loaders default XHR Settings.
+ *
+ * @return {Phaser.Loader.LoaderPlugin} The Loader instance.
+ */
+<span class="cstat-no" title="statement not covered" >FileTypesManager.register('glsl', function (key, url, shaderType, xhrSettings)</span>
+<span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    if (Array.isArray(key))</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        for (var i = 0; i &lt; key.length; i++)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            //  If it's an array it has to be an array of Objects, so we get everything out of the 'key' object</span>
+<span class="cstat-no" title="statement not covered" >            this.addFile(new GLSLFile(this, key[i]));</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    else</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        this.addFile(new GLSLFile(this, key, url, shaderType, xhrSettings));</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    return this;</span>
+<span class="cstat-no" title="statement not covered" >});</span>
+&nbsp;
+module.exports = GLSLFile;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9sb2FkZXIvZmlsZXR5cGVzL0dMU0xGaWxlLmpzPzNhNGUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCOztBQUVBLFlBQVksbUJBQU8sQ0FBQyxtRUFBbUI7QUFDdkMsWUFBWSxtQkFBTyxDQUFDLDJEQUFVO0FBQzlCLFdBQVcsbUJBQU8sQ0FBQyx5REFBUztBQUM1Qix1QkFBdUIsbUJBQU8sQ0FBQyxpRkFBcUI7QUFDcEQsbUJBQW1CLG1CQUFPLENBQUMsK0ZBQWlDO0FBQzVELG9CQUFvQixtQkFBTyxDQUFDLGlHQUFrQztBQUM5RCxhQUFhLG1CQUFPLENBQUMsK0ZBQWlDOztBQUV0RDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsV0FBVywyQkFBMkI7QUFDdEMsV0FBVyxzREFBc0Q7QUFDakUsV0FBVyxPQUFPO0FBQ2xCLFdBQVcsT0FBTztBQUNsQixXQUFXLHNDQUFzQztBQUNqRDtBQUNBOztBQUVBOztBQUVBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsYUFBYTtBQUNiO0FBQ0E7O0FBRUE7QUFDQSxLQUFLOztBQUVMO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBOztBQUVBO0FBQ0EsS0FBSzs7QUFFTDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBLEtBQUs7O0FBRUw7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsZUFBZSxTQUFTO0FBQ3hCO0FBQ0EsZ0JBQWdCLE9BQU87QUFDdkI7QUFDQTtBQUNBO0FBQ0EsdUJBQXVCLHlCQUF5QjtBQUNoRDtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQSxLQUFLOztBQUVMO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGVBQWUsU0FBUztBQUN4QjtBQUNBLGdCQUFnQixPQUFPO0FBQ3ZCO0FBQ0E7QUFDQTtBQUNBLHVCQUF1Qix5QkFBeUI7QUFDaEQ7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0EsS0FBSzs7QUFFTDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxlQUFlLFNBQVM7QUFDeEI7QUFDQSxnQkFBZ0IsSUFBSTtBQUNwQjtBQUNBO0FBQ0E7QUFDQTs7QUFFQSx1QkFBdUIseUJBQXlCO0FBQ2hEO0FBQ0E7O0FBRUE7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0EsS0FBSzs7QUFFTDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGVBQWUsU0FBUztBQUN4QixlQUFlLFFBQVE7QUFDdkI7QUFDQSxnQkFBZ0IsSUFBSTtBQUNwQjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQSw0QkFBNEIsaUJBQWlCO0FBQzdDO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQSxvQkFBb0I7QUFDcEI7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBLENBQUM7O0FBRUQ7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsSUFBSTtBQUNKO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxXQUFXLHFHQUFxRztBQUNoSCxXQUFXLE9BQU87QUFDbEIsV0FBVyxPQUFPO0FBQ2xCLFdBQVcsc0NBQXNDO0FBQ2pEO0FBQ0EsWUFBWSwyQkFBMkI7QUFDdkM7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHVCQUF1QixnQkFBZ0I7QUFDdkM7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0EsQ0FBQzs7QUFFRCIsImZpbGUiOiIuL25vZGVfbW9kdWxlcy9waGFzZXIvc3JjL2xvYWRlci9maWxldHlwZXMvR0xTTEZpbGUuanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcclxuICogQGF1dGhvciAgICAgICBSaWNoYXJkIERhdmV5IDxyaWNoQHBob3RvbnN0b3JtLmNvbT5cclxuICogQGNvcHlyaWdodCAgICAyMDE5IFBob3RvbiBTdG9ybSBMdGQuXHJcbiAqIEBsaWNlbnNlICAgICAge0BsaW5rIGh0dHBzOi8vb3BlbnNvdXJjZS5vcmcvbGljZW5zZXMvTUlUfE1JVCBMaWNlbnNlfVxyXG4gKi9cclxuXHJcbnZhciBDbGFzcyA9IHJlcXVpcmUoJy4uLy4uL3V0aWxzL0NsYXNzJyk7XHJcbnZhciBDT05TVCA9IHJlcXVpcmUoJy4uL2NvbnN0Jyk7XHJcbnZhciBGaWxlID0gcmVxdWlyZSgnLi4vRmlsZScpO1xyXG52YXIgRmlsZVR5cGVzTWFuYWdlciA9IHJlcXVpcmUoJy4uL0ZpbGVUeXBlc01hbmFnZXInKTtcclxudmFyIEdldEZhc3RWYWx1ZSA9IHJlcXVpcmUoJy4uLy4uL3V0aWxzL29iamVjdC9HZXRGYXN0VmFsdWUnKTtcclxudmFyIElzUGxhaW5PYmplY3QgPSByZXF1aXJlKCcuLi8uLi91dGlscy9vYmplY3QvSXNQbGFpbk9iamVjdCcpO1xyXG52YXIgU2hhZGVyID0gcmVxdWlyZSgnLi4vLi4vZGlzcGxheS9zaGFkZXIvQmFzZVNoYWRlcicpO1xyXG5cclxuLyoqXHJcbiAqIEBjbGFzc2Rlc2NcclxuICogQSBzaW5nbGUgR0xTTCBGaWxlIHN1aXRhYmxlIGZvciBsb2FkaW5nIGJ5IHRoZSBMb2FkZXIuXHJcbiAqXHJcbiAqIFRoZXNlIGFyZSBjcmVhdGVkIHdoZW4geW91IHVzZSB0aGUgUGhhc2VyLkxvYWRlci5Mb2FkZXJQbHVnaW4jZ2xzbCBtZXRob2QgYW5kIGFyZSBub3QgdHlwaWNhbGx5IGNyZWF0ZWQgZGlyZWN0bHkuXHJcbiAqIFxyXG4gKiBGb3IgZG9jdW1lbnRhdGlvbiBhYm91dCB3aGF0IGFsbCB0aGUgYXJndW1lbnRzIGFuZCBjb25maWd1cmF0aW9uIG9wdGlvbnMgbWVhbiBwbGVhc2Ugc2VlIFBoYXNlci5Mb2FkZXIuTG9hZGVyUGx1Z2luI2dsc2wuXHJcbiAqXHJcbiAqIEBjbGFzcyBHTFNMRmlsZVxyXG4gKiBAZXh0ZW5kcyBQaGFzZXIuTG9hZGVyLkZpbGVcclxuICogQG1lbWJlcm9mIFBoYXNlci5Mb2FkZXIuRmlsZVR5cGVzXHJcbiAqIEBjb25zdHJ1Y3RvclxyXG4gKiBAc2luY2UgMy4wLjBcclxuICpcclxuICogQHBhcmFtIHtQaGFzZXIuTG9hZGVyLkxvYWRlclBsdWdpbn0gbG9hZGVyIC0gQSByZWZlcmVuY2UgdG8gdGhlIExvYWRlciB0aGF0IGlzIHJlc3BvbnNpYmxlIGZvciB0aGlzIGZpbGUuXHJcbiAqIEBwYXJhbSB7KHN0cmluZ3xQaGFzZXIuVHlwZXMuTG9hZGVyLkZpbGVUeXBlcy5HTFNMRmlsZUNvbmZpZyl9IGtleSAtIFRoZSBrZXkgdG8gdXNlIGZvciB0aGlzIGZpbGUsIG9yIGEgZmlsZSBjb25maWd1cmF0aW9uIG9iamVjdC5cclxuICogQHBhcmFtIHtzdHJpbmd9IFt1cmxdIC0gVGhlIGFic29sdXRlIG9yIHJlbGF0aXZlIFVSTCB0byBsb2FkIHRoaXMgZmlsZSBmcm9tLiBJZiB1bmRlZmluZWQgb3IgYG51bGxgIGl0IHdpbGwgYmUgc2V0IHRvIGA8a2V5Pi50eHRgLCBpLmUuIGlmIGBrZXlgIHdhcyBcImFsaWVuXCIgdGhlbiB0aGUgVVJMIHdpbGwgYmUgXCJhbGllbi50eHRcIi5cclxuICogQHBhcmFtIHtzdHJpbmd9IFtzaGFkZXJUeXBlPSdmcmFnbWVudCddIC0gVGhlIHR5cGUgb2Ygc2hhZGVyLiBFaXRoZXIgYGZyYWdtZW50YCBmb3IgYSBmcmFnbWVudCBzaGFkZXIsIG9yIGB2ZXJ0ZXhgIGZvciBhIHZlcnRleCBzaGFkZXIuIFRoaXMgaXMgaWdub3JlZCBpZiB5b3UgbG9hZCBhIHNoYWRlciBidW5kbGUuXHJcbiAqIEBwYXJhbSB7UGhhc2VyLlR5cGVzLkxvYWRlci5YSFJTZXR0aW5nc09iamVjdH0gW3hoclNldHRpbmdzXSAtIEV4dHJhIFhIUiBTZXR0aW5ncyBzcGVjaWZpY2FsbHkgZm9yIHRoaXMgZmlsZS5cclxuICovXHJcbnZhciBHTFNMRmlsZSA9IG5ldyBDbGFzcyh7XHJcblxyXG4gICAgRXh0ZW5kczogRmlsZSxcclxuXHJcbiAgICBpbml0aWFsaXplOlxyXG5cclxuICAgIGZ1bmN0aW9uIEdMU0xGaWxlIChsb2FkZXIsIGtleSwgdXJsLCBzaGFkZXJUeXBlLCB4aHJTZXR0aW5ncylcclxuICAgIHtcclxuICAgICAgICB2YXIgZXh0ZW5zaW9uID0gJ2dsc2wnO1xyXG5cclxuICAgICAgICBpZiAoSXNQbGFpbk9iamVjdChrZXkpKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgdmFyIGNvbmZpZyA9IGtleTtcclxuXHJcbiAgICAgICAgICAgIGtleSA9IEdldEZhc3RWYWx1ZShjb25maWcsICdrZXknKTtcclxuICAgICAgICAgICAgdXJsID0gR2V0RmFzdFZhbHVlKGNvbmZpZywgJ3VybCcpO1xyXG4gICAgICAgICAgICBzaGFkZXJUeXBlID0gR2V0RmFzdFZhbHVlKGNvbmZpZywgJ3NoYWRlclR5cGUnLCAnZnJhZ21lbnQnKTtcclxuICAgICAgICAgICAgeGhyU2V0dGluZ3MgPSBHZXRGYXN0VmFsdWUoY29uZmlnLCAneGhyU2V0dGluZ3MnKTtcclxuICAgICAgICAgICAgZXh0ZW5zaW9uID0gR2V0RmFzdFZhbHVlKGNvbmZpZywgJ2V4dGVuc2lvbicsIGV4dGVuc2lvbik7XHJcbiAgICAgICAgfVxyXG4gICAgICAgIGVsc2UgaWYgKHNoYWRlclR5cGUgPT09IHVuZGVmaW5lZClcclxuICAgICAgICB7XHJcbiAgICAgICAgICAgIHNoYWRlclR5cGUgPSAnZnJhZ21lbnQnO1xyXG4gICAgICAgIH1cclxuXHJcbiAgICAgICAgdmFyIGZpbGVDb25maWcgPSB7XHJcbiAgICAgICAgICAgIHR5cGU6ICdnbHNsJyxcclxuICAgICAgICAgICAgY2FjaGU6IGxvYWRlci5jYWNoZU1hbmFnZXIuc2hhZGVyLFxyXG4gICAgICAgICAgICBleHRlbnNpb246IGV4dGVuc2lvbixcclxuICAgICAgICAgICAgcmVzcG9uc2VUeXBlOiAndGV4dCcsXHJcbiAgICAgICAgICAgIGtleToga2V5LFxyXG4gICAgICAgICAgICB1cmw6IHVybCxcclxuICAgICAgICAgICAgY29uZmlnOiB7XHJcbiAgICAgICAgICAgICAgICBzaGFkZXJUeXBlOiBzaGFkZXJUeXBlXHJcbiAgICAgICAgICAgIH0sXHJcbiAgICAgICAgICAgIHhoclNldHRpbmdzOiB4aHJTZXR0aW5nc1xyXG4gICAgICAgIH07XHJcblxyXG4gICAgICAgIEZpbGUuY2FsbCh0aGlzLCBsb2FkZXIsIGZpbGVDb25maWcpO1xyXG4gICAgfSxcclxuXHJcbiAgICAvKipcclxuICAgICAqIENhbGxlZCBhdXRvbWF0aWNhbGx5IGJ5IExvYWRlci5uZXh0RmlsZS5cclxuICAgICAqIFRoaXMgbWV0aG9kIGNvbnRyb2xzIHdoYXQgZXh0cmEgd29yayB0aGlzIEZpbGUgZG9lcyB3aXRoIGl0cyBsb2FkZWQgZGF0YS5cclxuICAgICAqXHJcbiAgICAgKiBAbWV0aG9kIFBoYXNlci5Mb2FkZXIuRmlsZVR5cGVzLkdMU0xGaWxlI29uUHJvY2Vzc1xyXG4gICAgICogQHNpbmNlIDMuNy4wXHJcbiAgICAgKi9cclxuICAgIG9uUHJvY2VzczogZnVuY3Rpb24gKClcclxuICAgIHtcclxuICAgICAgICB0aGlzLnN0YXRlID0gQ09OU1QuRklMRV9QUk9DRVNTSU5HO1xyXG5cclxuICAgICAgICB0aGlzLmRhdGEgPSB0aGlzLnhockxvYWRlci5yZXNwb25zZVRleHQ7XHJcblxyXG4gICAgICAgIHRoaXMub25Qcm9jZXNzQ29tcGxldGUoKTtcclxuICAgIH0sXHJcblxyXG4gICAgLyoqXHJcbiAgICAgKiBBZGRzIHRoaXMgZmlsZSB0byBpdHMgdGFyZ2V0IGNhY2hlIHVwb24gc3VjY2Vzc2Z1bCBsb2FkaW5nIGFuZCBwcm9jZXNzaW5nLlxyXG4gICAgICpcclxuICAgICAqIEBtZXRob2QgUGhhc2VyLkxvYWRlci5GaWxlVHlwZXMuR0xTTEZpbGUjYWRkVG9DYWNoZVxyXG4gICAgICogQHNpbmNlIDMuMTcuMFxyXG4gICAgICovXHJcbiAgICBhZGRUb0NhY2hlOiBmdW5jdGlvbiAoKVxyXG4gICAge1xyXG4gICAgICAgIHZhciBkYXRhID0gdGhpcy5kYXRhLnNwbGl0KCdcXG4nKTtcclxuXHJcbiAgICAgICAgLy8gIENoZWNrIHRvIHNlZSBpZiB0aGlzIGlzIGEgc2hhZGVyIGJ1bmRsZSwgb3IgcmF3IGdsc2wgZmlsZS5cclxuICAgICAgICB2YXIgYmxvY2sgPSB0aGlzLmV4dHJhY3RCbG9jayhkYXRhLCAwKTtcclxuXHJcbiAgICAgICAgaWYgKGJsb2NrKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgd2hpbGUgKGJsb2NrKVxyXG4gICAgICAgICAgICB7XHJcbiAgICAgICAgICAgICAgICB2YXIga2V5ID0gdGhpcy5nZXRTaGFkZXJOYW1lKGJsb2NrLmhlYWRlcik7XHJcbiAgICAgICAgICAgICAgICB2YXIgc2hhZGVyVHlwZSA9IHRoaXMuZ2V0U2hhZGVyVHlwZShibG9jay5oZWFkZXIpO1xyXG4gICAgICAgICAgICAgICAgdmFyIHVuaWZvcm1zID0gdGhpcy5nZXRTaGFkZXJVbmlmb3JtcyhibG9jay5oZWFkZXIpO1xyXG4gICAgICAgICAgICAgICAgdmFyIHNoYWRlclNyYyA9IGJsb2NrLnNoYWRlcjtcclxuXHJcbiAgICAgICAgICAgICAgICBpZiAodGhpcy5jYWNoZS5oYXMoa2V5KSlcclxuICAgICAgICAgICAgICAgIHtcclxuICAgICAgICAgICAgICAgICAgICB2YXIgc2hhZGVyID0gdGhpcy5jYWNoZS5nZXQoa2V5KTtcclxuXHJcbiAgICAgICAgICAgICAgICAgICAgaWYgKHNoYWRlclR5cGUgPT09ICdmcmFnbWVudCcpXHJcbiAgICAgICAgICAgICAgICAgICAge1xyXG4gICAgICAgICAgICAgICAgICAgICAgICBzaGFkZXIuZnJhZ21lbnRTcmMgPSBzaGFkZXJTcmM7XHJcbiAgICAgICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgICAgIGVsc2VcclxuICAgICAgICAgICAgICAgICAgICB7XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIHNoYWRlci52ZXJ0ZXhTcmMgPSBzaGFkZXJTcmM7XHJcbiAgICAgICAgICAgICAgICAgICAgfVxyXG5cclxuICAgICAgICAgICAgICAgICAgICBpZiAoIXNoYWRlci51bmlmb3JtcylcclxuICAgICAgICAgICAgICAgICAgICB7XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIHNoYWRlci51bmlmb3JtcyA9IHVuaWZvcm1zO1xyXG4gICAgICAgICAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgICAgIGVsc2UgaWYgKHNoYWRlclR5cGUgPT09ICdmcmFnbWVudCcpXHJcbiAgICAgICAgICAgICAgICB7XHJcbiAgICAgICAgICAgICAgICAgICAgdGhpcy5jYWNoZS5hZGQoa2V5LCBuZXcgU2hhZGVyKGtleSwgc2hhZGVyU3JjLCAnJywgdW5pZm9ybXMpKTtcclxuICAgICAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgICAgIGVsc2VcclxuICAgICAgICAgICAgICAgIHtcclxuICAgICAgICAgICAgICAgICAgICB0aGlzLmNhY2hlLmFkZChrZXksIG5ldyBTaGFkZXIoa2V5LCAnJywgc2hhZGVyU3JjLCB1bmlmb3JtcykpO1xyXG4gICAgICAgICAgICAgICAgfVxyXG5cclxuICAgICAgICAgICAgICAgIGJsb2NrID0gdGhpcy5leHRyYWN0QmxvY2soZGF0YSwgYmxvY2sub2Zmc2V0KTtcclxuICAgICAgICAgICAgfVxyXG4gICAgICAgIH1cclxuICAgICAgICBlbHNlIGlmICh0aGlzLmNvbmZpZy5zaGFkZXJUeXBlID09PSAnZnJhZ21lbnQnKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgLy8gIFNpbmdsZSBzaGFkZXJcclxuICAgICAgICAgICAgdGhpcy5jYWNoZS5hZGQodGhpcy5rZXksIG5ldyBTaGFkZXIodGhpcy5rZXksIHRoaXMuZGF0YSkpO1xyXG4gICAgICAgIH1cclxuICAgICAgICBlbHNlXHJcbiAgICAgICAge1xyXG4gICAgICAgICAgICB0aGlzLmNhY2hlLmFkZCh0aGlzLmtleSwgbmV3IFNoYWRlcih0aGlzLmtleSwgJycsIHRoaXMuZGF0YSkpO1xyXG4gICAgICAgIH1cclxuXHJcbiAgICAgICAgdGhpcy5wZW5kaW5nRGVzdHJveSgpO1xyXG4gICAgfSxcclxuXHJcbiAgICAvKipcclxuICAgICAqIFJldHVybnMgdGhlIG5hbWUgb2YgdGhlIHNoYWRlciBmcm9tIHRoZSBoZWFkZXIgYmxvY2suXHJcbiAgICAgKlxyXG4gICAgICogQG1ldGhvZCBQaGFzZXIuTG9hZGVyLkZpbGVUeXBlcy5HTFNMRmlsZSNnZXRTaGFkZXJOYW1lXHJcbiAgICAgKiBAc2luY2UgMy4xNy4wXHJcbiAgICAgKiBcclxuICAgICAqIEBwYXJhbSB7c3RyaW5nW119IGhlYWRlclNvdXJjZSAtIFRoZSBoZWFkZXIgZGF0YS5cclxuICAgICAqIFxyXG4gICAgICogQHJldHVybiB7c3RyaW5nfSBUaGUgc2hhZGVyIG5hbWUuXHJcbiAgICAgKi9cclxuICAgIGdldFNoYWRlck5hbWU6IGZ1bmN0aW9uIChoZWFkZXJTb3VyY2UpXHJcbiAgICB7XHJcbiAgICAgICAgZm9yICh2YXIgaSA9IDA7IGkgPCBoZWFkZXJTb3VyY2UubGVuZ3RoOyBpKyspXHJcbiAgICAgICAge1xyXG4gICAgICAgICAgICB2YXIgbGluZSA9IGhlYWRlclNvdXJjZVtpXS50cmltKCk7XHJcblxyXG4gICAgICAgICAgICBpZiAobGluZS5zdWJzdHJpbmcoMCwgNSkgPT09ICduYW1lOicpXHJcbiAgICAgICAgICAgIHtcclxuICAgICAgICAgICAgICAgIHJldHVybiBsaW5lLnN1YnN0cmluZyg1KS50cmltKCk7XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICB9XHJcblxyXG4gICAgICAgIHJldHVybiB0aGlzLmtleTtcclxuICAgIH0sXHJcblxyXG4gICAgLyoqXHJcbiAgICAgKiBSZXR1cm5zIHRoZSB0eXBlIG9mIHRoZSBzaGFkZXIgZnJvbSB0aGUgaGVhZGVyIGJsb2NrLlxyXG4gICAgICpcclxuICAgICAqIEBtZXRob2QgUGhhc2VyLkxvYWRlci5GaWxlVHlwZXMuR0xTTEZpbGUjZ2V0U2hhZGVyVHlwZVxyXG4gICAgICogQHNpbmNlIDMuMTcuMFxyXG4gICAgICogXHJcbiAgICAgKiBAcGFyYW0ge3N0cmluZ1tdfSBoZWFkZXJTb3VyY2UgLSBUaGUgaGVhZGVyIGRhdGEuXHJcbiAgICAgKiBcclxuICAgICAqIEByZXR1cm4ge3N0cmluZ30gVGhlIHNoYWRlciB0eXBlLiBFaXRoZXIgJ2ZyYWdtZW50JyBvciAndmVydGV4Jy5cclxuICAgICAqL1xyXG4gICAgZ2V0U2hhZGVyVHlwZTogZnVuY3Rpb24gKGhlYWRlclNvdXJjZSlcclxuICAgIHtcclxuICAgICAgICBmb3IgKHZhciBpID0gMDsgaSA8IGhlYWRlclNvdXJjZS5sZW5ndGg7IGkrKylcclxuICAgICAgICB7XHJcbiAgICAgICAgICAgIHZhciBsaW5lID0gaGVhZGVyU291cmNlW2ldLnRyaW0oKTtcclxuXHJcbiAgICAgICAgICAgIGlmIChsaW5lLnN1YnN0cmluZygwLCA1KSA9PT0gJ3R5cGU6JylcclxuICAgICAgICAgICAge1xyXG4gICAgICAgICAgICAgICAgcmV0dXJuIGxpbmUuc3Vic3RyaW5nKDUpLnRyaW0oKTtcclxuICAgICAgICAgICAgfVxyXG4gICAgICAgIH1cclxuXHJcbiAgICAgICAgcmV0dXJuIHRoaXMuY29uZmlnLnNoYWRlclR5cGU7XHJcbiAgICB9LFxyXG5cclxuICAgIC8qKlxyXG4gICAgICogUmV0dXJucyB0aGUgc2hhZGVyIHVuaWZvcm1zIGZyb20gdGhlIGhlYWRlciBibG9jay5cclxuICAgICAqXHJcbiAgICAgKiBAbWV0aG9kIFBoYXNlci5Mb2FkZXIuRmlsZVR5cGVzLkdMU0xGaWxlI2dldFNoYWRlclVuaWZvcm1zXHJcbiAgICAgKiBAc2luY2UgMy4xNy4wXHJcbiAgICAgKiBcclxuICAgICAqIEBwYXJhbSB7c3RyaW5nW119IGhlYWRlclNvdXJjZSAtIFRoZSBoZWFkZXIgZGF0YS5cclxuICAgICAqIFxyXG4gICAgICogQHJldHVybiB7YW55fSBUaGUgc2hhZGVyIHVuaWZvcm1zIG9iamVjdC5cclxuICAgICAqL1xyXG4gICAgZ2V0U2hhZGVyVW5pZm9ybXM6IGZ1bmN0aW9uIChoZWFkZXJTb3VyY2UpXHJcbiAgICB7XHJcbiAgICAgICAgdmFyIHVuaWZvcm1zID0ge307XHJcblxyXG4gICAgICAgIGZvciAodmFyIGkgPSAwOyBpIDwgaGVhZGVyU291cmNlLmxlbmd0aDsgaSsrKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgdmFyIGxpbmUgPSBoZWFkZXJTb3VyY2VbaV0udHJpbSgpO1xyXG5cclxuICAgICAgICAgICAgaWYgKGxpbmUuc3Vic3RyaW5nKDAsIDgpID09PSAndW5pZm9ybS4nKVxyXG4gICAgICAgICAgICB7XHJcbiAgICAgICAgICAgICAgICB2YXIgcG9zID0gbGluZS5pbmRleE9mKCc6Jyk7XHJcblxyXG4gICAgICAgICAgICAgICAgaWYgKHBvcylcclxuICAgICAgICAgICAgICAgIHtcclxuICAgICAgICAgICAgICAgICAgICB2YXIga2V5ID0gbGluZS5zdWJzdHJpbmcoOCwgcG9zKTtcclxuXHJcbiAgICAgICAgICAgICAgICAgICAgdHJ5XHJcbiAgICAgICAgICAgICAgICAgICAge1xyXG4gICAgICAgICAgICAgICAgICAgICAgICB1bmlmb3Jtc1trZXldID0gSlNPTi5wYXJzZShsaW5lLnN1YnN0cmluZyhwb3MgKyAxKSk7XHJcbiAgICAgICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgICAgIGNhdGNoIChlKVxyXG4gICAgICAgICAgICAgICAgICAgIHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgY29uc29sZS53YXJuKCdJbnZhbGlkIHVuaWZvcm0gSlNPTjogJyArIGtleSk7XHJcbiAgICAgICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICByZXR1cm4gdW5pZm9ybXM7XHJcbiAgICB9LFxyXG5cclxuICAgIC8qKlxyXG4gICAgICogUHJvY2Vzc2VzIHRoZSBzaGFkZXIgZmlsZSBhbmQgZXh0cmFjdHMgdGhlIHJlbGV2YW50IGRhdGEuXHJcbiAgICAgKlxyXG4gICAgICogQG1ldGhvZCBQaGFzZXIuTG9hZGVyLkZpbGVUeXBlcy5HTFNMRmlsZSNleHRyYWN0QmxvY2tcclxuICAgICAqIEBwcml2YXRlXHJcbiAgICAgKiBAc2luY2UgMy4xNy4wXHJcbiAgICAgKiBcclxuICAgICAqIEBwYXJhbSB7c3RyaW5nW119IGRhdGEgLSBUaGUgYXJyYXkgb2Ygc2hhZGVyIGRhdGEgdG8gcHJvY2Vzcy5cclxuICAgICAqIEBwYXJhbSB7aW50ZWdlcn0gb2Zmc2V0IC0gVGhlIG9mZnNldCB0byBzdGFydCBwcm9jZXNzaW5nIGZyb20uXHJcbiAgICAgKiBcclxuICAgICAqIEByZXR1cm4ge2FueX0gVGhlIHByb2Nlc3NlZCBzaGFkZXIgYmxvY2ssIG9yIG51bGwuXHJcbiAgICAgKi9cclxuICAgIGV4dHJhY3RCbG9jazogZnVuY3Rpb24gKGRhdGEsIG9mZnNldClcclxuICAgIHtcclxuICAgICAgICB2YXIgaGVhZGVyU3RhcnQgPSAtMTtcclxuICAgICAgICB2YXIgaGVhZGVyRW5kID0gLTE7XHJcbiAgICAgICAgdmFyIGJsb2NrRW5kID0gLTE7XHJcbiAgICAgICAgdmFyIGhlYWRlck9wZW4gPSBmYWxzZTtcclxuICAgICAgICB2YXIgY2FwdHVyZVNvdXJjZSA9IGZhbHNlO1xyXG4gICAgICAgIHZhciBoZWFkZXJTb3VyY2UgPSBbXTtcclxuICAgICAgICB2YXIgc2hhZGVyU291cmNlID0gW107XHJcblxyXG4gICAgICAgIGZvciAodmFyIGkgPSBvZmZzZXQ7IGkgPCBkYXRhLmxlbmd0aDsgaSsrKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgdmFyIGxpbmUgPSBkYXRhW2ldLnRyaW0oKTtcclxuXHJcbiAgICAgICAgICAgIGlmIChsaW5lID09PSAnLS0tJylcclxuICAgICAgICAgICAge1xyXG4gICAgICAgICAgICAgICAgaWYgKGhlYWRlclN0YXJ0ID09PSAtMSlcclxuICAgICAgICAgICAgICAgIHtcclxuICAgICAgICAgICAgICAgICAgICBoZWFkZXJTdGFydCA9IGk7XHJcbiAgICAgICAgICAgICAgICAgICAgaGVhZGVyT3BlbiA9IHRydWU7XHJcbiAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgICAgICBlbHNlIGlmIChoZWFkZXJPcGVuKVxyXG4gICAgICAgICAgICAgICAge1xyXG4gICAgICAgICAgICAgICAgICAgIGhlYWRlckVuZCA9IGk7XHJcbiAgICAgICAgICAgICAgICAgICAgaGVhZGVyT3BlbiA9IGZhbHNlO1xyXG4gICAgICAgICAgICAgICAgICAgIGNhcHR1cmVTb3VyY2UgPSB0cnVlO1xyXG4gICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgZWxzZVxyXG4gICAgICAgICAgICAgICAge1xyXG4gICAgICAgICAgICAgICAgICAgIC8vICBXZSd2ZSBoaXQgYW5vdGhlciAtLS0gZGVsaW1pdGVyLCBicmVhayBvdXRcclxuICAgICAgICAgICAgICAgICAgICBjYXB0dXJlU291cmNlID0gZmFsc2U7XHJcbiAgICAgICAgICAgICAgICAgICAgYnJlYWs7XHJcbiAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgZWxzZSBpZiAoaGVhZGVyT3BlbilcclxuICAgICAgICAgICAge1xyXG4gICAgICAgICAgICAgICAgaGVhZGVyU291cmNlLnB1c2gobGluZSk7XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgZWxzZSBpZiAoY2FwdHVyZVNvdXJjZSlcclxuICAgICAgICAgICAge1xyXG4gICAgICAgICAgICAgICAgc2hhZGVyU291cmNlLnB1c2gobGluZSk7XHJcbiAgICAgICAgICAgICAgICBibG9ja0VuZCA9IGk7XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICB9XHJcblxyXG4gICAgICAgIGlmICghaGVhZGVyT3BlbiAmJiBoZWFkZXJFbmQgIT09IC0xKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgcmV0dXJuIHsgaGVhZGVyOiBoZWFkZXJTb3VyY2UsIHNoYWRlcjogc2hhZGVyU291cmNlLmpvaW4oJ1xcbicpLCBvZmZzZXQ6IGJsb2NrRW5kIH07XHJcbiAgICAgICAgfVxyXG4gICAgICAgIGVsc2VcclxuICAgICAgICB7XHJcbiAgICAgICAgICAgIHJldHVybiBudWxsO1xyXG4gICAgICAgIH1cclxuICAgIH1cclxuXHJcbn0pO1xyXG5cclxuLyoqXHJcbiAqIEFkZHMgYSBHTFNMIGZpbGUsIG9yIGFycmF5IG9mIEdMU0wgZmlsZXMsIHRvIHRoZSBjdXJyZW50IGxvYWQgcXVldWUuXHJcbiAqIEluIFBoYXNlciAzIEdMU0wgZmlsZXMgYXJlIGp1c3QgcGxhaW4gVGV4dCBmaWxlcyBhdCB0aGUgY3VycmVudCBtb21lbnQgaW4gdGltZS5cclxuICpcclxuICogWW91IGNhbiBjYWxsIHRoaXMgbWV0aG9kIGZyb20gd2l0aGluIHlvdXIgU2NlbmUncyBgcHJlbG9hZGAsIGFsb25nIHdpdGggYW55IG90aGVyIGZpbGVzIHlvdSB3aXNoIHRvIGxvYWQ6XHJcbiAqIFxyXG4gKiBgYGBqYXZhc2NyaXB0XHJcbiAqIGZ1bmN0aW9uIHByZWxvYWQgKClcclxuICoge1xyXG4gKiAgICAgdGhpcy5sb2FkLmdsc2woJ3BsYXNtYScsICdzaGFkZXJzL1BsYXNtYS5nbHNsJyk7XHJcbiAqIH1cclxuICogYGBgXHJcbiAqXHJcbiAqIFRoZSBmaWxlIGlzICoqbm90KiogbG9hZGVkIHJpZ2h0IGF3YXkuIEl0IGlzIGFkZGVkIHRvIGEgcXVldWUgcmVhZHkgdG8gYmUgbG9hZGVkIGVpdGhlciB3aGVuIHRoZSBsb2FkZXIgc3RhcnRzLFxyXG4gKiBvciBpZiBpdCdzIGFscmVhZHkgcnVubmluZywgd2hlbiB0aGUgbmV4dCBmcmVlIGxvYWQgc2xvdCBiZWNvbWVzIGF2YWlsYWJsZS4gVGhpcyBoYXBwZW5zIGF1dG9tYXRpY2FsbHkgaWYgeW91XHJcbiAqIGFyZSBjYWxsaW5nIHRoaXMgZnJvbSB3aXRoaW4gdGhlIFNjZW5lJ3MgYHByZWxvYWRgIG1ldGhvZCwgb3IgYSByZWxhdGVkIGNhbGxiYWNrLiBCZWNhdXNlIHRoZSBmaWxlIGlzIHF1ZXVlZFxyXG4gKiBpdCBtZWFucyB5b3UgY2Fubm90IHVzZSB0aGUgZmlsZSBpbW1lZGlhdGVseSBhZnRlciBjYWxsaW5nIHRoaXMgbWV0aG9kLCBidXQgbXVzdCB3YWl0IGZvciB0aGUgZmlsZSB0byBjb21wbGV0ZS5cclxuICogVGhlIHR5cGljYWwgZmxvdyBmb3IgYSBQaGFzZXIgU2NlbmUgaXMgdGhhdCB5b3UgbG9hZCBhc3NldHMgaW4gdGhlIFNjZW5lJ3MgYHByZWxvYWRgIG1ldGhvZCBhbmQgdGhlbiB3aGVuIHRoZVxyXG4gKiBTY2VuZSdzIGBjcmVhdGVgIG1ldGhvZCBpcyBjYWxsZWQgeW91IGFyZSBndWFyYW50ZWVkIHRoYXQgYWxsIG9mIHRob3NlIGFzc2V0cyBhcmUgcmVhZHkgZm9yIHVzZSBhbmQgaGF2ZSBiZWVuXHJcbiAqIGxvYWRlZC5cclxuICogXHJcbiAqIFRoZSBrZXkgbXVzdCBiZSBhIHVuaXF1ZSBTdHJpbmcuIEl0IGlzIHVzZWQgdG8gYWRkIHRoZSBmaWxlIHRvIHRoZSBnbG9iYWwgU2hhZGVyIENhY2hlIHVwb24gYSBzdWNjZXNzZnVsIGxvYWQuXHJcbiAqIFRoZSBrZXkgc2hvdWxkIGJlIHVuaXF1ZSBib3RoIGluIHRlcm1zIG9mIGZpbGVzIGJlaW5nIGxvYWRlZCBhbmQgZmlsZXMgYWxyZWFkeSBwcmVzZW50IGluIHRoZSBTaGFkZXIgQ2FjaGUuXHJcbiAqIExvYWRpbmcgYSBmaWxlIHVzaW5nIGEga2V5IHRoYXQgaXMgYWxyZWFkeSB0YWtlbiB3aWxsIHJlc3VsdCBpbiBhIHdhcm5pbmcuIElmIHlvdSB3aXNoIHRvIHJlcGxhY2UgYW4gZXhpc3RpbmcgZmlsZVxyXG4gKiB0aGVuIHJlbW92ZSBpdCBmcm9tIHRoZSBTaGFkZXIgQ2FjaGUgZmlyc3QsIGJlZm9yZSBsb2FkaW5nIGEgbmV3IG9uZS5cclxuICpcclxuICogSW5zdGVhZCBvZiBwYXNzaW5nIGFyZ3VtZW50cyB5b3UgY2FuIHBhc3MgYSBjb25maWd1cmF0aW9uIG9iamVjdCwgc3VjaCBhczpcclxuICogXHJcbiAqIGBgYGphdmFzY3JpcHRcclxuICogdGhpcy5sb2FkLmdsc2woe1xyXG4gKiAgICAga2V5OiAncGxhc21hJyxcclxuICogICAgIHNoYWRlclR5cGU6ICdmcmFnbWVudCcsXHJcbiAqICAgICB1cmw6ICdzaGFkZXJzL1BsYXNtYS5nbHNsJ1xyXG4gKiB9KTtcclxuICogYGBgXHJcbiAqXHJcbiAqIFNlZSB0aGUgZG9jdW1lbnRhdGlvbiBmb3IgYFBoYXNlci5UeXBlcy5Mb2FkZXIuRmlsZVR5cGVzLkdMU0xGaWxlQ29uZmlnYCBmb3IgbW9yZSBkZXRhaWxzLlxyXG4gKlxyXG4gKiBPbmNlIHRoZSBmaWxlIGhhcyBmaW5pc2hlZCBsb2FkaW5nIHlvdSBjYW4gYWNjZXNzIGl0IGZyb20gaXRzIENhY2hlIHVzaW5nIGl0cyBrZXk6XHJcbiAqIFxyXG4gKiBgYGBqYXZhc2NyaXB0XHJcbiAqIHRoaXMubG9hZC5nbHNsKCdwbGFzbWEnLCAnc2hhZGVycy9QbGFzbWEuZ2xzbCcpO1xyXG4gKiAvLyBhbmQgbGF0ZXIgaW4geW91ciBnYW1lIC4uLlxyXG4gKiB2YXIgZGF0YSA9IHRoaXMuY2FjaGUuc2hhZGVyLmdldCgncGxhc21hJyk7XHJcbiAqIGBgYFxyXG4gKlxyXG4gKiBJZiB5b3UgaGF2ZSBzcGVjaWZpZWQgYSBwcmVmaXggaW4gdGhlIGxvYWRlciwgdmlhIGBMb2FkZXIuc2V0UHJlZml4YCB0aGVuIHRoaXMgdmFsdWUgd2lsbCBiZSBwcmVwZW5kZWQgdG8gdGhpcyBmaWxlc1xyXG4gKiBrZXkuIEZvciBleGFtcGxlLCBpZiB0aGUgcHJlZml4IHdhcyBgRlguYCBhbmQgdGhlIGtleSB3YXMgYFBsYXNtYWAgdGhlIGZpbmFsIGtleSB3aWxsIGJlIGBGWC5QbGFzbWFgIGFuZFxyXG4gKiB0aGlzIGlzIHdoYXQgeW91IHdvdWxkIHVzZSB0byByZXRyaWV2ZSB0aGUgdGV4dCBmcm9tIHRoZSBTaGFkZXIgQ2FjaGUuXHJcbiAqXHJcbiAqIFRoZSBVUkwgY2FuIGJlIHJlbGF0aXZlIG9yIGFic29sdXRlLiBJZiB0aGUgVVJMIGlzIHJlbGF0aXZlIHRoZSBgTG9hZGVyLmJhc2VVUkxgIGFuZCBgTG9hZGVyLnBhdGhgIHZhbHVlcyB3aWxsIGJlIHByZXBlbmRlZCB0byBpdC5cclxuICpcclxuICogSWYgdGhlIFVSTCBpc24ndCBzcGVjaWZpZWQgdGhlIExvYWRlciB3aWxsIHRha2UgdGhlIGtleSBhbmQgY3JlYXRlIGEgZmlsZW5hbWUgZnJvbSB0aGF0LiBGb3IgZXhhbXBsZSBpZiB0aGUga2V5IGlzIFwicGxhc21hXCJcclxuICogYW5kIG5vIFVSTCBpcyBnaXZlbiB0aGVuIHRoZSBMb2FkZXIgd2lsbCBzZXQgdGhlIFVSTCB0byBiZSBcInBsYXNtYS5nbHNsXCIuIEl0IHdpbGwgYWx3YXlzIGFkZCBgLmdsc2xgIGFzIHRoZSBleHRlbnNpb24sIGFsdGhvdWdoXHJcbiAqIHRoaXMgY2FuIGJlIG92ZXJyaWRkZW4gaWYgdXNpbmcgYW4gb2JqZWN0IGluc3RlYWQgb2YgbWV0aG9kIGFyZ3VtZW50cy4gSWYgeW91IGRvIG5vdCBkZXNpcmUgdGhpcyBhY3Rpb24gdGhlbiBwcm92aWRlIGEgVVJMLlxyXG4gKlxyXG4gKiBOb3RlOiBUaGUgYWJpbGl0eSB0byBsb2FkIHRoaXMgdHlwZSBvZiBmaWxlIHdpbGwgb25seSBiZSBhdmFpbGFibGUgaWYgdGhlIEdMU0wgRmlsZSB0eXBlIGhhcyBiZWVuIGJ1aWx0IGludG8gUGhhc2VyLlxyXG4gKiBJdCBpcyBhdmFpbGFibGUgaW4gdGhlIGRlZmF1bHQgYnVpbGQgYnV0IGNhbiBiZSBleGNsdWRlZCBmcm9tIGN1c3RvbSBidWlsZHMuXHJcbiAqXHJcbiAqIEBtZXRob2QgUGhhc2VyLkxvYWRlci5Mb2FkZXJQbHVnaW4jZ2xzbFxyXG4gKiBAZmlyZXMgUGhhc2VyLkxvYWRlci5Mb2FkZXJQbHVnaW4jYWRkRmlsZUV2ZW50XHJcbiAqIEBzaW5jZSAzLjAuMFxyXG4gKlxyXG4gKiBAcGFyYW0geyhzdHJpbmd8UGhhc2VyLlR5cGVzLkxvYWRlci5GaWxlVHlwZXMuR0xTTEZpbGVDb25maWd8UGhhc2VyLlR5cGVzLkxvYWRlci5GaWxlVHlwZXMuR0xTTEZpbGVDb25maWdbXSl9IGtleSAtIFRoZSBrZXkgdG8gdXNlIGZvciB0aGlzIGZpbGUsIG9yIGEgZmlsZSBjb25maWd1cmF0aW9uIG9iamVjdCwgb3IgYXJyYXkgb2YgdGhlbS5cclxuICogQHBhcmFtIHtzdHJpbmd9IFt1cmxdIC0gVGhlIGFic29sdXRlIG9yIHJlbGF0aXZlIFVSTCB0byBsb2FkIHRoaXMgZmlsZSBmcm9tLiBJZiB1bmRlZmluZWQgb3IgYG51bGxgIGl0IHdpbGwgYmUgc2V0IHRvIGA8a2V5Pi5nbHNsYCwgaS5lLiBpZiBga2V5YCB3YXMgXCJhbGllblwiIHRoZW4gdGhlIFVSTCB3aWxsIGJlIFwiYWxpZW4uZ2xzbFwiLlxyXG4gKiBAcGFyYW0ge3N0cmluZ30gW3NoYWRlclR5cGU9J2ZyYWdtZW50J10gLSBUaGUgdHlwZSBvZiBzaGFkZXIuIEVpdGhlciBgZnJhZ21lbnRgIGZvciBhIGZyYWdtZW50IHNoYWRlciwgb3IgYHZlcnRleGAgZm9yIGEgdmVydGV4IHNoYWRlci4gVGhpcyBpcyBpZ25vcmVkIGlmIHlvdSBsb2FkIGEgc2hhZGVyIGJ1bmRsZS5cclxuICogQHBhcmFtIHtQaGFzZXIuVHlwZXMuTG9hZGVyLlhIUlNldHRpbmdzT2JqZWN0fSBbeGhyU2V0dGluZ3NdIC0gQW4gWEhSIFNldHRpbmdzIGNvbmZpZ3VyYXRpb24gb2JqZWN0LiBVc2VkIGluIHJlcGxhY2VtZW50IG9mIHRoZSBMb2FkZXJzIGRlZmF1bHQgWEhSIFNldHRpbmdzLlxyXG4gKlxyXG4gKiBAcmV0dXJuIHtQaGFzZXIuTG9hZGVyLkxvYWRlclBsdWdpbn0gVGhlIExvYWRlciBpbnN0YW5jZS5cclxuICovXHJcbkZpbGVUeXBlc01hbmFnZXIucmVnaXN0ZXIoJ2dsc2wnLCBmdW5jdGlvbiAoa2V5LCB1cmwsIHNoYWRlclR5cGUsIHhoclNldHRpbmdzKVxyXG57XHJcbiAgICBpZiAoQXJyYXkuaXNBcnJheShrZXkpKVxyXG4gICAge1xyXG4gICAgICAgIGZvciAodmFyIGkgPSAwOyBpIDwga2V5Lmxlbmd0aDsgaSsrKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgLy8gIElmIGl0J3MgYW4gYXJyYXkgaXQgaGFzIHRvIGJlIGFuIGFycmF5IG9mIE9iamVjdHMsIHNvIHdlIGdldCBldmVyeXRoaW5nIG91dCBvZiB0aGUgJ2tleScgb2JqZWN0XHJcbiAgICAgICAgICAgIHRoaXMuYWRkRmlsZShuZXcgR0xTTEZpbGUodGhpcywga2V5W2ldKSk7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG4gICAgZWxzZVxyXG4gICAge1xyXG4gICAgICAgIHRoaXMuYWRkRmlsZShuZXcgR0xTTEZpbGUodGhpcywga2V5LCB1cmwsIHNoYWRlclR5cGUsIHhoclNldHRpbmdzKSk7XHJcbiAgICB9XHJcblxyXG4gICAgcmV0dXJuIHRoaXM7XHJcbn0pO1xyXG5cclxubW9kdWxlLmV4cG9ydHMgPSBHTFNMRmlsZTtcclxuIl0sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/loader/filetypes/GLSLFile.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

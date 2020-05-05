@@ -1,0 +1,350 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for createSocketUrl.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> createSocketUrl.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">78.02% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>71/91</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>9/9</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">78.02% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>71/91</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line medium'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
+/* global self */
+&nbsp;
+var url = __webpack_require__(/*! url */ "./node_modules/url/url.js");
+&nbsp;
+var getCurrentScriptSource = __webpack_require__(/*! ./getCurrentScriptSource */ "./node_modules/webpack-dev-server/client/utils/getCurrentScriptSource.js");
+&nbsp;
+function createSocketUrl(resourceQuery, currentLocation) {
+  var urlParts;
+&nbsp;
+  if (typeof resourceQuery === 'string' &amp;&amp; resourceQuery !== '') {
+    // If this bundle is inlined, use the resource query to get the correct url.
+    // format is like `?http://0.0.0.0:8096&amp;sockPort=8097&amp;sockHost=localhost`
+    urlParts = url.parse(resourceQuery // strip leading `?` from query string to get a valid URL
+    .substr(1) // replace first `&amp;` with `?` to have a valid query string
+    .replace('&amp;', '?'), true);
+<span class="cstat-no" title="statement not covered" >  } else {</span>
+<span class="cstat-no" title="statement not covered" >    // Else, get the url from the &lt;script&gt; this file was called with.</span>
+<span class="cstat-no" title="statement not covered" >    var scriptHost = getCurrentScriptSource();</span>
+<span class="cstat-no" title="statement not covered" >    urlParts = url.parse(scriptHost || '/', true, true);</span>
+<span class="cstat-no" title="statement not covered" >  } // Use parameter to allow passing location in unit tests</span>
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  if (typeof currentLocation === 'string' &amp;&amp; currentLocation !== '') {</span>
+<span class="cstat-no" title="statement not covered" >    currentLocation = url.parse(currentLocation);</span>
+<span class="cstat-no" title="statement not covered" >  } else {</span>
+    currentLocation = self.location;
+  }
+&nbsp;
+  return getSocketUrl(urlParts, currentLocation);
+}
+/*
+ * Gets socket URL based on Script Source/Location
+ * (scriptSrc: URL, location: URL) -&gt; URL
+ */
+&nbsp;
+&nbsp;
+function getSocketUrl(urlParts, loc) {
+  var auth = urlParts.auth,
+      query = urlParts.query;
+  var hostname = urlParts.hostname,
+      protocol = urlParts.protocol,
+      port = urlParts.port;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  if (!port || port === '0') {</span>
+<span class="cstat-no" title="statement not covered" >    port = loc.port;</span>
+<span class="cstat-no" title="statement not covered" >  } // check ipv4 and ipv6 `all hostname`</span>
+  // why do we need this check?
+  // hostname n/a for file protocol (example, when using electron, ionic)
+  // see: https://github.com/webpack/webpack-dev-server/pull/384
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  if ((hostname === '0.0.0.0' || hostname === '::') &amp;&amp; loc.hostname &amp;&amp; loc.protocol.indexOf('http') === 0) {</span>
+<span class="cstat-no" title="statement not covered" >    hostname = loc.hostname;</span>
+<span class="cstat-no" title="statement not covered" >  } // `hostname` can be empty when the script path is relative. In that case, specifying</span>
+  // a protocol would result in an invalid URL.
+  // When https is used in the app, secure websockets are always necessary
+  // because the browser doesn't accept non-secure websockets.
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  if (hostname &amp;&amp; hostname !== '127.0.0.1' &amp;&amp; (loc.protocol === 'https:' || urlParts.hostname === '0.0.0.0')) {</span>
+<span class="cstat-no" title="statement not covered" >    protocol = loc.protocol;</span>
+<span class="cstat-no" title="statement not covered" >  } // all of these sock url params are optionally passed in through</span>
+  // resourceQuery, so we need to fall back to the default if
+  // they are not provided
+&nbsp;
+&nbsp;
+  var sockHost = query.sockHost || hostname;
+  var sockPath = query.sockPath || '/sockjs-node';
+  var sockPort = query.sockPort || port;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  if (sockPort === 'location') {</span>
+<span class="cstat-no" title="statement not covered" >    sockPort = loc.port;</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
+&nbsp;
+  return url.format({
+    protocol: protocol,
+    auth: auth,
+    hostname: sockHost,
+    port: sockPort,
+    // If sockPath is provided it'll be passed in via the resourceQuery as a
+    // query param so it has to be parsed out of the querystring in order for the
+    // client to open the socket to the correct location.
+    pathname: sockPath
+  });
+}
+&nbsp;
+module.exports = createSocketUrl;//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vKHdlYnBhY2spLWRldi1zZXJ2ZXIvY2xpZW50L3V0aWxzL2NyZWF0ZVNvY2tldFVybC5qcz8yZWY2Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFhO0FBQ2I7O0FBRUEsVUFBVSxtQkFBTyxDQUFDLHNDQUFLOztBQUV2Qiw2QkFBNkIsbUJBQU8sQ0FBQywwR0FBMEI7O0FBRS9EO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsR0FBRztBQUNIO0FBQ0E7QUFDQTtBQUNBLEdBQUc7OztBQUdIO0FBQ0E7QUFDQSxHQUFHO0FBQ0g7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7OztBQUdBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0EsR0FBRztBQUNIO0FBQ0E7QUFDQTs7O0FBR0E7QUFDQTtBQUNBLEdBQUc7QUFDSDtBQUNBO0FBQ0E7OztBQUdBO0FBQ0E7QUFDQSxHQUFHO0FBQ0g7QUFDQTs7O0FBR0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxHQUFHO0FBQ0g7O0FBRUEiLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvd2VicGFjay1kZXYtc2VydmVyL2NsaWVudC91dGlscy9jcmVhdGVTb2NrZXRVcmwuanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyIndXNlIHN0cmljdCc7XG4vKiBnbG9iYWwgc2VsZiAqL1xuXG52YXIgdXJsID0gcmVxdWlyZSgndXJsJyk7XG5cbnZhciBnZXRDdXJyZW50U2NyaXB0U291cmNlID0gcmVxdWlyZSgnLi9nZXRDdXJyZW50U2NyaXB0U291cmNlJyk7XG5cbmZ1bmN0aW9uIGNyZWF0ZVNvY2tldFVybChyZXNvdXJjZVF1ZXJ5LCBjdXJyZW50TG9jYXRpb24pIHtcbiAgdmFyIHVybFBhcnRzO1xuXG4gIGlmICh0eXBlb2YgcmVzb3VyY2VRdWVyeSA9PT0gJ3N0cmluZycgJiYgcmVzb3VyY2VRdWVyeSAhPT0gJycpIHtcbiAgICAvLyBJZiB0aGlzIGJ1bmRsZSBpcyBpbmxpbmVkLCB1c2UgdGhlIHJlc291cmNlIHF1ZXJ5IHRvIGdldCB0aGUgY29ycmVjdCB1cmwuXG4gICAgLy8gZm9ybWF0IGlzIGxpa2UgYD9odHRwOi8vMC4wLjAuMDo4MDk2JnNvY2tQb3J0PTgwOTcmc29ja0hvc3Q9bG9jYWxob3N0YFxuICAgIHVybFBhcnRzID0gdXJsLnBhcnNlKHJlc291cmNlUXVlcnkgLy8gc3RyaXAgbGVhZGluZyBgP2AgZnJvbSBxdWVyeSBzdHJpbmcgdG8gZ2V0IGEgdmFsaWQgVVJMXG4gICAgLnN1YnN0cigxKSAvLyByZXBsYWNlIGZpcnN0IGAmYCB3aXRoIGA/YCB0byBoYXZlIGEgdmFsaWQgcXVlcnkgc3RyaW5nXG4gICAgLnJlcGxhY2UoJyYnLCAnPycpLCB0cnVlKTtcbiAgfSBlbHNlIHtcbiAgICAvLyBFbHNlLCBnZXQgdGhlIHVybCBmcm9tIHRoZSA8c2NyaXB0PiB0aGlzIGZpbGUgd2FzIGNhbGxlZCB3aXRoLlxuICAgIHZhciBzY3JpcHRIb3N0ID0gZ2V0Q3VycmVudFNjcmlwdFNvdXJjZSgpO1xuICAgIHVybFBhcnRzID0gdXJsLnBhcnNlKHNjcmlwdEhvc3QgfHwgJy8nLCB0cnVlLCB0cnVlKTtcbiAgfSAvLyBVc2UgcGFyYW1ldGVyIHRvIGFsbG93IHBhc3NpbmcgbG9jYXRpb24gaW4gdW5pdCB0ZXN0c1xuXG5cbiAgaWYgKHR5cGVvZiBjdXJyZW50TG9jYXRpb24gPT09ICdzdHJpbmcnICYmIGN1cnJlbnRMb2NhdGlvbiAhPT0gJycpIHtcbiAgICBjdXJyZW50TG9jYXRpb24gPSB1cmwucGFyc2UoY3VycmVudExvY2F0aW9uKTtcbiAgfSBlbHNlIHtcbiAgICBjdXJyZW50TG9jYXRpb24gPSBzZWxmLmxvY2F0aW9uO1xuICB9XG5cbiAgcmV0dXJuIGdldFNvY2tldFVybCh1cmxQYXJ0cywgY3VycmVudExvY2F0aW9uKTtcbn1cbi8qXG4gKiBHZXRzIHNvY2tldCBVUkwgYmFzZWQgb24gU2NyaXB0IFNvdXJjZS9Mb2NhdGlvblxuICogKHNjcmlwdFNyYzogVVJMLCBsb2NhdGlvbjogVVJMKSAtPiBVUkxcbiAqL1xuXG5cbmZ1bmN0aW9uIGdldFNvY2tldFVybCh1cmxQYXJ0cywgbG9jKSB7XG4gIHZhciBhdXRoID0gdXJsUGFydHMuYXV0aCxcbiAgICAgIHF1ZXJ5ID0gdXJsUGFydHMucXVlcnk7XG4gIHZhciBob3N0bmFtZSA9IHVybFBhcnRzLmhvc3RuYW1lLFxuICAgICAgcHJvdG9jb2wgPSB1cmxQYXJ0cy5wcm90b2NvbCxcbiAgICAgIHBvcnQgPSB1cmxQYXJ0cy5wb3J0O1xuXG4gIGlmICghcG9ydCB8fCBwb3J0ID09PSAnMCcpIHtcbiAgICBwb3J0ID0gbG9jLnBvcnQ7XG4gIH0gLy8gY2hlY2sgaXB2NCBhbmQgaXB2NiBgYWxsIGhvc3RuYW1lYFxuICAvLyB3aHkgZG8gd2UgbmVlZCB0aGlzIGNoZWNrP1xuICAvLyBob3N0bmFtZSBuL2EgZm9yIGZpbGUgcHJvdG9jb2wgKGV4YW1wbGUsIHdoZW4gdXNpbmcgZWxlY3Ryb24sIGlvbmljKVxuICAvLyBzZWU6IGh0dHBzOi8vZ2l0aHViLmNvbS93ZWJwYWNrL3dlYnBhY2stZGV2LXNlcnZlci9wdWxsLzM4NFxuXG5cbiAgaWYgKChob3N0bmFtZSA9PT0gJzAuMC4wLjAnIHx8IGhvc3RuYW1lID09PSAnOjonKSAmJiBsb2MuaG9zdG5hbWUgJiYgbG9jLnByb3RvY29sLmluZGV4T2YoJ2h0dHAnKSA9PT0gMCkge1xuICAgIGhvc3RuYW1lID0gbG9jLmhvc3RuYW1lO1xuICB9IC8vIGBob3N0bmFtZWAgY2FuIGJlIGVtcHR5IHdoZW4gdGhlIHNjcmlwdCBwYXRoIGlzIHJlbGF0aXZlLiBJbiB0aGF0IGNhc2UsIHNwZWNpZnlpbmdcbiAgLy8gYSBwcm90b2NvbCB3b3VsZCByZXN1bHQgaW4gYW4gaW52YWxpZCBVUkwuXG4gIC8vIFdoZW4gaHR0cHMgaXMgdXNlZCBpbiB0aGUgYXBwLCBzZWN1cmUgd2Vic29ja2V0cyBhcmUgYWx3YXlzIG5lY2Vzc2FyeVxuICAvLyBiZWNhdXNlIHRoZSBicm93c2VyIGRvZXNuJ3QgYWNjZXB0IG5vbi1zZWN1cmUgd2Vic29ja2V0cy5cblxuXG4gIGlmIChob3N0bmFtZSAmJiBob3N0bmFtZSAhPT0gJzEyNy4wLjAuMScgJiYgKGxvYy5wcm90b2NvbCA9PT0gJ2h0dHBzOicgfHwgdXJsUGFydHMuaG9zdG5hbWUgPT09ICcwLjAuMC4wJykpIHtcbiAgICBwcm90b2NvbCA9IGxvYy5wcm90b2NvbDtcbiAgfSAvLyBhbGwgb2YgdGhlc2Ugc29jayB1cmwgcGFyYW1zIGFyZSBvcHRpb25hbGx5IHBhc3NlZCBpbiB0aHJvdWdoXG4gIC8vIHJlc291cmNlUXVlcnksIHNvIHdlIG5lZWQgdG8gZmFsbCBiYWNrIHRvIHRoZSBkZWZhdWx0IGlmXG4gIC8vIHRoZXkgYXJlIG5vdCBwcm92aWRlZFxuXG5cbiAgdmFyIHNvY2tIb3N0ID0gcXVlcnkuc29ja0hvc3QgfHwgaG9zdG5hbWU7XG4gIHZhciBzb2NrUGF0aCA9IHF1ZXJ5LnNvY2tQYXRoIHx8ICcvc29ja2pzLW5vZGUnO1xuICB2YXIgc29ja1BvcnQgPSBxdWVyeS5zb2NrUG9ydCB8fCBwb3J0O1xuXG4gIGlmIChzb2NrUG9ydCA9PT0gJ2xvY2F0aW9uJykge1xuICAgIHNvY2tQb3J0ID0gbG9jLnBvcnQ7XG4gIH1cblxuICByZXR1cm4gdXJsLmZvcm1hdCh7XG4gICAgcHJvdG9jb2w6IHByb3RvY29sLFxuICAgIGF1dGg6IGF1dGgsXG4gICAgaG9zdG5hbWU6IHNvY2tIb3N0LFxuICAgIHBvcnQ6IHNvY2tQb3J0LFxuICAgIC8vIElmIHNvY2tQYXRoIGlzIHByb3ZpZGVkIGl0J2xsIGJlIHBhc3NlZCBpbiB2aWEgdGhlIHJlc291cmNlUXVlcnkgYXMgYVxuICAgIC8vIHF1ZXJ5IHBhcmFtIHNvIGl0IGhhcyB0byBiZSBwYXJzZWQgb3V0IG9mIHRoZSBxdWVyeXN0cmluZyBpbiBvcmRlciBmb3IgdGhlXG4gICAgLy8gY2xpZW50IHRvIG9wZW4gdGhlIHNvY2tldCB0byB0aGUgY29ycmVjdCBsb2NhdGlvbi5cbiAgICBwYXRobmFtZTogc29ja1BhdGhcbiAgfSk7XG59XG5cbm1vZHVsZS5leHBvcnRzID0gY3JlYXRlU29ja2V0VXJsOyJdLCJzb3VyY2VSb290IjoiIn0=
+//# sourceURL=webpack-internal:///./node_modules/webpack-dev-server/client/utils/createSocketUrl.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

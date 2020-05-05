@@ -1,0 +1,263 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for BitmapTextFactory.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> BitmapTextFactory.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">93.55% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>58/62</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>2/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">93.55% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>58/62</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var BitmapText = __webpack_require__(/*! ./BitmapText */ "./node_modules/phaser/src/gameobjects/bitmaptext/static/BitmapText.js");
+var GameObjectFactory = __webpack_require__(/*! ../../GameObjectFactory */ "./node_modules/phaser/src/gameobjects/GameObjectFactory.js");
+&nbsp;
+/**
+ * Creates a new Bitmap Text Game Object and adds it to the Scene.
+ * 
+ * BitmapText objects work by taking a texture file and an XML or JSON file that describes the font structure.
+ * 
+ * During rendering for each letter of the text is rendered to the display, proportionally spaced out and aligned to
+ * match the font structure.
+ * 
+ * BitmapText objects are less flexible than Text objects, in that they have less features such as shadows, fills and the ability
+ * to use Web Fonts, however you trade this flexibility for rendering speed. You can also create visually compelling BitmapTexts by
+ * processing the font texture in an image editor, applying fills and any other effects required.
+ *
+ * To create multi-line text insert \r, \n or \r\n escape codes into the text string.
+ *
+ * To create a BitmapText data files you need a 3rd party app such as:
+ *
+ * BMFont (Windows, free): http://www.angelcode.com/products/bmfont/
+ * Glyph Designer (OS X, commercial): http://www.71squared.com/en/glyphdesigner
+ * Littera (Web-based, free): http://kvazars.com/littera/
+ *
+ * For most use cases it is recommended to use XML. If you wish to use JSON, the formatting should be equal to the result of
+ * converting a valid XML file through the popular X2JS library. An online tool for conversion can be found here: http://codebeautify.org/xmltojson
+ *
+ * Note: This method will only be available if the Bitmap Text Game Object has been built into Phaser.
+ *
+ * @method Phaser.GameObjects.GameObjectFactory#bitmapText
+ * @since 3.0.0
+ *
+ * @param {number} x - The x position of the Game Object.
+ * @param {number} y - The y position of the Game Object.
+ * @param {string} font - The key of the font to use from the BitmapFont cache.
+ * @param {(string|string[])} [text] - The string, or array of strings, to be set as the content of this Bitmap Text.
+ * @param {number} [size] - The font size to set.
+ * @param {integer} [align=0] - The alignment of the text in a multi-line BitmapText object.
+ *
+ * @return {Phaser.GameObjects.BitmapText} The Game Object that was created.
+ */
+<span class="cstat-no" title="statement not covered" >GameObjectFactory.register('bitmapText', function (x, y, font, text, size, align)</span>
+<span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    return this.displayList.add(new BitmapText(this.scene, x, y, font, text, size, align));</span>
+<span class="cstat-no" title="statement not covered" >});</span>
+&nbsp;
+//  When registering a factory function 'this' refers to the GameObjectFactory context.
+//
+//  There are several properties available to use:
+//
+//  this.scene - a reference to the Scene that owns the GameObjectFactory
+//  this.displayList - a reference to the Display List the Scene owns
+//  this.updateList - a reference to the Update List the Scene owns
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9nYW1lb2JqZWN0cy9iaXRtYXB0ZXh0L3N0YXRpYy9CaXRtYXBUZXh0RmFjdG9yeS5qcz80MjEwIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBLGtCQUFrQjtBQUNsQjs7QUFFQSxpQkFBaUIsbUJBQU8sQ0FBQywyRkFBYztBQUN2Qyx3QkFBd0IsbUJBQU8sQ0FBQywyRkFBeUI7O0FBRXpEO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsV0FBVyxPQUFPO0FBQ2xCLFdBQVcsT0FBTztBQUNsQixXQUFXLE9BQU87QUFDbEIsV0FBVyxrQkFBa0I7QUFDN0IsV0FBVyxPQUFPO0FBQ2xCLFdBQVcsUUFBUTtBQUNuQjtBQUNBLFlBQVksOEJBQThCO0FBQzFDO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsQ0FBQzs7QUFFRDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsImZpbGUiOiIuL25vZGVfbW9kdWxlcy9waGFzZXIvc3JjL2dhbWVvYmplY3RzL2JpdG1hcHRleHQvc3RhdGljL0JpdG1hcFRleHRGYWN0b3J5LmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXHJcbiAqIEBhdXRob3IgICAgICAgUmljaGFyZCBEYXZleSA8cmljaEBwaG90b25zdG9ybS5jb20+XHJcbiAqIEBjb3B5cmlnaHQgICAgMjAxOSBQaG90b24gU3Rvcm0gTHRkLlxyXG4gKiBAbGljZW5zZSAgICAgIHtAbGluayBodHRwczovL29wZW5zb3VyY2Uub3JnL2xpY2Vuc2VzL01JVHxNSVQgTGljZW5zZX1cclxuICovXHJcblxyXG52YXIgQml0bWFwVGV4dCA9IHJlcXVpcmUoJy4vQml0bWFwVGV4dCcpO1xyXG52YXIgR2FtZU9iamVjdEZhY3RvcnkgPSByZXF1aXJlKCcuLi8uLi9HYW1lT2JqZWN0RmFjdG9yeScpO1xyXG5cclxuLyoqXHJcbiAqIENyZWF0ZXMgYSBuZXcgQml0bWFwIFRleHQgR2FtZSBPYmplY3QgYW5kIGFkZHMgaXQgdG8gdGhlIFNjZW5lLlxyXG4gKiBcclxuICogQml0bWFwVGV4dCBvYmplY3RzIHdvcmsgYnkgdGFraW5nIGEgdGV4dHVyZSBmaWxlIGFuZCBhbiBYTUwgb3IgSlNPTiBmaWxlIHRoYXQgZGVzY3JpYmVzIHRoZSBmb250IHN0cnVjdHVyZS5cclxuICogXHJcbiAqIER1cmluZyByZW5kZXJpbmcgZm9yIGVhY2ggbGV0dGVyIG9mIHRoZSB0ZXh0IGlzIHJlbmRlcmVkIHRvIHRoZSBkaXNwbGF5LCBwcm9wb3J0aW9uYWxseSBzcGFjZWQgb3V0IGFuZCBhbGlnbmVkIHRvXHJcbiAqIG1hdGNoIHRoZSBmb250IHN0cnVjdHVyZS5cclxuICogXHJcbiAqIEJpdG1hcFRleHQgb2JqZWN0cyBhcmUgbGVzcyBmbGV4aWJsZSB0aGFuIFRleHQgb2JqZWN0cywgaW4gdGhhdCB0aGV5IGhhdmUgbGVzcyBmZWF0dXJlcyBzdWNoIGFzIHNoYWRvd3MsIGZpbGxzIGFuZCB0aGUgYWJpbGl0eVxyXG4gKiB0byB1c2UgV2ViIEZvbnRzLCBob3dldmVyIHlvdSB0cmFkZSB0aGlzIGZsZXhpYmlsaXR5IGZvciByZW5kZXJpbmcgc3BlZWQuIFlvdSBjYW4gYWxzbyBjcmVhdGUgdmlzdWFsbHkgY29tcGVsbGluZyBCaXRtYXBUZXh0cyBieVxyXG4gKiBwcm9jZXNzaW5nIHRoZSBmb250IHRleHR1cmUgaW4gYW4gaW1hZ2UgZWRpdG9yLCBhcHBseWluZyBmaWxscyBhbmQgYW55IG90aGVyIGVmZmVjdHMgcmVxdWlyZWQuXHJcbiAqXHJcbiAqIFRvIGNyZWF0ZSBtdWx0aS1saW5lIHRleHQgaW5zZXJ0IFxcciwgXFxuIG9yIFxcclxcbiBlc2NhcGUgY29kZXMgaW50byB0aGUgdGV4dCBzdHJpbmcuXHJcbiAqXHJcbiAqIFRvIGNyZWF0ZSBhIEJpdG1hcFRleHQgZGF0YSBmaWxlcyB5b3UgbmVlZCBhIDNyZCBwYXJ0eSBhcHAgc3VjaCBhczpcclxuICpcclxuICogQk1Gb250IChXaW5kb3dzLCBmcmVlKTogaHR0cDovL3d3dy5hbmdlbGNvZGUuY29tL3Byb2R1Y3RzL2JtZm9udC9cclxuICogR2x5cGggRGVzaWduZXIgKE9TIFgsIGNvbW1lcmNpYWwpOiBodHRwOi8vd3d3Ljcxc3F1YXJlZC5jb20vZW4vZ2x5cGhkZXNpZ25lclxyXG4gKiBMaXR0ZXJhIChXZWItYmFzZWQsIGZyZWUpOiBodHRwOi8va3ZhemFycy5jb20vbGl0dGVyYS9cclxuICpcclxuICogRm9yIG1vc3QgdXNlIGNhc2VzIGl0IGlzIHJlY29tbWVuZGVkIHRvIHVzZSBYTUwuIElmIHlvdSB3aXNoIHRvIHVzZSBKU09OLCB0aGUgZm9ybWF0dGluZyBzaG91bGQgYmUgZXF1YWwgdG8gdGhlIHJlc3VsdCBvZlxyXG4gKiBjb252ZXJ0aW5nIGEgdmFsaWQgWE1MIGZpbGUgdGhyb3VnaCB0aGUgcG9wdWxhciBYMkpTIGxpYnJhcnkuIEFuIG9ubGluZSB0b29sIGZvciBjb252ZXJzaW9uIGNhbiBiZSBmb3VuZCBoZXJlOiBodHRwOi8vY29kZWJlYXV0aWZ5Lm9yZy94bWx0b2pzb25cclxuICpcclxuICogTm90ZTogVGhpcyBtZXRob2Qgd2lsbCBvbmx5IGJlIGF2YWlsYWJsZSBpZiB0aGUgQml0bWFwIFRleHQgR2FtZSBPYmplY3QgaGFzIGJlZW4gYnVpbHQgaW50byBQaGFzZXIuXHJcbiAqXHJcbiAqIEBtZXRob2QgUGhhc2VyLkdhbWVPYmplY3RzLkdhbWVPYmplY3RGYWN0b3J5I2JpdG1hcFRleHRcclxuICogQHNpbmNlIDMuMC4wXHJcbiAqXHJcbiAqIEBwYXJhbSB7bnVtYmVyfSB4IC0gVGhlIHggcG9zaXRpb24gb2YgdGhlIEdhbWUgT2JqZWN0LlxyXG4gKiBAcGFyYW0ge251bWJlcn0geSAtIFRoZSB5IHBvc2l0aW9uIG9mIHRoZSBHYW1lIE9iamVjdC5cclxuICogQHBhcmFtIHtzdHJpbmd9IGZvbnQgLSBUaGUga2V5IG9mIHRoZSBmb250IHRvIHVzZSBmcm9tIHRoZSBCaXRtYXBGb250IGNhY2hlLlxyXG4gKiBAcGFyYW0geyhzdHJpbmd8c3RyaW5nW10pfSBbdGV4dF0gLSBUaGUgc3RyaW5nLCBvciBhcnJheSBvZiBzdHJpbmdzLCB0byBiZSBzZXQgYXMgdGhlIGNvbnRlbnQgb2YgdGhpcyBCaXRtYXAgVGV4dC5cclxuICogQHBhcmFtIHtudW1iZXJ9IFtzaXplXSAtIFRoZSBmb250IHNpemUgdG8gc2V0LlxyXG4gKiBAcGFyYW0ge2ludGVnZXJ9IFthbGlnbj0wXSAtIFRoZSBhbGlnbm1lbnQgb2YgdGhlIHRleHQgaW4gYSBtdWx0aS1saW5lIEJpdG1hcFRleHQgb2JqZWN0LlxyXG4gKlxyXG4gKiBAcmV0dXJuIHtQaGFzZXIuR2FtZU9iamVjdHMuQml0bWFwVGV4dH0gVGhlIEdhbWUgT2JqZWN0IHRoYXQgd2FzIGNyZWF0ZWQuXHJcbiAqL1xyXG5HYW1lT2JqZWN0RmFjdG9yeS5yZWdpc3RlcignYml0bWFwVGV4dCcsIGZ1bmN0aW9uICh4LCB5LCBmb250LCB0ZXh0LCBzaXplLCBhbGlnbilcclxue1xyXG4gICAgcmV0dXJuIHRoaXMuZGlzcGxheUxpc3QuYWRkKG5ldyBCaXRtYXBUZXh0KHRoaXMuc2NlbmUsIHgsIHksIGZvbnQsIHRleHQsIHNpemUsIGFsaWduKSk7XHJcbn0pO1xyXG5cclxuLy8gIFdoZW4gcmVnaXN0ZXJpbmcgYSBmYWN0b3J5IGZ1bmN0aW9uICd0aGlzJyByZWZlcnMgdG8gdGhlIEdhbWVPYmplY3RGYWN0b3J5IGNvbnRleHQuXHJcbi8vXHJcbi8vICBUaGVyZSBhcmUgc2V2ZXJhbCBwcm9wZXJ0aWVzIGF2YWlsYWJsZSB0byB1c2U6XHJcbi8vXHJcbi8vICB0aGlzLnNjZW5lIC0gYSByZWZlcmVuY2UgdG8gdGhlIFNjZW5lIHRoYXQgb3ducyB0aGUgR2FtZU9iamVjdEZhY3RvcnlcclxuLy8gIHRoaXMuZGlzcGxheUxpc3QgLSBhIHJlZmVyZW5jZSB0byB0aGUgRGlzcGxheSBMaXN0IHRoZSBTY2VuZSBvd25zXHJcbi8vICB0aGlzLnVwZGF0ZUxpc3QgLSBhIHJlZmVyZW5jZSB0byB0aGUgVXBkYXRlIExpc3QgdGhlIFNjZW5lIG93bnNcclxuIl0sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/gameobjects/bitmaptext/static/BitmapTextFactory.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

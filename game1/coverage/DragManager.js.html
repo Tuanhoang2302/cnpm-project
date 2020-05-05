@@ -1,0 +1,356 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for DragManager.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> DragManager.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">21.51% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>20/93</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>3/3</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">21.51% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>20/93</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
+&nbsp;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = exports.spaceValid = void 0;
+&nbsp;
+__webpack_require__(/*! phaser */ "./node_modules/phaser/src/phaser.js");
+&nbsp;
+<span class="cstat-no" title="statement not covered" >function _classCallCheck(instance, Constructor) {</span>
+<span class="cstat-no" title="statement not covered" >  if (!(instance instanceof Constructor)) {</span>
+<span class="cstat-no" title="statement not covered" >    throw new TypeError("Cannot call a class as a function");</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
+<span class="cstat-no" title="statement not covered" >}</span>
+&nbsp;
+var index = 0; // var check = true;
+&nbsp;
+var spaceValid = [true, true, true, true, true, true, true, true, true, true];
+exports.spaceValid = spaceValid;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >var DragManager = function DragManager(scene, blockArr, holderArr, initGgPosX, initGgPosY, numberOfBox) {</span>
+<span class="cstat-no" title="statement not covered" >  _classCallCheck(this, DragManager); // dragHoa là 1 function</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  this.dragHoa = function () {</span>
+<span class="cstat-no" title="statement not covered" >    for (var i = 0; i &lt; numberOfBox; i++) {</span>
+<span class="cstat-no" title="statement not covered" >      blockArr[i].setInteractive();</span>
+<span class="cstat-no" title="statement not covered" >      scene.input.setDraggable(blockArr[i]);</span>
+<span class="cstat-no" title="statement not covered" >    } // nhớ là set Draggable ở phía trên mới dùng được dragstart, drag, dragend này nhé</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    scene.input.on('dragstart', function (pointer, gameObject, dragX, dragY) {</span>
+<span class="cstat-no" title="statement not covered" >      for (var _i = 0; _i &lt; numberOfBox; _i++) {</span>
+<span class="cstat-no" title="statement not covered" >        // Game object ở đây là đối tượng mà mình drag</span>
+<span class="cstat-no" title="statement not covered" >        if (gameObject.x == initGgPosX[_i] &amp;&amp; gameObject.y == initGgPosY[_i]) {</span>
+<span class="cstat-no" title="statement not covered" >          index = _i; // console.log(index);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >      }</span>
+<span class="cstat-no" title="statement not covered" >    }); // console.log(index);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    scene.input.on('drag', function (pointer, gameObject, dragX, dragY) {</span>
+<span class="cstat-no" title="statement not covered" >      gameObject.x = dragX;</span>
+<span class="cstat-no" title="statement not covered" >      gameObject.y = dragY;</span>
+<span class="cstat-no" title="statement not covered" >      console.log('jfds');</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >      for (var _i2 = 0; _i2 &lt; numberOfBox; _i2++) {</span>
+<span class="cstat-no" title="statement not covered" >        if (Math.abs(gameObject.x - holderArr[_i2].x) &lt; 30 &amp;&amp; Math.abs(gameObject.y - holderArr[_i2].y) &lt; 100) {</span>
+<span class="cstat-no" title="statement not covered" >          if (spaceValid[_i2] == true) {</span>
+<span class="cstat-no" title="statement not covered" >            holderArr[_i2].setTint(0xffff00, 0xffff00, 0xff0000, 0xff0000);</span>
+<span class="cstat-no" title="statement not covered" >          } // console.log(i);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        } else {</span>
+<span class="cstat-no" title="statement not covered" >          holderArr[_i2].setTint(0xffffff);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >      }</span>
+<span class="cstat-no" title="statement not covered" >    });</span>
+<span class="cstat-no" title="statement not covered" >    scene.input.on('dragend', function (pointer, gameObject) {</span>
+<span class="cstat-no" title="statement not covered" >      var check = true;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >      for (var _i3 = 0; _i3 &lt; numberOfBox; _i3++) {</span>
+<span class="cstat-no" title="statement not covered" >        if (Math.abs(gameObject.x - holderArr[_i3].x) &lt; 30 &amp;&amp; Math.abs(gameObject.y - holderArr[_i3].y) &lt; 100) {</span>
+<span class="cstat-no" title="statement not covered" >          if (spaceValid[_i3]) {</span>
+<span class="cstat-no" title="statement not covered" >            gameObject.x = holderArr[_i3].x;</span>
+<span class="cstat-no" title="statement not covered" >            gameObject.y = holderArr[_i3].y - 18;</span>
+<span class="cstat-no" title="statement not covered" >            check = false;</span>
+<span class="cstat-no" title="statement not covered" >            spaceValid[_i3] = false;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            holderArr[_i3].setTint(0xffffff); // hàm disable cái tính chất interactive của object</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            scene.input.disable(gameObject);</span>
+<span class="cstat-no" title="statement not covered" >            break;</span>
+<span class="cstat-no" title="statement not covered" >          } else {</span>
+<span class="cstat-no" title="statement not covered" >            holderArr[_i3].setTint(0xffffff); // hàm di chuyển 1 object, nhớ là phải set object ở dạng physics mới dùng được hàm này</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            scene.physics.moveTo(gameObject, initGgPosX[index], initGgPosY[index], 400);</span>
+<span class="cstat-no" title="statement not covered" >          }</span>
+<span class="cstat-no" title="statement not covered" >        } else {}</span>
+<span class="cstat-no" title="statement not covered" >      } // console.log(check);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >      if (check) {</span>
+<span class="cstat-no" title="statement not covered" >        scene.physics.moveTo(gameObject, initGgPosX[index], initGgPosY[index], 400);</span>
+<span class="cstat-no" title="statement not covered" >      }</span>
+<span class="cstat-no" title="statement not covered" >    }, scene);</span>
+<span class="cstat-no" title="statement not covered" >  };</span>
+<span class="cstat-no" title="statement not covered" >};</span>
+&nbsp;
+exports.default = DragManager;//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvaGVscGVyL0RyYWdNYW5hZ2VyLmpzP2E1OGYiXSwibmFtZXMiOlsiaW5kZXgiLCJzcGFjZVZhbGlkIiwiRHJhZ01hbmFnZXIiLCJpIiwiYmxvY2tBcnIiLCJzY2VuZSIsImdhbWVPYmplY3QiLCJpbml0R2dQb3NYIiwiaW5pdEdnUG9zWSIsImNvbnNvbGUiLCJNYXRoIiwiaG9sZGVyQXJyIiwiY2hlY2siXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFFQTs7Ozs7Ozs7QUFFQSxJQUFJQSxLQUFLLEdBQVQsRSxDQUNBOztBQUNPLElBQUlDLFVBQVUsR0FBRyx1REFBakIsSUFBaUIsQ0FBakI7OztJQUNjQyxXLEdBQ25CLHNGQUE2RTtBQUFBLHNDQUMzRTs7O0FBQ0EsaUJBQWUsWUFBWTtBQUN6QixTQUFLLElBQUlDLENBQUMsR0FBVixHQUFnQkEsQ0FBQyxHQUFqQixhQUFpQ0EsQ0FBakMsSUFBc0M7QUFDcENDLGNBQVEsQ0FBUkEsQ0FBUSxDQUFSQTtBQUNBQyxXQUFLLENBQUxBLG1CQUF5QkQsUUFBUSxDQUFqQ0MsQ0FBaUMsQ0FBakNBO0FBSHVCLE1BS3pCOzs7QUFDQUEsU0FBSyxDQUFMQSxzQkFBNEIsNkNBQXVDO0FBQ2pFLFdBQUssSUFBSUYsRUFBQyxHQUFWLEdBQWdCQSxFQUFDLEdBQWpCLGFBQWlDQSxFQUFqQyxJQUFzQztBQUNwQztBQUNBLFlBQUlHLFVBQVUsQ0FBVkEsS0FBZ0JDLFVBQVUsQ0FBMUJELEVBQTBCLENBQTFCQSxJQUFpQ0EsVUFBVSxDQUFWQSxLQUFnQkUsVUFBVSxDQUEvRCxFQUErRCxDQUEvRCxFQUFvRTtBQUNsRVIsZUFBSyxHQUQ2RCxFQUNsRUEsQ0FEa0UsQ0FFbEU7QUFDRDtBQUNGO0FBYnNCLEtBTXpCSyxFQU55QixDQWdCekI7O0FBRUFBLFNBQUssQ0FBTEEsaUJBQXVCLDZDQUF1QztBQUM1REMsZ0JBQVUsQ0FBVkE7QUFDQUEsZ0JBQVUsQ0FBVkE7QUFDQUcsYUFBTyxDQUFQQTs7QUFFQSxXQUFLLElBQUlOLEdBQUMsR0FBVixHQUFnQkEsR0FBQyxHQUFqQixhQUFpQ0EsR0FBakMsSUFBc0M7QUFDcEMsWUFBSU8sSUFBSSxDQUFKQSxJQUFTSixVQUFVLENBQVZBLElBQWVLLFNBQVMsQ0FBVEEsR0FBUyxDQUFUQSxDQUF4QkQsV0FBZ0RBLElBQUksQ0FBSkEsSUFBU0osVUFBVSxDQUFWQSxJQUFlSyxTQUFTLENBQVRBLEdBQVMsQ0FBVEEsQ0FBeEJELEtBQXBELEtBQW1HO0FBQ2pHLGNBQUlULFVBQVUsQ0FBVkEsR0FBVSxDQUFWQSxJQUFKLE1BQTJCO0FBQ3pCVSxxQkFBUyxDQUFUQSxHQUFTLENBQVRBO0FBRitGLFlBSWpHOztBQUpGLGVBS087QUFDTEEsbUJBQVMsQ0FBVEEsR0FBUyxDQUFUQTtBQUNEO0FBQ0Y7QUFkSE47QUFpQkFBLFNBQUssQ0FBTEEsb0JBQTBCLCtCQUF5QjtBQUNqRCxVQUFJTyxLQUFLLEdBQVQ7O0FBQ0EsV0FBSyxJQUFJVCxHQUFDLEdBQVYsR0FBZ0JBLEdBQUMsR0FBakIsYUFBaUNBLEdBQWpDLElBQXNDO0FBQ3BDLFlBQUlPLElBQUksQ0FBSkEsSUFBU0osVUFBVSxDQUFWQSxJQUFlSyxTQUFTLENBQVRBLEdBQVMsQ0FBVEEsQ0FBeEJELFdBQWdEQSxJQUFJLENBQUpBLElBQVNKLFVBQVUsQ0FBVkEsSUFBZUssU0FBUyxDQUFUQSxHQUFTLENBQVRBLENBQXhCRCxLQUFwRCxLQUFtRztBQUNqRyxjQUFJVCxVQUFVLENBQWQsR0FBYyxDQUFkLEVBQW1CO0FBQ2pCSyxzQkFBVSxDQUFWQSxJQUFlSyxTQUFTLENBQVRBLEdBQVMsQ0FBVEEsQ0FBZkw7QUFDQUEsc0JBQVUsQ0FBVkEsSUFBZUssU0FBUyxDQUFUQSxHQUFTLENBQVRBLEtBQWZMO0FBQ0FNLGlCQUFLLEdBQUxBO0FBQ0FYLHNCQUFVLENBQVZBLEdBQVUsQ0FBVkE7O0FBQ0FVLHFCQUFTLENBQVRBLEdBQVMsQ0FBVEEsU0FMaUIsUUFLakJBLEVBTGlCLENBTWpCOzs7QUFDQU4saUJBQUssQ0FBTEE7QUFDQTtBQVJGLGlCQVNPO0FBQ0xNLHFCQUFTLENBQVRBLEdBQVMsQ0FBVEEsU0FESyxRQUNMQSxFQURLLENBRUw7OztBQUNBTixpQkFBSyxDQUFMQSwyQkFBaUNFLFVBQVUsQ0FBM0NGLEtBQTJDLENBQTNDQSxFQUFvREcsVUFBVSxDQUE5REgsS0FBOEQsQ0FBOURBO0FBQ0Q7QUFkSCxlQWVPLENBRU47QUFwQjhDLFFBc0JqRDs7O0FBQ0EsaUJBQVc7QUFDVEEsYUFBSyxDQUFMQSwyQkFBaUNFLFVBQVUsQ0FBM0NGLEtBQTJDLENBQTNDQSxFQUFvREcsVUFBVSxDQUE5REgsS0FBOEQsQ0FBOURBO0FBQ0Q7QUF6QkhBO0FBbkNGIiwiZmlsZSI6Ii4vc3JjL2hlbHBlci9EcmFnTWFuYWdlci5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1kaXNhYmxlIGltcG9ydC9uby1tdXRhYmxlLWV4cG9ydHMgKi9cbi8qIGVzbGludC1kaXNhYmxlIG5vLXZhciAqL1xuaW1wb3J0ICdwaGFzZXInO1xuXG5sZXQgaW5kZXggPSAwO1xuLy8gdmFyIGNoZWNrID0gdHJ1ZTtcbmV4cG9ydCB2YXIgc3BhY2VWYWxpZCA9IFt0cnVlLCB0cnVlLCB0cnVlLCB0cnVlLCB0cnVlLCB0cnVlLCB0cnVlLCB0cnVlLCB0cnVlLCB0cnVlXTtcbmV4cG9ydCBkZWZhdWx0IGNsYXNzIERyYWdNYW5hZ2VyIHtcbiAgY29uc3RydWN0b3Ioc2NlbmUsIGJsb2NrQXJyLCBob2xkZXJBcnIsIGluaXRHZ1Bvc1gsIGluaXRHZ1Bvc1ksIG51bWJlck9mQm94KSB7XG4gICAgLy8gZHJhZ0hvYSBsw6AgMSBmdW5jdGlvblxuICAgIHRoaXMuZHJhZ0hvYSA9IGZ1bmN0aW9uICgpIHtcbiAgICAgIGZvciAobGV0IGkgPSAwOyBpIDwgbnVtYmVyT2ZCb3g7IGkrKykge1xuICAgICAgICBibG9ja0FycltpXS5zZXRJbnRlcmFjdGl2ZSgpO1xuICAgICAgICBzY2VuZS5pbnB1dC5zZXREcmFnZ2FibGUoYmxvY2tBcnJbaV0pO1xuICAgICAgfVxuICAgICAgLy8gbmjhu5sgbMOgIHNldCBEcmFnZ2FibGUg4bufIHBow61hIHRyw6puIG3hu5tpIGTDuW5nIMSRxrDhu6NjIGRyYWdzdGFydCwgZHJhZywgZHJhZ2VuZCBuw6B5IG5ow6lcbiAgICAgIHNjZW5lLmlucHV0Lm9uKCdkcmFnc3RhcnQnLCAocG9pbnRlciwgZ2FtZU9iamVjdCwgZHJhZ1gsIGRyYWdZKSA9PiB7XG4gICAgICAgIGZvciAobGV0IGkgPSAwOyBpIDwgbnVtYmVyT2ZCb3g7IGkrKykge1xuICAgICAgICAgIC8vIEdhbWUgb2JqZWN0IOG7nyDEkcOieSBsw6AgxJHhu5FpIHTGsOG7o25nIG3DoCBtw6xuaCBkcmFnXG4gICAgICAgICAgaWYgKGdhbWVPYmplY3QueCA9PSBpbml0R2dQb3NYW2ldICYmIGdhbWVPYmplY3QueSA9PSBpbml0R2dQb3NZW2ldKSB7XG4gICAgICAgICAgICBpbmRleCA9IGk7XG4gICAgICAgICAgICAvLyBjb25zb2xlLmxvZyhpbmRleCk7XG4gICAgICAgICAgfVxuICAgICAgICB9XG4gICAgICB9KTtcblxuICAgICAgLy8gY29uc29sZS5sb2coaW5kZXgpO1xuXG4gICAgICBzY2VuZS5pbnB1dC5vbignZHJhZycsIChwb2ludGVyLCBnYW1lT2JqZWN0LCBkcmFnWCwgZHJhZ1kpID0+IHtcbiAgICAgICAgZ2FtZU9iamVjdC54ID0gZHJhZ1g7XG4gICAgICAgIGdhbWVPYmplY3QueSA9IGRyYWdZO1xuICAgICAgICBjb25zb2xlLmxvZygnamZkcycpO1xuXG4gICAgICAgIGZvciAobGV0IGkgPSAwOyBpIDwgbnVtYmVyT2ZCb3g7IGkrKykge1xuICAgICAgICAgIGlmIChNYXRoLmFicyhnYW1lT2JqZWN0LnggLSBob2xkZXJBcnJbaV0ueCkgPCAzMCAmJiBNYXRoLmFicyhnYW1lT2JqZWN0LnkgLSBob2xkZXJBcnJbaV0ueSkgPCAxMDApIHtcbiAgICAgICAgICAgIGlmIChzcGFjZVZhbGlkW2ldID09IHRydWUpIHtcbiAgICAgICAgICAgICAgaG9sZGVyQXJyW2ldLnNldFRpbnQoMHhmZmZmMDAsIDB4ZmZmZjAwLCAweGZmMDAwMCwgMHhmZjAwMDApO1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgLy8gY29uc29sZS5sb2coaSk7XG4gICAgICAgICAgfSBlbHNlIHtcbiAgICAgICAgICAgIGhvbGRlckFycltpXS5zZXRUaW50KDB4ZmZmZmZmKTtcbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgIH0pO1xuXG4gICAgICBzY2VuZS5pbnB1dC5vbignZHJhZ2VuZCcsIChwb2ludGVyLCBnYW1lT2JqZWN0KSA9PiB7XG4gICAgICAgIGxldCBjaGVjayA9IHRydWU7XG4gICAgICAgIGZvciAobGV0IGkgPSAwOyBpIDwgbnVtYmVyT2ZCb3g7IGkrKykge1xuICAgICAgICAgIGlmIChNYXRoLmFicyhnYW1lT2JqZWN0LnggLSBob2xkZXJBcnJbaV0ueCkgPCAzMCAmJiBNYXRoLmFicyhnYW1lT2JqZWN0LnkgLSBob2xkZXJBcnJbaV0ueSkgPCAxMDApIHtcbiAgICAgICAgICAgIGlmIChzcGFjZVZhbGlkW2ldKSB7XG4gICAgICAgICAgICAgIGdhbWVPYmplY3QueCA9IGhvbGRlckFycltpXS54O1xuICAgICAgICAgICAgICBnYW1lT2JqZWN0LnkgPSBob2xkZXJBcnJbaV0ueSAtIDE4O1xuICAgICAgICAgICAgICBjaGVjayA9IGZhbHNlO1xuICAgICAgICAgICAgICBzcGFjZVZhbGlkW2ldID0gZmFsc2U7XG4gICAgICAgICAgICAgIGhvbGRlckFycltpXS5zZXRUaW50KDB4ZmZmZmZmKTtcbiAgICAgICAgICAgICAgLy8gaMOgbSBkaXNhYmxlIGPDoWkgdMOtbmggY2jhuqV0IGludGVyYWN0aXZlIGPhu6dhIG9iamVjdFxuICAgICAgICAgICAgICBzY2VuZS5pbnB1dC5kaXNhYmxlKGdhbWVPYmplY3QpO1xuICAgICAgICAgICAgICBicmVhaztcbiAgICAgICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgICAgIGhvbGRlckFycltpXS5zZXRUaW50KDB4ZmZmZmZmKTtcbiAgICAgICAgICAgICAgLy8gaMOgbSBkaSBjaHV54buDbiAxIG9iamVjdCwgbmjhu5sgbMOgIHBo4bqjaSBzZXQgb2JqZWN0IOG7nyBk4bqhbmcgcGh5c2ljcyBt4bubaSBkw7luZyDEkcaw4bujYyBow6BtIG7DoHlcbiAgICAgICAgICAgICAgc2NlbmUucGh5c2ljcy5tb3ZlVG8oZ2FtZU9iamVjdCwgaW5pdEdnUG9zWFtpbmRleF0sIGluaXRHZ1Bvc1lbaW5kZXhdLCA0MDApO1xuICAgICAgICAgICAgfVxuICAgICAgICAgIH0gZWxzZSB7XG5cbiAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgICAgLy8gY29uc29sZS5sb2coY2hlY2spO1xuICAgICAgICBpZiAoY2hlY2spIHtcbiAgICAgICAgICBzY2VuZS5waHlzaWNzLm1vdmVUbyhnYW1lT2JqZWN0LCBpbml0R2dQb3NYW2luZGV4XSwgaW5pdEdnUG9zWVtpbmRleF0sIDQwMCk7XG4gICAgICAgIH1cbiAgICAgIH0sIHNjZW5lKTtcbiAgICB9O1xuICB9XG59XG4iXSwic291cmNlUm9vdCI6IiJ9
+//# sourceURL=webpack-internal:///./src/helper/DragManager.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

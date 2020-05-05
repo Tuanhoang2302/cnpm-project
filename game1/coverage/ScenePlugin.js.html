@@ -1,0 +1,455 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for ScenePlugin.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> ScenePlugin.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">66.67% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>84/126</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>4/4</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">66.67% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>84/126</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line medium'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+* @author       Richard Davey &lt;rich@photonstorm.com&gt;
+* @copyright    2019 Photon Storm Ltd.
+* @license      {@link https://github.com/photonstorm/phaser3-plugin-template/blob/master/LICENSE|MIT License}
+*/
+&nbsp;
+var BasePlugin = __webpack_require__(/*! ./BasePlugin */ "./node_modules/phaser/src/plugins/BasePlugin.js");
+var Class = __webpack_require__(/*! ../utils/Class */ "./node_modules/phaser/src/utils/Class.js");
+var SceneEvents = __webpack_require__(/*! ../scene/events */ "./node_modules/phaser/src/scene/events/index.js");
+&nbsp;
+/**
+ * @classdesc
+ * A Scene Level Plugin is installed into every Scene and belongs to that Scene.
+ * It can listen for Scene events and respond to them.
+ * It can map itself to a Scene property, or into the Scene Systems, or both.
+ *
+ * @class ScenePlugin
+ * @memberof Phaser.Plugins
+ * @extends Phaser.Plugins.BasePlugin
+ * @constructor
+ * @since 3.8.0
+ *
+ * @param {Phaser.Scene} scene - A reference to the Scene that has installed this plugin.
+ * @param {Phaser.Plugins.PluginManager} pluginManager - A reference to the Plugin Manager.
+ */
+var ScenePlugin = new Class({
+&nbsp;
+    Extends: BasePlugin,
+&nbsp;
+    initialize:
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    function ScenePlugin (scene, pluginManager)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        BasePlugin.call(this, pluginManager);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * A reference to the Scene that has installed this plugin.</span>
+<span class="cstat-no" title="statement not covered" >         * Only set if it's a Scene Plugin, otherwise `null`.</span>
+<span class="cstat-no" title="statement not covered" >         * This property is only set when the plugin is instantiated and added to the Scene, not before.</span>
+<span class="cstat-no" title="statement not covered" >         * You can use it during the `boot` method.</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Plugins.ScenePlugin#scene</span>
+<span class="cstat-no" title="statement not covered" >         * @type {?Phaser.Scene}</span>
+<span class="cstat-no" title="statement not covered" >         * @protected</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.8.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.scene = scene;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        /**</span>
+<span class="cstat-no" title="statement not covered" >         * A reference to the Scene Systems of the Scene that has installed this plugin.</span>
+<span class="cstat-no" title="statement not covered" >         * Only set if it's a Scene Plugin, otherwise `null`.</span>
+<span class="cstat-no" title="statement not covered" >         * This property is only set when the plugin is instantiated and added to the Scene, not before.</span>
+<span class="cstat-no" title="statement not covered" >         * You can use it during the `boot` method.</span>
+<span class="cstat-no" title="statement not covered" >         *</span>
+<span class="cstat-no" title="statement not covered" >         * @name Phaser.Plugins.ScenePlugin#systems</span>
+<span class="cstat-no" title="statement not covered" >         * @type {?Phaser.Scenes.Systems}</span>
+<span class="cstat-no" title="statement not covered" >         * @protected</span>
+<span class="cstat-no" title="statement not covered" >         * @since 3.8.0</span>
+<span class="cstat-no" title="statement not covered" >         */</span>
+<span class="cstat-no" title="statement not covered" >        this.systems = scene.sys;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        scene.sys.events.once(SceneEvents.BOOT, this.boot, this);</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * This method is called when the Scene boots. It is only ever called once.
+     *
+     * By this point the plugin properties `scene` and `systems` will have already been set.
+     *
+     * In here you can listen for {@link Phaser.Scenes.Events Scene events} and set-up whatever you need for this plugin to run.
+     * Here are the Scene events you can listen to:
+     *
+     * - start
+     * - ready
+     * - preupdate
+     * - update
+     * - postupdate
+     * - resize
+     * - pause
+     * - resume
+     * - sleep
+     * - wake
+     * - transitioninit
+     * - transitionstart
+     * - transitioncomplete
+     * - transitionout
+     * - shutdown
+     * - destroy
+     *
+     * At the very least you should offer a destroy handler for when the Scene closes down, i.e:
+     *
+     * ```javascript
+     * var eventEmitter = this.systems.events;
+     * eventEmitter.once('destroy', this.sceneDestroy, this);
+     * ```
+     *
+     * @method Phaser.Plugins.ScenePlugin#boot
+     * @since 3.8.0
+     */
+<span class="cstat-no" title="statement not covered" >    boot: function ()</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * Game instance has been destroyed.
+     * 
+     * You must release everything in here, all references, all objects, free it all up.
+     *
+     * @method Phaser.Plugins.ScenePlugin#destroy
+     * @since 3.8.0
+     */
+<span class="cstat-no" title="statement not covered" >    destroy: function ()</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        this.pluginManager = null;</span>
+<span class="cstat-no" title="statement not covered" >        this.game = null;</span>
+<span class="cstat-no" title="statement not covered" >        this.scene = null;</span>
+<span class="cstat-no" title="statement not covered" >        this.systems = null;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+&nbsp;
+});
+&nbsp;
+module.exports = ScenePlugin;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9wbHVnaW5zL1NjZW5lUGx1Z2luLmpzP2VhZjUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0EsaUJBQWlCO0FBQ2pCOztBQUVBLGlCQUFpQixtQkFBTyxDQUFDLHFFQUFjO0FBQ3ZDLFlBQVksbUJBQU8sQ0FBQyxnRUFBZ0I7QUFDcEMsa0JBQWtCLG1CQUFPLENBQUMsd0VBQWlCOztBQUUzQztBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxXQUFXLGFBQWE7QUFDeEIsV0FBVyw2QkFBNkI7QUFDeEM7QUFDQTs7QUFFQTs7QUFFQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxrQkFBa0I7QUFDbEI7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxrQkFBa0I7QUFDbEI7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQSxLQUFLOztBQUVMO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxtQ0FBbUMsd0NBQXdDO0FBQzNFO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsS0FBSzs7QUFFTDtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUEsQ0FBQzs7QUFFRCIsImZpbGUiOiIuL25vZGVfbW9kdWxlcy9waGFzZXIvc3JjL3BsdWdpbnMvU2NlbmVQbHVnaW4uanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcclxuKiBAYXV0aG9yICAgICAgIFJpY2hhcmQgRGF2ZXkgPHJpY2hAcGhvdG9uc3Rvcm0uY29tPlxyXG4qIEBjb3B5cmlnaHQgICAgMjAxOSBQaG90b24gU3Rvcm0gTHRkLlxyXG4qIEBsaWNlbnNlICAgICAge0BsaW5rIGh0dHBzOi8vZ2l0aHViLmNvbS9waG90b25zdG9ybS9waGFzZXIzLXBsdWdpbi10ZW1wbGF0ZS9ibG9iL21hc3Rlci9MSUNFTlNFfE1JVCBMaWNlbnNlfVxyXG4qL1xyXG5cclxudmFyIEJhc2VQbHVnaW4gPSByZXF1aXJlKCcuL0Jhc2VQbHVnaW4nKTtcclxudmFyIENsYXNzID0gcmVxdWlyZSgnLi4vdXRpbHMvQ2xhc3MnKTtcclxudmFyIFNjZW5lRXZlbnRzID0gcmVxdWlyZSgnLi4vc2NlbmUvZXZlbnRzJyk7XHJcblxyXG4vKipcclxuICogQGNsYXNzZGVzY1xyXG4gKiBBIFNjZW5lIExldmVsIFBsdWdpbiBpcyBpbnN0YWxsZWQgaW50byBldmVyeSBTY2VuZSBhbmQgYmVsb25ncyB0byB0aGF0IFNjZW5lLlxyXG4gKiBJdCBjYW4gbGlzdGVuIGZvciBTY2VuZSBldmVudHMgYW5kIHJlc3BvbmQgdG8gdGhlbS5cclxuICogSXQgY2FuIG1hcCBpdHNlbGYgdG8gYSBTY2VuZSBwcm9wZXJ0eSwgb3IgaW50byB0aGUgU2NlbmUgU3lzdGVtcywgb3IgYm90aC5cclxuICpcclxuICogQGNsYXNzIFNjZW5lUGx1Z2luXHJcbiAqIEBtZW1iZXJvZiBQaGFzZXIuUGx1Z2luc1xyXG4gKiBAZXh0ZW5kcyBQaGFzZXIuUGx1Z2lucy5CYXNlUGx1Z2luXHJcbiAqIEBjb25zdHJ1Y3RvclxyXG4gKiBAc2luY2UgMy44LjBcclxuICpcclxuICogQHBhcmFtIHtQaGFzZXIuU2NlbmV9IHNjZW5lIC0gQSByZWZlcmVuY2UgdG8gdGhlIFNjZW5lIHRoYXQgaGFzIGluc3RhbGxlZCB0aGlzIHBsdWdpbi5cclxuICogQHBhcmFtIHtQaGFzZXIuUGx1Z2lucy5QbHVnaW5NYW5hZ2VyfSBwbHVnaW5NYW5hZ2VyIC0gQSByZWZlcmVuY2UgdG8gdGhlIFBsdWdpbiBNYW5hZ2VyLlxyXG4gKi9cclxudmFyIFNjZW5lUGx1Z2luID0gbmV3IENsYXNzKHtcclxuXHJcbiAgICBFeHRlbmRzOiBCYXNlUGx1Z2luLFxyXG5cclxuICAgIGluaXRpYWxpemU6XHJcblxyXG4gICAgZnVuY3Rpb24gU2NlbmVQbHVnaW4gKHNjZW5lLCBwbHVnaW5NYW5hZ2VyKVxyXG4gICAge1xyXG4gICAgICAgIEJhc2VQbHVnaW4uY2FsbCh0aGlzLCBwbHVnaW5NYW5hZ2VyKTtcclxuXHJcbiAgICAgICAgLyoqXHJcbiAgICAgICAgICogQSByZWZlcmVuY2UgdG8gdGhlIFNjZW5lIHRoYXQgaGFzIGluc3RhbGxlZCB0aGlzIHBsdWdpbi5cclxuICAgICAgICAgKiBPbmx5IHNldCBpZiBpdCdzIGEgU2NlbmUgUGx1Z2luLCBvdGhlcndpc2UgYG51bGxgLlxyXG4gICAgICAgICAqIFRoaXMgcHJvcGVydHkgaXMgb25seSBzZXQgd2hlbiB0aGUgcGx1Z2luIGlzIGluc3RhbnRpYXRlZCBhbmQgYWRkZWQgdG8gdGhlIFNjZW5lLCBub3QgYmVmb3JlLlxyXG4gICAgICAgICAqIFlvdSBjYW4gdXNlIGl0IGR1cmluZyB0aGUgYGJvb3RgIG1ldGhvZC5cclxuICAgICAgICAgKlxyXG4gICAgICAgICAqIEBuYW1lIFBoYXNlci5QbHVnaW5zLlNjZW5lUGx1Z2luI3NjZW5lXHJcbiAgICAgICAgICogQHR5cGUgez9QaGFzZXIuU2NlbmV9XHJcbiAgICAgICAgICogQHByb3RlY3RlZFxyXG4gICAgICAgICAqIEBzaW5jZSAzLjguMFxyXG4gICAgICAgICAqL1xyXG4gICAgICAgIHRoaXMuc2NlbmUgPSBzY2VuZTtcclxuXHJcbiAgICAgICAgLyoqXHJcbiAgICAgICAgICogQSByZWZlcmVuY2UgdG8gdGhlIFNjZW5lIFN5c3RlbXMgb2YgdGhlIFNjZW5lIHRoYXQgaGFzIGluc3RhbGxlZCB0aGlzIHBsdWdpbi5cclxuICAgICAgICAgKiBPbmx5IHNldCBpZiBpdCdzIGEgU2NlbmUgUGx1Z2luLCBvdGhlcndpc2UgYG51bGxgLlxyXG4gICAgICAgICAqIFRoaXMgcHJvcGVydHkgaXMgb25seSBzZXQgd2hlbiB0aGUgcGx1Z2luIGlzIGluc3RhbnRpYXRlZCBhbmQgYWRkZWQgdG8gdGhlIFNjZW5lLCBub3QgYmVmb3JlLlxyXG4gICAgICAgICAqIFlvdSBjYW4gdXNlIGl0IGR1cmluZyB0aGUgYGJvb3RgIG1ldGhvZC5cclxuICAgICAgICAgKlxyXG4gICAgICAgICAqIEBuYW1lIFBoYXNlci5QbHVnaW5zLlNjZW5lUGx1Z2luI3N5c3RlbXNcclxuICAgICAgICAgKiBAdHlwZSB7P1BoYXNlci5TY2VuZXMuU3lzdGVtc31cclxuICAgICAgICAgKiBAcHJvdGVjdGVkXHJcbiAgICAgICAgICogQHNpbmNlIDMuOC4wXHJcbiAgICAgICAgICovXHJcbiAgICAgICAgdGhpcy5zeXN0ZW1zID0gc2NlbmUuc3lzO1xyXG5cclxuICAgICAgICBzY2VuZS5zeXMuZXZlbnRzLm9uY2UoU2NlbmVFdmVudHMuQk9PVCwgdGhpcy5ib290LCB0aGlzKTtcclxuICAgIH0sXHJcblxyXG4gICAgLyoqXHJcbiAgICAgKiBUaGlzIG1ldGhvZCBpcyBjYWxsZWQgd2hlbiB0aGUgU2NlbmUgYm9vdHMuIEl0IGlzIG9ubHkgZXZlciBjYWxsZWQgb25jZS5cclxuICAgICAqXHJcbiAgICAgKiBCeSB0aGlzIHBvaW50IHRoZSBwbHVnaW4gcHJvcGVydGllcyBgc2NlbmVgIGFuZCBgc3lzdGVtc2Agd2lsbCBoYXZlIGFscmVhZHkgYmVlbiBzZXQuXHJcbiAgICAgKlxyXG4gICAgICogSW4gaGVyZSB5b3UgY2FuIGxpc3RlbiBmb3Ige0BsaW5rIFBoYXNlci5TY2VuZXMuRXZlbnRzIFNjZW5lIGV2ZW50c30gYW5kIHNldC11cCB3aGF0ZXZlciB5b3UgbmVlZCBmb3IgdGhpcyBwbHVnaW4gdG8gcnVuLlxyXG4gICAgICogSGVyZSBhcmUgdGhlIFNjZW5lIGV2ZW50cyB5b3UgY2FuIGxpc3RlbiB0bzpcclxuICAgICAqXHJcbiAgICAgKiAtIHN0YXJ0XHJcbiAgICAgKiAtIHJlYWR5XHJcbiAgICAgKiAtIHByZXVwZGF0ZVxyXG4gICAgICogLSB1cGRhdGVcclxuICAgICAqIC0gcG9zdHVwZGF0ZVxyXG4gICAgICogLSByZXNpemVcclxuICAgICAqIC0gcGF1c2VcclxuICAgICAqIC0gcmVzdW1lXHJcbiAgICAgKiAtIHNsZWVwXHJcbiAgICAgKiAtIHdha2VcclxuICAgICAqIC0gdHJhbnNpdGlvbmluaXRcclxuICAgICAqIC0gdHJhbnNpdGlvbnN0YXJ0XHJcbiAgICAgKiAtIHRyYW5zaXRpb25jb21wbGV0ZVxyXG4gICAgICogLSB0cmFuc2l0aW9ub3V0XHJcbiAgICAgKiAtIHNodXRkb3duXHJcbiAgICAgKiAtIGRlc3Ryb3lcclxuICAgICAqXHJcbiAgICAgKiBBdCB0aGUgdmVyeSBsZWFzdCB5b3Ugc2hvdWxkIG9mZmVyIGEgZGVzdHJveSBoYW5kbGVyIGZvciB3aGVuIHRoZSBTY2VuZSBjbG9zZXMgZG93biwgaS5lOlxyXG4gICAgICpcclxuICAgICAqIGBgYGphdmFzY3JpcHRcclxuICAgICAqIHZhciBldmVudEVtaXR0ZXIgPSB0aGlzLnN5c3RlbXMuZXZlbnRzO1xyXG4gICAgICogZXZlbnRFbWl0dGVyLm9uY2UoJ2Rlc3Ryb3knLCB0aGlzLnNjZW5lRGVzdHJveSwgdGhpcyk7XHJcbiAgICAgKiBgYGBcclxuICAgICAqXHJcbiAgICAgKiBAbWV0aG9kIFBoYXNlci5QbHVnaW5zLlNjZW5lUGx1Z2luI2Jvb3RcclxuICAgICAqIEBzaW5jZSAzLjguMFxyXG4gICAgICovXHJcbiAgICBib290OiBmdW5jdGlvbiAoKVxyXG4gICAge1xyXG4gICAgfSxcclxuXHJcbiAgICAvKipcclxuICAgICAqIEdhbWUgaW5zdGFuY2UgaGFzIGJlZW4gZGVzdHJveWVkLlxyXG4gICAgICogXHJcbiAgICAgKiBZb3UgbXVzdCByZWxlYXNlIGV2ZXJ5dGhpbmcgaW4gaGVyZSwgYWxsIHJlZmVyZW5jZXMsIGFsbCBvYmplY3RzLCBmcmVlIGl0IGFsbCB1cC5cclxuICAgICAqXHJcbiAgICAgKiBAbWV0aG9kIFBoYXNlci5QbHVnaW5zLlNjZW5lUGx1Z2luI2Rlc3Ryb3lcclxuICAgICAqIEBzaW5jZSAzLjguMFxyXG4gICAgICovXHJcbiAgICBkZXN0cm95OiBmdW5jdGlvbiAoKVxyXG4gICAge1xyXG4gICAgICAgIHRoaXMucGx1Z2luTWFuYWdlciA9IG51bGw7XHJcbiAgICAgICAgdGhpcy5nYW1lID0gbnVsbDtcclxuICAgICAgICB0aGlzLnNjZW5lID0gbnVsbDtcclxuICAgICAgICB0aGlzLnN5c3RlbXMgPSBudWxsO1xyXG4gICAgfVxyXG5cclxufSk7XHJcblxyXG5tb2R1bGUuZXhwb3J0cyA9IFNjZW5lUGx1Z2luO1xyXG4iXSwic291cmNlUm9vdCI6IiJ9
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/plugins/ScenePlugin.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

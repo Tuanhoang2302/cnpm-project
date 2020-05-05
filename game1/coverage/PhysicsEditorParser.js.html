@@ -1,0 +1,602 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for PhysicsEditorParser.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> PhysicsEditorParser.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">38.86% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>68/175</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>4/4</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">38.86% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>68/175</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Joachim Grill &lt;joachim@codeandweb.com&gt;
+ * @copyright    2018 CodeAndWeb GmbH
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var Bodies = __webpack_require__(/*! ./lib/factory/Bodies */ "./node_modules/phaser/src/physics/matter-js/lib/factory/Bodies.js");
+var Body = __webpack_require__(/*! ./lib/body/Body */ "./node_modules/phaser/src/physics/matter-js/lib/body/Body.js");
+var Bounds = __webpack_require__(/*! ./lib/geometry/Bounds */ "./node_modules/phaser/src/physics/matter-js/lib/geometry/Bounds.js");
+var Common = __webpack_require__(/*! ./lib/core/Common */ "./node_modules/phaser/src/physics/matter-js/lib/core/Common.js");
+var GetFastValue = __webpack_require__(/*! ../../utils/object/GetFastValue */ "./node_modules/phaser/src/utils/object/GetFastValue.js");
+var Vector = __webpack_require__(/*! ./lib/geometry/Vector */ "./node_modules/phaser/src/physics/matter-js/lib/geometry/Vector.js");
+var Vertices = __webpack_require__(/*! ./lib/geometry/Vertices */ "./node_modules/phaser/src/physics/matter-js/lib/geometry/Vertices.js");
+&nbsp;
+/**
+ * Use PhysicsEditorParser.parseBody() to build a Matter body object, based on a physics data file
+ * created and exported with PhysicsEditor (https://www.codeandweb.com/physicseditor).
+ *
+ * @namespace Phaser.Physics.Matter.PhysicsEditorParser
+ * @since 3.10.0
+ */
+var PhysicsEditorParser = {
+&nbsp;
+    /**
+     * Parses a body element exported by PhysicsEditor.
+     *
+     * @function Phaser.Physics.Matter.PhysicsEditorParser.parseBody
+     * @since 3.10.0
+     *
+     * @param {number} x - x position.
+     * @param {number} y - y position.
+     * @param {number} w - width.
+     * @param {number} h - height.
+     * @param {object} config - body configuration and fixture (child body) definitions.
+     * 
+     * @return {object} A matter body, consisting of several parts (child bodies)
+     */
+<span class="cstat-no" title="statement not covered" >    parseBody: function (x, y, w, h, config)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        var fixtureConfigs = GetFastValue(config, 'fixtures', []);</span>
+<span class="cstat-no" title="statement not covered" >        var fixtures = [];</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        for (var fc = 0; fc &lt; fixtureConfigs.length; fc++)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            var fixtureParts = this.parseFixture(fixtureConfigs[fc]);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            for (var i = 0; i &lt; fixtureParts.length; i++)</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >                fixtures.push(fixtureParts[i]);</span>
+<span class="cstat-no" title="statement not covered" >            }</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        var matterConfig = Common.extend({}, false, config);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        delete matterConfig.fixtures;</span>
+<span class="cstat-no" title="statement not covered" >        delete matterConfig.type;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        var body = Body.create(matterConfig);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        Body.setParts(body, fixtures);</span>
+<span class="cstat-no" title="statement not covered" >        body.render.sprite.xOffset = body.position.x / w;</span>
+<span class="cstat-no" title="statement not covered" >        body.render.sprite.yOffset = body.position.y / h;</span>
+<span class="cstat-no" title="statement not covered" >        Body.setPosition(body, { x: x, y: y });</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        return body;</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+&nbsp;
+    /**
+     * Parses an element of the "fixtures" list exported by PhysicsEditor
+     *
+     * @function Phaser.Physics.Matter.PhysicsEditorParser.parseFixture
+     * @since 3.10.0
+     *
+     * @param {object} fixtureConfig - the fixture object to parse
+     * 
+     * @return {object[]} - A list of matter bodies
+     */
+<span class="cstat-no" title="statement not covered" >    parseFixture: function (fixtureConfig)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        var matterConfig = Common.extend({}, false, fixtureConfig);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        delete matterConfig.circle;</span>
+<span class="cstat-no" title="statement not covered" >        delete matterConfig.vertices;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        var fixtures;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if (fixtureConfig.circle)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            var x = GetFastValue(fixtureConfig.circle, 'x');</span>
+<span class="cstat-no" title="statement not covered" >            var y = GetFastValue(fixtureConfig.circle, 'y');</span>
+<span class="cstat-no" title="statement not covered" >            var r = GetFastValue(fixtureConfig.circle, 'radius');</span>
+<span class="cstat-no" title="statement not covered" >            fixtures = [ Bodies.circle(x, y, r, matterConfig) ];</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >        else if (fixtureConfig.vertices)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            fixtures = this.parseVertices(fixtureConfig.vertices, matterConfig);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        return fixtures;</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+&nbsp;
+    /**
+     * Parses the "vertices" lists exported by PhysicsEditor.
+     *
+     * @function Phaser.Physics.Matter.PhysicsEditorParser.parseVertices
+     * @since 3.10.0
+     *
+     * @param {object} vertexSets - The vertex lists to parse.
+     * @param {object} options - Matter body options.
+     * 
+     * @return {object[]} - A list of matter bodies.
+     */
+<span class="cstat-no" title="statement not covered" >    parseVertices: function (vertexSets, options)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        var i, j, k, v, z;</span>
+<span class="cstat-no" title="statement not covered" >        var parts = [];</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        options = options || {};</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        for (v = 0; v &lt; vertexSets.length; v += 1)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            parts.push(Body.create(Common.extend({</span>
+<span class="cstat-no" title="statement not covered" >                position: Vertices.centre(vertexSets[v]),</span>
+<span class="cstat-no" title="statement not covered" >                vertices: vertexSets[v]</span>
+<span class="cstat-no" title="statement not covered" >            }, options)));</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        // flag coincident part edges</span>
+<span class="cstat-no" title="statement not covered" >        var coincidentMaxDist = 5;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        for (i = 0; i &lt; parts.length; i++)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            var partA = parts[i];</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >            for (j = i + 1; j &lt; parts.length; j++)</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >                var partB = parts[j];</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >                if (Bounds.overlaps(partA.bounds, partB.bounds))</span>
+<span class="cstat-no" title="statement not covered" >                {</span>
+<span class="cstat-no" title="statement not covered" >                    var pav = partA.vertices,</span>
+<span class="cstat-no" title="statement not covered" >                        pbv = partB.vertices;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >                    // iterate vertices of both parts</span>
+<span class="cstat-no" title="statement not covered" >                    for (k = 0; k &lt; partA.vertices.length; k++)</span>
+<span class="cstat-no" title="statement not covered" >                    {</span>
+<span class="cstat-no" title="statement not covered" >                        for (z = 0; z &lt; partB.vertices.length; z++)</span>
+<span class="cstat-no" title="statement not covered" >                        {</span>
+<span class="cstat-no" title="statement not covered" >                            // find distances between the vertices</span>
+<span class="cstat-no" title="statement not covered" >                            var da = Vector.magnitudeSquared(Vector.sub(pav[(k + 1) % pav.length], pbv[z])),</span>
+<span class="cstat-no" title="statement not covered" >                                db = Vector.magnitudeSquared(Vector.sub(pav[k], pbv[(z + 1) % pbv.length]));</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >                            // if both vertices are very close, consider the edge concident (internal)</span>
+<span class="cstat-no" title="statement not covered" >                            if (da &lt; coincidentMaxDist &amp;&amp; db &lt; coincidentMaxDist)</span>
+<span class="cstat-no" title="statement not covered" >                            {</span>
+<span class="cstat-no" title="statement not covered" >                                pav[k].isInternal = true;</span>
+<span class="cstat-no" title="statement not covered" >                                pbv[z].isInternal = true;</span>
+<span class="cstat-no" title="statement not covered" >                            }</span>
+<span class="cstat-no" title="statement not covered" >                        }</span>
+<span class="cstat-no" title="statement not covered" >                    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >                }</span>
+<span class="cstat-no" title="statement not covered" >            }</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        return parts;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+};
+&nbsp;
+module.exports = PhysicsEditorParser;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9waHlzaWNzL21hdHRlci1qcy9QaHlzaWNzRWRpdG9yUGFyc2VyLmpzP2NmMmUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCOztBQUVBLGFBQWEsbUJBQU8sQ0FBQywrRkFBc0I7QUFDM0MsV0FBVyxtQkFBTyxDQUFDLHFGQUFpQjtBQUNwQyxhQUFhLG1CQUFPLENBQUMsaUdBQXVCO0FBQzVDLGFBQWEsbUJBQU8sQ0FBQyx5RkFBbUI7QUFDeEMsbUJBQW1CLG1CQUFPLENBQUMsK0ZBQWlDO0FBQzVELGFBQWEsbUJBQU8sQ0FBQyxpR0FBdUI7QUFDNUMsZUFBZSxtQkFBTyxDQUFDLHFHQUF5Qjs7QUFFaEQ7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxlQUFlLE9BQU87QUFDdEIsZUFBZSxPQUFPO0FBQ3RCLGVBQWUsT0FBTztBQUN0QixlQUFlLE9BQU87QUFDdEIsZUFBZSxPQUFPO0FBQ3RCO0FBQ0EsZ0JBQWdCLE9BQU87QUFDdkI7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQSx3QkFBd0IsNEJBQTRCO0FBQ3BEO0FBQ0E7O0FBRUEsMkJBQTJCLHlCQUF5QjtBQUNwRDtBQUNBO0FBQ0E7QUFDQTs7QUFFQSwyQ0FBMkM7O0FBRTNDO0FBQ0E7O0FBRUE7O0FBRUE7QUFDQTtBQUNBO0FBQ0EsZ0NBQWdDLGFBQWE7O0FBRTdDO0FBQ0EsS0FBSzs7O0FBR0w7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsZUFBZSxPQUFPO0FBQ3RCO0FBQ0EsZ0JBQWdCLFNBQVM7QUFDekI7QUFDQTtBQUNBO0FBQ0EsMkNBQTJDOztBQUUzQztBQUNBOztBQUVBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQSxLQUFLOztBQUVMO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGVBQWUsT0FBTztBQUN0QixlQUFlLE9BQU87QUFDdEI7QUFDQSxnQkFBZ0IsU0FBUztBQUN6QjtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBOztBQUVBLG1CQUFtQix1QkFBdUI7QUFDMUM7QUFDQTtBQUNBO0FBQ0E7QUFDQSxhQUFhO0FBQ2I7O0FBRUE7QUFDQTs7QUFFQSxtQkFBbUIsa0JBQWtCO0FBQ3JDO0FBQ0E7O0FBRUEsMkJBQTJCLGtCQUFrQjtBQUM3QztBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0EsK0JBQStCLDJCQUEyQjtBQUMxRDtBQUNBLG1DQUFtQywyQkFBMkI7QUFDOUQ7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBOztBQUVBIiwiZmlsZSI6Ii4vbm9kZV9tb2R1bGVzL3BoYXNlci9zcmMvcGh5c2ljcy9tYXR0ZXItanMvUGh5c2ljc0VkaXRvclBhcnNlci5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxyXG4gKiBAYXV0aG9yICAgICAgIEpvYWNoaW0gR3JpbGwgPGpvYWNoaW1AY29kZWFuZHdlYi5jb20+XHJcbiAqIEBjb3B5cmlnaHQgICAgMjAxOCBDb2RlQW5kV2ViIEdtYkhcclxuICogQGxpY2Vuc2UgICAgICB7QGxpbmsgaHR0cHM6Ly9vcGVuc291cmNlLm9yZy9saWNlbnNlcy9NSVR8TUlUIExpY2Vuc2V9XHJcbiAqL1xyXG5cclxudmFyIEJvZGllcyA9IHJlcXVpcmUoJy4vbGliL2ZhY3RvcnkvQm9kaWVzJyk7XHJcbnZhciBCb2R5ID0gcmVxdWlyZSgnLi9saWIvYm9keS9Cb2R5Jyk7XHJcbnZhciBCb3VuZHMgPSByZXF1aXJlKCcuL2xpYi9nZW9tZXRyeS9Cb3VuZHMnKTtcclxudmFyIENvbW1vbiA9IHJlcXVpcmUoJy4vbGliL2NvcmUvQ29tbW9uJyk7XHJcbnZhciBHZXRGYXN0VmFsdWUgPSByZXF1aXJlKCcuLi8uLi91dGlscy9vYmplY3QvR2V0RmFzdFZhbHVlJyk7XHJcbnZhciBWZWN0b3IgPSByZXF1aXJlKCcuL2xpYi9nZW9tZXRyeS9WZWN0b3InKTtcclxudmFyIFZlcnRpY2VzID0gcmVxdWlyZSgnLi9saWIvZ2VvbWV0cnkvVmVydGljZXMnKTtcclxuXHJcbi8qKlxyXG4gKiBVc2UgUGh5c2ljc0VkaXRvclBhcnNlci5wYXJzZUJvZHkoKSB0byBidWlsZCBhIE1hdHRlciBib2R5IG9iamVjdCwgYmFzZWQgb24gYSBwaHlzaWNzIGRhdGEgZmlsZVxyXG4gKiBjcmVhdGVkIGFuZCBleHBvcnRlZCB3aXRoIFBoeXNpY3NFZGl0b3IgKGh0dHBzOi8vd3d3LmNvZGVhbmR3ZWIuY29tL3BoeXNpY3NlZGl0b3IpLlxyXG4gKlxyXG4gKiBAbmFtZXNwYWNlIFBoYXNlci5QaHlzaWNzLk1hdHRlci5QaHlzaWNzRWRpdG9yUGFyc2VyXHJcbiAqIEBzaW5jZSAzLjEwLjBcclxuICovXHJcbnZhciBQaHlzaWNzRWRpdG9yUGFyc2VyID0ge1xyXG5cclxuICAgIC8qKlxyXG4gICAgICogUGFyc2VzIGEgYm9keSBlbGVtZW50IGV4cG9ydGVkIGJ5IFBoeXNpY3NFZGl0b3IuXHJcbiAgICAgKlxyXG4gICAgICogQGZ1bmN0aW9uIFBoYXNlci5QaHlzaWNzLk1hdHRlci5QaHlzaWNzRWRpdG9yUGFyc2VyLnBhcnNlQm9keVxyXG4gICAgICogQHNpbmNlIDMuMTAuMFxyXG4gICAgICpcclxuICAgICAqIEBwYXJhbSB7bnVtYmVyfSB4IC0geCBwb3NpdGlvbi5cclxuICAgICAqIEBwYXJhbSB7bnVtYmVyfSB5IC0geSBwb3NpdGlvbi5cclxuICAgICAqIEBwYXJhbSB7bnVtYmVyfSB3IC0gd2lkdGguXHJcbiAgICAgKiBAcGFyYW0ge251bWJlcn0gaCAtIGhlaWdodC5cclxuICAgICAqIEBwYXJhbSB7b2JqZWN0fSBjb25maWcgLSBib2R5IGNvbmZpZ3VyYXRpb24gYW5kIGZpeHR1cmUgKGNoaWxkIGJvZHkpIGRlZmluaXRpb25zLlxyXG4gICAgICogXHJcbiAgICAgKiBAcmV0dXJuIHtvYmplY3R9IEEgbWF0dGVyIGJvZHksIGNvbnNpc3Rpbmcgb2Ygc2V2ZXJhbCBwYXJ0cyAoY2hpbGQgYm9kaWVzKVxyXG4gICAgICovXHJcbiAgICBwYXJzZUJvZHk6IGZ1bmN0aW9uICh4LCB5LCB3LCBoLCBjb25maWcpXHJcbiAgICB7XHJcbiAgICAgICAgdmFyIGZpeHR1cmVDb25maWdzID0gR2V0RmFzdFZhbHVlKGNvbmZpZywgJ2ZpeHR1cmVzJywgW10pO1xyXG4gICAgICAgIHZhciBmaXh0dXJlcyA9IFtdO1xyXG5cclxuICAgICAgICBmb3IgKHZhciBmYyA9IDA7IGZjIDwgZml4dHVyZUNvbmZpZ3MubGVuZ3RoOyBmYysrKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgdmFyIGZpeHR1cmVQYXJ0cyA9IHRoaXMucGFyc2VGaXh0dXJlKGZpeHR1cmVDb25maWdzW2ZjXSk7XHJcblxyXG4gICAgICAgICAgICBmb3IgKHZhciBpID0gMDsgaSA8IGZpeHR1cmVQYXJ0cy5sZW5ndGg7IGkrKylcclxuICAgICAgICAgICAge1xyXG4gICAgICAgICAgICAgICAgZml4dHVyZXMucHVzaChmaXh0dXJlUGFydHNbaV0pO1xyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICB2YXIgbWF0dGVyQ29uZmlnID0gQ29tbW9uLmV4dGVuZCh7fSwgZmFsc2UsIGNvbmZpZyk7XHJcblxyXG4gICAgICAgIGRlbGV0ZSBtYXR0ZXJDb25maWcuZml4dHVyZXM7XHJcbiAgICAgICAgZGVsZXRlIG1hdHRlckNvbmZpZy50eXBlO1xyXG5cclxuICAgICAgICB2YXIgYm9keSA9IEJvZHkuY3JlYXRlKG1hdHRlckNvbmZpZyk7XHJcblxyXG4gICAgICAgIEJvZHkuc2V0UGFydHMoYm9keSwgZml4dHVyZXMpO1xyXG4gICAgICAgIGJvZHkucmVuZGVyLnNwcml0ZS54T2Zmc2V0ID0gYm9keS5wb3NpdGlvbi54IC8gdztcclxuICAgICAgICBib2R5LnJlbmRlci5zcHJpdGUueU9mZnNldCA9IGJvZHkucG9zaXRpb24ueSAvIGg7XHJcbiAgICAgICAgQm9keS5zZXRQb3NpdGlvbihib2R5LCB7IHg6IHgsIHk6IHkgfSk7XHJcblxyXG4gICAgICAgIHJldHVybiBib2R5O1xyXG4gICAgfSxcclxuXHJcblxyXG4gICAgLyoqXHJcbiAgICAgKiBQYXJzZXMgYW4gZWxlbWVudCBvZiB0aGUgXCJmaXh0dXJlc1wiIGxpc3QgZXhwb3J0ZWQgYnkgUGh5c2ljc0VkaXRvclxyXG4gICAgICpcclxuICAgICAqIEBmdW5jdGlvbiBQaGFzZXIuUGh5c2ljcy5NYXR0ZXIuUGh5c2ljc0VkaXRvclBhcnNlci5wYXJzZUZpeHR1cmVcclxuICAgICAqIEBzaW5jZSAzLjEwLjBcclxuICAgICAqXHJcbiAgICAgKiBAcGFyYW0ge29iamVjdH0gZml4dHVyZUNvbmZpZyAtIHRoZSBmaXh0dXJlIG9iamVjdCB0byBwYXJzZVxyXG4gICAgICogXHJcbiAgICAgKiBAcmV0dXJuIHtvYmplY3RbXX0gLSBBIGxpc3Qgb2YgbWF0dGVyIGJvZGllc1xyXG4gICAgICovXHJcbiAgICBwYXJzZUZpeHR1cmU6IGZ1bmN0aW9uIChmaXh0dXJlQ29uZmlnKVxyXG4gICAge1xyXG4gICAgICAgIHZhciBtYXR0ZXJDb25maWcgPSBDb21tb24uZXh0ZW5kKHt9LCBmYWxzZSwgZml4dHVyZUNvbmZpZyk7XHJcblxyXG4gICAgICAgIGRlbGV0ZSBtYXR0ZXJDb25maWcuY2lyY2xlO1xyXG4gICAgICAgIGRlbGV0ZSBtYXR0ZXJDb25maWcudmVydGljZXM7XHJcblxyXG4gICAgICAgIHZhciBmaXh0dXJlcztcclxuXHJcbiAgICAgICAgaWYgKGZpeHR1cmVDb25maWcuY2lyY2xlKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgdmFyIHggPSBHZXRGYXN0VmFsdWUoZml4dHVyZUNvbmZpZy5jaXJjbGUsICd4Jyk7XHJcbiAgICAgICAgICAgIHZhciB5ID0gR2V0RmFzdFZhbHVlKGZpeHR1cmVDb25maWcuY2lyY2xlLCAneScpO1xyXG4gICAgICAgICAgICB2YXIgciA9IEdldEZhc3RWYWx1ZShmaXh0dXJlQ29uZmlnLmNpcmNsZSwgJ3JhZGl1cycpO1xyXG4gICAgICAgICAgICBmaXh0dXJlcyA9IFsgQm9kaWVzLmNpcmNsZSh4LCB5LCByLCBtYXR0ZXJDb25maWcpIF07XHJcbiAgICAgICAgfVxyXG4gICAgICAgIGVsc2UgaWYgKGZpeHR1cmVDb25maWcudmVydGljZXMpXHJcbiAgICAgICAge1xyXG4gICAgICAgICAgICBmaXh0dXJlcyA9IHRoaXMucGFyc2VWZXJ0aWNlcyhmaXh0dXJlQ29uZmlnLnZlcnRpY2VzLCBtYXR0ZXJDb25maWcpO1xyXG4gICAgICAgIH1cclxuXHJcbiAgICAgICAgcmV0dXJuIGZpeHR1cmVzO1xyXG4gICAgfSxcclxuXHJcbiAgICAvKipcclxuICAgICAqIFBhcnNlcyB0aGUgXCJ2ZXJ0aWNlc1wiIGxpc3RzIGV4cG9ydGVkIGJ5IFBoeXNpY3NFZGl0b3IuXHJcbiAgICAgKlxyXG4gICAgICogQGZ1bmN0aW9uIFBoYXNlci5QaHlzaWNzLk1hdHRlci5QaHlzaWNzRWRpdG9yUGFyc2VyLnBhcnNlVmVydGljZXNcclxuICAgICAqIEBzaW5jZSAzLjEwLjBcclxuICAgICAqXHJcbiAgICAgKiBAcGFyYW0ge29iamVjdH0gdmVydGV4U2V0cyAtIFRoZSB2ZXJ0ZXggbGlzdHMgdG8gcGFyc2UuXHJcbiAgICAgKiBAcGFyYW0ge29iamVjdH0gb3B0aW9ucyAtIE1hdHRlciBib2R5IG9wdGlvbnMuXHJcbiAgICAgKiBcclxuICAgICAqIEByZXR1cm4ge29iamVjdFtdfSAtIEEgbGlzdCBvZiBtYXR0ZXIgYm9kaWVzLlxyXG4gICAgICovXHJcbiAgICBwYXJzZVZlcnRpY2VzOiBmdW5jdGlvbiAodmVydGV4U2V0cywgb3B0aW9ucylcclxuICAgIHtcclxuICAgICAgICB2YXIgaSwgaiwgaywgdiwgejtcclxuICAgICAgICB2YXIgcGFydHMgPSBbXTtcclxuXHJcbiAgICAgICAgb3B0aW9ucyA9IG9wdGlvbnMgfHwge307XHJcblxyXG4gICAgICAgIGZvciAodiA9IDA7IHYgPCB2ZXJ0ZXhTZXRzLmxlbmd0aDsgdiArPSAxKVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgcGFydHMucHVzaChCb2R5LmNyZWF0ZShDb21tb24uZXh0ZW5kKHtcclxuICAgICAgICAgICAgICAgIHBvc2l0aW9uOiBWZXJ0aWNlcy5jZW50cmUodmVydGV4U2V0c1t2XSksXHJcbiAgICAgICAgICAgICAgICB2ZXJ0aWNlczogdmVydGV4U2V0c1t2XVxyXG4gICAgICAgICAgICB9LCBvcHRpb25zKSkpO1xyXG4gICAgICAgIH1cclxuXHJcbiAgICAgICAgLy8gZmxhZyBjb2luY2lkZW50IHBhcnQgZWRnZXNcclxuICAgICAgICB2YXIgY29pbmNpZGVudE1heERpc3QgPSA1O1xyXG5cclxuICAgICAgICBmb3IgKGkgPSAwOyBpIDwgcGFydHMubGVuZ3RoOyBpKyspXHJcbiAgICAgICAge1xyXG4gICAgICAgICAgICB2YXIgcGFydEEgPSBwYXJ0c1tpXTtcclxuXHJcbiAgICAgICAgICAgIGZvciAoaiA9IGkgKyAxOyBqIDwgcGFydHMubGVuZ3RoOyBqKyspXHJcbiAgICAgICAgICAgIHtcclxuICAgICAgICAgICAgICAgIHZhciBwYXJ0QiA9IHBhcnRzW2pdO1xyXG5cclxuICAgICAgICAgICAgICAgIGlmIChCb3VuZHMub3ZlcmxhcHMocGFydEEuYm91bmRzLCBwYXJ0Qi5ib3VuZHMpKVxyXG4gICAgICAgICAgICAgICAge1xyXG4gICAgICAgICAgICAgICAgICAgIHZhciBwYXYgPSBwYXJ0QS52ZXJ0aWNlcyxcclxuICAgICAgICAgICAgICAgICAgICAgICAgcGJ2ID0gcGFydEIudmVydGljZXM7XHJcblxyXG4gICAgICAgICAgICAgICAgICAgIC8vIGl0ZXJhdGUgdmVydGljZXMgb2YgYm90aCBwYXJ0c1xyXG4gICAgICAgICAgICAgICAgICAgIGZvciAoayA9IDA7IGsgPCBwYXJ0QS52ZXJ0aWNlcy5sZW5ndGg7IGsrKylcclxuICAgICAgICAgICAgICAgICAgICB7XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIGZvciAoeiA9IDA7IHogPCBwYXJ0Qi52ZXJ0aWNlcy5sZW5ndGg7IHorKylcclxuICAgICAgICAgICAgICAgICAgICAgICAge1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgLy8gZmluZCBkaXN0YW5jZXMgYmV0d2VlbiB0aGUgdmVydGljZXNcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHZhciBkYSA9IFZlY3Rvci5tYWduaXR1ZGVTcXVhcmVkKFZlY3Rvci5zdWIocGF2WyhrICsgMSkgJSBwYXYubGVuZ3RoXSwgcGJ2W3pdKSksXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZGIgPSBWZWN0b3IubWFnbml0dWRlU3F1YXJlZChWZWN0b3Iuc3ViKHBhdltrXSwgcGJ2Wyh6ICsgMSkgJSBwYnYubGVuZ3RoXSkpO1xyXG5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIC8vIGlmIGJvdGggdmVydGljZXMgYXJlIHZlcnkgY2xvc2UsIGNvbnNpZGVyIHRoZSBlZGdlIGNvbmNpZGVudCAoaW50ZXJuYWwpXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiAoZGEgPCBjb2luY2lkZW50TWF4RGlzdCAmJiBkYiA8IGNvaW5jaWRlbnRNYXhEaXN0KVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAge1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHBhdltrXS5pc0ludGVybmFsID0gdHJ1ZTtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBwYnZbel0uaXNJbnRlcm5hbCA9IHRydWU7XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgICAgICAgICB9XHJcblxyXG4gICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICByZXR1cm4gcGFydHM7XHJcbiAgICB9XHJcbn07XHJcblxyXG5tb2R1bGUuZXhwb3J0cyA9IFBoeXNpY3NFZGl0b3JQYXJzZXI7XHJcbiJdLCJzb3VyY2VSb290IjoiIn0=
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/physics/matter-js/PhysicsEditorParser.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

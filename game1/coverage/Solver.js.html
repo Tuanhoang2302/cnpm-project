@@ -1,0 +1,299 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for Solver.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> Solver.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">37.84% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>28/74</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>2/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">37.84% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>28/74</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var COLLIDES = __webpack_require__(/*! ./COLLIDES */ "./node_modules/phaser/src/physics/impact/COLLIDES.js");
+var Events = __webpack_require__(/*! ./events */ "./node_modules/phaser/src/physics/impact/events/index.js");
+var SeparateX = __webpack_require__(/*! ./SeparateX */ "./node_modules/phaser/src/physics/impact/SeparateX.js");
+var SeparateY = __webpack_require__(/*! ./SeparateY */ "./node_modules/phaser/src/physics/impact/SeparateY.js");
+&nbsp;
+/**
+ * Impact Physics Solver
+ *
+ * @function Phaser.Physics.Impact.Solver
+ * @fires Phaser.Physics.Impact.Events#COLLIDE
+ * @since 3.0.0
+ *
+ * @param {Phaser.Physics.Impact.World} world - The Impact simulation to run the solver in.
+ * @param {Phaser.Physics.Impact.Body} bodyA - The first body in the collision.
+ * @param {Phaser.Physics.Impact.Body} bodyB - The second body in the collision.
+ */
+<span class="cstat-no" title="statement not covered" >var Solver = function (world, bodyA, bodyB)</span>
+<span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    var weak = null;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (bodyA.collides === COLLIDES.LITE || bodyB.collides === COLLIDES.FIXED)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        weak = bodyA;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    else if (bodyB.collides === COLLIDES.LITE || bodyA.collides === COLLIDES.FIXED)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        weak = bodyB;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (bodyA.last.x + bodyA.size.x &gt; bodyB.last.x &amp;&amp; bodyA.last.x &lt; bodyB.last.x + bodyB.size.x)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        if (bodyA.last.y &lt; bodyB.last.y)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            SeparateY(world, bodyA, bodyB, weak);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >        else</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            SeparateY(world, bodyB, bodyA, weak);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        bodyA.collideWith(bodyB, 'y');</span>
+<span class="cstat-no" title="statement not covered" >        bodyB.collideWith(bodyA, 'y');</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        world.emit(Events.COLLIDE, bodyA, bodyB, 'y');</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    else if (bodyA.last.y + bodyA.size.y &gt; bodyB.last.y &amp;&amp; bodyA.last.y &lt; bodyB.last.y + bodyB.size.y)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        if (bodyA.last.x &lt; bodyB.last.x)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            SeparateX(world, bodyA, bodyB, weak);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >        else</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            SeparateX(world, bodyB, bodyA, weak);</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        bodyA.collideWith(bodyB, 'x');</span>
+<span class="cstat-no" title="statement not covered" >        bodyB.collideWith(bodyA, 'x');</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        world.emit(Events.COLLIDE, bodyA, bodyB, 'x');</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >};</span>
+&nbsp;
+module.exports = Solver;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9waHlzaWNzL2ltcGFjdC9Tb2x2ZXIuanM/MzRmYyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQSxrQkFBa0I7QUFDbEI7O0FBRUEsZUFBZSxtQkFBTyxDQUFDLHdFQUFZO0FBQ25DLGFBQWEsbUJBQU8sQ0FBQywwRUFBVTtBQUMvQixnQkFBZ0IsbUJBQU8sQ0FBQywwRUFBYTtBQUNyQyxnQkFBZ0IsbUJBQU8sQ0FBQywwRUFBYTs7QUFFckM7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxXQUFXLDRCQUE0QjtBQUN2QyxXQUFXLDJCQUEyQjtBQUN0QyxXQUFXLDJCQUEyQjtBQUN0QztBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBOztBQUVBIiwiZmlsZSI6Ii4vbm9kZV9tb2R1bGVzL3BoYXNlci9zcmMvcGh5c2ljcy9pbXBhY3QvU29sdmVyLmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXHJcbiAqIEBhdXRob3IgICAgICAgUmljaGFyZCBEYXZleSA8cmljaEBwaG90b25zdG9ybS5jb20+XHJcbiAqIEBjb3B5cmlnaHQgICAgMjAxOSBQaG90b24gU3Rvcm0gTHRkLlxyXG4gKiBAbGljZW5zZSAgICAgIHtAbGluayBodHRwczovL29wZW5zb3VyY2Uub3JnL2xpY2Vuc2VzL01JVHxNSVQgTGljZW5zZX1cclxuICovXHJcblxyXG52YXIgQ09MTElERVMgPSByZXF1aXJlKCcuL0NPTExJREVTJyk7XHJcbnZhciBFdmVudHMgPSByZXF1aXJlKCcuL2V2ZW50cycpO1xyXG52YXIgU2VwYXJhdGVYID0gcmVxdWlyZSgnLi9TZXBhcmF0ZVgnKTtcclxudmFyIFNlcGFyYXRlWSA9IHJlcXVpcmUoJy4vU2VwYXJhdGVZJyk7XHJcblxyXG4vKipcclxuICogSW1wYWN0IFBoeXNpY3MgU29sdmVyXHJcbiAqXHJcbiAqIEBmdW5jdGlvbiBQaGFzZXIuUGh5c2ljcy5JbXBhY3QuU29sdmVyXHJcbiAqIEBmaXJlcyBQaGFzZXIuUGh5c2ljcy5JbXBhY3QuRXZlbnRzI0NPTExJREVcclxuICogQHNpbmNlIDMuMC4wXHJcbiAqXHJcbiAqIEBwYXJhbSB7UGhhc2VyLlBoeXNpY3MuSW1wYWN0LldvcmxkfSB3b3JsZCAtIFRoZSBJbXBhY3Qgc2ltdWxhdGlvbiB0byBydW4gdGhlIHNvbHZlciBpbi5cclxuICogQHBhcmFtIHtQaGFzZXIuUGh5c2ljcy5JbXBhY3QuQm9keX0gYm9keUEgLSBUaGUgZmlyc3QgYm9keSBpbiB0aGUgY29sbGlzaW9uLlxyXG4gKiBAcGFyYW0ge1BoYXNlci5QaHlzaWNzLkltcGFjdC5Cb2R5fSBib2R5QiAtIFRoZSBzZWNvbmQgYm9keSBpbiB0aGUgY29sbGlzaW9uLlxyXG4gKi9cclxudmFyIFNvbHZlciA9IGZ1bmN0aW9uICh3b3JsZCwgYm9keUEsIGJvZHlCKVxyXG57XHJcbiAgICB2YXIgd2VhayA9IG51bGw7XHJcblxyXG4gICAgaWYgKGJvZHlBLmNvbGxpZGVzID09PSBDT0xMSURFUy5MSVRFIHx8IGJvZHlCLmNvbGxpZGVzID09PSBDT0xMSURFUy5GSVhFRClcclxuICAgIHtcclxuICAgICAgICB3ZWFrID0gYm9keUE7XHJcbiAgICB9XHJcbiAgICBlbHNlIGlmIChib2R5Qi5jb2xsaWRlcyA9PT0gQ09MTElERVMuTElURSB8fCBib2R5QS5jb2xsaWRlcyA9PT0gQ09MTElERVMuRklYRUQpXHJcbiAgICB7XHJcbiAgICAgICAgd2VhayA9IGJvZHlCO1xyXG4gICAgfVxyXG5cclxuICAgIGlmIChib2R5QS5sYXN0LnggKyBib2R5QS5zaXplLnggPiBib2R5Qi5sYXN0LnggJiYgYm9keUEubGFzdC54IDwgYm9keUIubGFzdC54ICsgYm9keUIuc2l6ZS54KVxyXG4gICAge1xyXG4gICAgICAgIGlmIChib2R5QS5sYXN0LnkgPCBib2R5Qi5sYXN0LnkpXHJcbiAgICAgICAge1xyXG4gICAgICAgICAgICBTZXBhcmF0ZVkod29ybGQsIGJvZHlBLCBib2R5Qiwgd2Vhayk7XHJcbiAgICAgICAgfVxyXG4gICAgICAgIGVsc2VcclxuICAgICAgICB7XHJcbiAgICAgICAgICAgIFNlcGFyYXRlWSh3b3JsZCwgYm9keUIsIGJvZHlBLCB3ZWFrKTtcclxuICAgICAgICB9XHJcblxyXG4gICAgICAgIGJvZHlBLmNvbGxpZGVXaXRoKGJvZHlCLCAneScpO1xyXG4gICAgICAgIGJvZHlCLmNvbGxpZGVXaXRoKGJvZHlBLCAneScpO1xyXG5cclxuICAgICAgICB3b3JsZC5lbWl0KEV2ZW50cy5DT0xMSURFLCBib2R5QSwgYm9keUIsICd5Jyk7XHJcbiAgICB9XHJcbiAgICBlbHNlIGlmIChib2R5QS5sYXN0LnkgKyBib2R5QS5zaXplLnkgPiBib2R5Qi5sYXN0LnkgJiYgYm9keUEubGFzdC55IDwgYm9keUIubGFzdC55ICsgYm9keUIuc2l6ZS55KVxyXG4gICAge1xyXG4gICAgICAgIGlmIChib2R5QS5sYXN0LnggPCBib2R5Qi5sYXN0LngpXHJcbiAgICAgICAge1xyXG4gICAgICAgICAgICBTZXBhcmF0ZVgod29ybGQsIGJvZHlBLCBib2R5Qiwgd2Vhayk7XHJcbiAgICAgICAgfVxyXG4gICAgICAgIGVsc2VcclxuICAgICAgICB7XHJcbiAgICAgICAgICAgIFNlcGFyYXRlWCh3b3JsZCwgYm9keUIsIGJvZHlBLCB3ZWFrKTtcclxuICAgICAgICB9XHJcblxyXG4gICAgICAgIGJvZHlBLmNvbGxpZGVXaXRoKGJvZHlCLCAneCcpO1xyXG4gICAgICAgIGJvZHlCLmNvbGxpZGVXaXRoKGJvZHlBLCAneCcpO1xyXG5cclxuICAgICAgICB3b3JsZC5lbWl0KEV2ZW50cy5DT0xMSURFLCBib2R5QSwgYm9keUIsICd4Jyk7XHJcbiAgICB9XHJcbn07XHJcblxyXG5tb2R1bGUuZXhwb3J0cyA9IFNvbHZlcjtcclxuIl0sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/physics/impact/Solver.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

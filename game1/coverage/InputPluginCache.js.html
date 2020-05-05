@@ -1,0 +1,407 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for InputPluginCache.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> InputPluginCache.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">90% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>99/110</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>3/3</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">90% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>99/110</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var GetValue = __webpack_require__(/*! ../utils/object/GetValue */ "./node_modules/phaser/src/utils/object/GetValue.js");
+&nbsp;
+//  Contains the plugins that Phaser uses globally and locally.
+//  These are the source objects, not instantiated.
+var inputPlugins = {};
+&nbsp;
+/**
+ * @namespace Phaser.Input.InputPluginCache
+ */
+&nbsp;
+var InputPluginCache = {};
+&nbsp;
+/**
+ * Static method called directly by the Core internal Plugins.
+ * Key is a reference used to get the plugin from the plugins object (i.e. InputPlugin)
+ * Plugin is the object to instantiate to create the plugin
+ * Mapping is what the plugin is injected into the Scene.Systems as (i.e. input)
+ *
+ * @name Phaser.Input.InputPluginCache.register
+ * @type {function}
+ * @static
+ * @since 3.10.0
+ * 
+ * @param {string} key - A reference used to get this plugin from the plugin cache.
+ * @param {function} plugin - The plugin to be stored. Should be the core object, not instantiated.
+ * @param {string} mapping - If this plugin is to be injected into the Input Plugin, this is the property key used.
+ * @param {string} settingsKey - The key in the Scene Settings to check to see if this plugin should install or not.
+ * @param {string} configKey - The key in the Game Config to check to see if this plugin should install or not.
+ */
+InputPluginCache.register = function (key, plugin, mapping, settingsKey, configKey)
+{
+    inputPlugins[key] = { plugin: plugin, mapping: mapping, settingsKey: settingsKey, configKey: configKey };
+};
+&nbsp;
+/**
+ * Returns the input plugin object from the cache based on the given key.
+ *
+ * @name Phaser.Input.InputPluginCache.getCore
+ * @type {function}
+ * @static
+ * @since 3.10.0
+ * 
+ * @param {string} key - The key of the input plugin to get.
+ *
+ * @return {Phaser.Types.Input.InputPluginContainer} The input plugin object.
+ */
+<span class="cstat-no" title="statement not covered" >InputPluginCache.getPlugin = function (key)</span>
+<span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    return inputPlugins[key];</span>
+<span class="cstat-no" title="statement not covered" >};</span>
+&nbsp;
+/**
+ * Installs all of the registered Input Plugins into the given target.
+ *
+ * @name Phaser.Input.InputPluginCache.install
+ * @type {function}
+ * @static
+ * @since 3.10.0
+ * 
+ * @param {Phaser.Input.InputPlugin} target - The target InputPlugin to install the plugins into.
+ */
+InputPluginCache.install = function (target)
+{
+    var sys = target.scene.sys;
+    var settings = sys.settings.input;
+    var config = sys.game.config;
+&nbsp;
+    for (var key in inputPlugins)
+    {
+        var source = inputPlugins[key].plugin;
+        var mapping = inputPlugins[key].mapping;
+        var settingsKey = inputPlugins[key].settingsKey;
+        var configKey = inputPlugins[key].configKey;
+&nbsp;
+        if (GetValue(settings, settingsKey, config[configKey]))
+        {
+            target[mapping] = new source(target);
+        }
+    }
+};
+&nbsp;
+/**
+ * Removes an input plugin based on the given key.
+ *
+ * @name Phaser.Input.InputPluginCache.remove
+ * @type {function}
+ * @static
+ * @since 3.10.0
+ * 
+ * @param {string} key - The key of the input plugin to remove.
+ */
+<span class="cstat-no" title="statement not covered" >InputPluginCache.remove = function (key)</span>
+<span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    if (inputPlugins.hasOwnProperty(key))</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        delete inputPlugins[key];</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >};</span>
+&nbsp;
+module.exports = InputPluginCache;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9pbnB1dC9JbnB1dFBsdWdpbkNhY2hlLmpzP2E0YTQiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCOztBQUVBLGVBQWUsbUJBQU8sQ0FBQyxvRkFBMEI7O0FBRWpEO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxVQUFVO0FBQ1Y7QUFDQTtBQUNBO0FBQ0EsV0FBVyxPQUFPO0FBQ2xCLFdBQVcsU0FBUztBQUNwQixXQUFXLE9BQU87QUFDbEIsV0FBVyxPQUFPO0FBQ2xCLFdBQVcsT0FBTztBQUNsQjtBQUNBO0FBQ0E7QUFDQSx5QkFBeUI7QUFDekI7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQSxVQUFVO0FBQ1Y7QUFDQTtBQUNBO0FBQ0EsV0FBVyxPQUFPO0FBQ2xCO0FBQ0EsWUFBWSx3Q0FBd0M7QUFDcEQ7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFVBQVU7QUFDVjtBQUNBO0FBQ0E7QUFDQSxXQUFXLHlCQUF5QjtBQUNwQztBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFVBQVU7QUFDVjtBQUNBO0FBQ0E7QUFDQSxXQUFXLE9BQU87QUFDbEI7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQSIsImZpbGUiOiIuL25vZGVfbW9kdWxlcy9waGFzZXIvc3JjL2lucHV0L0lucHV0UGx1Z2luQ2FjaGUuanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcclxuICogQGF1dGhvciAgICAgICBSaWNoYXJkIERhdmV5IDxyaWNoQHBob3RvbnN0b3JtLmNvbT5cclxuICogQGNvcHlyaWdodCAgICAyMDE5IFBob3RvbiBTdG9ybSBMdGQuXHJcbiAqIEBsaWNlbnNlICAgICAge0BsaW5rIGh0dHBzOi8vb3BlbnNvdXJjZS5vcmcvbGljZW5zZXMvTUlUfE1JVCBMaWNlbnNlfVxyXG4gKi9cclxuXHJcbnZhciBHZXRWYWx1ZSA9IHJlcXVpcmUoJy4uL3V0aWxzL29iamVjdC9HZXRWYWx1ZScpO1xyXG5cclxuLy8gIENvbnRhaW5zIHRoZSBwbHVnaW5zIHRoYXQgUGhhc2VyIHVzZXMgZ2xvYmFsbHkgYW5kIGxvY2FsbHkuXHJcbi8vICBUaGVzZSBhcmUgdGhlIHNvdXJjZSBvYmplY3RzLCBub3QgaW5zdGFudGlhdGVkLlxyXG52YXIgaW5wdXRQbHVnaW5zID0ge307XHJcblxyXG4vKipcclxuICogQG5hbWVzcGFjZSBQaGFzZXIuSW5wdXQuSW5wdXRQbHVnaW5DYWNoZVxyXG4gKi9cclxuXHJcbnZhciBJbnB1dFBsdWdpbkNhY2hlID0ge307XHJcblxyXG4vKipcclxuICogU3RhdGljIG1ldGhvZCBjYWxsZWQgZGlyZWN0bHkgYnkgdGhlIENvcmUgaW50ZXJuYWwgUGx1Z2lucy5cclxuICogS2V5IGlzIGEgcmVmZXJlbmNlIHVzZWQgdG8gZ2V0IHRoZSBwbHVnaW4gZnJvbSB0aGUgcGx1Z2lucyBvYmplY3QgKGkuZS4gSW5wdXRQbHVnaW4pXHJcbiAqIFBsdWdpbiBpcyB0aGUgb2JqZWN0IHRvIGluc3RhbnRpYXRlIHRvIGNyZWF0ZSB0aGUgcGx1Z2luXHJcbiAqIE1hcHBpbmcgaXMgd2hhdCB0aGUgcGx1Z2luIGlzIGluamVjdGVkIGludG8gdGhlIFNjZW5lLlN5c3RlbXMgYXMgKGkuZS4gaW5wdXQpXHJcbiAqXHJcbiAqIEBuYW1lIFBoYXNlci5JbnB1dC5JbnB1dFBsdWdpbkNhY2hlLnJlZ2lzdGVyXHJcbiAqIEB0eXBlIHtmdW5jdGlvbn1cclxuICogQHN0YXRpY1xyXG4gKiBAc2luY2UgMy4xMC4wXHJcbiAqIFxyXG4gKiBAcGFyYW0ge3N0cmluZ30ga2V5IC0gQSByZWZlcmVuY2UgdXNlZCB0byBnZXQgdGhpcyBwbHVnaW4gZnJvbSB0aGUgcGx1Z2luIGNhY2hlLlxyXG4gKiBAcGFyYW0ge2Z1bmN0aW9ufSBwbHVnaW4gLSBUaGUgcGx1Z2luIHRvIGJlIHN0b3JlZC4gU2hvdWxkIGJlIHRoZSBjb3JlIG9iamVjdCwgbm90IGluc3RhbnRpYXRlZC5cclxuICogQHBhcmFtIHtzdHJpbmd9IG1hcHBpbmcgLSBJZiB0aGlzIHBsdWdpbiBpcyB0byBiZSBpbmplY3RlZCBpbnRvIHRoZSBJbnB1dCBQbHVnaW4sIHRoaXMgaXMgdGhlIHByb3BlcnR5IGtleSB1c2VkLlxyXG4gKiBAcGFyYW0ge3N0cmluZ30gc2V0dGluZ3NLZXkgLSBUaGUga2V5IGluIHRoZSBTY2VuZSBTZXR0aW5ncyB0byBjaGVjayB0byBzZWUgaWYgdGhpcyBwbHVnaW4gc2hvdWxkIGluc3RhbGwgb3Igbm90LlxyXG4gKiBAcGFyYW0ge3N0cmluZ30gY29uZmlnS2V5IC0gVGhlIGtleSBpbiB0aGUgR2FtZSBDb25maWcgdG8gY2hlY2sgdG8gc2VlIGlmIHRoaXMgcGx1Z2luIHNob3VsZCBpbnN0YWxsIG9yIG5vdC5cclxuICovXHJcbklucHV0UGx1Z2luQ2FjaGUucmVnaXN0ZXIgPSBmdW5jdGlvbiAoa2V5LCBwbHVnaW4sIG1hcHBpbmcsIHNldHRpbmdzS2V5LCBjb25maWdLZXkpXHJcbntcclxuICAgIGlucHV0UGx1Z2luc1trZXldID0geyBwbHVnaW46IHBsdWdpbiwgbWFwcGluZzogbWFwcGluZywgc2V0dGluZ3NLZXk6IHNldHRpbmdzS2V5LCBjb25maWdLZXk6IGNvbmZpZ0tleSB9O1xyXG59O1xyXG5cclxuLyoqXHJcbiAqIFJldHVybnMgdGhlIGlucHV0IHBsdWdpbiBvYmplY3QgZnJvbSB0aGUgY2FjaGUgYmFzZWQgb24gdGhlIGdpdmVuIGtleS5cclxuICpcclxuICogQG5hbWUgUGhhc2VyLklucHV0LklucHV0UGx1Z2luQ2FjaGUuZ2V0Q29yZVxyXG4gKiBAdHlwZSB7ZnVuY3Rpb259XHJcbiAqIEBzdGF0aWNcclxuICogQHNpbmNlIDMuMTAuMFxyXG4gKiBcclxuICogQHBhcmFtIHtzdHJpbmd9IGtleSAtIFRoZSBrZXkgb2YgdGhlIGlucHV0IHBsdWdpbiB0byBnZXQuXHJcbiAqXHJcbiAqIEByZXR1cm4ge1BoYXNlci5UeXBlcy5JbnB1dC5JbnB1dFBsdWdpbkNvbnRhaW5lcn0gVGhlIGlucHV0IHBsdWdpbiBvYmplY3QuXHJcbiAqL1xyXG5JbnB1dFBsdWdpbkNhY2hlLmdldFBsdWdpbiA9IGZ1bmN0aW9uIChrZXkpXHJcbntcclxuICAgIHJldHVybiBpbnB1dFBsdWdpbnNba2V5XTtcclxufTtcclxuXHJcbi8qKlxyXG4gKiBJbnN0YWxscyBhbGwgb2YgdGhlIHJlZ2lzdGVyZWQgSW5wdXQgUGx1Z2lucyBpbnRvIHRoZSBnaXZlbiB0YXJnZXQuXHJcbiAqXHJcbiAqIEBuYW1lIFBoYXNlci5JbnB1dC5JbnB1dFBsdWdpbkNhY2hlLmluc3RhbGxcclxuICogQHR5cGUge2Z1bmN0aW9ufVxyXG4gKiBAc3RhdGljXHJcbiAqIEBzaW5jZSAzLjEwLjBcclxuICogXHJcbiAqIEBwYXJhbSB7UGhhc2VyLklucHV0LklucHV0UGx1Z2lufSB0YXJnZXQgLSBUaGUgdGFyZ2V0IElucHV0UGx1Z2luIHRvIGluc3RhbGwgdGhlIHBsdWdpbnMgaW50by5cclxuICovXHJcbklucHV0UGx1Z2luQ2FjaGUuaW5zdGFsbCA9IGZ1bmN0aW9uICh0YXJnZXQpXHJcbntcclxuICAgIHZhciBzeXMgPSB0YXJnZXQuc2NlbmUuc3lzO1xyXG4gICAgdmFyIHNldHRpbmdzID0gc3lzLnNldHRpbmdzLmlucHV0O1xyXG4gICAgdmFyIGNvbmZpZyA9IHN5cy5nYW1lLmNvbmZpZztcclxuXHJcbiAgICBmb3IgKHZhciBrZXkgaW4gaW5wdXRQbHVnaW5zKVxyXG4gICAge1xyXG4gICAgICAgIHZhciBzb3VyY2UgPSBpbnB1dFBsdWdpbnNba2V5XS5wbHVnaW47XHJcbiAgICAgICAgdmFyIG1hcHBpbmcgPSBpbnB1dFBsdWdpbnNba2V5XS5tYXBwaW5nO1xyXG4gICAgICAgIHZhciBzZXR0aW5nc0tleSA9IGlucHV0UGx1Z2luc1trZXldLnNldHRpbmdzS2V5O1xyXG4gICAgICAgIHZhciBjb25maWdLZXkgPSBpbnB1dFBsdWdpbnNba2V5XS5jb25maWdLZXk7XHJcblxyXG4gICAgICAgIGlmIChHZXRWYWx1ZShzZXR0aW5ncywgc2V0dGluZ3NLZXksIGNvbmZpZ1tjb25maWdLZXldKSlcclxuICAgICAgICB7XHJcbiAgICAgICAgICAgIHRhcmdldFttYXBwaW5nXSA9IG5ldyBzb3VyY2UodGFyZ2V0KTtcclxuICAgICAgICB9XHJcbiAgICB9XHJcbn07XHJcblxyXG4vKipcclxuICogUmVtb3ZlcyBhbiBpbnB1dCBwbHVnaW4gYmFzZWQgb24gdGhlIGdpdmVuIGtleS5cclxuICpcclxuICogQG5hbWUgUGhhc2VyLklucHV0LklucHV0UGx1Z2luQ2FjaGUucmVtb3ZlXHJcbiAqIEB0eXBlIHtmdW5jdGlvbn1cclxuICogQHN0YXRpY1xyXG4gKiBAc2luY2UgMy4xMC4wXHJcbiAqIFxyXG4gKiBAcGFyYW0ge3N0cmluZ30ga2V5IC0gVGhlIGtleSBvZiB0aGUgaW5wdXQgcGx1Z2luIHRvIHJlbW92ZS5cclxuICovXHJcbklucHV0UGx1Z2luQ2FjaGUucmVtb3ZlID0gZnVuY3Rpb24gKGtleSlcclxue1xyXG4gICAgaWYgKGlucHV0UGx1Z2lucy5oYXNPd25Qcm9wZXJ0eShrZXkpKVxyXG4gICAge1xyXG4gICAgICAgIGRlbGV0ZSBpbnB1dFBsdWdpbnNba2V5XTtcclxuICAgIH1cclxufTtcclxuXHJcbm1vZHVsZS5leHBvcnRzID0gSW5wdXRQbHVnaW5DYWNoZTtcclxuIl0sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/input/InputPluginCache.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

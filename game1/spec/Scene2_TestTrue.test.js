@@ -8,6 +8,7 @@ const puppeteer = require('puppeteer');
 
 let page;
 
+
 describe('check question 1', () => {
   test('check existance of text', async () => {
     const browser = await puppeteer.launch({
@@ -18,6 +19,7 @@ describe('check question 1', () => {
       ],
     });
     page = await browser.newPage();
+
     await page.goto('http://localhost:8080/');
 
     // await expect(page).toMatch('There are');
@@ -25,7 +27,7 @@ describe('check question 1', () => {
     expect(ques).toBe('There are ');
     const wordEndQues = await page.$eval('#word_end_ques1', (el) => el.textContent);
     expect(wordEndQues).toBe(' blocks');
-  }, 10000);
+  }, 12000);
 
   test('check existance of input', async () => {
     // await expect(page).toMatch('blocks');

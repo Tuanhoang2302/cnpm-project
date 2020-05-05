@@ -1,0 +1,341 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for DOMElementFactory.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> DOMElementFactory.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>88/88</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>1/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>88/88</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var DOMElement = __webpack_require__(/*! ./DOMElement */ "./node_modules/phaser/src/gameobjects/domelement/DOMElement.js");
+var GameObjectFactory = __webpack_require__(/*! ../GameObjectFactory */ "./node_modules/phaser/src/gameobjects/GameObjectFactory.js");
+&nbsp;
+/**
+ * DOM Element Game Objects are a way to control and manipulate HTML Elements over the top of your game.
+ * 
+ * In order for DOM Elements to display you have to enable them by adding the following to your game
+ * configuration object:
+ * 
+ * ```javascript
+ * dom {
+ *   createContainer: true
+ * }
+ * ```
+ * 
+ * When this is added, Phaser will automatically create a DOM Container div that is positioned over the top
+ * of the game canvas. This div is sized to match the canvas, and if the canvas size changes, as a result of
+ * settings within the Scale Manager, the dom container is resized accordingly.
+ * 
+ * You can create a DOM Element by either passing in DOMStrings, or by passing in a reference to an existing
+ * Element that you wish to be placed under the control of Phaser. For example:
+ * 
+ * ```javascript
+ * this.add.dom(x, y, 'div', 'background-color: lime; width: 220px; height: 100px; font: 48px Arial', 'Phaser');
+ * ```
+ * 
+ * The above code will insert a div element into the DOM Container at the given x/y coordinate. The DOMString in
+ * the 4th argument sets the initial CSS style of the div and the final argument is the inner text. In this case,
+ * it will create a lime colored div that is 220px by 100px in size with the text Phaser in it, in an Arial font.
+ * 
+ * You should nearly always, without exception, use explicitly sized HTML Elements, in order to fully control
+ * alignment and positioning of the elements next to regular game content.
+ * 
+ * Rather than specify the CSS and HTML directly you can use the `load.html` File Loader to load it into the
+ * cache and then use the `createFromCache` method instead. You can also use `createFromHTML` and various other
+ * methods available in this class to help construct your elements.
+ * 
+ * Once the element has been created you can then control it like you would any other Game Object. You can set its
+ * position, scale, rotation, alpha and other properties. It will move as the main Scene Camera moves and be clipped
+ * at the edge of the canvas. It's important to remember some limitations of DOM Elements: The obvious one is that
+ * they appear above or below your game canvas. You cannot blend them into the display list, meaning you cannot have
+ * a DOM Element, then a Sprite, then another DOM Element behind it.
+ * 
+ * They also cannot be enabled for input. To do that, you have to use the `addListener` method to add native event
+ * listeners directly. The final limitation is to do with cameras. The DOM Container is sized to match the game canvas
+ * entirely and clipped accordingly. DOM Elements respect camera scrolling and scrollFactor settings, but if you
+ * change the size of the camera so it no longer matches the size of the canvas, they won't be clipped accordingly.
+ * 
+ * Also, all DOM Elements are inserted into the same DOM Container, regardless of which Scene they are created in.
+ * 
+ * DOM Elements are a powerful way to align native HTML with your Phaser Game Objects. For example, you can insert
+ * a login form for a multiplayer game directly into your title screen. Or a text input box for a highscore table.
+ * Or a banner ad from a 3rd party service. Or perhaps you'd like to use them for high resolution text display and
+ * UI. The choice is up to you, just remember that you're dealing with standard HTML and CSS floating over the top
+ * of your game, and should treat it accordingly.
+ *
+ * Note: This method will only be available if the DOM Element Game Object has been built into Phaser.
+ *
+ * @method Phaser.GameObjects.GameObjectFactory#dom
+ * @since 3.17.0
+ *
+ * @param {number} x - The horizontal position of this DOM Element in the world.
+ * @param {number} y - The vertical position of this DOM Element in the world.
+ * @param {(HTMLElement|string)} [element] - An existing DOM element, or a string. If a string starting with a # it will do a `getElementById` look-up on the string (minus the hash). Without a hash, it represents the type of element to create, i.e. 'div'.
+ * @param {(string|any)} [style] - If a string, will be set directly as the elements `style` property value. If a plain object, will be iterated and the values transferred. In both cases the values replacing whatever CSS styles may have been previously set.
+ * @param {string} [innerText] - If given, will be set directly as the elements `innerText` property value, replacing whatever was there before.
+ *
+ * @return {Phaser.GameObjects.DOMElement} The Game Object that was created.
+ */
+GameObjectFactory.register('dom', function (x, y, element, style, innerText)
+{
+    var gameObject = new DOMElement(this.scene, x, y, element, style, innerText);
+&nbsp;
+    this.displayList.add(gameObject);
+    this.updateList.add(gameObject);
+&nbsp;
+    return gameObject;
+});
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9nYW1lb2JqZWN0cy9kb21lbGVtZW50L0RPTUVsZW1lbnRGYWN0b3J5LmpzPzE1ZDYiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCOztBQUVBLGlCQUFpQixtQkFBTyxDQUFDLG9GQUFjO0FBQ3ZDLHdCQUF3QixtQkFBTyxDQUFDLHdGQUFzQjs7QUFFdEQ7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHFEQUFxRCxjQUFjLGVBQWU7QUFDbEY7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxXQUFXLE9BQU87QUFDbEIsV0FBVyxPQUFPO0FBQ2xCLFdBQVcscUJBQXFCO0FBQ2hDLFdBQVcsYUFBYTtBQUN4QixXQUFXLE9BQU87QUFDbEI7QUFDQSxZQUFZLDhCQUE4QjtBQUMxQztBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBOztBQUVBO0FBQ0EsQ0FBQyIsImZpbGUiOiIuL25vZGVfbW9kdWxlcy9waGFzZXIvc3JjL2dhbWVvYmplY3RzL2RvbWVsZW1lbnQvRE9NRWxlbWVudEZhY3RvcnkuanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcclxuICogQGF1dGhvciAgICAgICBSaWNoYXJkIERhdmV5IDxyaWNoQHBob3RvbnN0b3JtLmNvbT5cclxuICogQGNvcHlyaWdodCAgICAyMDE5IFBob3RvbiBTdG9ybSBMdGQuXHJcbiAqIEBsaWNlbnNlICAgICAge0BsaW5rIGh0dHBzOi8vb3BlbnNvdXJjZS5vcmcvbGljZW5zZXMvTUlUfE1JVCBMaWNlbnNlfVxyXG4gKi9cclxuXHJcbnZhciBET01FbGVtZW50ID0gcmVxdWlyZSgnLi9ET01FbGVtZW50Jyk7XHJcbnZhciBHYW1lT2JqZWN0RmFjdG9yeSA9IHJlcXVpcmUoJy4uL0dhbWVPYmplY3RGYWN0b3J5Jyk7XHJcblxyXG4vKipcclxuICogRE9NIEVsZW1lbnQgR2FtZSBPYmplY3RzIGFyZSBhIHdheSB0byBjb250cm9sIGFuZCBtYW5pcHVsYXRlIEhUTUwgRWxlbWVudHMgb3ZlciB0aGUgdG9wIG9mIHlvdXIgZ2FtZS5cclxuICogXHJcbiAqIEluIG9yZGVyIGZvciBET00gRWxlbWVudHMgdG8gZGlzcGxheSB5b3UgaGF2ZSB0byBlbmFibGUgdGhlbSBieSBhZGRpbmcgdGhlIGZvbGxvd2luZyB0byB5b3VyIGdhbWVcclxuICogY29uZmlndXJhdGlvbiBvYmplY3Q6XHJcbiAqIFxyXG4gKiBgYGBqYXZhc2NyaXB0XHJcbiAqIGRvbSB7XHJcbiAqICAgY3JlYXRlQ29udGFpbmVyOiB0cnVlXHJcbiAqIH1cclxuICogYGBgXHJcbiAqIFxyXG4gKiBXaGVuIHRoaXMgaXMgYWRkZWQsIFBoYXNlciB3aWxsIGF1dG9tYXRpY2FsbHkgY3JlYXRlIGEgRE9NIENvbnRhaW5lciBkaXYgdGhhdCBpcyBwb3NpdGlvbmVkIG92ZXIgdGhlIHRvcFxyXG4gKiBvZiB0aGUgZ2FtZSBjYW52YXMuIFRoaXMgZGl2IGlzIHNpemVkIHRvIG1hdGNoIHRoZSBjYW52YXMsIGFuZCBpZiB0aGUgY2FudmFzIHNpemUgY2hhbmdlcywgYXMgYSByZXN1bHQgb2ZcclxuICogc2V0dGluZ3Mgd2l0aGluIHRoZSBTY2FsZSBNYW5hZ2VyLCB0aGUgZG9tIGNvbnRhaW5lciBpcyByZXNpemVkIGFjY29yZGluZ2x5LlxyXG4gKiBcclxuICogWW91IGNhbiBjcmVhdGUgYSBET00gRWxlbWVudCBieSBlaXRoZXIgcGFzc2luZyBpbiBET01TdHJpbmdzLCBvciBieSBwYXNzaW5nIGluIGEgcmVmZXJlbmNlIHRvIGFuIGV4aXN0aW5nXHJcbiAqIEVsZW1lbnQgdGhhdCB5b3Ugd2lzaCB0byBiZSBwbGFjZWQgdW5kZXIgdGhlIGNvbnRyb2wgb2YgUGhhc2VyLiBGb3IgZXhhbXBsZTpcclxuICogXHJcbiAqIGBgYGphdmFzY3JpcHRcclxuICogdGhpcy5hZGQuZG9tKHgsIHksICdkaXYnLCAnYmFja2dyb3VuZC1jb2xvcjogbGltZTsgd2lkdGg6IDIyMHB4OyBoZWlnaHQ6IDEwMHB4OyBmb250OiA0OHB4IEFyaWFsJywgJ1BoYXNlcicpO1xyXG4gKiBgYGBcclxuICogXHJcbiAqIFRoZSBhYm92ZSBjb2RlIHdpbGwgaW5zZXJ0IGEgZGl2IGVsZW1lbnQgaW50byB0aGUgRE9NIENvbnRhaW5lciBhdCB0aGUgZ2l2ZW4geC95IGNvb3JkaW5hdGUuIFRoZSBET01TdHJpbmcgaW5cclxuICogdGhlIDR0aCBhcmd1bWVudCBzZXRzIHRoZSBpbml0aWFsIENTUyBzdHlsZSBvZiB0aGUgZGl2IGFuZCB0aGUgZmluYWwgYXJndW1lbnQgaXMgdGhlIGlubmVyIHRleHQuIEluIHRoaXMgY2FzZSxcclxuICogaXQgd2lsbCBjcmVhdGUgYSBsaW1lIGNvbG9yZWQgZGl2IHRoYXQgaXMgMjIwcHggYnkgMTAwcHggaW4gc2l6ZSB3aXRoIHRoZSB0ZXh0IFBoYXNlciBpbiBpdCwgaW4gYW4gQXJpYWwgZm9udC5cclxuICogXHJcbiAqIFlvdSBzaG91bGQgbmVhcmx5IGFsd2F5cywgd2l0aG91dCBleGNlcHRpb24sIHVzZSBleHBsaWNpdGx5IHNpemVkIEhUTUwgRWxlbWVudHMsIGluIG9yZGVyIHRvIGZ1bGx5IGNvbnRyb2xcclxuICogYWxpZ25tZW50IGFuZCBwb3NpdGlvbmluZyBvZiB0aGUgZWxlbWVudHMgbmV4dCB0byByZWd1bGFyIGdhbWUgY29udGVudC5cclxuICogXHJcbiAqIFJhdGhlciB0aGFuIHNwZWNpZnkgdGhlIENTUyBhbmQgSFRNTCBkaXJlY3RseSB5b3UgY2FuIHVzZSB0aGUgYGxvYWQuaHRtbGAgRmlsZSBMb2FkZXIgdG8gbG9hZCBpdCBpbnRvIHRoZVxyXG4gKiBjYWNoZSBhbmQgdGhlbiB1c2UgdGhlIGBjcmVhdGVGcm9tQ2FjaGVgIG1ldGhvZCBpbnN0ZWFkLiBZb3UgY2FuIGFsc28gdXNlIGBjcmVhdGVGcm9tSFRNTGAgYW5kIHZhcmlvdXMgb3RoZXJcclxuICogbWV0aG9kcyBhdmFpbGFibGUgaW4gdGhpcyBjbGFzcyB0byBoZWxwIGNvbnN0cnVjdCB5b3VyIGVsZW1lbnRzLlxyXG4gKiBcclxuICogT25jZSB0aGUgZWxlbWVudCBoYXMgYmVlbiBjcmVhdGVkIHlvdSBjYW4gdGhlbiBjb250cm9sIGl0IGxpa2UgeW91IHdvdWxkIGFueSBvdGhlciBHYW1lIE9iamVjdC4gWW91IGNhbiBzZXQgaXRzXHJcbiAqIHBvc2l0aW9uLCBzY2FsZSwgcm90YXRpb24sIGFscGhhIGFuZCBvdGhlciBwcm9wZXJ0aWVzLiBJdCB3aWxsIG1vdmUgYXMgdGhlIG1haW4gU2NlbmUgQ2FtZXJhIG1vdmVzIGFuZCBiZSBjbGlwcGVkXHJcbiAqIGF0IHRoZSBlZGdlIG9mIHRoZSBjYW52YXMuIEl0J3MgaW1wb3J0YW50IHRvIHJlbWVtYmVyIHNvbWUgbGltaXRhdGlvbnMgb2YgRE9NIEVsZW1lbnRzOiBUaGUgb2J2aW91cyBvbmUgaXMgdGhhdFxyXG4gKiB0aGV5IGFwcGVhciBhYm92ZSBvciBiZWxvdyB5b3VyIGdhbWUgY2FudmFzLiBZb3UgY2Fubm90IGJsZW5kIHRoZW0gaW50byB0aGUgZGlzcGxheSBsaXN0LCBtZWFuaW5nIHlvdSBjYW5ub3QgaGF2ZVxyXG4gKiBhIERPTSBFbGVtZW50LCB0aGVuIGEgU3ByaXRlLCB0aGVuIGFub3RoZXIgRE9NIEVsZW1lbnQgYmVoaW5kIGl0LlxyXG4gKiBcclxuICogVGhleSBhbHNvIGNhbm5vdCBiZSBlbmFibGVkIGZvciBpbnB1dC4gVG8gZG8gdGhhdCwgeW91IGhhdmUgdG8gdXNlIHRoZSBgYWRkTGlzdGVuZXJgIG1ldGhvZCB0byBhZGQgbmF0aXZlIGV2ZW50XHJcbiAqIGxpc3RlbmVycyBkaXJlY3RseS4gVGhlIGZpbmFsIGxpbWl0YXRpb24gaXMgdG8gZG8gd2l0aCBjYW1lcmFzLiBUaGUgRE9NIENvbnRhaW5lciBpcyBzaXplZCB0byBtYXRjaCB0aGUgZ2FtZSBjYW52YXNcclxuICogZW50aXJlbHkgYW5kIGNsaXBwZWQgYWNjb3JkaW5nbHkuIERPTSBFbGVtZW50cyByZXNwZWN0IGNhbWVyYSBzY3JvbGxpbmcgYW5kIHNjcm9sbEZhY3RvciBzZXR0aW5ncywgYnV0IGlmIHlvdVxyXG4gKiBjaGFuZ2UgdGhlIHNpemUgb2YgdGhlIGNhbWVyYSBzbyBpdCBubyBsb25nZXIgbWF0Y2hlcyB0aGUgc2l6ZSBvZiB0aGUgY2FudmFzLCB0aGV5IHdvbid0IGJlIGNsaXBwZWQgYWNjb3JkaW5nbHkuXHJcbiAqIFxyXG4gKiBBbHNvLCBhbGwgRE9NIEVsZW1lbnRzIGFyZSBpbnNlcnRlZCBpbnRvIHRoZSBzYW1lIERPTSBDb250YWluZXIsIHJlZ2FyZGxlc3Mgb2Ygd2hpY2ggU2NlbmUgdGhleSBhcmUgY3JlYXRlZCBpbi5cclxuICogXHJcbiAqIERPTSBFbGVtZW50cyBhcmUgYSBwb3dlcmZ1bCB3YXkgdG8gYWxpZ24gbmF0aXZlIEhUTUwgd2l0aCB5b3VyIFBoYXNlciBHYW1lIE9iamVjdHMuIEZvciBleGFtcGxlLCB5b3UgY2FuIGluc2VydFxyXG4gKiBhIGxvZ2luIGZvcm0gZm9yIGEgbXVsdGlwbGF5ZXIgZ2FtZSBkaXJlY3RseSBpbnRvIHlvdXIgdGl0bGUgc2NyZWVuLiBPciBhIHRleHQgaW5wdXQgYm94IGZvciBhIGhpZ2hzY29yZSB0YWJsZS5cclxuICogT3IgYSBiYW5uZXIgYWQgZnJvbSBhIDNyZCBwYXJ0eSBzZXJ2aWNlLiBPciBwZXJoYXBzIHlvdSdkIGxpa2UgdG8gdXNlIHRoZW0gZm9yIGhpZ2ggcmVzb2x1dGlvbiB0ZXh0IGRpc3BsYXkgYW5kXHJcbiAqIFVJLiBUaGUgY2hvaWNlIGlzIHVwIHRvIHlvdSwganVzdCByZW1lbWJlciB0aGF0IHlvdSdyZSBkZWFsaW5nIHdpdGggc3RhbmRhcmQgSFRNTCBhbmQgQ1NTIGZsb2F0aW5nIG92ZXIgdGhlIHRvcFxyXG4gKiBvZiB5b3VyIGdhbWUsIGFuZCBzaG91bGQgdHJlYXQgaXQgYWNjb3JkaW5nbHkuXHJcbiAqXHJcbiAqIE5vdGU6IFRoaXMgbWV0aG9kIHdpbGwgb25seSBiZSBhdmFpbGFibGUgaWYgdGhlIERPTSBFbGVtZW50IEdhbWUgT2JqZWN0IGhhcyBiZWVuIGJ1aWx0IGludG8gUGhhc2VyLlxyXG4gKlxyXG4gKiBAbWV0aG9kIFBoYXNlci5HYW1lT2JqZWN0cy5HYW1lT2JqZWN0RmFjdG9yeSNkb21cclxuICogQHNpbmNlIDMuMTcuMFxyXG4gKlxyXG4gKiBAcGFyYW0ge251bWJlcn0geCAtIFRoZSBob3Jpem9udGFsIHBvc2l0aW9uIG9mIHRoaXMgRE9NIEVsZW1lbnQgaW4gdGhlIHdvcmxkLlxyXG4gKiBAcGFyYW0ge251bWJlcn0geSAtIFRoZSB2ZXJ0aWNhbCBwb3NpdGlvbiBvZiB0aGlzIERPTSBFbGVtZW50IGluIHRoZSB3b3JsZC5cclxuICogQHBhcmFtIHsoSFRNTEVsZW1lbnR8c3RyaW5nKX0gW2VsZW1lbnRdIC0gQW4gZXhpc3RpbmcgRE9NIGVsZW1lbnQsIG9yIGEgc3RyaW5nLiBJZiBhIHN0cmluZyBzdGFydGluZyB3aXRoIGEgIyBpdCB3aWxsIGRvIGEgYGdldEVsZW1lbnRCeUlkYCBsb29rLXVwIG9uIHRoZSBzdHJpbmcgKG1pbnVzIHRoZSBoYXNoKS4gV2l0aG91dCBhIGhhc2gsIGl0IHJlcHJlc2VudHMgdGhlIHR5cGUgb2YgZWxlbWVudCB0byBjcmVhdGUsIGkuZS4gJ2RpdicuXHJcbiAqIEBwYXJhbSB7KHN0cmluZ3xhbnkpfSBbc3R5bGVdIC0gSWYgYSBzdHJpbmcsIHdpbGwgYmUgc2V0IGRpcmVjdGx5IGFzIHRoZSBlbGVtZW50cyBgc3R5bGVgIHByb3BlcnR5IHZhbHVlLiBJZiBhIHBsYWluIG9iamVjdCwgd2lsbCBiZSBpdGVyYXRlZCBhbmQgdGhlIHZhbHVlcyB0cmFuc2ZlcnJlZC4gSW4gYm90aCBjYXNlcyB0aGUgdmFsdWVzIHJlcGxhY2luZyB3aGF0ZXZlciBDU1Mgc3R5bGVzIG1heSBoYXZlIGJlZW4gcHJldmlvdXNseSBzZXQuXHJcbiAqIEBwYXJhbSB7c3RyaW5nfSBbaW5uZXJUZXh0XSAtIElmIGdpdmVuLCB3aWxsIGJlIHNldCBkaXJlY3RseSBhcyB0aGUgZWxlbWVudHMgYGlubmVyVGV4dGAgcHJvcGVydHkgdmFsdWUsIHJlcGxhY2luZyB3aGF0ZXZlciB3YXMgdGhlcmUgYmVmb3JlLlxyXG4gKlxyXG4gKiBAcmV0dXJuIHtQaGFzZXIuR2FtZU9iamVjdHMuRE9NRWxlbWVudH0gVGhlIEdhbWUgT2JqZWN0IHRoYXQgd2FzIGNyZWF0ZWQuXHJcbiAqL1xyXG5HYW1lT2JqZWN0RmFjdG9yeS5yZWdpc3RlcignZG9tJywgZnVuY3Rpb24gKHgsIHksIGVsZW1lbnQsIHN0eWxlLCBpbm5lclRleHQpXHJcbntcclxuICAgIHZhciBnYW1lT2JqZWN0ID0gbmV3IERPTUVsZW1lbnQodGhpcy5zY2VuZSwgeCwgeSwgZWxlbWVudCwgc3R5bGUsIGlubmVyVGV4dCk7XHJcblxyXG4gICAgdGhpcy5kaXNwbGF5TGlzdC5hZGQoZ2FtZU9iamVjdCk7XHJcbiAgICB0aGlzLnVwZGF0ZUxpc3QuYWRkKGdhbWVPYmplY3QpO1xyXG5cclxuICAgIHJldHVybiBnYW1lT2JqZWN0O1xyXG59KTtcclxuIl0sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/gameobjects/domelement/DOMElementFactory.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

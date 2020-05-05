@@ -1,0 +1,248 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for ForwardDiffuse-frag.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> ForwardDiffuse-frag.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>57/57</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>1/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>57/57</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">module.exports = [
+    '#define SHADER_NAME PHASER_FORWARD_DIFFUSE_FS',
+    '',
+    'precision mediump float;',
+    '',
+    'struct Light',
+    '{',
+    '    vec2 position;',
+    '    vec3 color;',
+    '    float intensity;',
+    '    float radius;',
+    '};',
+    '',
+    'const int kMaxLights = %LIGHT_COUNT%;',
+    '',
+    'uniform vec4 uCamera; /* x, y, rotation, zoom */',
+    'uniform vec2 uResolution;',
+    'uniform sampler2D uMainSampler;',
+    'uniform sampler2D uNormSampler;',
+    'uniform vec3 uAmbientLightColor;',
+    'uniform Light uLights[kMaxLights];',
+    'uniform mat3 uInverseRotationMatrix;',
+    '',
+    'varying vec2 outTexCoord;',
+    'varying vec4 outTint;',
+    '',
+    'void main()',
+    '{',
+    '    vec3 finalColor = vec3(0.0, 0.0, 0.0);',
+    '    vec4 color = texture2D(uMainSampler, outTexCoord) * vec4(outTint.rgb * outTint.a, outTint.a);',
+    '    vec3 normalMap = texture2D(uNormSampler, outTexCoord).rgb;',
+    '    vec3 normal = normalize(uInverseRotationMatrix * vec3(normalMap * 2.0 - 1.0));',
+    '    vec2 res = vec2(min(uResolution.x, uResolution.y)) * uCamera.w;',
+    '',
+    '    for (int index = 0; index &lt; kMaxLights; ++index)',
+    '    {',
+    '        Light light = uLights[index];',
+    '        vec3 lightDir = vec3((light.position.xy / res) - (gl_FragCoord.xy / res), 0.1);',
+    '        vec3 lightNormal = normalize(lightDir);',
+    '        float distToSurf = length(lightDir) * uCamera.w;',
+    '        float diffuseFactor = max(dot(normal, lightNormal), 0.0);',
+    '        float radius = (light.radius / res.x * uCamera.w) * uCamera.w;',
+    '        float attenuation = clamp(1.0 - distToSurf * distToSurf / (radius * radius), 0.0, 1.0);',
+    '        vec3 diffuse = light.color * diffuseFactor;',
+    '        finalColor += (attenuation * diffuse) * light.intensity;',
+    '    }',
+    '',
+    '    vec4 colorOutput = vec4(uAmbientLightColor + finalColor, 1.0);',
+    '    gl_FragColor = color * vec4(colorOutput.rgb * colorOutput.a, colorOutput.a);',
+    '',
+    '}',
+    ''
+].join('\n');
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9yZW5kZXJlci93ZWJnbC9zaGFkZXJzL0ZvcndhcmREaWZmdXNlLWZyYWcuanM/MjY4ZCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQSw2QkFBNkI7QUFDN0I7QUFDQTtBQUNBLE1BQU07QUFDTix1QkFBdUI7QUFDdkIsb0JBQW9CO0FBQ3BCLHlCQUF5QjtBQUN6QixzQkFBc0I7QUFDdEIsT0FBTztBQUNQO0FBQ0EsMENBQTBDO0FBQzFDO0FBQ0EsMEJBQTBCO0FBQzFCLDhCQUE4QjtBQUM5QixvQ0FBb0M7QUFDcEMsb0NBQW9DO0FBQ3BDLHFDQUFxQztBQUNyQyx1Q0FBdUM7QUFDdkMseUNBQXlDO0FBQ3pDO0FBQ0EsOEJBQThCO0FBQzlCLDBCQUEwQjtBQUMxQjtBQUNBO0FBQ0EsTUFBTTtBQUNOLCtDQUErQztBQUMvQyxzR0FBc0c7QUFDdEcsbUVBQW1FO0FBQ25FLHVGQUF1RjtBQUN2Rix3RUFBd0U7QUFDeEU7QUFDQSw0QkFBNEIsb0JBQW9CO0FBQ2hELFVBQVU7QUFDViwwQ0FBMEM7QUFDMUMsNEZBQTRGO0FBQzVGLG9EQUFvRDtBQUNwRCw2REFBNkQ7QUFDN0Qsc0VBQXNFO0FBQ3RFLDJFQUEyRTtBQUMzRSxvR0FBb0c7QUFDcEcsd0RBQXdEO0FBQ3hELHFFQUFxRTtBQUNyRSxVQUFVO0FBQ1Y7QUFDQSx1RUFBdUU7QUFDdkUscUZBQXFGO0FBQ3JGO0FBQ0EsTUFBTTtBQUNOO0FBQ0EiLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9yZW5kZXJlci93ZWJnbC9zaGFkZXJzL0ZvcndhcmREaWZmdXNlLWZyYWcuanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cyA9IFtcclxuICAgICcjZGVmaW5lIFNIQURFUl9OQU1FIFBIQVNFUl9GT1JXQVJEX0RJRkZVU0VfRlMnLFxyXG4gICAgJycsXHJcbiAgICAncHJlY2lzaW9uIG1lZGl1bXAgZmxvYXQ7JyxcclxuICAgICcnLFxyXG4gICAgJ3N0cnVjdCBMaWdodCcsXHJcbiAgICAneycsXHJcbiAgICAnICAgIHZlYzIgcG9zaXRpb247JyxcclxuICAgICcgICAgdmVjMyBjb2xvcjsnLFxyXG4gICAgJyAgICBmbG9hdCBpbnRlbnNpdHk7JyxcclxuICAgICcgICAgZmxvYXQgcmFkaXVzOycsXHJcbiAgICAnfTsnLFxyXG4gICAgJycsXHJcbiAgICAnY29uc3QgaW50IGtNYXhMaWdodHMgPSAlTElHSFRfQ09VTlQlOycsXHJcbiAgICAnJyxcclxuICAgICd1bmlmb3JtIHZlYzQgdUNhbWVyYTsgLyogeCwgeSwgcm90YXRpb24sIHpvb20gKi8nLFxyXG4gICAgJ3VuaWZvcm0gdmVjMiB1UmVzb2x1dGlvbjsnLFxyXG4gICAgJ3VuaWZvcm0gc2FtcGxlcjJEIHVNYWluU2FtcGxlcjsnLFxyXG4gICAgJ3VuaWZvcm0gc2FtcGxlcjJEIHVOb3JtU2FtcGxlcjsnLFxyXG4gICAgJ3VuaWZvcm0gdmVjMyB1QW1iaWVudExpZ2h0Q29sb3I7JyxcclxuICAgICd1bmlmb3JtIExpZ2h0IHVMaWdodHNba01heExpZ2h0c107JyxcclxuICAgICd1bmlmb3JtIG1hdDMgdUludmVyc2VSb3RhdGlvbk1hdHJpeDsnLFxyXG4gICAgJycsXHJcbiAgICAndmFyeWluZyB2ZWMyIG91dFRleENvb3JkOycsXHJcbiAgICAndmFyeWluZyB2ZWM0IG91dFRpbnQ7JyxcclxuICAgICcnLFxyXG4gICAgJ3ZvaWQgbWFpbigpJyxcclxuICAgICd7JyxcclxuICAgICcgICAgdmVjMyBmaW5hbENvbG9yID0gdmVjMygwLjAsIDAuMCwgMC4wKTsnLFxyXG4gICAgJyAgICB2ZWM0IGNvbG9yID0gdGV4dHVyZTJEKHVNYWluU2FtcGxlciwgb3V0VGV4Q29vcmQpICogdmVjNChvdXRUaW50LnJnYiAqIG91dFRpbnQuYSwgb3V0VGludC5hKTsnLFxyXG4gICAgJyAgICB2ZWMzIG5vcm1hbE1hcCA9IHRleHR1cmUyRCh1Tm9ybVNhbXBsZXIsIG91dFRleENvb3JkKS5yZ2I7JyxcclxuICAgICcgICAgdmVjMyBub3JtYWwgPSBub3JtYWxpemUodUludmVyc2VSb3RhdGlvbk1hdHJpeCAqIHZlYzMobm9ybWFsTWFwICogMi4wIC0gMS4wKSk7JyxcclxuICAgICcgICAgdmVjMiByZXMgPSB2ZWMyKG1pbih1UmVzb2x1dGlvbi54LCB1UmVzb2x1dGlvbi55KSkgKiB1Q2FtZXJhLnc7JyxcclxuICAgICcnLFxyXG4gICAgJyAgICBmb3IgKGludCBpbmRleCA9IDA7IGluZGV4IDwga01heExpZ2h0czsgKytpbmRleCknLFxyXG4gICAgJyAgICB7JyxcclxuICAgICcgICAgICAgIExpZ2h0IGxpZ2h0ID0gdUxpZ2h0c1tpbmRleF07JyxcclxuICAgICcgICAgICAgIHZlYzMgbGlnaHREaXIgPSB2ZWMzKChsaWdodC5wb3NpdGlvbi54eSAvIHJlcykgLSAoZ2xfRnJhZ0Nvb3JkLnh5IC8gcmVzKSwgMC4xKTsnLFxyXG4gICAgJyAgICAgICAgdmVjMyBsaWdodE5vcm1hbCA9IG5vcm1hbGl6ZShsaWdodERpcik7JyxcclxuICAgICcgICAgICAgIGZsb2F0IGRpc3RUb1N1cmYgPSBsZW5ndGgobGlnaHREaXIpICogdUNhbWVyYS53OycsXHJcbiAgICAnICAgICAgICBmbG9hdCBkaWZmdXNlRmFjdG9yID0gbWF4KGRvdChub3JtYWwsIGxpZ2h0Tm9ybWFsKSwgMC4wKTsnLFxyXG4gICAgJyAgICAgICAgZmxvYXQgcmFkaXVzID0gKGxpZ2h0LnJhZGl1cyAvIHJlcy54ICogdUNhbWVyYS53KSAqIHVDYW1lcmEudzsnLFxyXG4gICAgJyAgICAgICAgZmxvYXQgYXR0ZW51YXRpb24gPSBjbGFtcCgxLjAgLSBkaXN0VG9TdXJmICogZGlzdFRvU3VyZiAvIChyYWRpdXMgKiByYWRpdXMpLCAwLjAsIDEuMCk7JyxcclxuICAgICcgICAgICAgIHZlYzMgZGlmZnVzZSA9IGxpZ2h0LmNvbG9yICogZGlmZnVzZUZhY3RvcjsnLFxyXG4gICAgJyAgICAgICAgZmluYWxDb2xvciArPSAoYXR0ZW51YXRpb24gKiBkaWZmdXNlKSAqIGxpZ2h0LmludGVuc2l0eTsnLFxyXG4gICAgJyAgICB9JyxcclxuICAgICcnLFxyXG4gICAgJyAgICB2ZWM0IGNvbG9yT3V0cHV0ID0gdmVjNCh1QW1iaWVudExpZ2h0Q29sb3IgKyBmaW5hbENvbG9yLCAxLjApOycsXHJcbiAgICAnICAgIGdsX0ZyYWdDb2xvciA9IGNvbG9yICogdmVjNChjb2xvck91dHB1dC5yZ2IgKiBjb2xvck91dHB1dC5hLCBjb2xvck91dHB1dC5hKTsnLFxyXG4gICAgJycsXHJcbiAgICAnfScsXHJcbiAgICAnJ1xyXG5dLmpvaW4oJ1xcbicpO1xyXG4iXSwic291cmNlUm9vdCI6IiJ9
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/renderer/webgl/shaders/ForwardDiffuse-frag.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

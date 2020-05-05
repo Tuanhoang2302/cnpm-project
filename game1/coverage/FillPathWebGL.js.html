@@ -1,0 +1,263 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for FillPathWebGL.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> FillPathWebGL.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">45.16% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>28/62</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>2/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">45.16% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>28/62</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var Utils = __webpack_require__(/*! ../../renderer/webgl/Utils */ "./node_modules/phaser/src/renderer/webgl/Utils.js");
+&nbsp;
+/**
+ * Renders a filled path for the given Shape.
+ *
+ * @method Phaser.GameObjects.Shape#FillPathWebGL
+ * @since 3.13.0
+ * @private
+ *
+ * @param {Phaser.Renderer.WebGL.WebGLPipeline} pipeline - The WebGL Pipeline used to render this Shape.
+ * @param {Phaser.GameObjects.Components.TransformMatrix} calcMatrix - The transform matrix used to get the position values.
+ * @param {Phaser.GameObjects.Shape} src - The Game Object shape being rendered in this call.
+ * @param {number} alpha - The base alpha value.
+ * @param {number} dx - The source displayOriginX.
+ * @param {number} dy - The source displayOriginY.
+ */
+<span class="cstat-no" title="statement not covered" >var FillPathWebGL = function (pipeline, calcMatrix, src, alpha, dx, dy)</span>
+<span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    var fillTintColor = Utils.getTintAppendFloatAlphaAndSwap(src.fillColor, src.fillAlpha * alpha);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var path = src.pathData;</span>
+<span class="cstat-no" title="statement not covered" >    var pathIndexes = src.pathIndexes;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    for (var i = 0; i &lt; pathIndexes.length; i += 3)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        var p0 = pathIndexes[i] * 2;</span>
+<span class="cstat-no" title="statement not covered" >        var p1 = pathIndexes[i + 1] * 2;</span>
+<span class="cstat-no" title="statement not covered" >        var p2 = pathIndexes[i + 2] * 2;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        var x0 = path[p0 + 0] - dx;</span>
+<span class="cstat-no" title="statement not covered" >        var y0 = path[p0 + 1] - dy;</span>
+<span class="cstat-no" title="statement not covered" >        var x1 = path[p1 + 0] - dx;</span>
+<span class="cstat-no" title="statement not covered" >        var y1 = path[p1 + 1] - dy;</span>
+<span class="cstat-no" title="statement not covered" >        var x2 = path[p2 + 0] - dx;</span>
+<span class="cstat-no" title="statement not covered" >        var y2 = path[p2 + 1] - dy;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        var tx0 = calcMatrix.getX(x0, y0);</span>
+<span class="cstat-no" title="statement not covered" >        var ty0 = calcMatrix.getY(x0, y0);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        var tx1 = calcMatrix.getX(x1, y1);</span>
+<span class="cstat-no" title="statement not covered" >        var ty1 = calcMatrix.getY(x1, y1);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        var tx2 = calcMatrix.getX(x2, y2);</span>
+<span class="cstat-no" title="statement not covered" >        var ty2 = calcMatrix.getY(x2, y2);</span>
+<span class="cstat-no" title="statement not covered" >    </span>
+<span class="cstat-no" title="statement not covered" >        pipeline.setTexture2D();</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        pipeline.batchTri(tx0, ty0, tx1, ty1, tx2, ty2, 0, 0, 1, 1, fillTintColor, fillTintColor, fillTintColor, pipeline.tintEffect);</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >};</span>
+&nbsp;
+module.exports = FillPathWebGL;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9nYW1lb2JqZWN0cy9zaGFwZS9GaWxsUGF0aFdlYkdMLmpzPzkwYjciXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCOztBQUVBLFlBQVksbUJBQU8sQ0FBQyxxRkFBNEI7O0FBRWhEO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsV0FBVyxvQ0FBb0M7QUFDL0MsV0FBVyw4Q0FBOEM7QUFDekQsV0FBVyx5QkFBeUI7QUFDcEMsV0FBVyxPQUFPO0FBQ2xCLFdBQVcsT0FBTztBQUNsQixXQUFXLE9BQU87QUFDbEI7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQSxtQkFBbUIsd0JBQXdCO0FBQzNDO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUEiLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9nYW1lb2JqZWN0cy9zaGFwZS9GaWxsUGF0aFdlYkdMLmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXHJcbiAqIEBhdXRob3IgICAgICAgUmljaGFyZCBEYXZleSA8cmljaEBwaG90b25zdG9ybS5jb20+XHJcbiAqIEBjb3B5cmlnaHQgICAgMjAxOSBQaG90b24gU3Rvcm0gTHRkLlxyXG4gKiBAbGljZW5zZSAgICAgIHtAbGluayBodHRwczovL29wZW5zb3VyY2Uub3JnL2xpY2Vuc2VzL01JVHxNSVQgTGljZW5zZX1cclxuICovXHJcblxyXG52YXIgVXRpbHMgPSByZXF1aXJlKCcuLi8uLi9yZW5kZXJlci93ZWJnbC9VdGlscycpO1xyXG5cclxuLyoqXHJcbiAqIFJlbmRlcnMgYSBmaWxsZWQgcGF0aCBmb3IgdGhlIGdpdmVuIFNoYXBlLlxyXG4gKlxyXG4gKiBAbWV0aG9kIFBoYXNlci5HYW1lT2JqZWN0cy5TaGFwZSNGaWxsUGF0aFdlYkdMXHJcbiAqIEBzaW5jZSAzLjEzLjBcclxuICogQHByaXZhdGVcclxuICpcclxuICogQHBhcmFtIHtQaGFzZXIuUmVuZGVyZXIuV2ViR0wuV2ViR0xQaXBlbGluZX0gcGlwZWxpbmUgLSBUaGUgV2ViR0wgUGlwZWxpbmUgdXNlZCB0byByZW5kZXIgdGhpcyBTaGFwZS5cclxuICogQHBhcmFtIHtQaGFzZXIuR2FtZU9iamVjdHMuQ29tcG9uZW50cy5UcmFuc2Zvcm1NYXRyaXh9IGNhbGNNYXRyaXggLSBUaGUgdHJhbnNmb3JtIG1hdHJpeCB1c2VkIHRvIGdldCB0aGUgcG9zaXRpb24gdmFsdWVzLlxyXG4gKiBAcGFyYW0ge1BoYXNlci5HYW1lT2JqZWN0cy5TaGFwZX0gc3JjIC0gVGhlIEdhbWUgT2JqZWN0IHNoYXBlIGJlaW5nIHJlbmRlcmVkIGluIHRoaXMgY2FsbC5cclxuICogQHBhcmFtIHtudW1iZXJ9IGFscGhhIC0gVGhlIGJhc2UgYWxwaGEgdmFsdWUuXHJcbiAqIEBwYXJhbSB7bnVtYmVyfSBkeCAtIFRoZSBzb3VyY2UgZGlzcGxheU9yaWdpblguXHJcbiAqIEBwYXJhbSB7bnVtYmVyfSBkeSAtIFRoZSBzb3VyY2UgZGlzcGxheU9yaWdpblkuXHJcbiAqL1xyXG52YXIgRmlsbFBhdGhXZWJHTCA9IGZ1bmN0aW9uIChwaXBlbGluZSwgY2FsY01hdHJpeCwgc3JjLCBhbHBoYSwgZHgsIGR5KVxyXG57XHJcbiAgICB2YXIgZmlsbFRpbnRDb2xvciA9IFV0aWxzLmdldFRpbnRBcHBlbmRGbG9hdEFscGhhQW5kU3dhcChzcmMuZmlsbENvbG9yLCBzcmMuZmlsbEFscGhhICogYWxwaGEpO1xyXG5cclxuICAgIHZhciBwYXRoID0gc3JjLnBhdGhEYXRhO1xyXG4gICAgdmFyIHBhdGhJbmRleGVzID0gc3JjLnBhdGhJbmRleGVzO1xyXG5cclxuICAgIGZvciAodmFyIGkgPSAwOyBpIDwgcGF0aEluZGV4ZXMubGVuZ3RoOyBpICs9IDMpXHJcbiAgICB7XHJcbiAgICAgICAgdmFyIHAwID0gcGF0aEluZGV4ZXNbaV0gKiAyO1xyXG4gICAgICAgIHZhciBwMSA9IHBhdGhJbmRleGVzW2kgKyAxXSAqIDI7XHJcbiAgICAgICAgdmFyIHAyID0gcGF0aEluZGV4ZXNbaSArIDJdICogMjtcclxuXHJcbiAgICAgICAgdmFyIHgwID0gcGF0aFtwMCArIDBdIC0gZHg7XHJcbiAgICAgICAgdmFyIHkwID0gcGF0aFtwMCArIDFdIC0gZHk7XHJcbiAgICAgICAgdmFyIHgxID0gcGF0aFtwMSArIDBdIC0gZHg7XHJcbiAgICAgICAgdmFyIHkxID0gcGF0aFtwMSArIDFdIC0gZHk7XHJcbiAgICAgICAgdmFyIHgyID0gcGF0aFtwMiArIDBdIC0gZHg7XHJcbiAgICAgICAgdmFyIHkyID0gcGF0aFtwMiArIDFdIC0gZHk7XHJcblxyXG4gICAgICAgIHZhciB0eDAgPSBjYWxjTWF0cml4LmdldFgoeDAsIHkwKTtcclxuICAgICAgICB2YXIgdHkwID0gY2FsY01hdHJpeC5nZXRZKHgwLCB5MCk7XHJcblxyXG4gICAgICAgIHZhciB0eDEgPSBjYWxjTWF0cml4LmdldFgoeDEsIHkxKTtcclxuICAgICAgICB2YXIgdHkxID0gY2FsY01hdHJpeC5nZXRZKHgxLCB5MSk7XHJcblxyXG4gICAgICAgIHZhciB0eDIgPSBjYWxjTWF0cml4LmdldFgoeDIsIHkyKTtcclxuICAgICAgICB2YXIgdHkyID0gY2FsY01hdHJpeC5nZXRZKHgyLCB5Mik7XHJcbiAgICBcclxuICAgICAgICBwaXBlbGluZS5zZXRUZXh0dXJlMkQoKTtcclxuXHJcbiAgICAgICAgcGlwZWxpbmUuYmF0Y2hUcmkodHgwLCB0eTAsIHR4MSwgdHkxLCB0eDIsIHR5MiwgMCwgMCwgMSwgMSwgZmlsbFRpbnRDb2xvciwgZmlsbFRpbnRDb2xvciwgZmlsbFRpbnRDb2xvciwgcGlwZWxpbmUudGludEVmZmVjdCk7XHJcbiAgICB9XHJcbn07XHJcblxyXG5tb2R1bGUuZXhwb3J0cyA9IEZpbGxQYXRoV2ViR0w7XHJcbiJdLCJzb3VyY2VSb290IjoiIn0=
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/gameobjects/shape/FillPathWebGL.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

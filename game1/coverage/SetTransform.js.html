@@ -1,0 +1,335 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for SetTransform.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> SetTransform.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">43.02% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>37/86</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>2/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">43.02% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>37/86</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+/**
+ * Takes a reference to the Canvas Renderer, a Canvas Rendering Context, a Game Object, a Camera and a parent matrix
+ * and then performs the following steps:
+ * 
+ * 1. Checks the alpha of the source combined with the Camera alpha. If 0 or less it aborts.
+ * 2. Takes the Camera and Game Object matrix and multiplies them, combined with the parent matrix if given.
+ * 3. Sets the blend mode of the context to be that used by the Game Object.
+ * 4. Sets the alpha value of the context to be that used by the Game Object combined with the Camera.
+ * 5. Saves the context state.
+ * 6. Sets the final matrix values into the context via setTransform.
+ * 7. If Renderer.antialias, or the frame.source.scaleMode is set, then imageSmoothingEnabled is set.
+ * 
+ * This function is only meant to be used internally. Most of the Canvas Renderer classes use it.
+ *
+ * @function Phaser.Renderer.Canvas.SetTransform
+ * @since 3.12.0
+ *
+ * @param {Phaser.Renderer.Canvas.CanvasRenderer} renderer - A reference to the current active Canvas renderer.
+ * @param {CanvasRenderingContext2D} ctx - The canvas context to set the transform on.
+ * @param {Phaser.GameObjects.GameObject} src - The Game Object being rendered. Can be any type that extends the base class.
+ * @param {Phaser.Cameras.Scene2D.Camera} camera - The Camera that is rendering the Game Object.
+ * @param {Phaser.GameObjects.Components.TransformMatrix} [parentMatrix] - A parent transform matrix to apply to the Game Object before rendering.
+ * 
+ * @return {boolean} `true` if the Game Object context was set, otherwise `false`.
+ */
+<span class="cstat-no" title="statement not covered" >var SetTransform = function (renderer, ctx, src, camera, parentMatrix)</span>
+<span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    var alpha = camera.alpha * src.alpha;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (alpha &lt;= 0)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        //  Nothing to see, so don't waste time calculating stuff</span>
+<span class="cstat-no" title="statement not covered" >        return false;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var camMatrix = renderer._tempMatrix1.copyFromArray(camera.matrix.matrix);</span>
+<span class="cstat-no" title="statement not covered" >    var gameObjectMatrix = renderer._tempMatrix2.applyITRS(src.x, src.y, src.rotation, src.scaleX, src.scaleY);</span>
+<span class="cstat-no" title="statement not covered" >    var calcMatrix = renderer._tempMatrix3;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    if (parentMatrix)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        //  Multiply the camera by the parent matrix</span>
+<span class="cstat-no" title="statement not covered" >        camMatrix.multiplyWithOffset(parentMatrix, -camera.scrollX * src.scrollFactorX, -camera.scrollY * src.scrollFactorY);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        //  Undo the camera scroll</span>
+<span class="cstat-no" title="statement not covered" >        gameObjectMatrix.e = src.x;</span>
+<span class="cstat-no" title="statement not covered" >        gameObjectMatrix.f = src.y;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        //  Multiply by the Sprite matrix, store result in calcMatrix</span>
+<span class="cstat-no" title="statement not covered" >        camMatrix.multiply(gameObjectMatrix, calcMatrix);</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    else</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        gameObjectMatrix.e -= camera.scrollX * src.scrollFactorX;</span>
+<span class="cstat-no" title="statement not covered" >        gameObjectMatrix.f -= camera.scrollY * src.scrollFactorY;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        //  Multiply by the Sprite matrix, store result in calcMatrix</span>
+<span class="cstat-no" title="statement not covered" >        camMatrix.multiply(gameObjectMatrix, calcMatrix);</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    //  Blend Mode</span>
+<span class="cstat-no" title="statement not covered" >    ctx.globalCompositeOperation = renderer.blendModes[src.blendMode];</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    //  Alpha</span>
+<span class="cstat-no" title="statement not covered" >    ctx.globalAlpha = alpha;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    ctx.save();</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    calcMatrix.setToContext(ctx);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    ctx.imageSmoothingEnabled = !(!renderer.antialias || (src.frame &amp;&amp; src.frame.source.scaleMode));</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    return true;</span>
+<span class="cstat-no" title="statement not covered" >};</span>
+&nbsp;
+module.exports = SetTransform;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9yZW5kZXJlci9jYW52YXMvdXRpbHMvU2V0VHJhbnNmb3JtLmpzPzFlMjYiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxXQUFXLHNDQUFzQztBQUNqRCxXQUFXLHlCQUF5QjtBQUNwQyxXQUFXLDhCQUE4QjtBQUN6QyxXQUFXLDhCQUE4QjtBQUN6QyxXQUFXLDhDQUE4QztBQUN6RDtBQUNBLFlBQVksUUFBUTtBQUNwQjtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTs7QUFFQTs7QUFFQTs7QUFFQTtBQUNBOztBQUVBIiwiZmlsZSI6Ii4vbm9kZV9tb2R1bGVzL3BoYXNlci9zcmMvcmVuZGVyZXIvY2FudmFzL3V0aWxzL1NldFRyYW5zZm9ybS5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxyXG4gKiBAYXV0aG9yICAgICAgIFJpY2hhcmQgRGF2ZXkgPHJpY2hAcGhvdG9uc3Rvcm0uY29tPlxyXG4gKiBAY29weXJpZ2h0ICAgIDIwMTkgUGhvdG9uIFN0b3JtIEx0ZC5cclxuICogQGxpY2Vuc2UgICAgICB7QGxpbmsgaHR0cHM6Ly9vcGVuc291cmNlLm9yZy9saWNlbnNlcy9NSVR8TUlUIExpY2Vuc2V9XHJcbiAqL1xyXG5cclxuLyoqXHJcbiAqIFRha2VzIGEgcmVmZXJlbmNlIHRvIHRoZSBDYW52YXMgUmVuZGVyZXIsIGEgQ2FudmFzIFJlbmRlcmluZyBDb250ZXh0LCBhIEdhbWUgT2JqZWN0LCBhIENhbWVyYSBhbmQgYSBwYXJlbnQgbWF0cml4XHJcbiAqIGFuZCB0aGVuIHBlcmZvcm1zIHRoZSBmb2xsb3dpbmcgc3RlcHM6XHJcbiAqIFxyXG4gKiAxLiBDaGVja3MgdGhlIGFscGhhIG9mIHRoZSBzb3VyY2UgY29tYmluZWQgd2l0aCB0aGUgQ2FtZXJhIGFscGhhLiBJZiAwIG9yIGxlc3MgaXQgYWJvcnRzLlxyXG4gKiAyLiBUYWtlcyB0aGUgQ2FtZXJhIGFuZCBHYW1lIE9iamVjdCBtYXRyaXggYW5kIG11bHRpcGxpZXMgdGhlbSwgY29tYmluZWQgd2l0aCB0aGUgcGFyZW50IG1hdHJpeCBpZiBnaXZlbi5cclxuICogMy4gU2V0cyB0aGUgYmxlbmQgbW9kZSBvZiB0aGUgY29udGV4dCB0byBiZSB0aGF0IHVzZWQgYnkgdGhlIEdhbWUgT2JqZWN0LlxyXG4gKiA0LiBTZXRzIHRoZSBhbHBoYSB2YWx1ZSBvZiB0aGUgY29udGV4dCB0byBiZSB0aGF0IHVzZWQgYnkgdGhlIEdhbWUgT2JqZWN0IGNvbWJpbmVkIHdpdGggdGhlIENhbWVyYS5cclxuICogNS4gU2F2ZXMgdGhlIGNvbnRleHQgc3RhdGUuXHJcbiAqIDYuIFNldHMgdGhlIGZpbmFsIG1hdHJpeCB2YWx1ZXMgaW50byB0aGUgY29udGV4dCB2aWEgc2V0VHJhbnNmb3JtLlxyXG4gKiA3LiBJZiBSZW5kZXJlci5hbnRpYWxpYXMsIG9yIHRoZSBmcmFtZS5zb3VyY2Uuc2NhbGVNb2RlIGlzIHNldCwgdGhlbiBpbWFnZVNtb290aGluZ0VuYWJsZWQgaXMgc2V0LlxyXG4gKiBcclxuICogVGhpcyBmdW5jdGlvbiBpcyBvbmx5IG1lYW50IHRvIGJlIHVzZWQgaW50ZXJuYWxseS4gTW9zdCBvZiB0aGUgQ2FudmFzIFJlbmRlcmVyIGNsYXNzZXMgdXNlIGl0LlxyXG4gKlxyXG4gKiBAZnVuY3Rpb24gUGhhc2VyLlJlbmRlcmVyLkNhbnZhcy5TZXRUcmFuc2Zvcm1cclxuICogQHNpbmNlIDMuMTIuMFxyXG4gKlxyXG4gKiBAcGFyYW0ge1BoYXNlci5SZW5kZXJlci5DYW52YXMuQ2FudmFzUmVuZGVyZXJ9IHJlbmRlcmVyIC0gQSByZWZlcmVuY2UgdG8gdGhlIGN1cnJlbnQgYWN0aXZlIENhbnZhcyByZW5kZXJlci5cclxuICogQHBhcmFtIHtDYW52YXNSZW5kZXJpbmdDb250ZXh0MkR9IGN0eCAtIFRoZSBjYW52YXMgY29udGV4dCB0byBzZXQgdGhlIHRyYW5zZm9ybSBvbi5cclxuICogQHBhcmFtIHtQaGFzZXIuR2FtZU9iamVjdHMuR2FtZU9iamVjdH0gc3JjIC0gVGhlIEdhbWUgT2JqZWN0IGJlaW5nIHJlbmRlcmVkLiBDYW4gYmUgYW55IHR5cGUgdGhhdCBleHRlbmRzIHRoZSBiYXNlIGNsYXNzLlxyXG4gKiBAcGFyYW0ge1BoYXNlci5DYW1lcmFzLlNjZW5lMkQuQ2FtZXJhfSBjYW1lcmEgLSBUaGUgQ2FtZXJhIHRoYXQgaXMgcmVuZGVyaW5nIHRoZSBHYW1lIE9iamVjdC5cclxuICogQHBhcmFtIHtQaGFzZXIuR2FtZU9iamVjdHMuQ29tcG9uZW50cy5UcmFuc2Zvcm1NYXRyaXh9IFtwYXJlbnRNYXRyaXhdIC0gQSBwYXJlbnQgdHJhbnNmb3JtIG1hdHJpeCB0byBhcHBseSB0byB0aGUgR2FtZSBPYmplY3QgYmVmb3JlIHJlbmRlcmluZy5cclxuICogXHJcbiAqIEByZXR1cm4ge2Jvb2xlYW59IGB0cnVlYCBpZiB0aGUgR2FtZSBPYmplY3QgY29udGV4dCB3YXMgc2V0LCBvdGhlcndpc2UgYGZhbHNlYC5cclxuICovXHJcbnZhciBTZXRUcmFuc2Zvcm0gPSBmdW5jdGlvbiAocmVuZGVyZXIsIGN0eCwgc3JjLCBjYW1lcmEsIHBhcmVudE1hdHJpeClcclxue1xyXG4gICAgdmFyIGFscGhhID0gY2FtZXJhLmFscGhhICogc3JjLmFscGhhO1xyXG5cclxuICAgIGlmIChhbHBoYSA8PSAwKVxyXG4gICAge1xyXG4gICAgICAgIC8vICBOb3RoaW5nIHRvIHNlZSwgc28gZG9uJ3Qgd2FzdGUgdGltZSBjYWxjdWxhdGluZyBzdHVmZlxyXG4gICAgICAgIHJldHVybiBmYWxzZTtcclxuICAgIH1cclxuXHJcbiAgICB2YXIgY2FtTWF0cml4ID0gcmVuZGVyZXIuX3RlbXBNYXRyaXgxLmNvcHlGcm9tQXJyYXkoY2FtZXJhLm1hdHJpeC5tYXRyaXgpO1xyXG4gICAgdmFyIGdhbWVPYmplY3RNYXRyaXggPSByZW5kZXJlci5fdGVtcE1hdHJpeDIuYXBwbHlJVFJTKHNyYy54LCBzcmMueSwgc3JjLnJvdGF0aW9uLCBzcmMuc2NhbGVYLCBzcmMuc2NhbGVZKTtcclxuICAgIHZhciBjYWxjTWF0cml4ID0gcmVuZGVyZXIuX3RlbXBNYXRyaXgzO1xyXG5cclxuICAgIGlmIChwYXJlbnRNYXRyaXgpXHJcbiAgICB7XHJcbiAgICAgICAgLy8gIE11bHRpcGx5IHRoZSBjYW1lcmEgYnkgdGhlIHBhcmVudCBtYXRyaXhcclxuICAgICAgICBjYW1NYXRyaXgubXVsdGlwbHlXaXRoT2Zmc2V0KHBhcmVudE1hdHJpeCwgLWNhbWVyYS5zY3JvbGxYICogc3JjLnNjcm9sbEZhY3RvclgsIC1jYW1lcmEuc2Nyb2xsWSAqIHNyYy5zY3JvbGxGYWN0b3JZKTtcclxuXHJcbiAgICAgICAgLy8gIFVuZG8gdGhlIGNhbWVyYSBzY3JvbGxcclxuICAgICAgICBnYW1lT2JqZWN0TWF0cml4LmUgPSBzcmMueDtcclxuICAgICAgICBnYW1lT2JqZWN0TWF0cml4LmYgPSBzcmMueTtcclxuXHJcbiAgICAgICAgLy8gIE11bHRpcGx5IGJ5IHRoZSBTcHJpdGUgbWF0cml4LCBzdG9yZSByZXN1bHQgaW4gY2FsY01hdHJpeFxyXG4gICAgICAgIGNhbU1hdHJpeC5tdWx0aXBseShnYW1lT2JqZWN0TWF0cml4LCBjYWxjTWF0cml4KTtcclxuICAgIH1cclxuICAgIGVsc2VcclxuICAgIHtcclxuICAgICAgICBnYW1lT2JqZWN0TWF0cml4LmUgLT0gY2FtZXJhLnNjcm9sbFggKiBzcmMuc2Nyb2xsRmFjdG9yWDtcclxuICAgICAgICBnYW1lT2JqZWN0TWF0cml4LmYgLT0gY2FtZXJhLnNjcm9sbFkgKiBzcmMuc2Nyb2xsRmFjdG9yWTtcclxuXHJcbiAgICAgICAgLy8gIE11bHRpcGx5IGJ5IHRoZSBTcHJpdGUgbWF0cml4LCBzdG9yZSByZXN1bHQgaW4gY2FsY01hdHJpeFxyXG4gICAgICAgIGNhbU1hdHJpeC5tdWx0aXBseShnYW1lT2JqZWN0TWF0cml4LCBjYWxjTWF0cml4KTtcclxuICAgIH1cclxuXHJcbiAgICAvLyAgQmxlbmQgTW9kZVxyXG4gICAgY3R4Lmdsb2JhbENvbXBvc2l0ZU9wZXJhdGlvbiA9IHJlbmRlcmVyLmJsZW5kTW9kZXNbc3JjLmJsZW5kTW9kZV07XHJcblxyXG4gICAgLy8gIEFscGhhXHJcbiAgICBjdHguZ2xvYmFsQWxwaGEgPSBhbHBoYTtcclxuXHJcbiAgICBjdHguc2F2ZSgpO1xyXG5cclxuICAgIGNhbGNNYXRyaXguc2V0VG9Db250ZXh0KGN0eCk7XHJcblxyXG4gICAgY3R4LmltYWdlU21vb3RoaW5nRW5hYmxlZCA9ICEoIXJlbmRlcmVyLmFudGlhbGlhcyB8fCAoc3JjLmZyYW1lICYmIHNyYy5mcmFtZS5zb3VyY2Uuc2NhbGVNb2RlKSk7XHJcblxyXG4gICAgcmV0dXJuIHRydWU7XHJcbn07XHJcblxyXG5tb2R1bGUuZXhwb3J0cyA9IFNldFRyYW5zZm9ybTtcclxuIl0sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/renderer/canvas/utils/SetTransform.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

@@ -1,0 +1,395 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for Interpolate.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> Interpolate.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">74.53% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>79/106</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>4/4</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">74.53% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>79/106</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line medium'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+var Linear = __webpack_require__(/*! ../../math/Linear */ "./node_modules/phaser/src/math/Linear.js");
+&nbsp;
+/**
+ * @namespace Phaser.Display.Color.Interpolate
+ * @memberof Phaser.Display.Color
+ * @since 3.0.0
+ */
+&nbsp;
+/**
+ * Interpolates between the two given color ranges over the length supplied.
+ *
+ * @function Phaser.Display.Color.Interpolate.RGBWithRGB
+ * @memberof Phaser.Display.Color.Interpolate
+ * @static
+ * @since 3.0.0
+ *
+ * @param {number} r1 - Red value.
+ * @param {number} g1 - Blue value.
+ * @param {number} b1 - Green value.
+ * @param {number} r2 - Red value.
+ * @param {number} g2 - Blue value.
+ * @param {number} b2 - Green value.
+ * @param {number} [length=100] - Distance to interpolate over.
+ * @param {number} [index=0] - Index to start from.
+ *
+ * @return {Phaser.Types.Display.ColorObject} An object containing the interpolated color values.
+ */
+<span class="cstat-no" title="statement not covered" >var RGBWithRGB = function (r1, g1, b1, r2, g2, b2, length, index)</span>
+<span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    if (length === undefined) { length = 100; }</span>
+<span class="cstat-no" title="statement not covered" >    if (index === undefined) { index = 0; }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var t = index / length;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
+<span class="cstat-no" title="statement not covered" >        r: Linear(r1, r2, t),</span>
+<span class="cstat-no" title="statement not covered" >        g: Linear(g1, g2, t),</span>
+<span class="cstat-no" title="statement not covered" >        b: Linear(b1, b2, t)</span>
+<span class="cstat-no" title="statement not covered" >    };</span>
+<span class="cstat-no" title="statement not covered" >};</span>
+&nbsp;
+/**
+ * Interpolates between the two given color objects over the length supplied.
+ *
+ * @function Phaser.Display.Color.Interpolate.ColorWithColor
+ * @memberof Phaser.Display.Color.Interpolate
+ * @static
+ * @since 3.0.0
+ *
+ * @param {Phaser.Display.Color} color1 - The first Color object.
+ * @param {Phaser.Display.Color} color2 - The second Color object.
+ * @param {number} [length=100] - Distance to interpolate over.
+ * @param {number} [index=0] - Index to start from.
+ *
+ * @return {Phaser.Types.Display.ColorObject} An object containing the interpolated color values.
+ */
+<span class="cstat-no" title="statement not covered" >var ColorWithColor = function (color1, color2, length, index)</span>
+<span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    if (length === undefined) { length = 100; }</span>
+<span class="cstat-no" title="statement not covered" >    if (index === undefined) { index = 0; }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    return RGBWithRGB(color1.r, color1.g, color1.b, color2.r, color2.g, color2.b, length, index);</span>
+<span class="cstat-no" title="statement not covered" >};</span>
+&nbsp;
+/**
+ * Interpolates between the Color object and color values over the length supplied.
+ *
+ * @function Phaser.Display.Color.Interpolate.ColorWithRGB
+ * @memberof Phaser.Display.Color.Interpolate
+ * @static
+ * @since 3.0.0
+ *
+ * @param {Phaser.Display.Color} color1 - The first Color object.
+ * @param {number} r - Red value.
+ * @param {number} g - Blue value.
+ * @param {number} b - Green value.
+ * @param {number} [length=100] - Distance to interpolate over.
+ * @param {number} [index=0] - Index to start from.
+ *
+ * @return {Phaser.Types.Display.ColorObject} An object containing the interpolated color values.
+ */
+<span class="cstat-no" title="statement not covered" >var ColorWithRGB = function (color, r, g, b, length, index)</span>
+<span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    if (length === undefined) { length = 100; }</span>
+<span class="cstat-no" title="statement not covered" >    if (index === undefined) { index = 0; }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    return RGBWithRGB(color.r, color.g, color.b, r, g, b, length, index);</span>
+<span class="cstat-no" title="statement not covered" >};</span>
+&nbsp;
+module.exports = {
+&nbsp;
+    RGBWithRGB: RGBWithRGB,
+    ColorWithRGB: ColorWithRGB,
+    ColorWithColor: ColorWithColor
+&nbsp;
+};
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9kaXNwbGF5L2NvbG9yL0ludGVycG9sYXRlLmpzPzZjNGQiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCOztBQUVBLGFBQWEsbUJBQU8sQ0FBQyxtRUFBbUI7O0FBRXhDO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFdBQVcsT0FBTztBQUNsQixXQUFXLE9BQU87QUFDbEIsV0FBVyxPQUFPO0FBQ2xCLFdBQVcsT0FBTztBQUNsQixXQUFXLE9BQU87QUFDbEIsV0FBVyxPQUFPO0FBQ2xCLFdBQVcsT0FBTztBQUNsQixXQUFXLE9BQU87QUFDbEI7QUFDQSxZQUFZLGlDQUFpQztBQUM3QztBQUNBO0FBQ0E7QUFDQSwrQkFBK0IsY0FBYztBQUM3Qyw4QkFBOEIsV0FBVzs7QUFFekM7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxXQUFXLHFCQUFxQjtBQUNoQyxXQUFXLHFCQUFxQjtBQUNoQyxXQUFXLE9BQU87QUFDbEIsV0FBVyxPQUFPO0FBQ2xCO0FBQ0EsWUFBWSxpQ0FBaUM7QUFDN0M7QUFDQTtBQUNBO0FBQ0EsK0JBQStCLGNBQWM7QUFDN0MsOEJBQThCLFdBQVc7O0FBRXpDO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFdBQVcscUJBQXFCO0FBQ2hDLFdBQVcsT0FBTztBQUNsQixXQUFXLE9BQU87QUFDbEIsV0FBVyxPQUFPO0FBQ2xCLFdBQVcsT0FBTztBQUNsQixXQUFXLE9BQU87QUFDbEI7QUFDQSxZQUFZLGlDQUFpQztBQUM3QztBQUNBO0FBQ0E7QUFDQSwrQkFBK0IsY0FBYztBQUM3Qyw4QkFBOEIsV0FBVzs7QUFFekM7QUFDQTs7QUFFQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUEiLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9kaXNwbGF5L2NvbG9yL0ludGVycG9sYXRlLmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXHJcbiAqIEBhdXRob3IgICAgICAgUmljaGFyZCBEYXZleSA8cmljaEBwaG90b25zdG9ybS5jb20+XHJcbiAqIEBjb3B5cmlnaHQgICAgMjAxOSBQaG90b24gU3Rvcm0gTHRkLlxyXG4gKiBAbGljZW5zZSAgICAgIHtAbGluayBodHRwczovL29wZW5zb3VyY2Uub3JnL2xpY2Vuc2VzL01JVHxNSVQgTGljZW5zZX1cclxuICovXHJcblxyXG52YXIgTGluZWFyID0gcmVxdWlyZSgnLi4vLi4vbWF0aC9MaW5lYXInKTtcclxuXHJcbi8qKlxyXG4gKiBAbmFtZXNwYWNlIFBoYXNlci5EaXNwbGF5LkNvbG9yLkludGVycG9sYXRlXHJcbiAqIEBtZW1iZXJvZiBQaGFzZXIuRGlzcGxheS5Db2xvclxyXG4gKiBAc2luY2UgMy4wLjBcclxuICovXHJcblxyXG4vKipcclxuICogSW50ZXJwb2xhdGVzIGJldHdlZW4gdGhlIHR3byBnaXZlbiBjb2xvciByYW5nZXMgb3ZlciB0aGUgbGVuZ3RoIHN1cHBsaWVkLlxyXG4gKlxyXG4gKiBAZnVuY3Rpb24gUGhhc2VyLkRpc3BsYXkuQ29sb3IuSW50ZXJwb2xhdGUuUkdCV2l0aFJHQlxyXG4gKiBAbWVtYmVyb2YgUGhhc2VyLkRpc3BsYXkuQ29sb3IuSW50ZXJwb2xhdGVcclxuICogQHN0YXRpY1xyXG4gKiBAc2luY2UgMy4wLjBcclxuICpcclxuICogQHBhcmFtIHtudW1iZXJ9IHIxIC0gUmVkIHZhbHVlLlxyXG4gKiBAcGFyYW0ge251bWJlcn0gZzEgLSBCbHVlIHZhbHVlLlxyXG4gKiBAcGFyYW0ge251bWJlcn0gYjEgLSBHcmVlbiB2YWx1ZS5cclxuICogQHBhcmFtIHtudW1iZXJ9IHIyIC0gUmVkIHZhbHVlLlxyXG4gKiBAcGFyYW0ge251bWJlcn0gZzIgLSBCbHVlIHZhbHVlLlxyXG4gKiBAcGFyYW0ge251bWJlcn0gYjIgLSBHcmVlbiB2YWx1ZS5cclxuICogQHBhcmFtIHtudW1iZXJ9IFtsZW5ndGg9MTAwXSAtIERpc3RhbmNlIHRvIGludGVycG9sYXRlIG92ZXIuXHJcbiAqIEBwYXJhbSB7bnVtYmVyfSBbaW5kZXg9MF0gLSBJbmRleCB0byBzdGFydCBmcm9tLlxyXG4gKlxyXG4gKiBAcmV0dXJuIHtQaGFzZXIuVHlwZXMuRGlzcGxheS5Db2xvck9iamVjdH0gQW4gb2JqZWN0IGNvbnRhaW5pbmcgdGhlIGludGVycG9sYXRlZCBjb2xvciB2YWx1ZXMuXHJcbiAqL1xyXG52YXIgUkdCV2l0aFJHQiA9IGZ1bmN0aW9uIChyMSwgZzEsIGIxLCByMiwgZzIsIGIyLCBsZW5ndGgsIGluZGV4KVxyXG57XHJcbiAgICBpZiAobGVuZ3RoID09PSB1bmRlZmluZWQpIHsgbGVuZ3RoID0gMTAwOyB9XHJcbiAgICBpZiAoaW5kZXggPT09IHVuZGVmaW5lZCkgeyBpbmRleCA9IDA7IH1cclxuXHJcbiAgICB2YXIgdCA9IGluZGV4IC8gbGVuZ3RoO1xyXG5cclxuICAgIHJldHVybiB7XHJcbiAgICAgICAgcjogTGluZWFyKHIxLCByMiwgdCksXHJcbiAgICAgICAgZzogTGluZWFyKGcxLCBnMiwgdCksXHJcbiAgICAgICAgYjogTGluZWFyKGIxLCBiMiwgdClcclxuICAgIH07XHJcbn07XHJcblxyXG4vKipcclxuICogSW50ZXJwb2xhdGVzIGJldHdlZW4gdGhlIHR3byBnaXZlbiBjb2xvciBvYmplY3RzIG92ZXIgdGhlIGxlbmd0aCBzdXBwbGllZC5cclxuICpcclxuICogQGZ1bmN0aW9uIFBoYXNlci5EaXNwbGF5LkNvbG9yLkludGVycG9sYXRlLkNvbG9yV2l0aENvbG9yXHJcbiAqIEBtZW1iZXJvZiBQaGFzZXIuRGlzcGxheS5Db2xvci5JbnRlcnBvbGF0ZVxyXG4gKiBAc3RhdGljXHJcbiAqIEBzaW5jZSAzLjAuMFxyXG4gKlxyXG4gKiBAcGFyYW0ge1BoYXNlci5EaXNwbGF5LkNvbG9yfSBjb2xvcjEgLSBUaGUgZmlyc3QgQ29sb3Igb2JqZWN0LlxyXG4gKiBAcGFyYW0ge1BoYXNlci5EaXNwbGF5LkNvbG9yfSBjb2xvcjIgLSBUaGUgc2Vjb25kIENvbG9yIG9iamVjdC5cclxuICogQHBhcmFtIHtudW1iZXJ9IFtsZW5ndGg9MTAwXSAtIERpc3RhbmNlIHRvIGludGVycG9sYXRlIG92ZXIuXHJcbiAqIEBwYXJhbSB7bnVtYmVyfSBbaW5kZXg9MF0gLSBJbmRleCB0byBzdGFydCBmcm9tLlxyXG4gKlxyXG4gKiBAcmV0dXJuIHtQaGFzZXIuVHlwZXMuRGlzcGxheS5Db2xvck9iamVjdH0gQW4gb2JqZWN0IGNvbnRhaW5pbmcgdGhlIGludGVycG9sYXRlZCBjb2xvciB2YWx1ZXMuXHJcbiAqL1xyXG52YXIgQ29sb3JXaXRoQ29sb3IgPSBmdW5jdGlvbiAoY29sb3IxLCBjb2xvcjIsIGxlbmd0aCwgaW5kZXgpXHJcbntcclxuICAgIGlmIChsZW5ndGggPT09IHVuZGVmaW5lZCkgeyBsZW5ndGggPSAxMDA7IH1cclxuICAgIGlmIChpbmRleCA9PT0gdW5kZWZpbmVkKSB7IGluZGV4ID0gMDsgfVxyXG5cclxuICAgIHJldHVybiBSR0JXaXRoUkdCKGNvbG9yMS5yLCBjb2xvcjEuZywgY29sb3IxLmIsIGNvbG9yMi5yLCBjb2xvcjIuZywgY29sb3IyLmIsIGxlbmd0aCwgaW5kZXgpO1xyXG59O1xyXG5cclxuLyoqXHJcbiAqIEludGVycG9sYXRlcyBiZXR3ZWVuIHRoZSBDb2xvciBvYmplY3QgYW5kIGNvbG9yIHZhbHVlcyBvdmVyIHRoZSBsZW5ndGggc3VwcGxpZWQuXHJcbiAqXHJcbiAqIEBmdW5jdGlvbiBQaGFzZXIuRGlzcGxheS5Db2xvci5JbnRlcnBvbGF0ZS5Db2xvcldpdGhSR0JcclxuICogQG1lbWJlcm9mIFBoYXNlci5EaXNwbGF5LkNvbG9yLkludGVycG9sYXRlXHJcbiAqIEBzdGF0aWNcclxuICogQHNpbmNlIDMuMC4wXHJcbiAqXHJcbiAqIEBwYXJhbSB7UGhhc2VyLkRpc3BsYXkuQ29sb3J9IGNvbG9yMSAtIFRoZSBmaXJzdCBDb2xvciBvYmplY3QuXHJcbiAqIEBwYXJhbSB7bnVtYmVyfSByIC0gUmVkIHZhbHVlLlxyXG4gKiBAcGFyYW0ge251bWJlcn0gZyAtIEJsdWUgdmFsdWUuXHJcbiAqIEBwYXJhbSB7bnVtYmVyfSBiIC0gR3JlZW4gdmFsdWUuXHJcbiAqIEBwYXJhbSB7bnVtYmVyfSBbbGVuZ3RoPTEwMF0gLSBEaXN0YW5jZSB0byBpbnRlcnBvbGF0ZSBvdmVyLlxyXG4gKiBAcGFyYW0ge251bWJlcn0gW2luZGV4PTBdIC0gSW5kZXggdG8gc3RhcnQgZnJvbS5cclxuICpcclxuICogQHJldHVybiB7UGhhc2VyLlR5cGVzLkRpc3BsYXkuQ29sb3JPYmplY3R9IEFuIG9iamVjdCBjb250YWluaW5nIHRoZSBpbnRlcnBvbGF0ZWQgY29sb3IgdmFsdWVzLlxyXG4gKi9cclxudmFyIENvbG9yV2l0aFJHQiA9IGZ1bmN0aW9uIChjb2xvciwgciwgZywgYiwgbGVuZ3RoLCBpbmRleClcclxue1xyXG4gICAgaWYgKGxlbmd0aCA9PT0gdW5kZWZpbmVkKSB7IGxlbmd0aCA9IDEwMDsgfVxyXG4gICAgaWYgKGluZGV4ID09PSB1bmRlZmluZWQpIHsgaW5kZXggPSAwOyB9XHJcblxyXG4gICAgcmV0dXJuIFJHQldpdGhSR0IoY29sb3IuciwgY29sb3IuZywgY29sb3IuYiwgciwgZywgYiwgbGVuZ3RoLCBpbmRleCk7XHJcbn07XHJcblxyXG5tb2R1bGUuZXhwb3J0cyA9IHtcclxuXHJcbiAgICBSR0JXaXRoUkdCOiBSR0JXaXRoUkdCLFxyXG4gICAgQ29sb3JXaXRoUkdCOiBDb2xvcldpdGhSR0IsXHJcbiAgICBDb2xvcldpdGhDb2xvcjogQ29sb3JXaXRoQ29sb3JcclxuXHJcbn07XHJcbiJdLCJzb3VyY2VSb290IjoiIn0=
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/display/color/Interpolate.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

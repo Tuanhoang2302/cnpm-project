@@ -1,0 +1,392 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for ScrollFactor.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> ScrollFactor.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">91.43% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>96/105</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>2/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">91.43% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>96/105</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+/**
+ * Provides methods used for getting and setting the Scroll Factor of a Game Object.
+ *
+ * @namespace Phaser.GameObjects.Components.ScrollFactor
+ * @since 3.0.0
+ */
+&nbsp;
+var ScrollFactor = {
+&nbsp;
+    /**
+     * The horizontal scroll factor of this Game Object.
+     *
+     * The scroll factor controls the influence of the movement of a Camera upon this Game Object.
+     *
+     * When a camera scrolls it will change the location at which this Game Object is rendered on-screen.
+     * It does not change the Game Objects actual position values.
+     *
+     * A value of 1 means it will move exactly in sync with a camera.
+     * A value of 0 means it will not move at all, even if the camera moves.
+     * Other values control the degree to which the camera movement is mapped to this Game Object.
+     * 
+     * Please be aware that scroll factor values other than 1 are not taken in to consideration when
+     * calculating physics collisions. Bodies always collide based on their world position, but changing
+     * the scroll factor is a visual adjustment to where the textures are rendered, which can offset
+     * them from physics bodies if not accounted for in your code.
+     *
+     * @name Phaser.GameObjects.Components.ScrollFactor#scrollFactorX
+     * @type {number}
+     * @default 1
+     * @since 3.0.0
+     */
+    scrollFactorX: 1,
+&nbsp;
+    /**
+     * The vertical scroll factor of this Game Object.
+     *
+     * The scroll factor controls the influence of the movement of a Camera upon this Game Object.
+     *
+     * When a camera scrolls it will change the location at which this Game Object is rendered on-screen.
+     * It does not change the Game Objects actual position values.
+     *
+     * A value of 1 means it will move exactly in sync with a camera.
+     * A value of 0 means it will not move at all, even if the camera moves.
+     * Other values control the degree to which the camera movement is mapped to this Game Object.
+     * 
+     * Please be aware that scroll factor values other than 1 are not taken in to consideration when
+     * calculating physics collisions. Bodies always collide based on their world position, but changing
+     * the scroll factor is a visual adjustment to where the textures are rendered, which can offset
+     * them from physics bodies if not accounted for in your code.
+     *
+     * @name Phaser.GameObjects.Components.ScrollFactor#scrollFactorY
+     * @type {number}
+     * @default 1
+     * @since 3.0.0
+     */
+    scrollFactorY: 1,
+&nbsp;
+    /**
+     * Sets the scroll factor of this Game Object.
+     *
+     * The scroll factor controls the influence of the movement of a Camera upon this Game Object.
+     *
+     * When a camera scrolls it will change the location at which this Game Object is rendered on-screen.
+     * It does not change the Game Objects actual position values.
+     *
+     * A value of 1 means it will move exactly in sync with a camera.
+     * A value of 0 means it will not move at all, even if the camera moves.
+     * Other values control the degree to which the camera movement is mapped to this Game Object.
+     * 
+     * Please be aware that scroll factor values other than 1 are not taken in to consideration when
+     * calculating physics collisions. Bodies always collide based on their world position, but changing
+     * the scroll factor is a visual adjustment to where the textures are rendered, which can offset
+     * them from physics bodies if not accounted for in your code.
+     *
+     * @method Phaser.GameObjects.Components.ScrollFactor#setScrollFactor
+     * @since 3.0.0
+     *
+     * @param {number} x - The horizontal scroll factor of this Game Object.
+     * @param {number} [y=x] - The vertical scroll factor of this Game Object. If not set it will use the `x` value.
+     *
+     * @return {this} This Game Object instance.
+     */
+<span class="cstat-no" title="statement not covered" >    setScrollFactor: function (x, y)</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        if (y === undefined) { y = x; }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        this.scrollFactorX = x;</span>
+<span class="cstat-no" title="statement not covered" >        this.scrollFactorY = y;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        return this;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+&nbsp;
+};
+&nbsp;
+module.exports = ScrollFactor;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9nYW1lb2JqZWN0cy9jb21wb25lbnRzL1Njcm9sbEZhY3Rvci5qcz84NTg5Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBLGtCQUFrQjtBQUNsQjs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsY0FBYztBQUNkO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGNBQWM7QUFDZDtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsZUFBZSxPQUFPO0FBQ3RCLGVBQWUsT0FBTztBQUN0QjtBQUNBLGdCQUFnQixLQUFLO0FBQ3JCO0FBQ0E7QUFDQTtBQUNBLDhCQUE4QixPQUFPOztBQUVyQztBQUNBOztBQUVBO0FBQ0E7O0FBRUE7O0FBRUEiLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9nYW1lb2JqZWN0cy9jb21wb25lbnRzL1Njcm9sbEZhY3Rvci5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qKlxyXG4gKiBAYXV0aG9yICAgICAgIFJpY2hhcmQgRGF2ZXkgPHJpY2hAcGhvdG9uc3Rvcm0uY29tPlxyXG4gKiBAY29weXJpZ2h0ICAgIDIwMTkgUGhvdG9uIFN0b3JtIEx0ZC5cclxuICogQGxpY2Vuc2UgICAgICB7QGxpbmsgaHR0cHM6Ly9vcGVuc291cmNlLm9yZy9saWNlbnNlcy9NSVR8TUlUIExpY2Vuc2V9XHJcbiAqL1xyXG5cclxuLyoqXHJcbiAqIFByb3ZpZGVzIG1ldGhvZHMgdXNlZCBmb3IgZ2V0dGluZyBhbmQgc2V0dGluZyB0aGUgU2Nyb2xsIEZhY3RvciBvZiBhIEdhbWUgT2JqZWN0LlxyXG4gKlxyXG4gKiBAbmFtZXNwYWNlIFBoYXNlci5HYW1lT2JqZWN0cy5Db21wb25lbnRzLlNjcm9sbEZhY3RvclxyXG4gKiBAc2luY2UgMy4wLjBcclxuICovXHJcblxyXG52YXIgU2Nyb2xsRmFjdG9yID0ge1xyXG5cclxuICAgIC8qKlxyXG4gICAgICogVGhlIGhvcml6b250YWwgc2Nyb2xsIGZhY3RvciBvZiB0aGlzIEdhbWUgT2JqZWN0LlxyXG4gICAgICpcclxuICAgICAqIFRoZSBzY3JvbGwgZmFjdG9yIGNvbnRyb2xzIHRoZSBpbmZsdWVuY2Ugb2YgdGhlIG1vdmVtZW50IG9mIGEgQ2FtZXJhIHVwb24gdGhpcyBHYW1lIE9iamVjdC5cclxuICAgICAqXHJcbiAgICAgKiBXaGVuIGEgY2FtZXJhIHNjcm9sbHMgaXQgd2lsbCBjaGFuZ2UgdGhlIGxvY2F0aW9uIGF0IHdoaWNoIHRoaXMgR2FtZSBPYmplY3QgaXMgcmVuZGVyZWQgb24tc2NyZWVuLlxyXG4gICAgICogSXQgZG9lcyBub3QgY2hhbmdlIHRoZSBHYW1lIE9iamVjdHMgYWN0dWFsIHBvc2l0aW9uIHZhbHVlcy5cclxuICAgICAqXHJcbiAgICAgKiBBIHZhbHVlIG9mIDEgbWVhbnMgaXQgd2lsbCBtb3ZlIGV4YWN0bHkgaW4gc3luYyB3aXRoIGEgY2FtZXJhLlxyXG4gICAgICogQSB2YWx1ZSBvZiAwIG1lYW5zIGl0IHdpbGwgbm90IG1vdmUgYXQgYWxsLCBldmVuIGlmIHRoZSBjYW1lcmEgbW92ZXMuXHJcbiAgICAgKiBPdGhlciB2YWx1ZXMgY29udHJvbCB0aGUgZGVncmVlIHRvIHdoaWNoIHRoZSBjYW1lcmEgbW92ZW1lbnQgaXMgbWFwcGVkIHRvIHRoaXMgR2FtZSBPYmplY3QuXHJcbiAgICAgKiBcclxuICAgICAqIFBsZWFzZSBiZSBhd2FyZSB0aGF0IHNjcm9sbCBmYWN0b3IgdmFsdWVzIG90aGVyIHRoYW4gMSBhcmUgbm90IHRha2VuIGluIHRvIGNvbnNpZGVyYXRpb24gd2hlblxyXG4gICAgICogY2FsY3VsYXRpbmcgcGh5c2ljcyBjb2xsaXNpb25zLiBCb2RpZXMgYWx3YXlzIGNvbGxpZGUgYmFzZWQgb24gdGhlaXIgd29ybGQgcG9zaXRpb24sIGJ1dCBjaGFuZ2luZ1xyXG4gICAgICogdGhlIHNjcm9sbCBmYWN0b3IgaXMgYSB2aXN1YWwgYWRqdXN0bWVudCB0byB3aGVyZSB0aGUgdGV4dHVyZXMgYXJlIHJlbmRlcmVkLCB3aGljaCBjYW4gb2Zmc2V0XHJcbiAgICAgKiB0aGVtIGZyb20gcGh5c2ljcyBib2RpZXMgaWYgbm90IGFjY291bnRlZCBmb3IgaW4geW91ciBjb2RlLlxyXG4gICAgICpcclxuICAgICAqIEBuYW1lIFBoYXNlci5HYW1lT2JqZWN0cy5Db21wb25lbnRzLlNjcm9sbEZhY3RvciNzY3JvbGxGYWN0b3JYXHJcbiAgICAgKiBAdHlwZSB7bnVtYmVyfVxyXG4gICAgICogQGRlZmF1bHQgMVxyXG4gICAgICogQHNpbmNlIDMuMC4wXHJcbiAgICAgKi9cclxuICAgIHNjcm9sbEZhY3Rvclg6IDEsXHJcblxyXG4gICAgLyoqXHJcbiAgICAgKiBUaGUgdmVydGljYWwgc2Nyb2xsIGZhY3RvciBvZiB0aGlzIEdhbWUgT2JqZWN0LlxyXG4gICAgICpcclxuICAgICAqIFRoZSBzY3JvbGwgZmFjdG9yIGNvbnRyb2xzIHRoZSBpbmZsdWVuY2Ugb2YgdGhlIG1vdmVtZW50IG9mIGEgQ2FtZXJhIHVwb24gdGhpcyBHYW1lIE9iamVjdC5cclxuICAgICAqXHJcbiAgICAgKiBXaGVuIGEgY2FtZXJhIHNjcm9sbHMgaXQgd2lsbCBjaGFuZ2UgdGhlIGxvY2F0aW9uIGF0IHdoaWNoIHRoaXMgR2FtZSBPYmplY3QgaXMgcmVuZGVyZWQgb24tc2NyZWVuLlxyXG4gICAgICogSXQgZG9lcyBub3QgY2hhbmdlIHRoZSBHYW1lIE9iamVjdHMgYWN0dWFsIHBvc2l0aW9uIHZhbHVlcy5cclxuICAgICAqXHJcbiAgICAgKiBBIHZhbHVlIG9mIDEgbWVhbnMgaXQgd2lsbCBtb3ZlIGV4YWN0bHkgaW4gc3luYyB3aXRoIGEgY2FtZXJhLlxyXG4gICAgICogQSB2YWx1ZSBvZiAwIG1lYW5zIGl0IHdpbGwgbm90IG1vdmUgYXQgYWxsLCBldmVuIGlmIHRoZSBjYW1lcmEgbW92ZXMuXHJcbiAgICAgKiBPdGhlciB2YWx1ZXMgY29udHJvbCB0aGUgZGVncmVlIHRvIHdoaWNoIHRoZSBjYW1lcmEgbW92ZW1lbnQgaXMgbWFwcGVkIHRvIHRoaXMgR2FtZSBPYmplY3QuXHJcbiAgICAgKiBcclxuICAgICAqIFBsZWFzZSBiZSBhd2FyZSB0aGF0IHNjcm9sbCBmYWN0b3IgdmFsdWVzIG90aGVyIHRoYW4gMSBhcmUgbm90IHRha2VuIGluIHRvIGNvbnNpZGVyYXRpb24gd2hlblxyXG4gICAgICogY2FsY3VsYXRpbmcgcGh5c2ljcyBjb2xsaXNpb25zLiBCb2RpZXMgYWx3YXlzIGNvbGxpZGUgYmFzZWQgb24gdGhlaXIgd29ybGQgcG9zaXRpb24sIGJ1dCBjaGFuZ2luZ1xyXG4gICAgICogdGhlIHNjcm9sbCBmYWN0b3IgaXMgYSB2aXN1YWwgYWRqdXN0bWVudCB0byB3aGVyZSB0aGUgdGV4dHVyZXMgYXJlIHJlbmRlcmVkLCB3aGljaCBjYW4gb2Zmc2V0XHJcbiAgICAgKiB0aGVtIGZyb20gcGh5c2ljcyBib2RpZXMgaWYgbm90IGFjY291bnRlZCBmb3IgaW4geW91ciBjb2RlLlxyXG4gICAgICpcclxuICAgICAqIEBuYW1lIFBoYXNlci5HYW1lT2JqZWN0cy5Db21wb25lbnRzLlNjcm9sbEZhY3RvciNzY3JvbGxGYWN0b3JZXHJcbiAgICAgKiBAdHlwZSB7bnVtYmVyfVxyXG4gICAgICogQGRlZmF1bHQgMVxyXG4gICAgICogQHNpbmNlIDMuMC4wXHJcbiAgICAgKi9cclxuICAgIHNjcm9sbEZhY3Rvclk6IDEsXHJcblxyXG4gICAgLyoqXHJcbiAgICAgKiBTZXRzIHRoZSBzY3JvbGwgZmFjdG9yIG9mIHRoaXMgR2FtZSBPYmplY3QuXHJcbiAgICAgKlxyXG4gICAgICogVGhlIHNjcm9sbCBmYWN0b3IgY29udHJvbHMgdGhlIGluZmx1ZW5jZSBvZiB0aGUgbW92ZW1lbnQgb2YgYSBDYW1lcmEgdXBvbiB0aGlzIEdhbWUgT2JqZWN0LlxyXG4gICAgICpcclxuICAgICAqIFdoZW4gYSBjYW1lcmEgc2Nyb2xscyBpdCB3aWxsIGNoYW5nZSB0aGUgbG9jYXRpb24gYXQgd2hpY2ggdGhpcyBHYW1lIE9iamVjdCBpcyByZW5kZXJlZCBvbi1zY3JlZW4uXHJcbiAgICAgKiBJdCBkb2VzIG5vdCBjaGFuZ2UgdGhlIEdhbWUgT2JqZWN0cyBhY3R1YWwgcG9zaXRpb24gdmFsdWVzLlxyXG4gICAgICpcclxuICAgICAqIEEgdmFsdWUgb2YgMSBtZWFucyBpdCB3aWxsIG1vdmUgZXhhY3RseSBpbiBzeW5jIHdpdGggYSBjYW1lcmEuXHJcbiAgICAgKiBBIHZhbHVlIG9mIDAgbWVhbnMgaXQgd2lsbCBub3QgbW92ZSBhdCBhbGwsIGV2ZW4gaWYgdGhlIGNhbWVyYSBtb3Zlcy5cclxuICAgICAqIE90aGVyIHZhbHVlcyBjb250cm9sIHRoZSBkZWdyZWUgdG8gd2hpY2ggdGhlIGNhbWVyYSBtb3ZlbWVudCBpcyBtYXBwZWQgdG8gdGhpcyBHYW1lIE9iamVjdC5cclxuICAgICAqIFxyXG4gICAgICogUGxlYXNlIGJlIGF3YXJlIHRoYXQgc2Nyb2xsIGZhY3RvciB2YWx1ZXMgb3RoZXIgdGhhbiAxIGFyZSBub3QgdGFrZW4gaW4gdG8gY29uc2lkZXJhdGlvbiB3aGVuXHJcbiAgICAgKiBjYWxjdWxhdGluZyBwaHlzaWNzIGNvbGxpc2lvbnMuIEJvZGllcyBhbHdheXMgY29sbGlkZSBiYXNlZCBvbiB0aGVpciB3b3JsZCBwb3NpdGlvbiwgYnV0IGNoYW5naW5nXHJcbiAgICAgKiB0aGUgc2Nyb2xsIGZhY3RvciBpcyBhIHZpc3VhbCBhZGp1c3RtZW50IHRvIHdoZXJlIHRoZSB0ZXh0dXJlcyBhcmUgcmVuZGVyZWQsIHdoaWNoIGNhbiBvZmZzZXRcclxuICAgICAqIHRoZW0gZnJvbSBwaHlzaWNzIGJvZGllcyBpZiBub3QgYWNjb3VudGVkIGZvciBpbiB5b3VyIGNvZGUuXHJcbiAgICAgKlxyXG4gICAgICogQG1ldGhvZCBQaGFzZXIuR2FtZU9iamVjdHMuQ29tcG9uZW50cy5TY3JvbGxGYWN0b3Ijc2V0U2Nyb2xsRmFjdG9yXHJcbiAgICAgKiBAc2luY2UgMy4wLjBcclxuICAgICAqXHJcbiAgICAgKiBAcGFyYW0ge251bWJlcn0geCAtIFRoZSBob3Jpem9udGFsIHNjcm9sbCBmYWN0b3Igb2YgdGhpcyBHYW1lIE9iamVjdC5cclxuICAgICAqIEBwYXJhbSB7bnVtYmVyfSBbeT14XSAtIFRoZSB2ZXJ0aWNhbCBzY3JvbGwgZmFjdG9yIG9mIHRoaXMgR2FtZSBPYmplY3QuIElmIG5vdCBzZXQgaXQgd2lsbCB1c2UgdGhlIGB4YCB2YWx1ZS5cclxuICAgICAqXHJcbiAgICAgKiBAcmV0dXJuIHt0aGlzfSBUaGlzIEdhbWUgT2JqZWN0IGluc3RhbmNlLlxyXG4gICAgICovXHJcbiAgICBzZXRTY3JvbGxGYWN0b3I6IGZ1bmN0aW9uICh4LCB5KVxyXG4gICAge1xyXG4gICAgICAgIGlmICh5ID09PSB1bmRlZmluZWQpIHsgeSA9IHg7IH1cclxuXHJcbiAgICAgICAgdGhpcy5zY3JvbGxGYWN0b3JYID0geDtcclxuICAgICAgICB0aGlzLnNjcm9sbEZhY3RvclkgPSB5O1xyXG5cclxuICAgICAgICByZXR1cm4gdGhpcztcclxuICAgIH1cclxuXHJcbn07XHJcblxyXG5tb2R1bGUuZXhwb3J0cyA9IFNjcm9sbEZhY3RvcjtcclxuIl0sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/gameobjects/components/ScrollFactor.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    

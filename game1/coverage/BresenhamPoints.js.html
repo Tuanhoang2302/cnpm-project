@@ -1,0 +1,293 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for BresenhamPoints.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="index.html">All files</a> BresenhamPoints.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">36.11% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>26/72</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>2/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>0/0</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">36.11% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>26/72</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+    </div>
+    <div class='status-line low'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @author       Richard Davey &lt;rich@photonstorm.com&gt;
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://opensource.org/licenses/MIT|MIT License}
+ */
+&nbsp;
+/**
+ * Using Bresenham's line algorithm this will return an array of all coordinates on this line.
+ *
+ * The `start` and `end` points are rounded before this runs as the algorithm works on integers.
+ *
+ * @function Phaser.Geom.Line.BresenhamPoints
+ * @since 3.0.0
+ *
+ * @param {Phaser.Geom.Line} line - The line.
+ * @param {integer} [stepRate=1] - The optional step rate for the points on the line.
+ * @param {array} [results] - An optional array to push the resulting coordinates into.
+ *
+ * @return {object[]} The array of coordinates on the line.
+ */
+<span class="cstat-no" title="statement not covered" >var BresenhamPoints = function (line, stepRate, results)</span>
+<span class="cstat-no" title="statement not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    if (stepRate === undefined) { stepRate = 1; }</span>
+<span class="cstat-no" title="statement not covered" >    if (results === undefined) { results = []; }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var x1 = Math.round(line.x1);</span>
+<span class="cstat-no" title="statement not covered" >    var y1 = Math.round(line.y1);</span>
+<span class="cstat-no" title="statement not covered" >    var x2 = Math.round(line.x2);</span>
+<span class="cstat-no" title="statement not covered" >    var y2 = Math.round(line.y2);</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var dx = Math.abs(x2 - x1);</span>
+<span class="cstat-no" title="statement not covered" >    var dy = Math.abs(y2 - y1);</span>
+<span class="cstat-no" title="statement not covered" >    var sx = (x1 &lt; x2) ? 1 : -1;</span>
+<span class="cstat-no" title="statement not covered" >    var sy = (y1 &lt; y2) ? 1 : -1;</span>
+<span class="cstat-no" title="statement not covered" >    var err = dx - dy;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    results.push({ x: x1, y: y1 });</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    var i = 1;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    while (!((x1 === x2) &amp;&amp; (y1 === y2)))</span>
+<span class="cstat-no" title="statement not covered" >    {</span>
+<span class="cstat-no" title="statement not covered" >        var e2 = err &lt;&lt; 1;</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if (e2 &gt; -dy)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            err -= dy;</span>
+<span class="cstat-no" title="statement not covered" >            x1 += sx;</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if (e2 &lt; dx)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            err += dx;</span>
+<span class="cstat-no" title="statement not covered" >            y1 += sy;</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        if (i % stepRate === 0)</span>
+<span class="cstat-no" title="statement not covered" >        {</span>
+<span class="cstat-no" title="statement not covered" >            results.push({ x: x1, y: y1 });</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        i++;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    return results;</span>
+<span class="cstat-no" title="statement not covered" >};</span>
+&nbsp;
+module.exports = BresenhamPoints;
+//# sourceURL=[module]
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9nZW9tL2xpbmUvQnJlc2VuaGFtUG9pbnRzLmpzPzYzNDIiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0Esa0JBQWtCO0FBQ2xCOztBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxXQUFXLGlCQUFpQjtBQUM1QixXQUFXLFFBQVE7QUFDbkIsV0FBVyxNQUFNO0FBQ2pCO0FBQ0EsWUFBWSxTQUFTO0FBQ3JCO0FBQ0E7QUFDQTtBQUNBLGlDQUFpQyxjQUFjO0FBQy9DLGdDQUFnQyxjQUFjOztBQUU5QztBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBLGtCQUFrQixlQUFlOztBQUVqQzs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7QUFDQSwwQkFBMEIsZUFBZTtBQUN6Qzs7QUFFQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUEiLCJmaWxlIjoiLi9ub2RlX21vZHVsZXMvcGhhc2VyL3NyYy9nZW9tL2xpbmUvQnJlc2VuaGFtUG9pbnRzLmpzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLyoqXHJcbiAqIEBhdXRob3IgICAgICAgUmljaGFyZCBEYXZleSA8cmljaEBwaG90b25zdG9ybS5jb20+XHJcbiAqIEBjb3B5cmlnaHQgICAgMjAxOSBQaG90b24gU3Rvcm0gTHRkLlxyXG4gKiBAbGljZW5zZSAgICAgIHtAbGluayBodHRwczovL29wZW5zb3VyY2Uub3JnL2xpY2Vuc2VzL01JVHxNSVQgTGljZW5zZX1cclxuICovXHJcblxyXG4vKipcclxuICogVXNpbmcgQnJlc2VuaGFtJ3MgbGluZSBhbGdvcml0aG0gdGhpcyB3aWxsIHJldHVybiBhbiBhcnJheSBvZiBhbGwgY29vcmRpbmF0ZXMgb24gdGhpcyBsaW5lLlxyXG4gKlxyXG4gKiBUaGUgYHN0YXJ0YCBhbmQgYGVuZGAgcG9pbnRzIGFyZSByb3VuZGVkIGJlZm9yZSB0aGlzIHJ1bnMgYXMgdGhlIGFsZ29yaXRobSB3b3JrcyBvbiBpbnRlZ2Vycy5cclxuICpcclxuICogQGZ1bmN0aW9uIFBoYXNlci5HZW9tLkxpbmUuQnJlc2VuaGFtUG9pbnRzXHJcbiAqIEBzaW5jZSAzLjAuMFxyXG4gKlxyXG4gKiBAcGFyYW0ge1BoYXNlci5HZW9tLkxpbmV9IGxpbmUgLSBUaGUgbGluZS5cclxuICogQHBhcmFtIHtpbnRlZ2VyfSBbc3RlcFJhdGU9MV0gLSBUaGUgb3B0aW9uYWwgc3RlcCByYXRlIGZvciB0aGUgcG9pbnRzIG9uIHRoZSBsaW5lLlxyXG4gKiBAcGFyYW0ge2FycmF5fSBbcmVzdWx0c10gLSBBbiBvcHRpb25hbCBhcnJheSB0byBwdXNoIHRoZSByZXN1bHRpbmcgY29vcmRpbmF0ZXMgaW50by5cclxuICpcclxuICogQHJldHVybiB7b2JqZWN0W119IFRoZSBhcnJheSBvZiBjb29yZGluYXRlcyBvbiB0aGUgbGluZS5cclxuICovXHJcbnZhciBCcmVzZW5oYW1Qb2ludHMgPSBmdW5jdGlvbiAobGluZSwgc3RlcFJhdGUsIHJlc3VsdHMpXHJcbntcclxuICAgIGlmIChzdGVwUmF0ZSA9PT0gdW5kZWZpbmVkKSB7IHN0ZXBSYXRlID0gMTsgfVxyXG4gICAgaWYgKHJlc3VsdHMgPT09IHVuZGVmaW5lZCkgeyByZXN1bHRzID0gW107IH1cclxuXHJcbiAgICB2YXIgeDEgPSBNYXRoLnJvdW5kKGxpbmUueDEpO1xyXG4gICAgdmFyIHkxID0gTWF0aC5yb3VuZChsaW5lLnkxKTtcclxuICAgIHZhciB4MiA9IE1hdGgucm91bmQobGluZS54Mik7XHJcbiAgICB2YXIgeTIgPSBNYXRoLnJvdW5kKGxpbmUueTIpO1xyXG5cclxuICAgIHZhciBkeCA9IE1hdGguYWJzKHgyIC0geDEpO1xyXG4gICAgdmFyIGR5ID0gTWF0aC5hYnMoeTIgLSB5MSk7XHJcbiAgICB2YXIgc3ggPSAoeDEgPCB4MikgPyAxIDogLTE7XHJcbiAgICB2YXIgc3kgPSAoeTEgPCB5MikgPyAxIDogLTE7XHJcbiAgICB2YXIgZXJyID0gZHggLSBkeTtcclxuXHJcbiAgICByZXN1bHRzLnB1c2goeyB4OiB4MSwgeTogeTEgfSk7XHJcblxyXG4gICAgdmFyIGkgPSAxO1xyXG5cclxuICAgIHdoaWxlICghKCh4MSA9PT0geDIpICYmICh5MSA9PT0geTIpKSlcclxuICAgIHtcclxuICAgICAgICB2YXIgZTIgPSBlcnIgPDwgMTtcclxuXHJcbiAgICAgICAgaWYgKGUyID4gLWR5KVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgZXJyIC09IGR5O1xyXG4gICAgICAgICAgICB4MSArPSBzeDtcclxuICAgICAgICB9XHJcblxyXG4gICAgICAgIGlmIChlMiA8IGR4KVxyXG4gICAgICAgIHtcclxuICAgICAgICAgICAgZXJyICs9IGR4O1xyXG4gICAgICAgICAgICB5MSArPSBzeTtcclxuICAgICAgICB9XHJcblxyXG4gICAgICAgIGlmIChpICUgc3RlcFJhdGUgPT09IDApXHJcbiAgICAgICAge1xyXG4gICAgICAgICAgICByZXN1bHRzLnB1c2goeyB4OiB4MSwgeTogeTEgfSk7XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICBpKys7XHJcbiAgICB9XHJcblxyXG4gICAgcmV0dXJuIHJlc3VsdHM7XHJcbn07XHJcblxyXG5tb2R1bGUuZXhwb3J0cyA9IEJyZXNlbmhhbVBvaW50cztcclxuIl0sInNvdXJjZVJvb3QiOiIifQ==
+//# sourceURL=webpack-internal:///./node_modules/phaser/src/geom/line/BresenhamPoints.js
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
+                at Tue May 05 2020 00:41:40 GMT+0700 (Hovd Standard Time)
+            </div>
+        </div>
+        <script src="prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="sorter.js"></script>
+        <script src="block-navigation.js"></script>
+    </body>
+</html>
+    
