@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game 2</title>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.22.0/dist/phaser.js"></script>
+    <script type="text/javascript" src="src/Scene/Scene1.js"></script>
+    <script type="text/javascript" src="src/Scene/Scene3.js"></script>
+    <script type="text/javascript" src="src/Scene/Scene2.js"></script>
+    <script type="text/javascript" src="src/Scene/Scene4.js"></script>
+    <script type="text/javascript" src="src/Scene/Scene5.js"></script>
+    <script type="text/javascript" src="src/Scene/Scene6.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <link href="index.css" rel="stylesheet" />
+    <script type="text/javascript" src="answer.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script type="text/javascript" src="language.js"></script>
+   <style>
+      a{
+       display: flex;
+        text-decoration: none;
+        color: #246EA1;
+      }
+      a:hover{
+        color: #50acdb;
+      }
+      #back{
+        font-size: 22px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 8px;
+        line-height: 50px;
+      }
+      #iconBack{
+        border-bottom: 15px solid transparent;
+        border-top: 15px solid transparent;
+        border-right: 15px solid #246EA1;
+        border-radius: 50%;
+        position: relative;
+        top: 10px;
+        width:0;
+        height:0;
+      }
+      .re{
+        background-color: #ffffff;
+        transform: rotate(45deg);
+        width:14px;
+        height:14px;
+        position: relative;
+        top:-7px;
+        left:8px;
+      }
+      #c1{
+        border: 1px solid #000000;
+        width:  100px;
+        position: relative;
+        font-size: 30px;
+      }
+    </style>
+</head>
+<body >
+          <div class ="background">
+              <div id='phaserGame'>
+              <div id='moc'>
+                <a href="https://dragonlearn.in/teachers/g/61649/subjects/1/course_programs/1/lessons/16306" div="back">
+                  <div id="iconBack">
+                   <div class="re"></div>
+                  </div>
+                  <div id="back">Back</div>
+                </a>
+                <ul class="languages">
+                  <li class = "active" >Language</li>
+                  <li class = "non-active"><a id="english" href="#eng" onclick="English()" >English</a></li>
+                  <li class ="non-active"><a id="vietnamese" href="#vietnam" onclick="Vietnamese()">Vietnamese</a></li>
+                </ul>
+              </div>
+          </div>
+    </div>
+    <audio id="onebox">
+        <source src="src/Assets/onebox.mp3" type="audio/ogg">
+      </audio>
+      <audio id="manyApple">
+        <source src="src/Assets/manyApple.mp3" type="audio/ogg">
+      </audio>
+      <audio id="howMany">
+        <source src="src/Assets/Howmanyapple.mp3" type="audio/ogg">
+      </audio>
+      <audio id="Total">
+        <source src="src/Assets/Total.mp3" type="audio/ogg">
+      </audio>
+      <audio id="manyBoxes">
+        <source src="src/Assets/manyBoxes.mp3" type="audio/ogg">
+      </audio>
+      <audio id="vietso0">
+        <source src="src/Assets/vietso0.mp3" type="audio/ogg">
+      </audio>
+      <audio id="count">
+        <source src="src/Assets/count.mp3" type="audio/ogg">
+      </audio>
+</body>
+<script>
+  $(function () {
+    			$el_languages = $('.languages');
+    			$el_languages.hover(function () {
+        			$el_languages.find('li').show();
+    			}, function () {
+        			$el_languages.find('.non-active').hide();
+    			});
+      });
+</script>
+</html>

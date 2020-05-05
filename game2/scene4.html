@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #sce4{
+            width:100%;
+            height: 50px;
+            display: flex;
+        }
+        #baitap{
+            font-size: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 20px;
+        }
+        #c3{
+            border: 5px solid #d98708; 
+            position: relative;
+            left:15px;
+            border-radius: 5px;
+            display: flex;
+            width: 40px;
+        }
+        #nu29,#nu10{
+            font-size: 40px;
+    /* border-radius: 5px; */
+    width:20px;
+    border: 0px;
+    outline: none;
+    font-family: 'Times New Roman', Times, serif;
+
+        }
+        #chidan{
+            display: none;
+           position: relative;
+           left: 150px;
+            width:max-content;
+            background-color: #f2eec7;
+            padding: 12px 10px 0px 10px;
+            border-radius: 10px;
+            
+        }
+        .texthint{
+            font-size: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            
+        }
+        .so10{
+            background-size: 25px 25px;
+        }
+        #viet0{
+            background-color: #f2eec7;
+            width: 100px;
+            display: none;
+            width:max-content;
+            padding: 10px 10px 0px 10px;
+            border-radius: 10px;
+            position: relative;
+            top: 20px;
+            left: 580px;
+        }
+        .so11{
+            background-size: 22px;
+        }
+        .V0{
+            font-size: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .rectangle{
+            width:20px;
+            height: 20px;
+            transform: rotate(45deg);
+            background-color: #f2eec7;
+            position: absolute;
+            left: 25px;
+            top:-9px;
+        }
+    </style>
+</head>
+<body>
+    <div id="sce4">
+        <div class="loa so6"  onclick="PlayAudio(`manyApple`)"></div>
+        <div id="baitap"  onclick="PlayAudio(`manyApple`)">How many apples are there:</div>
+        <div id="c3">
+           <input id="nu29" type="text" size="1" onkeyup="OutputQuestion1_1Scene4()"onkeypress='return event.charCode >= 48 && event.charCode <= 57' value="" autofocus>
+           <input id="nu10" type="text" size="1" onkeyup="OutputQuestion1_2Scene4()"onkeypress='return event.charCode >= 48 && event.charCode <= 57' value="">
+        </div>
+    </div>
+        <div id="chidan"  onclick="PlayAudio(`manyBoxes`)">
+        <div class="loa so10" ></div>
+        <div class="texthint">How many boxes are there?</div>
+         </div>
+         <div id="viet0"  onclick="PlayAudio(`vietso0`)">
+            <div class="loa so11"></div>
+            <div class="rectangle"></div>
+            <div class="V0">Write 0</div>
+        </div>
+
+</body>
+</html>
