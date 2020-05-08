@@ -9,6 +9,7 @@
 import 'phaser';
 import Ball from '../gameObject/Ball';
 import Block from '../gameObject/Block';
+import Game1Scene2 from './Game1Scene2';
 
 // export var isWannaReset3 = [false];
 
@@ -17,8 +18,7 @@ const BLOCK = {
   Y: 140,
 };
 
-const RANGEBLOCK = 150;
-
+var Scene2;
 export default class Game1Scene3 extends Phaser.Scene {
   // hello = 2;
   constructor() {
@@ -35,6 +35,7 @@ export default class Game1Scene3 extends Phaser.Scene {
   }
 
   create() {
+    Scene2 = new Game1Scene2();
     this.ReCreate();
     this.CreateBall();
     this.CreateQuestionAndInput();
@@ -43,7 +44,7 @@ export default class Game1Scene3 extends Phaser.Scene {
   }
 
   update() {
-    // isWannaReset3[0] = this.isWannaReset;
+    // isWannaReset3[0] = this.isWannaReset
     this.CheckAnswerOfSubQuestion();
     this.Move_Block_and_Display_NextSubQuestion();
     this.DisplayLastQuestion();
@@ -54,86 +55,15 @@ export default class Game1Scene3 extends Phaser.Scene {
 
   //-------------------------------------------------------------------------------------------
 
+  // eslint-disable-next-line class-methods-use-this
   CheckAnswerOfSubQuestion() {
-    if (
-      this.isChekingAnswer === true
-      && this.input_Index <= this.subquestionTotalNumber
-    ) {
-      const inputCurrentValue1 = document.getElementById(
-        `input${(this.input_Index * 2 - 1).toString()}`,
-      ).value;
-      const inputCurrentValue2 = document.getElementById(
-        `input${(this.input_Index * 2).toString()}`,
-      ).value;
-
-      if (
-        (inputCurrentValue1 !== '' && inputCurrentValue1 !== '1')
-        || (inputCurrentValue2 !== '' && inputCurrentValue2 !== '0')
-      ) {
-        this.isWannaReset = true;
-      }
-      if (inputCurrentValue2 !== '' && inputCurrentValue2 === '0') {
-        const text10 = document.createElement('div');
-        text10.appendChild(document.createTextNode('10'));
-        const layoutQuestion = document.getElementById(
-          `layout_question${this.input_Index}`,
-        );
-        text10.style.cssText = 'display: inline-block; font-size:45px;';
-        layoutQuestion.replaceChild(
-          text10,
-          document.getElementById(`answer${this.input_Index}`),
-        );
-        this.isMoveBlock = true;
-        this.isChekingAnswer = false;
-        this.input_Index++;
-      }
-      // this.is_input_Cheking = false;
-    }
+    Scene2.CheckAnswerOfSubQuestion(this);
   }
 
   // eslint-disable-next-line camelcase
   Move_Block_and_Display_NextSubQuestion() {
-    if (this.isMoveBlock) {
-      if (this.input_Index <= this.subquestionTotalNumber) {
-        const startPosYBlock = BLOCK.Y + RANGEBLOCK * (this.input_Index - 2);
-        const destinationPosYBlock = BLOCK.Y + RANGEBLOCK * (this.input_Index - 1);
-        if (this.block.y === startPosYBlock) {
-          new Block().createArrayBlock(this, BLOCK.X, startPosYBlock);
-        }
-        if (this.block.y < destinationPosYBlock) {
-          this.block.y += 3;
-        } else {
-          this.isDisplaySubQuestion = true;
-          this.isMoveBlock = false;
-        }
-      } else {
-        this.isDisplaySubQuestion = true;
-        this.isMoveBlock = false;
-      }
-    }
-
-    if (this.isDisplaySubQuestion) {
-      if (this.input_Index === 2 && this.subquestionTotalNumber > 1) {
-        $(document).ready(() => {
-          $('#layout_question2').delay(200).fadeIn();
-        });
-        setTimeout(() => {
-          document.getElementById('input3').focus();
-        }, 300);
-      } else if (this.input_Index === 3 && this.subquestionTotalNumber > 2) {
-        $(document).ready(() => {
-          $('#layout_question3').delay(200).fadeIn();
-        });
-        setTimeout(() => {
-          document.getElementById('input5').focus();
-        }, 300);
-      }
-      if (this.input_Index > this.subquestionTotalNumber) {
-        this.isDisplayLastQuestion = true;
-      }
-      this.isChekingAnswer = true;
-      this.isDisplaySubQuestion = false;
-    }
+    Scene2.MoveBlock(this);
+    Scene2.DisplayNextSubQuestion(this);
   }
 
   DisplayLastQuestion() {
@@ -188,35 +118,11 @@ export default class Game1Scene3 extends Phaser.Scene {
   }
 
   ResetScene() {
-    if (this.isResetScene) {
-      if (this.isWannaReset) {
-        this.time.addEvent({
-          delay: 1000,
-          callback: () => {
-            this.scene.start('Scene3');
-          },
-          repeat: 0,
-        });
-      } else {
-        this.isMoveBall = true;
-      }
-    }
+    Scene2.ResetScene(this, 'Scene3');
   }
 
   MoveBall() {
-    if (this.isMoveBall) {
-      if (this.ball_Last.x < 710) {
-        this.ball_Last.x += 3;
-      } else {
-        this.time.addEvent({
-          delay: 2000,
-          callback: () => {
-            this.scene.start('Scene4');
-          },
-          repeat: 0,
-        });
-      }
-    }
+    Scene2.MoveBall(this, 'Scene4', 710);
   }
 
   //---------------------------------------------------------------------------------------------

@@ -1,3 +1,7 @@
+/* eslint-disable no-param-reassign */
+/* eslint-disable class-methods-use-this */
+/* eslint-disable consistent-return */
+/* eslint-disable camelcase */
 /* eslint-disable block-scoped-var */
 /* eslint-disable vars-on-top */
 /* eslint-disable import/no-mutable-exports */
@@ -9,15 +13,13 @@ import 'phaser';
 import Ball from '../gameObject/Ball';
 import Block from '../gameObject/Block';
 
-export const isWannaReset2 = [false];
-
-const BLOCK = {
+export const BLOCK = {
   X: 250,
   Y: 140,
 };
 
-const RANGEBLOCK = 150;
-export var isDisplayLastResult = false;
+export const RANGEBLOCK = 150;
+var isDisplayLastResult = false;
 var pos = [0, 0, 0, 0];
 export default class Game1Scene2 extends Phaser.Scene {
   constructor() {
@@ -35,75 +37,78 @@ export default class Game1Scene2 extends Phaser.Scene {
 
   create() {
     this.ReCreate();
-    this.CreateBall();
-    this.CreateQuestionAndInput();
-    this.block = (new Block()).createArrayBlock(this, BLOCK.X, BLOCK.Y);
+    this.CreateBall(this, 0);
+    this.CreateQuestionAndInput(this);
+    this.CreateBlock(this);
     this.CreateLanguage();
   }
 
   update() {
-    isWannaReset2[0] = this.isWannaReset;
-    this.CheckAnswerOfSubQuestion();
-    this.MoveBlockandDisplayNextSubQuestion();
-    this.DisplayLastQuestion();
-    this.DisplayLastResult();
-    this.ResetScene();
-    this.MoveBall();
+    this.CheckAnswerOfSubQuestion(this);
+    this.MoveBlock(this);
+    this.DisplayNextSubQuestion(this);
+    this.DisplayLastQuestion(this);
+    this.DisplayLastResult(this);
+    this.ResetScene(this, 'Scene2');
+    this.MoveBall(this, 'Scene3', 740);
   }
 
   //------------------------------------------------------------------------------------------------
 
-  CheckAnswerOfSubQuestion() {
-    if (this.isChekingAnswer === true && this.input_Index <= this.subquestionTotalNumber) {
-      const inputCurrentValue1 = document.getElementById(`input${(this.input_Index * 2 - 1).toString()}`).value;
-      const inputCurrentValue2 = document.getElementById(`input${(this.input_Index * 2).toString()}`).value;
+  CheckAnswerOfSubQuestion(other) {
+    if (other.isChekingAnswer === true && other.input_Index <= other.subquestionTotalNumber) {
+      const inputCurrentValue1 = document.getElementById(`input${(other.input_Index * 2 - 1).toString()}`).value;
+      const inputCurrentValue2 = document.getElementById(`input${(other.input_Index * 2).toString()}`).value;
 
       if ((inputCurrentValue1 !== '' && inputCurrentValue1 !== '1')
          || (inputCurrentValue2 !== '' && inputCurrentValue2 !== '0')) {
-        this.isWannaReset = true;
+        other.isWannaReset = true;
       }
       if (inputCurrentValue2 !== '' && inputCurrentValue2 === '0') {
         const text10 = document.createElement('div');
         text10.appendChild(document.createTextNode('10'));
-        const layoutQuestion = document.getElementById(`layout_question${this.input_Index}`);
+        const layoutQuestion = document.getElementById(`layout_question${other.input_Index}`);
         text10.style.cssText = 'display: inline-block; font-size:45px;';
-        layoutQuestion.replaceChild(text10, document.getElementById(`answer${this.input_Index}`));
-        this.isMoveBlock = true;
-        this.isChekingAnswer = false;
-        this.input_Index += 1;
+        layoutQuestion.replaceChild(text10, document.getElementById(`answer${other.input_Index}`));
+        other.isMoveBlock = true;
+        other.isChekingAnswer = false;
+        other.input_Index += 1;
       }
     }
   }
 
-  MoveBlockandDisplayNextSubQuestion() {
-    if (this.isMoveBlock) {
-      if (this.input_Index <= this.subquestionTotalNumber) {
-        const startPosYBlock = BLOCK.Y + RANGEBLOCK * (this.input_Index - 2);
-        const destinationPosYBlock = BLOCK.Y + RANGEBLOCK * (this.input_Index - 1);
-        if (this.block.y === startPosYBlock) {
-          (new Block()).createArrayBlock(this, BLOCK.X, startPosYBlock);
+  MoveBlock(other) {
+    if (other.isMoveBlock) {
+      const startPosYBlock = BLOCK.Y + RANGEBLOCK * (other.input_Index - 2);
+      const destinationPosYBlock = BLOCK.Y + RANGEBLOCK * (other.input_Index - 1);
+      if (other.input_Index <= other.subquestionTotalNumber) {
+        if (other.block.y === startPosYBlock) {
+          (new Block()).createArrayBlock(other, BLOCK.X, startPosYBlock);
         }
-        if (this.block.y < destinationPosYBlock) {
-          this.block.y += 3;
+        if (other.block.y < destinationPosYBlock) {
+          other.block.y += 3;
         } else {
-          this.isDisplaySubQuestion = true;
-          this.isMoveBlock = false;
+          other.isDisplaySubQuestion = true;
+          other.isMoveBlock = false;
         }
       } else {
-        this.isDisplaySubQuestion = true;
-        this.isMoveBlock = false;
+        other.isDisplaySubQuestion = true;
+        other.isMoveBlock = false;
       }
     }
+    return 10;
+  }
 
-    if (this.isDisplaySubQuestion) {
-      if (this.input_Index === 2 && this.subquestionTotalNumber > 1) {
+  DisplayNextSubQuestion(other) {
+    if (other.isDisplaySubQuestion) {
+      if (other.input_Index === 2 && other.subquestionTotalNumber > 1) {
         $(document).ready(() => {
           $('#layout_question2').delay(200).fadeIn();
         });
         setTimeout(() => {
           document.getElementById('input3').focus();
         }, 300);
-      } else if (this.input_Index === 3 && this.subquestionTotalNumber > 2) {
+      } else if (other.input_Index === 3 && other.subquestionTotalNumber > 2) {
         $(document).ready(() => {
           $('#layout_question3').delay(200).fadeIn();
         });
@@ -111,25 +116,24 @@ export default class Game1Scene2 extends Phaser.Scene {
           document.getElementById('input5').focus();
         }, 300);
       }
-      if (this.input_Index > this.subquestionTotalNumber) {
-        this.isDisplayLastQuestion = true;
+      if (other.input_Index > other.subquestionTotalNumber) {
+        other.isDisplayLastQuestion = true;
       }
-      this.isFocus = true;
-      this.isChekingAnswer = true;
-      this.isDisplaySubQuestion = false;
+      other.isChekingAnswer = true;
+      other.isDisplaySubQuestion = false;
     }
   }
 
-  DisplayLastQuestion() {
-    if (this.isDisplayLastQuestion) {
+  DisplayLastQuestion(other) {
+    if (other.isDisplayLastQuestion) {
       $(document).ready(() => {
         $('#layout_lastquestion').delay(200).fadeIn();
       });
-      this.isDisplayLastQuestion = false;
+      other.isDisplayLastQuestion = false;
     }
   }
 
-  DisplayLastResult() {
+  DisplayLastResult(other) {
     if (isDisplayLastResult) {
       const desEnd = (RANGEBLOCK - 20) * (subquestionTotalNumber - 1 + 1)
                       + 20 * (subquestionTotalNumber - 1);
@@ -158,37 +162,37 @@ export default class Game1Scene2 extends Phaser.Scene {
           $('#layout_lastquestion').delay(200).fadeIn();
         });
         isDisplayLastResult = false;
-        this.isResetScene = true;
+        other.isResetScene = true;
       }
     }
   }
 
-  ResetScene() {
-    if (this.isResetScene) {
-      if (this.isWannaReset) {
-        this.time.addEvent({
+  ResetScene(other, scene) {
+    if (other.isResetScene) {
+      if (other.isWannaReset) {
+        other.time.addEvent({
           delay: 1000,
           callback: () => {
-            this.scene.start('Scene2');
+            other.scene.start(scene);
           },
           repeat: 0,
         });
       } else {
-        this.isMoveBall = true;
+        other.isMoveBall = true;
       }
     }
   }
 
-  MoveBall() {
-    if (this.isMoveBall) {
-      if (this.ball_Last.x < 740) {
-        this.ball_Last.x += 3;
+  MoveBall(other, scene, destination) {
+    if (other.isMoveBall) {
+      if (other.ball_Last.x < destination) {
+        other.ball_Last.x += 3;
       } else {
-        this.time.addEvent({
+        other.time.addEvent({
           delay: 2000,
           callback: () => {
             // window.location.href = 'https://example.com/'
-            this.scene.start('Scene3');
+            other.scene.start(scene);
           },
           repeat: 0,
         });
@@ -198,30 +202,35 @@ export default class Game1Scene2 extends Phaser.Scene {
 
   //-----------------------------------------------------------------------------------------------
 
-  CreateBall() {
-    this.add.image(540, 30, 'ballHolder');
-    this.ball_Last = (function (scene) {
+  CreateBlock(other) {
+    other.block = (new Block()).createArrayBlock(other, BLOCK.X, BLOCK.Y);
+  }
+
+  CreateBall(other, index) {
+    other.add.image(540, 30, 'ballHolder');
+    other.ball_Last = (function (scene) {
       const ball = new Ball();
-      ball.create(scene, 770, 29);
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i <= index; i++) {
+        ball.create(scene, 770 - i * 30, 29);
+      }
+      for (let i = 0; i < 4 - index; i++) {
         var temp = ball.create(scene, 310 + 30 * i, 29);
       }
       return temp;
-    }(this));
+    }(other));
   }
 
-  CreateQuestionAndInput() {
-    this.question_TotalNumber = 3;
-    this.input_Index = 1;
-    this.question_Sub = this.add.dom(750, 150).createFromCache('question');
-    for (let i = 1; i <= this.question_TotalNumber; i++) {
+  CreateQuestionAndInput(other) {
+    other.question_TotalNumber = 3;
+    other.input_Index = 1;
+    other.question_Sub = other.add.dom(750, 150).createFromCache('question');
+    for (let i = 1; i <= other.question_TotalNumber; i++) {
       const tmp = document.getElementById(`input${(i * 2).toString()}`);
-      this.input_Value_arr.push(tmp.value);
+      other.input_Value_arr.push(tmp.value);
     }
     document.getElementById('input1').focus();
   }
 
-  // eslint-disable-next-line class-methods-use-this
   CreateLanguage() {
     if (window.location.hash === '#vietnam') {
       const question = document.getElementsByClassName('question');
@@ -242,7 +251,8 @@ export default class Game1Scene2 extends Phaser.Scene {
   ReCreate() {
     this.fade = null;
     this.ball_Last = null;
-    this.subquestionTotalNumber = Math.floor(Math.random() * (3 - 3 + 1) + 3);
+    // other.subquestionTotalNumber = Math.floor(Math.random() * (3 - 2 + 1) + 2);
+    this.subquestionTotalNumber = 3;
     this.input_Index = 1;
     this.question_Index = 1;
     this.question_Sub = null;
@@ -258,7 +268,6 @@ export default class Game1Scene2 extends Phaser.Scene {
     isDisplayLastResult = false;
     subquestionTotalNumber = this.subquestionTotalNumber;
     pos = [0, 0, 0, 0];
-    isWannaReset2[0] = false;
   }
 }
 let subquestionTotalNumber;

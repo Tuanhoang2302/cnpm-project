@@ -7,21 +7,21 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable no-undef */
 import 'phaser';
-import Ball from '../gameObject/Ball';
-import FdInFdOut from '../helper/FdInFdOut';
-import Block from '../gameObject/Block';
-
+import Game1Scene4 from './Game1Scene4';
+import Game1Scene2 from './Game1Scene2';
 
 const BLOCK = {
   X: 250,
   Y: 120,
 };
-
+var Scene4;
+var Scene2;
 const RANGEBLOCK = 90;
 // export var isWannaReset4 = [false];
 export default class Game1Scene5 extends Phaser.Scene {
   constructor() {
     super('Scene5');
+    this.isDisplayQuestion2 = false;
   }
 
   preload() {
@@ -35,6 +35,8 @@ export default class Game1Scene5 extends Phaser.Scene {
   }
 
   create() {
+    Scene4 = new Game1Scene4();
+    Scene2 = new Game1Scene2();
     this.Recreate();
     this.CreateBall();
     this.CreateBorder();
@@ -45,6 +47,7 @@ export default class Game1Scene5 extends Phaser.Scene {
   update() {
     this.Move_Block_and_Display_NextQuestion();
     this.DisplayQuestion1();
+    this.isDisplayQuestion2 = isDisplayQuestion2;
     this.DisplayQuestion2();
     this.ResetScene();
     this.MoveBall();
@@ -54,71 +57,16 @@ export default class Game1Scene5 extends Phaser.Scene {
 
   // eslint-disable-next-line camelcase
   Move_Block_and_Display_NextQuestion() {
-    if (this.isMovingBlock) {
-      const startPosYBlock = BLOCK.Y + RANGEBLOCK * (this.currentBlock - 1);
-      const destination = BLOCK.Y + RANGEBLOCK * this.currentBlock;
-      if (this.block.y === startPosYBlock) {
-        (new Block()).createArrayBlock(this, BLOCK.X, startPosYBlock);
-      }
-      if (this.block.y < destination) {
-        this.block.y += 3;
-      } else {
-        this.currentBlock++;
-        this.isDisplayNextText = true;
-        this.isMovingBlock = false;
-      }
-    }
-
-    if (this.isDisplayNextText) {
-      if (this.currentBlock === 2) {
-        $(document).ready(() => {
-          $('#layout_question2').delay(500).fadeIn();
-        });
-      } else if (this.currentBlock === 3) {
-        $(document).ready(() => {
-          $('#layout_question3').delay(500).fadeIn();
-        });
-      } else if (this.currentBlock === 4) {
-        $(document).ready(() => {
-          $('#layout_question4').delay(500).fadeIn();
-        });
-      }
-
-      if (this.currentBlock < totalBlock) {
-        this.time.addEvent({
-          delay: 1000,
-          callback: () => {
-            this.isMovingBlock = true;
-          },
-          repeat: 0,
-        });
-      } else {
-        this.isDisplayQuestion1 = true;
-      }
-      this.isDisplayNextText = false;
-    }
+    Scene4.Move_Block_and_Display_NextQuestion(this);
   }
 
   DisplayQuestion1() {
-    if (this.isDisplayQuestion1) {
-      $(document).ready(() => {
-        $('#layout_lastquestion').delay(1000).fadeIn();
-      });
-      setTimeout(() => {
-        document.getElementById('inputScene4').focus();
-      }, 1100);
-      this.isDisplayQuestion1 = false;
-    }
+    Scene4.DisplayQuestion1(this);
   }
 
   DisplayQuestion2() {
-    if (isDisplayQuestion2) {
-      $(document).ready(() => {
-        $('#layout_lastquestion2').delay(1000).fadeIn();
-      });
-      setTimeout(() => {
-        document.getElementById('inputScene4v1').focus();
-      }, 1100);
+    if (isDisplayQuestion2 == true) {
+      Scene4.DisplayQuestion2(this);
       isDisplayQuestion2 = false;
     }
   }
@@ -134,86 +82,35 @@ export default class Game1Scene5 extends Phaser.Scene {
           repeat: 0,
         });
       } else {
-        this.is_Move_Ball = true;
+        this.isMoveBall = true;
       }
     }
   }
 
   MoveBall() {
-    if (this.is_Move_Ball) {
-      if (this.ball_Last.x < 650) {
-        this.ball_Last.x += 3;
-      } else {
-        this.time.addEvent({
-          delay: 2000,
-          callback: () => {
-            this.scene.start('Scene5');
-          },
-          repeat: 0,
-        });
-      }
-    }
+    Scene2.MoveBall(this, 'Scene5', 650);
   }
 
 
   //------------------------------------------------------------------------------------
 
   CreateBall() {
-    this.add.image(540, 30, 'ballHolder');
-    this.ball_Last = (function (scene) {
-      const ball = new Ball();
-      ball.create(scene, 770, 29);
-      ball.create(scene, 740, 29);
-      ball.create(scene, 710, 29);
-      ball.create(scene, 680, 29);
-      for (let i = 0; i < 1; i++) {
-        var temp = ball.create(scene, 310 + 30 * i, 29);
-      }
-      return temp;
-    }(this));
+    Scene2.CreateBall(this, 3);
   }
 
   CreateBorder() {
-    for (let i = 0; i < totalBlock; i++) {
+    for (let i = 0; i < this.totalBlock; i++) {
       border.push(this.add.image(BLOCK.X, BLOCK.Y + RANGEBLOCK * i, 'border'));
       border[i].setVisible(0);
     }
   }
 
   CreateTextAndBlock() {
-    this.block = (new Block()).createArrayBlock(this, BLOCK.X, BLOCK.Y);
-    this.question_Sub = this.add.dom(750, 130).createFromCache('question4');
-    this.block.setAlpha(0);
-    this.fade = new FdInFdOut(this);
-    this.fade.FdOut(this.block);
-    $(document).ready(() => {
-      $('#layout_question1').hide();
-      $('#layout_question1').delay(1000).fadeIn();
-    });
-    this.time.addEvent({
-      delay: 2000,
-      callback: () => {
-        this.isMovingBlock = true;
-      },
-      repeat: 0,
-    });
-    const m = document.getElementsByClassName('layout_question');
-    for (let i = 1; i < m.length; i++) {
-      m[i].style.padding = '35px 0 0 0';
-      m[i].style.margin = '0 0 0 10px';
-    }
-    m[1].style.bottom = '7px';
+    Scene4.CreateTextAndBlock(this, 'question4');
   }
 
   CreateLanguage() {
-    if (window.location.hash === '#vietnam') {
-      const question = document.getElementsByClassName('question');
-      for (let i = 0; i < question.length; i++) {
-        question[i].innerHTML = 'Hình bên có 10 khối';
-      }
-      document.getElementById('lastques').innerHTML = 'Tổng số thanh bên trên:';
-      document.getElementById('lastques2').innerHTML = 'Tổng số khối bên trên:';
-    }
+    Scene4.CreateLanguage();
   }
 
   Recreate() {
@@ -226,10 +123,11 @@ export default class Game1Scene5 extends Phaser.Scene {
     this.isDisplayQuestion1 = false;
     isDisplayQuestion2 = false;
     totalBlock = Math.floor(Math.random() * (4 - 2 + 1) + 2);
+    this.totalBlock = totalBlock;
     border = [];
     isResetScene = false;
     isWannaReset = false;
-    this.is_Move_Ball = false;
+    this.isMoveBall = false;
   }
 }
 
@@ -238,7 +136,6 @@ var border = [];
 var isDisplayQuestion2 = false;
 var isResetScene = false;
 var isWannaReset = false;
-
 // eslint-disable-next-line camelcase
 window.Check_QuestionScene5 = function Check_QuestionScene5() {
   if (document.getElementById('inputScene4').value !== '') {
@@ -256,8 +153,6 @@ window.Check_QuestionScene5 = function Check_QuestionScene5() {
       layoutQuestion.replaceChild(textResult, document.getElementById('answer1'));
       isDisplayQuestion2 = true;
     } else {
-      console.log(border[0]);
-
       for (let i = 0; i < totalBlock; i++) {
         border[i].setVisible(1);
       }
@@ -269,6 +164,7 @@ window.Check_QuestionScene5 = function Check_QuestionScene5() {
 
 // eslint-disable-next-line camelcase
 window.Check_QuestionScene5v1 = function Check_QuestionScene5v1() {
+  console.log('fdsfds');
   if (document.getElementById('inputScene4v1').value !== '') {
     const y = document.getElementById('inputScene4v1').value % 10;
     document.getElementById('inputScene4v1').value = '';
@@ -291,8 +187,10 @@ window.Check_QuestionScene5v1 = function Check_QuestionScene5v1() {
 
 // eslint-disable-next-line camelcase
 window.Check_QuestionScene5v2 = function Check_QuestionScene5v2() {
+  console.log('fds');
+
   if (document.getElementById('inputScene4v2').value !== '') {
-    if (document.getElementById('inputScene4v2').value == 0) {
+    if (document.getElementById('inputScene4v2').value % 10 == 0) {
       for (let i = 0; i < totalBlock; i++) {
         border[i].setVisible(0);
       }

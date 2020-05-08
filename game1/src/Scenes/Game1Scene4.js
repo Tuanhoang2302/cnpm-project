@@ -1,3 +1,5 @@
+/* eslint-disable no-param-reassign */
+/* eslint-disable class-methods-use-this */
 /* eslint-disable vars-on-top */
 /* eslint-disable no-var */
 /* eslint-disable eqeqeq */
@@ -5,21 +7,21 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable no-undef */
 import 'phaser';
-import Ball from '../gameObject/Ball';
 import FdInFdOut from '../helper/FdInFdOut';
 import Block from '../gameObject/Block';
-
+import Game1Scene2 from './Game1Scene2';
 
 const BLOCK = {
   X: 250,
   Y: 120,
 };
-
+var Scene2;
 const RANGEBLOCK = 90;
 // export var isWannaReset4 = [false];
 export default class Game1Scene4 extends Phaser.Scene {
   constructor() {
     super('Scene4');
+    this.isDisplayQuestion2 = false;
   }
 
   preload() {
@@ -33,85 +35,86 @@ export default class Game1Scene4 extends Phaser.Scene {
   }
 
   create() {
-    this.Recreate();
+    Scene2 = new Game1Scene2();
+    this.Recreate(this);
     this.CreateBall();
     this.CreateBorder();
-    this.CreateTextAndBlock();
+    this.CreateTextAndBlock(this, 'question3');
     this.CreateLanguage();
   }
 
   update() {
-    this.Move_Block_and_Display_NextQuestion();
-    this.DisplayQuestion1();
-    this.DisplayQuestion2();
-    this.ResetScene();
+    this.Move_Block_and_Display_NextQuestion(this);
+    this.DisplayQuestion1(this);
+    this.isDisplayQuestion2 = isDisplayQuestion2;
+    this.DisplayQuestion2(this);
+    this.ResetScene(this);
     this.MoveBall();
   }
 
   //------------------------------------------------------------------------------------
 
   // eslint-disable-next-line camelcase
-  Move_Block_and_Display_NextQuestion() {
-    if (this.isMovingBlock) {
-      const startPosYBlock = BLOCK.Y + RANGEBLOCK * (this.currentBlock - 1);
-      const destination = BLOCK.Y + RANGEBLOCK * this.currentBlock;
-      if (this.block.y === startPosYBlock) {
-        (new Block()).createArrayBlock(this, BLOCK.X, startPosYBlock);
+  Move_Block_and_Display_NextQuestion(other) {
+    if (other.isMovingBlock) {
+      const startPosYBlock = BLOCK.Y + RANGEBLOCK * (other.currentBlock - 1);
+      const destination = BLOCK.Y + RANGEBLOCK * other.currentBlock;
+      if (other.block.y === startPosYBlock) {
+        (new Block()).createArrayBlock(other, BLOCK.X, startPosYBlock);
       }
-      if (this.block.y < destination) {
-        this.block.y += 3;
+      if (other.block.y < destination) {
+        other.block.y += 3;
       } else {
-        this.currentBlock++;
-        this.isDisplayNextText = true;
-        this.isMovingBlock = false;
+        other.currentBlock++;
+        other.isDisplayNextText = true;
+        other.isMovingBlock = false;
       }
     }
 
-    if (this.isDisplayNextText) {
-      if (this.currentBlock === 2) {
+    if (other.isDisplayNextText) {
+      if (other.currentBlock === 2) {
         $(document).ready(() => {
           $('#layout_question2').delay(500).fadeIn();
         });
-      } else if (this.currentBlock === 3) {
+      } else if (other.currentBlock === 3) {
         $(document).ready(() => {
           $('#layout_question3').delay(500).fadeIn();
         });
-      } else if (this.currentBlock === 4) {
+      } else if (other.currentBlock === 4) {
         $(document).ready(() => {
           $('#layout_question4').delay(500).fadeIn();
         });
       }
 
-      if (this.currentBlock < totalBlock) {
-        this.time.addEvent({
+      if (other.currentBlock < other.totalBlock) {
+        other.time.addEvent({
           delay: 1000,
           callback: () => {
-            this.isMovingBlock = true;
+            other.isMovingBlock = true;
           },
           repeat: 0,
         });
       } else {
-        this.isDisplayQuestion1 = true;
+        other.isDisplayQuestion1 = true;
       }
-      this.isDisplayNextText = false;
+      other.isDisplayNextText = false;
     }
   }
 
-  DisplayQuestion1() {
-    if (this.isDisplayQuestion1) {
+  DisplayQuestion1(other) {
+    if (other.isDisplayQuestion1) {
       $(document).ready(() => {
         $('#layout_lastquestion').delay(1000).fadeIn();
       });
       setTimeout(() => {
         document.getElementById('inputScene4').focus();
       }, 1100);
-      this.isDisplayQuestion1 = false;
+      other.isDisplayQuestion1 = false;
     }
   }
 
-  // eslint-disable-next-line class-methods-use-this
-  DisplayQuestion2() {
-    if (isDisplayQuestion2) {
+  DisplayQuestion2(other) {
+    if (other.isDisplayQuestion2) {
       $(document).ready(() => {
         $('#layout_lastquestion2').delay(1000).fadeIn();
       });
@@ -119,81 +122,58 @@ export default class Game1Scene4 extends Phaser.Scene {
         document.getElementById('inputScene4v1').focus();
       }, 1100);
       isDisplayQuestion2 = false;
+      other.isDisplayQuestion2 = false;
     }
   }
 
-  ResetScene() {
+  ResetScene(other) {
     if (isResetScene) {
       if (isWannaReset) {
-        this.time.addEvent({
+        other.time.addEvent({
           delay: 1000,
           callback: () => {
-            this.scene.start('Scene4');
+            other.scene.start('Scene4');
           },
           repeat: 0,
         });
       } else {
-        this.is_Move_Ball = true;
+        other.isMoveBall = true;
       }
     }
   }
 
   MoveBall() {
-    if (this.is_Move_Ball) {
-      if (this.ball_Last.x < 680) {
-        this.ball_Last.x += 3;
-      } else {
-        this.time.addEvent({
-          delay: 2000,
-          callback: () => {
-            this.scene.start('Scene5');
-          },
-          repeat: 0,
-        });
-      }
-    }
+    Scene2.MoveBall(this, 'Scene5', 680);
   }
 
 
   //------------------------------------------------------------------------------------
 
   CreateBall() {
-    this.add.image(540, 30, 'ballHolder');
-    // eslint-disable-next-line func-names
-    this.ball_Last = (function (scene) {
-      const ball = new Ball();
-      ball.create(scene, 770, 29);
-      ball.create(scene, 740, 29);
-      ball.create(scene, 710, 29);
-      for (let i = 0; i < 2; i++) {
-        var temp = ball.create(scene, 310 + 30 * i, 29);
-      }
-      // eslint-disable-next-line block-scoped-var
-      return temp;
-    }(this));
+    Scene2.CreateBall(this, 2);
   }
 
   CreateBorder() {
-    for (let i = 0; i < totalBlock; i++) {
+    for (let i = 0; i < this.totalBlock; i++) {
       border.push(this.add.image(BLOCK.X, BLOCK.Y + RANGEBLOCK * i, 'border'));
       border[i].setVisible(0);
     }
   }
 
-  CreateTextAndBlock() {
-    this.block = (new Block()).createArrayBlock(this, BLOCK.X, BLOCK.Y);
-    this.question_Sub = this.add.dom(750, 130).createFromCache('question3');
-    this.block.setAlpha(0);
-    this.fade = new FdInFdOut(this);
-    this.fade.FdOut(this.block);
+  CreateTextAndBlock(other, htmlFrame) {
+    other.block = (new Block()).createArrayBlock(other, BLOCK.X, BLOCK.Y);
+    other.question_Sub = other.add.dom(750, 130).createFromCache(htmlFrame);
+    other.block.setAlpha(0);
+    other.fade = new FdInFdOut(other);
+    other.fade.FdOut(other.block);
     $(document).ready(() => {
       $('#layout_question1').hide();
       $('#layout_question1').delay(1000).fadeIn();
     });
-    this.time.addEvent({
+    other.time.addEvent({
       delay: 2000,
       callback: () => {
-        this.isMovingBlock = true;
+        other.isMovingBlock = true;
       },
       repeat: 0,
     });
@@ -205,7 +185,6 @@ export default class Game1Scene4 extends Phaser.Scene {
     m[1].style.bottom = '7px';
   }
 
-  // eslint-disable-next-line class-methods-use-this
   CreateLanguage() {
     if (window.location.hash == '#vietnam') {
       const question = document.getElementsByClassName('question');
@@ -217,20 +196,22 @@ export default class Game1Scene4 extends Phaser.Scene {
     }
   }
 
-  Recreate() {
-    this.ball_Last = null;
-    this.block = null;
-    this.fade = null;
-    this.isMovingBlock = false;
-    this.isDisplayNextText = false;
-    this.currentBlock = 1;
-    this.isDisplayQuestion1 = false;
+  Recreate(other) {
+    other.ball_Last = null;
+    other.block = null;
+    other.fade = null;
+    other.isMovingBlock = false;
+    other.isDisplayNextText = false;
+    other.currentBlock = 1;
+    other.isDisplayQuestion1 = false;
     isDisplayQuestion2 = false;
+    other.isDisplayQuestion2 = false;
     totalBlock = Math.floor(Math.random() * (4 - 2 + 1) + 2);
+    other.totalBlock = totalBlock;
     border = [];
     isResetScene = false;
     isWannaReset = false;
-    this.is_Move_Ball = false;
+    other.isMoveBall = false;
   }
 }
 
@@ -291,7 +272,7 @@ window.Check_QuestionScene4v1 = function Check_QuestionScene4v1() {
 // eslint-disable-next-line camelcase
 window.Check_QuestionScene4v2 = function Check_QuestionScene4v2() {
   if (document.getElementById('inputScene4v2').value !== '') {
-    if (document.getElementById('inputScene4v2').value == 0) {
+    if (document.getElementById('inputScene4v2').value % 10 == 0) {
       for (let i = 0; i < totalBlock; i++) {
         border[i].setVisible(0);
       }
