@@ -19,6 +19,7 @@
    var thanh;
    var full;
    var music;
+   var sohop=1;
 class Scene1 extends Phaser.Scene {
     constructor() {
         super("Scene1");
@@ -82,7 +83,7 @@ class Scene1 extends Phaser.Scene {
         {
             if (check[i]==true) full++;
         }
-        if (full=10) 
+        if (full==10) 
         {
           element.setAlpha(1);
            if (numberqu==1){
