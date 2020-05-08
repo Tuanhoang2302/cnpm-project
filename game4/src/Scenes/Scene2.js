@@ -186,7 +186,7 @@ export default class Scene2 extends Phaser.Scene
     WannaReset(){
         if(this.isWannaReset[0]){
           if(this.isBallMove){
-                this.scene.start('Reset');
+                
             }
         }
     }
