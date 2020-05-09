@@ -1,427 +1,303 @@
-import 'phaser'
-import FdInFdOut from '../helper/FdInFdOut';
-import MessageBox from  '../helper/MessageBox';
-import DisplayBox from '../helper/DisplayBox';
-import CheckInputText from '../helper/CheckInputText';
-import {boxDisappear} from '../helper/CheckInputText'
-import Ball from '../gameObject/Ball';
-import DragManager from '../helper/DragManager';
 
-const RANGEBOX= {
-    X : 270,
-    Y: 150,
+/* eslint-disable no-continue */
+/* eslint-disable max-len */
+/* eslint-disable class-methods-use-this */
+/* eslint-disable no-param-reassign */
+/* eslint-disable eqeqeq */
+/* eslint-disable no-plusplus */
+/* eslint-disable no-undef */
+import FdInFdOut from '../helper/FdInFdOut';
+import DragManager from '../helper/DragManager';
+import Scene2 from './Scene2';
+
+let Scne2;
+const RANGEBOX = {
+  X: 270,
+  Y: 150,
 };
 
-const RANGEAPPLE= {
-    X : 43,
-    Y: 43,
+const RANGEAPPLE = {
+  X: 43,
+  Y: 43,
 };
 
 const APPLE = {
-    initPosX : 185,
-    initPosY : 260, 
-}
+  initPosX: 185,
+  initPosY: 260,
+};
 
 const BOX = {
-    initPosX : APPLE.initPosX + 270 - 185, 
-    initPosY : APPLE.initPosY + 200 - 177,
-}
+  initPosX: APPLE.initPosX + 270 - 185,
+  initPosY: APPLE.initPosY + 200 - 177,
+};
 
-const QUESTION = {
-    X: APPLE.initPosX + 15,
-    Y : APPLE.initPosY - 160
-}
-
-const INPUT = {
-    X: QUESTION.X + 650,
-    Y :QUESTION.Y + 10
-}
-
-const MESSAGE = {
-    X : INPUT.X,
-    Y : INPUT.Y + 60,
-    WIDTH : 200,
-    HEIGHT : 50,
-    FONTTEXT : 20,
+export default class Scene3 extends Phaser.Scene {
+  constructor() {
+    super('Scene3');
   }
 
-const RESULTTXT = {
-    X:INPUT.X - 30,
-    Y:QUESTION.Y - 12,
-}
+  preload() {
+    this.load.html('question6', 'src/InputForm/Scene3.html');
+    this.load.image('apple', 'src/assets/TaoNho.png');
+    this.load.image('box', 'src/assets/TaoHolder1.png');
+    this.load.image('appleInBox', 'src/assets/TaoInBox.png');
+    this.load.image('ball', 'src/assets/ball.png');
+    this.load.image('ballHolder', 'src/assets/thanh.png');
+    this.load.image('AHold', 'src/assets/AHold.png');
+  }
 
-const SUGGEST = {
-    X: APPLE.initPosX + 15,
-    Y: APPLE.initPosY - 100
-}
-export var CountAppleEachBox4 = [0, 0, 0, 0 , 0 ,0];
-export var isWannaReset10 = [false];
-export var spaceValid4 = [];
-export default class Scene3 extends Phaser.Scene
-{
-    constructor(){
-        super('Scene3');
-        
-    }
+  create() {
+    Scne2 = new Scene2();
+    this.ReCreate();
+    this.CreateBox(this);
+    this.CreatePosHolder(this);
+    this.CreateApplePhysics();
+    this.CreateGameFunction();
+    this.CreateHTMlForm();
+    this.CreateLanguage();
+  }
 
-    preload(){
-        this.load.html('answerform', 'src/assets/text/answerform.html')
-        this.load.image('apple', 'src/assets/TaoNho.png');
-        this.load.image('box', 'src/assets/TaoHolder1.png');
-        this.load.image('appleInBox', 'src/assets/TaoInBox.png');
-        this.load.image('ball', 'src/assets/ball.png');
-        this.load.image('ballHolder', 'src/assets/thanh.png');
-        this.load.image('AHold', 'src/assets/AHold.png');
-    }
+  update() {
+    this.CheckResult(this, 30);
+    this.DragAndDrop(this);
+    this.DisplayAppleInBox(this);
+    this.DisplayQuestion(this);
+    this.ResetScene(this, 'Scene3');
+    this.MoveBall(this, 'Scene3', 308);
+  }
 
-    create(){
-        this.ReCreate();
-        this.CreateBox();
-        this.CreatePosHolder();
-        this.CreateApplePhysics();
-        this.CreateGameFunction();
-    }
-   
-    update(){
-        isWannaReset10[0] = this.isWannaReset[0];
-        this.DragAndDrop();
-        this.DisplayAppleInBox();
-        //this.DisplayQuestion();
-        this.DisplayResult();
-        this.WannaReset();
-        this.BallMove();
-    }
 
-    DragAndDrop(){
-        for(var i = 0; i < this.appleArr.length; i++){
-            this.distance[i] = Phaser.Math.Distance.Between(this.appleArr[i].x, this.appleArr[i].y, this.initApplePosX[i], this.initApplePosY[i]);
-            if (this.distance[i] < 4)
-            {
-              this.appleArr[i].body.reset(this.initApplePosX[i], this.initApplePosY[i]);
+  // ---------------------------------------------------------
+  CheckResult(other, result) {
+    if (other.isCheckResult) {
+      const inputCurrentValue1 = document.getElementById('input1').value;
+      const inputCurrentValue2 = document.getElementById('input2').value;
+
+      if ((inputCurrentValue1 !== '' && inputCurrentValue1 != (result / 10))
+           || (inputCurrentValue2 !== '' && inputCurrentValue2 !== '0')) {
+        other.isWannaReset = true;
+        if (this.notAgain) {
+          if (window.location.hash !== '#vietnam') {
+            document.getElementById('ques_gray').innerHTML = 'Fill in the boxes';
+            document.getElementById('gray_comment').style.marginLeft = '450px';
+          } else {
+            document.getElementById('ques_gray').innerHTML = 'Hãy lấp đầy hộp táo';
+            document.getElementById('gray_comment').style.marginLeft = '400px';
+          }
+          document.getElementById('answer0').style.display = 'none';
+          this.wrongResult = document.getElementById('wrong_result');
+          if (inputCurrentValue1 != result / 10) {
+            this.wrongResult.innerHTML = (inputCurrentValue1 % 10).toString();
+          } else if ((inputCurrentValue1 == result / 10) && inputCurrentValue2 !== '0') {
+            this.wrongResult.innerHTML = (inputCurrentValue1 + inputCurrentValue2 % 10).toString();
+          }
+
+          this.wrongResult.style.color = 'red';
+          if (this.k < 100) {
+            this.k += 3;
+            this.wrongResult.style.left = `${this.k}px`;
+          } else {
+            document.getElementById('input1').value = '';
+            document.getElementById('input2').value = '';
+            other.isCheckResult = false;
+          }
+        } else {
+          for (let k = 0; k < 6; k++) {
+            if (this.CountAppleEachBox[k] != 11) {
+              for (let j = (k) * 10; j < (k + 1) * 10; j++) {
+                this.Holder[j].setAlpha(0);
+              }
+              this.fade.FdIn(this.box[k]);
             }
+          }
         }
+      }
+      if (inputCurrentValue2 !== '' && inputCurrentValue2 === '0') {
+        const text10 = document.createElement('div');
+        text10.appendChild(document.createTextNode(result.toString()));
+        const layoutQuestion = document.getElementById('layout_question0');
+        text10.style.cssText = 'display: inline-block; font-size:50px;';
+        layoutQuestion.replaceChild(text10, document.getElementById('answer0'));
+        other.isResetScene = true;
+        other.isCheckResult = false;
+      }
     }
+  }
 
-    CheckCompletedBox(){
-        for(var i = 0;i < 6; i++){
-            if(CountAppleEachBox4[i] == 10){
-                this.isDisplayBox = true;
-                this.boxCompleted++;
-                return i;
-            }
-        }
-        return -1;
+  DragAndDrop(other) {
+    Scne2.DragAndDrop(this);
+  }
+
+  CheckCompletedBox() {
+    for (let i = 0; i < 6; i++) {
+      if (this.CountAppleEachBox[i] == 10) {
+        this.isDisplayBox = true;
+        this.boxCompleted++;
+        return i;
+      }
     }
+    return -1;
+  }
 
-    DisplayAppleInBox(){
-        if(this.isDisplayAppleInBox){
-        if(this.boxCompleted < 3){
-            this.boxIndex = this.CheckCompletedBox();
-        }else{
-            this.isDisplayQuestion = true;
-            this.isDisplayAppleInBox = false;
-        }
-        if(this.isDisplayBox){
-            var x = this.boxIndex % 3;
-            var y = this.boxIndex / 3;
-            CountAppleEachBox4[this.boxIndex] = 11;
+  DisplayAppleInBox(other) {
+    Scne2.DisplayAppleInBox(this);
+  }
 
-            for(var i = 0; i < this.appleArr.length; i++){
-                if(this.appleArr[i].x > APPLE.initPosX - 20 + RANGEBOX.X * x && this.appleArr[i].x < APPLE.initPosX  + RANGEBOX.X * x + RANGEAPPLE.X * 5 &&
-                    this.appleArr[i].y > APPLE.initPosY - 120 + RANGEBOX.Y * y && this.appleArr[i].y < APPLE.initPosY + RANGEBOX.Y * y + RANGEAPPLE.Y * 2){
-                    this.appleArr[i].setAlpha(0);
-                    
-                    for(var j = (this.boxIndex) * 10; j < (this.boxIndex + 1) * 10; j++){
-                        this.Holder[j].setAlpha(0);
-                    }
-                    this.fade.FdIn(this.box[this.boxIndex])
-                    this.fade.FdOut(this.appleInBox[this.boxIndex]);
-                    
-                }
-            }
-        }
+  DisplayQuestion(other) {
+    if (other.isDisplayQuestion) {
+      // document.getElementById('').
+      this.notAgain = false;
+      document.getElementById('answer0').style.display = 'inline-block';
+      document.getElementById('input1').focus();
+      this.wrongResult.style.left = '50px';
+      this.isCheckResult = true;
+      other.isDisplayQuestion = false;
     }
+  }
+
+  ResetScene(other, scene) {
+    Scne2.ResetScene(this, 'Scene3');
+  }
+
+  MoveBall(other, scene, destination) {
+    if (other.isBallMove) {
+      if (other.m < destination) {
+        other.m += 3;
+        other.ball.style.left = `${other.m}px`;
+      }
     }
+  }
 
-    DisplayQuestion(){
-        if(this.isDisplayQuestion){
-            this.firstQuestion.setAlpha(0);
-            this.suggest.setAlpha(0);
-            var text = this.add.text(QUESTION.X , QUESTION.Y, 'How many apples are there:', { fontFamily: 'Arial', fontSize: 45, color: '#000000', align: 'center', wordWrap: { width: 700 }});
-            this.inputForm = this.add.dom(INPUT.X, INPUT.Y).createFromCache('answerform');
-            this.inputText.push(this.inputForm.getChildByName('answerform'));
-            this.inputText[0].focus();
-            this.isDisplayResult = true;
-            this.isDisplayQuestion = false;
+
+  // ----------------------------------------------------------
+  CreateHTMlForm() {
+    this.question = this.add.dom(500, 165).createFromCache('question6');
+    document.getElementById('layout_question0').style.marginLeft = '220px';
+    document.getElementById('input1').focus();
+    document.getElementById('input1').onkeyup = function () {
+      Check_SubAnswer1(30);
+    };
+    document.getElementById('input2').onkeyup = function () {
+      Check_SubAnswer2();
+    };
+  }
+
+  CreateApplePhysics() {
+    for (let j = 0; j < 2; j++) {
+      for (let i = 0; i < 5; i++) {
+        if (j == 0 && i == 2) {
+          continue;
+        } else {
+          this.appleArr.push(this.physics.add.image(APPLE.initPosX + RANGEAPPLE.X * i, APPLE.initPosY + RANGEAPPLE.Y * j, 'apple'));
+          this.CountAppleEachBox[0]++;
         }
+      }
     }
-
-    DisplayResult(){
-        if(this.isDisplayResult){
-            
-            this.checkInput.check(null, null,this.inputText[0], this.isRightResult, this.isWannaReset, 30);
-            if(boxDisappear[0] && this.boxCompleted < 3){
-                //var
-                this.suggest.setAlpha(0);
-                this.suggest1.setAlpha(1);
-                this.inputForm.setAlpha(0);
-                console.log(this.inputText[0].value);
-                if(this.showWrongAnswer){
-                    this.wrongAnswer = this.add.text(RESULTTXT.X , RESULTTXT.Y, this.inputText[0].value.toString(), { fontFamily: 'Arial', fontSize: 60, color: '#FF0000', align: 'center', wordWrap: { width: 30 }});
-                    this.showWrongAnswer = false;
-                }
-                if(this.wrongAnswer.x < RESULTTXT.X + 100){
-                    this.wrongAnswer.x +=3;
-                }else{
-                
-                    boxDisappear[0] = false;
-                }
-            }
-
-            if(this.boxCompleted == 3 && boxDisappear[0]){
-                if(this.displayInputAgain){
-                    this.inputText[0].value = '';
-                    this.inputText[0].focus();
-                    this.inputForm.setAlpha(1);
-                    this.displayInputAgain = false;
-                }
-                
-                if(boxDisappear[0]){
-                    for(var k = 0; k < 6; k++){
-                        if(CountAppleEachBox4[k] != 11){              
-                            var x = k % 3;
-                            var y = k / 3;
-                            for(var j = (k) * 10; j < (k + 1) * 10; j++){
-                                this.Holder[j].setAlpha(0);
-                            }
-                            this.fade.FdIn(this.box[k]);                      
-                        }
-                        //this.fade.FdIn(this.box[i]);
-                    }
-                    boxDisappear[0] = false;
-                }
-            }
-            if(this.isRightResult[0]){
-                this.inputForm.destroy();
-                var text = this.add.text(RESULTTXT.X , RESULTTXT.Y, '30', { fontFamily: 'Arial', fontSize: 60, color: '#000000', align: 'center', wordWrap: { width: 30 }});
-                this.isTimeDelayBallMove = true;
-                this.isDisplayResult = false;
-            }
+    for (let j = 0; j < 2; j++) {
+      for (let i = 0; i < 5; i++) {
+        if ((j == 0 && i == 2) || (j == 0 && i == 4)) {
+          continue;
+        } else {
+          this.appleArr.push(this.physics.add.image(APPLE.initPosX + RANGEAPPLE.X * i + RANGEBOX.X, APPLE.initPosY + RANGEAPPLE.Y * j, 'apple'));
+          this.CountAppleEachBox[1]++;
         }
+      }
     }
-
-    WannaReset(){
-        if(this.isWannaReset[0]){
-          if(this.isBallMove){
-                
-            }
+    for (let j = 0; j < 2; j++) {
+      for (let i = 0; i < 5; i++) {
+        if ((j == 1 && i == 1) || (j == 1 && i == 3)) {
+          continue;
+        } else {
+          this.appleArr.push(this.physics.add.image(APPLE.initPosX + RANGEAPPLE.X * i + RANGEBOX.X * 2, APPLE.initPosY + RANGEAPPLE.Y * j, 'apple'));
+          this.CountAppleEachBox[2]++;
         }
+      }
     }
+    this.appleArr.push(this.physics.add.image(APPLE.initPosX + RANGEAPPLE.X * 1, APPLE.initPosY + RANGEBOX.Y, 'apple'));
+    this.CountAppleEachBox[3]++;
+    this.appleArr.push(this.physics.add.image(APPLE.initPosX + RANGEAPPLE.X * 3, APPLE.initPosY + RANGEBOX.Y, 'apple'));
+    this.CountAppleEachBox[3]++;
+    this.appleArr.push(this.physics.add.image(APPLE.initPosX + RANGEAPPLE.X * 3, APPLE.initPosY + RANGEAPPLE.Y * 1 + RANGEBOX.Y, 'apple'));
+    this.CountAppleEachBox[3]++;
+    this.appleArr.push(this.physics.add.image(APPLE.initPosX + RANGEAPPLE.X * 2 + RANGEBOX.X * 1, APPLE.initPosY + RANGEAPPLE.Y * 1 + RANGEBOX.Y, 'apple'));
+    this.CountAppleEachBox[4]++;
+    this.appleArr.push(this.physics.add.image(APPLE.initPosX + RANGEAPPLE.X * 4 + RANGEBOX.X * 1, APPLE.initPosY + RANGEAPPLE.Y * 1 + RANGEBOX.Y, 'apple'));
+    this.CountAppleEachBox[4]++;
 
-    BallMove(){
-        this.TimeDelayBallMove();
-        if(this.isWannaReset[0] == false){
-        if(this.isBallMove){
-            console.log(this.lastBall.x);
-            if(this.lastBall.x < 620){
-                this.lastBall.x += 3;        
-            }else{
-                //this.scene.start('Scene2v2');
-                this.isBallMove = false;
-            }
-        }
+    for (let i = 0; i < this.appleArr.length; i++) {
+      this.appleArr[i].body.debugShowBody = false;
     }
+  }
+
+  CreatePosHolder(other) {
+    Scne2.CreatePosHolder(this);
+  }
+
+  CreateBox(other) {
+    Scne2.CreateBox(this);
+  }
+
+  CreateGameFunction() {
+    for (let i = 0; i < this.appleArr.length; i++) {
+      this.initApplePosX.push(this.appleArr[i].x);
+      this.initApplePosY.push(this.appleArr[i].y);
+      this.distance.push(0);
     }
+    const dragManager = new DragManager(this, this.appleArr, this.Holder, this.initApplePosX, this.initApplePosY, 1, this.CountAppleEachBox, this.spaceValid1);
+    dragManager.dragApple();
+    this.fade = new FdInFdOut(this);
 
-    TimeDelayBallMove(){
-        if(this.isTimeDelayBallMove){
-            this.time.addEvent({
-                delay: 1300,
-                callback: ()=>{
-                    this.isBallMove = true;
-                },
-                repeat: 0,
-            })
-            this.isTimeDelayBallMove = false;
-        }
+    for (let i = 0; i < this.Holder.length; i++) {
+      if ((i >= 0 && i < 30) || i == 31 || i == 33 || i == 38 || i == 47 || i == 49) {
+        this.spaceValid1[i] = false;
+      } else {
+        this.spaceValid1[i] = true;
+      }
     }
+    this.spaceValid1[2] = true;
+    this.spaceValid1[12] = true;
+    this.spaceValid1[14] = true;
+    this.spaceValid1[26] = true;
+    this.spaceValid1[28] = true;
+  }
 
-    CreateBox(){
-        for(j = 0; j < 2; j++){
-            for(var i = 0; i < 3; i++){
-                this.appleInBox.push(this.add.image(BOX.initPosX + RANGEBOX.X * i, BOX.initPosY + RANGEBOX.Y * j, 'appleInBox'));
-                this.appleInBox[j * 3 + i].setAlpha(0);
-            }
-        }
-        
-        //this.box = this.add.image(BOX.initPosX, BOX.initPosY, 'box');
-        for(var j = 0 ; j < 2; j++){
-            for(var i = 0 ; i < 3; i++){
-                this.box.push(this.add.image(BOX.initPosX + RANGEBOX.X * i, BOX.initPosY + RANGEBOX.Y * j, 'box'));
-                this.box[i].setAlpha(1);
-            }
-        }
+  CreateLanguage() {
+    if (window.location.hash === '#vietnam') {
+      const question0 = document.getElementById('ques0');
+      const grayComment = document.getElementById('ques_gray');
+      question0.innerHTML = 'Số quả táo ở bên dưới là? ';
+      grayComment.innerHTML = 'Hãy lấp đầy hộp táo có thể.';
     }
+  }
 
-    CreateApplePhysics(){
-        for(var j = 0; j < 2; j++){
-            for(var i = 0; i < 5; i++){
-                if(j == 0 && i == 2){
-                    continue;
-                }
-                else{
-                    this.appleArr.push(this.physics.add.image(APPLE.initPosX + RANGEAPPLE.X * i, APPLE.initPosY + RANGEAPPLE.Y * j, 'apple'));
-                    CountAppleEachBox4[0]++;
-                }
-            }
-        }
-        for(var j = 0; j < 2; j++){
-            for(var i = 0; i < 5; i++){
-                if((j == 0 && i == 2) || (j == 0 && i == 4)){
-                    continue;
-                }
-                else{
-                    this.appleArr.push(this.physics.add.image(APPLE.initPosX + RANGEAPPLE.X * i + RANGEBOX.X, APPLE.initPosY + RANGEAPPLE.Y * j, 'apple'));
-                    CountAppleEachBox4[1]++;
-                }
-            }
-        }
-        for(var j = 0; j < 2; j++){
-            for(var i = 0; i < 5; i++){
-                if((j == 1 && i == 1) || (j == 1 && i == 3)){
-                    continue;
-                }
-                else{
-                    this.appleArr.push(this.physics.add.image(APPLE.initPosX + RANGEAPPLE.X * i + RANGEBOX.X * 2, APPLE.initPosY + RANGEAPPLE.Y * j, 'apple'));
-                    CountAppleEachBox4[2]++;
-                }
-            }
-        }
-        this.appleArr.push(this.physics.add.image(APPLE.initPosX + RANGEAPPLE.X * 1, APPLE.initPosY + RANGEBOX.Y, 'apple'));
-        CountAppleEachBox4[3]++;
-        this.appleArr.push(this.physics.add.image(APPLE.initPosX + RANGEAPPLE.X * 3, APPLE.initPosY + RANGEBOX.Y, 'apple'));
-        CountAppleEachBox4[3]++;
-        this.appleArr.push(this.physics.add.image(APPLE.initPosX + RANGEAPPLE.X * 3, APPLE.initPosY + RANGEAPPLE.Y * 1 + RANGEBOX.Y, 'apple'));
-        CountAppleEachBox4[3]++;
-        this.appleArr.push(this.physics.add.image(APPLE.initPosX + RANGEAPPLE.X * 2 + RANGEBOX.X * 1, APPLE.initPosY + RANGEAPPLE.Y * 1 + RANGEBOX.Y, 'apple'));
-        CountAppleEachBox4[4]++;
-        this.appleArr.push(this.physics.add.image(APPLE.initPosX + RANGEAPPLE.X * 4 + RANGEBOX.X * 1, APPLE.initPosY + RANGEAPPLE.Y * 1 + RANGEBOX.Y, 'apple'));
-        CountAppleEachBox4[4]++;
-
-        for(var i = 0;i < this.appleArr.length; i++){
-            this.appleArr[i].body.debugShowBody = false;
-        }
-    }
-
-    CreatePosHolder(){
-        for(var m = 0; m < 2; m++){
-            for(var n = 0; n < 3; n++){
-                for(var j = 0; j < 2; j++){
-                    for(var i = 0; i < 5; i++){
-                        var temp = this.add.image(APPLE.initPosX + RANGEAPPLE.X * i + RANGEBOX.X * n, APPLE.initPosY + RANGEAPPLE.Y * j + RANGEBOX.Y * m, 'AHold');
-                        this.Holder.push(temp);
-                    }
-                }
-            }
-        }
-    }
-
-    CreateGameFunction(){
-        this.input.on('pointerdown', function(pointer){
-            var touchX = pointer.x;
-            var touchY = pointer.y;
-            console.log(touchX);
-            console.log(touchY);
-             
-        });
-        var ballHolder = this.add.image(540, 30, 'ballHolder');
-        this.ball = new Ball();
-        this.ball.create(this, 770, 29);
-        this.ball.create(this, 740, 29);
-        this.ball.create(this, 710, 29);
-        this.ball.create(this, 680, 29);
-        this.ball.create(this, 650, 29);
-        for(var i = 0; i < 1; i++){
-            this.lastBall = this.ball.create(this, 310 + 30 * i, 29);    
-        }
-        this.firstQuestion = this.add.text(QUESTION.X +50, QUESTION.Y, 'How many apples are there?', { fontFamily: 'Arial', fontSize: 45, color: '#000000', align: 'center', wordWrap: { width: 700 }});
-        this.suggest = this.add.text(SUGGEST.X + 120, SUGGEST.Y, 'You can fill up the boxes', { fontFamily: 'Arial', fontSize: 30, color: '#808080', align: 'center', wordWrap: { width: 700 }});
-        this.suggest1 = this.add.text(SUGGEST.X + 180, SUGGEST.Y, 'Fill in the boxes', { fontFamily: 'Arial', fontSize: 30, color: '#000000', align: 'center', wordWrap: { width: 700 }});
-        this.checkInput = new CheckInputText(this);
-        this.boxDisplay = new DisplayBox(this);
-        this.boxDisplay.displayMessageBox(MESSAGE.X, MESSAGE.Y, MESSAGE.WIDTH, MESSAGE.HEIGHT,
-            'There are 30 blocks', MESSAGE.FONTTEXT, this.msg.graphicArr, this.msg.ContentArr);
-        for(var i = 0; i < this.appleArr.length; i++){
-            this.initApplePosX.push(this.appleArr[i].x);
-            this.initApplePosY.push(this.appleArr[i].y);
-            this.distance.push(0);
-        }
-        var dragManager = new DragManager(this, this.appleArr, this.Holder, this.initApplePosX, this.initApplePosY, 4);
-        dragManager.dragApple();
-        this.fade = new FdInFdOut(this) 
-
-        for(var i = 0; i < this.Holder.length; i++){
-            if((i >= 0 && i < 30) || i == 31 || i == 33 || i == 38 || i == 47 || i == 49){
-                spaceValid4[i] = false;
-            }else{
-                spaceValid4[i] = true;
-            }
-        }
-        spaceValid4[2] = true;
-        spaceValid4[12] = true;
-        spaceValid4[14] = true;
-        spaceValid4[26] = true;
-        spaceValid4[28] = true;
-
-        this.firstQuestion.setAlpha(0);
-        this.suggest.setAlpha(1);
-        this.suggest1.setAlpha(0);
-        var text = this.add.text(QUESTION.X , QUESTION.Y, 'How many apples are there:', { fontFamily: 'Arial', fontSize: 45, color: '#000000', align: 'center', wordWrap: { width: 700 }});
-        this.inputForm = this.add.dom(INPUT.X, INPUT.Y).createFromCache('answerform');
-        this.inputText.push(this.inputForm.getChildByName('answerform'));
-
-        var line = this.add.line(0, 0, 0, 50, 2500, 50, 0xd3d3d3);
-    }
-
-    
-    ReCreate(){
-        this.appleInBox = [];
-        this.box = [];
-        this.appleArr = [];
-        this.Holder = [];
-        this.initApplePosX = [];
-        this.initApplePosY = [];
-        this.distance = [];
-        this.isDisplayBox = false;
-        this.boxCompleted = 0;
-        this.boxIndex = null;
-        this.isDisplayAppleInBox = true;
-        this.isDisplayQuestion = false;
-        this.inputForm = null;
-        this.inputText = [];
-        this.isDisplayResult = true;
-        this.isRightResult = [false];
-        this.isWannaReset = [false];
-        this.isTimeDelayBallMove = false;
-        this.msg = {
-            graphicArr : [],
-            ContentArr : [],
-        }
-        this.suggest = null;
-        this.suggest1 = null;
-        this.ball = null;
-        this.lastBall = null;
-        this.isBallMove = null;
-        this.firstQuestion = null;
-        this.suggest = null;
-        this.checkInput = null;
-        this.boxDisplay = null;
-        this.fade = null;
-        CountAppleEachBox4 = [0, 0, 0, 0 , 0 ,0]
-        isWannaReset10 = [false]
-        spaceValid4 = []
-        this.showWrongAnswer = true;
-        this.wrongAnswer = null;
-        this.displayInputAgain = true;;
-    }
+  ReCreate() {
+    this.appleInBox = [];
+    this.box = [];
+    this.appleArr = [];
+    this.Holder = [];
+    this.initApplePosX = [];
+    this.initApplePosY = [];
+    this.distance = [];
+    this.isDisplayBox = false;
+    this.boxCompleted = 0;
+    this.boxIndex = null;
+    this.isDisplayAppleInBox = true;
+    this.isDisplayQuestion = false;
+    this.isDisplayResult = false;
+    this.isWannaReset = false;
+    this.isTimeDelayBallMove = false;
+    this.ball = document.getElementById(`ball${1}`);
+    this.isBallMove = null;
+    this.fade = null;
+    this.CountAppleEachBox = [0, 0, 0, 0, 0, 0];
+    this.spaceValid1 = [];
+    this.question = null;
+    this.isCheckResult = true;
+    this.isResetScene = false;
+    this.m = 0;
+    this.totalBox = 3;
+    this.k = 0;
+    this.wrongResult = null;
+    this.notAgain = true;
+  }
 }

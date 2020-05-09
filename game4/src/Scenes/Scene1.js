@@ -171,11 +171,7 @@ export default class Scene1 extends Phaser.Scene {
           other.fade.FdIn(other.box[i]);
         }
       }
-      if (inputCurrentValue2 !== '' && inputCurrentValue2 !== '0') {
-        for (let i = other.totalBox; i < 6; i++) {
-          other.fade.FdIn(other.box[i]);
-        }
-      } else if (inputCurrentValue2 !== '' && inputCurrentValue2 === '0') {
+      if (inputCurrentValue2 !== '' && inputCurrentValue2 === '0') {
         const text10 = document.createElement('div');
         text10.appendChild(document.createTextNode(result.toString()));
         const layoutQuestion = document.getElementById('layout_question1');
