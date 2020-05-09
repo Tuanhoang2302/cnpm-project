@@ -21,7 +21,7 @@ const RANGEBLOCK = 90;
 export default class Game1Scene4 extends Phaser.Scene {
   constructor() {
     super('Scene4');
-    this.isDisplayQuestion2 = false;
+    this.isDisplayQuestion2 = [false];
   }
 
   preload() {
@@ -41,12 +41,14 @@ export default class Game1Scene4 extends Phaser.Scene {
     this.CreateBorder();
     this.CreateTextAndBlock(this, 'question3');
     this.CreateLanguage();
+    this.CreateCheckInput();
   }
 
   update() {
     this.Move_Block_and_Display_NextQuestion(this);
     this.DisplayQuestion1(this);
-    this.isDisplayQuestion2 = isDisplayQuestion2;
+    // eslint-disable-next-line prefer-destructuring
+    this.isDisplayQuestion2[0] = isDisplayQuestion2[0];
     this.DisplayQuestion2(this);
     this.ResetScene(this);
     this.MoveBall();
@@ -114,21 +116,21 @@ export default class Game1Scene4 extends Phaser.Scene {
   }
 
   DisplayQuestion2(other) {
-    if (other.isDisplayQuestion2) {
+    if (other.isDisplayQuestion2[0]) {
       $(document).ready(() => {
         $('#layout_lastquestion2').delay(1000).fadeIn();
       });
       setTimeout(() => {
         document.getElementById('inputScene4v1').focus();
       }, 1100);
-      isDisplayQuestion2 = false;
-      other.isDisplayQuestion2 = false;
+      isDisplayQuestion2[0] = false;
+      other.isDisplayQuestion2[0] = false;
     }
   }
 
   ResetScene(other) {
-    if (isResetScene) {
-      if (isWannaReset) {
+    if (isResetScene[0]) {
+      if (isWannaReset[0]) {
         other.time.addEvent({
           delay: 1000,
           callback: () => {
@@ -148,6 +150,18 @@ export default class Game1Scene4 extends Phaser.Scene {
 
 
   //------------------------------------------------------------------------------------
+  CreateCheckInput() {
+    document.getElementById('inputScene4').focus();
+    document.getElementById('inputScene4').onkeyup = function () {
+      Check_QuestionScene4(totalBlock, border, isDisplayQuestion2, isWannaReset);
+    };
+    document.getElementById('inputScene4v1').onkeyup = function () {
+      Check_QuestionScene4v1(totalBlock, border, isDisplayQuestion2, isWannaReset);
+    };
+    document.getElementById('inputScene4v2').onkeyup = function () {
+      Check_QuestionScene4v2(totalBlock, border, isResetScene, isWannaReset);
+    };
+  }
 
   CreateBall() {
     Scene2.CreateBall(this, 2);
@@ -204,90 +218,19 @@ export default class Game1Scene4 extends Phaser.Scene {
     other.isDisplayNextText = false;
     other.currentBlock = 1;
     other.isDisplayQuestion1 = false;
-    isDisplayQuestion2 = false;
-    other.isDisplayQuestion2 = false;
+    isDisplayQuestion2 = [false];
+    other.isDisplayQuestion2 = [false];
     totalBlock = Math.floor(Math.random() * (4 - 2 + 1) + 2);
     other.totalBlock = totalBlock;
     border = [];
-    isResetScene = false;
-    isWannaReset = false;
+    isResetScene = [false];
+    isWannaReset = [false];
     other.isMoveBall = false;
   }
 }
 
 var totalBlock = Math.floor(Math.random() * (4 - 2 + 1) + 2);
 var border = [];
-var isDisplayQuestion2 = false;
-var isResetScene = false;
-var isWannaReset = false;
-
-// eslint-disable-next-line camelcase
-window.Check_QuestionScene4 = function Check_QuestionScene4() {
-  if (document.getElementById('inputScene4').value !== '') {
-    const y = document.getElementById('inputScene4').value % 10;
-    document.getElementById('inputScene4').value = '';
-    document.getElementById('inputScene4').value = y;
-    if (document.getElementById('inputScene4').value == totalBlock) {
-      for (let i = 0; i < totalBlock; i++) {
-        border[i].setVisible(0);
-      }
-      const textResult = document.createElement('div');
-      textResult.appendChild(document.createTextNode((totalBlock).toString()));
-      const layoutQuestion = document.getElementById('layout_lastquestion');
-      textResult.style.cssText = 'display: inline-block; font-size:60px; margin-left: 20px';
-      layoutQuestion.replaceChild(textResult, document.getElementById('answer1'));
-      isDisplayQuestion2 = true;
-    } else {
-      for (let i = 0; i < totalBlock; i++) {
-        border[i].setVisible(1);
-      }
-      document.getElementById('inputScene4').style.color = 'red';
-      isWannaReset = true;
-    }
-  }
-};
-
-// eslint-disable-next-line camelcase
-window.Check_QuestionScene4v1 = function Check_QuestionScene4v1() {
-  if (document.getElementById('inputScene4v1').value !== '') {
-    const y = document.getElementById('inputScene4v1').value % 10;
-    document.getElementById('inputScene4v1').value = '';
-    document.getElementById('inputScene4v1').value = y;
-    if (document.getElementById('inputScene4v1').value == totalBlock) {
-      for (let i = 0; i < totalBlock; i++) {
-        border[i].setVisible(0);
-      }
-      document.getElementById('inputScene4v1').style.color = 'black';
-      document.getElementById('inputScene4v2').focus();
-    } else {
-      for (let i = 0; i < totalBlock; i++) {
-        border[i].setVisible(1);
-      }
-      document.getElementById('inputScene4v1').style.color = 'red';
-      isWannaReset = true;
-    }
-  }
-};
-
-// eslint-disable-next-line camelcase
-window.Check_QuestionScene4v2 = function Check_QuestionScene4v2() {
-  if (document.getElementById('inputScene4v2').value !== '') {
-    if (document.getElementById('inputScene4v2').value % 10 == 0) {
-      for (let i = 0; i < totalBlock; i++) {
-        border[i].setVisible(0);
-      }
-      const textResult = document.createElement('div');
-      textResult.appendChild(document.createTextNode((totalBlock * 10).toString()));
-      const layoutQuestion = document.getElementById('layout_lastquestion2');
-      textResult.style.cssText = 'display: inline-block; font-size:60px; margin-left: 20px';
-      layoutQuestion.replaceChild(textResult, document.getElementById('answer2'));
-      isResetScene = true;
-    } else {
-      for (let i = 0; i < totalBlock; i++) {
-        border[i].setVisible(1);
-      }
-      document.getElementById('inputScene4v2').style.color = 'red';
-      isWannaReset = true;
-    }
-  }
-};
+var isDisplayQuestion2 = [false];
+var isResetScene = [false];
+var isWannaReset = [false];

@@ -21,7 +21,7 @@ const RANGEBLOCK = 90;
 export default class Game1Scene5 extends Phaser.Scene {
   constructor() {
     super('Scene5');
-    this.isDisplayQuestion2 = false;
+    this.isDisplayQuestion2 = [false];
   }
 
   preload() {
@@ -42,12 +42,14 @@ export default class Game1Scene5 extends Phaser.Scene {
     this.CreateBorder();
     this.CreateTextAndBlock();
     this.CreateLanguage();
+    this.CreateCheckInput();
   }
 
   update() {
     this.Move_Block_and_Display_NextQuestion();
     this.DisplayQuestion1();
-    this.isDisplayQuestion2 = isDisplayQuestion2;
+    // eslint-disable-next-line prefer-destructuring
+    this.isDisplayQuestion2[0] = isDisplayQuestion2[0];
     this.DisplayQuestion2();
     this.ResetScene();
     this.MoveBall();
@@ -65,15 +67,15 @@ export default class Game1Scene5 extends Phaser.Scene {
   }
 
   DisplayQuestion2() {
-    if (isDisplayQuestion2 == true) {
+    if (isDisplayQuestion2[0] == true) {
       Scene4.DisplayQuestion2(this);
-      isDisplayQuestion2 = false;
+      isDisplayQuestion2[0] = false;
     }
   }
 
   ResetScene() {
-    if (isResetScene) {
-      if (isWannaReset) {
+    if (isResetScene[0]) {
+      if (isWannaReset[0]) {
         this.time.addEvent({
           delay: 1000,
           callback: () => {
@@ -93,6 +95,18 @@ export default class Game1Scene5 extends Phaser.Scene {
 
 
   //------------------------------------------------------------------------------------
+  CreateCheckInput() {
+    document.getElementById('inputScene4').focus();
+    document.getElementById('inputScene4').onkeyup = function () {
+      Check_QuestionScene4(totalBlock, border, isDisplayQuestion2, isWannaReset);
+    };
+    document.getElementById('inputScene4v1').onkeyup = function () {
+      Check_QuestionScene4v1(totalBlock, border, isDisplayQuestion2, isWannaReset);
+    };
+    document.getElementById('inputScene4v2').onkeyup = function () {
+      Check_QuestionScene4v2(totalBlock, border, isResetScene, isWannaReset);
+    };
+  }
 
   CreateBall() {
     Scene2.CreateBall(this, 3);
@@ -121,91 +135,18 @@ export default class Game1Scene5 extends Phaser.Scene {
     this.isDisplayNextText = false;
     this.currentBlock = 1;
     this.isDisplayQuestion1 = false;
-    isDisplayQuestion2 = false;
+    isDisplayQuestion2 = [false];
     totalBlock = Math.floor(Math.random() * (4 - 2 + 1) + 2);
     this.totalBlock = totalBlock;
     border = [];
-    isResetScene = false;
-    isWannaReset = false;
+    isResetScene = [false];
+    isWannaReset = [false];
     this.isMoveBall = false;
   }
 }
 
 var totalBlock = Math.floor(Math.random() * (4 - 2 + 1) + 2);
 var border = [];
-var isDisplayQuestion2 = false;
-var isResetScene = false;
-var isWannaReset = false;
-// eslint-disable-next-line camelcase
-window.Check_QuestionScene5 = function Check_QuestionScene5() {
-  if (document.getElementById('inputScene4').value !== '') {
-    const y = document.getElementById('inputScene4').value % 10;
-    document.getElementById('inputScene4').value = '';
-    document.getElementById('inputScene4').value = y;
-    if (document.getElementById('inputScene4').value == totalBlock) {
-      for (let i = 0; i < totalBlock; i++) {
-        border[i].setVisible(0);
-      }
-      const textResult = document.createElement('div');
-      textResult.appendChild(document.createTextNode((totalBlock).toString()));
-      const layoutQuestion = document.getElementById('layout_lastquestion');
-      textResult.style.cssText = 'display: inline-block; font-size:60px; margin-left: 20px';
-      layoutQuestion.replaceChild(textResult, document.getElementById('answer1'));
-      isDisplayQuestion2 = true;
-    } else {
-      for (let i = 0; i < totalBlock; i++) {
-        border[i].setVisible(1);
-      }
-      document.getElementById('inputScene4').style.color = 'red';
-      isWannaReset = true;
-    }
-  }
-};
-
-// eslint-disable-next-line camelcase
-window.Check_QuestionScene5v1 = function Check_QuestionScene5v1() {
-  console.log('fdsfds');
-  if (document.getElementById('inputScene4v1').value !== '') {
-    const y = document.getElementById('inputScene4v1').value % 10;
-    document.getElementById('inputScene4v1').value = '';
-    document.getElementById('inputScene4v1').value = y;
-    if (document.getElementById('inputScene4v1').value == totalBlock) {
-      for (let i = 0; i < totalBlock; i++) {
-        border[i].setVisible(0);
-      }
-      document.getElementById('inputScene4v1').style.color = 'black';
-      document.getElementById('inputScene4v2').focus();
-    } else {
-      for (let i = 0; i < totalBlock; i++) {
-        border[i].setVisible(1);
-      }
-      document.getElementById('inputScene4v1').style.color = 'red';
-      isWannaReset = true;
-    }
-  }
-};
-
-// eslint-disable-next-line camelcase
-window.Check_QuestionScene5v2 = function Check_QuestionScene5v2() {
-  console.log('fds');
-
-  if (document.getElementById('inputScene4v2').value !== '') {
-    if (document.getElementById('inputScene4v2').value % 10 == 0) {
-      for (let i = 0; i < totalBlock; i++) {
-        border[i].setVisible(0);
-      }
-      const textResult = document.createElement('div');
-      textResult.appendChild(document.createTextNode((totalBlock * 10).toString()));
-      const layoutQuestion = document.getElementById('layout_lastquestion2');
-      textResult.style.cssText = 'display: inline-block; font-size:60px; margin-left: 20px';
-      layoutQuestion.replaceChild(textResult, document.getElementById('answer2'));
-      isResetScene = true;
-    } else {
-      for (let i = 0; i < totalBlock; i++) {
-        border[i].setVisible(1);
-      }
-      document.getElementById('inputScene4v2').style.color = 'red';
-      isWannaReset = true;
-    }
-  }
-};
+var isDisplayQuestion2 = [false];
+var isResetScene = [false];
+var isWannaReset = [false];

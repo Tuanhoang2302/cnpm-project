@@ -191,7 +191,7 @@ export default class Game1Scene2 extends Phaser.Scene {
         other.time.addEvent({
           delay: 2000,
           callback: () => {
-            // window.location.href = 'https://example.com/'
+            other.question_Sub.destroy();
             other.scene.start(scene);
           },
           repeat: 0,
