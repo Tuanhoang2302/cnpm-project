@@ -145,7 +145,7 @@ export default class Game1Scene4 extends Phaser.Scene {
   }
 
   MoveBall() {
-    Scene2.MoveBall(this, 'Scene5', 680);
+    Scene2.MoveBall(this, 'Scene5', 722);
   }
 
 

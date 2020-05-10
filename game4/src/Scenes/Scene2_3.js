@@ -98,7 +98,7 @@ export default class Scene2v3 extends Phaser.Scene {
   }
 
   MoveBall() {
-    Scne2.MoveBall(this, 'Scene2v3', 308);
+    Scne2.MoveBall(this, 'Scene2v3', 395);
   }
 
 

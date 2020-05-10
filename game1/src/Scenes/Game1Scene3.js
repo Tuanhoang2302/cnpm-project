@@ -122,7 +122,7 @@ export default class Game1Scene3 extends Phaser.Scene {
   }
 
   MoveBall() {
-    Scene2.MoveBall(this, 'Scene4', 710);
+    Scene2.MoveBall(this, 'Scene4', 752);
   }
 
   //---------------------------------------------------------------------------------------------
@@ -131,13 +131,14 @@ export default class Game1Scene3 extends Phaser.Scene {
     this.add.image(540, 30, 'ballHolder');
     this.ball_Last = (function (scene) {
       const ball = new Ball();
-      ball.create(scene, 770, 29);
-      ball.create(scene, 740, 29);
+      ball.create(scene, 812, 29);
+      ball.create(scene, 782, 29);
       for (let i = 0; i < 3; i++) {
-        var temp = ball.create(scene, 310 + 30 * i, 29);
+        var temp = ball.create(scene, 267 + 30 * i, 29);
       }
       return temp;
     }(this));
+    this.add.line(0, 0, 0, 60, 2160, 60, '0xD3D3D3');
   }
 
   CreateQuestionAndInput() {

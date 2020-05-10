@@ -55,6 +55,7 @@ export default class Scene3 extends Phaser.Scene {
     this.CreateGameFunction();
     this.CreateHTMlForm();
     this.CreateLanguage();
+    this.add.line(0, 0, 0, 60, 2160, 60, '0xD3D3D3');
   }
 
   update() {
@@ -63,7 +64,7 @@ export default class Scene3 extends Phaser.Scene {
     this.DisplayAppleInBox(this);
     this.DisplayQuestion(this);
     this.ResetScene(this, 'Scene3');
-    this.MoveBall(this, 'Scene3', 308);
+    this.MoveBall(this, 'Scene3', 395);
   }
 
 

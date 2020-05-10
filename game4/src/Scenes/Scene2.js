@@ -60,7 +60,7 @@ export default class Scene2 extends Phaser.Scene {
     this.DisplayQuestion(this);
     this.CheckResult(this, 20);
     this.ResetScene(this, 'Scene2');
-    this.MoveBall(this, 'Scene2v2', 308);
+    this.MoveBall(this, 'Scene2v2', 395);
   }
 
 
@@ -248,6 +248,7 @@ export default class Scene2 extends Phaser.Scene {
   }
 
   CreateBox(other) {
+    other.add.line(0, 0, 0, 60, 2160, 60, '0xD3D3D3');
     for (let j = 0; j < 2; j++) {
       for (let i = 0; i < 3; i++) {
         other.appleInBox.push(other.add.image(BOX.initPosX + RANGEBOX.X * i, BOX.initPosY + RANGEBOX.Y * j, 'appleInBox'));

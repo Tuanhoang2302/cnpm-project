@@ -1,3 +1,4 @@
+
 /* eslint-disable max-len */
 /* eslint-disable class-methods-use-this */
 /* eslint-disable no-param-reassign */
@@ -51,18 +52,7 @@ export default class Scene1 extends Phaser.Scene {
     this.CreateAppleStatic();
     this.CreateApplePhysics();
     this.CreateDestination();
-
-    this.question = this.add.dom(500, 150).createFromCache('question');
-    document.getElementById('input1').focus();
-    document.getElementById('input1').onkeyup = function () {
-      Check_SubAnswer1(30);
-    };
-    document.getElementById('input2').onkeyup = function () {
-      Check_SubAnswer2();
-    };
-
-    this.fade = new FdInFdOut(this);
-
+    this.CreateInputForm(this, 'question', 30);
     this.CreateLanguage();
   }
 
@@ -74,7 +64,7 @@ export default class Scene1 extends Phaser.Scene {
     this.DisplayQuestion(this);
     this.CheckResult(this, 30);
     this.ResetScene(this, 'Scene1v2');
-    this.MoveBall(this, 'Scene1v2', 308);
+    this.MoveBall(this, 'Scene1v2', 395);
   }
 
   MoveApple(other) {
@@ -215,6 +205,19 @@ export default class Scene1 extends Phaser.Scene {
   }
 
   // ---------------------------------------------------------
+  CreateInputForm(other, questionId, result) {
+    other.add.line(0, 0, 0, 60, 2160, 60, '0xD3D3D3');
+    other.question = other.add.dom(500, 150).createFromCache(questionId);
+    document.getElementById('input1').focus();
+    document.getElementById('input1').onkeyup = function () {
+      Check_SubAnswer1(result);
+    };
+    document.getElementById('input2').onkeyup = function () {
+      Check_SubAnswer2();
+    };
+
+    other.fade = new FdInFdOut(other);
+  }
 
   CreateAppleStatic() {
     for (let k = 0; k < 3; k++) {

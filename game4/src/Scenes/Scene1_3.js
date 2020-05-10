@@ -54,18 +54,7 @@ export default class Scene1v3 extends Phaser.Scene {
     this.CreateAppleStatic();
     this.CreateApplePhysics();
     this.CreateDestination();
-
-    this.question = this.add.dom(500, 150).createFromCache('question2');
-    document.getElementById('input1').focus();
-    document.getElementById('input1').onkeyup = function () {
-      Check_SubAnswer1(20);
-    };
-    document.getElementById('input2').onkeyup = function () {
-      Check_SubAnswer2();
-    };
-
-    this.fade = new FdInFdOut(this);
-
+    this.CreateInputForm();
     this.CreateLanguage();
   }
 
@@ -107,11 +96,14 @@ export default class Scene1v3 extends Phaser.Scene {
   }
 
   MoveBall() {
-    Scne1.MoveBall(this, 'Scene1', '308');
+    Scne1.MoveBall(this, 'Scene1', '395');
     setChange(true);
   }
 
   // ---------------------------------------------------------
+  CreateInputForm() {
+    Scne1.CreateInputForm(this, 'question2', 20);
+  }
 
   CreateAppleStatic() {
     for (let k = 0; k < 3; k++) {
