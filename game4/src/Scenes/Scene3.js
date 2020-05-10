@@ -165,6 +165,8 @@ export default class Scene3 extends Phaser.Scene {
       if (other.m < destination) {
         other.m += 3;
         other.ball.style.left = `${other.m}px`;
+      } else {
+        window.location.href = '../../testGit/complete/page/indexEnd.html';
       }
     }
   }

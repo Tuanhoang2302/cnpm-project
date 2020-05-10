@@ -252,8 +252,8 @@ export default class Game1Scene2 extends Phaser.Scene {
   ReCreate() {
     this.fade = null;
     this.ball_Last = null;
-    // other.subquestionTotalNumber = Math.floor(Math.random() * (3 - 2 + 1) + 2);
-    this.subquestionTotalNumber = 3;
+    this.subquestionTotalNumber = Math.floor(Math.random() * (3 - 2 + 1) + 2);
+    // this.subquestionTotalNumber = 3;
     this.input_Index = 1;
     this.question_Index = 1;
     this.question_Sub = null;

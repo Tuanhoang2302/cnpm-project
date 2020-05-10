@@ -42,11 +42,11 @@ export default class GameScene extends Phaser.Scene {
     this.add.image(540, 30, 'ballHolder');
     ball = new Ball();
     for (let i = 0; i < 5; i++) {
-      lastBall = ball.create(this, 310 + 30 * i, 29);
+      lastBall = ball.create(this, 267 + 30 * i, 29);
     }
 
     const bb = this.add.graphics({ x: 500, y: 250 });
-    const bubbleBox = new BubbleBox(this, 250, 50, '      “Move the flowers”', bb, 20);
+    const bubbleBox = new BubbleBox(this, 250, 50, '      “Move the Blocks”', bb, 20);
     bubbleBox.createBox();
 
     // add ảnh
@@ -94,7 +94,7 @@ export default class GameScene extends Phaser.Scene {
     this.cursorKeys = this.input.keyboard.createCursorKeys();
 
     const line = this.add.graphics();
-    line.lineBetween(0, 50, 1280, 50);
+    line.lineBetween(0, 60, 1280, 60);
   }
 
   update() {
@@ -104,7 +104,7 @@ export default class GameScene extends Phaser.Scene {
 
   ChangeScene() {
     if (this.checkEnd()) {
-      if (lastBall.x < 770) {
+      if (lastBall.x < 812) {
         lastBall.x += 3;
       } else {
         this.time.addEvent({

@@ -90,7 +90,13 @@ export default class Game1Scene5 extends Phaser.Scene {
   }
 
   MoveBall() {
-    Scene2.MoveBall(this, 'Scene5', 692);
+    if (this.isMoveBall) {
+      if (this.ball_Last.x < 692) {
+        this.ball_Last.x += 3;
+      } else {
+        window.location.href = '../../testGit/complete/page/indexEnd.html';
+      }
+    }
   }
 
 
