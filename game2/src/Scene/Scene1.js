@@ -20,6 +20,7 @@
    var full;
    var music;
    var sohop=1;
+   var n=1; 
 class Scene1 extends Phaser.Scene {
     constructor() {
         super("Scene1");
@@ -95,6 +96,17 @@ class Scene1 extends Phaser.Scene {
         }
        this.Audio();
       this.Language();
+      this.Focus();
+    }
+    Focus()
+    {
+            $(document).ready(function () {
+                var  value = $('#number1').val();
+                if (!value)
+                {  
+                    $('#number1').focus();
+                }
+           })
     }
     Language(){
         if(window.location.hash == "#vietnam"){

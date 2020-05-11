@@ -53,6 +53,17 @@ class Scene2 extends Phaser.Scene{
             this.scene.restart();
         }
         this.Language();
+        this.Focus();
+    }
+    Focus()
+    {
+            $(document).ready(function () {
+                var  value = $('#nu1').val();
+                if (!value)
+                {  
+                    $('#nu1').focus();
+                }
+           })
     }
     Language(){
         if(window.location.hash == "#vietnam"){

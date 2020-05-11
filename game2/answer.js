@@ -41,7 +41,7 @@ function Text(text, id)
 
 function OuputScene(focus, hint, element, border, trueOutput,Change, next)
 {
-    
+      
        if (document.getElementById(element).value !="")
        {
            if (trueOutput=="") trueOutput=this.sohop;
@@ -97,5 +97,46 @@ function OuputScene(focus, hint, element, border, trueOutput,Change, next)
            
         
        }
+}
+function OverStart(){
+    var start= document.getElementById('button_start');
+    var ciSmall= document.getElementById('CircleRound');
+    var ciBig = document.getElementById('CircleRoundall');
+    start.style.backgroundPositionY='-112px';
+    start.style.top='-405px';
+    start.style.right='-135px';
+    ciSmall.style.width='260px';
+    ciSmall.style.height='260px';
+    ciSmall.style.top='-215px';
+    ciSmall.style.right='-53px';
+    ciBig.style.width='364px';
+    ciBig.style.height='364px';
+    
+}
+function OutStart()
+{
+    var start= document.getElementById('button_start');
+    var ciSmall= document.getElementById('CircleRound');
+    var ciBig = document.getElementById('CircleRoundall');
+    start.style.backgroundPositionY='10px';
+    start.style.top='-383px';
+    start.style.right='-112px';
+
+    ciSmall.style.width='250px';
+    ciSmall.style.height='250px';
+    ciSmall.style.top='-191px';
+    ciSmall.style.right='-40px';
+
+    ciBig.style.width='330px';
+    ciBig.style.height='330px';
+   
+}
+function Start()
+{
+         document.getElementById('start').style.display='none';
+         document.getElementById('phaserGame').style.filter='blur(0px)';
+}
+function PlayAudio(play){
+    document.getElementById(play).play();
 }
 

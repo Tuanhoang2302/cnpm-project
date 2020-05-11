@@ -15,6 +15,7 @@
     <script type="text/javascript" src="answer.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <script type="text/javascript" src="language.js"></script>
+   <script type="text/javascript" src="je.js"></script>
    <style>
       a{
        display: flex;
@@ -55,11 +56,21 @@
         position: relative;
         font-size: 30px;
       }
+      
     </style>
 </head>
 <body >
           <div class ="background">
-              <div id='phaserGame'>
+            <img src="src/Assets/loading.gif" id="gif" style="margin-left: calc(100% /2 - 30px); margin-top: 200px;"/>
+             <script>
+              setTimeout(function(){
+                console.log('hello');
+                document.getElementById('gif').style.display='none';
+                document.getElementById('phaserGame').style.display='block';
+                document.getElementById('start').style.display='block';
+              },1000)
+           </script> 
+            <div id='phaserGame' style="filter: blur(5px);">
               <div id='moc'>
                 <a href="https://dragonlearn.in/teachers/g/61649/subjects/1/course_programs/1/lessons/16306" div="back">
                   <div id="iconBack">
@@ -73,7 +84,14 @@
                   <li class ="non-active"><a id="vietnamese" href="#vietnam" onclick="Vietnamese()">Vietnamese</a></li>
                 </ul>
               </div>
+            </div>
+          <div id="start" onmouseover="OverStart()" onmouseout="OutStart()" onclick="Start()">
+            <div id="CircleRoundall"></div>
+            <div id="CircleRound"></div>
+            <div id="button_start">start</div>
           </div>
+         
+          
     </div>
     <audio id="onebox">
         <source src="src/Assets/onebox.mp3" type="audio/ogg">
