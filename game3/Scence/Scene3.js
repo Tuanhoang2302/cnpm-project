@@ -2,13 +2,11 @@ var bar = [];
 var barwithborder = [];
 var number_of_bar;
 var ball = [];
-var load = 0;
 var switch_scene = 0;
-var check;
 var element1;
 var bar_unclear = [];
 var display_on;
-var speed = 3;
+var speed = 4;
 var ball_bar;
 class Scene3 extends Phaser.Scene {
     constructor() {
@@ -21,8 +19,6 @@ class Scene3 extends Phaser.Scene {
         this.load.image('barwithborder', './barwithborder.png');
         this.load.image('ball_bar', './thanh.png');
         this.load.image('ball', './ball.png');
-        this.load.image('audio1', './audio1.png');
-        this.load.image('audio2', './audio2.png');
         this.load.image('bar_unclear', './bar_unclear.png');
 
     }
@@ -48,8 +44,7 @@ class Scene3 extends Phaser.Scene {
         }
     }
     removeBall() {
-        if (ball[2] > 280 + 4 * 26) ball[2].x -= speed;
-
+        if (ball[2].x > 280 + 4 * 26) ball[2].x -= speed;
     }
 
     createBar() {
@@ -60,13 +55,13 @@ class Scene3 extends Phaser.Scene {
 
         if (number_of_bar % 2 == 0) {
             for (var i = 1; i <= number_of_bar; i++) {
-                bar[i] = this.add.image(config.width / 2 + 18 - (number_of_bar - 1) * 36 + (i - 1) * 2 * 36, 300, 'bar');
+                bar[i] = this.add.image(config.width / 2 + 18 - (number_of_bar - 1) * 36 + (i - 1) * 2 * 36, 275, 'bar');
             }
 
         }
         if (number_of_bar % 2 == 1) {
             for (var i = 1; i <= number_of_bar; i++) {
-                bar[i] = this.add.image(config.width / 2 - 18 - (number_of_bar - 1) * 36 + (i - 1) * 2 * 36, 300, 'bar');
+                bar[i] = this.add.image(config.width / 2 - 18 - (number_of_bar - 1) * 36 + (i - 1) * 2 * 36, 275, 'bar');
             }
 
         }
@@ -107,13 +102,15 @@ class Scene3 extends Phaser.Scene {
         this.up();
         if (switch_scene == 1) {
             this.moveBall();
-            this.time.delayedCall(2000, function() {
+            this.time.delayedCall(1000, function() {
                 this.scene.start('Scene4');
             }, [], this);
         }
         if (switch_scene == -1) {
             this.removeBall();
-            this.scene.restart();
+            this.time.delayedCall(1000, function() {
+                this.scene.start('Scene2');
+            }, [], this);
         }
 
     }

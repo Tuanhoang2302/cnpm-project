@@ -40,16 +40,22 @@
         .audio {
             width: 40px;
             height: 40px;
-            background-image: url('./images/audio1.png');
+            background-image: url('./images/audio-img.png');
             background-repeat: no-repeat;
             background-size: 40px;
         }
         
-        #suggestion1 {
+        #suggestion3 {
+            background-color: #f2eec7;
+            width: 100px;
             display: none;
+            padding: 10px 10px 0px 10px;
+            border-radius: 10px;
+            position: relative;
+            margin-left: 40px;
         }
         
-        #suggestion2 {
+        #suggestion4 {
             width: 300px;
             height: 40px;
             top: 150px;
@@ -61,17 +67,20 @@
             display: none;
         }
         
-        #audio-image {
+        .audio-image {
             width: 25px;
             height: 25px;
-            background-image: url("./images/audio1.png");
-            position: absolute;
-            top: 15px;
-            left: 15px;
+            background-image: url('./images/audio-img.png');
+            background-repeat: no-repeat;
             background-size: 25px;
         }
         
-        #text-of-suggestion2 {
+        .Write-0 {
+            font-size: 22px;
+            margin-left: 5px;
+        }
+        
+        #text-of-suggestion4 {
             font-size: 22px;
             font-family: Arial, Helvetica, sans-serif;
             position: absolute;
@@ -85,7 +94,7 @@
 <body>
 
     <div id="question">
-        <div class="audio 1" onclick="myFunction6()">
+        <div class="audio" onclick="myFunction6()">
             <audio id="How-many-blocks-are-there">
                 <source src="./audio/How many blocks are there.mp3" type="audio/mpeg">
              </audio>
@@ -96,23 +105,20 @@
             <input id="number1-of-question" type="text " size="1 " onkeyup="myFunction10() " onkeypress='return event.charCode >= 48 && event.charCode <= 57' value=" " autofocus>
             <input id="number2-of-question" type="text " size="1 " onkeyup="myFunction11() " onkeypress='return event.charCode >= 48 && event.charCode <= 57' value=" ">
         </div>
-        <div id="suggestion1 ">
-            <div class="audio4 " onclick="myFunction9() ">
-                <audio id="Write0 ">
+        <div id="suggestion3" onclick="myFunction9()">
+            <div class="audio-image"></div>
+            <audio id="Write0">
                 <source src="./audio/Write 0.mp3 " type="audio/mpeg ">
              </audio>
-            </div>
-            <div class="bounded-area-suggestion "></div>
-
+            <div class="Write-0">Write 0</div>
         </div>
-
     </div>
-    <div id="suggestion2" onclick="myFunction12()">
+    <div id="suggestion4" onclick="myFunction12()">
         <audio id="How-many-bars-are-there">
-                    <source src="./audio/How many bars are there.mp3 " type="audio/mpeg ">
-                 </audio>
-        <div id="audio-image"></div>
-        <div id="text-of-suggestion2">
+            <source src="./audio/How many bars are there.mp3 " type="audio/mpeg ">
+         </audio>
+        <div class="audio-image"> </div>
+        <div id="text-of-suggestion4">
             How many bars are there?
         </div>
 

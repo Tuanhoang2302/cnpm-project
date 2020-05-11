@@ -2,13 +2,11 @@ var bar = [];
 var barwithborder = [];
 var number_of_bar;
 var ball = [];
-var load = 0;
 var switch_scene = 0;
-var check;
 var element1;
 var bar_unclear = [];
 var display_on;
-var speed = 3;
+var speed = 4;
 var ball_bar;
 
 class Scene1 extends Phaser.Scene {
@@ -22,12 +20,7 @@ class Scene1 extends Phaser.Scene {
         this.load.image('barwithborder', './images/barwithborder.png');
         this.load.image('ball_bar', './images/thanh.png');
         this.load.image('ball', './images/ball.png');
-        this.load.image('audio1', './images/audio1.png');
-        this.load.image('audio2', './images/audio2.png');
         this.load.image('bar_unclear', './images/bar_unclear.png');
-
-
-
     }
     create() {
         this.resetCreate();
@@ -49,8 +42,6 @@ class Scene1 extends Phaser.Scene {
         }
 
     }
-
-
     createBar() {
 
         number_of_bar = Math.floor(Math.random() * 10);
@@ -60,13 +51,13 @@ class Scene1 extends Phaser.Scene {
 
         if (number_of_bar % 2 == 0) {
             for (var i = 1; i <= number_of_bar; i++) {
-                bar[i] = this.add.image(config.width / 2 + 18 - (number_of_bar - 1) * 36 + (i - 1) * 2 * 36, 300, 'bar');
+                bar[i] = this.add.image(config.width / 2 + 18 - (number_of_bar - 1) * 36 + (i - 1) * 2 * 36, 275, 'bar');
             }
 
         }
         if (number_of_bar % 2 == 1) {
             for (var i = 1; i <= number_of_bar; i++) {
-                bar[i] = this.add.image(config.width / 2 - 18 - (number_of_bar - 1) * 36 + (i - 1) * 2 * 36, 300, 'bar');
+                bar[i] = this.add.image(config.width / 2 - 18 - (number_of_bar - 1) * 36 + (i - 1) * 2 * 36, 275, 'bar');
             }
 
         }
@@ -107,12 +98,14 @@ class Scene1 extends Phaser.Scene {
         this.up();
         if (switch_scene == 1) {
             this.moveBall();
-            this.time.delayedCall(2000, function() {
+            this.time.delayedCall(1000, function() {
                 this.scene.start('Scene2');
             }, [], this);
         }
         if (switch_scene == -1) {
-            this.scene.restart();
+            this.time.delayedCall(1000, function() {
+                this.scene.restart('Scene1');
+            }, [], this);
         }
 
 

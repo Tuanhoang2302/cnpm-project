@@ -8,13 +8,12 @@ var display_on;
 var speed = 4;
 var ball_bar;
 
-class Scene5 extends Phaser.Scene {
+class Scene6 extends Phaser.Scene {
     constructor() {
-        super("Scene5");
+        super("Scene6");
     }
-
     preload() {
-        this.load.html('Scene5', './Scene4.html');
+        this.load.html('Scene6', './Scene4.html');
         this.load.image('bar', './images/onebar.png');
         this.load.image('barwithborder', './images/barwithborder.png');
         this.load.image('ball_bar', './images/thanh.png');
@@ -25,26 +24,27 @@ class Scene5 extends Phaser.Scene {
         ball_bar = this.add.image(500, 25, 'ball_bar');
         ball_bar.setScale(0.8);
         this.createBar();
-        element2 = this.add.dom(0, 0).createFromCache('Scene5');
+        element2 = this.add.dom(0, 0).createFromCache('Scene6');
         this.createBall();
     }
     createBall() {
-        for (var i = 6; i >= 5; i--) {
-            ball[i] = this.add.image(280 + (6 - i) * 26, 25, 'ball');
-        }
+        ball[6] = this.add.image(280, 25, 'ball');
         ball[1] = this.add.image(719, 25, 'ball');
         ball[2] = this.add.image(719 - 26, 25, 'ball');
         ball[3] = this.add.image(719 - 26 * 2, 25, 'ball');
-        ball[4] = this.add.image(719 - 26 * 2, 25, 'ball');
+        ball[4] = this.add.image(719 - 26 * 3, 25, 'ball');
+        ball[5] = this.add.image(719 - 26 * 4, 25, 'ball');
     }
     moveBall() {
-        if (ball[5].x < 719 - 26 * 4) {
-            ball[5].x += speed;
+        if (ball[6].x < 719 - 26 * 5) {
+            ball[6].x += speed;
         }
 
     }
     removeBall() {
-        if (ball[4].x > 280 + 2 * 26) ball[4].x -= speed;
+        if (ball[5] > 280 + 26) {
+            ball[5].x -= speed;
+        }
     }
 
     createBar() {
@@ -95,14 +95,15 @@ class Scene5 extends Phaser.Scene {
         if (switch_scene == 1) {
             this.moveBall();
             this.time.delayedCall(1000, function() {
-                this.scene.start('Scene6');
+                this.scene.start('StartGame');
             }, [], this);
         }
         if (switch_scene == -1) {
             this.removeBall();
             this.time.delayedCall(1000, function() {
-                this.scene.start('Scene4');
+                this.scene.start('Scene5');
             }, [], this);
+
         }
     }
 }

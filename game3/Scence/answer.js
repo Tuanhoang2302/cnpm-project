@@ -5,7 +5,7 @@ var display_on = 0;
 function myFunction1() {
     document.getElementById('answer2').focus();
     document.getElementById('number1-of-question2').focus();
-    if (document.getElementById('number1-of-question2').value != "" && document.getElementById('number1-of-question2').value >= '0' && document.getElementById('number1-of-question2').value <= '9') {
+    if (document.getElementById('number1-of-question2').value != "") {
         var x = document.getElementById('number1-of-question2').value % 10;
         document.getElementById('number1-of-question2').value = x;
     }
@@ -19,7 +19,6 @@ function myFunction1() {
         document.getElementById('change').style.backgroundColor = "#ffd000";
         document.getElementById('number1-of-question2').style.color = "red";
     }
-
 
 }
 
@@ -35,12 +34,12 @@ function myFunction2() {
         document.getElementById('question3').style.display = "flex";
         document.getElementById('answer3').focus();
         display_on = 1;
-        document.getElementById('suggestion').style.display = "none";
+        document.getElementById('suggestion2').style.display = "none";
 
     } else {
         switch_scene = -2;
         document.getElementById('number2-of-question2').style.color = "red";
-        document.getElementById('suggestion').style.display = "flex";
+        document.getElementById('suggestion2').style.display = "flex";
 
     }
 }
@@ -93,11 +92,11 @@ function myFunction5() {
         document.getElementById('number2-of-question1').value = x;
         if (x == 0) {
 
-            document.getElementById('suggestion').style.display = "none";
+            document.getElementById('suggestion1').style.display = "none";
             document.getElementById('number2-of-question1').style.color = "black";
             var child = document.getElementById("answer1");
             child.remove();
-            document.getElementById('suggestion').style.display = "none";
+            document.getElementById('suggestion1').style.display = "none";
             document.getElementById('text1').innerHTML = "How many blocks are there: " + number_of_bar + '0';
             if (switch_scene == 0) switch_scene = 1;
             if (switch_scene == -2) switch_scene = -1;
@@ -105,7 +104,7 @@ function myFunction5() {
         } else {
             switch_scene = -2;
             document.getElementById('number2-of-question1').style.color = "red";
-            document.getElementById('suggestion').style.display = "flex";
+            document.getElementById('suggestion1').style.display = "flex";
 
         }
     }
@@ -125,6 +124,7 @@ function myFunction8() {
 }
 
 function myFunction9() {
+
     document.getElementById('Write0').play();
 }
 
@@ -135,7 +135,7 @@ function myFunction10() {
         var x = document.getElementById('number1-of-question').value % 10;
         document.getElementById('number1-of-question').value = x;
         if (x == number_of_bar) {
-            document.getElementById('suggestion2').style.display = "none";
+            document.getElementById('suggestion4').style.display = "none";
             border = 0;
             document.getElementById('number1-of-question').style.color = "black";
             document.getElementById('number2-of-question').focus();
@@ -143,7 +143,7 @@ function myFunction10() {
             switch_scene = -2;
             border = 1;
             document.getElementById('number1-of-question').style.color = "red";
-            document.getElementById('suggestion2').style.display = "flex";
+            document.getElementById('suggestion4').style.display = "flex";
 
         }
     }
@@ -156,11 +156,11 @@ function myFunction11() {
         document.getElementById('number2-of-question').value = x;
         if (x == 0) {
 
-            //document.getElementById('suggestion').style.display = "none";
+            document.getElementById('suggestion3').style.display = "none";
             document.getElementById('number2-of-question').style.color = "black";
             var child = document.getElementById("answer");
             child.remove();
-            //document.getElementById('suggestion').style.display = "none";
+            document.getElementById('suggestion3').style.display = "none";
             document.getElementById('text').innerHTML = "How many blocks are there: " + number_of_bar + '0';
             if (switch_scene == 0) switch_scene = 1;
             if (switch_scene == -2) switch_scene = -1;
@@ -168,7 +168,7 @@ function myFunction11() {
         } else {
             switch_scene = -2;
             document.getElementById('number2-of-question').style.color = "red";
-            document.getElementById('suggestion').style.display = "flex";
+            document.getElementById('suggestion3').style.display = "flex";
 
         }
     }

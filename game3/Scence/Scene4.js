@@ -2,12 +2,10 @@ var bar = [];
 var barwithborder = [];
 var number_of_bar;
 var ball = [];
-var load = 0;
 var switch_scene = 0;
-var check;
-var element;
+var element2;
 var display_on;
-var speed = 3;
+var speed = 4;
 var ball_bar;
 
 class Scene4 extends Phaser.Scene {
@@ -21,23 +19,14 @@ class Scene4 extends Phaser.Scene {
         this.load.image('barwithborder', './images/barwithborder.png');
         this.load.image('ball_bar', './images/thanh.png');
         this.load.image('ball', './images/ball.png');
-        this.load.image('audio1', './images/audio1.png');
-        this.load.image('audio2', './images/audio2.png');
         this.load.image('bar_unclear', './images/bar_unclear.png');
-
-
-
     }
     create() {
         this.resetCreate();
         ball_bar = this.add.image(500, 25, 'ball_bar');
         ball_bar.setScale(0.8);
         this.createBar();
-        if (number_of_bar == 5) {
-            element = this.add.dom(0, 0).createFromCache('Scene4');
-        } else {
-            element = this.add.dom(0, 0).createFromCache('Scene5');
-        }
+        element2 = this.add.dom(0, 0).createFromCache('Scene4');
         this.createBall();
 
     }
@@ -53,12 +42,12 @@ class Scene4 extends Phaser.Scene {
         if (ball[4].x < 719 - 26 * 3) {
             ball[4].x += speed;
         }
-
     }
 
 
     createBar() {
-        while (number_of_bar !== 5) {
+        number_of_bar = Math.floor(Math.random() * 10);
+        while (number_of_bar < 3 || number_of_bar > 8) {
             number_of_bar = Math.floor(Math.random() * 10);
         }
 
@@ -105,14 +94,14 @@ class Scene4 extends Phaser.Scene {
         this.up();
         if (switch_scene == 1) {
             this.moveBall();
-            this.time.delayedCall(2000, function() {
+            this.time.delayedCall(1000, function() {
                 this.scene.start('Scene5');
             }, [], this);
         }
         if (switch_scene == -1) {
-            this.scene.restart();
+            this.time.delayedCall(1000, function() {
+                this.scene.restart('Scene4');
+            }, [], this);
         }
-
-
     }
 }
