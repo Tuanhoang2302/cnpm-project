@@ -74,7 +74,9 @@ class Scene1 extends Phaser.Scene {
         this.resetCreate();
     }
     update(){
-        this.DragAndDrop();
+        if (readyPlayGame==true)
+        {
+            this.DragAndDrop();
         for  (var i =1; i<= number; i++)
         {
             if (apple[i].input.enabled==false) check[i]=1;
@@ -97,6 +99,8 @@ class Scene1 extends Phaser.Scene {
        this.Audio();
       this.Language();
       this.Focus();
+        }
+        
     }
     Focus()
     {
@@ -139,6 +143,7 @@ class Scene1 extends Phaser.Scene {
         
     }
     DragAndDrop(){
+        
         this.input.on('dragstart', function (pointer, gameObject) {
           
             this.children.bringToTop(gameObject);

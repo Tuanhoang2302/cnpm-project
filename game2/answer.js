@@ -1,6 +1,7 @@
 var  hien =0;
 var bor=0;
 var theend=0;
+var  readyPlayGame = false;
 function checkOutput(id, number)
 {
    var x=document.getElementById(id).value % 10;
@@ -50,6 +51,7 @@ function OuputScene(focus, hint, element, border, trueOutput,Change, next)
             if (border!='')
             {
                 document.getElementById(border).style.border='0px';
+                document.getElementById(border).style.bottom='0px';
             }
             if (next!="")
             {
@@ -105,6 +107,7 @@ function OverStart(){
     start.style.backgroundPositionY='-112px';
     start.style.top='-405px';
     start.style.right='-135px';
+    start.style.lineHeight='111px';
     ciSmall.style.width='260px';
     ciSmall.style.height='260px';
     ciSmall.style.top='-215px';
@@ -121,7 +124,7 @@ function OutStart()
     start.style.backgroundPositionY='10px';
     start.style.top='-383px';
     start.style.right='-112px';
-
+    start.style.lineHeight='133px';
     ciSmall.style.width='250px';
     ciSmall.style.height='250px';
     ciSmall.style.top='-191px';
@@ -135,6 +138,7 @@ function Start()
 {
          document.getElementById('start').style.display='none';
          document.getElementById('phaserGame').style.filter='blur(0px)';
+         readyPlayGame = true;
 }
 function PlayAudio(play){
     document.getElementById(play).play();
