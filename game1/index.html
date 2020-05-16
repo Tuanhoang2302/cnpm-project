@@ -30,23 +30,28 @@
 		<script type="text/javascript" src="./src/InputForm/language.js"></script>
 	</head>
 	<body background="./bg.png">
+
 		<div class ="background">
-			<div id="phaser-example">
-				<a href="https://dragonlearn.in/teachers/g/61649/subjects/1/course_programs/1/lessons/16306" div="back">
-					<div id="iconBack">
-					 <div class="re"></div>
-					</div>
-					<div id="back">Back</div>
+			<div id="phaser-example" style="filter: blur(5px);">
+				<a href="../web/index.html" div="back">
+				  <div id="iconBack">
+				   <div class="re"></div>
+				  </div>
+				  <div id="back">Back</div>
 				</a>
 				<ul class="languages">
-					<li class = "active">Language</li>
-					<li class = "non-active"><a id="english" href="#english" onclick="English()" >English</a></li>
-					<li class ="non-active"><a id="vietnamese" href="#vietnam" onclick="Vietnamese()">Vietnamese</a></li>
+				  <li class = "active">Language</li>
+				  <li class = "non-active"><a id="english" href="#english" onclick="English()" >English</a></li>
+				  <li class ="non-active"><a id="vietnamese" href="#vietnam" onclick="Vietnamese()">Vietnamese</a></li>
 				</ul>
-				
-			</div>
+			  </div>
+			  <div id="start" onmouseover="OverStart()" onmouseout="OutStart()" onclick="Start()">
+				<div id="CircleRoundall"></div>
+				<div id="CircleRound"></div>
+				<div id="button_start"></div>
+			  </div>
 		</div>
-
+		
 		<audio id="audio_english">
 			<source src="./src/InputForm/tenblocks.mp3" type="audio/mpeg">
 		</audio>
@@ -105,7 +110,46 @@
 					var audio = document.getElementById("barCount_vietnam");
 					audio.play();
 				}
-        	}
+			}
+			
+			function OverStart(){
+    			var start= document.getElementById('button_start');
+    			var ciSmall= document.getElementById('CircleRound');
+    			var ciBig = document.getElementById('CircleRoundall');
+    			start.style.backgroundPositionY='-112px';
+    			start.style.top='-405px';
+    			start.style.right='-135px';
+    			ciSmall.style.width='260px';
+    			ciSmall.style.height='260px';
+    			ciSmall.style.top='-215px';
+    			ciSmall.style.right='-53px';
+    			ciBig.style.width='364px';
+    			ciBig.style.height='364px';
+			}
+
+			function OutStart()
+			{
+    			var start= document.getElementById('button_start');
+    			var ciSmall= document.getElementById('CircleRound');
+    			var ciBig = document.getElementById('CircleRoundall');
+    			start.style.backgroundPositionY='10px';
+    			start.style.top='-383px';
+    			start.style.right='-112px';
+
+    			ciSmall.style.width='250px';
+    			ciSmall.style.height='250px';
+    			ciSmall.style.top='-191px';
+    			ciSmall.style.right='-40px';
+
+    			ciBig.style.width='330px';
+    			ciBig.style.height='330px';
+   
+			}
+			function Start()
+			{
+         		document.getElementById('start').style.display='none';
+         		document.getElementById('phaser-example').style.filter='blur(0px)';
+			}
     	</script>
 	</body>
 </html>
