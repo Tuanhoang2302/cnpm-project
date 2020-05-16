@@ -8,6 +8,7 @@ const puppeteer = require('puppeteer');
 
 let page;
 
+jest.setTimeout(50000);
 
 describe('check question 1', () => {
   test('check existance of text', async () => {
@@ -19,7 +20,7 @@ describe('check question 1', () => {
       ],
     });
     page = await browser.newPage();
-
+    await page.setDefaultNavigationTimeout(0);
     await page.goto('http://localhost:8080/');
 
     // await expect(page).toMatch('There are');
@@ -27,13 +28,13 @@ describe('check question 1', () => {
     expect(ques).toBe('There are ');
     const wordEndQues = await page.$eval('#word_end_ques1', (el) => el.textContent);
     expect(wordEndQues).toBe(' blocks');
-  }, 12000);
+  });
 
   test('check existance of input', async () => {
     // await expect(page).toMatch('blocks');
     await expect(page).toMatchElement('input#input1');
     await expect(page).toMatchElement('input#input2');
-  }, 10000);
+  });
 
   test('display suggest', async () => {
     await page.click('input#input1');
@@ -41,14 +42,14 @@ describe('check question 1', () => {
     await page.waitForSelector('#thought1', {
       visible: true,
     }, 1000);
-  }, 10000);
+  });
 
   test('display value of 10 in result', async () => {
     await page.type('input#input1', '1');
     await page.click('input#input2');
     await page.type('input#input2', '0');
-  }, 2000);
-}, 10000);
+  });
+});
 
 
 describe('check question 2', () => {
