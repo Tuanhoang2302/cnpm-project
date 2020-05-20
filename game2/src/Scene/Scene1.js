@@ -1,26 +1,24 @@
-        
-    var initPosX=[];    
+      /*eslint-disable no-undef */
+      /*eslint-disable no-unused-vars */
+      /*eslint-disable no-redeclare*/
+    var initPosX=[];   
     var initPosY=[];
-    var number =10;
-   var height= 75;
+    var number =10;   
+   var height= 75;     // height, width:chiều cao, độ rộng của 1 ô trong hộp
    var width= 75;
    var apple=[];
    var khay;
-   var hold=[];
-   var check=[0,0,0,0,0,0,0,0,0,0];
-   var rect=[];
-   var rectangle;
+   var hold=[]; 
+   var rect=[];  // tạo hiệu ứng khi đặt táo vào trong ô
    var element;
-   var total;
-   var numberqu=0;
+   var chuyenman=0; 
    var hint,loa;
    var ball=[];
    var  speed=3;
    var thanh;
-   var full;
+   var full=0; //số lượng quả  táo đã vào đúng vị trí trong hộp
    var music;
-   var sohop=1;
-   var n=1; 
+   var sohop =1;
 class Scene1 extends Phaser.Scene {
     constructor() {
         super("Scene1");
@@ -45,31 +43,11 @@ class Scene1 extends Phaser.Scene {
         loa=this.add.sprite(305,80,'loadai').setInteractive();
         loa.setScale(0.4);
         khay = this.add.sprite(300,280,'khay');
-        apple[1]=this.add.sprite(580,300,'apple');
-        apple[2]= this.add.sprite(620,380,'apple');
-        apple[3]= this.add.sprite(720,320,'apple');
-        apple[5]= this.add.sprite(760,250,'apple');
-        apple[6]= this.add.sprite(720,390,'apple');
-        apple[7]= this.add.sprite(620,220,'apple');
-        apple[8]= this.add.sprite(850,200,'apple');
-        apple[9]= this.add.sprite(860,310,'apple');
-        apple[10]= this.add.sprite(840,390,'apple');
-        apple[4]= this.add.sprite(710,160,'apple');
-        ball[6]=this.add.sprite(280,25,'ball');
-        ball[5]=this.add.sprite(280+26,25,'ball');
-        ball[4]=this.add.sprite(280+26*2,25,'ball');
-        ball[3]=this.add.sprite(280+26*3,25,'ball');
-        ball[2]=this.add.sprite(280+26*4,25,'ball');
-        ball[1]=this.add.sprite(280+26*5,25,'ball');
-       
-        this.createHold();
-        for (var i =1; i<= 10; i++)
-        {
-            apple[i].setInteractive();
-            this.input.setDraggable(apple[i]);
-            rect[i] = this.add.sprite(initPosX[i]+5,initPosY[i]-5,'rect').setAlpha(0);
-        }
         
+        this.createBall();
+        this.createHold();
+        this.createApple();
+
         element= this.add.dom(700, 450).createFromCache('body').setAlpha(0);
         this.resetCreate();
     }
@@ -77,19 +55,17 @@ class Scene1 extends Phaser.Scene {
         if (readyPlayGame==true)
         {
             this.DragAndDrop();
+           
         for  (var i =1; i<= number; i++)
         {
-            if (apple[i].input.enabled==false) check[i]=1;
+            if (apple[i].input.enabled==false) full++;
         }
-         full=0;
-        for (var i = 1; i<=number; i++)
-        {
-            if (check[i]==true) full++;
-        }
-        if (full==10) 
+        if (full<number) full=0;
+        else 
         {
           element.setAlpha(1);
-           if (numberqu==1){
+           if (chuyenman==1||chuyenman==-1){
+            console.log(chuyenman)
             this.moveBall();
             this.time.delayedCall(2000, function() {
              this.scene.start('Scene2');
@@ -101,6 +77,34 @@ class Scene1 extends Phaser.Scene {
       this.Focus();
         }
         
+    }
+    createBall()
+    {
+        ball[6]=this.add.sprite(280,25,'ball');
+        ball[5]=this.add.sprite(280+26,25,'ball');
+        ball[4]=this.add.sprite(280+26*2,25,'ball');
+        ball[3]=this.add.sprite(280+26*3,25,'ball');
+        ball[2]=this.add.sprite(280+26*4,25,'ball');
+        ball[1]=this.add.sprite(280+26*5,25,'ball');
+    }
+    createApple()
+    {
+        apple[1]=this.add.sprite(580,300,'apple');
+        apple[2]= this.add.sprite(620,380,'apple');
+        apple[3]= this.add.sprite(720,320,'apple');
+        apple[5]= this.add.sprite(760,250,'apple');
+        apple[6]= this.add.sprite(720,390,'apple');
+        apple[7]= this.add.sprite(620,220,'apple');
+        apple[8]= this.add.sprite(850,200,'apple');
+        apple[9]= this.add.sprite(860,310,'apple');
+        apple[10]= this.add.sprite(840,390,'apple');
+        apple[4]= this.add.sprite(710,160,'apple');
+        for (var i =1; i<= number; i++)
+        {
+            apple[i].setInteractive();
+            this.input.setDraggable(apple[i]);
+            rect[i] = this.add.sprite(initPosX[i]+5,initPosY[i]-5,'rect').setAlpha(0);
+        }
     }
     Focus()
     {
@@ -136,6 +140,7 @@ class Scene1 extends Phaser.Scene {
 
     }
     moveBall(){
+        // 719 là vị trí cần tới của quả bóng 
         if (ball[1].x<719)
         {
             ball[1].x+=speed;
@@ -143,7 +148,6 @@ class Scene1 extends Phaser.Scene {
         
     }
     DragAndDrop(){
-        
         this.input.on('dragstart', function (pointer, gameObject) {
           
             this.children.bringToTop(gameObject);
@@ -195,13 +199,11 @@ class Scene1 extends Phaser.Scene {
             }
         });
     }
-    // tao vi tri cac o chua tao
     createHold(){
-      
-
+       
         for (var i =1; i <=number; i++)
         {
-            if (i>5)
+            if (i>5) 
             {
                 initPosY[i]  = khay.y + height/2 + 5;
             }
@@ -227,13 +229,9 @@ class Scene1 extends Phaser.Scene {
         
     }
     resetCreate(){
-        for (var i =1; i<=number; i++)
-        {
-            check[i]=0;
-        }
         element.setAlpha(0);
         this.full=0;
-        this.numberqu=0;
+        this.chuyenman=0;
         this.isWanaReset=[false,false,false,false];
     }
     

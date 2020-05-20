@@ -1,4 +1,4 @@
-	
+/*eslint-disable */
 function Vietnamese(){
 	location.hash = "#vietnam"
 	

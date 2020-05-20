@@ -1,15 +1,15 @@
-
+/*eslint-disable */
 var hoptao=[];
 var  taomo=[];
 var taoborder=[];
 var sohop;
 var element2;
-var load=0;
-var widthSce=1024, heigthSce= 650;
-var widthH=228, heigthH=96 ;
+var widthSce=1024 // chiều rộng và chiều cao của màn chơi
+var widthH=228 // chiều rộng cà chiều cao của  các khay
 var ball=[];
 var chuyenman=0;
-
+var distance;
+var speed = 3;
 class Scene2 extends Phaser.Scene{
     constructor(){
         super("Scene2");
@@ -26,7 +26,7 @@ class Scene2 extends Phaser.Scene{
     }   
     create(){
         this.resetCreate();
-        thanh = this.add.sprite(500,25,'thanh');
+        var thanh = this.add.sprite(500,25,'thanh');
         thanh.setScale(0.8);
         this.createApple();
         element2= this.add.dom(310, 410).createFromCache('scene2');
@@ -34,6 +34,7 @@ class Scene2 extends Phaser.Scene{
         {
             element2.setPosition(310,310);
             document.getElementById('ndung').style.top='-250px';
+            document.getElementById('hint').style.top='-258px'
         }
         
         this.createball();
@@ -72,18 +73,17 @@ class Scene2 extends Phaser.Scene{
             
             document.getElementById('change').innerHTML="một";
             document.getElementById('boxtext').innerHTML="hộp :";
-            // document.getElementById('text').innerHTML="Có bao nhiêu quả táo trong";
             document.getElementById('childtext').innerHTML="Có bao nhiêu táo trong "
              document.getElementById('text2').innerHTML="Có bao nhiêu hộp :";
             if (theend==1)
             {
                 document.getElementById('yeucau').innerHTML="Có tất cả bao nhiêu quả táo :";
             }
-           var v00= document.getElementsByClassName('Vietso0');
+           var Vietso0= document.getElementsByClassName('Vietso0');
           
-           for (var i =0; i< v00.length; i++)
+           for (var i =0; i< Vietso0.length; i++)
            {
-               v00[i].innerHTML="Viết số 0";
+               Vietso0[i].innerHTML="Viết số 0";
            }
         }
     }
@@ -91,7 +91,7 @@ class Scene2 extends Phaser.Scene{
     {
         chuyenman=0;
         hien=0;
-        bor=0;
+        hintRedBorder=0;
         this.hoptao=[];
         this.taoborder=[];
         this.taomo=[];
@@ -109,6 +109,7 @@ class Scene2 extends Phaser.Scene{
     }
 
     moveBall(){
+        //vị trí cần tới  tiếp theo của quả bóng
         if (ball[2].x<719-26)
         {
             ball[2].x+=speed;
@@ -123,7 +124,7 @@ class Scene2 extends Phaser.Scene{
             taomo[i].destroy();
             }
         }
-        if (bor==1)
+        if (hintRedBorder==1)
         {
             for (var i = 1; i <=sohop; i++)
             {
@@ -139,11 +140,11 @@ class Scene2 extends Phaser.Scene{
         }
     }
     createApple(){
-        // sohop= Math.floor(Math.random()*10);
-        // while (sohop<=3){
-        //     sohop=Math.floor(Math.random()*10);
-        // } 
-         sohop=8;
+        sohop= Math.floor(Math.random()*10);
+        while (sohop<=3){
+            sohop=Math.floor(Math.random()*10);
+        } 
+
         if (sohop>=4&&sohop<=6)
         {
            
@@ -153,7 +154,7 @@ class Scene2 extends Phaser.Scene{
             }
             for (var i = 4; i<= sohop; i++)
             {
-                var distance= (widthSce - widthH*(sohop-3) - (sohop-1-3)*50 - 90*2)/2; 
+                distance= (widthSce - widthH*(sohop-3) - (sohop-1-3)*50 - 90*2)/2; 
                 hoptao[i]=this.add.sprite(90 + distance + (2*(i-3)-1)* widthH/2 + 50*(i-1-3),300,'hoptao');
             }
         }
@@ -171,7 +172,7 @@ class Scene2 extends Phaser.Scene{
             }
             for (var i = 7; i<=sohop; i++)
             {
-                var distance= (widthSce - widthH*(sohop-6) - (sohop-1-6)*50 - 90*2)/2; 
+                distance= (widthSce - widthH*(sohop-6) - (sohop-1-6)*50 - 90*2)/2; 
                 hoptao[i]=this.add.sprite(90 + distance + (2*(i-6)-1)* widthH/2 + 50*(i-1-6),420,'hoptao');
                 
             }

@@ -1,13 +1,16 @@
+/*eslint-disable */
 var hoptao=[];
 var  taomo=[];
 var taoborder=[];
 var sohop;
 var element2;
-var load=0;
-var widthSce=1024, heigthSce= 650;
-var widthH=228, heigthH=96 ;
+var widthSce=1024;
+var widthH=228;
 var ball=[];
 var chuyenman=0;
+var hintRedBorder =0;
+var speed =3;
+var distance;
 class Scene3 extends Phaser.Scene{
     constructor(){
         super("Scene3");
@@ -24,7 +27,7 @@ class Scene3 extends Phaser.Scene{
     }   
     create(){
         this.resetCreate();
-        thanh = this.add.sprite(500,25,'thanh');
+        var thanh = this.add.sprite(500,25,'thanh');
         thanh.setScale(0.8);
         this.createApple();
         element2= this.add.dom(310, 410).createFromCache('scene2');
@@ -32,6 +35,7 @@ class Scene3 extends Phaser.Scene{
         {
             element2.setPosition(310,310);
             document.getElementById('ndung').style.top='-250px';
+            document.getElementById('hint').style.top='-258px'
         }
         this.createball();
     }
@@ -92,7 +96,7 @@ class Scene3 extends Phaser.Scene{
     {
         chuyenman=0;
         hien=0;
-        bor=0;
+        hintRedBorder=0;
         this.sohop=0;
         this.hoptao=[];
         this.taoborder=[];
@@ -128,7 +132,7 @@ class Scene3 extends Phaser.Scene{
             taomo[i].destroy();
             }
         }
-        if (bor==1)
+        if (hintRedBorder==1)
         {
             for (var i = 1; i <=sohop; i++)
             {
@@ -158,7 +162,7 @@ class Scene3 extends Phaser.Scene{
             }
             for (var i = 4; i<= sohop; i++)
             {
-                var distance= (widthSce - widthH*(sohop-3) - (sohop-1-3)*50 - 90*2)/2; 
+                distance= (widthSce - widthH*(sohop-3) - (sohop-1-3)*50 - 90*2)/2; 
                 hoptao[i]=this.add.sprite(90 + distance + (2*(i-3)-1)* widthH/2 + 50*(i-1-3),300,'hoptao');
             }
         }
@@ -176,7 +180,7 @@ class Scene3 extends Phaser.Scene{
             }
             for (var i = 7; i<=sohop; i++)
             {
-                var distance= (widthSce - widthH*(sohop-6) - (sohop-1-6)*50 - 90*2)/2; 
+                distance= (widthSce - widthH*(sohop-6) - (sohop-1-6)*50 - 90*2)/2; 
                 hoptao[i]=this.add.sprite(90 + distance + (2*(i-6)-1)* widthH/2 + 50*(i-1-6),420,'hoptao');
                 
             }
