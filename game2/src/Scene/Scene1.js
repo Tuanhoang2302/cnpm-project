@@ -1,25 +1,22 @@
-      /*eslint-disable no-undef */
-      /*eslint-disable no-unused-vars */
-      /*eslint-disable no-redeclare*/
-    var initPosX=[];   
-    var initPosY=[];
-    var number =10;   
-   var height= 75;     // height, width:chiều cao, độ rộng của 1 ô trong hộp
-   var width= 75;
-   var apple=[];
-   var khay;
-   var hold=[]; 
-   var rect=[];  // tạo hiệu ứng khi đặt táo vào trong ô
-   var element;
-   var chuyenman=0; 
-   var hint,loa;
+
+import Focus from '../gameObject/Focus.js'
+/*eslint-disable no-undef */
+    let initPosX=[];   
+    let initPosY=[];
+    const number =10;   
+   const height= 75;     // height, width:chiều cao, độ rộng của 1 ô trong hộp
+   const width= 75;
+   let apple=[];
+   let khay;
+   let hold=[]; 
+   let rect=[];  // tạo hiệu ứng khi đặt táo vào trong ô
+   let element;
+   let hint,loa;
    var ball=[];
    var  speed=3;
-   var thanh;
    var full=0; //số lượng quả  táo đã vào đúng vị trí trong hộp
-   var music;
-   var sohop =1;
-class Scene1 extends Phaser.Scene {
+   let music;
+export default class Scene1 extends Phaser.Scene {
     constructor() {
         super("Scene1");
         
@@ -37,7 +34,7 @@ class Scene1 extends Phaser.Scene {
     }
     create() {
         music=this.sound.add('moveapple');
-        thanh = this.add.sprite(500,25,'thanh');
+        let thanh = this.add.sprite(500,25,'thanh');
         thanh.setScale(0.8);
         hint= this.add.text(340,60,'Move the apples',{ font: '40px Arial',color:'#000000' }).setInteractive();
         loa=this.add.sprite(305,80,'loadai').setInteractive();
@@ -45,6 +42,7 @@ class Scene1 extends Phaser.Scene {
         khay = this.add.sprite(300,280,'khay');
         
         this.createBall();
+
         this.createHold();
         this.createApple();
 
@@ -56,7 +54,7 @@ class Scene1 extends Phaser.Scene {
         {
             this.DragAndDrop();
            
-        for  (var i =1; i<= number; i++)
+        for  (let i =1; i<= number; i++)
         {
             if (apple[i].input.enabled==false) full++;
         }
@@ -65,7 +63,7 @@ class Scene1 extends Phaser.Scene {
         {
           element.setAlpha(1);
            if (chuyenman==1||chuyenman==-1){
-            console.log(chuyenman)
+            
             this.moveBall();
             this.time.delayedCall(2000, function() {
              this.scene.start('Scene2');
@@ -74,18 +72,17 @@ class Scene1 extends Phaser.Scene {
         }
        this.Audio();
       this.Language();
-      this.Focus();
+     //let focus=new Focus('#number1');
+     Focus('#number1');
         }
         
     }
     createBall()
     {
-        ball[6]=this.add.sprite(280,25,'ball');
-        ball[5]=this.add.sprite(280+26,25,'ball');
-        ball[4]=this.add.sprite(280+26*2,25,'ball');
-        ball[3]=this.add.sprite(280+26*3,25,'ball');
-        ball[2]=this.add.sprite(280+26*4,25,'ball');
-        ball[1]=this.add.sprite(280+26*5,25,'ball');
+        for (let i = 1; i<=6; i++)
+        {
+            ball[i]= this.add.sprite(280+26*(6-i), 25, 'ball');
+        }
     }
     createApple()
     {
@@ -99,23 +96,14 @@ class Scene1 extends Phaser.Scene {
         apple[9]= this.add.sprite(860,310,'apple');
         apple[10]= this.add.sprite(840,390,'apple');
         apple[4]= this.add.sprite(710,160,'apple');
-        for (var i =1; i<= number; i++)
+        for (let i =1; i<= number; i++)
         {
             apple[i].setInteractive();
             this.input.setDraggable(apple[i]);
             rect[i] = this.add.sprite(initPosX[i]+5,initPosY[i]-5,'rect').setAlpha(0);
         }
     }
-    Focus()
-    {
-            $(document).ready(function () {
-                var  value = $('#number1').val();
-                if (!value)
-                {  
-                    $('#number1').focus();
-                }
-           })
-    }
+    
     Language(){
         if(window.location.hash == "#vietnam"){
             hint.setText('Di chuyển những quả táo');
@@ -161,7 +149,7 @@ class Scene1 extends Phaser.Scene {
 
         });
         this.input.on('dragenter', function (pointer, gameObject, dropZone) {
-            for (var i =1; i<= number; i++)
+            for (let i =1; i<= number; i++)
             {
                if (rect[i].x-5==dropZone.x)
                {
@@ -172,8 +160,8 @@ class Scene1 extends Phaser.Scene {
                }
             }
         });
-        this.input.on('dragleave', function (pointer, gameObject, dropZone) {
-            for (var i =1; i<= number; i++)
+        this.input.on('dragleave', function () {
+            for (let i =1; i<= number; i++)
             {
                rect[i].setAlpha(0);
             }
@@ -193,7 +181,7 @@ class Scene1 extends Phaser.Scene {
                 gameObject.x = gameObject.input.dragStartX;
                 gameObject.y = gameObject.input.dragStartY;
             }
-            for (var i =1; i<= number; i++)
+            for (let i =1; i<= number; i++)
             {
                rect[i].setAlpha(0);
             }
@@ -201,7 +189,7 @@ class Scene1 extends Phaser.Scene {
     }
     createHold(){
        
-        for (var i =1; i <=number; i++)
+        for (let i =1; i <=number; i++)
         {
             if (i>5) 
             {
@@ -222,7 +210,7 @@ class Scene1 extends Phaser.Scene {
             }
                         
         }
-        for (var i = 1; i<= 10;i++){
+        for (let i = 1; i<= 10;i++){
             
             hold[i] = this.add.zone(initPosX[i], initPosY[i], width, height).setRectangleDropZone(width, height);
         }
@@ -232,7 +220,7 @@ class Scene1 extends Phaser.Scene {
         element.setAlpha(0);
         this.full=0;
         this.chuyenman=0;
-        this.isWanaReset=[false,false,false,false];
+        this.sohop=0;
     }
     
 }

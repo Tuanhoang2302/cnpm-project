@@ -2,14 +2,16 @@
 /*eslint-disable no-unused-vars*/
 /*eslint-disable no-undef*/
 var hien = 0;
-var hintRedBorder = 0;
-var theend = 0;
-var readyPlayGame = false;
+ var hintRedBorder = 0;
+  var theend = 0;
+ var readyPlayGame = false;
+ var  chuyenman=0;
+ var sohop = 1;  
 function checkOutput(id, number) {
     var x = document.getElementById(id).value % 10;
     document.getElementById(id).value = x;
     if (x == number) return true;
-    else return false;
+    return false;
 }
 // change para to run next  function in phaser Game 
 function changeNumber(x, y) {
@@ -35,8 +37,12 @@ function Text(text, id) {
 function OuputScene(focus, hint, element, border, trueOutput, Change, next) {
 
     if (document.getElementById(element).value != "") {
-        if (trueOutput == "") trueOutput = this.sohop;
+        if (trueOutput == "") 
+        {
+            trueOutput = this.sohop;
+        }
         if (checkOutput(element, trueOutput) == true) {
+          
             if (border != '') // delete border to appear answer question
             {
                 document.getElementById(border).style.border = '0px';
@@ -53,7 +59,10 @@ function OuputScene(focus, hint, element, border, trueOutput, Change, next) {
             this.ifChange(Change, element);
 
             if (focus != "")
+            {
                 document.getElementById(focus).focus();
+            }
+                
         }
         else {
             document.getElementById(element).style.color = "red";
@@ -62,10 +71,18 @@ function OuputScene(focus, hint, element, border, trueOutput, Change, next) {
                 document.getElementById(hint).style.display = "flex";
             }
 
-            if (element == 'nu1') this.backGround('#ffd000');
+            if (element == 'nu1') 
+            {
+                this.backGround('#ffd000');
+            }
             if (element=='nu3'||element=='nu4'||element=='nu29')
-            this.hintRedBorder = 1;
-            if (chuyenman == -1) this.Text('How many apple are there? ', 'yeucau')
+            {
+                this.hintRedBorder = 1;
+            }
+            if (chuyenman == -1) 
+            {
+                this.Text('How many apple are there? ', 'yeucau')
+            }
             if (Change != "") {
                 changeNumber(Change, -1);
             }
@@ -129,8 +146,8 @@ function Start() {
     document.getElementById('start').style.display = 'none';
     document.getElementById('phaserGame').style.filter = 'blur(0px)';
     readyPlayGame = true;
+ 
 }
 function PlayAudio(play) {
     document.getElementById(play).play();
 }
-
