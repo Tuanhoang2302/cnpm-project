@@ -9,9 +9,9 @@ let  taomo=[];
 var scene = 2;
 
 import Focus from '../gameObject/Focus.js'
-import Language from '../gameObject/LanguageScene2.js'
-import Location from '../gameObject/SetLocation.js'
-import Random from '../gameObject/randomNumber.js'
+import Language from '../gameObject/Language.js'
+import Location from '../gameObject/Location.js'
+import Random from '../gameObject/Random.js'
 
 export default class Scene2 extends Phaser.Scene{
     constructor(){
@@ -37,6 +37,7 @@ export default class Scene2 extends Phaser.Scene{
         sohop=Random();
 
         appleLocation = Location(appleLocation,sohop);
+        this.createHoptao(hoptao);
         this.createApple();
         if (sohop<=6)
         {
@@ -88,7 +89,7 @@ export default class Scene2 extends Phaser.Scene{
         }
         for (let i = 1; i< scene; i++)
         {
-            ball[i]=this.add.sprite(719-25*(i-1),25,'ball');
+            ball[i]=this.add.sprite(719-26*(i-1),25,'ball');
         }
     }
     resetball(){
@@ -102,7 +103,6 @@ export default class Scene2 extends Phaser.Scene{
         chuyenman=0;
         hien=0;
         hintRedBorder=0;
-        this.hoptao=[];
         this.taoborder=[];
         this.taomo=[];
         this.sohop=0;
@@ -165,10 +165,25 @@ export default class Scene2 extends Phaser.Scene{
             {
                 PostY =  420;
             }
-            hoptao[i] = this.add.sprite(appleLocation[i], PostY, 'hoptao');
+            
             taomo[i] = this.add.sprite(appleLocation[i], PostY, 'taomo');
             taoborder[i] = this.add.sprite(appleLocation[i], PostY,'taoborder');
         } 
         taomo[sohop].destroy();
+    }
+    createHoptao(x)
+    {for (let i = 1; i <= sohop; i++){
+        let PostY= 180;
+            if (i>=4&&i<=6) 
+            {
+                PostY = 300;
+            }
+            if (i>6&&i<=9) 
+            {
+                PostY =  420;
+            }
+         x[i] = this.add.sprite(appleLocation[i], PostY, 'hoptao');
+    }
+       
     }
  }

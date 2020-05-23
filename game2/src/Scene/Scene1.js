@@ -8,7 +8,6 @@ import Focus from '../gameObject/Focus.js'
    const width= 75;
    let apple=[];
    let khay;
-   let hold=[]; 
    let rect=[];  // tạo hiệu ứng khi đặt táo vào trong ô
    let element;
    let hint,loa;
@@ -16,6 +15,7 @@ import Focus from '../gameObject/Focus.js'
    var  speed=3;
    var full=0; //số lượng quả  táo đã vào đúng vị trí trong hộp
    let music;
+   let hold=[];
 export default class Scene1 extends Phaser.Scene {
     constructor() {
         super("Scene1");
@@ -42,8 +42,8 @@ export default class Scene1 extends Phaser.Scene {
         khay = this.add.sprite(300,280,'khay');
         
         this.createBall();
-
-        this.createHold();
+        this.setPosition();
+        this.createHold(hold);
         this.createApple();
 
         element= this.add.dom(700, 450).createFromCache('body').setAlpha(0);
@@ -187,8 +187,15 @@ export default class Scene1 extends Phaser.Scene {
             }
         });
     }
-    createHold(){
-       
+    createHold(x){
+        for (let i = 1; i<= 10;i++){
+            x[i] = this.add.zone(initPosX[i], initPosY[i], width, height).setRectangleDropZone(width, height);
+        }
+        
+        
+    }
+    setPosition()
+    {
         for (let i =1; i <=number; i++)
         {
             if (i>5) 
@@ -210,11 +217,6 @@ export default class Scene1 extends Phaser.Scene {
             }
                         
         }
-        for (let i = 1; i<= 10;i++){
-            
-            hold[i] = this.add.zone(initPosX[i], initPosY[i], width, height).setRectangleDropZone(width, height);
-        }
-        
     }
     resetCreate(){
         element.setAlpha(0);

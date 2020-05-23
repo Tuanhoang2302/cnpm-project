@@ -6,9 +6,10 @@ var speed=3;
 var taoborder=[];
 var appleLocation = [];
 var scene = 4;
+let [element3] = [];
 import Focus from '../gameObject/Focus.js'
-import Random from '../gameObject/randomNumber.js'
-import Location from '../gameObject/SetLocation.js'
+import Random from '../gameObject/Random.js'
+import Location from '../gameObject/Location.js'
 export default class Scene4  extends Phaser.Scene{
     constructor()
     {
@@ -29,8 +30,8 @@ export default class Scene4  extends Phaser.Scene{
         sohop=Random();
 
         appleLocation = Location(appleLocation,sohop);
-        this.createApple();
-        let element3 = this.add.dom(500, 100).createFromCache('scene4');
+        this.createApple(hoptao);
+        element3 = this.add.dom(500, 100).createFromCache('scene4');
         this.createball();
        
     }
@@ -125,7 +126,7 @@ export default class Scene4  extends Phaser.Scene{
             ball[i]=this.add.sprite(719-25*(i-1),25,'ball');
         }
     }
-    createApple(){
+    createApple(x){
         for (let i = 1; i <= sohop; i++)
         {
             let PostY= 270;
@@ -137,8 +138,9 @@ export default class Scene4  extends Phaser.Scene{
             {
                 PostY =  510;
             }
-            hoptao[i] = this.add.sprite(appleLocation[i], PostY, 'hoptao');
+            x[i] = this.add.sprite(appleLocation[i], PostY, 'hoptao');
             taoborder[i] = this.add.sprite(appleLocation[i], PostY,'taoborder');
+     
         } 
 }
 }
