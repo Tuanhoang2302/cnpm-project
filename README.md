@@ -1,14 +1,26 @@
-# **Đây là 1 sản phẩm phần mềm về giáo dục dựa trên 1 game trong dragonlearn.**
+# Nhóm 6.
 
-Đường dẫn trò chơi gốc : https://dragonlearn.in/teachers/g/61341/subjects/1/course_programs/1/lessons/16306
-
-# **Hướng dẫn mở game**
-Đối với game 1 và game 4 khi mở file kéo xuống có phần hướng dẫn cài đặt template cho game.
-
-Link hướng dẫn: https://medium.com/@Tnodes/integrating-react-and-phaser-3-tutorial-eb96717d4a9d
-
-Sau khi cài đặt và mở file, muốn chạy game thì vào terminal file gõ npm start
-
-Còn muốn build file để up lên web, gõ npm run build, sẽ xuất hiện file index.html và bundle.min.js, lấy file index.html và các file liên quan để up lên web
-
-Đối với game 2 các bạn có thể mở file index.html để chạy trực tiếp
+## Các thành viên. ##
+   * Vũ Thị Dịu.
+   * Nguyễn Thị Thanh Bảo.
+   * Hoàng Minh Tuấn.
+   
+## Sản phẩm nhóm: Counting to 100.
+   ### Nguồn gốc.
+   * Sản phẩm là game dựa trên 1 phần mềm của trang dragonlearn.
+   * Link game gốc tại [đây](https://dragonlearn.in/teachers/g/61341/subjects/1/course_programs/1/lessons/16306)
+   ### Đối tượng.
+   * Trẻ em mẫu giáo, trẻ em dưới 5 tuổi đang tập làm quen với các con số.
+   ***
+   ### Mô tả sản phẩm.
+   * Một trang web cho phép người dùng có thể tùy chọn game để vừa chơi vừa học, với giao diện thân thiện và các bài học từ dễ đến khó dần
+   ***
+   ### Tài liệu.
+   * Xem tài liệu SDS/SRS tại [đây](https://docs.google.com/document/d/1_lvReG36pFGgzR4zAwMdjnJLh0rJxGyoqOSob59-T3o/edit?usp=sharing)
+   * Xem tài liệu kiểm thử tại [đây](https://docs.google.com/document/d/1Muo7GiwlGQcD9B77lYo0wQ7LwQf4sidWx3UIy71WhbA/edit?usp=sharing)
+   ***
+   ### Link triển khai sản phẩm.
+   * Sử dụng phần mềm tại [đây](https://tuanhoang2302.github.io/testGit/web/index.html)
+   ***
+   
+   
