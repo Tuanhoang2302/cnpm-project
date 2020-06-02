@@ -22,5 +22,15 @@
    ### Link triển khai sản phẩm.
    * Sử dụng phần mềm tại [đây](https://tuanhoang2302.github.io/testGit/web/index.html)
    ***
+   ### Một số hình ảnh sản phẩm.
+   * Giao diện bắt đầu
+   <img src="/image/image for Readme/giao dien bat dau.png">
    
+   * Giao diện game
+   <img src="/image/image for Readme/game2.png">
+   <img src="/image/image for Readme/game2.1.png">
+   <img src="/image/image for Readme/game1.png">
+   <img src="/image/image for Readme/game4.png">
    
+  * Giao diện kết thúc
+  <img src="/image/image for Readme/giao dien ket thuc.png">
